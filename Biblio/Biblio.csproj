@@ -348,6 +348,9 @@
     <EmbeddedResource Include="CustomControls\OtherControl.resx">
       <DependentUpon>OtherControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\SearchControl.resx">
+      <DependentUpon>SearchControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -512,6 +515,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleCloseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleCloseButton.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

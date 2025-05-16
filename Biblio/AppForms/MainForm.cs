@@ -144,18 +144,6 @@ namespace Biblio.AppForms
             }
         }
 
-        private void MainForm_Shown(object sender, EventArgs e)
-        {
-            // Проходим по всем контролам LastUpdatesControl и обновляем их размер.
-            foreach (Control control in lastUpdatesPanel.Controls) // или где у вас контролы
-            {
-                if (control is LastUpdatesControl lastUpdatesControl)
-                {
-                    lastUpdatesControl.ChangeWidth();
-                }
-            }
-        }
-
         private int _displayedBooksCount = 5;
 
         private void ShowLastUpdates()
@@ -274,7 +262,18 @@ namespace Biblio.AppForms
             ShowContinueReadingBooks();
             ShowPopularBooks();
             ShowLastUpdates();
-            ImageLoader.LoadAvatarImage(avatarPictureBox);
+            //ImageLoader.LoadAvatarImage(avatarPictureBox);
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            foreach (Control control in lastUpdatesPanel.Controls)
+            {
+                if (control is LastUpdatesControl lastUpdatesControl)
+                {
+                    lastUpdatesControl.ChangeWidth();
+                }
+            }
         }
 
         private static bool _isMaximize = false;
