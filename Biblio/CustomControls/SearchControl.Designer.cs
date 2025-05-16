@@ -34,7 +34,7 @@
             this.glasPanel = new System.Windows.Forms.Panel();
             this.glasPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.searchLabel = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.glasPanel.SuspendLayout();
@@ -48,20 +48,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 57);
+            this.panel1.Size = new System.Drawing.Size(523, 57);
             this.panel1.TabIndex = 0;
             // 
             // searchPanel
             // 
             this.searchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.searchPanel.BorderRadius = 17;
-            this.searchPanel.Controls.Add(this.guna2TextBox1);
+            this.searchPanel.BorderRadius = 22;
+            this.searchPanel.Controls.Add(this.searchLabel);
             this.searchPanel.Controls.Add(this.glasPanel);
-            this.searchPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchPanel.Cursor = System.Windows.Forms.Cursors.Default;
             this.searchPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.searchPanel.Location = new System.Drawing.Point(9, 6);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(433, 45);
+            this.searchPanel.Size = new System.Drawing.Size(456, 45);
             this.searchPanel.TabIndex = 69;
             // 
             // glasPanel
@@ -71,7 +71,7 @@
             this.glasPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.glasPanel.Location = new System.Drawing.Point(0, 0);
             this.glasPanel.Name = "glasPanel";
-            this.glasPanel.Size = new System.Drawing.Size(39, 45);
+            this.glasPanel.Size = new System.Drawing.Size(40, 45);
             this.glasPanel.TabIndex = 55;
             // 
             // glasPictureBox
@@ -80,7 +80,7 @@
             this.glasPictureBox.FillColor = System.Drawing.Color.Transparent;
             this.glasPictureBox.Image = global::Biblio.Properties.Resources.magnifyingGlass;
             this.glasPictureBox.ImageRotate = 0F;
-            this.glasPictureBox.Location = new System.Drawing.Point(19, 11);
+            this.glasPictureBox.Location = new System.Drawing.Point(20, 11);
             this.glasPictureBox.Name = "glasPictureBox";
             this.glasPictureBox.Size = new System.Drawing.Size(25, 25);
             this.glasPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,36 +89,41 @@
             // 
             // guna2CirclePictureBox1
             // 
+            this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(448, 6);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(471, 6);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 45);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 1;
             this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
-            // guna2TextBox1
+            // searchLabel
             // 
-            this.guna2TextBox1.BorderThickness = 0;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Что ищем, читатель?";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(39, 13);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 16);
-            this.guna2TextBox1.TabIndex = 57;
+            this.searchLabel.Animated = true;
+            this.searchLabel.BorderColor = System.Drawing.Color.Transparent;
+            this.searchLabel.BorderThickness = 0;
+            this.searchLabel.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchLabel.DefaultText = "";
+            this.searchLabel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchLabel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchLabel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchLabel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchLabel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.searchLabel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.searchLabel.ForeColor = System.Drawing.Color.White;
+            this.searchLabel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchLabel.Location = new System.Drawing.Point(41, 13);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.PlaceholderText = "Что ищем, читатель?";
+            this.searchLabel.SelectedText = "";
+            this.searchLabel.Size = new System.Drawing.Size(376, 16);
+            this.searchLabel.TabIndex = 57;
             // 
             // SearchControl
             // 
@@ -129,7 +134,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SearchControl";
-            this.Size = new System.Drawing.Size(500, 199);
+            this.Size = new System.Drawing.Size(523, 199);
             this.panel1.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.glasPanel.ResumeLayout(false);
@@ -146,6 +151,6 @@
         private System.Windows.Forms.Panel glasPanel;
         private Guna.UI2.WinForms.Guna2PictureBox glasPictureBox;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox searchLabel;
     }
 }

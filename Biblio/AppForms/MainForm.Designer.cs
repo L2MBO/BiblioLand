@@ -67,6 +67,7 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.lastUpdatesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -87,7 +88,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.showMoreButton = new Guna.UI2.WinForms.Guna2Button();
-            this.lastUpdatesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.topPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -133,9 +133,8 @@
             this.topPanel.Controls.Add(this.pictureBox2);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(6);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1452, 100);
+            this.topPanel.Size = new System.Drawing.Size(726, 52);
             this.topPanel.TabIndex = 21;
             // 
             // navigationPanel
@@ -145,10 +144,9 @@
             this.navigationPanel.Controls.Add(this.bottomNavigationPanel);
             this.navigationPanel.Controls.Add(this.topNavigationPanel);
             this.navigationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPanel.Location = new System.Drawing.Point(200, 0);
-            this.navigationPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.navigationPanel.Location = new System.Drawing.Point(100, 0);
             this.navigationPanel.Name = "navigationPanel";
-            this.navigationPanel.Size = new System.Drawing.Size(1052, 85);
+            this.navigationPanel.Size = new System.Drawing.Size(526, 44);
             this.navigationPanel.TabIndex = 25;
             // 
             // panel17
@@ -162,10 +160,9 @@
             this.panel17.Controls.Add(this.delimiter6);
             this.panel17.Controls.Add(this.avatarPictureBox);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel17.Location = new System.Drawing.Point(554, 13);
-            this.panel17.Margin = new System.Windows.Forms.Padding(6);
+            this.panel17.Location = new System.Drawing.Point(277, 7);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(498, 66);
+            this.panel17.Size = new System.Drawing.Size(249, 34);
             this.panel17.TabIndex = 56;
             // 
             // searchPanel
@@ -177,9 +174,8 @@
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.searchPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.searchPanel.Location = new System.Drawing.Point(0, 0);
-            this.searchPanel.Margin = new System.Windows.Forms.Padding(6);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(260, 66);
+            this.searchPanel.Size = new System.Drawing.Size(130, 34);
             this.searchPanel.TabIndex = 68;
             this.searchPanel.Click += new System.EventHandler(this.searchPanel_Click);
             // 
@@ -190,10 +186,9 @@
             this.searchLabel.BackColor = System.Drawing.Color.Transparent;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.searchLabel.ForeColor = System.Drawing.Color.White;
-            this.searchLabel.Location = new System.Drawing.Point(66, 18);
-            this.searchLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.searchLabel.Location = new System.Drawing.Point(33, 9);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(147, 30);
+            this.searchLabel.Size = new System.Drawing.Size(75, 16);
             this.searchLabel.TabIndex = 56;
             this.searchLabel.Text = "Что ищем?";
             // 
@@ -203,9 +198,8 @@
             this.glasPanel.Controls.Add(this.glasPictureBox);
             this.glasPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.glasPanel.Location = new System.Drawing.Point(0, 0);
-            this.glasPanel.Margin = new System.Windows.Forms.Padding(6);
             this.glasPanel.Name = "glasPanel";
-            this.glasPanel.Size = new System.Drawing.Size(54, 66);
+            this.glasPanel.Size = new System.Drawing.Size(27, 34);
             this.glasPanel.TabIndex = 55;
             // 
             // glasPictureBox
@@ -214,10 +208,9 @@
             this.glasPictureBox.FillColor = System.Drawing.Color.Transparent;
             this.glasPictureBox.Image = global::Biblio.Properties.Resources.magnifyingGlass;
             this.glasPictureBox.ImageRotate = 0F;
-            this.glasPictureBox.Location = new System.Drawing.Point(18, 15);
-            this.glasPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.glasPictureBox.Location = new System.Drawing.Point(9, 8);
             this.glasPictureBox.Name = "glasPictureBox";
-            this.glasPictureBox.Size = new System.Drawing.Size(36, 35);
+            this.glasPictureBox.Size = new System.Drawing.Size(18, 18);
             this.glasPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.glasPictureBox.TabIndex = 55;
             this.glasPictureBox.TabStop = false;
@@ -225,10 +218,9 @@
             // delimiter4
             // 
             this.delimiter4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter4.Location = new System.Drawing.Point(260, 0);
-            this.delimiter4.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter4.Location = new System.Drawing.Point(130, 0);
             this.delimiter4.Name = "delimiter4";
-            this.delimiter4.Size = new System.Drawing.Size(10, 66);
+            this.delimiter4.Size = new System.Drawing.Size(5, 34);
             this.delimiter4.TabIndex = 67;
             // 
             // bookmarksPanel
@@ -238,10 +230,9 @@
             this.bookmarksPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bookmarksPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.bookmarksPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.bookmarksPanel.Location = new System.Drawing.Point(270, 0);
-            this.bookmarksPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.bookmarksPanel.Location = new System.Drawing.Point(135, 0);
             this.bookmarksPanel.Name = "bookmarksPanel";
-            this.bookmarksPanel.Size = new System.Drawing.Size(70, 66);
+            this.bookmarksPanel.Size = new System.Drawing.Size(35, 34);
             this.bookmarksPanel.TabIndex = 66;
             // 
             // bookmarksPictureBox
@@ -250,10 +241,9 @@
             this.bookmarksPictureBox.FillColor = System.Drawing.Color.Transparent;
             this.bookmarksPictureBox.Image = global::Biblio.Properties.Resources.bookmark;
             this.bookmarksPictureBox.ImageRotate = 0F;
-            this.bookmarksPictureBox.Location = new System.Drawing.Point(18, 15);
-            this.bookmarksPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.bookmarksPictureBox.Location = new System.Drawing.Point(9, 8);
             this.bookmarksPictureBox.Name = "bookmarksPictureBox";
-            this.bookmarksPictureBox.Size = new System.Drawing.Size(32, 35);
+            this.bookmarksPictureBox.Size = new System.Drawing.Size(16, 18);
             this.bookmarksPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bookmarksPictureBox.TabIndex = 0;
             this.bookmarksPictureBox.TabStop = false;
@@ -262,10 +252,9 @@
             // delimiter5
             // 
             this.delimiter5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter5.Location = new System.Drawing.Point(340, 0);
-            this.delimiter5.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter5.Location = new System.Drawing.Point(170, 0);
             this.delimiter5.Name = "delimiter5";
-            this.delimiter5.Size = new System.Drawing.Size(10, 66);
+            this.delimiter5.Size = new System.Drawing.Size(5, 34);
             this.delimiter5.TabIndex = 65;
             // 
             // notifyPanel
@@ -275,10 +264,9 @@
             this.notifyPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notifyPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.notifyPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.notifyPanel.Location = new System.Drawing.Point(350, 0);
-            this.notifyPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.notifyPanel.Location = new System.Drawing.Point(175, 0);
             this.notifyPanel.Name = "notifyPanel";
-            this.notifyPanel.Size = new System.Drawing.Size(70, 66);
+            this.notifyPanel.Size = new System.Drawing.Size(35, 34);
             this.notifyPanel.TabIndex = 64;
             // 
             // notifyPictureBox
@@ -287,10 +275,9 @@
             this.notifyPictureBox.FillColor = System.Drawing.Color.Transparent;
             this.notifyPictureBox.Image = global::Biblio.Properties.Resources.bell;
             this.notifyPictureBox.ImageRotate = 0F;
-            this.notifyPictureBox.Location = new System.Drawing.Point(18, 15);
-            this.notifyPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.notifyPictureBox.Location = new System.Drawing.Point(9, 8);
             this.notifyPictureBox.Name = "notifyPictureBox";
-            this.notifyPictureBox.Size = new System.Drawing.Size(32, 35);
+            this.notifyPictureBox.Size = new System.Drawing.Size(16, 18);
             this.notifyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.notifyPictureBox.TabIndex = 0;
             this.notifyPictureBox.TabStop = false;
@@ -299,21 +286,20 @@
             // delimiter6
             // 
             this.delimiter6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter6.Location = new System.Drawing.Point(420, 0);
-            this.delimiter6.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter6.Location = new System.Drawing.Point(210, 0);
             this.delimiter6.Name = "delimiter6";
-            this.delimiter6.Size = new System.Drawing.Size(10, 66);
+            this.delimiter6.Size = new System.Drawing.Size(5, 34);
             this.delimiter6.TabIndex = 1;
             // 
             // avatarPictureBox
             // 
+            this.avatarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.avatarPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.avatarPictureBox.ImageRotate = 0F;
-            this.avatarPictureBox.Location = new System.Drawing.Point(430, 0);
-            this.avatarPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.avatarPictureBox.Location = new System.Drawing.Point(215, 0);
             this.avatarPictureBox.Name = "avatarPictureBox";
             this.avatarPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.avatarPictureBox.Size = new System.Drawing.Size(68, 66);
+            this.avatarPictureBox.Size = new System.Drawing.Size(34, 34);
             this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.avatarPictureBox.TabIndex = 0;
             this.avatarPictureBox.TabStop = false;
@@ -330,10 +316,9 @@
             this.panel16.Controls.Add(this.delimiter1);
             this.panel16.Controls.Add(this.mainButton);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel16.Location = new System.Drawing.Point(0, 13);
-            this.panel16.Margin = new System.Windows.Forms.Padding(6);
+            this.panel16.Location = new System.Drawing.Point(0, 7);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(540, 66);
+            this.panel16.Size = new System.Drawing.Size(269, 34);
             this.panel16.TabIndex = 55;
             // 
             // otherButton
@@ -349,11 +334,10 @@
             this.otherButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.otherButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.otherButton.ForeColor = System.Drawing.Color.White;
-            this.otherButton.Location = new System.Drawing.Point(440, 0);
-            this.otherButton.Margin = new System.Windows.Forms.Padding(6);
+            this.otherButton.Location = new System.Drawing.Point(219, 0);
             this.otherButton.Name = "otherButton";
             this.otherButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.otherButton.Size = new System.Drawing.Size(100, 66);
+            this.otherButton.Size = new System.Drawing.Size(50, 34);
             this.otherButton.TabIndex = 73;
             this.otherButton.Text = "•••";
             this.otherButton.Click += new System.EventHandler(this.otherButton_Click);
@@ -361,10 +345,9 @@
             // delimiter3
             // 
             this.delimiter3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.delimiter3.Location = new System.Drawing.Point(430, 0);
-            this.delimiter3.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter3.Location = new System.Drawing.Point(214, 0);
             this.delimiter3.Name = "delimiter3";
-            this.delimiter3.Size = new System.Drawing.Size(10, 66);
+            this.delimiter3.Size = new System.Drawing.Size(5, 34);
             this.delimiter3.TabIndex = 72;
             // 
             // topButton
@@ -380,11 +363,10 @@
             this.topButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.topButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.topButton.ForeColor = System.Drawing.Color.White;
-            this.topButton.Location = new System.Drawing.Point(260, 0);
-            this.topButton.Margin = new System.Windows.Forms.Padding(6);
+            this.topButton.Location = new System.Drawing.Point(129, 0);
             this.topButton.Name = "topButton";
             this.topButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.topButton.Size = new System.Drawing.Size(170, 66);
+            this.topButton.Size = new System.Drawing.Size(85, 34);
             this.topButton.TabIndex = 71;
             this.topButton.Text = "Топы";
             this.topButton.Click += new System.EventHandler(this.topButton_Click);
@@ -392,10 +374,9 @@
             // delimiter2
             // 
             this.delimiter2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.delimiter2.Location = new System.Drawing.Point(250, 0);
-            this.delimiter2.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter2.Location = new System.Drawing.Point(124, 0);
             this.delimiter2.Name = "delimiter2";
-            this.delimiter2.Size = new System.Drawing.Size(10, 66);
+            this.delimiter2.Size = new System.Drawing.Size(5, 34);
             this.delimiter2.TabIndex = 70;
             // 
             // catalogButton
@@ -411,11 +392,10 @@
             this.catalogButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.catalogButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.catalogButton.ForeColor = System.Drawing.Color.White;
-            this.catalogButton.Location = new System.Drawing.Point(80, 0);
-            this.catalogButton.Margin = new System.Windows.Forms.Padding(6);
+            this.catalogButton.Location = new System.Drawing.Point(39, 0);
             this.catalogButton.Name = "catalogButton";
             this.catalogButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.catalogButton.Size = new System.Drawing.Size(170, 66);
+            this.catalogButton.Size = new System.Drawing.Size(85, 34);
             this.catalogButton.TabIndex = 69;
             this.catalogButton.Text = "Каталог";
             this.catalogButton.Click += new System.EventHandler(this.catalogButton_Click);
@@ -423,10 +403,9 @@
             // delimiter1
             // 
             this.delimiter1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.delimiter1.Location = new System.Drawing.Point(70, 0);
-            this.delimiter1.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter1.Location = new System.Drawing.Point(34, 0);
             this.delimiter1.Name = "delimiter1";
-            this.delimiter1.Size = new System.Drawing.Size(10, 66);
+            this.delimiter1.Size = new System.Drawing.Size(5, 34);
             this.delimiter1.TabIndex = 68;
             // 
             // mainButton
@@ -435,9 +414,8 @@
             this.mainButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainButton.Image = ((System.Drawing.Image)(resources.GetObject("mainButton.Image")));
             this.mainButton.Location = new System.Drawing.Point(0, 0);
-            this.mainButton.Margin = new System.Windows.Forms.Padding(6);
             this.mainButton.Name = "mainButton";
-            this.mainButton.Size = new System.Drawing.Size(70, 66);
+            this.mainButton.Size = new System.Drawing.Size(34, 34);
             this.mainButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mainButton.TabIndex = 57;
             this.mainButton.TabStop = false;
@@ -446,38 +424,36 @@
             // bottomNavigationPanel
             // 
             this.bottomNavigationPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomNavigationPanel.Location = new System.Drawing.Point(0, 79);
-            this.bottomNavigationPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.bottomNavigationPanel.Location = new System.Drawing.Point(0, 41);
             this.bottomNavigationPanel.Name = "bottomNavigationPanel";
-            this.bottomNavigationPanel.Size = new System.Drawing.Size(1052, 6);
+            this.bottomNavigationPanel.Size = new System.Drawing.Size(526, 3);
             this.bottomNavigationPanel.TabIndex = 0;
             // 
             // topNavigationPanel
             // 
             this.topNavigationPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topNavigationPanel.Location = new System.Drawing.Point(0, 0);
-            this.topNavigationPanel.Margin = new System.Windows.Forms.Padding(6);
             this.topNavigationPanel.Name = "topNavigationPanel";
-            this.topNavigationPanel.Size = new System.Drawing.Size(1052, 13);
+            this.topNavigationPanel.Size = new System.Drawing.Size(526, 7);
             this.topNavigationPanel.TabIndex = 54;
             // 
             // topLeftPanel
             // 
             this.topLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.topLeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.topLeftPanel.Name = "topLeftPanel";
-            this.topLeftPanel.Size = new System.Drawing.Size(200, 85);
+            this.topLeftPanel.Size = new System.Drawing.Size(100, 44);
             this.topLeftPanel.TabIndex = 24;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.topRightPanel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1252, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(626, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 85);
+            this.panel2.Size = new System.Drawing.Size(100, 44);
             this.panel2.TabIndex = 21;
             // 
             // topRightPanel
@@ -488,18 +464,16 @@
             this.topRightPanel.Controls.Add(this.minimizeButton);
             this.topRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.topRightPanel.Location = new System.Drawing.Point(0, 0);
-            this.topRightPanel.Margin = new System.Windows.Forms.Padding(6);
             this.topRightPanel.Name = "topRightPanel";
-            this.topRightPanel.Size = new System.Drawing.Size(200, 85);
+            this.topRightPanel.Size = new System.Drawing.Size(100, 44);
             this.topRightPanel.TabIndex = 54;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Biblio.Properties.Resources.close;
-            this.pictureBox6.Location = new System.Drawing.Point(138, 29);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox6.Location = new System.Drawing.Point(69, 15);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox6.Size = new System.Drawing.Size(15, 15);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
@@ -508,10 +482,9 @@
             // maximizeButton
             // 
             this.maximizeButton.Image = global::Biblio.Properties.Resources.maximaze;
-            this.maximizeButton.Location = new System.Drawing.Point(86, 29);
-            this.maximizeButton.Margin = new System.Windows.Forms.Padding(6);
+            this.maximizeButton.Location = new System.Drawing.Point(43, 15);
             this.maximizeButton.Name = "maximizeButton";
-            this.maximizeButton.Size = new System.Drawing.Size(30, 29);
+            this.maximizeButton.Size = new System.Drawing.Size(15, 15);
             this.maximizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.maximizeButton.TabIndex = 6;
             this.maximizeButton.TabStop = false;
@@ -520,10 +493,9 @@
             // restoreButton
             // 
             this.restoreButton.Image = global::Biblio.Properties.Resources.restore;
-            this.restoreButton.Location = new System.Drawing.Point(86, 29);
-            this.restoreButton.Margin = new System.Windows.Forms.Padding(6);
+            this.restoreButton.Location = new System.Drawing.Point(43, 15);
             this.restoreButton.Name = "restoreButton";
-            this.restoreButton.Size = new System.Drawing.Size(30, 29);
+            this.restoreButton.Size = new System.Drawing.Size(15, 15);
             this.restoreButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.restoreButton.TabIndex = 5;
             this.restoreButton.TabStop = false;
@@ -533,10 +505,9 @@
             // minimizeButton
             // 
             this.minimizeButton.Image = global::Biblio.Properties.Resources.collapse;
-            this.minimizeButton.Location = new System.Drawing.Point(34, 29);
-            this.minimizeButton.Margin = new System.Windows.Forms.Padding(6);
+            this.minimizeButton.Location = new System.Drawing.Point(17, 15);
             this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(30, 29);
+            this.minimizeButton.Size = new System.Drawing.Size(15, 15);
             this.minimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimizeButton.TabIndex = 4;
             this.minimizeButton.TabStop = false;
@@ -546,10 +517,9 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox2.Image = global::Biblio.Properties.Resources.squareGreyLine;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 85);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 44);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1452, 15);
+            this.pictureBox2.Size = new System.Drawing.Size(726, 8);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
@@ -559,9 +529,9 @@
             this.mainBooksPanel.AutoSize = true;
             this.mainBooksPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mainBooksPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainBooksPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.mainBooksPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mainBooksPanel.Name = "mainBooksPanel";
-            this.mainBooksPanel.Size = new System.Drawing.Size(1452, 0);
+            this.mainBooksPanel.Size = new System.Drawing.Size(726, 0);
             this.mainBooksPanel.TabIndex = 15;
             this.mainBooksPanel.WrapContents = false;
             // 
@@ -569,19 +539,19 @@
             // 
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 727);
+            this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 20;
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1252, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.rightPanel.Location = new System.Drawing.Point(626, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(200, 727);
+            this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 21;
             // 
             // mainPanel
@@ -596,10 +566,9 @@
             this.mainPanel.Controls.Add(this.leftPanel);
             this.mainPanel.Controls.Add(this.mainBooksPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 100);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.mainPanel.Location = new System.Drawing.Point(0, 52);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1452, 727);
+            this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 22;
             // 
             // panel10
@@ -608,11 +577,20 @@
             this.panel10.Controls.Add(this.lastUpdatesPanel);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(200, 174);
-            this.panel10.Margin = new System.Windows.Forms.Padding(6);
+            this.panel10.Location = new System.Drawing.Point(100, 90);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1052, 77);
+            this.panel10.Size = new System.Drawing.Size(526, 40);
             this.panel10.TabIndex = 53;
+            // 
+            // lastUpdatesPanel
+            // 
+            this.lastUpdatesPanel.AutoSize = true;
+            this.lastUpdatesPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.lastUpdatesPanel.Location = new System.Drawing.Point(0, 33);
+            this.lastUpdatesPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lastUpdatesPanel.Name = "lastUpdatesPanel";
+            this.lastUpdatesPanel.Size = new System.Drawing.Size(526, 5);
+            this.lastUpdatesPanel.TabIndex = 49;
             // 
             // panel11
             // 
@@ -621,9 +599,9 @@
             this.panel11.Controls.Add(this.pictureBox4);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1052, 60);
+            this.panel11.Size = new System.Drawing.Size(526, 31);
             this.panel11.TabIndex = 48;
             // 
             // label4
@@ -631,20 +609,20 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(4, 4);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(2, 2);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(430, 42);
+            this.label4.Size = new System.Drawing.Size(223, 24);
             this.label4.TabIndex = 24;
             this.label4.Text = "Последние обновления";
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Red;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 46);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(6, 24);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(426, 10);
+            this.pictureBox4.Size = new System.Drawing.Size(213, 5);
             this.pictureBox4.TabIndex = 23;
             this.pictureBox4.TabStop = false;
             // 
@@ -654,20 +632,19 @@
             this.panel8.Controls.Add(this.popularBooksPanel);
             this.panel8.Controls.Add(this.panel12);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(200, 116);
-            this.panel8.Margin = new System.Windows.Forms.Padding(6);
+            this.panel8.Location = new System.Drawing.Point(100, 60);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1052, 58);
+            this.panel8.Size = new System.Drawing.Size(526, 30);
             this.panel8.TabIndex = 52;
             // 
             // popularBooksPanel
             // 
             this.popularBooksPanel.AutoSize = true;
             this.popularBooksPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.popularBooksPanel.Location = new System.Drawing.Point(0, 58);
-            this.popularBooksPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.popularBooksPanel.Location = new System.Drawing.Point(0, 30);
+            this.popularBooksPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.popularBooksPanel.Name = "popularBooksPanel";
-            this.popularBooksPanel.Size = new System.Drawing.Size(1052, 0);
+            this.popularBooksPanel.Size = new System.Drawing.Size(526, 0);
             this.popularBooksPanel.TabIndex = 44;
             this.popularBooksPanel.WrapContents = false;
             // 
@@ -677,9 +654,9 @@
             this.panel12.Controls.Add(this.pictureBox5);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1052, 58);
+            this.panel12.Size = new System.Drawing.Size(526, 30);
             this.panel12.TabIndex = 43;
             // 
             // label3
@@ -687,10 +664,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 4);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(2, 2);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 42);
+            this.label3.Size = new System.Drawing.Size(118, 24);
             this.label3.TabIndex = 22;
             this.label3.Text = "Популярное";
             // 
@@ -698,10 +675,10 @@
             // 
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox5.BackColor = System.Drawing.Color.Red;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 46);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Location = new System.Drawing.Point(6, 24);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(216, 10);
+            this.pictureBox5.Size = new System.Drawing.Size(108, 5);
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
             // 
@@ -711,20 +688,19 @@
             this.continueReadingLabelAndControlPanel.Controls.Add(this.continueReadingPanel);
             this.continueReadingLabelAndControlPanel.Controls.Add(this.panel7);
             this.continueReadingLabelAndControlPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.continueReadingLabelAndControlPanel.Location = new System.Drawing.Point(200, 58);
-            this.continueReadingLabelAndControlPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.continueReadingLabelAndControlPanel.Location = new System.Drawing.Point(100, 30);
             this.continueReadingLabelAndControlPanel.Name = "continueReadingLabelAndControlPanel";
-            this.continueReadingLabelAndControlPanel.Size = new System.Drawing.Size(1052, 58);
+            this.continueReadingLabelAndControlPanel.Size = new System.Drawing.Size(526, 30);
             this.continueReadingLabelAndControlPanel.TabIndex = 51;
             // 
             // continueReadingPanel
             // 
             this.continueReadingPanel.AutoSize = true;
             this.continueReadingPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.continueReadingPanel.Location = new System.Drawing.Point(0, 58);
-            this.continueReadingPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.continueReadingPanel.Location = new System.Drawing.Point(0, 30);
+            this.continueReadingPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.continueReadingPanel.Name = "continueReadingPanel";
-            this.continueReadingPanel.Size = new System.Drawing.Size(1052, 0);
+            this.continueReadingPanel.Size = new System.Drawing.Size(526, 0);
             this.continueReadingPanel.TabIndex = 29;
             this.continueReadingPanel.WrapContents = false;
             // 
@@ -734,9 +710,9 @@
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1052, 58);
+            this.panel7.Size = new System.Drawing.Size(526, 30);
             this.panel7.TabIndex = 26;
             // 
             // label2
@@ -744,10 +720,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 4);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(2, 2);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(411, 42);
+            this.label2.Size = new System.Drawing.Size(217, 24);
             this.label2.TabIndex = 22;
             this.label2.Text = "Продолжить просмотр";
             // 
@@ -755,10 +731,10 @@
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox3.BackColor = System.Drawing.Color.Red;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 46);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(6, 24);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(414, 10);
+            this.pictureBox3.Size = new System.Drawing.Size(207, 5);
             this.pictureBox3.TabIndex = 21;
             this.pictureBox3.TabStop = false;
             // 
@@ -768,20 +744,19 @@
             this.panel1.Controls.Add(this.newBooksPanel);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Location = new System.Drawing.Point(100, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1052, 58);
+            this.panel1.Size = new System.Drawing.Size(526, 30);
             this.panel1.TabIndex = 50;
             // 
             // newBooksPanel
             // 
             this.newBooksPanel.AutoSize = true;
             this.newBooksPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.newBooksPanel.Location = new System.Drawing.Point(0, 58);
-            this.newBooksPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.newBooksPanel.Location = new System.Drawing.Point(0, 30);
+            this.newBooksPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newBooksPanel.Name = "newBooksPanel";
-            this.newBooksPanel.Size = new System.Drawing.Size(1052, 0);
+            this.newBooksPanel.Size = new System.Drawing.Size(526, 0);
             this.newBooksPanel.TabIndex = 25;
             this.newBooksPanel.WrapContents = false;
             // 
@@ -791,9 +766,9 @@
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1052, 58);
+            this.panel5.Size = new System.Drawing.Size(526, 30);
             this.panel5.TabIndex = 24;
             // 
             // label1
@@ -801,10 +776,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(2, 2);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 42);
+            this.label1.Size = new System.Drawing.Size(87, 24);
             this.label1.TabIndex = 20;
             this.label1.Text = "Новинки";
             // 
@@ -812,10 +787,10 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackColor = System.Drawing.Color.Red;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 46);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 24);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 10);
+            this.pictureBox1.Size = new System.Drawing.Size(77, 5);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
@@ -823,10 +798,10 @@
             // 
             this.panel9.Controls.Add(this.showMoreButton);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(200, 646);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Location = new System.Drawing.Point(100, 336);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1052, 81);
+            this.panel9.Size = new System.Drawing.Size(526, 42);
             this.panel9.TabIndex = 49;
             // 
             // showMoreButton
@@ -841,35 +816,25 @@
             this.showMoreButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.showMoreButton.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.showMoreButton.ForeColor = System.Drawing.Color.White;
-            this.showMoreButton.Location = new System.Drawing.Point(402, 4);
-            this.showMoreButton.Margin = new System.Windows.Forms.Padding(4);
+            this.showMoreButton.Location = new System.Drawing.Point(201, 2);
+            this.showMoreButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showMoreButton.Name = "showMoreButton";
             this.showMoreButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.showMoreButton.Size = new System.Drawing.Size(250, 67);
+            this.showMoreButton.Size = new System.Drawing.Size(125, 35);
             this.showMoreButton.TabIndex = 51;
             this.showMoreButton.Text = "Показать еще";
             this.showMoreButton.Visible = false;
             // 
-            // lastUpdatesPanel
-            // 
-            this.lastUpdatesPanel.AutoSize = true;
-            this.lastUpdatesPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.lastUpdatesPanel.Location = new System.Drawing.Point(0, 63);
-            this.lastUpdatesPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.lastUpdatesPanel.Name = "lastUpdatesPanel";
-            this.lastUpdatesPanel.Size = new System.Drawing.Size(1052, 10);
-            this.lastUpdatesPanel.TabIndex = 49;
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(1452, 827);
+            this.ClientSize = new System.Drawing.Size(726, 430);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KatalogForm";

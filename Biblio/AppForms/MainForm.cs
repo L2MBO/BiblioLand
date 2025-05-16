@@ -205,6 +205,37 @@ namespace Biblio.AppForms
             otherControl.Visible = true;
         }
 
+        private SearchControl searchControl;
+
+        private void searchPanel_Click(object sender, EventArgs e)
+        {
+            if (searchControl != null && searchControl.Visible)
+            {
+                searchControl.Visible = false;
+                searchControl.Dispose();
+                searchControl = null;
+                return;
+            }
+
+            searchControl = new SearchControl();
+
+            searchControl.OpenChanged += SearchControl_OpenChanged;
+
+            int centerX = this.ClientSize.Width / 2;
+            int controlWidth = searchControl.Width;
+
+            int x = centerX - controlWidth / 2;
+            int y = searchPanel.Bottom + 10;
+
+            searchControl.Location = new Point(x, y);
+
+            this.Controls.Add(searchControl);
+            searchControl.BringToFront();
+            searchControl.Visible = true;
+
+            searchControl.BeginInvoke(new Action(() => SetSearchControlPosition()));
+        }
+
         private int avatarX;
 
         private AvatarControl avatarControl;
@@ -223,19 +254,24 @@ namespace Biblio.AppForms
 
             avatarControl.OpenChanged += AvatarControl_OpenChanged;
 
-            int x = avatarPictureBox.Right + avatarX;
-            int y = avatarPictureBox.Bottom + 10;
-
-            avatarControl.Location = new Point(x, y);
-
             this.Controls.Add(avatarControl);
             avatarControl.BringToFront();
             avatarControl.Visible = true;
+
+            SetSearchControlPosition();
         }
 
         private void OtherControl_OpenChanged(object sender, EventArgs e)
         {
             if (otherControl.IsOpen)
+            {
+                this.Hide();
+            }
+        }
+
+        private void SearchControl_OpenChanged(object sender, EventArgs e)
+        {
+            if (searchControl.IsOpen)
             {
                 this.Hide();
             }
@@ -347,6 +383,11 @@ namespace Biblio.AppForms
                 otherControl.Location = new Point(x, y);
             }
 
+            if (searchControl != null && searchControl.Visible)
+            {
+                SetSearchControlPosition();
+            }
+
             if (avatarControl != null && avatarControl.Visible)
             {
                 int x = avatarPictureBox.Right + avatarX;
@@ -355,9 +396,17 @@ namespace Biblio.AppForms
             }
         }
 
-        private void searchPanel_Click(object sender, EventArgs e)
+        private void SetSearchControlPosition()
         {
+            if (searchControl == null || !searchControl.Visible) return;
 
+            int centerX = this.ClientSize.Width / 2;
+            int controlWidth = searchControl.Width;
+
+            int x = (centerX - controlWidth / 2) + 3;
+            int y = searchPanel.Bottom + 10;
+
+            searchControl.Location = new Point(x, y);
         }
 
         private void bookmarksPictureBox_Click(object sender, EventArgs e)
