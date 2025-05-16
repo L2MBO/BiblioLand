@@ -1,0 +1,988 @@
+﻿namespace Biblio.AppForms
+{
+    partial class MainForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.navigationPanel = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.searchPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.glasPanel = new System.Windows.Forms.Panel();
+            this.glasPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.delimiter4 = new System.Windows.Forms.Panel();
+            this.bookmarksPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.bookmarksPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.delimiter5 = new System.Windows.Forms.Panel();
+            this.notifyPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.notifyPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.delimiter6 = new System.Windows.Forms.Panel();
+            this.avatarPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.otherButton = new Guna.UI2.WinForms.Guna2Button();
+            this.delimiter3 = new System.Windows.Forms.Panel();
+            this.topButton = new Guna.UI2.WinForms.Guna2Button();
+            this.delimiter2 = new System.Windows.Forms.Panel();
+            this.catalogButton = new Guna.UI2.WinForms.Guna2Button();
+            this.delimiter1 = new System.Windows.Forms.Panel();
+            this.mainButton = new System.Windows.Forms.PictureBox();
+            this.bottomNavigationPanel = new System.Windows.Forms.Panel();
+            this.topNavigationPanel = new System.Windows.Forms.Panel();
+            this.topLeftPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.topRightPanel = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.maximizeButton = new System.Windows.Forms.PictureBox();
+            this.restoreButton = new System.Windows.Forms.PictureBox();
+            this.minimizeButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.mainBooksPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.rightPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.popularBooksPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.continueReadingLabelAndControlPanel = new System.Windows.Forms.Panel();
+            this.continueReadingPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.newBooksPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.showMoreButton = new Guna.UI2.WinForms.Guna2Button();
+            this.lastUpdatesPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.topPanel.SuspendLayout();
+            this.navigationPanel.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.searchPanel.SuspendLayout();
+            this.glasPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).BeginInit();
+            this.bookmarksPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookmarksPictureBox)).BeginInit();
+            this.notifyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.notifyPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
+            this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainButton)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.topRightPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.mainPanel.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel8.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.continueReadingLabelAndControlPanel.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.topPanel.Controls.Add(this.navigationPanel);
+            this.topPanel.Controls.Add(this.topLeftPanel);
+            this.topPanel.Controls.Add(this.panel2);
+            this.topPanel.Controls.Add(this.pictureBox2);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1452, 100);
+            this.topPanel.TabIndex = 21;
+            // 
+            // navigationPanel
+            // 
+            this.navigationPanel.Controls.Add(this.panel17);
+            this.navigationPanel.Controls.Add(this.panel16);
+            this.navigationPanel.Controls.Add(this.bottomNavigationPanel);
+            this.navigationPanel.Controls.Add(this.topNavigationPanel);
+            this.navigationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationPanel.Location = new System.Drawing.Point(200, 0);
+            this.navigationPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.navigationPanel.Name = "navigationPanel";
+            this.navigationPanel.Size = new System.Drawing.Size(1052, 85);
+            this.navigationPanel.TabIndex = 25;
+            // 
+            // panel17
+            // 
+            this.panel17.AutoSize = true;
+            this.panel17.Controls.Add(this.searchPanel);
+            this.panel17.Controls.Add(this.delimiter4);
+            this.panel17.Controls.Add(this.bookmarksPanel);
+            this.panel17.Controls.Add(this.delimiter5);
+            this.panel17.Controls.Add(this.notifyPanel);
+            this.panel17.Controls.Add(this.delimiter6);
+            this.panel17.Controls.Add(this.avatarPictureBox);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel17.Location = new System.Drawing.Point(554, 13);
+            this.panel17.Margin = new System.Windows.Forms.Padding(6);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(498, 66);
+            this.panel17.TabIndex = 56;
+            // 
+            // searchPanel
+            // 
+            this.searchPanel.BorderRadius = 17;
+            this.searchPanel.Controls.Add(this.searchLabel);
+            this.searchPanel.Controls.Add(this.glasPanel);
+            this.searchPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.searchPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.searchPanel.Location = new System.Drawing.Point(0, 0);
+            this.searchPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Size = new System.Drawing.Size(260, 66);
+            this.searchPanel.TabIndex = 68;
+            this.searchPanel.Click += new System.EventHandler(this.searchPanel_Click);
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.BackColor = System.Drawing.Color.Transparent;
+            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.searchLabel.ForeColor = System.Drawing.Color.White;
+            this.searchLabel.Location = new System.Drawing.Point(66, 18);
+            this.searchLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(147, 30);
+            this.searchLabel.TabIndex = 56;
+            this.searchLabel.Text = "Что ищем?";
+            // 
+            // glasPanel
+            // 
+            this.glasPanel.BackColor = System.Drawing.Color.Transparent;
+            this.glasPanel.Controls.Add(this.glasPictureBox);
+            this.glasPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.glasPanel.Location = new System.Drawing.Point(0, 0);
+            this.glasPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.glasPanel.Name = "glasPanel";
+            this.glasPanel.Size = new System.Drawing.Size(54, 66);
+            this.glasPanel.TabIndex = 55;
+            // 
+            // glasPictureBox
+            // 
+            this.glasPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.glasPictureBox.FillColor = System.Drawing.Color.Transparent;
+            this.glasPictureBox.Image = global::Biblio.Properties.Resources.magnifyingGlass;
+            this.glasPictureBox.ImageRotate = 0F;
+            this.glasPictureBox.Location = new System.Drawing.Point(18, 15);
+            this.glasPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.glasPictureBox.Name = "glasPictureBox";
+            this.glasPictureBox.Size = new System.Drawing.Size(36, 35);
+            this.glasPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.glasPictureBox.TabIndex = 55;
+            this.glasPictureBox.TabStop = false;
+            // 
+            // delimiter4
+            // 
+            this.delimiter4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter4.Location = new System.Drawing.Point(260, 0);
+            this.delimiter4.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter4.Name = "delimiter4";
+            this.delimiter4.Size = new System.Drawing.Size(10, 66);
+            this.delimiter4.TabIndex = 67;
+            // 
+            // bookmarksPanel
+            // 
+            this.bookmarksPanel.BorderRadius = 18;
+            this.bookmarksPanel.Controls.Add(this.bookmarksPictureBox);
+            this.bookmarksPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bookmarksPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bookmarksPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.bookmarksPanel.Location = new System.Drawing.Point(270, 0);
+            this.bookmarksPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.bookmarksPanel.Name = "bookmarksPanel";
+            this.bookmarksPanel.Size = new System.Drawing.Size(70, 66);
+            this.bookmarksPanel.TabIndex = 66;
+            // 
+            // bookmarksPictureBox
+            // 
+            this.bookmarksPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.bookmarksPictureBox.FillColor = System.Drawing.Color.Transparent;
+            this.bookmarksPictureBox.Image = global::Biblio.Properties.Resources.bookmark;
+            this.bookmarksPictureBox.ImageRotate = 0F;
+            this.bookmarksPictureBox.Location = new System.Drawing.Point(18, 15);
+            this.bookmarksPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.bookmarksPictureBox.Name = "bookmarksPictureBox";
+            this.bookmarksPictureBox.Size = new System.Drawing.Size(32, 35);
+            this.bookmarksPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bookmarksPictureBox.TabIndex = 0;
+            this.bookmarksPictureBox.TabStop = false;
+            this.bookmarksPictureBox.Click += new System.EventHandler(this.bookmarksPictureBox_Click);
+            // 
+            // delimiter5
+            // 
+            this.delimiter5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter5.Location = new System.Drawing.Point(340, 0);
+            this.delimiter5.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter5.Name = "delimiter5";
+            this.delimiter5.Size = new System.Drawing.Size(10, 66);
+            this.delimiter5.TabIndex = 65;
+            // 
+            // notifyPanel
+            // 
+            this.notifyPanel.BorderRadius = 18;
+            this.notifyPanel.Controls.Add(this.notifyPictureBox);
+            this.notifyPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notifyPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.notifyPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.notifyPanel.Location = new System.Drawing.Point(350, 0);
+            this.notifyPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.notifyPanel.Name = "notifyPanel";
+            this.notifyPanel.Size = new System.Drawing.Size(70, 66);
+            this.notifyPanel.TabIndex = 64;
+            // 
+            // notifyPictureBox
+            // 
+            this.notifyPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.notifyPictureBox.FillColor = System.Drawing.Color.Transparent;
+            this.notifyPictureBox.Image = global::Biblio.Properties.Resources.bell;
+            this.notifyPictureBox.ImageRotate = 0F;
+            this.notifyPictureBox.Location = new System.Drawing.Point(18, 15);
+            this.notifyPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.notifyPictureBox.Name = "notifyPictureBox";
+            this.notifyPictureBox.Size = new System.Drawing.Size(32, 35);
+            this.notifyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.notifyPictureBox.TabIndex = 0;
+            this.notifyPictureBox.TabStop = false;
+            this.notifyPictureBox.Click += new System.EventHandler(this.notifyPictureBox_Click);
+            // 
+            // delimiter6
+            // 
+            this.delimiter6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter6.Location = new System.Drawing.Point(420, 0);
+            this.delimiter6.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter6.Name = "delimiter6";
+            this.delimiter6.Size = new System.Drawing.Size(10, 66);
+            this.delimiter6.TabIndex = 1;
+            // 
+            // avatarPictureBox
+            // 
+            this.avatarPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.avatarPictureBox.ImageRotate = 0F;
+            this.avatarPictureBox.Location = new System.Drawing.Point(430, 0);
+            this.avatarPictureBox.Margin = new System.Windows.Forms.Padding(6);
+            this.avatarPictureBox.Name = "avatarPictureBox";
+            this.avatarPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.avatarPictureBox.Size = new System.Drawing.Size(68, 66);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatarPictureBox.TabIndex = 0;
+            this.avatarPictureBox.TabStop = false;
+            this.avatarPictureBox.Click += new System.EventHandler(this.avatarPictureBox_Click);
+            // 
+            // panel16
+            // 
+            this.panel16.AutoSize = true;
+            this.panel16.Controls.Add(this.otherButton);
+            this.panel16.Controls.Add(this.delimiter3);
+            this.panel16.Controls.Add(this.topButton);
+            this.panel16.Controls.Add(this.delimiter2);
+            this.panel16.Controls.Add(this.catalogButton);
+            this.panel16.Controls.Add(this.delimiter1);
+            this.panel16.Controls.Add(this.mainButton);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel16.Location = new System.Drawing.Point(0, 13);
+            this.panel16.Margin = new System.Windows.Forms.Padding(6);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(540, 66);
+            this.panel16.TabIndex = 55;
+            // 
+            // otherButton
+            // 
+            this.otherButton.Animated = true;
+            this.otherButton.BorderRadius = 17;
+            this.otherButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.otherButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.otherButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.otherButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.otherButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.otherButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.otherButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.otherButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.otherButton.ForeColor = System.Drawing.Color.White;
+            this.otherButton.Location = new System.Drawing.Point(440, 0);
+            this.otherButton.Margin = new System.Windows.Forms.Padding(6);
+            this.otherButton.Name = "otherButton";
+            this.otherButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.otherButton.Size = new System.Drawing.Size(100, 66);
+            this.otherButton.TabIndex = 73;
+            this.otherButton.Text = "•••";
+            this.otherButton.Click += new System.EventHandler(this.otherButton_Click);
+            // 
+            // delimiter3
+            // 
+            this.delimiter3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.delimiter3.Location = new System.Drawing.Point(430, 0);
+            this.delimiter3.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter3.Name = "delimiter3";
+            this.delimiter3.Size = new System.Drawing.Size(10, 66);
+            this.delimiter3.TabIndex = 72;
+            // 
+            // topButton
+            // 
+            this.topButton.Animated = true;
+            this.topButton.BorderRadius = 17;
+            this.topButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.topButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.topButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.topButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.topButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.topButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.topButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.topButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.topButton.ForeColor = System.Drawing.Color.White;
+            this.topButton.Location = new System.Drawing.Point(260, 0);
+            this.topButton.Margin = new System.Windows.Forms.Padding(6);
+            this.topButton.Name = "topButton";
+            this.topButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.topButton.Size = new System.Drawing.Size(170, 66);
+            this.topButton.TabIndex = 71;
+            this.topButton.Text = "Топы";
+            this.topButton.Click += new System.EventHandler(this.topButton_Click);
+            // 
+            // delimiter2
+            // 
+            this.delimiter2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.delimiter2.Location = new System.Drawing.Point(250, 0);
+            this.delimiter2.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter2.Name = "delimiter2";
+            this.delimiter2.Size = new System.Drawing.Size(10, 66);
+            this.delimiter2.TabIndex = 70;
+            // 
+            // catalogButton
+            // 
+            this.catalogButton.Animated = true;
+            this.catalogButton.BorderRadius = 17;
+            this.catalogButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.catalogButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.catalogButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.catalogButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.catalogButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.catalogButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.catalogButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.catalogButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.catalogButton.ForeColor = System.Drawing.Color.White;
+            this.catalogButton.Location = new System.Drawing.Point(80, 0);
+            this.catalogButton.Margin = new System.Windows.Forms.Padding(6);
+            this.catalogButton.Name = "catalogButton";
+            this.catalogButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.catalogButton.Size = new System.Drawing.Size(170, 66);
+            this.catalogButton.TabIndex = 69;
+            this.catalogButton.Text = "Каталог";
+            this.catalogButton.Click += new System.EventHandler(this.catalogButton_Click);
+            // 
+            // delimiter1
+            // 
+            this.delimiter1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.delimiter1.Location = new System.Drawing.Point(70, 0);
+            this.delimiter1.Margin = new System.Windows.Forms.Padding(6);
+            this.delimiter1.Name = "delimiter1";
+            this.delimiter1.Size = new System.Drawing.Size(10, 66);
+            this.delimiter1.TabIndex = 68;
+            // 
+            // mainButton
+            // 
+            this.mainButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mainButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mainButton.Image = ((System.Drawing.Image)(resources.GetObject("mainButton.Image")));
+            this.mainButton.Location = new System.Drawing.Point(0, 0);
+            this.mainButton.Margin = new System.Windows.Forms.Padding(6);
+            this.mainButton.Name = "mainButton";
+            this.mainButton.Size = new System.Drawing.Size(70, 66);
+            this.mainButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mainButton.TabIndex = 57;
+            this.mainButton.TabStop = false;
+            this.mainButton.Click += new System.EventHandler(this.mainButton_Click);
+            // 
+            // bottomNavigationPanel
+            // 
+            this.bottomNavigationPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomNavigationPanel.Location = new System.Drawing.Point(0, 79);
+            this.bottomNavigationPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.bottomNavigationPanel.Name = "bottomNavigationPanel";
+            this.bottomNavigationPanel.Size = new System.Drawing.Size(1052, 6);
+            this.bottomNavigationPanel.TabIndex = 0;
+            // 
+            // topNavigationPanel
+            // 
+            this.topNavigationPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topNavigationPanel.Location = new System.Drawing.Point(0, 0);
+            this.topNavigationPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.topNavigationPanel.Name = "topNavigationPanel";
+            this.topNavigationPanel.Size = new System.Drawing.Size(1052, 13);
+            this.topNavigationPanel.TabIndex = 54;
+            // 
+            // topLeftPanel
+            // 
+            this.topLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.topLeftPanel.Location = new System.Drawing.Point(0, 0);
+            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.topLeftPanel.Name = "topLeftPanel";
+            this.topLeftPanel.Size = new System.Drawing.Size(200, 85);
+            this.topLeftPanel.TabIndex = 24;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.topRightPanel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1252, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 85);
+            this.panel2.TabIndex = 21;
+            // 
+            // topRightPanel
+            // 
+            this.topRightPanel.Controls.Add(this.pictureBox6);
+            this.topRightPanel.Controls.Add(this.maximizeButton);
+            this.topRightPanel.Controls.Add(this.restoreButton);
+            this.topRightPanel.Controls.Add(this.minimizeButton);
+            this.topRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.topRightPanel.Location = new System.Drawing.Point(0, 0);
+            this.topRightPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.topRightPanel.Name = "topRightPanel";
+            this.topRightPanel.Size = new System.Drawing.Size(200, 85);
+            this.topRightPanel.TabIndex = 54;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Biblio.Properties.Resources.close;
+            this.pictureBox6.Location = new System.Drawing.Point(138, 29);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // maximizeButton
+            // 
+            this.maximizeButton.Image = global::Biblio.Properties.Resources.maximaze;
+            this.maximizeButton.Location = new System.Drawing.Point(86, 29);
+            this.maximizeButton.Margin = new System.Windows.Forms.Padding(6);
+            this.maximizeButton.Name = "maximizeButton";
+            this.maximizeButton.Size = new System.Drawing.Size(30, 29);
+            this.maximizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.maximizeButton.TabIndex = 6;
+            this.maximizeButton.TabStop = false;
+            this.maximizeButton.Click += new System.EventHandler(this.maximizeButton_Click);
+            // 
+            // restoreButton
+            // 
+            this.restoreButton.Image = global::Biblio.Properties.Resources.restore;
+            this.restoreButton.Location = new System.Drawing.Point(86, 29);
+            this.restoreButton.Margin = new System.Windows.Forms.Padding(6);
+            this.restoreButton.Name = "restoreButton";
+            this.restoreButton.Size = new System.Drawing.Size(30, 29);
+            this.restoreButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.restoreButton.TabIndex = 5;
+            this.restoreButton.TabStop = false;
+            this.restoreButton.Visible = false;
+            this.restoreButton.Click += new System.EventHandler(this.restoreButton_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.Image = global::Biblio.Properties.Resources.collapse;
+            this.minimizeButton.Location = new System.Drawing.Point(34, 29);
+            this.minimizeButton.Margin = new System.Windows.Forms.Padding(6);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(30, 29);
+            this.minimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimizeButton.TabIndex = 4;
+            this.minimizeButton.TabStop = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox2.Image = global::Biblio.Properties.Resources.squareGreyLine;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 85);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1452, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // mainBooksPanel
+            // 
+            this.mainBooksPanel.AutoSize = true;
+            this.mainBooksPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mainBooksPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainBooksPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.mainBooksPanel.Name = "mainBooksPanel";
+            this.mainBooksPanel.Size = new System.Drawing.Size(1452, 0);
+            this.mainBooksPanel.TabIndex = 15;
+            this.mainBooksPanel.WrapContents = false;
+            // 
+            // leftPanel
+            // 
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(200, 727);
+            this.leftPanel.TabIndex = 20;
+            // 
+            // rightPanel
+            // 
+            this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightPanel.Location = new System.Drawing.Point(1252, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.Size = new System.Drawing.Size(200, 727);
+            this.rightPanel.TabIndex = 21;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.mainPanel.Controls.Add(this.panel10);
+            this.mainPanel.Controls.Add(this.panel8);
+            this.mainPanel.Controls.Add(this.continueReadingLabelAndControlPanel);
+            this.mainPanel.Controls.Add(this.panel1);
+            this.mainPanel.Controls.Add(this.panel9);
+            this.mainPanel.Controls.Add(this.rightPanel);
+            this.mainPanel.Controls.Add(this.leftPanel);
+            this.mainPanel.Controls.Add(this.mainBooksPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 100);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1452, 727);
+            this.mainPanel.TabIndex = 22;
+            // 
+            // panel10
+            // 
+            this.panel10.AutoSize = true;
+            this.panel10.Controls.Add(this.lastUpdatesPanel);
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(200, 174);
+            this.panel10.Margin = new System.Windows.Forms.Padding(6);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1052, 77);
+            this.panel10.TabIndex = 53;
+            // 
+            // panel11
+            // 
+            this.panel11.AutoSize = true;
+            this.panel11.Controls.Add(this.label4);
+            this.panel11.Controls.Add(this.pictureBox4);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1052, 60);
+            this.panel11.TabIndex = 48;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(4, 4);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(430, 42);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Последние обновления";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Red;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 46);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(426, 10);
+            this.pictureBox4.TabIndex = 23;
+            this.pictureBox4.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.AutoSize = true;
+            this.panel8.Controls.Add(this.popularBooksPanel);
+            this.panel8.Controls.Add(this.panel12);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(200, 116);
+            this.panel8.Margin = new System.Windows.Forms.Padding(6);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1052, 58);
+            this.panel8.TabIndex = 52;
+            // 
+            // popularBooksPanel
+            // 
+            this.popularBooksPanel.AutoSize = true;
+            this.popularBooksPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.popularBooksPanel.Location = new System.Drawing.Point(0, 58);
+            this.popularBooksPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.popularBooksPanel.Name = "popularBooksPanel";
+            this.popularBooksPanel.Size = new System.Drawing.Size(1052, 0);
+            this.popularBooksPanel.TabIndex = 44;
+            this.popularBooksPanel.WrapContents = false;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.label3);
+            this.panel12.Controls.Add(this.pictureBox5);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1052, 58);
+            this.panel12.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(4, 4);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(231, 42);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Популярное";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox5.BackColor = System.Drawing.Color.Red;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 46);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(216, 10);
+            this.pictureBox5.TabIndex = 21;
+            this.pictureBox5.TabStop = false;
+            // 
+            // continueReadingLabelAndControlPanel
+            // 
+            this.continueReadingLabelAndControlPanel.AutoSize = true;
+            this.continueReadingLabelAndControlPanel.Controls.Add(this.continueReadingPanel);
+            this.continueReadingLabelAndControlPanel.Controls.Add(this.panel7);
+            this.continueReadingLabelAndControlPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.continueReadingLabelAndControlPanel.Location = new System.Drawing.Point(200, 58);
+            this.continueReadingLabelAndControlPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.continueReadingLabelAndControlPanel.Name = "continueReadingLabelAndControlPanel";
+            this.continueReadingLabelAndControlPanel.Size = new System.Drawing.Size(1052, 58);
+            this.continueReadingLabelAndControlPanel.TabIndex = 51;
+            // 
+            // continueReadingPanel
+            // 
+            this.continueReadingPanel.AutoSize = true;
+            this.continueReadingPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.continueReadingPanel.Location = new System.Drawing.Point(0, 58);
+            this.continueReadingPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.continueReadingPanel.Name = "continueReadingPanel";
+            this.continueReadingPanel.Size = new System.Drawing.Size(1052, 0);
+            this.continueReadingPanel.TabIndex = 29;
+            this.continueReadingPanel.WrapContents = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.pictureBox3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1052, 58);
+            this.panel7.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(4, 4);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(411, 42);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Продолжить просмотр";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox3.BackColor = System.Drawing.Color.Red;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 46);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(414, 10);
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.newBooksPanel);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(200, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1052, 58);
+            this.panel1.TabIndex = 50;
+            // 
+            // newBooksPanel
+            // 
+            this.newBooksPanel.AutoSize = true;
+            this.newBooksPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.newBooksPanel.Location = new System.Drawing.Point(0, 58);
+            this.newBooksPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.newBooksPanel.Name = "newBooksPanel";
+            this.newBooksPanel.Size = new System.Drawing.Size(1052, 0);
+            this.newBooksPanel.TabIndex = 25;
+            this.newBooksPanel.WrapContents = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1052, 58);
+            this.panel5.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 42);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Новинки";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Red;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 46);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(154, 10);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.showMoreButton);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(200, 646);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1052, 81);
+            this.panel9.TabIndex = 49;
+            // 
+            // showMoreButton
+            // 
+            this.showMoreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.showMoreButton.Animated = true;
+            this.showMoreButton.BorderRadius = 17;
+            this.showMoreButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.showMoreButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.showMoreButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.showMoreButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showMoreButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.showMoreButton.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showMoreButton.ForeColor = System.Drawing.Color.White;
+            this.showMoreButton.Location = new System.Drawing.Point(402, 4);
+            this.showMoreButton.Margin = new System.Windows.Forms.Padding(4);
+            this.showMoreButton.Name = "showMoreButton";
+            this.showMoreButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.showMoreButton.Size = new System.Drawing.Size(250, 67);
+            this.showMoreButton.TabIndex = 51;
+            this.showMoreButton.Text = "Показать еще";
+            this.showMoreButton.Visible = false;
+            // 
+            // lastUpdatesPanel
+            // 
+            this.lastUpdatesPanel.AutoSize = true;
+            this.lastUpdatesPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.lastUpdatesPanel.Location = new System.Drawing.Point(0, 63);
+            this.lastUpdatesPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.lastUpdatesPanel.Name = "lastUpdatesPanel";
+            this.lastUpdatesPanel.Size = new System.Drawing.Size(1052, 10);
+            this.lastUpdatesPanel.TabIndex = 49;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.ClientSize = new System.Drawing.Size(1452, 827);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.topPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "KatalogForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.topPanel.ResumeLayout(false);
+            this.navigationPanel.ResumeLayout(false);
+            this.navigationPanel.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.searchPanel.ResumeLayout(false);
+            this.searchPanel.PerformLayout();
+            this.glasPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).EndInit();
+            this.bookmarksPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bookmarksPictureBox)).EndInit();
+            this.notifyPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.notifyPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
+            this.panel16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mainButton)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.topRightPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.continueReadingLabelAndControlPanel.ResumeLayout(false);
+            this.continueReadingLabelAndControlPanel.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.FlowLayoutPanel mainBooksPanel;
+        private System.Windows.Forms.Panel leftPanel;
+        private System.Windows.Forms.Panel rightPanel;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Button showMoreButton;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.FlowLayoutPanel popularBooksPanel;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel continueReadingLabelAndControlPanel;
+        private System.Windows.Forms.FlowLayoutPanel continueReadingPanel;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel newBooksPanel;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel topLeftPanel;
+        private System.Windows.Forms.Panel navigationPanel;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.PictureBox mainButton;
+        private System.Windows.Forms.Panel bottomNavigationPanel;
+        private System.Windows.Forms.Panel topNavigationPanel;
+        private System.Windows.Forms.Panel topRightPanel;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox maximizeButton;
+        private System.Windows.Forms.PictureBox restoreButton;
+        private System.Windows.Forms.PictureBox minimizeButton;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel delimiter4;
+        private Guna.UI2.WinForms.Guna2Panel bookmarksPanel;
+        private Guna.UI2.WinForms.Guna2PictureBox bookmarksPictureBox;
+        private System.Windows.Forms.Panel delimiter5;
+        private Guna.UI2.WinForms.Guna2Panel notifyPanel;
+        private Guna.UI2.WinForms.Guna2PictureBox notifyPictureBox;
+        private System.Windows.Forms.Panel delimiter6;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox avatarPictureBox;
+        private Guna.UI2.WinForms.Guna2Panel searchPanel;
+        private System.Windows.Forms.Label searchLabel;
+        private System.Windows.Forms.Panel glasPanel;
+        private Guna.UI2.WinForms.Guna2PictureBox glasPictureBox;
+        private System.Windows.Forms.Panel delimiter3;
+        private Guna.UI2.WinForms.Guna2Button topButton;
+        private System.Windows.Forms.Panel delimiter2;
+        private Guna.UI2.WinForms.Guna2Button catalogButton;
+        private System.Windows.Forms.Panel delimiter1;
+        private Guna.UI2.WinForms.Guna2Button otherButton;
+        private System.Windows.Forms.FlowLayoutPanel lastUpdatesPanel;
+    }
+}

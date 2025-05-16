@@ -1,0 +1,58 @@
+SELECT * FROM sys.triggers;
+
+-- Удаление существующих триггеров (если они есть)
+DROP TRIGGER IF EXISTS trg_UpdateAverageRatingAfterInsert;
+DROP TRIGGER IF EXISTS trg_UpdateAverageRatingAfterDelete;
+DROP TRIGGER IF EXISTS trg_UpdateAverageRatingAfterUpdate;
+
+-- Создание триггера для обновления среднего рейтинга после вставки отзыва
+CREATE TRIGGER trg_UpdateAverageRatingAfterInsert
+ON Reviews
+AFTER INSERT
+AS
+BEGIN
+    UPDATE Books
+    SET AverageRating = (
+        SELECT AVG(Rating * 1.0) -- Умножаем на 1.0 для преобразования к DECIMAL
+        FROM Reviews
+        WHERE BookID = i.BookID
+    )
+    FROM inserted i
+    WHERE Books.BookID = i.BookID;
+END;
+
+-- Создание триггера для обновления среднего рейтинга после удаления отзыва
+CREATE TRIGGER trg_UpdateAverageRatingAfterDelete
+ON Reviews
+AFTER DELETE
+AS
+BEGIN
+    UPDATE Books
+    SET AverageRating = (
+        SELECT AVG(Rating * 1.0) -- Умножаем на 1.0 для преобразования к DECIMAL
+        FROM Reviews
+        WHERE BookID = d.BookID
+    )
+    FROM deleted d
+    WHERE Books.BookID = d.BookID;
+END;
+
+-- Создание триггера для обновления среднего рейтинга после обновления отзыва
+CREATE TRIGGER trg_UpdateAverageRatingAfterUpdate
+ON Reviews
+AFTER UPDATE
+AS
+BEGIN
+    -- Если обновляется поле Rating, пересчитываем средний рейтинг
+    IF UPDATE(Rating)
+    BEGIN
+        UPDATE Books
+        SET AverageRating = (
+            SELECT AVG(Rating * 1.0) -- Умножаем на 1.0 для преобразования к DECIMAL
+            FROM Reviews
+            WHERE BookID = i.BookID
+        )
+        FROM inserted i
+        WHERE Books.BookID = i.BookID;
+    END
+END;
