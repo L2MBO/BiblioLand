@@ -242,6 +242,12 @@
     <Compile Include="CustomControls\AvatarControl.Designer.cs">
       <DependentUpon>AvatarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\BookSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\BookSearchControl.Designer.cs">
+      <DependentUpon>BookSearchControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\ContinueReadingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

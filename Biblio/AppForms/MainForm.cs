@@ -221,19 +221,11 @@ namespace Biblio.AppForms
 
             searchControl.OpenChanged += SearchControl_OpenChanged;
 
-            int centerX = this.ClientSize.Width / 2;
-            int controlWidth = searchControl.Width;
-
-            int x = centerX - controlWidth / 2;
-            int y = searchPanel.Bottom + 10;
-
-            searchControl.Location = new Point(x, y);
-
             this.Controls.Add(searchControl);
             searchControl.BringToFront();
             searchControl.Visible = true;
 
-            searchControl.BeginInvoke(new Action(() => SetSearchControlPosition()));
+            SetSearchControlPosition();
         }
 
         private int avatarX;
@@ -254,11 +246,14 @@ namespace Biblio.AppForms
 
             avatarControl.OpenChanged += AvatarControl_OpenChanged;
 
+            int x = avatarPictureBox.Right + avatarX;
+            int y = avatarPictureBox.Bottom + 10;
+
+            avatarControl.Location = new Point(x, y);
+
             this.Controls.Add(avatarControl);
             avatarControl.BringToFront();
             avatarControl.Visible = true;
-
-            SetSearchControlPosition();
         }
 
         private void OtherControl_OpenChanged(object sender, EventArgs e)
@@ -357,7 +352,7 @@ namespace Biblio.AppForms
                 searchPanel.Width = 300;
                 searchLabel.Text = "Что ищем, читатель?";
                 otherX = 300;
-                avatarX = 1015;
+                avatarX = 999;
                 isMaximize = true;
             }
             else
@@ -372,7 +367,7 @@ namespace Biblio.AppForms
                 searchPanel.Width = 130;
                 searchLabel.Text = "Что ищем?";
                 otherX = 100;
-                avatarX = 160;
+                avatarX = 175;
                 isMaximize = false;
             }
 

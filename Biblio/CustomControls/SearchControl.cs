@@ -36,7 +36,7 @@ namespace Biblio.CustomControls
             }
         }
 
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
