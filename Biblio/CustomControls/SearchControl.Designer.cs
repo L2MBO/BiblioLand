@@ -36,31 +36,31 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.closeButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.searchPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.searchLabel = new Guna.UI2.WinForms.Guna2TextBox();
             this.glasPanel = new System.Windows.Forms.Panel();
+            this.closeButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.glasPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             this.searchPanel.SuspendLayout();
             this.glasPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Panel1.BorderRadius = 20;
+            this.guna2Panel1.BorderRadius = 25;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.panel1);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(538, 266);
+            this.guna2Panel1.Size = new System.Drawing.Size(541, 284);
             this.guna2Panel1.TabIndex = 0;
             // 
             // panel1
@@ -68,9 +68,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(7, 6);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(523, 252);
+            this.panel1.Size = new System.Drawing.Size(522, 263);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -79,14 +79,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 102);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(523, 150);
+            this.panel3.Size = new System.Drawing.Size(522, 161);
             this.panel3.TabIndex = 6;
             // 
             // booksPanel
             // 
-            this.booksPanel.Location = new System.Drawing.Point(15, 0);
+            this.booksPanel.Location = new System.Drawing.Point(11, 0);
             this.booksPanel.Name = "booksPanel";
-            this.booksPanel.Size = new System.Drawing.Size(493, 135);
+            this.booksPanel.Size = new System.Drawing.Size(500, 150);
             this.booksPanel.TabIndex = 0;
             // 
             // panel2
@@ -95,7 +95,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 57);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(523, 45);
+            this.panel2.Size = new System.Drawing.Size(522, 45);
             this.panel2.TabIndex = 5;
             // 
             // label1
@@ -116,22 +116,8 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(523, 57);
+            this.panel4.Size = new System.Drawing.Size(522, 57);
             this.panel4.TabIndex = 4;
-            // 
-            // closeButton
-            // 
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.closeButton.Image = ((System.Drawing.Image)(resources.GetObject("closeButton.Image")));
-            this.closeButton.ImageRotate = 0F;
-            this.closeButton.Location = new System.Drawing.Point(471, 6);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.closeButton.Size = new System.Drawing.Size(45, 45);
-            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closeButton.TabIndex = 70;
-            this.closeButton.TabStop = false;
             // 
             // searchPanel
             // 
@@ -179,6 +165,20 @@
             this.glasPanel.Size = new System.Drawing.Size(40, 45);
             this.glasPanel.TabIndex = 55;
             // 
+            // closeButton
+            // 
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.closeButton.Image = ((System.Drawing.Image)(resources.GetObject("closeButton.Image")));
+            this.closeButton.ImageRotate = 0F;
+            this.closeButton.Location = new System.Drawing.Point(471, 6);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closeButton.Size = new System.Drawing.Size(45, 45);
+            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.closeButton.TabIndex = 70;
+            this.closeButton.TabStop = false;
+            // 
             // glasPictureBox
             // 
             this.glasPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
@@ -200,16 +200,17 @@
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SearchControl";
-            this.Size = new System.Drawing.Size(539, 267);
+            this.Size = new System.Drawing.Size(542, 285);
+            this.Load += new System.EventHandler(this.SearchControl_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             this.searchPanel.ResumeLayout(false);
             this.glasPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).EndInit();
             this.ResumeLayout(false);
 

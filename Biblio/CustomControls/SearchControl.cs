@@ -1,4 +1,5 @@
 ﻿using Biblio.Classes.Customization;
+using Biblio.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace Biblio.CustomControls
         {
             InitializeComponent();
 
-            CustomizationHelper.SetRoundedRegion(this, 25, 25);
+            CustomizationHelper.SetRoundedRegion(this, 35, 35);
 
 
         }
@@ -34,6 +35,13 @@ namespace Biblio.CustomControls
                 _isOpen = value;
                 OpenChanged?.Invoke(this, EventArgs.Empty);
             }
+        }
+
+        
+
+        private void SearchControl_Load(object sender, EventArgs e)
+        {
+            
         }
 
         private void closeButton_Click(object sender, EventArgs e)

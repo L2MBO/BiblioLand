@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblio.Classes.Customization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace Biblio.CustomControls
         public BookSearchControl()
         {
             InitializeComponent();
+
+            CustomizationHelper.SetRoundedRegion(this, 10, 10);
+
+
         }
     }
 }

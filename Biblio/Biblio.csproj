@@ -342,6 +342,9 @@
     <EmbeddedResource Include="CustomControls\AvatarControl.resx">
       <DependentUpon>AvatarControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\BookSearchControl.resx">
+      <DependentUpon>BookSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ContinueReadingControl.resx">
       <DependentUpon>ContinueReadingControl.cs</DependentUpon>
     </EmbeddedResource>

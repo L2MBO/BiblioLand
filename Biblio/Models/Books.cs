@@ -40,6 +40,8 @@ namespace Biblio.Models
 
         public int? CategoryID { get; set; }
 
+        public int? OftenSearched { get; set; }
+
         public decimal? AverageRating { get; set; }
 
         public DateTime? AddedDate { get; set; }

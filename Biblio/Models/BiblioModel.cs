@@ -8,7 +8,7 @@ namespace Biblio.Models
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel12")
+            : base("name=BiblioModel13")
         {
         }
 
@@ -32,6 +32,11 @@ namespace Biblio.Models
                 .HasMany(e => e.Reviews)
                 .WithOptional(e => e.Books)
                 .WillCascadeOnDelete();
+
+            modelBuilder.Entity<UserRoles>()
+                .HasMany(e => e.Users)
+                .WithRequired(e => e.UserRoles)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Users>()
                 .HasMany(e => e.Reviews)
