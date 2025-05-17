@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.bookPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.authorLabel = new System.Windows.Forms.Label();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.mainPanel.SuspendLayout();
+            this.bookPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // mainPanel
             // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Panel1.BorderRadius = 16;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.guna2Panel2);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(244, 69);
-            this.guna2Panel1.TabIndex = 0;
+            this.mainPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.mainPanel.BorderRadius = 16;
+            this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.bookPanel);
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(244, 69);
+            this.mainPanel.TabIndex = 0;
             // 
-            // guna2Panel2
+            // bookPanel
             // 
-            this.guna2Panel2.Controls.Add(this.titleLabel);
-            this.guna2Panel2.Controls.Add(this.authorLabel);
-            this.guna2Panel2.Controls.Add(this.bookPictureBox);
-            this.guna2Panel2.Location = new System.Drawing.Point(9, 8);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(228, 53);
-            this.guna2Panel2.TabIndex = 0;
+            this.bookPanel.Controls.Add(this.nameLabel);
+            this.bookPanel.Controls.Add(this.authorLabel);
+            this.bookPanel.Controls.Add(this.bookPictureBox);
+            this.bookPanel.Location = new System.Drawing.Point(9, 8);
+            this.bookPanel.Name = "bookPanel";
+            this.bookPanel.Size = new System.Drawing.Size(228, 53);
+            this.bookPanel.TabIndex = 0;
             // 
             // bookPictureBox
             // 
@@ -67,6 +67,7 @@
             this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
             this.bookPictureBox.Name = "bookPictureBox";
             this.bookPictureBox.Size = new System.Drawing.Size(40, 53);
+            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bookPictureBox.TabIndex = 2;
             this.bookPictureBox.TabStop = false;
             // 
@@ -81,26 +82,27 @@
             this.authorLabel.TabIndex = 3;
             this.authorLabel.Text = "Автор";
             // 
-            // titleLabel
+            // nameLabel
             // 
-            this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(49, 21);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(174, 26);
-            this.titleLabel.TabIndex = 4;
-            this.titleLabel.Text = "название";
+            this.nameLabel.AutoEllipsis = true;
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(49, 21);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(174, 26);
+            this.nameLabel.TabIndex = 4;
+            this.nameLabel.Text = "Название";
             // 
             // BookSearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.mainPanel);
             this.Name = "BookSearchControl";
             this.Size = new System.Drawing.Size(245, 70);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
+            this.bookPanel.ResumeLayout(false);
+            this.bookPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -108,10 +110,10 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel mainPanel;
+        private Guna.UI2.WinForms.Guna2Panel bookPanel;
         private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
-        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label authorLabel;
     }
 }

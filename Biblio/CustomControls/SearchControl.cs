@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.Customization;
+﻿using Biblio.AppForms;
+using Biblio.Classes.Customization;
 using Biblio.Models;
 using System;
 using System.Collections.Generic;
@@ -14,34 +15,44 @@ namespace Biblio.CustomControls
 {
     public partial class SearchControl : UserControl
     {
-        public event EventHandler OpenChanged;
+        private MainForm _mainForm;
 
-        public SearchControl()
+        public SearchControl(MainForm mainForm)
         {
             InitializeComponent();
 
-            CustomizationHelper.SetRoundedRegion(this, 35, 35);
+            _mainForm = mainForm;
 
+            CustomizationHelper.SetRoundedRegion(this, 41, 41);
 
         }
 
-        private bool _isOpen = false;
-
-        public bool IsOpen
+        private void ShowSearchBooks()
         {
-            get => _isOpen;
-            set
+            List<Books> books = Program.context.Books.Where(book => book.OftenSearched == 1).OrderBy(name => name.Title).ToList();
+            foreach (Books book in books)
             {
-                _isOpen = value;
-                OpenChanged?.Invoke(this, EventArgs.Empty);
+                var bookControl = new BookSearchControl(_mainForm, book);
+                bookControl.Margin = new Padding(5);
+                bookControl.BookClicked += BookControl_BookClicked;
+                booksPanel.Controls.Add(bookControl);
             }
         }
 
-        
+        private void BookControl_BookClicked(object sender, Books book)
+        {
+            var bookInfoForm = new BookInfoForm(book);
+            bookInfoForm.ShowDialog();
+        }
 
         private void SearchControl_Load(object sender, EventArgs e)
         {
-            
+            ShowSearchBooks();
+        }
+
+        private void clearTextButton_Click(object sender, EventArgs e)
+        {
+            searchTextField.Clear();
         }
 
         private void closeButton_Click(object sender, EventArgs e)

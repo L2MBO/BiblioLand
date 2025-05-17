@@ -28,6 +28,7 @@ namespace Biblio.AppForms
     {
         private AddContentControl addContentControl;
         public event EventHandler WindowStateChanged;
+        private BookSearchControl bookSearchControl;
 
         public MainForm()
         {
@@ -55,8 +56,17 @@ namespace Biblio.AppForms
             bookmarksPanel.Click += bookmarksPictureBox_Click;
             notifyPanel.Click += notifyPictureBox_Click;
 
+            bookSearchControl = new BookSearchControl(this, new Books
+            {
+                Author = "",
+                Title = "",
+                ImagePath = ""
+            });
+
             addContentControl = new AddContentControl();
         }
+
+        
 
         private void ShowMainBooks()
         {
@@ -217,15 +227,35 @@ namespace Biblio.AppForms
                 return;
             }
 
-            searchControl = new SearchControl();
+            searchControl = new SearchControl(this);
 
-            searchControl.OpenChanged += SearchControl_OpenChanged;
+            //searchControl.OpenChanged += SearchControl_OpenChanged;
 
             this.Controls.Add(searchControl);
             searchControl.BringToFront();
             searchControl.Visible = true;
 
             SetSearchControlPosition();
+        }
+
+        public void BookSearchControl_OpenChanged(object sender, EventArgs e)
+        {
+            // Получаем ссылку на BookSearchControl из события
+            var bookSearchControl = sender as BookSearchControl;
+
+            if (bookSearchControl != null)
+            {
+                Debug.WriteLine($"BookSearchControl_OpenChanged: IsOpen = {bookSearchControl.IsOpen}");
+
+                if (bookSearchControl.IsOpen)
+                {
+                    this.Hide(); // Скрываем MainForm
+                }
+                else
+                {
+                    this.Show(); // Показываем MainForm, если IsOpen=false
+                }
+            }
         }
 
         private int avatarX;
@@ -264,13 +294,15 @@ namespace Biblio.AppForms
             }
         }
 
-        private void SearchControl_OpenChanged(object sender, EventArgs e)
-        {
-            if (searchControl.IsOpen)
-            {
-                this.Hide();
-            }
-        }
+        
+
+        //public void BookSearchControl_OpenChanged(object sender, EventArgs e)
+        //{
+        //    if (bookSearchControl.IsOpen)
+        //    {
+        //        this.Hide();
+        //    }
+        //}
 
         private void AvatarControl_OpenChanged(object sender, EventArgs e)
         {

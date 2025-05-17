@@ -76,10 +76,8 @@ namespace Biblio.CustomControls
                 this.BackColor = Color.White;
             }
             
-
             this.Refresh();
         }
-
 
         public void SetTime(string time)
         {
