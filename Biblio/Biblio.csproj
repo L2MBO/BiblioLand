@@ -531,5 +531,8 @@
   <ItemGroup>
     <None Include="Resources\circleCloseButton.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noResults.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

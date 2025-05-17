@@ -41,7 +41,7 @@ namespace Biblio.CustomControls
         private void BookControl_BookClicked(object sender, Books book)
         {
             var bookInfoForm = new BookInfoForm(book);
-            bookInfoForm.ShowDialog();
+            bookInfoForm.Show();
         }
 
         private void SearchControl_Load(object sender, EventArgs e)
@@ -51,6 +51,31 @@ namespace Biblio.CustomControls
 
         private void searchTextField_TextChanged(object sender, EventArgs e)
         {
+            string result = searchTextField.Text.Trim().ToLower();
+
+            if (result == "")
+            {
+                ShowSearchBooks();
+            }
+            else
+            {
+                List<Books> filteredBooks = Program.context.Books
+                    .Where(book =>
+                        book.Title.ToLower().Contains(result) ||
+                        book.Author.ToLower().Contains(result))
+                    .OrderBy(book => book.Title).ToList();
+
+                if (filteredBooks.Count > 0)
+                {
+                    noResultPanel.Visible = false;
+                }
+                else
+                {
+                    booksPanel.Controls.Clear();
+                    noResultPanel.Visible = true;
+                }
+            }
+
             if (searchTextField.Text != "") 
             {
                 clearTextButton.Visible = true;
