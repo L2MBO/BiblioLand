@@ -24,7 +24,6 @@ namespace Biblio.CustomControls
             _mainForm = mainForm;
 
             CustomizationHelper.SetRoundedRegion(this, 41, 41);
-
         }
 
         private void ShowSearchBooks()
@@ -48,6 +47,18 @@ namespace Biblio.CustomControls
         private void SearchControl_Load(object sender, EventArgs e)
         {
             ShowSearchBooks();
+        }
+
+        private void searchTextField_TextChanged(object sender, EventArgs e)
+        {
+            if (searchTextField.Text != "") 
+            {
+                clearTextButton.Visible = true;
+            }
+            else
+            {
+                clearTextButton.Visible = false;
+            }
         }
 
         private void clearTextButton_Click(object sender, EventArgs e)

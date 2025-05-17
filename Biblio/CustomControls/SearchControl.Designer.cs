@@ -171,6 +171,7 @@
             this.searchTextField.SelectedText = "";
             this.searchTextField.Size = new System.Drawing.Size(376, 16);
             this.searchTextField.TabIndex = 57;
+            this.searchTextField.TextChanged += new System.EventHandler(this.searchTextField_TextChanged);
             // 
             // glasPanel
             // 
@@ -209,6 +210,7 @@
             this.clearTextButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.clearTextButton.TabIndex = 71;
             this.clearTextButton.TabStop = false;
+            this.clearTextButton.Visible = false;
             this.clearTextButton.Click += new System.EventHandler(this.clearTextButton_Click);
             // 
             // SearchControl
