@@ -42,7 +42,7 @@ namespace Biblio.AppForms
 
             navigationPanel.MouseDown += Form_MouseDown;
             topLeftPanel.MouseDown += Form_MouseDown;
-            topRightPanel.MouseDown += Form_MouseDown;
+            Panel2.MouseDown += Form_MouseDown;
             topNavigationPanel.MouseDown += Form_MouseDown;
             bottomNavigationPanel.MouseDown += Form_MouseDown;
             this.Resize += MainForm_Resize;
@@ -229,8 +229,6 @@ namespace Biblio.AppForms
 
             searchControl = new SearchControl(this);
 
-            //searchControl.OpenChanged += SearchControl_OpenChanged;
-
             this.Controls.Add(searchControl);
             searchControl.BringToFront();
             searchControl.Visible = true;
@@ -293,16 +291,6 @@ namespace Biblio.AppForms
                 this.Hide();
             }
         }
-
-        
-
-        //public void BookSearchControl_OpenChanged(object sender, EventArgs e)
-        //{
-        //    if (bookSearchControl.IsOpen)
-        //    {
-        //        this.Hide();
-        //    }
-        //}
 
         private void AvatarControl_OpenChanged(object sender, EventArgs e)
         {
@@ -380,7 +368,7 @@ namespace Biblio.AppForms
                 leftPanel.Width = 300;
                 rightPanel.Width = 300;
                 topLeftPanel.Width = 300;
-                panel2.Width = 300;
+                topRightPanel.Width = 300;
                 searchPanel.Width = 300;
                 searchLabel.Text = "Что ищем, читатель?";
                 otherX = 300;
@@ -395,7 +383,7 @@ namespace Biblio.AppForms
                 leftPanel.Width = 100;
                 rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
-                panel2.Width = 100;
+                topRightPanel.Width = 100;
                 searchPanel.Width = 130;
                 searchLabel.Text = "Что ищем?";
                 otherX = 100;

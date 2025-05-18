@@ -1,6 +1,8 @@
 ﻿using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.Models;
+using Guna.UI2.WinForms;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +17,7 @@ using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
-    public partial class BookInfoForm : Form
+    public partial class BookInfoForm : MaterialForm
     {
         private Books _book;
 
@@ -24,20 +26,53 @@ namespace Biblio.AppForms
             InitializeComponent();
             //AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: false, disableVertical: true);
             _book = book;
+            
+            descriptionLabel.TextChanged += DescriptionLabel_TextChanged;
+
             LoadBookInfo();
+             
         }
 
         private void LoadBookInfo()
         {
-            //titleLabel.Text = _book.Title;
-            //authorLabel.Text = _book.Author;
-            //descriptionTextBox.Text = _book.Description;
+            nameLabel.Text = _book.Title;
+            authorLabel.Text = _book.Author;
+            descriptionLabel.Text = _book.Description;
+
             //raitingLabel.Text = ((double)_book.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
 
-            Image image = ImageLoader.LoadBookImage(_book.ImagePath);
-            if (image != null)
+            //Image image = ImageLoader.LoadBookImage(_book.ImagePath);
+            //if (image != null)
+            //{
+            //    //bookPictureBox.Image = image;
+            //}
+        }
+
+        private void DescriptionLabel_TextChanged(object sender, EventArgs e)
+        {
+            // Получаем ширину Label
+            int labelWidth = descriptionLabel.Width;
+
+            // Рассчитываем высоту текста с учетом ширины Label
+            int preferredHeight = CalculateLabelHeight(descriptionLabel.Text, descriptionLabel.Font, labelWidth);
+
+            // Устанавливаем высоту Label
+            descriptionLabel.Height = preferredHeight;
+
+            // Обновляем размеры панели
+            descriptionPanel.PerformLayout();
+        }
+
+        private int CalculateLabelHeight(string text, Font font, int width)
+        {
+            // Создаем Graphics для текущего контекста
+            using (Graphics graphics = this.CreateGraphics())
             {
-                //bookPictureBox.Image = image;
+                // Рассчитываем размеры текста с учетом ширины Label
+                SizeF textSize = TextRenderer.MeasureText(text, font, new Size(width, 0), TextFormatFlags.WordBreak);
+
+                // Возвращаем общую высоту текста
+                return (int)Math.Ceiling(textSize.Height);
             }
         }
     }
