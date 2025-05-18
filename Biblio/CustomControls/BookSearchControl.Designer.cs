@@ -30,9 +30,9 @@
         {
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.bookPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.authorLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.mainPanel.SuspendLayout();
             this.bookPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
@@ -59,18 +59,6 @@
             this.bookPanel.Size = new System.Drawing.Size(228, 53);
             this.bookPanel.TabIndex = 0;
             // 
-            // bookPictureBox
-            // 
-            this.bookPictureBox.BorderRadius = 13;
-            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bookPictureBox.ImageRotate = 0F;
-            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.bookPictureBox.Name = "bookPictureBox";
-            this.bookPictureBox.Size = new System.Drawing.Size(40, 53);
-            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bookPictureBox.TabIndex = 2;
-            this.bookPictureBox.TabStop = false;
-            // 
             // authorLabel
             // 
             this.authorLabel.AutoSize = true;
@@ -92,12 +80,25 @@
             this.nameLabel.TabIndex = 4;
             this.nameLabel.Text = "Название";
             // 
+            // bookPictureBox
+            // 
+            this.bookPictureBox.BorderRadius = 13;
+            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bookPictureBox.ImageRotate = 0F;
+            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.bookPictureBox.Name = "bookPictureBox";
+            this.bookPictureBox.Size = new System.Drawing.Size(40, 53);
+            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bookPictureBox.TabIndex = 2;
+            this.bookPictureBox.TabStop = false;
+            // 
             // BookSearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.Controls.Add(this.mainPanel);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "BookSearchControl";
             this.Size = new System.Drawing.Size(245, 70);
             this.mainPanel.ResumeLayout(false);

@@ -34,29 +34,28 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.booksPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.oftenSearchedLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.searchPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.searchTextField = new Guna.UI2.WinForms.Guna2TextBox();
             this.glasPanel = new System.Windows.Forms.Panel();
-            this.noResultPanel = new System.Windows.Forms.Panel();
-            this.noResultPictureBox = new System.Windows.Forms.PictureBox();
             this.closeButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.clearTextButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.glasPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.noResultPanel = new System.Windows.Forms.Panel();
+            this.noResultPictureBox = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.booksPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.glasPanel.SuspendLayout();
-            this.noResultPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clearTextButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).BeginInit();
+            this.noResultPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -82,6 +81,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.noResultPanel);
             this.panel3.Controls.Add(this.booksPanel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 102);
@@ -91,7 +91,6 @@
             // 
             // booksPanel
             // 
-            this.booksPanel.Controls.Add(this.noResultPanel);
             this.booksPanel.Location = new System.Drawing.Point(4, 0);
             this.booksPanel.Name = "booksPanel";
             this.booksPanel.Size = new System.Drawing.Size(514, 158);
@@ -99,23 +98,23 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.oftenSearchedLabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 57);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(522, 45);
             this.panel2.TabIndex = 5;
             // 
-            // label1
+            // oftenSearchedLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Часто ищут";
+            this.oftenSearchedLabel.AutoSize = true;
+            this.oftenSearchedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.oftenSearchedLabel.ForeColor = System.Drawing.Color.White;
+            this.oftenSearchedLabel.Location = new System.Drawing.Point(19, 15);
+            this.oftenSearchedLabel.Name = "oftenSearchedLabel";
+            this.oftenSearchedLabel.Size = new System.Drawing.Size(81, 16);
+            this.oftenSearchedLabel.TabIndex = 0;
+            this.oftenSearchedLabel.Text = "Часто ищут";
             // 
             // panel4
             // 
@@ -174,25 +173,6 @@
             this.glasPanel.Size = new System.Drawing.Size(40, 45);
             this.glasPanel.TabIndex = 55;
             // 
-            // noResultPanel
-            // 
-            this.noResultPanel.Controls.Add(this.noResultPictureBox);
-            this.noResultPanel.Location = new System.Drawing.Point(3, 3);
-            this.noResultPanel.Name = "noResultPanel";
-            this.noResultPanel.Size = new System.Drawing.Size(509, 155);
-            this.noResultPanel.TabIndex = 0;
-            this.noResultPanel.Visible = false;
-            // 
-            // noResultPictureBox
-            // 
-            this.noResultPictureBox.Image = global::Biblio.Properties.Resources.noResults;
-            this.noResultPictureBox.Location = new System.Drawing.Point(221, 28);
-            this.noResultPictureBox.Name = "noResultPictureBox";
-            this.noResultPictureBox.Size = new System.Drawing.Size(68, 98);
-            this.noResultPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.noResultPictureBox.TabIndex = 0;
-            this.noResultPictureBox.TabStop = false;
-            // 
             // closeButton
             // 
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -238,6 +218,25 @@
             this.glasPictureBox.TabIndex = 55;
             this.glasPictureBox.TabStop = false;
             // 
+            // noResultPanel
+            // 
+            this.noResultPanel.Controls.Add(this.noResultPictureBox);
+            this.noResultPanel.Location = new System.Drawing.Point(7, 3);
+            this.noResultPanel.Name = "noResultPanel";
+            this.noResultPanel.Size = new System.Drawing.Size(509, 155);
+            this.noResultPanel.TabIndex = 1;
+            this.noResultPanel.Visible = false;
+            // 
+            // noResultPictureBox
+            // 
+            this.noResultPictureBox.Image = global::Biblio.Properties.Resources.noResults;
+            this.noResultPictureBox.Location = new System.Drawing.Point(221, 28);
+            this.noResultPictureBox.Name = "noResultPictureBox";
+            this.noResultPictureBox.Size = new System.Drawing.Size(68, 98);
+            this.noResultPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.noResultPictureBox.TabIndex = 1;
+            this.noResultPictureBox.TabStop = false;
+            // 
             // SearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,17 +250,16 @@
             this.guna2Panel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.booksPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.glasPanel.ResumeLayout(false);
-            this.noResultPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clearTextButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).EndInit();
+            this.noResultPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,7 +271,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel booksPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label oftenSearchedLabel;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2CirclePictureBox closeButton;
         private Guna.UI2.WinForms.Guna2Panel searchPanel;

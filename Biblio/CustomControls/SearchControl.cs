@@ -26,8 +26,10 @@ namespace Biblio.CustomControls
             CustomizationHelper.SetRoundedRegion(this, 41, 41);
         }
 
-        private void ShowSearchBooks()
+        private void ShowOftenSearchBooks()
         {
+            booksPanel.Controls.Clear();
+
             List<Books> books = Program.context.Books.Where(book => book.OftenSearched == 1).OrderBy(name => name.Title).ToList();
             foreach (Books book in books)
             {
@@ -46,7 +48,7 @@ namespace Biblio.CustomControls
 
         private void SearchControl_Load(object sender, EventArgs e)
         {
-            ShowSearchBooks();
+            ShowOftenSearchBooks();
         }
 
         private void searchTextField_TextChanged(object sender, EventArgs e)
@@ -55,7 +57,8 @@ namespace Biblio.CustomControls
 
             if (result == "")
             {
-                ShowSearchBooks();
+                oftenSearchedLabel.Visible = true;
+                ShowOftenSearchBooks();
             }
             else
             {
@@ -67,6 +70,8 @@ namespace Biblio.CustomControls
 
                 if (filteredBooks.Count > 0)
                 {
+                    ShowFilteredBooks(filteredBooks);
+                    oftenSearchedLabel.Visible = false;
                     noResultPanel.Visible = false;
                 }
                 else
@@ -84,6 +89,21 @@ namespace Biblio.CustomControls
             {
                 clearTextButton.Visible = false;
             }
+        }
+
+        private void ShowFilteredBooks(List<Books> books)
+        {
+            booksPanel.Controls.Clear();
+
+            foreach (Books book in books)
+            {
+                var bookControl = new BookSearchControl(_mainForm, book);
+                bookControl.Margin = new Padding(5);
+                bookControl.BookClicked += BookControl_BookClicked;
+                booksPanel.Controls.Add(bookControl);
+            }
+
+            noResultPanel.Visible = false;
         }
 
         private void clearTextButton_Click(object sender, EventArgs e)
