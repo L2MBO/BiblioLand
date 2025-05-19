@@ -72,14 +72,6 @@ namespace Biblio.CustomControls
             UpdateAddContentControlPosition();
         }
 
-        public void AddContentControl_OpenChanged(object sender, EventArgs e)
-        {
-            if (addContentControl.IsOpen)
-            {
-                this.Parent.Hide();
-            }
-        }
-
         private void UpdateAddContentControlPosition()
         {
             if (addContentControl != null)
@@ -88,18 +80,6 @@ namespace Biblio.CustomControls
                 int y = addContentLabel.Bottom + 130;
 
                 addContentControl.Location = new Point(x, y);
-            }
-        }
-
-        private bool _isOpen = false;
-
-        public bool IsOpen
-        {
-            get => _isOpen;
-            set
-            {
-                _isOpen = value;
-                OpenChanged?.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -137,7 +117,7 @@ namespace Biblio.CustomControls
 
             addContentControl = new AddContentControl();
 
-            addContentControl.OpenChanged += AddContentControl_OpenChanged;
+            addContentControl.OpenChanged += mainForm.OnControlOpenChanged;
 
             UpdateAddContentControlPosition();
 
@@ -148,42 +128,42 @@ namespace Biblio.CustomControls
 
         private void userNameLabel_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             ProfileForm form = new ProfileForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
 
         private void feedbackLabel_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             FeedbackForm form = new FeedbackForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
 
         private void storeLabel_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             StoreForm form = new StoreForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
 
         private void settingsLabel_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             SettingsForm form = new SettingsForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
 
         private void exitLabel_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             AuthorizationForm form = new AuthorizationForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
     }
 }

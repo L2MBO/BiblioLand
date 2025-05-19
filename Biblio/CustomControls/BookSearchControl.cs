@@ -28,7 +28,7 @@ namespace Biblio.CustomControls
 
             _mainForm = mainForm;
 
-            this.OpenChanged += _mainForm.BookSearchControl_OpenChanged;
+            this.OpenChanged += _mainForm.OnControlOpenChanged;
 
             _books = books;
 
@@ -51,21 +51,9 @@ namespace Biblio.CustomControls
             nameLabel.Click += MainControl_Click;
         }
 
-        private bool _isOpen = false;
-
-        public bool IsOpen
-        {
-            get => _isOpen;
-            set
-            {
-                _isOpen = value;
-                OpenChanged?.Invoke(this, EventArgs.Empty);
-            }
-        }
-
         private void MainControl_Click(object sender, EventArgs e)
         {
-            IsOpen = true;
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             BookClicked?.Invoke(this, _books);
         }
     }

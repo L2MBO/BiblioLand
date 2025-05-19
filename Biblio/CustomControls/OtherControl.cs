@@ -37,32 +37,20 @@ namespace Biblio.CustomControls
             rankRightArrowPictureBox.Click += rankPanel_Click;
         }
 
-        private bool _isOpen = false;
-
-        public bool IsOpen
-        {
-            get => _isOpen;
-            set
-            {
-                _isOpen = value;
-                OpenChanged?.Invoke(this, EventArgs.Empty);
-            }
-        }
-
         private void catalogPanel_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             CardCatalogForm form = new CardCatalogForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
 
         private void rankPanel_Click(Object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             MainForm form = new MainForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
     }
 }

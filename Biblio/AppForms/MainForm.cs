@@ -67,7 +67,6 @@ namespace Biblio.AppForms
         }
 
         
-
         private void ShowMainBooks()
         {
             List<Books> books = Program.context.Books.Where(category => category.CategoryID == 1).OrderBy(name => name.Title).ToList();
@@ -76,6 +75,7 @@ namespace Biblio.AppForms
                 var bookControl = new MainControl(book);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
+                bookControl.OpenChanged += OnControlOpenChanged;
                 mainBooksPanel.Controls.Add(bookControl);
             }
         }
@@ -88,6 +88,7 @@ namespace Biblio.AppForms
                 var bookControl = new MainControl(book);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
+                bookControl.OpenChanged += OnControlOpenChanged;
                 newBooksPanel.Controls.Add(bookControl);
             }
         }
@@ -130,6 +131,7 @@ namespace Biblio.AppForms
                     var bookControl = new ContinueReadingControl(book, currentUserId);
                     bookControl.Margin = new Padding(10);
                     bookControl.BookClicked += BookControl_BookClicked;
+                    bookControl.OpenChanged += OnControlOpenChanged;
                     continueReadingPanel.Controls.Add(bookControl);
                 }
             }
@@ -150,6 +152,7 @@ namespace Biblio.AppForms
                 var bookControl = new MainControl(book);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
+                bookControl.OpenChanged += OnControlOpenChanged;
                 popularBooksPanel.Controls.Add(bookControl);
             }
         }
@@ -181,6 +184,7 @@ namespace Biblio.AppForms
                 bookControl.SetTime(timeAgo);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
+                bookControl.OpenChanged += OnControlOpenChanged;
                 lastUpdatesPanel.Controls.Add(bookControl);
             }
 
@@ -203,7 +207,7 @@ namespace Biblio.AppForms
 
             otherControl = new OtherControl();
 
-            otherControl.OpenChanged += OtherControl_OpenChanged;
+            otherControl.OpenChanged += OnControlOpenChanged;
 
             int x = otherButton.Left + otherX;
             int y = otherButton.Bottom + 10;
@@ -236,26 +240,6 @@ namespace Biblio.AppForms
             SetSearchControlPosition();
         }
 
-        public void BookSearchControl_OpenChanged(object sender, EventArgs e)
-        {
-            // Получаем ссылку на BookSearchControl из события
-            var bookSearchControl = sender as BookSearchControl;
-
-            if (bookSearchControl != null)
-            {
-                Debug.WriteLine($"BookSearchControl_OpenChanged: IsOpen = {bookSearchControl.IsOpen}");
-
-                if (bookSearchControl.IsOpen)
-                {
-                    this.Hide(); // Скрываем MainForm
-                }
-                else
-                {
-                    this.Show(); // Показываем MainForm, если IsOpen=false
-                }
-            }
-        }
-
         private int avatarX;
 
         private AvatarControl avatarControl;
@@ -272,7 +256,7 @@ namespace Biblio.AppForms
 
             avatarControl = new AvatarControl(this);
 
-            avatarControl.OpenChanged += AvatarControl_OpenChanged;
+            avatarControl.OpenChanged += OnControlOpenChanged;
 
             int x = avatarPictureBox.Right + avatarX;
             int y = avatarPictureBox.Bottom + 10;
@@ -284,17 +268,9 @@ namespace Biblio.AppForms
             avatarControl.Visible = true;
         }
 
-        private void OtherControl_OpenChanged(object sender, EventArgs e)
+        public void OnControlOpenChanged(object sender, EventArgs e)
         {
-            if (otherControl.IsOpen)
-            {
-                this.Hide();
-            }
-        }
-
-        private void AvatarControl_OpenChanged(object sender, EventArgs e)
-        {
-            if (avatarControl.IsOpen)
+            if (sender is Control control && control.Visible)
             {
                 this.Hide();
             }
@@ -303,7 +279,7 @@ namespace Biblio.AppForms
         private void BookControl_BookClicked(object sender, Books book)
         {
             var bookInfoForm = new BookInfoForm(book);
-            bookInfoForm.ShowDialog();
+            bookInfoForm.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

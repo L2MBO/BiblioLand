@@ -19,6 +19,7 @@ namespace Biblio.CustomControls
         private readonly Books _books;
         private readonly int _userId;
         public event EventHandler<Books> BookClicked;
+        public event EventHandler OpenChanged;
 
         public ContinueReadingControl(Books books, int userId)
         {
@@ -88,6 +89,7 @@ namespace Biblio.CustomControls
 
         private void MainControl_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             BookClicked?.Invoke(this, _books);
         }
     }

@@ -23,33 +23,20 @@ namespace Biblio.CustomControls
             CustomizationHelper.SetRoundedRegion(this, 15, 15);
         }
 
-
-        private bool _isOpen = false;
-
-        public bool IsOpen
-        {
-            get => _isOpen;
-            set
-            {
-                _isOpen = value;
-                OpenChanged?.Invoke(this, EventArgs.Empty);
-            }
-        }
-
         private void bookButton_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             AddBookForm form = new AddBookForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
 
         private void cardButton_Click(object sender, EventArgs e)
         {
+            OpenChanged?.Invoke(this, EventArgs.Empty);
             AddCardForm form = new AddCardForm();
             form.Show();
             this.Hide();
-            IsOpen = true;
         }
     }
 }
