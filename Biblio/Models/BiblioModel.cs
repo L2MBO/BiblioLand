@@ -8,13 +8,14 @@ namespace Biblio.Models
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel13")
+            : base("name=BiblioModel14")
         {
         }
 
         public virtual DbSet<Books> Books { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Genres> Genres { get; set; }
+        public virtual DbSet<Rating> Rating { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserBooks> UserBooks { get; set; }

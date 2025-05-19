@@ -12,6 +12,7 @@ namespace Biblio.Models
         public Books()
         {
             UserBooks = new HashSet<UserBooks>();
+            Rating = new HashSet<Rating>();
             Reviews = new HashSet<Reviews>();
         }
 
@@ -52,6 +53,9 @@ namespace Biblio.Models
         public virtual ICollection<UserBooks> UserBooks { get; set; }
 
         public virtual Category Category { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Rating> Rating { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reviews> Reviews { get; set; }

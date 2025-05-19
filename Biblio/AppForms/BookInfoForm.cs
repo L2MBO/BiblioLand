@@ -30,48 +30,50 @@ namespace Biblio.AppForms
             descriptionLabel.TextChanged += DescriptionLabel_TextChanged;
 
             LoadBookInfo();
-             
         }
 
         private void LoadBookInfo()
         {
             nameLabel.Text = _book.Title;
             authorLabel.Text = _book.Author;
+
+            var genreID = _book.GenreID;
+
+            var genreName = Program.context.Genres.FirstOrDefault(genre => genre.GenreID == genreID);
+
+            genreLabel.Text = genreName.GenreName;
+
+            ratingLabel.Text = ((double)_book.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
+
+            //число голосов
+
+            Image image = ImageLoader.LoadBookImage(_book.ImagePath);
+
+            if (image != null)
+            {
+                bookPictureBox.Image = image;
+            }
+
             descriptionLabel.Text = _book.Description;
-
-            //raitingLabel.Text = ((double)_book.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
-
-            //Image image = ImageLoader.LoadBookImage(_book.ImagePath);
-            //if (image != null)
-            //{
-            //    //bookPictureBox.Image = image;
-            //}
         }
 
         private void DescriptionLabel_TextChanged(object sender, EventArgs e)
         {
-            // Получаем ширину Label
             int labelWidth = descriptionLabel.Width;
 
-            // Рассчитываем высоту текста с учетом ширины Label
             int preferredHeight = CalculateLabelHeight(descriptionLabel.Text, descriptionLabel.Font, labelWidth);
 
-            // Устанавливаем высоту Label
             descriptionLabel.Height = preferredHeight;
 
-            // Обновляем размеры панели
             descriptionPanel.PerformLayout();
         }
 
         private int CalculateLabelHeight(string text, Font font, int width)
         {
-            // Создаем Graphics для текущего контекста
             using (Graphics graphics = this.CreateGraphics())
             {
-                // Рассчитываем размеры текста с учетом ширины Label
                 SizeF textSize = TextRenderer.MeasureText(text, font, new Size(width, 0), TextFormatFlags.WordBreak);
 
-                // Возвращаем общую высоту текста
                 return (int)Math.Ceiling(textSize.Height);
             }
         }

@@ -34,7 +34,7 @@ namespace Biblio.CustomControls
                 bookPictureBox.Image = image;
             }
 
-            raitingLabel.Text = ((double)books.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
+            ratingLabel.Text = ((double)books.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
 
             CustomizationHelper.SetRoundedRegion(ratingPanel, 20, 20);
 
@@ -43,7 +43,7 @@ namespace Biblio.CustomControls
             authorLabel.Click += MainControl_Click;
             nameLabel.Click += MainControl_Click;
             infoPanel.Click += MainControl_Click;
-            raitingLabel.Click += MainControl_Click;
+            ratingLabel.Click += MainControl_Click;
             ratingPanel.Click += MainControl_Click;
             starPictureBox.Click += MainControl_Click;
             starPanel.Click += MainControl_Click;

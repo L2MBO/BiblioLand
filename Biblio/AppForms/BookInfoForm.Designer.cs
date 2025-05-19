@@ -74,16 +74,28 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.genreLabel = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.ratingLabel = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.descriptionLabel = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.topPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -106,10 +118,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            this.descriptionPanel.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.descriptionPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -559,29 +576,33 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.guna2Button2);
+            this.panel5.Controls.Add(this.panel23);
+            this.panel5.Controls.Add(this.bookPictureBox);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(100, 16);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(129, 362);
+            this.panel5.Size = new System.Drawing.Size(146, 362);
             this.panel5.TabIndex = 26;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(229, 16);
+            this.panel4.Location = new System.Drawing.Point(246, 16);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 362);
             this.panel4.TabIndex = 27;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.panel14);
+            this.panel7.Controls.Add(this.genreLabel);
             this.panel7.Controls.Add(this.nameLabel);
             this.panel7.Controls.Add(this.authorLabel);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(239, 16);
+            this.panel7.Location = new System.Drawing.Point(256, 16);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(387, 62);
+            this.panel7.Size = new System.Drawing.Size(370, 62);
             this.panel7.TabIndex = 31;
             // 
             // authorLabel
@@ -608,38 +629,173 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(239, 78);
+            this.panel6.Location = new System.Drawing.Point(256, 78);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(387, 10);
+            this.panel6.Size = new System.Drawing.Size(370, 10);
             this.panel6.TabIndex = 32;
             // 
             // guna2CustomGradientPanel2
             // 
-            this.guna2CustomGradientPanel2.AutoSize = true;
             this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel2.Controls.Add(this.panel19);
+            this.guna2CustomGradientPanel2.Controls.Add(this.panel20);
+            this.guna2CustomGradientPanel2.Controls.Add(this.panel21);
+            this.guna2CustomGradientPanel2.Controls.Add(this.panel22);
             this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(239, 133);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(256, 133);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Quality = 1;
             this.guna2CustomGradientPanel2.ShadowDecoration.BorderRadius = 20;
             this.guna2CustomGradientPanel2.ShadowDecoration.Depth = 150;
             this.guna2CustomGradientPanel2.ShadowDecoration.Enabled = true;
             this.guna2CustomGradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(387, 78);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(370, 78);
             this.guna2CustomGradientPanel2.TabIndex = 37;
+            // 
+            // genreLabel
+            // 
+            this.genreLabel.AutoSize = true;
+            this.genreLabel.ForeColor = System.Drawing.Color.White;
+            this.genreLabel.Location = new System.Drawing.Point(6, 44);
+            this.genreLabel.Name = "genreLabel";
+            this.genreLabel.Size = new System.Drawing.Size(36, 13);
+            this.genreLabel.TabIndex = 2;
+            this.genreLabel.Text = "Жанр";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.ratingLabel);
+            this.panel14.Controls.Add(this.panel18);
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel14.Location = new System.Drawing.Point(265, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(105, 62);
+            this.panel14.TabIndex = 3;
+            // 
+            // ratingLabel
+            // 
+            this.ratingLabel.AutoSize = true;
+            this.ratingLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ratingLabel.ForeColor = System.Drawing.Color.White;
+            this.ratingLabel.Location = new System.Drawing.Point(40, 0);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(65, 20);
+            this.ratingLabel.TabIndex = 7;
+            this.ratingLabel.Text = "Оценка";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.guna2Button1);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel15.Location = new System.Drawing.Point(0, 41);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(105, 21);
+            this.panel15.TabIndex = 4;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.label4);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel18.Location = new System.Drawing.Point(0, 21);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(105, 20);
+            this.panel18.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(22, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Число голосов";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(31, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.guna2Button1.Size = new System.Drawing.Size(74, 21);
+            this.guna2Button1.TabIndex = 0;
+            this.guna2Button1.Text = "Оценить";
             // 
             // panel8
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(239, 123);
+            this.panel8.Location = new System.Drawing.Point(256, 123);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(387, 10);
+            this.panel8.Size = new System.Drawing.Size(370, 10);
             this.panel8.TabIndex = 36;
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(370, 10);
+            this.panel10.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 25);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(370, 10);
+            this.panel11.TabIndex = 2;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(360, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 15);
+            this.panel12.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 10);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 15);
+            this.panel9.TabIndex = 4;
+            // 
+            // panel13
+            // 
+            this.panel13.AutoSize = true;
+            this.panel13.Controls.Add(this.descriptionLabel);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(10, 10);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(350, 15);
+            this.panel13.TabIndex = 5;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(0, 0);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(350, 15);
+            this.descriptionLabel.TabIndex = 5;
+            this.descriptionLabel.Text = "Описание";
             // 
             // descriptionPanel
             // 
@@ -655,87 +811,86 @@
             this.descriptionPanel.FillColor2 = System.Drawing.Color.Transparent;
             this.descriptionPanel.FillColor3 = System.Drawing.Color.Transparent;
             this.descriptionPanel.FillColor4 = System.Drawing.Color.Transparent;
-            this.descriptionPanel.Location = new System.Drawing.Point(239, 88);
+            this.descriptionPanel.Location = new System.Drawing.Point(256, 88);
             this.descriptionPanel.Name = "descriptionPanel";
             this.descriptionPanel.Quality = 1;
             this.descriptionPanel.ShadowDecoration.BorderRadius = 20;
             this.descriptionPanel.ShadowDecoration.Depth = 150;
             this.descriptionPanel.ShadowDecoration.Enabled = true;
             this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.descriptionPanel.Size = new System.Drawing.Size(387, 35);
+            this.descriptionPanel.Size = new System.Drawing.Size(370, 35);
             this.descriptionPanel.TabIndex = 35;
             // 
-            // panel13
+            // panel19
             // 
-            this.panel13.AutoSize = true;
-            this.panel13.Controls.Add(this.descriptionLabel);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(10, 10);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(367, 15);
-            this.panel13.TabIndex = 5;
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel19.Location = new System.Drawing.Point(0, 10);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(10, 58);
+            this.panel19.TabIndex = 8;
             // 
-            // descriptionLabel
+            // panel20
             // 
-            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
-            this.descriptionLabel.Location = new System.Drawing.Point(0, 0);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(367, 15);
-            this.descriptionLabel.TabIndex = 5;
-            this.descriptionLabel.Text = "Описание";
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel20.Location = new System.Drawing.Point(360, 10);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(10, 58);
+            this.panel20.TabIndex = 7;
             // 
-            // panel10
+            // panel21
             // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(387, 10);
-            this.panel10.TabIndex = 1;
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel21.Location = new System.Drawing.Point(0, 68);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(370, 10);
+            this.panel21.TabIndex = 6;
             // 
-            // panel12
+            // panel22
             // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(377, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 15);
-            this.panel12.TabIndex = 3;
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(0, 0);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(370, 10);
+            this.panel22.TabIndex = 5;
             // 
-            // panel11
+            // bookPictureBox
             // 
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 25);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(387, 10);
-            this.panel11.TabIndex = 2;
+            this.bookPictureBox.BorderRadius = 15;
+            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bookPictureBox.ImageRotate = 0F;
+            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.bookPictureBox.Name = "bookPictureBox";
+            this.bookPictureBox.Size = new System.Drawing.Size(146, 216);
+            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bookPictureBox.TabIndex = 4;
+            this.bookPictureBox.TabStop = false;
             // 
-            // panel9
+            // panel23
             // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 10);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 15);
-            this.panel9.TabIndex = 4;
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel23.Location = new System.Drawing.Point(0, 216);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(146, 10);
+            this.panel23.TabIndex = 33;
             // 
-            // label2
+            // guna2Button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(6, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Автор";
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(387, 78);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Описание";
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BorderRadius = 20;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(0, 226);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.guna2Button2.Size = new System.Drawing.Size(146, 41);
+            this.guna2Button2.TabIndex = 34;
+            this.guna2Button2.Text = "Читать";
             // 
             // BookInfoForm
             // 
@@ -774,12 +929,19 @@
             this.panel1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.descriptionPanel.ResumeLayout(false);
             this.descriptionPanel.PerformLayout();
-            this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -830,16 +992,28 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label nameLabel;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label genreLabel;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label ratingLabel;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel descriptionPanel;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel22;
+        private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
+        private System.Windows.Forms.Panel panel23;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

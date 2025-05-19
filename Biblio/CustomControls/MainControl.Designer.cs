@@ -34,7 +34,7 @@
             this.imagePanel = new System.Windows.Forms.Panel();
             this.ratingPanel = new System.Windows.Forms.Panel();
             this.ratingTextPanel = new System.Windows.Forms.Panel();
-            this.raitingLabel = new System.Windows.Forms.Label();
+            this.ratingLabel = new System.Windows.Forms.Label();
             this.starPanel = new System.Windows.Forms.Panel();
             this.starPictureBox = new System.Windows.Forms.PictureBox();
             this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -113,7 +113,7 @@
             // 
             // ratingTextPanel
             // 
-            this.ratingTextPanel.Controls.Add(this.raitingLabel);
+            this.ratingTextPanel.Controls.Add(this.ratingLabel);
             this.ratingTextPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.ratingTextPanel.Location = new System.Drawing.Point(27, 0);
             this.ratingTextPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -121,18 +121,18 @@
             this.ratingTextPanel.Size = new System.Drawing.Size(38, 23);
             this.ratingTextPanel.TabIndex = 3;
             // 
-            // raitingLabel
+            // ratingLabel
             // 
-            this.raitingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.raitingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.raitingLabel.ForeColor = System.Drawing.Color.White;
-            this.raitingLabel.Location = new System.Drawing.Point(-4, 0);
-            this.raitingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.raitingLabel.Name = "raitingLabel";
-            this.raitingLabel.Size = new System.Drawing.Size(42, 23);
-            this.raitingLabel.TabIndex = 1;
-            this.raitingLabel.Text = "0.0";
-            this.raitingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ratingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ratingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ratingLabel.ForeColor = System.Drawing.Color.White;
+            this.ratingLabel.Location = new System.Drawing.Point(-4, 0);
+            this.ratingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ratingLabel.Name = "ratingLabel";
+            this.ratingLabel.Size = new System.Drawing.Size(42, 23);
+            this.ratingLabel.TabIndex = 1;
+            this.ratingLabel.Text = "0.0";
+            this.ratingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // starPanel
             // 
@@ -199,7 +199,7 @@
         private System.Windows.Forms.Panel ratingPanel;
         private System.Windows.Forms.Panel starPanel;
         private System.Windows.Forms.Panel ratingTextPanel;
-        private System.Windows.Forms.Label raitingLabel;
+        private System.Windows.Forms.Label ratingLabel;
         private System.Windows.Forms.PictureBox starPictureBox;
         private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
     }

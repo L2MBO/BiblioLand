@@ -6,18 +6,17 @@ namespace Biblio.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Reviews
+    [Table("Rating")]
+    public partial class Rating
     {
-        [Key]
-        public int ReviewID { get; set; }
+        public int RatingID { get; set; }
 
         public int? UserID { get; set; }
 
         public int? BookID { get; set; }
 
-        public string Comment { get; set; }
-
-        public DateTime? ReviewDate { get; set; }
+        [Column("Rating")]
+        public int? Rating1 { get; set; }
 
         public virtual Books Books { get; set; }
 
