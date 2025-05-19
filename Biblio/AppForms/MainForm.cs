@@ -50,11 +50,6 @@ namespace Biblio.AppForms
             this.Shown += MainForm_Shown;
 
             showMoreButton.Click += showMoreButton_Click;
-            glasPanel.Click += searchPanel_Click;
-            searchLabel.Click += searchPanel_Click;
-            glasPictureBox.Click += searchPanel_Click;
-            bookmarksPanel.Click += bookmarksPictureBox_Click;
-            notifyPanel.Click += notifyPictureBox_Click;
 
             bookSearchControl = new BookSearchControl(this, new Books
             {
@@ -221,7 +216,7 @@ namespace Biblio.AppForms
 
         private SearchControl searchControl;
 
-        private void searchPanel_Click(object sender, EventArgs e)
+        private void searchButton_Click(object sender, EventArgs e)
         {
             if (searchControl != null && searchControl.Visible)
             {
@@ -345,8 +340,8 @@ namespace Biblio.AppForms
                 rightPanel.Width = 300;
                 topLeftPanel.Width = 300;
                 topRightPanel.Width = 300;
-                searchPanel.Width = 300;
-                searchLabel.Text = "Что ищем, читатель?";
+                searchButton.Width = 300;
+                searchButton.Text = "Что ищем, читатель?";
                 otherX = 300;
                 avatarX = 999;
                 isMaximize = true;
@@ -360,8 +355,8 @@ namespace Biblio.AppForms
                 rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
                 topRightPanel.Width = 100;
-                searchPanel.Width = 130;
-                searchLabel.Text = "Что ищем?";
+                searchButton.Width = 136;
+                searchButton.Text = "Что ищем?";
                 otherX = 100;
                 avatarX = 175;
                 isMaximize = false;
@@ -395,12 +390,12 @@ namespace Biblio.AppForms
             int controlWidth = searchControl.Width;
 
             int x = (centerX - controlWidth / 2) + 3;
-            int y = searchPanel.Bottom + 10;
+            int y = searchButton.Bottom + 10;
 
             searchControl.Location = new Point(x, y);
         }
 
-        private void bookmarksPictureBox_Click(object sender, EventArgs e)
+        private void bookmarksButton_Click(object sender, EventArgs e)
         {
             BookmarksForm form = new BookmarksForm();
             form.ShowDialog();
@@ -410,7 +405,7 @@ namespace Biblio.AppForms
             //form.Show();
         }
 
-        private void notifyPictureBox_Click(object sender, EventArgs e)
+        private void notifyButton_Click(object sender, EventArgs e)
         {
             UserNotifyForm form = new UserNotifyForm();
             form.ShowDialog();

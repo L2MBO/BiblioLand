@@ -21,7 +21,7 @@ namespace Biblio.CustomControls
     {
         public event EventHandler OpenChanged;
         private MainForm mainForm;
-        private int contentX = 450;
+        private int contentX = 460;
         int currentUserId = Program.CurrentUser.UserID;
 
         public AvatarControl(MainForm mainForm)
@@ -40,20 +40,10 @@ namespace Biblio.CustomControls
             this.mainForm = mainForm;
             mainForm.WindowStateChanged += MainForm_WindowStateChanged;
 
-            addContentPictureBox.Click += addContentLabel_Click;
-
             userAvatarPictureBox.Click += userNameLabel_Click;
             userInfoPanel.Click += userNameLabel_Click;
             coinPictureBox.Click += userNameLabel_Click;
             coinCountLabel.Click += userNameLabel_Click;
-
-            feedbackPictureBox.Click += feedbackLabel_Click;
-
-            storePictureBox.Click += storeLabel_Click;
-
-            settingsPictureBox.Click += settingsLabel_Click;
-
-            exitPictureBox.Click += exitLabel_Click;
 
             this.VisibleChanged += AvatarControl_VisibleChanged;
         }
@@ -62,28 +52,28 @@ namespace Biblio.CustomControls
         {
             if (mainForm.WindowState == FormWindowState.Maximized)
             {
-                contentX = 1475;
+                contentX = 1450;
             }
             else
             {
-                contentX = 450;
+                contentX = 460;
             }
 
             UpdateAddContentControlPosition();
         }
 
+        private AddContentControl addContentControl;
+
         private void UpdateAddContentControlPosition()
         {
             if (addContentControl != null)
             {
-                int x = addContentLabel.Right + contentX;
-                int y = addContentLabel.Bottom + 130;
+                int x = addContentButton.Right + contentX;
+                int y = addContentButton.Bottom + 20;
 
                 addContentControl.Location = new Point(x, y);
             }
         }
-
-        private AddContentControl addContentControl;
 
         private void AvatarControl_VisibleChanged(object sender, EventArgs e)
         {
@@ -107,7 +97,7 @@ namespace Biblio.CustomControls
             }
         }
 
-        private void addContentLabel_Click(object sender, EventArgs e)
+        private void addContentButton_Click(object sender, EventArgs e)
         {
             if (addContentControl != null && addContentControl.Visible)
             {
@@ -134,7 +124,7 @@ namespace Biblio.CustomControls
             this.Hide();
         }
 
-        private void feedbackLabel_Click(object sender, EventArgs e)
+        private void feedbackButton_Click(object sender, EventArgs e)
         {
             OpenChanged?.Invoke(this, EventArgs.Empty);
             FeedbackForm form = new FeedbackForm();
@@ -142,7 +132,7 @@ namespace Biblio.CustomControls
             this.Hide();
         }
 
-        private void storeLabel_Click(object sender, EventArgs e)
+        private void storeButton_Click(object sender, EventArgs e)
         {
             OpenChanged?.Invoke(this, EventArgs.Empty);
             StoreForm form = new StoreForm();
@@ -150,7 +140,7 @@ namespace Biblio.CustomControls
             this.Hide();
         }
 
-        private void settingsLabel_Click(object sender, EventArgs e)
+        private void settingsButton_Click(object sender, EventArgs e)
         {
             OpenChanged?.Invoke(this, EventArgs.Empty);
             SettingsForm form = new SettingsForm();
@@ -158,12 +148,22 @@ namespace Biblio.CustomControls
             this.Hide();
         }
 
-        private void exitLabel_Click(object sender, EventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)
         {
             OpenChanged?.Invoke(this, EventArgs.Empty);
             AuthorizationForm form = new AuthorizationForm();
             form.Show();
             this.Hide();
+        }
+
+        private void UserNameLabel_MouseEnter(object sender, EventArgs e)
+        {
+            userNameLabel.Font = new Font(userNameLabel.Font, FontStyle.Bold | FontStyle.Underline);
+        }
+
+        private void UserNameLabel_MouseLeave(object sender, EventArgs e)
+        {
+            userNameLabel.Font = new Font(userNameLabel.Font, FontStyle.Bold | FontStyle.Regular);
         }
     }
 }

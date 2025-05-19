@@ -32,18 +32,6 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.searchPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.searchLabel = new System.Windows.Forms.Label();
-            this.glasPanel = new System.Windows.Forms.Panel();
-            this.glasPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.delimiter4 = new System.Windows.Forms.Panel();
-            this.bookmarksPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.bookmarksPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.delimiter5 = new System.Windows.Forms.Panel();
-            this.notifyPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.notifyPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.delimiter6 = new System.Windows.Forms.Panel();
-            this.avatarPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.otherButton = new Guna.UI2.WinForms.Guna2Button();
             this.delimiter3 = new System.Windows.Forms.Panel();
@@ -88,17 +76,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.showMoreButton = new Guna.UI2.WinForms.Guna2Button();
+            this.avatarPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.delimiter6 = new System.Windows.Forms.Panel();
+            this.guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.delimiter4 = new System.Windows.Forms.Panel();
+            this.searchButton = new Guna.UI2.WinForms.Guna2Button();
             this.topPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.panel17.SuspendLayout();
-            this.searchPanel.SuspendLayout();
-            this.glasPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).BeginInit();
-            this.bookmarksPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookmarksPictureBox)).BeginInit();
-            this.notifyPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainButton)).BeginInit();
             this.topRightPanel.SuspendLayout();
@@ -122,6 +109,7 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -152,158 +140,18 @@
             // panel17
             // 
             this.panel17.AutoSize = true;
-            this.panel17.Controls.Add(this.searchPanel);
+            this.panel17.Controls.Add(this.searchButton);
             this.panel17.Controls.Add(this.delimiter4);
-            this.panel17.Controls.Add(this.bookmarksPanel);
-            this.panel17.Controls.Add(this.delimiter5);
-            this.panel17.Controls.Add(this.notifyPanel);
+            this.panel17.Controls.Add(this.guna2CircleButton3);
+            this.panel17.Controls.Add(this.panel3);
+            this.panel17.Controls.Add(this.guna2CircleButton2);
             this.panel17.Controls.Add(this.delimiter6);
             this.panel17.Controls.Add(this.avatarPictureBox);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel17.Location = new System.Drawing.Point(277, 7);
+            this.panel17.Location = new System.Drawing.Point(273, 7);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(249, 34);
+            this.panel17.Size = new System.Drawing.Size(253, 34);
             this.panel17.TabIndex = 56;
-            // 
-            // searchPanel
-            // 
-            this.searchPanel.BorderRadius = 17;
-            this.searchPanel.Controls.Add(this.searchLabel);
-            this.searchPanel.Controls.Add(this.glasPanel);
-            this.searchPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.searchPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.searchPanel.Location = new System.Drawing.Point(0, 0);
-            this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(130, 34);
-            this.searchPanel.TabIndex = 68;
-            this.searchPanel.Click += new System.EventHandler(this.searchPanel_Click);
-            // 
-            // searchLabel
-            // 
-            this.searchLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.BackColor = System.Drawing.Color.Transparent;
-            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.searchLabel.ForeColor = System.Drawing.Color.White;
-            this.searchLabel.Location = new System.Drawing.Point(33, 9);
-            this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(75, 16);
-            this.searchLabel.TabIndex = 56;
-            this.searchLabel.Text = "Что ищем?";
-            // 
-            // glasPanel
-            // 
-            this.glasPanel.BackColor = System.Drawing.Color.Transparent;
-            this.glasPanel.Controls.Add(this.glasPictureBox);
-            this.glasPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.glasPanel.Location = new System.Drawing.Point(0, 0);
-            this.glasPanel.Name = "glasPanel";
-            this.glasPanel.Size = new System.Drawing.Size(27, 34);
-            this.glasPanel.TabIndex = 55;
-            // 
-            // glasPictureBox
-            // 
-            this.glasPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.glasPictureBox.FillColor = System.Drawing.Color.Transparent;
-            this.glasPictureBox.Image = global::Biblio.Properties.Resources.magnifyingGlass;
-            this.glasPictureBox.ImageRotate = 0F;
-            this.glasPictureBox.Location = new System.Drawing.Point(9, 8);
-            this.glasPictureBox.Name = "glasPictureBox";
-            this.glasPictureBox.Size = new System.Drawing.Size(18, 18);
-            this.glasPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.glasPictureBox.TabIndex = 55;
-            this.glasPictureBox.TabStop = false;
-            // 
-            // delimiter4
-            // 
-            this.delimiter4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter4.Location = new System.Drawing.Point(130, 0);
-            this.delimiter4.Name = "delimiter4";
-            this.delimiter4.Size = new System.Drawing.Size(5, 34);
-            this.delimiter4.TabIndex = 67;
-            // 
-            // bookmarksPanel
-            // 
-            this.bookmarksPanel.BorderRadius = 18;
-            this.bookmarksPanel.Controls.Add(this.bookmarksPictureBox);
-            this.bookmarksPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bookmarksPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bookmarksPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.bookmarksPanel.Location = new System.Drawing.Point(135, 0);
-            this.bookmarksPanel.Name = "bookmarksPanel";
-            this.bookmarksPanel.Size = new System.Drawing.Size(35, 34);
-            this.bookmarksPanel.TabIndex = 66;
-            // 
-            // bookmarksPictureBox
-            // 
-            this.bookmarksPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.bookmarksPictureBox.FillColor = System.Drawing.Color.Transparent;
-            this.bookmarksPictureBox.Image = global::Biblio.Properties.Resources.bookmark;
-            this.bookmarksPictureBox.ImageRotate = 0F;
-            this.bookmarksPictureBox.Location = new System.Drawing.Point(9, 8);
-            this.bookmarksPictureBox.Name = "bookmarksPictureBox";
-            this.bookmarksPictureBox.Size = new System.Drawing.Size(16, 18);
-            this.bookmarksPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bookmarksPictureBox.TabIndex = 0;
-            this.bookmarksPictureBox.TabStop = false;
-            this.bookmarksPictureBox.Click += new System.EventHandler(this.bookmarksPictureBox_Click);
-            // 
-            // delimiter5
-            // 
-            this.delimiter5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter5.Location = new System.Drawing.Point(170, 0);
-            this.delimiter5.Name = "delimiter5";
-            this.delimiter5.Size = new System.Drawing.Size(5, 34);
-            this.delimiter5.TabIndex = 65;
-            // 
-            // notifyPanel
-            // 
-            this.notifyPanel.BorderRadius = 18;
-            this.notifyPanel.Controls.Add(this.notifyPictureBox);
-            this.notifyPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.notifyPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.notifyPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.notifyPanel.Location = new System.Drawing.Point(175, 0);
-            this.notifyPanel.Name = "notifyPanel";
-            this.notifyPanel.Size = new System.Drawing.Size(35, 34);
-            this.notifyPanel.TabIndex = 64;
-            // 
-            // notifyPictureBox
-            // 
-            this.notifyPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.notifyPictureBox.FillColor = System.Drawing.Color.Transparent;
-            this.notifyPictureBox.Image = global::Biblio.Properties.Resources.bell;
-            this.notifyPictureBox.ImageRotate = 0F;
-            this.notifyPictureBox.Location = new System.Drawing.Point(9, 8);
-            this.notifyPictureBox.Name = "notifyPictureBox";
-            this.notifyPictureBox.Size = new System.Drawing.Size(16, 18);
-            this.notifyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.notifyPictureBox.TabIndex = 0;
-            this.notifyPictureBox.TabStop = false;
-            this.notifyPictureBox.Click += new System.EventHandler(this.notifyPictureBox_Click);
-            // 
-            // delimiter6
-            // 
-            this.delimiter6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter6.Location = new System.Drawing.Point(210, 0);
-            this.delimiter6.Name = "delimiter6";
-            this.delimiter6.Size = new System.Drawing.Size(5, 34);
-            this.delimiter6.TabIndex = 1;
-            // 
-            // avatarPictureBox
-            // 
-            this.avatarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.avatarPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.avatarPictureBox.ImageRotate = 0F;
-            this.avatarPictureBox.Location = new System.Drawing.Point(215, 0);
-            this.avatarPictureBox.Name = "avatarPictureBox";
-            this.avatarPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.avatarPictureBox.Size = new System.Drawing.Size(34, 34);
-            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.avatarPictureBox.TabIndex = 0;
-            this.avatarPictureBox.TabStop = false;
-            this.avatarPictureBox.Click += new System.EventHandler(this.avatarPictureBox_Click);
             // 
             // panel16
             // 
@@ -825,6 +673,110 @@
             this.showMoreButton.Text = "Показать еще";
             this.showMoreButton.Visible = false;
             // 
+            // avatarPictureBox
+            // 
+            this.avatarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.avatarPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.avatarPictureBox.ImageRotate = 0F;
+            this.avatarPictureBox.Location = new System.Drawing.Point(219, 0);
+            this.avatarPictureBox.Name = "avatarPictureBox";
+            this.avatarPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.avatarPictureBox.Size = new System.Drawing.Size(34, 34);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatarPictureBox.TabIndex = 0;
+            this.avatarPictureBox.TabStop = false;
+            this.avatarPictureBox.Click += new System.EventHandler(this.avatarPictureBox_Click);
+            // 
+            // delimiter6
+            // 
+            this.delimiter6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter6.Location = new System.Drawing.Point(214, 0);
+            this.delimiter6.Name = "delimiter6";
+            this.delimiter6.Size = new System.Drawing.Size(5, 34);
+            this.delimiter6.TabIndex = 1;
+            // 
+            // guna2CircleButton2
+            // 
+            this.guna2CircleButton2.Animated = true;
+            this.guna2CircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2CircleButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.guna2CircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton2.Image = global::Biblio.Properties.Resources.bell;
+            this.guna2CircleButton2.ImageSize = new System.Drawing.Size(18, 20);
+            this.guna2CircleButton2.Location = new System.Drawing.Point(180, 0);
+            this.guna2CircleButton2.Name = "guna2CircleButton2";
+            this.guna2CircleButton2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton2.Size = new System.Drawing.Size(34, 34);
+            this.guna2CircleButton2.TabIndex = 56;
+            this.guna2CircleButton2.Click += new System.EventHandler(this.notifyButton_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(175, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 34);
+            this.panel3.TabIndex = 57;
+            // 
+            // guna2CircleButton3
+            // 
+            this.guna2CircleButton3.Animated = true;
+            this.guna2CircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2CircleButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.guna2CircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton3.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton3.Image = global::Biblio.Properties.Resources.bookmark;
+            this.guna2CircleButton3.ImageSize = new System.Drawing.Size(16, 20);
+            this.guna2CircleButton3.Location = new System.Drawing.Point(141, 0);
+            this.guna2CircleButton3.Name = "guna2CircleButton3";
+            this.guna2CircleButton3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton3.Size = new System.Drawing.Size(34, 34);
+            this.guna2CircleButton3.TabIndex = 58;
+            this.guna2CircleButton3.Click += new System.EventHandler(this.bookmarksButton_Click);
+            // 
+            // delimiter4
+            // 
+            this.delimiter4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter4.Location = new System.Drawing.Point(136, 0);
+            this.delimiter4.Name = "delimiter4";
+            this.delimiter4.Size = new System.Drawing.Size(5, 34);
+            this.delimiter4.TabIndex = 68;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Animated = true;
+            this.searchButton.BorderRadius = 17;
+            this.searchButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.searchButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.searchButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.searchButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.searchButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.searchButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.searchButton.ForeColor = System.Drawing.Color.White;
+            this.searchButton.Image = global::Biblio.Properties.Resources.magnifyingGlass;
+            this.searchButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.searchButton.Location = new System.Drawing.Point(0, 0);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.searchButton.Size = new System.Drawing.Size(136, 34);
+            this.searchButton.TabIndex = 78;
+            this.searchButton.Text = "Что ищем?";
+            this.searchButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -843,15 +795,6 @@
             this.navigationPanel.ResumeLayout(false);
             this.navigationPanel.PerformLayout();
             this.panel17.ResumeLayout(false);
-            this.searchPanel.ResumeLayout(false);
-            this.searchPanel.PerformLayout();
-            this.glasPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).EndInit();
-            this.bookmarksPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bookmarksPictureBox)).EndInit();
-            this.notifyPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainButton)).EndInit();
             this.topRightPanel.ResumeLayout(false);
@@ -884,6 +827,7 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -930,18 +874,6 @@
         private System.Windows.Forms.PictureBox restoreButton;
         private System.Windows.Forms.PictureBox minimizeButton;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel delimiter4;
-        private Guna.UI2.WinForms.Guna2Panel bookmarksPanel;
-        private Guna.UI2.WinForms.Guna2PictureBox bookmarksPictureBox;
-        private System.Windows.Forms.Panel delimiter5;
-        private Guna.UI2.WinForms.Guna2Panel notifyPanel;
-        private Guna.UI2.WinForms.Guna2PictureBox notifyPictureBox;
-        private System.Windows.Forms.Panel delimiter6;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox avatarPictureBox;
-        private Guna.UI2.WinForms.Guna2Panel searchPanel;
-        private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Panel glasPanel;
-        private Guna.UI2.WinForms.Guna2PictureBox glasPictureBox;
         private System.Windows.Forms.Panel delimiter3;
         private Guna.UI2.WinForms.Guna2Button topButton;
         private System.Windows.Forms.Panel delimiter2;
@@ -949,5 +881,12 @@
         private System.Windows.Forms.Panel delimiter1;
         private Guna.UI2.WinForms.Guna2Button otherButton;
         private System.Windows.Forms.FlowLayoutPanel lastUpdatesPanel;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
+        private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
+        private System.Windows.Forms.Panel delimiter6;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox avatarPictureBox;
+        private Guna.UI2.WinForms.Guna2Button searchButton;
+        private System.Windows.Forms.Panel delimiter4;
     }
 }

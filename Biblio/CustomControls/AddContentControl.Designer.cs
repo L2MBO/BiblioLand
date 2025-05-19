@@ -30,9 +30,9 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bookButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.cardButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bookButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,36 +58,9 @@
             this.panel1.Size = new System.Drawing.Size(80, 50);
             this.panel1.TabIndex = 0;
             // 
-            // bookButton
-            // 
-            this.bookButton.BorderRadius = 10;
-            this.bookButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bookButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bookButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bookButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bookButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bookButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bookButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.bookButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bookButton.ForeColor = System.Drawing.Color.White;
-            this.bookButton.Location = new System.Drawing.Point(0, 0);
-            this.bookButton.Name = "bookButton";
-            this.bookButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.bookButton.Size = new System.Drawing.Size(80, 20);
-            this.bookButton.TabIndex = 2;
-            this.bookButton.Text = "Книгу";
-            this.bookButton.Click += new System.EventHandler(this.bookButton_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(80, 10);
-            this.panel2.TabIndex = 4;
-            // 
             // cardButton
             // 
+            this.cardButton.Animated = true;
             this.cardButton.BorderRadius = 10;
             this.cardButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -105,6 +78,35 @@
             this.cardButton.TabIndex = 5;
             this.cardButton.Text = "Карточку";
             this.cardButton.Click += new System.EventHandler(this.cardButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 20);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(80, 10);
+            this.panel2.TabIndex = 4;
+            // 
+            // bookButton
+            // 
+            this.bookButton.Animated = true;
+            this.bookButton.BorderRadius = 10;
+            this.bookButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bookButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bookButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bookButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bookButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bookButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bookButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.bookButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bookButton.ForeColor = System.Drawing.Color.White;
+            this.bookButton.Location = new System.Drawing.Point(0, 0);
+            this.bookButton.Name = "bookButton";
+            this.bookButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.bookButton.Size = new System.Drawing.Size(80, 20);
+            this.bookButton.TabIndex = 2;
+            this.bookButton.Text = "Книгу";
+            this.bookButton.Click += new System.EventHandler(this.bookButton_Click);
             // 
             // AddContentControl
             // 
