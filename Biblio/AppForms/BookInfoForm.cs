@@ -43,7 +43,9 @@ namespace Biblio.AppForms
 
             genreLabel.Text = genreName.GenreName;
 
-            ratingLabel.Text = ((double)_book.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
+            var rating = _book.AverageRating;
+
+            ratingLabel.Text = ((double)rating).ToString("F1", CultureInfo.InvariantCulture);
 
             //число голосов
 
@@ -55,7 +57,11 @@ namespace Biblio.AppForms
             }
 
             descriptionLabel.Text = _book.Description;
+
+            //overageRatingLabel.Text = "Рейтинг за последнее время: " + rating;
         }
+
+
 
         private void DescriptionLabel_TextChanged(object sender, EventArgs e)
         {
@@ -76,6 +82,11 @@ namespace Biblio.AppForms
 
                 return (int)Math.Ceiling(textSize.Height);
             }
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

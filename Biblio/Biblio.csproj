@@ -278,6 +278,12 @@
     <Compile Include="CustomControls\SearchControl.Designer.cs">
       <DependentUpon>SearchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\StatisticsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\StatisticsControl.Designer.cs">
+      <DependentUpon>StatisticsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\BiblioModel.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\Category.cs" />
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\StatisticsControl.resx">
+      <DependentUpon>StatisticsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -537,6 +546,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellowStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\willReading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wasRead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postponed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abandoned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sendMessage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smollYellowStar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

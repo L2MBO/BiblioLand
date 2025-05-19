@@ -63,6 +63,16 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abandoned {
+            get {
+                object obj = ResourceManager.GetObject("abandoned", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap autoriz {
             get {
                 object obj = ResourceManager.GetObject("autoriz", resourceCulture);
@@ -433,9 +443,29 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap postponed {
+            get {
+                object obj = ResourceManager.GetObject("postponed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rank {
             get {
                 object obj = ResourceManager.GetObject("rank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reading {
+            get {
+                object obj = ResourceManager.GetObject("reading", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,6 +523,26 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sendMessage {
+            get {
+                object obj = ResourceManager.GetObject("sendMessage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smollYellowStar {
+            get {
+                object obj = ResourceManager.GetObject("smollYellowStar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap squareGreyLine {
             get {
                 object obj = ResourceManager.GetObject("squareGreyLine", resourceCulture);
@@ -536,6 +586,36 @@ namespace Biblio.Properties {
         internal static System.Drawing.Bitmap visiblePussword {
             get {
                 object obj = ResourceManager.GetObject("visiblePussword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wasRead {
+            get {
+                object obj = ResourceManager.GetObject("wasRead", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap willReading {
+            get {
+                object obj = ResourceManager.GetObject("willReading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellowStar {
+            get {
+                object obj = ResourceManager.GetObject("yellowStar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
