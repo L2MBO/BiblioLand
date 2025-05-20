@@ -23,7 +23,7 @@ namespace Biblio.CustomControls
 
             _mainForm = mainForm;
 
-            CustomizationHelper.SetRoundedRegion(this, 41, 41);
+            RoundingHelper.SetRoundedRegion(this, 41, 41);
         }
 
         private void ShowOftenSearchBooks()

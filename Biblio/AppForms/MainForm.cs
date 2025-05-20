@@ -333,7 +333,7 @@ namespace Biblio.AppForms
 
             if (this.WindowState == FormWindowState.Maximized)
             {
-                CustomizationHelper.SetRoundedRegion(this, 0, 0);
+                RoundingHelper.SetRoundedRegion(this, 0, 0);
                 maximizeButton.Visible = false;
                 restoreButton.Visible = true;
                 leftPanel.Width = 300;
@@ -348,7 +348,7 @@ namespace Biblio.AppForms
             }
             else
             {
-                CustomizationHelper.SetRoundedRegion(this, 11, 11);
+                RoundingHelper.SetRoundedRegion(this, 11, 11);
                 maximizeButton.Visible = true;
                 restoreButton.Visible = false;
                 leftPanel.Width = 100;

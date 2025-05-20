@@ -24,7 +24,7 @@ namespace Biblio.AppForms
             this.MaximizeBox = false;
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.DeepOrange700, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            CustomizationHelper.SetRoundedRegion(this, 20, 20);
+            RoundingHelper.SetRoundedRegion(this, 20, 20);
             orangePanel.MouseDown += Form_MouseDown;
             whitePanel.MouseDown += Form_MouseDown;
         }

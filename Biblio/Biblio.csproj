@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net-Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4d63bfbfdfd3c6e4, processorArchitecture=MSIL">
@@ -224,7 +226,9 @@
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\SendMessageCode.cs" />
     <Compile Include="Classes\Customization\AutoScrollHelper.cs" />
-    <Compile Include="Classes\Customization\CustomizationHelper.cs" />
+    <Compile Include="Classes\Customization\ImagesCustomization\BlurImage.cs" />
+    <Compile Include="Classes\Customization\RoundingHelper.cs" />
+    <Compile Include="Classes\Customization\ImagesCustomization\WhiteLevelReducer.cs" />
     <Compile Include="Classes\DataAccess\UserAvatarDataHelper.cs" />
     <Compile Include="Classes\DataAccess\UserBookDataHelper.cs" />
     <Compile Include="Classes\Images\InstallingImages\ImageLoader.cs" />

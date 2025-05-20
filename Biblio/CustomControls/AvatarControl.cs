@@ -35,7 +35,7 @@ namespace Biblio.CustomControls
 
             ImageLoader.LoadAvatarImage(userAvatarPictureBox);
 
-            CustomizationHelper.SetRoundedRegion(this, 25, 25);
+            RoundingHelper.SetRoundedRegion(this, 25, 25);
 
             this.mainForm = mainForm;
             mainForm.WindowStateChanged += MainForm_WindowStateChanged;

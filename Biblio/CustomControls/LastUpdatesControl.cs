@@ -42,8 +42,8 @@ namespace Biblio.CustomControls
                 bookPictureBox.Image = image;
             }
 
-            CustomizationHelper.SetRoundedRegion(this, 30, 30);
-            CustomizationHelper.SetRoundedRegion(bookPictureBox, 20, 20);
+            RoundingHelper.SetRoundedRegion(this, 30, 30);
+            RoundingHelper.SetRoundedRegion(bookPictureBox, 20, 20);
 
             timeLabel.Font = new Font(timeLabel.Font.FontFamily, 8, FontStyle.Regular);
 

@@ -38,8 +38,8 @@ namespace Biblio.CustomControls
 
             UpdateReadingProgress();
 
-            CustomizationHelper.SetRoundedRegion(this, 30, 30);
-            CustomizationHelper.SetRoundedRegion(bookPictureBox, 20, 20);
+            RoundingHelper.SetRoundedRegion(this, 30, 30);
+            RoundingHelper.SetRoundedRegion(bookPictureBox, 20, 20);
 
             this.Click += MainControl_Click;
             mainPanel.Click += MainControl_Click;

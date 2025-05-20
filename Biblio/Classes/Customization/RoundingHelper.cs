@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Biblio.Classes.Customization
 {
-    public static class CustomizationHelper
+    public static class RoundingHelper
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(

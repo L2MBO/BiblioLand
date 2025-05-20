@@ -20,7 +20,7 @@ namespace Biblio.CustomControls
         {
             InitializeComponent();
 
-            CustomizationHelper.SetRoundedRegion(this, 15, 15);
+            RoundingHelper.SetRoundedRegion(this, 15, 15);
         }
 
         private void bookButton_Click(object sender, EventArgs e)

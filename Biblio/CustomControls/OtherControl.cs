@@ -22,7 +22,7 @@ namespace Biblio.CustomControls
         {
             InitializeComponent();
 
-            CustomizationHelper.SetRoundedRegion(this, 25, 25);
+            RoundingHelper.SetRoundedRegion(this, 25, 25);
 
             catalogPanel.Click += catalogPanel_Click;
             catalogLabel.Click += catalogPanel_Click;

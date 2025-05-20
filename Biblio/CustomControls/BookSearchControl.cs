@@ -41,7 +41,7 @@ namespace Biblio.CustomControls
                 bookPictureBox.Image = image;
             }
 
-            CustomizationHelper.SetRoundedRegion(this, 10, 10);
+            RoundingHelper.SetRoundedRegion(this, 10, 10);
 
             this.Click += MainControl_Click;
             mainPanel.Click += MainControl_Click;

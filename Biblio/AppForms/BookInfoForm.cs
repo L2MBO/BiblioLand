@@ -9,7 +9,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +20,7 @@ using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
-    public partial class BookInfoForm : Form
+    public partial class BookInfoForm : MaterialForm
     {
         private Books _book;
 
@@ -68,7 +70,9 @@ namespace Biblio.AppForms
 
             if (backimage != null)
             {
-                mainPanel.BackgroundImage = backimage;
+                var bitmap = backimage as Bitmap ?? new Bitmap(backimage);
+                Image preparedBackground = WhiteLevelReducer.PrepareBackground(bitmap, 10, 0.6f);
+                mainPanel.BackgroundImage = preparedBackground;
             }
 
             descriptionLabel.Text = _book.Description;
@@ -101,6 +105,42 @@ namespace Biblio.AppForms
                 SizeF textSize = TextRenderer.MeasureText(text, font, new Size(width, 0), TextFormatFlags.WordBreak);
 
                 return (int)Math.Ceiling(textSize.Height);
+            }
+        }
+
+        private Bitmap ApplyBlur(Bitmap image, int blurSize)
+        {
+            // Проверка и корректировка размера размытия
+            blurSize = Math.Max(1, Math.Min(blurSize, 20)); // Ограничиваем диапазон 1-20
+
+            // Создаем уменьшенную копию для эффекта размытия
+            int smallWidth = image.Width / blurSize;
+            int smallHeight = image.Height / blurSize;
+
+            if (smallWidth < 1) smallWidth = 1;
+            if (smallHeight < 1) smallHeight = 1;
+
+            // Создаем временный битмап уменьшенного размера
+            using (var temp = new Bitmap(smallWidth, smallHeight))
+            {
+                // Рисуем исходное изображение в уменьшенном виде
+                using (var g = Graphics.FromImage(temp))
+                {
+                    g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    g.DrawImage(image, 0, 0, smallWidth, smallHeight);
+                }
+
+                // Создаем конечный битмап
+                var result = new Bitmap(image.Width, image.Height);
+
+                // Растягиваем уменьшенное изображение обратно
+                using (var g = Graphics.FromImage(result))
+                {
+                    g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    g.DrawImage(temp, 0, 0, image.Width, image.Height);
+                }
+
+                return result;
             }
         }
 

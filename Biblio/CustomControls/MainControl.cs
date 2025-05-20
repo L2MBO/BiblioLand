@@ -37,7 +37,7 @@ namespace Biblio.CustomControls
 
             ratingLabel.Text = ((double)books.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
 
-            CustomizationHelper.SetRoundedRegion(ratingPanel, 20, 20);
+            RoundingHelper.SetRoundedRegion(ratingPanel, 20, 20);
 
             this.Click += MainControl_Click;
             bookPictureBox.Click += MainControl_Click;
