@@ -1,5 +1,6 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Customization;
+using Biblio.Interface;
 using Biblio.Models;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,13 @@ namespace Biblio.CustomControls
 {
     public partial class SearchControl : UserControl
     {
-        private MainForm _mainForm;
+        private IAvatarParentForm _parent;
 
-        public SearchControl(MainForm mainForm)
+        public SearchControl(Form parentForm)
         {
             InitializeComponent();
 
-            _mainForm = mainForm;
+            _parent = parentForm as IAvatarParentForm;
 
             RoundingHelper.SetRoundedRegion(this, 41, 41);
         }
@@ -33,7 +34,7 @@ namespace Biblio.CustomControls
             List<Books> books = Program.context.Books.Where(book => book.OftenSearched == 1).OrderBy(name => name.Title).ToList();
             foreach (Books book in books)
             {
-                var bookControl = new BookSearchControl(_mainForm, book);
+                var bookControl = new BookSearchControl((Form)_parent, book);
                 bookControl.Margin = new Padding(5);
                 bookControl.BookClicked += BookControl_BookClicked;
                 booksPanel.Controls.Add(bookControl);
@@ -97,7 +98,7 @@ namespace Biblio.CustomControls
 
             foreach (Books book in books)
             {
-                var bookControl = new BookSearchControl(_mainForm, book);
+                var bookControl = new BookSearchControl((Form)_parent, book);
                 bookControl.Margin = new Padding(5);
                 bookControl.BookClicked += BookControl_BookClicked;
                 booksPanel.Controls.Add(bookControl);

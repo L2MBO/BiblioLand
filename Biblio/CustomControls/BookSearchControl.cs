@@ -1,6 +1,7 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.Interface;
 using Biblio.Models;
 using System;
 using System.Collections.Generic;
@@ -17,18 +18,21 @@ namespace Biblio.CustomControls
 {
     public partial class BookSearchControl : UserControl
     {
-        private MainForm _mainForm;
         private Books _books;
         public event EventHandler<Books> BookClicked;
         public event EventHandler OpenChanged;
+        private IAvatarParentForm _parent;
 
-        public BookSearchControl(MainForm mainForm, Books books)
+        public BookSearchControl(Form parentForm, Books books)
         {
             InitializeComponent();
 
-            _mainForm = mainForm;
+            _parent = parentForm as IAvatarParentForm;
 
-            this.OpenChanged += _mainForm.OnControlOpenChanged;
+            if (_parent != null)
+            {
+                OpenChanged += _parent.OnControlOpenChanged;
+            }
 
             _books = books;
 

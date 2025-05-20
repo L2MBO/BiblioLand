@@ -80,7 +80,7 @@ namespace Biblio.CustomControls
                 return;
             }
 
-            //searchControl = new SearchControl(FindForm());
+            searchControl = new SearchControl(FindForm());
             FindForm().Controls.Add(searchControl);
             searchControl.BringToFront();
             searchControl.Visible = true;
