@@ -48,8 +48,6 @@ namespace Biblio.AppForms
             bottomNavigationPanel.MouseDown += Form_MouseDown;
             this.Resize += MainForm_Resize;
 
-            this.Shown += MainForm_Shown;
-
             showMoreButton.Click += showMoreButton_Click;
 
             bookSearchControl = new BookSearchControl(this, new Books
@@ -288,22 +286,11 @@ namespace Biblio.AppForms
             //ImageLoader.LoadAvatarImage(avatarPictureBox);
         }
 
-        private void MainForm_Shown(object sender, EventArgs e)
-        {
-            foreach (Control control in lastUpdatesPanel.Controls)
-            {
-                if (control is LastUpdatesControl lastUpdatesControl)
-                {
-                    lastUpdatesControl.ChangeWidth();
-                }
-            }
-        }
-
         private static bool _isMaximize = false;
 
-        public static event EventHandler IsMaximizeChanged;
+        private static event EventHandler IsMaximizeChanged;
 
-        public static bool isMaximize
+        private static bool isMaximize
         {
             get { return _isMaximize; }
             set

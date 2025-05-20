@@ -1,4 +1,5 @@
 ﻿using Biblio.AppForms;
+using Biblio.Classes.Customization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,9 @@ namespace Biblio.CustomControls
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        // Событие изменения состояния окна
         public event EventHandler WindowStateChanged;
 
-        // Контролы для поиска (если нужны)
+        // Контролы
         private SearchControl searchControl;
         private OtherControl otherControl;
         private AvatarControl avatarControl;
@@ -69,7 +69,6 @@ namespace Biblio.CustomControls
             form.ShowDialog();
         }
 
-        // Поиск
         private void searchButton_Click(object sender, EventArgs e)
         {
             if (searchControl != null && searchControl.Visible)
@@ -87,7 +86,6 @@ namespace Biblio.CustomControls
             SetSearchControlPosition();
         }
 
-        // Другие элементы (аналогично)
         private void otherButton_Click(object sender, EventArgs e)
         {
             if (otherControl != null && otherControl.Visible)
@@ -124,7 +122,6 @@ namespace Biblio.CustomControls
             avatarControl.Visible = true;
         }
 
-        // Позиция searchControl
         public void SetSearchControlPosition()
         {
             if (searchControl == null || !searchControl.Visible) return;
@@ -138,13 +135,11 @@ namespace Biblio.CustomControls
             searchControl.Location = new Point(x, y);
         }
 
-        // Обработчик изменения состояния окна
-
-
         public void HandleFormResize(Form form)
         {
             if (form.WindowState == FormWindowState.Maximized)
             {
+                RoundingHelper.SetRoundedRegion(form, 0, 0);
                 maximizeButton.Visible = false;
                 restoreButton.Visible = true;
                 leftPanel.Width = 300;
@@ -158,6 +153,7 @@ namespace Biblio.CustomControls
             }
             else
             {
+                RoundingHelper.SetRoundedRegion(form, 11, 11);
                 maximizeButton.Visible = true;
                 restoreButton.Visible = false;
                 leftPanel.Width = 100;
@@ -175,7 +171,6 @@ namespace Biblio.CustomControls
             if (avatarControl != null) avatarControl.Location = new Point(avatarPictureBox.Right + avatarX, avatarPictureBox.Bottom + 10);
         }
 
-        // Перемещение формы
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

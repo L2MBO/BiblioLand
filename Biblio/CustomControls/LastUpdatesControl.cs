@@ -27,10 +27,6 @@ namespace Biblio.CustomControls
         {
             InitializeComponent();
 
-            //this.Width = 800;
-
-            MainForm.IsMaximizeChanged += MainForm_IsMaximizeChanged;
-
             _books = books;
 
             authorLabel.Text = books.Author.ToString();
@@ -57,27 +53,6 @@ namespace Biblio.CustomControls
             rightPanel.Click += MainControl_Click;
             timeLabel.Click += MainControl_Click;
             timePanel.Click += MainControl_Click;
-        }
-
-        private void MainForm_IsMaximizeChanged(object sender, EventArgs e)
-        {
-            ChangeWidth();
-        }
-
-        public void ChangeWidth()
-        {
-            if (MainForm.isMaximize)
-            {
-                this.Width = 800;
-                this.BackColor = Color.Red;
-            }
-            else
-            {
-                this.Width = 465;
-                this.BackColor = Color.White;
-            }
-            
-            this.Refresh();
         }
 
         public void SetTime(string time)

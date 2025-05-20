@@ -74,13 +74,13 @@
             // 
             // topPanel
             // 
-            this.topPanel.AutoSize = true;
+            this.topPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.topPanel.Controls.Add(this.navigationPanel);
             this.topPanel.Controls.Add(this.topLeftPanel);
             this.topPanel.Controls.Add(this.topRightPanel);
             this.topPanel.Controls.Add(this.pictureBox2);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(726, 52);
@@ -449,7 +449,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
