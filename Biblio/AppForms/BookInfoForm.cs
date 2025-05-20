@@ -57,12 +57,18 @@ namespace Biblio.AppForms
 
             //число голосов
 
-            Image image = ImageLoader.LoadBookImage(_book.ImagePath);
+            Image bookimage = ImageLoader.LoadBookImage(_book.ImagePath);
 
-            if (image != null)
+            if (bookimage != null)
             {
-                bookPictureBox.Image = image;
-                mainPanel.BackgroundImage = image;
+                bookPictureBox.Image = bookimage;
+            }
+
+            Image backimage = ImageLoader.LoadBookImage(_book.ImagePath);
+
+            if (backimage != null)
+            {
+                mainPanel.BackgroundImage = backimage;
             }
 
             descriptionLabel.Text = _book.Description;
