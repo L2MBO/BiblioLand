@@ -327,7 +327,7 @@
             this.categoryProgress5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryProgress5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress5.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress5.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress5.Name = "categoryProgress5";
             this.categoryProgress5.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress5.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -430,7 +430,7 @@
             this.categoryProgress4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryProgress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress4.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress4.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress4.Name = "categoryProgress4";
             this.categoryProgress4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress4.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -533,7 +533,7 @@
             this.categoryProgress1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress1.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress1.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress1.Name = "categoryProgress1";
             this.categoryProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -636,7 +636,7 @@
             this.categoryProgress3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress3.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress3.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress3.Name = "categoryProgress3";
             this.categoryProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -739,7 +739,7 @@
             this.categoryProgress2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress2.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress2.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress2.Name = "categoryProgress2";
             this.categoryProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -861,7 +861,7 @@
             this.ratingProgress1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress1.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress1.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress1.Name = "ratingProgress1";
             this.ratingProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -964,7 +964,7 @@
             this.ratingProgress2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress2.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress2.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress2.Name = "ratingProgress2";
             this.ratingProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1067,7 +1067,7 @@
             this.ratingProgress3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress3.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress3.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress3.Name = "ratingProgress3";
             this.ratingProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1170,7 +1170,7 @@
             this.ratingProgress4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress4.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress4.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress4.Name = "ratingProgress4";
             this.ratingProgress4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress4.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1273,7 +1273,7 @@
             this.ratingProgress5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress5.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress5.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress5.Name = "ratingProgress5";
             this.ratingProgress5.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress5.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1376,7 +1376,7 @@
             this.ratingProgress6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress6.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress6.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress6.Name = "ratingProgress6";
             this.ratingProgress6.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress6.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1479,7 +1479,7 @@
             this.ratingProgress7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress7.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress7.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress7.Name = "ratingProgress7";
             this.ratingProgress7.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress7.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1582,7 +1582,7 @@
             this.ratingProgress8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress8.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress8.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress8.Name = "ratingProgress8";
             this.ratingProgress8.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress8.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1685,7 +1685,7 @@
             this.ratingProgress9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress9.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress9.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress9.Name = "ratingProgress9";
             this.ratingProgress9.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress9.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -1788,7 +1788,7 @@
             this.ratingProgress10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ratingProgress10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress10.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress10.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress10.Name = "ratingProgress10";
             this.ratingProgress10.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress10.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));

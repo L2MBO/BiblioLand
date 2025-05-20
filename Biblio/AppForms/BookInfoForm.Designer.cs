@@ -57,8 +57,8 @@
             this.restoreButton = new System.Windows.Forms.PictureBox();
             this.minimizeButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.statisticsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -90,7 +90,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.statisticsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.topPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -104,7 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -389,7 +387,7 @@
             // 
             this.topLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.topLeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.topLeftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topLeftPanel.Name = "topLeftPanel";
             this.topLeftPanel.Size = new System.Drawing.Size(100, 44);
             this.topLeftPanel.TabIndex = 24;
@@ -399,7 +397,7 @@
             this.topRightPanel.Controls.Add(this.Panel2);
             this.topRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.topRightPanel.Location = new System.Drawing.Point(626, 0);
-            this.topRightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.topRightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topRightPanel.Name = "topRightPanel";
             this.topRightPanel.Size = new System.Drawing.Size(100, 44);
             this.topRightPanel.TabIndex = 21;
@@ -469,20 +467,10 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Biblio.Properties.Resources.defaultBookImage;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.mainPanel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 52);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(726, 378);
-            this.panel1.TabIndex = 23;
-            // 
             // mainPanel
             // 
-            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainPanel.Controls.Add(this.statisticsPanel);
             this.mainPanel.Controls.Add(this.panel8);
             this.mainPanel.Controls.Add(this.descriptionPanel);
@@ -494,18 +482,29 @@
             this.mainPanel.Controls.Add(this.rightPanel);
             this.mainPanel.Controls.Add(this.leftPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Location = new System.Drawing.Point(0, 52);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
-            this.mainPanel.TabIndex = 2;
+            this.mainPanel.TabIndex = 23;
+            // 
+            // statisticsPanel
+            // 
+            this.statisticsPanel.AutoSize = true;
+            this.statisticsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.statisticsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statisticsPanel.Location = new System.Drawing.Point(256, 133);
+            this.statisticsPanel.Name = "statisticsPanel";
+            this.statisticsPanel.Size = new System.Drawing.Size(370, 0);
+            this.statisticsPanel.TabIndex = 46;
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(256, 123);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(370, 10);
-            this.panel8.TabIndex = 36;
+            this.panel8.TabIndex = 45;
             // 
             // descriptionPanel
             // 
@@ -529,7 +528,7 @@
             this.descriptionPanel.ShadowDecoration.Enabled = true;
             this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
             this.descriptionPanel.Size = new System.Drawing.Size(370, 35);
-            this.descriptionPanel.TabIndex = 35;
+            this.descriptionPanel.TabIndex = 44;
             // 
             // panel13
             // 
@@ -585,14 +584,16 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(256, 78);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(370, 10);
-            this.panel6.TabIndex = 32;
+            this.panel6.TabIndex = 43;
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.panel14);
             this.panel7.Controls.Add(this.genreLabel);
             this.panel7.Controls.Add(this.nameLabel);
@@ -601,7 +602,7 @@
             this.panel7.Location = new System.Drawing.Point(256, 16);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(370, 62);
-            this.panel7.TabIndex = 31;
+            this.panel7.TabIndex = 42;
             // 
             // panel14
             // 
@@ -707,14 +708,16 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(246, 16);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 362);
-            this.panel4.TabIndex = 27;
+            this.panel4.TabIndex = 41;
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.reportButton);
             this.panel5.Controls.Add(this.panel25);
             this.panel5.Controls.Add(this.newBookmarkButton);
@@ -726,7 +729,7 @@
             this.panel5.Location = new System.Drawing.Point(100, 16);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(146, 362);
-            this.panel5.TabIndex = 26;
+            this.panel5.TabIndex = 40;
             // 
             // reportButton
             // 
@@ -829,39 +832,32 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(100, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(526, 16);
-            this.panel3.TabIndex = 24;
+            this.panel3.TabIndex = 39;
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(100, 378);
-            this.rightPanel.TabIndex = 22;
+            this.rightPanel.TabIndex = 38;
             // 
             // leftPanel
             // 
+            this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
-            this.leftPanel.TabIndex = 21;
-            // 
-            // statisticsPanel
-            // 
-            this.statisticsPanel.AutoSize = true;
-            this.statisticsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statisticsPanel.Location = new System.Drawing.Point(256, 133);
-            this.statisticsPanel.Name = "statisticsPanel";
-            this.statisticsPanel.Size = new System.Drawing.Size(370, 0);
-            this.statisticsPanel.TabIndex = 37;
+            this.leftPanel.TabIndex = 37;
             // 
             // BookInfoForm
             // 
@@ -869,8 +865,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.ClientSize = new System.Drawing.Size(726, 430);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BookInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -889,7 +886,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.descriptionPanel.ResumeLayout(false);
@@ -925,44 +921,7 @@
         private System.Windows.Forms.Panel topLeftPanel;
         private System.Windows.Forms.Panel topRightPanel;
         private System.Windows.Forms.Panel Panel2;
-        private System.Windows.Forms.PictureBox closeButton;
-        private System.Windows.Forms.PictureBox maximizeButton;
-        private System.Windows.Forms.PictureBox restoreButton;
-        private System.Windows.Forms.PictureBox minimizeButton;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Panel leftPanel;
-        private System.Windows.Forms.Panel rightPanel;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label authorLabel;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label genreLabel;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label ratingLabel;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Panel panel8;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel descriptionPanel;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label descriptionLabel;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
-        private System.Windows.Forms.Panel panel23;
-        private Guna.UI2.WinForms.Guna2Button continueRadingButton;
-        private Guna.UI2.WinForms.Guna2Button reportButton;
-        private System.Windows.Forms.Panel panel25;
-        private Guna.UI2.WinForms.Guna2Button newBookmarkButton;
-        private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel17;
         private Guna.UI2.WinForms.Guna2Button searchButton;
         private System.Windows.Forms.Panel delimiter4;
@@ -971,6 +930,42 @@
         private Guna.UI2.WinForms.Guna2CircleButton notificationsButton;
         private System.Windows.Forms.Panel delimiter6;
         private Guna.UI2.WinForms.Guna2CirclePictureBox avatarPictureBox;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panel8;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel descriptionPanel;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label ratingLabel;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel15;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label genreLabel;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label authorLabel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private Guna.UI2.WinForms.Guna2Button reportButton;
+        private System.Windows.Forms.Panel panel25;
+        private Guna.UI2.WinForms.Guna2Button newBookmarkButton;
+        private System.Windows.Forms.Panel panel24;
+        private Guna.UI2.WinForms.Guna2Button continueRadingButton;
+        private System.Windows.Forms.Panel panel23;
+        private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel rightPanel;
+        private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.FlowLayoutPanel statisticsPanel;
+        private System.Windows.Forms.PictureBox closeButton;
+        private System.Windows.Forms.PictureBox maximizeButton;
+        private System.Windows.Forms.PictureBox restoreButton;
+        private System.Windows.Forms.PictureBox minimizeButton;
     }
 }

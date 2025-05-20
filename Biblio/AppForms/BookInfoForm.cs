@@ -18,7 +18,7 @@ using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
-    public partial class BookInfoForm : MaterialForm
+    public partial class BookInfoForm : Form
     {
         private Books _book;
 
@@ -26,8 +26,12 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+
+            SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
+            UpdateStyles();
+
             AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: false, disableVertical: true);
-            AutoScrollHelper.ConfigureScrollbars(panel1, disableHorizontal: false, disableVertical: true);
 
             _book = book;
             
@@ -58,13 +62,12 @@ namespace Biblio.AppForms
             if (image != null)
             {
                 bookPictureBox.Image = image;
+                mainPanel.BackgroundImage = image;
             }
 
             descriptionLabel.Text = _book.Description;
 
             ShowStatisticsBooks();
-
-            //overageRatingLabel.Text = "Рейтинг за последнее время: " + rating;
         }
 
         private void ShowStatisticsBooks()

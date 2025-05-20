@@ -527,16 +527,10 @@
     <None Include="Resources\blackDownload.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\coins.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\coin.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log-out.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\circleCloseButton.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\circleCloseButton.jpg" />
@@ -567,9 +561,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sendMessage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\smollYellowStar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
