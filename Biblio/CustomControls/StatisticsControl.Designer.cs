@@ -29,8 +29,88 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
+            this.panel93 = new System.Windows.Forms.Panel();
+            this.categoryProgress5 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel94 = new System.Windows.Forms.Panel();
+            this.panel95 = new System.Windows.Forms.Panel();
+            this.panel96 = new System.Windows.Forms.Panel();
+            this.categoryCount5 = new System.Windows.Forms.Label();
+            this.panel97 = new System.Windows.Forms.Panel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel92 = new System.Windows.Forms.Panel();
+            this.panel87 = new System.Windows.Forms.Panel();
+            this.categoryProgress4 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel88 = new System.Windows.Forms.Panel();
+            this.panel89 = new System.Windows.Forms.Panel();
+            this.panel90 = new System.Windows.Forms.Panel();
+            this.categoryCount4 = new System.Windows.Forms.Label();
+            this.panel91 = new System.Windows.Forms.Panel();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panel86 = new System.Windows.Forms.Panel();
+            this.panel81 = new System.Windows.Forms.Panel();
+            this.categoryProgress1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel82 = new System.Windows.Forms.Panel();
+            this.panel83 = new System.Windows.Forms.Panel();
+            this.panel84 = new System.Windows.Forms.Panel();
+            this.categoryCount1 = new System.Windows.Forms.Label();
+            this.panel85 = new System.Windows.Forms.Panel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel80 = new System.Windows.Forms.Panel();
+            this.panel75 = new System.Windows.Forms.Panel();
+            this.categoryProgress3 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel76 = new System.Windows.Forms.Panel();
+            this.panel77 = new System.Windows.Forms.Panel();
+            this.panel78 = new System.Windows.Forms.Panel();
+            this.categoryCount3 = new System.Windows.Forms.Label();
+            this.panel79 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel74 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.categoryProgress2 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel72 = new System.Windows.Forms.Panel();
+            this.categoryCount2 = new System.Windows.Forms.Label();
+            this.panel73 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.ratingProgress1 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.ratingCount1 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ratingProgress2 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.ratingCount2 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ratingProgress3 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.ratingCount3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel54 = new System.Windows.Forms.Panel();
             this.ratingProgress4 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel55 = new System.Windows.Forms.Panel();
@@ -109,89 +189,41 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ratingProgress3 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.ratingCount3 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.ratingProgress1 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.ratingCount1 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.ratingProgress2 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.ratingCount2 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.categoryProgress2 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel72 = new System.Windows.Forms.Panel();
-            this.categoryCount2 = new System.Windows.Forms.Label();
-            this.panel73 = new System.Windows.Forms.Panel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel74 = new System.Windows.Forms.Panel();
-            this.panel75 = new System.Windows.Forms.Panel();
-            this.categoryProgress3 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel76 = new System.Windows.Forms.Panel();
-            this.panel77 = new System.Windows.Forms.Panel();
-            this.panel78 = new System.Windows.Forms.Panel();
-            this.categoryCount3 = new System.Windows.Forms.Label();
-            this.panel79 = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel80 = new System.Windows.Forms.Panel();
-            this.panel81 = new System.Windows.Forms.Panel();
-            this.categoryProgress1 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel82 = new System.Windows.Forms.Panel();
-            this.panel83 = new System.Windows.Forms.Panel();
-            this.panel84 = new System.Windows.Forms.Panel();
-            this.categoryCount1 = new System.Windows.Forms.Label();
-            this.panel85 = new System.Windows.Forms.Panel();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.panel86 = new System.Windows.Forms.Panel();
-            this.panel87 = new System.Windows.Forms.Panel();
-            this.categoryProgress4 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel88 = new System.Windows.Forms.Panel();
-            this.panel89 = new System.Windows.Forms.Panel();
-            this.panel90 = new System.Windows.Forms.Panel();
-            this.categoryCount4 = new System.Windows.Forms.Label();
-            this.panel91 = new System.Windows.Forms.Panel();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panel92 = new System.Windows.Forms.Panel();
-            this.panel93 = new System.Windows.Forms.Panel();
-            this.categoryProgress5 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.panel94 = new System.Windows.Forms.Panel();
-            this.panel95 = new System.Windows.Forms.Panel();
-            this.panel96 = new System.Windows.Forms.Panel();
-            this.categoryCount5 = new System.Windows.Forms.Label();
-            this.panel97 = new System.Windows.Forms.Panel();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.panel29.SuspendLayout();
+            this.panel93.SuspendLayout();
+            this.panel96.SuspendLayout();
+            this.panel97.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            this.panel87.SuspendLayout();
+            this.panel90.SuspendLayout();
+            this.panel91.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.panel81.SuspendLayout();
+            this.panel84.SuspendLayout();
+            this.panel85.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.panel75.SuspendLayout();
+            this.panel78.SuspendLayout();
+            this.panel79.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.panel23.SuspendLayout();
+            this.panel72.SuspendLayout();
+            this.panel73.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel27.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel13.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel54.SuspendLayout();
             this.panel57.SuspendLayout();
             this.panel58.SuspendLayout();
@@ -223,38 +255,6 @@
             this.panel26.SuspendLayout();
             this.panel30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel7.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panel13.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.panel23.SuspendLayout();
-            this.panel72.SuspendLayout();
-            this.panel73.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel75.SuspendLayout();
-            this.panel78.SuspendLayout();
-            this.panel79.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.panel81.SuspendLayout();
-            this.panel84.SuspendLayout();
-            this.panel85.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.panel87.SuspendLayout();
-            this.panel90.SuspendLayout();
-            this.panel91.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.panel93.SuspendLayout();
-            this.panel96.SuspendLayout();
-            this.panel97.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel2
@@ -283,6 +283,14 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(370, 292);
             this.guna2CustomGradientPanel2.TabIndex = 38;
             // 
+            // panel28
+            // 
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel28.Location = new System.Drawing.Point(175, 53);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(20, 229);
+            this.panel28.TabIndex = 13;
+            // 
             // panel29
             // 
             this.panel29.Controls.Add(this.panel93);
@@ -299,6 +307,513 @@
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(165, 229);
             this.panel29.TabIndex = 12;
+            // 
+            // panel93
+            // 
+            this.panel93.Controls.Add(this.categoryProgress5);
+            this.panel93.Controls.Add(this.panel94);
+            this.panel93.Controls.Add(this.panel95);
+            this.panel93.Controls.Add(this.panel96);
+            this.panel93.Controls.Add(this.panel97);
+            this.panel93.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel93.Location = new System.Drawing.Point(0, 96);
+            this.panel93.Name = "panel93";
+            this.panel93.Size = new System.Drawing.Size(165, 14);
+            this.panel93.TabIndex = 9;
+            // 
+            // categoryProgress5
+            // 
+            this.categoryProgress5.BorderRadius = 4;
+            this.categoryProgress5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryProgress5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryProgress5.Location = new System.Drawing.Point(88, 3);
+            this.categoryProgress5.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress5.Name = "categoryProgress5";
+            this.categoryProgress5.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress5.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress5.Size = new System.Drawing.Size(64, 8);
+            this.categoryProgress5.TabIndex = 7;
+            this.categoryProgress5.Text = "guna2ProgressBar1";
+            this.categoryProgress5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel94
+            // 
+            this.panel94.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel94.Location = new System.Drawing.Point(88, 11);
+            this.panel94.Name = "panel94";
+            this.panel94.Size = new System.Drawing.Size(64, 3);
+            this.panel94.TabIndex = 3;
+            // 
+            // panel95
+            // 
+            this.panel95.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel95.Location = new System.Drawing.Point(88, 0);
+            this.panel95.Name = "panel95";
+            this.panel95.Size = new System.Drawing.Size(64, 3);
+            this.panel95.TabIndex = 2;
+            // 
+            // panel96
+            // 
+            this.panel96.AutoSize = true;
+            this.panel96.Controls.Add(this.categoryCount5);
+            this.panel96.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel96.Location = new System.Drawing.Point(152, 0);
+            this.panel96.Name = "panel96";
+            this.panel96.Size = new System.Drawing.Size(13, 14);
+            this.panel96.TabIndex = 1;
+            // 
+            // categoryCount5
+            // 
+            this.categoryCount5.AutoSize = true;
+            this.categoryCount5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryCount5.ForeColor = System.Drawing.Color.White;
+            this.categoryCount5.Location = new System.Drawing.Point(0, 0);
+            this.categoryCount5.Name = "categoryCount5";
+            this.categoryCount5.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount5.TabIndex = 11;
+            this.categoryCount5.Text = "0";
+            // 
+            // panel97
+            // 
+            this.panel97.Controls.Add(this.pictureBox16);
+            this.panel97.Controls.Add(this.label30);
+            this.panel97.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel97.Location = new System.Drawing.Point(0, 0);
+            this.panel97.Name = "panel97";
+            this.panel97.Size = new System.Drawing.Size(88, 14);
+            this.panel97.TabIndex = 0;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::Biblio.Properties.Resources.abandoned;
+            this.pictureBox16.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 10;
+            this.pictureBox16.TabStop = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(20, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(52, 13);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "Брошено";
+            // 
+            // panel92
+            // 
+            this.panel92.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel92.Location = new System.Drawing.Point(0, 86);
+            this.panel92.Name = "panel92";
+            this.panel92.Size = new System.Drawing.Size(165, 10);
+            this.panel92.TabIndex = 8;
+            // 
+            // panel87
+            // 
+            this.panel87.Controls.Add(this.categoryProgress4);
+            this.panel87.Controls.Add(this.panel88);
+            this.panel87.Controls.Add(this.panel89);
+            this.panel87.Controls.Add(this.panel90);
+            this.panel87.Controls.Add(this.panel91);
+            this.panel87.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel87.Location = new System.Drawing.Point(0, 72);
+            this.panel87.Name = "panel87";
+            this.panel87.Size = new System.Drawing.Size(165, 14);
+            this.panel87.TabIndex = 7;
+            // 
+            // categoryProgress4
+            // 
+            this.categoryProgress4.BorderRadius = 4;
+            this.categoryProgress4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryProgress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryProgress4.Location = new System.Drawing.Point(88, 3);
+            this.categoryProgress4.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress4.Name = "categoryProgress4";
+            this.categoryProgress4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress4.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress4.Size = new System.Drawing.Size(64, 8);
+            this.categoryProgress4.TabIndex = 7;
+            this.categoryProgress4.Text = "guna2ProgressBar1";
+            this.categoryProgress4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel88
+            // 
+            this.panel88.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel88.Location = new System.Drawing.Point(88, 11);
+            this.panel88.Name = "panel88";
+            this.panel88.Size = new System.Drawing.Size(64, 3);
+            this.panel88.TabIndex = 3;
+            // 
+            // panel89
+            // 
+            this.panel89.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel89.Location = new System.Drawing.Point(88, 0);
+            this.panel89.Name = "panel89";
+            this.panel89.Size = new System.Drawing.Size(64, 3);
+            this.panel89.TabIndex = 2;
+            // 
+            // panel90
+            // 
+            this.panel90.AutoSize = true;
+            this.panel90.Controls.Add(this.categoryCount4);
+            this.panel90.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel90.Location = new System.Drawing.Point(152, 0);
+            this.panel90.Name = "panel90";
+            this.panel90.Size = new System.Drawing.Size(13, 14);
+            this.panel90.TabIndex = 1;
+            // 
+            // categoryCount4
+            // 
+            this.categoryCount4.AutoSize = true;
+            this.categoryCount4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryCount4.ForeColor = System.Drawing.Color.White;
+            this.categoryCount4.Location = new System.Drawing.Point(0, 0);
+            this.categoryCount4.Name = "categoryCount4";
+            this.categoryCount4.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount4.TabIndex = 11;
+            this.categoryCount4.Text = "0";
+            // 
+            // panel91
+            // 
+            this.panel91.Controls.Add(this.pictureBox15);
+            this.panel91.Controls.Add(this.label28);
+            this.panel91.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel91.Location = new System.Drawing.Point(0, 0);
+            this.panel91.Name = "panel91";
+            this.panel91.Size = new System.Drawing.Size(88, 14);
+            this.panel91.TabIndex = 0;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::Biblio.Properties.Resources.postponed;
+            this.pictureBox15.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 10;
+            this.pictureBox15.TabStop = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(20, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(58, 13);
+            this.label28.TabIndex = 9;
+            this.label28.Text = "Отложено";
+            // 
+            // panel86
+            // 
+            this.panel86.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel86.Location = new System.Drawing.Point(0, 62);
+            this.panel86.Name = "panel86";
+            this.panel86.Size = new System.Drawing.Size(165, 10);
+            this.panel86.TabIndex = 6;
+            // 
+            // panel81
+            // 
+            this.panel81.Controls.Add(this.categoryProgress1);
+            this.panel81.Controls.Add(this.panel82);
+            this.panel81.Controls.Add(this.panel83);
+            this.panel81.Controls.Add(this.panel84);
+            this.panel81.Controls.Add(this.panel85);
+            this.panel81.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel81.Location = new System.Drawing.Point(0, 48);
+            this.panel81.Name = "panel81";
+            this.panel81.Size = new System.Drawing.Size(165, 14);
+            this.panel81.TabIndex = 5;
+            // 
+            // categoryProgress1
+            // 
+            this.categoryProgress1.BorderRadius = 4;
+            this.categoryProgress1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryProgress1.Location = new System.Drawing.Point(88, 3);
+            this.categoryProgress1.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress1.Name = "categoryProgress1";
+            this.categoryProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress1.Size = new System.Drawing.Size(64, 8);
+            this.categoryProgress1.TabIndex = 7;
+            this.categoryProgress1.Text = "guna2ProgressBar1";
+            this.categoryProgress1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel82
+            // 
+            this.panel82.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel82.Location = new System.Drawing.Point(88, 11);
+            this.panel82.Name = "panel82";
+            this.panel82.Size = new System.Drawing.Size(64, 3);
+            this.panel82.TabIndex = 3;
+            // 
+            // panel83
+            // 
+            this.panel83.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel83.Location = new System.Drawing.Point(88, 0);
+            this.panel83.Name = "panel83";
+            this.panel83.Size = new System.Drawing.Size(64, 3);
+            this.panel83.TabIndex = 2;
+            // 
+            // panel84
+            // 
+            this.panel84.AutoSize = true;
+            this.panel84.Controls.Add(this.categoryCount1);
+            this.panel84.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel84.Location = new System.Drawing.Point(152, 0);
+            this.panel84.Name = "panel84";
+            this.panel84.Size = new System.Drawing.Size(13, 14);
+            this.panel84.TabIndex = 1;
+            // 
+            // categoryCount1
+            // 
+            this.categoryCount1.AutoSize = true;
+            this.categoryCount1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryCount1.ForeColor = System.Drawing.Color.White;
+            this.categoryCount1.Location = new System.Drawing.Point(0, 0);
+            this.categoryCount1.Name = "categoryCount1";
+            this.categoryCount1.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount1.TabIndex = 11;
+            this.categoryCount1.Text = "0";
+            // 
+            // panel85
+            // 
+            this.panel85.Controls.Add(this.pictureBox14);
+            this.panel85.Controls.Add(this.label26);
+            this.panel85.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel85.Location = new System.Drawing.Point(0, 0);
+            this.panel85.Name = "panel85";
+            this.panel85.Size = new System.Drawing.Size(88, 14);
+            this.panel85.TabIndex = 0;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::Biblio.Properties.Resources.wasRead;
+            this.pictureBox14.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 10;
+            this.pictureBox14.TabStop = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(20, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(61, 13);
+            this.label26.TabIndex = 9;
+            this.label26.Text = "Прочитано";
+            // 
+            // panel80
+            // 
+            this.panel80.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel80.Location = new System.Drawing.Point(0, 38);
+            this.panel80.Name = "panel80";
+            this.panel80.Size = new System.Drawing.Size(165, 10);
+            this.panel80.TabIndex = 4;
+            // 
+            // panel75
+            // 
+            this.panel75.Controls.Add(this.categoryProgress3);
+            this.panel75.Controls.Add(this.panel76);
+            this.panel75.Controls.Add(this.panel77);
+            this.panel75.Controls.Add(this.panel78);
+            this.panel75.Controls.Add(this.panel79);
+            this.panel75.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel75.Location = new System.Drawing.Point(0, 24);
+            this.panel75.Name = "panel75";
+            this.panel75.Size = new System.Drawing.Size(165, 14);
+            this.panel75.TabIndex = 3;
+            // 
+            // categoryProgress3
+            // 
+            this.categoryProgress3.BorderRadius = 4;
+            this.categoryProgress3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryProgress3.Location = new System.Drawing.Point(88, 3);
+            this.categoryProgress3.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress3.Name = "categoryProgress3";
+            this.categoryProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress3.Size = new System.Drawing.Size(64, 8);
+            this.categoryProgress3.TabIndex = 7;
+            this.categoryProgress3.Text = "guna2ProgressBar1";
+            this.categoryProgress3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel76
+            // 
+            this.panel76.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel76.Location = new System.Drawing.Point(88, 11);
+            this.panel76.Name = "panel76";
+            this.panel76.Size = new System.Drawing.Size(64, 3);
+            this.panel76.TabIndex = 3;
+            // 
+            // panel77
+            // 
+            this.panel77.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel77.Location = new System.Drawing.Point(88, 0);
+            this.panel77.Name = "panel77";
+            this.panel77.Size = new System.Drawing.Size(64, 3);
+            this.panel77.TabIndex = 2;
+            // 
+            // panel78
+            // 
+            this.panel78.AutoSize = true;
+            this.panel78.Controls.Add(this.categoryCount3);
+            this.panel78.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel78.Location = new System.Drawing.Point(152, 0);
+            this.panel78.Name = "panel78";
+            this.panel78.Size = new System.Drawing.Size(13, 14);
+            this.panel78.TabIndex = 1;
+            // 
+            // categoryCount3
+            // 
+            this.categoryCount3.AutoSize = true;
+            this.categoryCount3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryCount3.ForeColor = System.Drawing.Color.White;
+            this.categoryCount3.Location = new System.Drawing.Point(0, 0);
+            this.categoryCount3.Name = "categoryCount3";
+            this.categoryCount3.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount3.TabIndex = 11;
+            this.categoryCount3.Text = "0";
+            // 
+            // panel79
+            // 
+            this.panel79.Controls.Add(this.pictureBox13);
+            this.panel79.Controls.Add(this.label24);
+            this.panel79.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel79.Location = new System.Drawing.Point(0, 0);
+            this.panel79.Name = "panel79";
+            this.panel79.Size = new System.Drawing.Size(88, 14);
+            this.panel79.TabIndex = 0;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::Biblio.Properties.Resources.willReading;
+            this.pictureBox13.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 10;
+            this.pictureBox13.TabStop = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(20, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(66, 13);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "Буду читать";
+            // 
+            // panel74
+            // 
+            this.panel74.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel74.Location = new System.Drawing.Point(0, 14);
+            this.panel74.Name = "panel74";
+            this.panel74.Size = new System.Drawing.Size(165, 10);
+            this.panel74.TabIndex = 2;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.categoryProgress2);
+            this.panel23.Controls.Add(this.panel24);
+            this.panel23.Controls.Add(this.panel25);
+            this.panel23.Controls.Add(this.panel72);
+            this.panel23.Controls.Add(this.panel73);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(165, 14);
+            this.panel23.TabIndex = 1;
+            // 
+            // categoryProgress2
+            // 
+            this.categoryProgress2.BorderRadius = 4;
+            this.categoryProgress2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryProgress2.Location = new System.Drawing.Point(88, 3);
+            this.categoryProgress2.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress2.Name = "categoryProgress2";
+            this.categoryProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.categoryProgress2.Size = new System.Drawing.Size(64, 8);
+            this.categoryProgress2.TabIndex = 7;
+            this.categoryProgress2.Text = "guna2ProgressBar1";
+            this.categoryProgress2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel24
+            // 
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel24.Location = new System.Drawing.Point(88, 11);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(64, 3);
+            this.panel24.TabIndex = 3;
+            // 
+            // panel25
+            // 
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel25.Location = new System.Drawing.Point(88, 0);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(64, 3);
+            this.panel25.TabIndex = 2;
+            // 
+            // panel72
+            // 
+            this.panel72.AutoSize = true;
+            this.panel72.Controls.Add(this.categoryCount2);
+            this.panel72.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel72.Location = new System.Drawing.Point(152, 0);
+            this.panel72.Name = "panel72";
+            this.panel72.Size = new System.Drawing.Size(13, 14);
+            this.panel72.TabIndex = 1;
+            // 
+            // categoryCount2
+            // 
+            this.categoryCount2.AutoSize = true;
+            this.categoryCount2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryCount2.ForeColor = System.Drawing.Color.White;
+            this.categoryCount2.Location = new System.Drawing.Point(0, 0);
+            this.categoryCount2.Name = "categoryCount2";
+            this.categoryCount2.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount2.TabIndex = 11;
+            this.categoryCount2.Text = "0";
+            // 
+            // panel73
+            // 
+            this.panel73.Controls.Add(this.pictureBox12);
+            this.panel73.Controls.Add(this.label22);
+            this.panel73.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel73.Location = new System.Drawing.Point(0, 0);
+            this.panel73.Name = "panel73";
+            this.panel73.Size = new System.Drawing.Size(88, 14);
+            this.panel73.TabIndex = 0;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Biblio.Properties.Resources.reading;
+            this.pictureBox12.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 10;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(20, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(40, 13);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Читаю";
             // 
             // panel27
             // 
@@ -326,6 +841,315 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(165, 229);
             this.panel27.TabIndex = 10;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.ratingProgress1);
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.panel10);
+            this.panel7.Controls.Add(this.panel11);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 216);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(165, 14);
+            this.panel7.TabIndex = 18;
+            // 
+            // ratingProgress1
+            // 
+            this.ratingProgress1.BorderRadius = 4;
+            this.ratingProgress1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ratingProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.ratingProgress1.Location = new System.Drawing.Point(43, 3);
+            this.ratingProgress1.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress1.Name = "ratingProgress1";
+            this.ratingProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.ratingProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.ratingProgress1.Size = new System.Drawing.Size(109, 8);
+            this.ratingProgress1.TabIndex = 7;
+            this.ratingProgress1.Text = "guna2ProgressBar1";
+            this.ratingProgress1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(43, 11);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(109, 3);
+            this.panel8.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(43, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(109, 3);
+            this.panel9.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.AutoSize = true;
+            this.panel10.Controls.Add(this.ratingCount1);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(152, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(13, 14);
+            this.panel10.TabIndex = 1;
+            // 
+            // ratingCount1
+            // 
+            this.ratingCount1.AutoSize = true;
+            this.ratingCount1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ratingCount1.ForeColor = System.Drawing.Color.White;
+            this.ratingCount1.Location = new System.Drawing.Point(0, 0);
+            this.ratingCount1.Name = "ratingCount1";
+            this.ratingCount1.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount1.TabIndex = 11;
+            this.ratingCount1.Text = "0";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.pictureBox10);
+            this.panel11.Controls.Add(this.label18);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(43, 14);
+            this.panel11.TabIndex = 0;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox10.Location = new System.Drawing.Point(20, -2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 10;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(6, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 13);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "1";
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 206);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(165, 10);
+            this.panel12.TabIndex = 17;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.ratingProgress2);
+            this.panel13.Controls.Add(this.panel14);
+            this.panel13.Controls.Add(this.panel15);
+            this.panel13.Controls.Add(this.panel16);
+            this.panel13.Controls.Add(this.panel17);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 192);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(165, 14);
+            this.panel13.TabIndex = 16;
+            // 
+            // ratingProgress2
+            // 
+            this.ratingProgress2.BorderRadius = 4;
+            this.ratingProgress2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ratingProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.ratingProgress2.Location = new System.Drawing.Point(43, 3);
+            this.ratingProgress2.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress2.Name = "ratingProgress2";
+            this.ratingProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.ratingProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.ratingProgress2.Size = new System.Drawing.Size(109, 8);
+            this.ratingProgress2.TabIndex = 7;
+            this.ratingProgress2.Text = "guna2ProgressBar1";
+            this.ratingProgress2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(43, 11);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(109, 3);
+            this.panel14.TabIndex = 3;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(43, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(109, 3);
+            this.panel15.TabIndex = 2;
+            // 
+            // panel16
+            // 
+            this.panel16.AutoSize = true;
+            this.panel16.Controls.Add(this.ratingCount2);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel16.Location = new System.Drawing.Point(152, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(13, 14);
+            this.panel16.TabIndex = 1;
+            // 
+            // ratingCount2
+            // 
+            this.ratingCount2.AutoSize = true;
+            this.ratingCount2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ratingCount2.ForeColor = System.Drawing.Color.White;
+            this.ratingCount2.Location = new System.Drawing.Point(0, 0);
+            this.ratingCount2.Name = "ratingCount2";
+            this.ratingCount2.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount2.TabIndex = 11;
+            this.ratingCount2.Text = "0";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.pictureBox11);
+            this.panel17.Controls.Add(this.label20);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(43, 14);
+            this.panel17.TabIndex = 0;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox11.Location = new System.Drawing.Point(20, -2);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 10;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(6, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(13, 13);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "2";
+            // 
+            // panel18
+            // 
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 182);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(165, 10);
+            this.panel18.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ratingProgress3);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 168);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(165, 14);
+            this.panel2.TabIndex = 14;
+            // 
+            // ratingProgress3
+            // 
+            this.ratingProgress3.BorderRadius = 4;
+            this.ratingProgress3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ratingProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.ratingProgress3.Location = new System.Drawing.Point(43, 3);
+            this.ratingProgress3.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress3.Name = "ratingProgress3";
+            this.ratingProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.ratingProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
+            this.ratingProgress3.Size = new System.Drawing.Size(109, 8);
+            this.ratingProgress3.TabIndex = 7;
+            this.ratingProgress3.Text = "guna2ProgressBar1";
+            this.ratingProgress3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(43, 11);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(109, 3);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(43, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(109, 3);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.AutoSize = true;
+            this.panel5.Controls.Add(this.ratingCount3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(152, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(13, 14);
+            this.panel5.TabIndex = 1;
+            // 
+            // ratingCount3
+            // 
+            this.ratingCount3.AutoSize = true;
+            this.ratingCount3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ratingCount3.ForeColor = System.Drawing.Color.White;
+            this.ratingCount3.Location = new System.Drawing.Point(0, 0);
+            this.ratingCount3.Name = "ratingCount3";
+            this.ratingCount3.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount3.TabIndex = 11;
+            this.ratingCount3.Text = "0";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.pictureBox2);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(43, 14);
+            this.panel6.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox2.Location = new System.Drawing.Point(20, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(6, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(13, 13);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "3";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 158);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(165, 10);
+            this.panel1.TabIndex = 13;
             // 
             // panel54
             // 
@@ -1123,842 +1947,73 @@
             this.panel22.Size = new System.Drawing.Size(370, 10);
             this.panel22.TabIndex = 5;
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 158);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 10);
-            this.panel1.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.ratingProgress3);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 168);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 14);
-            this.panel2.TabIndex = 14;
-            // 
-            // ratingProgress3
-            // 
-            this.ratingProgress3.BorderRadius = 4;
-            this.ratingProgress3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ratingProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.ratingProgress3.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress3.Margin = new System.Windows.Forms.Padding(2);
-            this.ratingProgress3.Name = "ratingProgress3";
-            this.ratingProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.ratingProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.ratingProgress3.Size = new System.Drawing.Size(109, 8);
-            this.ratingProgress3.TabIndex = 7;
-            this.ratingProgress3.Text = "guna2ProgressBar1";
-            this.ratingProgress3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(43, 11);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(109, 3);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(43, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(109, 3);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.AutoSize = true;
-            this.panel5.Controls.Add(this.ratingCount3);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(152, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(13, 14);
-            this.panel5.TabIndex = 1;
-            // 
-            // ratingCount3
-            // 
-            this.ratingCount3.AutoSize = true;
-            this.ratingCount3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ratingCount3.ForeColor = System.Drawing.Color.White;
-            this.ratingCount3.Location = new System.Drawing.Point(0, 0);
-            this.ratingCount3.Name = "ratingCount3";
-            this.ratingCount3.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount3.TabIndex = 11;
-            this.ratingCount3.Text = "0";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(43, 14);
-            this.panel6.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox2.Location = new System.Drawing.Point(20, -2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(6, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "3";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.ratingProgress1);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.panel10);
-            this.panel7.Controls.Add(this.panel11);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 216);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(165, 14);
-            this.panel7.TabIndex = 18;
-            // 
-            // ratingProgress1
-            // 
-            this.ratingProgress1.BorderRadius = 4;
-            this.ratingProgress1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ratingProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.ratingProgress1.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress1.Margin = new System.Windows.Forms.Padding(2);
-            this.ratingProgress1.Name = "ratingProgress1";
-            this.ratingProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.ratingProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.ratingProgress1.Size = new System.Drawing.Size(109, 8);
-            this.ratingProgress1.TabIndex = 7;
-            this.ratingProgress1.Text = "guna2ProgressBar1";
-            this.ratingProgress1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(43, 11);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(109, 3);
-            this.panel8.TabIndex = 3;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(43, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(109, 3);
-            this.panel9.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            this.panel10.AutoSize = true;
-            this.panel10.Controls.Add(this.ratingCount1);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(152, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(13, 14);
-            this.panel10.TabIndex = 1;
-            // 
-            // ratingCount1
-            // 
-            this.ratingCount1.AutoSize = true;
-            this.ratingCount1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ratingCount1.ForeColor = System.Drawing.Color.White;
-            this.ratingCount1.Location = new System.Drawing.Point(0, 0);
-            this.ratingCount1.Name = "ratingCount1";
-            this.ratingCount1.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount1.TabIndex = 11;
-            this.ratingCount1.Text = "0";
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.pictureBox10);
-            this.panel11.Controls.Add(this.label18);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(43, 14);
-            this.panel11.TabIndex = 0;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox10.Location = new System.Drawing.Point(20, -2);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 10;
-            this.pictureBox10.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(6, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(13, 13);
-            this.label18.TabIndex = 9;
-            this.label18.Text = "1";
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 206);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(165, 10);
-            this.panel12.TabIndex = 17;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.ratingProgress2);
-            this.panel13.Controls.Add(this.panel14);
-            this.panel13.Controls.Add(this.panel15);
-            this.panel13.Controls.Add(this.panel16);
-            this.panel13.Controls.Add(this.panel17);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 192);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(165, 14);
-            this.panel13.TabIndex = 16;
-            // 
-            // ratingProgress2
-            // 
-            this.ratingProgress2.BorderRadius = 4;
-            this.ratingProgress2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ratingProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.ratingProgress2.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress2.Margin = new System.Windows.Forms.Padding(2);
-            this.ratingProgress2.Name = "ratingProgress2";
-            this.ratingProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.ratingProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
-            this.ratingProgress2.Size = new System.Drawing.Size(109, 8);
-            this.ratingProgress2.TabIndex = 7;
-            this.ratingProgress2.Text = "guna2ProgressBar1";
-            this.ratingProgress2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel14
-            // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(43, 11);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(109, 3);
-            this.panel14.TabIndex = 3;
-            // 
-            // panel15
-            // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(43, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(109, 3);
-            this.panel15.TabIndex = 2;
-            // 
-            // panel16
-            // 
-            this.panel16.AutoSize = true;
-            this.panel16.Controls.Add(this.ratingCount2);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel16.Location = new System.Drawing.Point(152, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(13, 14);
-            this.panel16.TabIndex = 1;
-            // 
-            // ratingCount2
-            // 
-            this.ratingCount2.AutoSize = true;
-            this.ratingCount2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ratingCount2.ForeColor = System.Drawing.Color.White;
-            this.ratingCount2.Location = new System.Drawing.Point(0, 0);
-            this.ratingCount2.Name = "ratingCount2";
-            this.ratingCount2.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount2.TabIndex = 11;
-            this.ratingCount2.Text = "0";
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.pictureBox11);
-            this.panel17.Controls.Add(this.label20);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(43, 14);
-            this.panel17.TabIndex = 0;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox11.Location = new System.Drawing.Point(20, -2);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(6, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 13);
-            this.label20.TabIndex = 9;
-            this.label20.Text = "2";
-            // 
-            // panel18
-            // 
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel18.Location = new System.Drawing.Point(0, 182);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(165, 10);
-            this.panel18.TabIndex = 15;
-            // 
-            // panel28
-            // 
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel28.Location = new System.Drawing.Point(175, 53);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(20, 229);
-            this.panel28.TabIndex = 13;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.categoryProgress2);
-            this.panel23.Controls.Add(this.panel24);
-            this.panel23.Controls.Add(this.panel25);
-            this.panel23.Controls.Add(this.panel72);
-            this.panel23.Controls.Add(this.panel73);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel23.Location = new System.Drawing.Point(0, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(165, 14);
-            this.panel23.TabIndex = 1;
-            // 
-            // categoryProgress2
-            // 
-            this.categoryProgress2.BorderRadius = 4;
-            this.categoryProgress2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.categoryProgress2.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress2.Margin = new System.Windows.Forms.Padding(2);
-            this.categoryProgress2.Name = "categoryProgress2";
-            this.categoryProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress2.Size = new System.Drawing.Size(64, 8);
-            this.categoryProgress2.TabIndex = 7;
-            this.categoryProgress2.Text = "guna2ProgressBar1";
-            this.categoryProgress2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel24
-            // 
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel24.Location = new System.Drawing.Point(88, 11);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(64, 3);
-            this.panel24.TabIndex = 3;
-            // 
-            // panel25
-            // 
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel25.Location = new System.Drawing.Point(88, 0);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(64, 3);
-            this.panel25.TabIndex = 2;
-            // 
-            // panel72
-            // 
-            this.panel72.AutoSize = true;
-            this.panel72.Controls.Add(this.categoryCount2);
-            this.panel72.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel72.Location = new System.Drawing.Point(152, 0);
-            this.panel72.Name = "panel72";
-            this.panel72.Size = new System.Drawing.Size(13, 14);
-            this.panel72.TabIndex = 1;
-            // 
-            // categoryCount2
-            // 
-            this.categoryCount2.AutoSize = true;
-            this.categoryCount2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryCount2.ForeColor = System.Drawing.Color.White;
-            this.categoryCount2.Location = new System.Drawing.Point(0, 0);
-            this.categoryCount2.Name = "categoryCount2";
-            this.categoryCount2.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount2.TabIndex = 11;
-            this.categoryCount2.Text = "0";
-            // 
-            // panel73
-            // 
-            this.panel73.Controls.Add(this.pictureBox12);
-            this.panel73.Controls.Add(this.label22);
-            this.panel73.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel73.Location = new System.Drawing.Point(0, 0);
-            this.panel73.Name = "panel73";
-            this.panel73.Size = new System.Drawing.Size(88, 14);
-            this.panel73.TabIndex = 0;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::Biblio.Properties.Resources.reading;
-            this.pictureBox12.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 10;
-            this.pictureBox12.TabStop = false;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(20, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(40, 13);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "Читаю";
-            // 
-            // panel74
-            // 
-            this.panel74.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel74.Location = new System.Drawing.Point(0, 14);
-            this.panel74.Name = "panel74";
-            this.panel74.Size = new System.Drawing.Size(165, 10);
-            this.panel74.TabIndex = 2;
-            // 
-            // panel75
-            // 
-            this.panel75.Controls.Add(this.categoryProgress3);
-            this.panel75.Controls.Add(this.panel76);
-            this.panel75.Controls.Add(this.panel77);
-            this.panel75.Controls.Add(this.panel78);
-            this.panel75.Controls.Add(this.panel79);
-            this.panel75.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel75.Location = new System.Drawing.Point(0, 24);
-            this.panel75.Name = "panel75";
-            this.panel75.Size = new System.Drawing.Size(165, 14);
-            this.panel75.TabIndex = 3;
-            // 
-            // categoryProgress3
-            // 
-            this.categoryProgress3.BorderRadius = 4;
-            this.categoryProgress3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.categoryProgress3.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress3.Margin = new System.Windows.Forms.Padding(2);
-            this.categoryProgress3.Name = "categoryProgress3";
-            this.categoryProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress3.Size = new System.Drawing.Size(64, 8);
-            this.categoryProgress3.TabIndex = 7;
-            this.categoryProgress3.Text = "guna2ProgressBar1";
-            this.categoryProgress3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel76
-            // 
-            this.panel76.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel76.Location = new System.Drawing.Point(88, 11);
-            this.panel76.Name = "panel76";
-            this.panel76.Size = new System.Drawing.Size(64, 3);
-            this.panel76.TabIndex = 3;
-            // 
-            // panel77
-            // 
-            this.panel77.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel77.Location = new System.Drawing.Point(88, 0);
-            this.panel77.Name = "panel77";
-            this.panel77.Size = new System.Drawing.Size(64, 3);
-            this.panel77.TabIndex = 2;
-            // 
-            // panel78
-            // 
-            this.panel78.AutoSize = true;
-            this.panel78.Controls.Add(this.categoryCount3);
-            this.panel78.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel78.Location = new System.Drawing.Point(152, 0);
-            this.panel78.Name = "panel78";
-            this.panel78.Size = new System.Drawing.Size(13, 14);
-            this.panel78.TabIndex = 1;
-            // 
-            // categoryCount3
-            // 
-            this.categoryCount3.AutoSize = true;
-            this.categoryCount3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryCount3.ForeColor = System.Drawing.Color.White;
-            this.categoryCount3.Location = new System.Drawing.Point(0, 0);
-            this.categoryCount3.Name = "categoryCount3";
-            this.categoryCount3.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount3.TabIndex = 11;
-            this.categoryCount3.Text = "0";
-            // 
-            // panel79
-            // 
-            this.panel79.Controls.Add(this.pictureBox13);
-            this.panel79.Controls.Add(this.label24);
-            this.panel79.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel79.Location = new System.Drawing.Point(0, 0);
-            this.panel79.Name = "panel79";
-            this.panel79.Size = new System.Drawing.Size(88, 14);
-            this.panel79.TabIndex = 0;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::Biblio.Properties.Resources.willReading;
-            this.pictureBox13.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(16, 15);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 10;
-            this.pictureBox13.TabStop = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(20, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(66, 13);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "Буду читать";
-            // 
-            // panel80
-            // 
-            this.panel80.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel80.Location = new System.Drawing.Point(0, 38);
-            this.panel80.Name = "panel80";
-            this.panel80.Size = new System.Drawing.Size(165, 10);
-            this.panel80.TabIndex = 4;
-            // 
-            // panel81
-            // 
-            this.panel81.Controls.Add(this.categoryProgress1);
-            this.panel81.Controls.Add(this.panel82);
-            this.panel81.Controls.Add(this.panel83);
-            this.panel81.Controls.Add(this.panel84);
-            this.panel81.Controls.Add(this.panel85);
-            this.panel81.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel81.Location = new System.Drawing.Point(0, 48);
-            this.panel81.Name = "panel81";
-            this.panel81.Size = new System.Drawing.Size(165, 14);
-            this.panel81.TabIndex = 5;
-            // 
-            // categoryProgress1
-            // 
-            this.categoryProgress1.BorderRadius = 4;
-            this.categoryProgress1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.categoryProgress1.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress1.Margin = new System.Windows.Forms.Padding(2);
-            this.categoryProgress1.Name = "categoryProgress1";
-            this.categoryProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress1.Size = new System.Drawing.Size(64, 8);
-            this.categoryProgress1.TabIndex = 7;
-            this.categoryProgress1.Text = "guna2ProgressBar1";
-            this.categoryProgress1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel82
-            // 
-            this.panel82.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel82.Location = new System.Drawing.Point(88, 11);
-            this.panel82.Name = "panel82";
-            this.panel82.Size = new System.Drawing.Size(64, 3);
-            this.panel82.TabIndex = 3;
-            // 
-            // panel83
-            // 
-            this.panel83.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel83.Location = new System.Drawing.Point(88, 0);
-            this.panel83.Name = "panel83";
-            this.panel83.Size = new System.Drawing.Size(64, 3);
-            this.panel83.TabIndex = 2;
-            // 
-            // panel84
-            // 
-            this.panel84.AutoSize = true;
-            this.panel84.Controls.Add(this.categoryCount1);
-            this.panel84.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel84.Location = new System.Drawing.Point(152, 0);
-            this.panel84.Name = "panel84";
-            this.panel84.Size = new System.Drawing.Size(13, 14);
-            this.panel84.TabIndex = 1;
-            // 
-            // categoryCount1
-            // 
-            this.categoryCount1.AutoSize = true;
-            this.categoryCount1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryCount1.ForeColor = System.Drawing.Color.White;
-            this.categoryCount1.Location = new System.Drawing.Point(0, 0);
-            this.categoryCount1.Name = "categoryCount1";
-            this.categoryCount1.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount1.TabIndex = 11;
-            this.categoryCount1.Text = "0";
-            // 
-            // panel85
-            // 
-            this.panel85.Controls.Add(this.pictureBox14);
-            this.panel85.Controls.Add(this.label26);
-            this.panel85.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel85.Location = new System.Drawing.Point(0, 0);
-            this.panel85.Name = "panel85";
-            this.panel85.Size = new System.Drawing.Size(88, 14);
-            this.panel85.TabIndex = 0;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::Biblio.Properties.Resources.wasRead;
-            this.pictureBox14.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 10;
-            this.pictureBox14.TabStop = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(20, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(61, 13);
-            this.label26.TabIndex = 9;
-            this.label26.Text = "Прочитано";
-            // 
-            // panel86
-            // 
-            this.panel86.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel86.Location = new System.Drawing.Point(0, 62);
-            this.panel86.Name = "panel86";
-            this.panel86.Size = new System.Drawing.Size(165, 10);
-            this.panel86.TabIndex = 6;
-            // 
-            // panel87
-            // 
-            this.panel87.Controls.Add(this.categoryProgress4);
-            this.panel87.Controls.Add(this.panel88);
-            this.panel87.Controls.Add(this.panel89);
-            this.panel87.Controls.Add(this.panel90);
-            this.panel87.Controls.Add(this.panel91);
-            this.panel87.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel87.Location = new System.Drawing.Point(0, 72);
-            this.panel87.Name = "panel87";
-            this.panel87.Size = new System.Drawing.Size(165, 14);
-            this.panel87.TabIndex = 7;
-            // 
-            // categoryProgress4
-            // 
-            this.categoryProgress4.BorderRadius = 4;
-            this.categoryProgress4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryProgress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.categoryProgress4.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress4.Margin = new System.Windows.Forms.Padding(2);
-            this.categoryProgress4.Name = "categoryProgress4";
-            this.categoryProgress4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress4.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress4.Size = new System.Drawing.Size(64, 8);
-            this.categoryProgress4.TabIndex = 7;
-            this.categoryProgress4.Text = "guna2ProgressBar1";
-            this.categoryProgress4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel88
-            // 
-            this.panel88.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel88.Location = new System.Drawing.Point(88, 11);
-            this.panel88.Name = "panel88";
-            this.panel88.Size = new System.Drawing.Size(64, 3);
-            this.panel88.TabIndex = 3;
-            // 
-            // panel89
-            // 
-            this.panel89.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel89.Location = new System.Drawing.Point(88, 0);
-            this.panel89.Name = "panel89";
-            this.panel89.Size = new System.Drawing.Size(64, 3);
-            this.panel89.TabIndex = 2;
-            // 
-            // panel90
-            // 
-            this.panel90.AutoSize = true;
-            this.panel90.Controls.Add(this.categoryCount4);
-            this.panel90.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel90.Location = new System.Drawing.Point(152, 0);
-            this.panel90.Name = "panel90";
-            this.panel90.Size = new System.Drawing.Size(13, 14);
-            this.panel90.TabIndex = 1;
-            // 
-            // categoryCount4
-            // 
-            this.categoryCount4.AutoSize = true;
-            this.categoryCount4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryCount4.ForeColor = System.Drawing.Color.White;
-            this.categoryCount4.Location = new System.Drawing.Point(0, 0);
-            this.categoryCount4.Name = "categoryCount4";
-            this.categoryCount4.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount4.TabIndex = 11;
-            this.categoryCount4.Text = "0";
-            // 
-            // panel91
-            // 
-            this.panel91.Controls.Add(this.pictureBox15);
-            this.panel91.Controls.Add(this.label28);
-            this.panel91.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel91.Location = new System.Drawing.Point(0, 0);
-            this.panel91.Name = "panel91";
-            this.panel91.Size = new System.Drawing.Size(88, 14);
-            this.panel91.TabIndex = 0;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::Biblio.Properties.Resources.postponed;
-            this.pictureBox15.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 10;
-            this.pictureBox15.TabStop = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(20, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(58, 13);
-            this.label28.TabIndex = 9;
-            this.label28.Text = "Отложено";
-            // 
-            // panel92
-            // 
-            this.panel92.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel92.Location = new System.Drawing.Point(0, 86);
-            this.panel92.Name = "panel92";
-            this.panel92.Size = new System.Drawing.Size(165, 10);
-            this.panel92.TabIndex = 8;
-            // 
-            // panel93
-            // 
-            this.panel93.Controls.Add(this.categoryProgress5);
-            this.panel93.Controls.Add(this.panel94);
-            this.panel93.Controls.Add(this.panel95);
-            this.panel93.Controls.Add(this.panel96);
-            this.panel93.Controls.Add(this.panel97);
-            this.panel93.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel93.Location = new System.Drawing.Point(0, 96);
-            this.panel93.Name = "panel93";
-            this.panel93.Size = new System.Drawing.Size(165, 14);
-            this.panel93.TabIndex = 9;
-            // 
-            // categoryProgress5
-            // 
-            this.categoryProgress5.BorderRadius = 4;
-            this.categoryProgress5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryProgress5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.categoryProgress5.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress5.Margin = new System.Windows.Forms.Padding(2);
-            this.categoryProgress5.Name = "categoryProgress5";
-            this.categoryProgress5.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress5.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.categoryProgress5.Size = new System.Drawing.Size(64, 8);
-            this.categoryProgress5.TabIndex = 7;
-            this.categoryProgress5.Text = "guna2ProgressBar1";
-            this.categoryProgress5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // panel94
-            // 
-            this.panel94.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel94.Location = new System.Drawing.Point(88, 11);
-            this.panel94.Name = "panel94";
-            this.panel94.Size = new System.Drawing.Size(64, 3);
-            this.panel94.TabIndex = 3;
-            // 
-            // panel95
-            // 
-            this.panel95.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel95.Location = new System.Drawing.Point(88, 0);
-            this.panel95.Name = "panel95";
-            this.panel95.Size = new System.Drawing.Size(64, 3);
-            this.panel95.TabIndex = 2;
-            // 
-            // panel96
-            // 
-            this.panel96.AutoSize = true;
-            this.panel96.Controls.Add(this.categoryCount5);
-            this.panel96.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel96.Location = new System.Drawing.Point(152, 0);
-            this.panel96.Name = "panel96";
-            this.panel96.Size = new System.Drawing.Size(13, 14);
-            this.panel96.TabIndex = 1;
-            // 
-            // categoryCount5
-            // 
-            this.categoryCount5.AutoSize = true;
-            this.categoryCount5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoryCount5.ForeColor = System.Drawing.Color.White;
-            this.categoryCount5.Location = new System.Drawing.Point(0, 0);
-            this.categoryCount5.Name = "categoryCount5";
-            this.categoryCount5.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount5.TabIndex = 11;
-            this.categoryCount5.Text = "0";
-            // 
-            // panel97
-            // 
-            this.panel97.Controls.Add(this.pictureBox16);
-            this.panel97.Controls.Add(this.label30);
-            this.panel97.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel97.Location = new System.Drawing.Point(0, 0);
-            this.panel97.Name = "panel97";
-            this.panel97.Size = new System.Drawing.Size(88, 14);
-            this.panel97.TabIndex = 0;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::Biblio.Properties.Resources.abandoned;
-            this.pictureBox16.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(16, 15);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 10;
-            this.pictureBox16.TabStop = false;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(20, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(52, 13);
-            this.label30.TabIndex = 9;
-            this.label30.Text = "Брошено";
-            // 
             // StatisticsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Name = "StatisticsControl";
             this.Size = new System.Drawing.Size(370, 292);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
+            this.panel93.ResumeLayout(false);
+            this.panel93.PerformLayout();
+            this.panel96.ResumeLayout(false);
+            this.panel96.PerformLayout();
+            this.panel97.ResumeLayout(false);
+            this.panel97.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            this.panel87.ResumeLayout(false);
+            this.panel87.PerformLayout();
+            this.panel90.ResumeLayout(false);
+            this.panel90.PerformLayout();
+            this.panel91.ResumeLayout(false);
+            this.panel91.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.panel81.ResumeLayout(false);
+            this.panel81.PerformLayout();
+            this.panel84.ResumeLayout(false);
+            this.panel84.PerformLayout();
+            this.panel85.ResumeLayout(false);
+            this.panel85.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.panel75.ResumeLayout(false);
+            this.panel75.PerformLayout();
+            this.panel78.ResumeLayout(false);
+            this.panel78.PerformLayout();
+            this.panel79.ResumeLayout(false);
+            this.panel79.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel72.ResumeLayout(false);
+            this.panel72.PerformLayout();
+            this.panel73.ResumeLayout(false);
+            this.panel73.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel27.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel54.ResumeLayout(false);
             this.panel54.PerformLayout();
             this.panel57.ResumeLayout(false);
@@ -2013,62 +2068,6 @@
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel72.ResumeLayout(false);
-            this.panel72.PerformLayout();
-            this.panel73.ResumeLayout(false);
-            this.panel73.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel75.ResumeLayout(false);
-            this.panel75.PerformLayout();
-            this.panel78.ResumeLayout(false);
-            this.panel78.PerformLayout();
-            this.panel79.ResumeLayout(false);
-            this.panel79.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.panel81.ResumeLayout(false);
-            this.panel81.PerformLayout();
-            this.panel84.ResumeLayout(false);
-            this.panel84.PerformLayout();
-            this.panel85.ResumeLayout(false);
-            this.panel85.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.panel87.ResumeLayout(false);
-            this.panel87.PerformLayout();
-            this.panel90.ResumeLayout(false);
-            this.panel90.PerformLayout();
-            this.panel91.ResumeLayout(false);
-            this.panel91.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.panel93.ResumeLayout(false);
-            this.panel93.PerformLayout();
-            this.panel96.ResumeLayout(false);
-            this.panel96.PerformLayout();
-            this.panel97.ResumeLayout(false);
-            this.panel97.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
 
         }

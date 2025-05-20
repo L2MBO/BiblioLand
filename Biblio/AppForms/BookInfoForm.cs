@@ -1,5 +1,6 @@
 ﻿using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.CustomControls;
 using Biblio.Models;
 using Guna.UI2.WinForms;
 using MaterialSkin.Controls;
@@ -24,7 +25,10 @@ namespace Biblio.AppForms
         public BookInfoForm(Books book)
         {
             InitializeComponent();
-            //AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: false, disableVertical: true);
+
+            AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: false, disableVertical: true);
+            AutoScrollHelper.ConfigureScrollbars(panel1, disableHorizontal: false, disableVertical: true);
+
             _book = book;
             
             descriptionLabel.TextChanged += DescriptionLabel_TextChanged;
@@ -58,10 +62,17 @@ namespace Biblio.AppForms
 
             descriptionLabel.Text = _book.Description;
 
+            ShowStatisticsBooks();
+
             //overageRatingLabel.Text = "Рейтинг за последнее время: " + rating;
         }
 
+        private void ShowStatisticsBooks()
+        {
+            var statisticsControl = new StatisticsControl(_book);
 
+            statisticsPanel.Controls.Add(statisticsControl);
+        }
 
         private void DescriptionLabel_TextChanged(object sender, EventArgs e)
         {
