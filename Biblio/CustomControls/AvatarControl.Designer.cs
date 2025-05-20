@@ -30,6 +30,19 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exitButton = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.settingsButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.storeButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.addContentButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.feedbackButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -39,19 +52,6 @@
             this.coinPictureBox = new System.Windows.Forms.PictureBox();
             this.userNameLabel = new System.Windows.Forms.Label();
             this.userAvatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.feedbackButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.addContentButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.storeButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.settingsButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.exitButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.userInfoPanel.SuspendLayout();
@@ -94,6 +94,207 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 223);
             this.panel1.TabIndex = 0;
+            // 
+            // exitButton
+            // 
+            this.exitButton.Animated = true;
+            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.exitButton.BorderRadius = 9;
+            this.exitButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.exitButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.exitButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.exitButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.exitButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.exitButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(64)))), ((int)(((byte)(63)))));
+            this.exitButton.Image = global::Biblio.Properties.Resources.log_out;
+            this.exitButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.exitButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.exitButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.exitButton.Location = new System.Drawing.Point(0, 203);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.exitButton.Size = new System.Drawing.Size(160, 20);
+            this.exitButton.TabIndex = 46;
+            this.exitButton.Text = "Выход";
+            this.exitButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.exitButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 193);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(160, 10);
+            this.flowLayoutPanel1.TabIndex = 45;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 192);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(160, 1);
+            this.panel7.TabIndex = 44;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 182);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(160, 10);
+            this.panel4.TabIndex = 43;
+            // 
+            // settingsButton
+            // 
+            this.settingsButton.Animated = true;
+            this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.settingsButton.BorderRadius = 9;
+            this.settingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.settingsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.settingsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.settingsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.settingsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.settingsButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.settingsButton.ForeColor = System.Drawing.Color.White;
+            this.settingsButton.Image = global::Biblio.Properties.Resources.gear;
+            this.settingsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.settingsButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.settingsButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.settingsButton.Location = new System.Drawing.Point(0, 162);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.settingsButton.Size = new System.Drawing.Size(160, 20);
+            this.settingsButton.TabIndex = 42;
+            this.settingsButton.Text = "Настройки";
+            this.settingsButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.settingsButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 152);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(160, 10);
+            this.panel14.TabIndex = 41;
+            // 
+            // storeButton
+            // 
+            this.storeButton.Animated = true;
+            this.storeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.storeButton.BorderRadius = 9;
+            this.storeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.storeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.storeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.storeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.storeButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.storeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.storeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.storeButton.ForeColor = System.Drawing.Color.White;
+            this.storeButton.Image = global::Biblio.Properties.Resources.store;
+            this.storeButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.storeButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.storeButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.storeButton.Location = new System.Drawing.Point(0, 132);
+            this.storeButton.Name = "storeButton";
+            this.storeButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.storeButton.Size = new System.Drawing.Size(160, 20);
+            this.storeButton.TabIndex = 40;
+            this.storeButton.Text = "Магазин";
+            this.storeButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.storeButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.storeButton.Click += new System.EventHandler(this.storeButton_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 122);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(160, 10);
+            this.panel3.TabIndex = 39;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 121);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(160, 1);
+            this.panel12.TabIndex = 38;
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 111);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(160, 10);
+            this.panel10.TabIndex = 37;
+            // 
+            // addContentButton
+            // 
+            this.addContentButton.Animated = true;
+            this.addContentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.addContentButton.BorderRadius = 9;
+            this.addContentButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.addContentButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.addContentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.addContentButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addContentButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addContentButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.addContentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addContentButton.ForeColor = System.Drawing.Color.White;
+            this.addContentButton.Image = global::Biblio.Properties.Resources.rightArrow;
+            this.addContentButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.addContentButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.addContentButton.ImageSize = new System.Drawing.Size(10, 15);
+            this.addContentButton.Location = new System.Drawing.Point(0, 91);
+            this.addContentButton.Name = "addContentButton";
+            this.addContentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.addContentButton.Size = new System.Drawing.Size(160, 20);
+            this.addContentButton.TabIndex = 36;
+            this.addContentButton.Text = "Добавить контент";
+            this.addContentButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.addContentButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.addContentButton.Click += new System.EventHandler(this.addContentButton_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 81);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(160, 10);
+            this.panel8.TabIndex = 35;
+            // 
+            // feedbackButton
+            // 
+            this.feedbackButton.Animated = true;
+            this.feedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.feedbackButton.BorderRadius = 9;
+            this.feedbackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.feedbackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.feedbackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.feedbackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.feedbackButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.feedbackButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.feedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.feedbackButton.ForeColor = System.Drawing.Color.White;
+            this.feedbackButton.Image = global::Biblio.Properties.Resources.chat;
+            this.feedbackButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.feedbackButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.feedbackButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.feedbackButton.Location = new System.Drawing.Point(0, 61);
+            this.feedbackButton.Name = "feedbackButton";
+            this.feedbackButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.feedbackButton.Size = new System.Drawing.Size(160, 20);
+            this.feedbackButton.TabIndex = 34;
+            this.feedbackButton.Text = "Обратная связь";
+            this.feedbackButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.feedbackButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.feedbackButton.Click += new System.EventHandler(this.feedbackButton_Click);
             // 
             // panel5
             // 
@@ -190,207 +391,6 @@
             this.userAvatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userAvatarPictureBox.TabIndex = 1;
             this.userAvatarPictureBox.TabStop = false;
-            // 
-            // feedbackButton
-            // 
-            this.feedbackButton.Animated = true;
-            this.feedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.feedbackButton.BorderRadius = 9;
-            this.feedbackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.feedbackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.feedbackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.feedbackButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.feedbackButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.feedbackButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.feedbackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.feedbackButton.ForeColor = System.Drawing.Color.White;
-            this.feedbackButton.Image = global::Biblio.Properties.Resources.chat;
-            this.feedbackButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.feedbackButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.feedbackButton.ImageSize = new System.Drawing.Size(15, 15);
-            this.feedbackButton.Location = new System.Drawing.Point(0, 61);
-            this.feedbackButton.Name = "feedbackButton";
-            this.feedbackButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.feedbackButton.Size = new System.Drawing.Size(160, 20);
-            this.feedbackButton.TabIndex = 34;
-            this.feedbackButton.Text = "Обратная связь";
-            this.feedbackButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.feedbackButton.TextOffset = new System.Drawing.Point(-5, -1);
-            this.feedbackButton.Click += new System.EventHandler(this.feedbackButton_Click);
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 81);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(160, 10);
-            this.panel8.TabIndex = 35;
-            // 
-            // addContentButton
-            // 
-            this.addContentButton.Animated = true;
-            this.addContentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.addContentButton.BorderRadius = 9;
-            this.addContentButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.addContentButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.addContentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.addContentButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addContentButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.addContentButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.addContentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addContentButton.ForeColor = System.Drawing.Color.White;
-            this.addContentButton.Image = global::Biblio.Properties.Resources.rightArrow;
-            this.addContentButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.addContentButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.addContentButton.ImageSize = new System.Drawing.Size(10, 15);
-            this.addContentButton.Location = new System.Drawing.Point(0, 91);
-            this.addContentButton.Name = "addContentButton";
-            this.addContentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.addContentButton.Size = new System.Drawing.Size(160, 20);
-            this.addContentButton.TabIndex = 36;
-            this.addContentButton.Text = "Добавить контент";
-            this.addContentButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.addContentButton.TextOffset = new System.Drawing.Point(-5, -1);
-            this.addContentButton.Click += new System.EventHandler(this.addContentButton_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 111);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(160, 10);
-            this.panel10.TabIndex = 37;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 121);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(160, 1);
-            this.panel12.TabIndex = 38;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 122);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 10);
-            this.panel3.TabIndex = 39;
-            // 
-            // storeButton
-            // 
-            this.storeButton.Animated = true;
-            this.storeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.storeButton.BorderRadius = 9;
-            this.storeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.storeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.storeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.storeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.storeButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.storeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.storeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.storeButton.ForeColor = System.Drawing.Color.White;
-            this.storeButton.Image = global::Biblio.Properties.Resources.store;
-            this.storeButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.storeButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.storeButton.ImageSize = new System.Drawing.Size(15, 15);
-            this.storeButton.Location = new System.Drawing.Point(0, 132);
-            this.storeButton.Name = "storeButton";
-            this.storeButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.storeButton.Size = new System.Drawing.Size(160, 20);
-            this.storeButton.TabIndex = 40;
-            this.storeButton.Text = "Магазин";
-            this.storeButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.storeButton.TextOffset = new System.Drawing.Point(-5, -1);
-            this.storeButton.Click += new System.EventHandler(this.storeButton_Click);
-            // 
-            // panel14
-            // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 152);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(160, 10);
-            this.panel14.TabIndex = 41;
-            // 
-            // settingsButton
-            // 
-            this.settingsButton.Animated = true;
-            this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.settingsButton.BorderRadius = 9;
-            this.settingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.settingsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.settingsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.settingsButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.settingsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.settingsButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.settingsButton.ForeColor = System.Drawing.Color.White;
-            this.settingsButton.Image = global::Biblio.Properties.Resources.gear;
-            this.settingsButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.settingsButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.settingsButton.ImageSize = new System.Drawing.Size(15, 15);
-            this.settingsButton.Location = new System.Drawing.Point(0, 162);
-            this.settingsButton.Name = "settingsButton";
-            this.settingsButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.settingsButton.Size = new System.Drawing.Size(160, 20);
-            this.settingsButton.TabIndex = 42;
-            this.settingsButton.Text = "Настройки";
-            this.settingsButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.settingsButton.TextOffset = new System.Drawing.Point(-5, -1);
-            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 182);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(160, 10);
-            this.panel4.TabIndex = 43;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 192);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(160, 1);
-            this.panel7.TabIndex = 44;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 193);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(160, 10);
-            this.flowLayoutPanel1.TabIndex = 45;
-            // 
-            // exitButton
-            // 
-            this.exitButton.Animated = true;
-            this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.exitButton.BorderRadius = 9;
-            this.exitButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.exitButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.exitButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.exitButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.exitButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.exitButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(64)))), ((int)(((byte)(63)))));
-            this.exitButton.Image = global::Biblio.Properties.Resources.log_out;
-            this.exitButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.exitButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.exitButton.ImageSize = new System.Drawing.Size(15, 15);
-            this.exitButton.Location = new System.Drawing.Point(0, 203);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.exitButton.Size = new System.Drawing.Size(160, 20);
-            this.exitButton.TabIndex = 46;
-            this.exitButton.Text = "Выход";
-            this.exitButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.exitButton.TextOffset = new System.Drawing.Point(-5, -1);
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // AvatarControl
             // 

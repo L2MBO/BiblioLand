@@ -21,10 +21,11 @@ using Biblio.Classes.DataAccess;
 using Biblio.Classes.Coding;
 using Biblio.Classes.Images.InstallingImages;
 using Org.BouncyCastle.Asn1.X509;
+using Biblio.Interface;
 
 namespace Biblio.AppForms
 {
-    public partial class MainForm : MaterialForm
+    public partial class MainForm : MaterialForm, IAvatarParentForm
     {
         private AddContentControl addContentControl;
         public event EventHandler WindowStateChanged;

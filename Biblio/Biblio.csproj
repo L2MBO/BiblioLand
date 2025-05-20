@@ -273,6 +273,12 @@
     <Compile Include="CustomControls\MainControl.Designer.cs">
       <DependentUpon>MainControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\NavigationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\NavigationControl.Designer.cs">
+      <DependentUpon>NavigationControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\OtherControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -291,6 +297,7 @@
     <Compile Include="CustomControls\StatisticsControl.Designer.cs">
       <DependentUpon>StatisticsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IAvatarParentForm.cs" />
     <Compile Include="Models\BiblioModel.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\Category.cs" />
@@ -367,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\NavigationControl.resx">
+      <DependentUpon>NavigationControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\OtherControl.resx">
       <DependentUpon>OtherControl.cs</DependentUpon>

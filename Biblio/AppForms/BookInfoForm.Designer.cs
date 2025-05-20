@@ -867,7 +867,6 @@
             this.ClientSize = new System.Drawing.Size(726, 430);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.topPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BookInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

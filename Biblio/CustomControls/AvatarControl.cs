@@ -3,6 +3,7 @@ using Biblio.Classes.Coding;
 using Biblio.Classes.Customization;
 using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.Interface;
 using Biblio.Properties;
 using System;
 using System.Collections.Generic;
@@ -20,13 +21,21 @@ namespace Biblio.CustomControls
     public partial class AvatarControl : UserControl
     {
         public event EventHandler OpenChanged;
-        private MainForm mainForm;
+        private IAvatarParentForm _parent;
         private int contentX = 460;
         int currentUserId = Program.CurrentUser.UserID;
 
-        public AvatarControl(MainForm mainForm)
+        public AvatarControl(Form parentForm)
         {
             InitializeComponent();
+
+            _parent = parentForm as IAvatarParentForm;
+
+            if (_parent != null)
+            {
+                _parent.WindowStateChanged += Form_WindowStateChanged;
+                OpenChanged += _parent.OnControlOpenChanged;
+            }
 
             var curentUser = Program.context.Users.FirstOrDefault(user => user.UserID == currentUserId);
             userNameLabel.Text = curentUser.Username;
@@ -37,9 +46,6 @@ namespace Biblio.CustomControls
 
             RoundingHelper.SetRoundedRegion(this, 25, 25);
 
-            this.mainForm = mainForm;
-            mainForm.WindowStateChanged += MainForm_WindowStateChanged;
-
             userAvatarPictureBox.Click += userNameLabel_Click;
             userInfoPanel.Click += userNameLabel_Click;
             coinPictureBox.Click += userNameLabel_Click;
@@ -48,16 +54,11 @@ namespace Biblio.CustomControls
             this.VisibleChanged += AvatarControl_VisibleChanged;
         }
 
-        private void MainForm_WindowStateChanged(object sender, EventArgs e)
+        private void Form_WindowStateChanged(object sender, EventArgs e)
         {
-            if (mainForm.WindowState == FormWindowState.Maximized)
-            {
-                contentX = 1450;
-            }
-            else
-            {
-                contentX = 460;
-            }
+            if (_parent == null) return;
+
+            contentX = (_parent.WindowState == FormWindowState.Maximized) ? 1450 : 460;
 
             UpdateAddContentControlPosition();
         }
@@ -107,7 +108,10 @@ namespace Biblio.CustomControls
 
             addContentControl = new AddContentControl();
 
-            addContentControl.OpenChanged += mainForm.OnControlOpenChanged;
+            if (_parent != null)
+            {
+                addContentControl.OpenChanged += _parent.OnControlOpenChanged;
+            }
 
             UpdateAddContentControlPosition();
 
