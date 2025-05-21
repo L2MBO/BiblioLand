@@ -20,7 +20,7 @@ using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
-    public partial class BookInfoForm : MaterialForm
+    public partial class BookInfoForm : Form
     {
         private Books _book;
 
@@ -36,7 +36,10 @@ namespace Biblio.AppForms
             AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: false, disableVertical: true);
 
             _book = book;
-            
+
+            navigationControl.leftPanel = leftPanel;
+            navigationControl.rightPanel = rightPanel;
+
             descriptionLabel.TextChanged += DescriptionLabel_TextChanged;
 
             LoadBookInfo();
@@ -108,45 +111,14 @@ namespace Biblio.AppForms
             }
         }
 
-        private Bitmap ApplyBlur(Bitmap image, int blurSize)
+        private void BookInfoForm_Load(object sender, EventArgs e)
         {
-            // Проверка и корректировка размера размытия
-            blurSize = Math.Max(1, Math.Min(blurSize, 20)); // Ограничиваем диапазон 1-20
-
-            // Создаем уменьшенную копию для эффекта размытия
-            int smallWidth = image.Width / blurSize;
-            int smallHeight = image.Height / blurSize;
-
-            if (smallWidth < 1) smallWidth = 1;
-            if (smallHeight < 1) smallHeight = 1;
-
-            // Создаем временный битмап уменьшенного размера
-            using (var temp = new Bitmap(smallWidth, smallHeight))
-            {
-                // Рисуем исходное изображение в уменьшенном виде
-                using (var g = Graphics.FromImage(temp))
-                {
-                    g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                    g.DrawImage(image, 0, 0, smallWidth, smallHeight);
-                }
-
-                // Создаем конечный битмап
-                var result = new Bitmap(image.Width, image.Height);
-
-                // Растягиваем уменьшенное изображение обратно
-                using (var g = Graphics.FromImage(result))
-                {
-                    g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                    g.DrawImage(temp, 0, 0, image.Width, image.Height);
-                }
-
-                return result;
-            }
+            navigationControl.HandleFormResize(this);
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void BookInfoForm_Resize(object sender, EventArgs e)
         {
-            Application.Exit();
+            navigationControl.HandleFormResize(this);
         }
     }
 }

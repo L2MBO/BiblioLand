@@ -451,11 +451,9 @@ namespace Biblio.AppForms
         private void catalogButton_Click(object sender, EventArgs e)
         {
             BookСatalogForm form = new BookСatalogForm();
-            form.ShowDialog();
-            //BookСatalogForm form = new BookСatalogForm();
-            //form.Owner = this;
-            //this.Hide();
-            //form.Show();
+            form.Owner = this;
+            this.Hide();
+            form.Show();
         }
 
         private void topButton_Click(object sender, EventArgs e)

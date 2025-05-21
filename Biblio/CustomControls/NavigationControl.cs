@@ -65,8 +65,16 @@ namespace Biblio.CustomControls
 
         private void OpenForm<T>() where T : Form, new()
         {
-            var form = new T();
-            form.ShowDialog();
+            var parentForm = this.FindForm();
+            var newForm = new T();
+
+            if (parentForm != null)
+            {
+                newForm.Owner = parentForm;
+                parentForm.Hide();
+            }
+
+            newForm.Show();
         }
 
         private void searchButton_Click(object sender, EventArgs e)

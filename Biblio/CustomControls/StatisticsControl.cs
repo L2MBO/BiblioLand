@@ -20,6 +20,8 @@ namespace Biblio.CustomControls
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+
             _book = books;
 
             var rating = _book.AverageRating;
