@@ -31,91 +31,91 @@
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel93 = new System.Windows.Forms.Panel();
+            this.categoryCount5 = new System.Windows.Forms.Label();
             this.categoryProgress5 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel97 = new System.Windows.Forms.Panel();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.panel87 = new System.Windows.Forms.Panel();
+            this.categoryCount4 = new System.Windows.Forms.Label();
             this.categoryProgress4 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel91 = new System.Windows.Forms.Panel();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
             this.panel81 = new System.Windows.Forms.Panel();
+            this.categoryCount1 = new System.Windows.Forms.Label();
             this.categoryProgress1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel85 = new System.Windows.Forms.Panel();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.panel75 = new System.Windows.Forms.Panel();
+            this.categoryCount3 = new System.Windows.Forms.Label();
             this.categoryProgress3 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel79 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.categoryCount2 = new System.Windows.Forms.Label();
             this.categoryProgress2 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel73 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.ratingCount1 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.ratingProgress1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.ratingCount2 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.ratingProgress2 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ratingCount3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.ratingProgress3 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel54 = new System.Windows.Forms.Panel();
+            this.ratingCount4 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.ratingProgress4 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel60 = new System.Windows.Forms.Panel();
+            this.ratingCount5 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.ratingProgress5 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel66 = new System.Windows.Forms.Panel();
+            this.ratingCount6 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.ratingProgress6 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel49 = new System.Windows.Forms.Panel();
+            this.ratingCount7 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.ratingProgress7 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel43 = new System.Windows.Forms.Panel();
+            this.ratingCount8 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.ratingProgress8 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel35 = new System.Windows.Forms.Panel();
+            this.ratingCount9 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.ratingProgress9 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel31 = new System.Windows.Forms.Panel();
+            this.ratingCount10 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.ratingProgress10 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.overageRatingLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.ratingCount10 = new System.Windows.Forms.Label();
-            this.ratingCount9 = new System.Windows.Forms.Label();
-            this.ratingCount8 = new System.Windows.Forms.Label();
-            this.ratingCount7 = new System.Windows.Forms.Label();
-            this.ratingCount6 = new System.Windows.Forms.Label();
-            this.ratingCount5 = new System.Windows.Forms.Label();
-            this.ratingCount4 = new System.Windows.Forms.Label();
-            this.ratingCount3 = new System.Windows.Forms.Label();
-            this.ratingCount2 = new System.Windows.Forms.Label();
-            this.ratingCount1 = new System.Windows.Forms.Label();
-            this.categoryCount2 = new System.Windows.Forms.Label();
-            this.categoryCount3 = new System.Windows.Forms.Label();
-            this.categoryCount1 = new System.Windows.Forms.Label();
-            this.categoryCount4 = new System.Windows.Forms.Label();
-            this.categoryCount5 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel93.SuspendLayout();
@@ -135,28 +135,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel27.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel54.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel60.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel66.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel49.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel43.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel26.SuspendLayout();
             this.panel30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel2
@@ -204,12 +204,23 @@
             this.panel93.Size = new System.Drawing.Size(165, 14);
             this.panel93.TabIndex = 9;
             // 
+            // categoryCount5
+            // 
+            this.categoryCount5.AutoSize = true;
+            this.categoryCount5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.categoryCount5.ForeColor = System.Drawing.Color.White;
+            this.categoryCount5.Location = new System.Drawing.Point(152, 0);
+            this.categoryCount5.Name = "categoryCount5";
+            this.categoryCount5.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount5.TabIndex = 12;
+            this.categoryCount5.Text = "0";
+            // 
             // categoryProgress5
             // 
             this.categoryProgress5.BorderRadius = 4;
             this.categoryProgress5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress5.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress5.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress5.Name = "categoryProgress5";
             this.categoryProgress5.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress5.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -231,7 +242,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::Biblio.Properties.Resources.abandoned;
-            this.pictureBox16.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox16.Location = new System.Drawing.Point(0, -1);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(16, 15);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,12 +269,23 @@
             this.panel87.Size = new System.Drawing.Size(165, 14);
             this.panel87.TabIndex = 7;
             // 
+            // categoryCount4
+            // 
+            this.categoryCount4.AutoSize = true;
+            this.categoryCount4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.categoryCount4.ForeColor = System.Drawing.Color.White;
+            this.categoryCount4.Location = new System.Drawing.Point(152, 0);
+            this.categoryCount4.Name = "categoryCount4";
+            this.categoryCount4.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount4.TabIndex = 12;
+            this.categoryCount4.Text = "0";
+            // 
             // categoryProgress4
             // 
             this.categoryProgress4.BorderRadius = 4;
             this.categoryProgress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress4.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress4.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress4.Name = "categoryProgress4";
             this.categoryProgress4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress4.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -285,7 +307,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::Biblio.Properties.Resources.postponed;
-            this.pictureBox15.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox15.Location = new System.Drawing.Point(0, -1);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(15, 15);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -312,12 +334,23 @@
             this.panel81.Size = new System.Drawing.Size(165, 14);
             this.panel81.TabIndex = 5;
             // 
+            // categoryCount1
+            // 
+            this.categoryCount1.AutoSize = true;
+            this.categoryCount1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.categoryCount1.ForeColor = System.Drawing.Color.White;
+            this.categoryCount1.Location = new System.Drawing.Point(152, 0);
+            this.categoryCount1.Name = "categoryCount1";
+            this.categoryCount1.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount1.TabIndex = 12;
+            this.categoryCount1.Text = "0";
+            // 
             // categoryProgress1
             // 
             this.categoryProgress1.BorderRadius = 4;
             this.categoryProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress1.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress1.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress1.Name = "categoryProgress1";
             this.categoryProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -339,7 +372,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::Biblio.Properties.Resources.wasRead;
-            this.pictureBox14.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox14.Location = new System.Drawing.Point(0, -1);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(15, 15);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -366,12 +399,23 @@
             this.panel75.Size = new System.Drawing.Size(165, 14);
             this.panel75.TabIndex = 3;
             // 
+            // categoryCount3
+            // 
+            this.categoryCount3.AutoSize = true;
+            this.categoryCount3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.categoryCount3.ForeColor = System.Drawing.Color.White;
+            this.categoryCount3.Location = new System.Drawing.Point(152, 0);
+            this.categoryCount3.Name = "categoryCount3";
+            this.categoryCount3.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount3.TabIndex = 12;
+            this.categoryCount3.Text = "0";
+            // 
             // categoryProgress3
             // 
             this.categoryProgress3.BorderRadius = 4;
             this.categoryProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress3.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress3.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress3.Name = "categoryProgress3";
             this.categoryProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -393,7 +437,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::Biblio.Properties.Resources.willReading;
-            this.pictureBox13.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox13.Location = new System.Drawing.Point(0, -1);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(16, 15);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -420,12 +464,23 @@
             this.panel23.Size = new System.Drawing.Size(165, 14);
             this.panel23.TabIndex = 1;
             // 
+            // categoryCount2
+            // 
+            this.categoryCount2.AutoSize = true;
+            this.categoryCount2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.categoryCount2.ForeColor = System.Drawing.Color.White;
+            this.categoryCount2.Location = new System.Drawing.Point(152, 0);
+            this.categoryCount2.Name = "categoryCount2";
+            this.categoryCount2.Size = new System.Drawing.Size(13, 13);
+            this.categoryCount2.TabIndex = 12;
+            this.categoryCount2.Text = "0";
+            // 
             // categoryProgress2
             // 
             this.categoryProgress2.BorderRadius = 4;
             this.categoryProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.categoryProgress2.Location = new System.Drawing.Point(88, 3);
-            this.categoryProgress2.Margin = new System.Windows.Forms.Padding(2);
+            this.categoryProgress2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryProgress2.Name = "categoryProgress2";
             this.categoryProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.categoryProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
@@ -447,7 +502,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Biblio.Properties.Resources.reading;
-            this.pictureBox12.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox12.Location = new System.Drawing.Point(0, -1);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(18, 15);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -492,12 +547,43 @@
             this.panel7.Size = new System.Drawing.Size(165, 14);
             this.panel7.TabIndex = 18;
             // 
+            // ratingCount1
+            // 
+            this.ratingCount1.AutoSize = true;
+            this.ratingCount1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount1.ForeColor = System.Drawing.Color.White;
+            this.ratingCount1.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount1.Name = "ratingCount1";
+            this.ratingCount1.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount1.TabIndex = 13;
+            this.ratingCount1.Text = "0";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox10.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 12;
+            this.pictureBox10.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(6, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 13);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "1";
+            // 
             // ratingProgress1
             // 
             this.ratingProgress1.BorderRadius = 4;
             this.ratingProgress1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress1.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress1.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress1.Name = "ratingProgress1";
             this.ratingProgress1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -517,12 +603,43 @@
             this.panel13.Size = new System.Drawing.Size(165, 14);
             this.panel13.TabIndex = 16;
             // 
+            // ratingCount2
+            // 
+            this.ratingCount2.AutoSize = true;
+            this.ratingCount2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount2.ForeColor = System.Drawing.Color.White;
+            this.ratingCount2.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount2.Name = "ratingCount2";
+            this.ratingCount2.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount2.TabIndex = 13;
+            this.ratingCount2.Text = "0";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox11.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 12;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(6, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(13, 13);
+            this.label20.TabIndex = 11;
+            this.label20.Text = "2";
+            // 
             // ratingProgress2
             // 
             this.ratingProgress2.BorderRadius = 4;
             this.ratingProgress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress2.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress2.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress2.Name = "ratingProgress2";
             this.ratingProgress2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -542,12 +659,43 @@
             this.panel2.Size = new System.Drawing.Size(165, 14);
             this.panel2.TabIndex = 14;
             // 
+            // ratingCount3
+            // 
+            this.ratingCount3.AutoSize = true;
+            this.ratingCount3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount3.ForeColor = System.Drawing.Color.White;
+            this.ratingCount3.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount3.Name = "ratingCount3";
+            this.ratingCount3.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount3.TabIndex = 13;
+            this.ratingCount3.Text = "0";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox2.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(6, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(13, 13);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "3";
+            // 
             // ratingProgress3
             // 
             this.ratingProgress3.BorderRadius = 4;
             this.ratingProgress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress3.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress3.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress3.Name = "ratingProgress3";
             this.ratingProgress3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress3.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -567,12 +715,43 @@
             this.panel54.Size = new System.Drawing.Size(165, 14);
             this.panel54.TabIndex = 12;
             // 
+            // ratingCount4
+            // 
+            this.ratingCount4.AutoSize = true;
+            this.ratingCount4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount4.ForeColor = System.Drawing.Color.White;
+            this.ratingCount4.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount4.Name = "ratingCount4";
+            this.ratingCount4.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount4.TabIndex = 13;
+            this.ratingCount4.Text = "0";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox7.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 12;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(13, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "4";
+            // 
             // ratingProgress4
             // 
             this.ratingProgress4.BorderRadius = 4;
             this.ratingProgress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress4.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress4.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress4.Name = "ratingProgress4";
             this.ratingProgress4.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress4.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -592,12 +771,43 @@
             this.panel60.Size = new System.Drawing.Size(165, 14);
             this.panel60.TabIndex = 10;
             // 
+            // ratingCount5
+            // 
+            this.ratingCount5.AutoSize = true;
+            this.ratingCount5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount5.ForeColor = System.Drawing.Color.White;
+            this.ratingCount5.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount5.Name = "ratingCount5";
+            this.ratingCount5.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount5.TabIndex = 13;
+            this.ratingCount5.Text = "0";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox8.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 12;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(6, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "5";
+            // 
             // ratingProgress5
             // 
             this.ratingProgress5.BorderRadius = 4;
             this.ratingProgress5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress5.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress5.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress5.Name = "ratingProgress5";
             this.ratingProgress5.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress5.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -617,12 +827,43 @@
             this.panel66.Size = new System.Drawing.Size(165, 14);
             this.panel66.TabIndex = 8;
             // 
+            // ratingCount6
+            // 
+            this.ratingCount6.AutoSize = true;
+            this.ratingCount6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount6.ForeColor = System.Drawing.Color.White;
+            this.ratingCount6.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount6.Name = "ratingCount6";
+            this.ratingCount6.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount6.TabIndex = 13;
+            this.ratingCount6.Text = "0";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox9.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 12;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(6, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(13, 13);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "6";
+            // 
             // ratingProgress6
             // 
             this.ratingProgress6.BorderRadius = 4;
             this.ratingProgress6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress6.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress6.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress6.Name = "ratingProgress6";
             this.ratingProgress6.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress6.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -642,12 +883,43 @@
             this.panel49.Size = new System.Drawing.Size(165, 14);
             this.panel49.TabIndex = 6;
             // 
+            // ratingCount7
+            // 
+            this.ratingCount7.AutoSize = true;
+            this.ratingCount7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount7.ForeColor = System.Drawing.Color.White;
+            this.ratingCount7.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount7.Name = "ratingCount7";
+            this.ratingCount7.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount7.TabIndex = 13;
+            this.ratingCount7.Text = "0";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox6.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(13, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "7";
+            // 
             // ratingProgress7
             // 
             this.ratingProgress7.BorderRadius = 4;
             this.ratingProgress7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress7.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress7.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress7.Name = "ratingProgress7";
             this.ratingProgress7.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress7.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -667,12 +939,43 @@
             this.panel43.Size = new System.Drawing.Size(165, 14);
             this.panel43.TabIndex = 4;
             // 
+            // ratingCount8
+            // 
+            this.ratingCount8.AutoSize = true;
+            this.ratingCount8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount8.ForeColor = System.Drawing.Color.White;
+            this.ratingCount8.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount8.Name = "ratingCount8";
+            this.ratingCount8.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount8.TabIndex = 13;
+            this.ratingCount8.Text = "0";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox5.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "8";
+            // 
             // ratingProgress8
             // 
             this.ratingProgress8.BorderRadius = 4;
             this.ratingProgress8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress8.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress8.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress8.Name = "ratingProgress8";
             this.ratingProgress8.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress8.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -692,12 +995,43 @@
             this.panel35.Size = new System.Drawing.Size(165, 14);
             this.panel35.TabIndex = 2;
             // 
+            // ratingCount9
+            // 
+            this.ratingCount9.AutoSize = true;
+            this.ratingCount9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount9.ForeColor = System.Drawing.Color.White;
+            this.ratingCount9.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount9.Name = "ratingCount9";
+            this.ratingCount9.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount9.TabIndex = 13;
+            this.ratingCount9.Text = "0";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox3.Location = new System.Drawing.Point(20, -2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(6, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "9";
+            // 
             // ratingProgress9
             // 
             this.ratingProgress9.BorderRadius = 4;
             this.ratingProgress9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress9.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress9.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress9.Name = "ratingProgress9";
             this.ratingProgress9.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress9.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -717,12 +1051,43 @@
             this.panel31.Size = new System.Drawing.Size(165, 14);
             this.panel31.TabIndex = 0;
             // 
+            // ratingCount10
+            // 
+            this.ratingCount10.AutoSize = true;
+            this.ratingCount10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCount10.ForeColor = System.Drawing.Color.White;
+            this.ratingCount10.Location = new System.Drawing.Point(152, 0);
+            this.ratingCount10.Name = "ratingCount10";
+            this.ratingCount10.Size = new System.Drawing.Size(13, 13);
+            this.ratingCount10.TabIndex = 13;
+            this.ratingCount10.Text = "0";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Biblio.Properties.Resources.yellowStar;
+            this.pictureBox4.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(18, 15);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "10";
+            // 
             // ratingProgress10
             // 
             this.ratingProgress10.BorderRadius = 4;
             this.ratingProgress10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.ratingProgress10.Location = new System.Drawing.Point(43, 3);
-            this.ratingProgress10.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingProgress10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ratingProgress10.Name = "ratingProgress10";
             this.ratingProgress10.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
             this.ratingProgress10.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(0)))));
@@ -781,371 +1146,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Статистика";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "10";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox3.Location = new System.Drawing.Point(20, -2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "9";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox5.Location = new System.Drawing.Point(20, -1);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(6, 1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "8";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox6.Location = new System.Drawing.Point(20, -1);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(6, 1);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "7";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox9.Location = new System.Drawing.Point(20, 0);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(6, 2);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "6";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox8.Location = new System.Drawing.Point(20, -1);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 12;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(6, 1);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "5";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox7.Location = new System.Drawing.Point(20, 1);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 12;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(6, 3);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "4";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(6, 2);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "3";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox11.Location = new System.Drawing.Point(20, 0);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 12;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(6, 2);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 13);
-            this.label20.TabIndex = 11;
-            this.label20.Text = "2";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox10.Location = new System.Drawing.Point(20, -1);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 12;
-            this.pictureBox10.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(6, 1);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(13, 13);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "1";
-            // 
-            // ratingCount10
-            // 
-            this.ratingCount10.AutoSize = true;
-            this.ratingCount10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount10.ForeColor = System.Drawing.Color.White;
-            this.ratingCount10.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount10.Name = "ratingCount10";
-            this.ratingCount10.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount10.TabIndex = 13;
-            this.ratingCount10.Text = "0";
-            // 
-            // ratingCount9
-            // 
-            this.ratingCount9.AutoSize = true;
-            this.ratingCount9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount9.ForeColor = System.Drawing.Color.White;
-            this.ratingCount9.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount9.Name = "ratingCount9";
-            this.ratingCount9.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount9.TabIndex = 13;
-            this.ratingCount9.Text = "0";
-            // 
-            // ratingCount8
-            // 
-            this.ratingCount8.AutoSize = true;
-            this.ratingCount8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount8.ForeColor = System.Drawing.Color.White;
-            this.ratingCount8.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount8.Name = "ratingCount8";
-            this.ratingCount8.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount8.TabIndex = 13;
-            this.ratingCount8.Text = "0";
-            // 
-            // ratingCount7
-            // 
-            this.ratingCount7.AutoSize = true;
-            this.ratingCount7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount7.ForeColor = System.Drawing.Color.White;
-            this.ratingCount7.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount7.Name = "ratingCount7";
-            this.ratingCount7.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount7.TabIndex = 13;
-            this.ratingCount7.Text = "0";
-            // 
-            // ratingCount6
-            // 
-            this.ratingCount6.AutoSize = true;
-            this.ratingCount6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount6.ForeColor = System.Drawing.Color.White;
-            this.ratingCount6.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount6.Name = "ratingCount6";
-            this.ratingCount6.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount6.TabIndex = 13;
-            this.ratingCount6.Text = "0";
-            // 
-            // ratingCount5
-            // 
-            this.ratingCount5.AutoSize = true;
-            this.ratingCount5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount5.ForeColor = System.Drawing.Color.White;
-            this.ratingCount5.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount5.Name = "ratingCount5";
-            this.ratingCount5.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount5.TabIndex = 13;
-            this.ratingCount5.Text = "0";
-            // 
-            // ratingCount4
-            // 
-            this.ratingCount4.AutoSize = true;
-            this.ratingCount4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount4.ForeColor = System.Drawing.Color.White;
-            this.ratingCount4.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount4.Name = "ratingCount4";
-            this.ratingCount4.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount4.TabIndex = 13;
-            this.ratingCount4.Text = "0";
-            // 
-            // ratingCount3
-            // 
-            this.ratingCount3.AutoSize = true;
-            this.ratingCount3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount3.ForeColor = System.Drawing.Color.White;
-            this.ratingCount3.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount3.Name = "ratingCount3";
-            this.ratingCount3.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount3.TabIndex = 13;
-            this.ratingCount3.Text = "0";
-            // 
-            // ratingCount2
-            // 
-            this.ratingCount2.AutoSize = true;
-            this.ratingCount2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount2.ForeColor = System.Drawing.Color.White;
-            this.ratingCount2.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount2.Name = "ratingCount2";
-            this.ratingCount2.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount2.TabIndex = 13;
-            this.ratingCount2.Text = "0";
-            // 
-            // ratingCount1
-            // 
-            this.ratingCount1.AutoSize = true;
-            this.ratingCount1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingCount1.ForeColor = System.Drawing.Color.White;
-            this.ratingCount1.Location = new System.Drawing.Point(152, 0);
-            this.ratingCount1.Name = "ratingCount1";
-            this.ratingCount1.Size = new System.Drawing.Size(13, 13);
-            this.ratingCount1.TabIndex = 13;
-            this.ratingCount1.Text = "0";
-            // 
-            // categoryCount2
-            // 
-            this.categoryCount2.AutoSize = true;
-            this.categoryCount2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.categoryCount2.ForeColor = System.Drawing.Color.White;
-            this.categoryCount2.Location = new System.Drawing.Point(152, 0);
-            this.categoryCount2.Name = "categoryCount2";
-            this.categoryCount2.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount2.TabIndex = 12;
-            this.categoryCount2.Text = "0";
-            // 
-            // categoryCount3
-            // 
-            this.categoryCount3.AutoSize = true;
-            this.categoryCount3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.categoryCount3.ForeColor = System.Drawing.Color.White;
-            this.categoryCount3.Location = new System.Drawing.Point(152, 0);
-            this.categoryCount3.Name = "categoryCount3";
-            this.categoryCount3.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount3.TabIndex = 12;
-            this.categoryCount3.Text = "0";
-            // 
-            // categoryCount1
-            // 
-            this.categoryCount1.AutoSize = true;
-            this.categoryCount1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.categoryCount1.ForeColor = System.Drawing.Color.White;
-            this.categoryCount1.Location = new System.Drawing.Point(152, 0);
-            this.categoryCount1.Name = "categoryCount1";
-            this.categoryCount1.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount1.TabIndex = 12;
-            this.categoryCount1.Text = "0";
-            // 
-            // categoryCount4
-            // 
-            this.categoryCount4.AutoSize = true;
-            this.categoryCount4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.categoryCount4.ForeColor = System.Drawing.Color.White;
-            this.categoryCount4.Location = new System.Drawing.Point(152, 0);
-            this.categoryCount4.Name = "categoryCount4";
-            this.categoryCount4.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount4.TabIndex = 12;
-            this.categoryCount4.Text = "0";
-            // 
-            // categoryCount5
-            // 
-            this.categoryCount5.AutoSize = true;
-            this.categoryCount5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.categoryCount5.ForeColor = System.Drawing.Color.White;
-            this.categoryCount5.Location = new System.Drawing.Point(152, 0);
-            this.categoryCount5.Name = "categoryCount5";
-            this.categoryCount5.Size = new System.Drawing.Size(13, 13);
-            this.categoryCount5.TabIndex = 12;
-            this.categoryCount5.Text = "0";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Biblio.Properties.Resources.yellowStar;
-            this.pictureBox4.Location = new System.Drawing.Point(20, -1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(18, 15);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
             // StatisticsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1185,39 +1185,39 @@
             this.panel27.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel54.ResumeLayout(false);
             this.panel54.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel60.ResumeLayout(false);
             this.panel60.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel66.ResumeLayout(false);
             this.panel66.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel49.ResumeLayout(false);
             this.panel49.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel43.ResumeLayout(false);
             this.panel43.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

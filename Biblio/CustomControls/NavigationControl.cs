@@ -28,8 +28,12 @@ namespace Biblio.CustomControls
         private AvatarControl avatarControl;
 
         // Координаты для выпадающих элементов
-        private int otherX;
-        private int avatarX;
+        private int _otherX;
+        private int _avatarX;
+
+        // Дефолтный размер панелей
+        private int _leftPanelDefaultWidth = 100;
+        private int _rightPanelDefaultWidth = 100;
 
         public NavigationControl()
         {
@@ -104,7 +108,7 @@ namespace Biblio.CustomControls
 
             otherControl = new OtherControl();
             otherControl.OpenChanged += OnControlOpenChanged;
-            otherControl.Location = new Point(otherButton.Left + otherX, otherButton.Bottom + 10);
+            otherControl.Location = new Point(otherButton.Left + _otherX, otherButton.Bottom + 10);
             FindForm().Controls.Add(otherControl);
             otherControl.BringToFront();
             otherControl.Visible = true;
@@ -122,7 +126,7 @@ namespace Biblio.CustomControls
 
             avatarControl = new AvatarControl(FindForm());
             avatarControl.OpenChanged += OnControlOpenChanged;
-            avatarControl.Location = new Point(avatarPictureBox.Right + avatarX, avatarPictureBox.Bottom + 10);
+            avatarControl.Location = new Point(avatarPictureBox.Right + _avatarX, avatarPictureBox.Bottom + 10);
             FindForm().Controls.Add(avatarControl);
             avatarControl.BringToFront();
             avatarControl.Visible = true;
@@ -148,33 +152,42 @@ namespace Biblio.CustomControls
                 RoundingHelper.SetRoundedRegion(form, 0, 0);
                 maximizeButton.Visible = false;
                 restoreButton.Visible = true;
-                leftPanel.Width = 300;
-                rightPanel.Width = 300;
+                //if (leftPanel != null) leftPanel.Width = 300;
+                //if (rightPanel != null) rightPanel.Width = 300;
                 topLeftPanel.Width = 300;
                 topRightPanel.Width = 300;
                 searchButton.Width = 300;
                 searchButton.Text = "Что ищем, читатель?";
-                otherX = 300;
-                avatarX = 999;
+                _otherX = 300;
+                _avatarX = 999;
             }
             else
             {
                 RoundingHelper.SetRoundedRegion(form, 11, 11);
                 maximizeButton.Visible = true;
                 restoreButton.Visible = false;
-                leftPanel.Width = 100;
-                rightPanel.Width = 100;
+                //if (leftPanel != null) leftPanel.Width = 100;
+                //if (rightPanel != null) rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
                 topRightPanel.Width = 100;
                 searchButton.Width = 136;
                 searchButton.Text = "Что ищем?";
-                otherX = 100;
-                avatarX = 175;
+                _otherX = 100;
+                _avatarX = 175;
             }
 
-            if (otherControl != null) otherControl.Location = new Point(otherButton.Left + otherX, otherButton.Bottom + 10);
+            if (otherControl != null) otherControl.Location = new Point(otherButton.Left + _otherX, otherButton.Bottom + 10);
             if (searchControl != null) SetSearchControlPosition();
-            if (avatarControl != null) avatarControl.Location = new Point(avatarPictureBox.Right + avatarX, avatarPictureBox.Bottom + 10);
+            if (avatarControl != null) avatarControl.Location = new Point(avatarPictureBox.Right + _avatarX, avatarPictureBox.Bottom + 10);
+        }
+
+        public void UpdatePanelsWidth()
+        {
+            if (leftPanel != null)
+                leftPanel.Width = LeftPanelWidth > 0 ? LeftPanelWidth : _leftPanelDefaultWidth;
+
+            if (rightPanel != null)
+                rightPanel.Width = RightPanelWidth > 0 ? RightPanelWidth : _rightPanelDefaultWidth;
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
@@ -183,7 +196,6 @@ namespace Biblio.CustomControls
             SendMessage(FindForm().Handle, 0x112, 0xf012, 0);
         }
 
-        // Событие для скрытия формы (если нужно)
         public void OnControlOpenChanged(object sender, EventArgs e)
         {
             if (sender is Control control && control.Visible)
@@ -194,5 +206,8 @@ namespace Biblio.CustomControls
 
         public Panel leftPanel { get; set; }
         public Panel rightPanel { get; set; }
+
+        public int LeftPanelWidth { get; set; }
+        public int RightPanelWidth { get; set; }
     }
 }

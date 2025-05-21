@@ -20,7 +20,7 @@ using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
-    public partial class BookInfoForm : Form
+    public partial class BookInfoForm : MaterialForm
     {
         private Books _book;
 
@@ -119,6 +119,26 @@ namespace Biblio.AppForms
         private void BookInfoForm_Resize(object sender, EventArgs e)
         {
             navigationControl.HandleFormResize(this);
+        }
+
+        private void BookInfoForm_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                navigationControl.LeftPanelWidth = 500;
+                navigationControl.RightPanelWidth = 500;
+                bookPanel.Width = 219;
+                bookPictureBox.Height = 324;
+            }
+            else
+            {
+                navigationControl.LeftPanelWidth = 100;
+                navigationControl.RightPanelWidth = 100;
+                bookPanel.Width = 146;
+                bookPictureBox.Height = 216;
+            }
+
+            navigationControl.UpdatePanelsWidth();
         }
     }
 }
