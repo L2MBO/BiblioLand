@@ -56,13 +56,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.descriptionLabel = new System.Windows.Forms.Label();
-            this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -70,8 +69,8 @@
             this.panel15.SuspendLayout();
             this.bookPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
-            this.panel13.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // navigationControl
@@ -405,64 +404,11 @@
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
             // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(370, 10);
-            this.panel10.TabIndex = 1;
-            // 
-            // panel11
-            // 
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 25);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(370, 10);
-            this.panel11.TabIndex = 2;
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(360, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 15);
-            this.panel12.TabIndex = 3;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 10);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 15);
-            this.panel9.TabIndex = 4;
-            // 
-            // panel13
-            // 
-            this.panel13.AutoSize = true;
-            this.panel13.Controls.Add(this.descriptionLabel);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(10, 10);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(350, 15);
-            this.panel13.TabIndex = 5;
-            // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
-            this.descriptionLabel.Location = new System.Drawing.Point(0, 0);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(350, 15);
-            this.descriptionLabel.TabIndex = 5;
-            this.descriptionLabel.Text = "Описание";
-            // 
             // descriptionPanel
             // 
             this.descriptionPanel.AutoSize = true;
             this.descriptionPanel.BackColor = System.Drawing.Color.Transparent;
             this.descriptionPanel.Controls.Add(this.panel13);
-            this.descriptionPanel.Controls.Add(this.panel9);
             this.descriptionPanel.Controls.Add(this.panel12);
             this.descriptionPanel.Controls.Add(this.panel11);
             this.descriptionPanel.Controls.Add(this.panel10);
@@ -480,6 +426,51 @@
             this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
             this.descriptionPanel.Size = new System.Drawing.Size(370, 35);
             this.descriptionPanel.TabIndex = 44;
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 25);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(370, 10);
+            this.panel11.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(370, 10);
+            this.panel10.TabIndex = 1;
+            // 
+            // panel13
+            // 
+            this.panel13.AutoSize = true;
+            this.panel13.Controls.Add(this.descriptionLabel);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(0, 10);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(360, 15);
+            this.panel13.TabIndex = 7;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(0, 0);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.descriptionLabel.Size = new System.Drawing.Size(360, 15);
+            this.descriptionLabel.TabIndex = 5;
+            this.descriptionLabel.Text = "Описание";
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(360, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 15);
+            this.panel12.TabIndex = 3;
             // 
             // BookInfoForm
             // 
@@ -507,9 +498,9 @@
             this.panel15.ResumeLayout(false);
             this.bookPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
-            this.panel13.ResumeLayout(false);
             this.descriptionPanel.ResumeLayout(false);
             this.descriptionPanel.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,11 +536,10 @@
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel leftPanel;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel descriptionPanel;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label descriptionLabel;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label descriptionLabel;
+        private System.Windows.Forms.Panel panel12;
     }
 }
