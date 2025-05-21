@@ -22,8 +22,6 @@ namespace Biblio.CustomControls
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public event EventHandler WindowStateChanged;
-
         // Контролы
         private SearchControl searchControl;
         private OtherControl otherControl;

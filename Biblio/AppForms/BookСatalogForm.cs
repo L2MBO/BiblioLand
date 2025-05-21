@@ -24,7 +24,7 @@ namespace Biblio.AppForms
 
         private void BookСatalogForm_Load(object sender, EventArgs e)
         {
-            navigationControl.HandleFormResize(this);
+            
         }
 
         private void BookСatalogForm_Resize(object sender, EventArgs e)
