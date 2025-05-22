@@ -56,11 +56,9 @@ namespace Biblio.AppForms
 
             genreLabel.Text = genreName.GenreName;
 
-            var rating = _book.AverageRating;
+            ShowRating();
 
-            ratingLabel.Text = ((double)rating).ToString("F1", CultureInfo.InvariantCulture);
-
-            //число голосов
+            ratingCountLabel.Text = Program.context.Rating.Where(book => book.BookID == _book.BookID).Count().ToString();
 
             Image bookimage = ImageLoader.LoadBookImage(_book.ImagePath);
 
@@ -74,13 +72,33 @@ namespace Biblio.AppForms
             if (backimage != null)
             {
                 var bitmap = backimage as Bitmap ?? new Bitmap(backimage);
-                Image preparedBackground = WhiteLevelReducer.PrepareBackground(bitmap, 10, 0.6f);
+                Image preparedBackground = WhiteLevelReducer.PrepareBackground(bitmap, 20, 0.6f);
                 mainPanel.BackgroundImage = preparedBackground;
             }
 
             descriptionLabel.Text = _book.Description;
 
             ShowStatisticsBooks();
+        }
+
+        private void ShowRating()
+        {
+            var rating = (double)_book.AverageRating;
+
+            ratingLabel.Text = (rating).ToString("F1", CultureInfo.InvariantCulture);
+
+            if (rating <= 5.0)
+            {
+                ratingLabel.ForeColor = Color.Red;
+            }
+            else if (rating <= 8.0)
+            {
+                ratingLabel.ForeColor = Color.Yellow;
+            }
+            else
+            {
+                ratingLabel.ForeColor = Color.Green;
+            }
         }
 
         private void ShowStatisticsBooks()
@@ -139,6 +157,7 @@ namespace Biblio.AppForms
             }
 
             navigationControl.UpdatePanelsWidth();
+            DescriptionLabel_TextChanged(descriptionLabel, EventArgs.Empty);
         }
     }
 }

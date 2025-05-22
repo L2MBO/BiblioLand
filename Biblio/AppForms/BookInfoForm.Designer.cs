@@ -33,12 +33,18 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.statisticsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.ratingLabel = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.ratingCountLabel = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.genreLabel = new System.Windows.Forms.Label();
@@ -56,21 +62,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.descriptionLabel = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
+            this.descriptionPanel.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel15.SuspendLayout();
             this.bookPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
-            this.descriptionPanel.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // navigationControl
@@ -81,6 +81,7 @@
             this.navigationControl.leftPanel = null;
             this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
             this.navigationControl.RightPanelWidth = 0;
@@ -126,6 +127,74 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(370, 10);
             this.panel8.TabIndex = 45;
+            // 
+            // descriptionPanel
+            // 
+            this.descriptionPanel.AutoSize = true;
+            this.descriptionPanel.BackColor = System.Drawing.Color.Transparent;
+            this.descriptionPanel.Controls.Add(this.panel13);
+            this.descriptionPanel.Controls.Add(this.panel12);
+            this.descriptionPanel.Controls.Add(this.panel11);
+            this.descriptionPanel.Controls.Add(this.panel10);
+            this.descriptionPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.descriptionPanel.FillColor = System.Drawing.Color.Transparent;
+            this.descriptionPanel.FillColor2 = System.Drawing.Color.Transparent;
+            this.descriptionPanel.FillColor3 = System.Drawing.Color.Transparent;
+            this.descriptionPanel.FillColor4 = System.Drawing.Color.Transparent;
+            this.descriptionPanel.Location = new System.Drawing.Point(256, 88);
+            this.descriptionPanel.Name = "descriptionPanel";
+            this.descriptionPanel.Quality = 1;
+            this.descriptionPanel.ShadowDecoration.BorderRadius = 20;
+            this.descriptionPanel.ShadowDecoration.Depth = 150;
+            this.descriptionPanel.ShadowDecoration.Enabled = true;
+            this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.descriptionPanel.Size = new System.Drawing.Size(370, 35);
+            this.descriptionPanel.TabIndex = 44;
+            // 
+            // panel13
+            // 
+            this.panel13.AutoSize = true;
+            this.panel13.Controls.Add(this.descriptionLabel);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(0, 10);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(360, 15);
+            this.panel13.TabIndex = 7;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(0, 0);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.descriptionLabel.Size = new System.Drawing.Size(360, 15);
+            this.descriptionLabel.TabIndex = 5;
+            this.descriptionLabel.Text = "Описание";
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(360, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 15);
+            this.panel12.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 25);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(370, 10);
+            this.panel11.TabIndex = 2;
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(370, 10);
+            this.panel10.TabIndex = 1;
             // 
             // panel6
             // 
@@ -174,23 +243,23 @@
             // 
             // panel18
             // 
-            this.panel18.Controls.Add(this.label4);
+            this.panel18.Controls.Add(this.ratingCountLabel);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel18.Location = new System.Drawing.Point(0, 21);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(105, 20);
             this.panel18.TabIndex = 6;
             // 
-            // label4
+            // ratingCountLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(22, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Число голосов";
+            this.ratingCountLabel.AutoSize = true;
+            this.ratingCountLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ratingCountLabel.ForeColor = System.Drawing.Color.White;
+            this.ratingCountLabel.Location = new System.Drawing.Point(22, 0);
+            this.ratingCountLabel.Name = "ratingCountLabel";
+            this.ratingCountLabel.Size = new System.Drawing.Size(83, 13);
+            this.ratingCountLabel.TabIndex = 0;
+            this.ratingCountLabel.Text = "Число голосов";
             // 
             // panel15
             // 
@@ -389,7 +458,7 @@
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 38;
@@ -399,78 +468,10 @@
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
-            // 
-            // descriptionPanel
-            // 
-            this.descriptionPanel.AutoSize = true;
-            this.descriptionPanel.BackColor = System.Drawing.Color.Transparent;
-            this.descriptionPanel.Controls.Add(this.panel13);
-            this.descriptionPanel.Controls.Add(this.panel12);
-            this.descriptionPanel.Controls.Add(this.panel11);
-            this.descriptionPanel.Controls.Add(this.panel10);
-            this.descriptionPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.descriptionPanel.FillColor = System.Drawing.Color.Transparent;
-            this.descriptionPanel.FillColor2 = System.Drawing.Color.Transparent;
-            this.descriptionPanel.FillColor3 = System.Drawing.Color.Transparent;
-            this.descriptionPanel.FillColor4 = System.Drawing.Color.Transparent;
-            this.descriptionPanel.Location = new System.Drawing.Point(256, 88);
-            this.descriptionPanel.Name = "descriptionPanel";
-            this.descriptionPanel.Quality = 1;
-            this.descriptionPanel.ShadowDecoration.BorderRadius = 20;
-            this.descriptionPanel.ShadowDecoration.Depth = 150;
-            this.descriptionPanel.ShadowDecoration.Enabled = true;
-            this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.descriptionPanel.Size = new System.Drawing.Size(370, 35);
-            this.descriptionPanel.TabIndex = 44;
-            // 
-            // panel11
-            // 
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 25);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(370, 10);
-            this.panel11.TabIndex = 2;
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(370, 10);
-            this.panel10.TabIndex = 1;
-            // 
-            // panel13
-            // 
-            this.panel13.AutoSize = true;
-            this.panel13.Controls.Add(this.descriptionLabel);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 10);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(360, 15);
-            this.panel13.TabIndex = 7;
-            // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
-            this.descriptionLabel.Location = new System.Drawing.Point(0, 0);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.descriptionLabel.Size = new System.Drawing.Size(360, 15);
-            this.descriptionLabel.TabIndex = 5;
-            this.descriptionLabel.Text = "Описание";
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(360, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(10, 15);
-            this.panel12.TabIndex = 3;
             // 
             // BookInfoForm
             // 
@@ -489,6 +490,9 @@
             this.Resize += new System.EventHandler(this.BookInfoForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.descriptionPanel.ResumeLayout(false);
+            this.descriptionPanel.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel14.ResumeLayout(false);
@@ -498,9 +502,6 @@
             this.panel15.ResumeLayout(false);
             this.bookPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
-            this.descriptionPanel.ResumeLayout(false);
-            this.descriptionPanel.PerformLayout();
-            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,7 +518,7 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label ratingLabel;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ratingCountLabel;
         private System.Windows.Forms.Panel panel15;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label genreLabel;
