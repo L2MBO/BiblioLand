@@ -48,7 +48,7 @@ namespace Biblio.CustomControls
         private void rankPanel_Click(Object sender, EventArgs e)
         {
             OpenChanged?.Invoke(this, EventArgs.Empty);
-            MainForm form = new MainForm();
+            UserTopForm form = new UserTopForm();
             form.Show();
             this.Hide();
         }

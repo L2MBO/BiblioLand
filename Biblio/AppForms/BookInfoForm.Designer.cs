@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookInfoForm));
-            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.statisticsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -62,6 +61,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -72,21 +72,6 @@
             this.bookPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // navigationControl
-            // 
-            this.navigationControl.AutoSize = true;
-            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationControl.leftPanel = null;
-            this.navigationControl.LeftPanelWidth = 0;
-            this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.navigationControl.Name = "navigationControl";
-            this.navigationControl.rightPanel = null;
-            this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(726, 52);
-            this.navigationControl.TabIndex = 0;
             // 
             // mainPanel
             // 
@@ -233,11 +218,11 @@
             // 
             this.ratingLabel.AutoSize = true;
             this.ratingLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ratingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ratingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ratingLabel.ForeColor = System.Drawing.Color.White;
-            this.ratingLabel.Location = new System.Drawing.Point(40, 0);
+            this.ratingLabel.Location = new System.Drawing.Point(34, 0);
             this.ratingLabel.Name = "ratingLabel";
-            this.ratingLabel.Size = new System.Drawing.Size(65, 20);
+            this.ratingLabel.Size = new System.Drawing.Size(71, 20);
             this.ratingLabel.TabIndex = 7;
             this.ratingLabel.Text = "Оценка";
             // 
@@ -423,6 +408,7 @@
             this.continueRadingButton.Size = new System.Drawing.Size(146, 41);
             this.continueRadingButton.TabIndex = 34;
             this.continueRadingButton.Text = "Читать";
+            this.continueRadingButton.Click += new System.EventHandler(this.continueRadingButton_Click);
             // 
             // panel23
             // 
@@ -472,6 +458,21 @@
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
+            // 
+            // navigationControl
+            // 
+            this.navigationControl.AutoSize = true;
+            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
+            this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(6);
+            this.navigationControl.Name = "navigationControl";
+            this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.TabIndex = 0;
             // 
             // BookInfoForm
             // 

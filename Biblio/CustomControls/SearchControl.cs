@@ -45,6 +45,7 @@ namespace Biblio.CustomControls
         {
             var bookInfoForm = new BookInfoForm(book);
             bookInfoForm.Show();
+            this.Parent.Hide();
         }
 
         private void SearchControl_Load(object sender, EventArgs e)

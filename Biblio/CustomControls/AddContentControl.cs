@@ -28,7 +28,7 @@ namespace Biblio.CustomControls
             OpenChanged?.Invoke(this, EventArgs.Empty);
             AddBookForm form = new AddBookForm();
             form.Show();
-            this.Hide();
+            this.Parent.Hide();
         }
 
         private void cardButton_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Biblio.CustomControls
             OpenChanged?.Invoke(this, EventArgs.Empty);
             AddCardForm form = new AddCardForm();
             form.Show();
-            this.Hide();
+            this.Parent.Hide();
         }
     }
 }

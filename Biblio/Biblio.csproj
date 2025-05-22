@@ -222,6 +222,12 @@
     <Compile Include="AppForms\UserNotifyForm.Designer.cs">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\UserTopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\UserTopForm.Designer.cs">
+      <DependentUpon>UserTopForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\SendMessageCode.cs" />
@@ -234,6 +240,7 @@
     <Compile Include="Classes\Images\InstallingImages\ImageLoader.cs" />
     <Compile Include="Classes\Images\StoreImages\CodingOrDecoding.cs" />
     <Compile Include="Classes\Hash\HashHelper.cs" />
+    <Compile Include="Classes\Pdf\OpenPdf\PdfLoader.cs" />
     <Compile Include="Classes\Validation\TimeValidation.cs" />
     <Compile Include="Classes\VisibilityOrEnabled\EnabledHelper.cs" />
     <Compile Include="Classes\VisibilityOrEnabled\VisibilityHelper.cs" />

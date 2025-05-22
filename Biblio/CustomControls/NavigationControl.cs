@@ -152,8 +152,8 @@ namespace Biblio.CustomControls
                 RoundingHelper.SetRoundedRegion(form, 0, 0);
                 maximizeButton.Visible = false;
                 restoreButton.Visible = true;
-                //if (leftPanel != null) leftPanel.Width = 300;
-                //if (rightPanel != null) rightPanel.Width = 300;
+                if (leftPanel != null) leftPanel.Width = 300;
+                if (rightPanel != null) rightPanel.Width = 300;
                 topLeftPanel.Width = 300;
                 topRightPanel.Width = 300;
                 searchButton.Width = 300;
@@ -166,8 +166,8 @@ namespace Biblio.CustomControls
                 RoundingHelper.SetRoundedRegion(form, 11, 11);
                 maximizeButton.Visible = true;
                 restoreButton.Visible = false;
-                //if (leftPanel != null) leftPanel.Width = 100;
-                //if (rightPanel != null) rightPanel.Width = 100;
+                if (leftPanel != null) leftPanel.Width = 100;
+                if (rightPanel != null) rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
                 topRightPanel.Width = 100;
                 searchButton.Width = 136;

@@ -1,5 +1,6 @@
 ﻿using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.Classes.Pdf.OpenPdf;
 using Biblio.CustomControls;
 using Biblio.Models;
 using Guna.UI2.WinForms;
@@ -158,6 +159,11 @@ namespace Biblio.AppForms
 
             navigationControl.UpdatePanelsWidth();
             DescriptionLabel_TextChanged(descriptionLabel, EventArgs.Empty);
+        }
+
+        private void continueRadingButton_Click(object sender, EventArgs e)
+        {
+            PdfLoader.OpenPdfFile(_book.PdfPath);
         }
     }
 }

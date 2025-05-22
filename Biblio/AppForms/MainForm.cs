@@ -25,10 +25,12 @@ using Biblio.Interface;
 
 namespace Biblio.AppForms
 {
-    public partial class MainForm : MaterialForm, IAvatarParentForm
+    public partial class MainForm : MaterialForm
     {
         private AddContentControl addContentControl;
+        #pragma warning disable CS0067
         public event EventHandler WindowStateChanged;
+        #pragma warning restore CS0067
         private BookSearchControl bookSearchControl;
 
         public MainForm()
@@ -43,7 +45,7 @@ namespace Biblio.AppForms
 
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
-
+            WindowStateChanged += (sender, e) => { };
             bookSearchControl = new BookSearchControl(this, new Books
             {
                 Author = "",
@@ -207,6 +209,11 @@ namespace Biblio.AppForms
         {
             _displayedBooksCount += 5;
             ShowLastUpdates();
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Biblio.Classes.Images.InstallingImages
 {
     internal class ImageLoader
     {
-        private static readonly string _path = "C:\\Users\\lamki\\Documents\\bookImg\\";
+        private static readonly string _path = "C:\\Users\\lamki\\Documents\\BiblioLand\\bookImg\\";
 
         public static Image LoadBookImage(string imagePath)
         {
