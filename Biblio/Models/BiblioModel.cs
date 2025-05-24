@@ -18,7 +18,7 @@ namespace Biblio.Models
         public virtual DbSet<Rating> Rating { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<UserBooks> UserBooks { get; set; }
+        public virtual DbSet<UserBookmarks> UserBooks { get; set; }
         public virtual DbSet<UserCategories> UserCategories { get; set; }
         public virtual DbSet<UserRoles> UserRoles { get; set; }
         public virtual DbSet<Users> Users { get; set; }

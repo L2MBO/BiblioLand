@@ -32,34 +32,35 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.noResultPanel = new System.Windows.Forms.Panel();
+            this.noResultPictureBox = new System.Windows.Forms.PictureBox();
             this.booksPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.oftenSearchedLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.closeButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.searchPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.clearTextButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.searchTextField = new Guna.UI2.WinForms.Guna2TextBox();
             this.glasPanel = new System.Windows.Forms.Panel();
-            this.closeButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.clearTextButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.glasPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.noResultPanel = new System.Windows.Forms.Panel();
-            this.noResultPictureBox = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.searchPanel.SuspendLayout();
-            this.glasPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clearTextButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).BeginInit();
             this.noResultPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
+            this.searchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clearTextButton)).BeginInit();
+            this.glasPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 25;
             this.guna2Panel1.BorderThickness = 1;
@@ -88,6 +89,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(522, 162);
             this.panel3.TabIndex = 6;
+            // 
+            // noResultPanel
+            // 
+            this.noResultPanel.Controls.Add(this.noResultPictureBox);
+            this.noResultPanel.Location = new System.Drawing.Point(7, 3);
+            this.noResultPanel.Name = "noResultPanel";
+            this.noResultPanel.Size = new System.Drawing.Size(509, 155);
+            this.noResultPanel.TabIndex = 1;
+            this.noResultPanel.Visible = false;
+            // 
+            // noResultPictureBox
+            // 
+            this.noResultPictureBox.Image = global::Biblio.Properties.Resources.noResults;
+            this.noResultPictureBox.Location = new System.Drawing.Point(221, 28);
+            this.noResultPictureBox.Name = "noResultPictureBox";
+            this.noResultPictureBox.Size = new System.Drawing.Size(68, 98);
+            this.noResultPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.noResultPictureBox.TabIndex = 1;
+            this.noResultPictureBox.TabStop = false;
             // 
             // booksPanel
             // 
@@ -126,6 +146,21 @@
             this.panel4.Size = new System.Drawing.Size(522, 57);
             this.panel4.TabIndex = 4;
             // 
+            // closeButton
+            // 
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.closeButton.Image = ((System.Drawing.Image)(resources.GetObject("closeButton.Image")));
+            this.closeButton.ImageRotate = 0F;
+            this.closeButton.Location = new System.Drawing.Point(471, 6);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closeButton.Size = new System.Drawing.Size(45, 45);
+            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.closeButton.TabIndex = 70;
+            this.closeButton.TabStop = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // searchPanel
             // 
             this.searchPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
@@ -139,6 +174,23 @@
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(456, 45);
             this.searchPanel.TabIndex = 69;
+            // 
+            // clearTextButton
+            // 
+            this.clearTextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.clearTextButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearTextButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.clearTextButton.Image = ((System.Drawing.Image)(resources.GetObject("clearTextButton.Image")));
+            this.clearTextButton.ImageRotate = 0F;
+            this.clearTextButton.Location = new System.Drawing.Point(410, 8);
+            this.clearTextButton.Name = "clearTextButton";
+            this.clearTextButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.clearTextButton.Size = new System.Drawing.Size(27, 28);
+            this.clearTextButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.clearTextButton.TabIndex = 71;
+            this.clearTextButton.TabStop = false;
+            this.clearTextButton.Visible = false;
+            this.clearTextButton.Click += new System.EventHandler(this.clearTextButton_Click);
             // 
             // searchTextField
             // 
@@ -173,38 +225,6 @@
             this.glasPanel.Size = new System.Drawing.Size(40, 45);
             this.glasPanel.TabIndex = 55;
             // 
-            // closeButton
-            // 
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.closeButton.Image = ((System.Drawing.Image)(resources.GetObject("closeButton.Image")));
-            this.closeButton.ImageRotate = 0F;
-            this.closeButton.Location = new System.Drawing.Point(471, 6);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.closeButton.Size = new System.Drawing.Size(45, 45);
-            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closeButton.TabIndex = 70;
-            this.closeButton.TabStop = false;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // clearTextButton
-            // 
-            this.clearTextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.clearTextButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearTextButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.clearTextButton.Image = ((System.Drawing.Image)(resources.GetObject("clearTextButton.Image")));
-            this.clearTextButton.ImageRotate = 0F;
-            this.clearTextButton.Location = new System.Drawing.Point(410, 8);
-            this.clearTextButton.Name = "clearTextButton";
-            this.clearTextButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.clearTextButton.Size = new System.Drawing.Size(27, 28);
-            this.clearTextButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.clearTextButton.TabIndex = 71;
-            this.clearTextButton.TabStop = false;
-            this.clearTextButton.Visible = false;
-            this.clearTextButton.Click += new System.EventHandler(this.clearTextButton_Click);
-            // 
             // glasPictureBox
             // 
             this.glasPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
@@ -218,30 +238,11 @@
             this.glasPictureBox.TabIndex = 55;
             this.glasPictureBox.TabStop = false;
             // 
-            // noResultPanel
-            // 
-            this.noResultPanel.Controls.Add(this.noResultPictureBox);
-            this.noResultPanel.Location = new System.Drawing.Point(7, 3);
-            this.noResultPanel.Name = "noResultPanel";
-            this.noResultPanel.Size = new System.Drawing.Size(509, 155);
-            this.noResultPanel.TabIndex = 1;
-            this.noResultPanel.Visible = false;
-            // 
-            // noResultPictureBox
-            // 
-            this.noResultPictureBox.Image = global::Biblio.Properties.Resources.noResults;
-            this.noResultPictureBox.Location = new System.Drawing.Point(221, 28);
-            this.noResultPictureBox.Name = "noResultPictureBox";
-            this.noResultPictureBox.Size = new System.Drawing.Size(68, 98);
-            this.noResultPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.noResultPictureBox.TabIndex = 1;
-            this.noResultPictureBox.TabStop = false;
-            // 
             // SearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.Controls.Add(this.guna2Panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SearchControl";
@@ -250,16 +251,16 @@
             this.guna2Panel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.noResultPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.searchPanel.ResumeLayout(false);
-            this.glasPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
+            this.searchPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clearTextButton)).EndInit();
+            this.glasPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).EndInit();
-            this.noResultPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

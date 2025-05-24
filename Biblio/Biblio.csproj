@@ -256,6 +256,12 @@
     <Compile Include="CustomControls\AvatarControl.Designer.cs">
       <DependentUpon>AvatarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\BookmarksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\BookmarksControl.Designer.cs">
+      <DependentUpon>BookmarksControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\BookSearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,7 +318,7 @@
     <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\Reviews.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
-    <Compile Include="Models\UserBooks.cs" />
+    <Compile Include="Models\UserBookmarks.cs" />
     <Compile Include="Models\UserCategories.cs" />
     <Compile Include="Models\UserRoles.cs" />
     <Compile Include="Models\Users.cs" />
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AvatarControl.resx">
       <DependentUpon>AvatarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\BookmarksControl.resx">
+      <DependentUpon>BookmarksControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\BookSearchControl.resx">
       <DependentUpon>BookSearchControl.cs</DependentUpon>

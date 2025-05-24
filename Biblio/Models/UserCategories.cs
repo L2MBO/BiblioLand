@@ -11,7 +11,7 @@ namespace Biblio.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public UserCategories()
         {
-            UserBooks = new HashSet<UserBooks>();
+            UserBooks = new HashSet<UserBookmarks>();
         }
 
         [Key]
@@ -22,6 +22,6 @@ namespace Biblio.Models
         public string CategoryName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserBooks> UserBooks { get; set; }
+        public virtual ICollection<UserBookmarks> UserBooks { get; set; }
     }
 }

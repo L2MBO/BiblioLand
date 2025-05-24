@@ -381,6 +381,7 @@
             this.newBookmarkButton.Size = new System.Drawing.Size(146, 28);
             this.newBookmarkButton.TabIndex = 36;
             this.newBookmarkButton.Text = "В закладки";
+            this.newBookmarkButton.Click += new System.EventHandler(this.newBookmarkButton_Click);
             // 
             // panel24
             // 
@@ -444,7 +445,7 @@
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 38;
@@ -454,7 +455,7 @@
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;

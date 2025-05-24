@@ -24,6 +24,7 @@ namespace Biblio.AppForms
     public partial class BookInfoForm : MaterialForm
     {
         private Books _book;
+        private int _bookmarkX;
 
         public BookInfoForm(Books book)
         {
@@ -44,6 +45,8 @@ namespace Biblio.AppForms
             descriptionLabel.TextChanged += DescriptionLabel_TextChanged;
 
             LoadBookInfo();
+
+            mainPanel.Scroll += (sender, e) => UpdateBookmarksControlPosition();
         }
 
         private void LoadBookInfo()
@@ -130,14 +133,32 @@ namespace Biblio.AppForms
             }
         }
 
-        private void BookInfoForm_Load(object sender, EventArgs e)
+        private BookmarksControl bookmarksControl;
+
+        private void UpdateBookmarksControlPosition()
         {
-            navigationControl.HandleFormResize(this);
+            if (bookmarksControl != null && newBookmarkButton != null && newBookmarkButton.Parent != null)
+            {
+                int scrollY = -mainPanel.AutoScrollPosition.Y;
+
+                int x = newBookmarkButton.Left + newBookmarkButton.Width - _bookmarkX;
+                int y = newBookmarkButton.Bottom + 20 - scrollY;
+
+                bookmarksControl.Location = new Point(x, y);
+            }
         }
 
-        private void BookInfoForm_Resize(object sender, EventArgs e)
+        private void RemoveBookmarksControl()
         {
-            navigationControl.HandleFormResize(this);
+            if (bookmarksControl != null)
+            {
+                if (mainPanel.Controls.Contains(bookmarksControl))
+                {
+                    mainPanel.Controls.Remove(bookmarksControl);
+                }
+                bookmarksControl.Dispose();
+                bookmarksControl = null;
+            }
         }
 
         private void BookInfoForm_SizeChanged(object sender, EventArgs e)
@@ -148,6 +169,7 @@ namespace Biblio.AppForms
                 navigationControl.RightPanelWidth = 500;
                 bookPanel.Width = 219;
                 bookPictureBox.Height = 324;
+                _bookmarkX = -310;
             }
             else
             {
@@ -155,15 +177,44 @@ namespace Biblio.AppForms
                 navigationControl.RightPanelWidth = 100;
                 bookPanel.Width = 146;
                 bookPictureBox.Height = 216;
+                _bookmarkX = 54;
             }
 
             navigationControl.UpdatePanelsWidth();
             DescriptionLabel_TextChanged(descriptionLabel, EventArgs.Empty);
+            UpdateBookmarksControlPosition();
+        }
+
+        private void BookInfoForm_Load(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
+        }
+
+        private void BookInfoForm_Resize(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
+            UpdateBookmarksControlPosition();
         }
 
         private void continueRadingButton_Click(object sender, EventArgs e)
         {
             PdfLoader.OpenPdfFile(_book.PdfPath);
+        }
+
+        private void newBookmarkButton_Click(object sender, EventArgs e)
+        {
+            if (bookmarksControl != null && bookmarksControl.Visible)
+            {
+                RemoveBookmarksControl();
+                return;
+            }
+
+            bookmarksControl = new BookmarksControl();
+            UpdateBookmarksControlPosition();
+
+            mainPanel.Controls.Add(bookmarksControl);
+            bookmarksControl.BringToFront();
+            bookmarksControl.Visible = true;
         }
     }
 }

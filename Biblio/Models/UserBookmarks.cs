@@ -6,7 +6,7 @@ namespace Biblio.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class UserBooks
+    public partial class UserBookmarks
     {
         [Key]
         public int UserBookID { get; set; }

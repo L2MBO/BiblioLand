@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -35,6 +36,10 @@ namespace Biblio.CustomControls
             {
                 _parent.WindowStateChanged += Form_WindowStateChanged;
                 OpenChanged += _parent.OnControlOpenChanged;
+            }
+            else
+            {
+                Debug.WriteLine("_parent имеет значение null в конструкторе AvatarControl.");
             }
 
             var curentUser = Program.context.Users.FirstOrDefault(user => user.UserID == currentUserId);
