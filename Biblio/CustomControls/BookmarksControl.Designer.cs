@@ -95,6 +95,7 @@
             this.removeBookmarkButton.TabIndex = 13;
             this.removeBookmarkButton.Text = "Удалить из закладок";
             this.removeBookmarkButton.Visible = false;
+            this.removeBookmarkButton.Click += new System.EventHandler(this.RemoveBookmarkButton_Click);
             // 
             // panel6
             // 
@@ -123,6 +124,7 @@
             this.categoryButton5.Size = new System.Drawing.Size(141, 20);
             this.categoryButton5.TabIndex = 11;
             this.categoryButton5.Text = "Отложено";
+            this.categoryButton5.Click += new System.EventHandler(this.CategoryButton_Click);
             // 
             // panel5
             // 
@@ -151,6 +153,7 @@
             this.categoryButton4.Size = new System.Drawing.Size(141, 20);
             this.categoryButton4.TabIndex = 9;
             this.categoryButton4.Text = "Брошено";
+            this.categoryButton4.Click += new System.EventHandler(this.CategoryButton_Click);
             // 
             // panel4
             // 
@@ -179,6 +182,7 @@
             this.categoryButton3.Size = new System.Drawing.Size(141, 20);
             this.categoryButton3.TabIndex = 7;
             this.categoryButton3.Text = "Прочитано";
+            this.categoryButton3.Click += new System.EventHandler(this.CategoryButton_Click);
             // 
             // panel3
             // 
@@ -207,6 +211,7 @@
             this.categoryButton2.Size = new System.Drawing.Size(141, 20);
             this.categoryButton2.TabIndex = 5;
             this.categoryButton2.Text = "Буду читать";
+            this.categoryButton2.Click += new System.EventHandler(this.CategoryButton_Click);
             // 
             // panel2
             // 
@@ -235,6 +240,7 @@
             this.categoryButton1.Size = new System.Drawing.Size(141, 20);
             this.categoryButton1.TabIndex = 2;
             this.categoryButton1.Text = "Читаю";
+            this.categoryButton1.Click += new System.EventHandler(this.CategoryButton_Click);
             // 
             // BookmarksControl
             // 

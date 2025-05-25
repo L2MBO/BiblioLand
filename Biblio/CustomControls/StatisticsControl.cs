@@ -25,10 +25,6 @@ namespace Biblio.CustomControls
 
             _book = books;
 
-            var rating = _book.AverageRating;
-
-            overageRatingLabel.Text = "Рейтинг за последнее время: " + rating;
-
             LoadRatings();
             LoadBookmarks();
         }
@@ -36,6 +32,12 @@ namespace Biblio.CustomControls
         private void LoadRatings()
         {
             int bookId = _book.BookID;
+
+            _book = Program.context.Books.AsNoTracking().FirstOrDefault(b => b.BookID == _book.BookID);
+
+            var lastRating = _book.AverageRating;
+
+            overageRatingLabel.Text = "Рейтинг за последнее время: " + lastRating;
 
             var ratings = Program.context.Rating.Where(r => r.BookID == bookId).ToList();
 

@@ -64,8 +64,6 @@ namespace Biblio.AppForms
 
             ShowRating();
 
-            ratingCountLabel.Text = Program.context.Rating.Where(book => book.BookID == _book.BookID).Count().ToString();
-
             Image bookimage = ImageLoader.LoadBookImage(_book.ImagePath);
 
             if (bookimage != null)
@@ -87,6 +85,7 @@ namespace Biblio.AppForms
             ShowStatisticsBooks();
             UpdateBookmarkButtonText();
             UpdateContinueReadingButtonText();
+            UpdateEvaluateButtonText();
         }
 
         private void UpdateBookmarkButtonText()
@@ -109,9 +108,15 @@ namespace Biblio.AppForms
 
         private void ShowRating()
         {
+            _book = Program.context.Books.AsNoTracking().FirstOrDefault(b => b.BookID == _book.BookID);
+
             var rating = (double)_book.AverageRating;
 
             ratingLabel.Text = (rating).ToString("F1", CultureInfo.InvariantCulture);
+
+            var ratingCount = Program.context.Rating.Count(r => r.BookID == _book.BookID).ToString();
+
+            ratingCountLabel.Text = ratingCount + " голосов";
 
             if (rating <= 5.0)
             {
@@ -235,6 +240,27 @@ namespace Biblio.AppForms
             }
         }
 
+        private void UpdateEvaluateButtonText()
+        {
+            var existingRating = Program.context.Rating.FirstOrDefault(r =>
+                r.UserID == _currentUserId && r.BookID == _book.BookID);
+
+            if (existingRating != null)
+            {
+                evaluateButton.Text = $"Оценка: {existingRating.Rating1}";
+            }
+            else
+            {
+                evaluateButton.Text = "Оценить";
+            }
+        }
+
+        private void UpdateEvaluationForm()
+        {
+            var statsControl = statisticsPanel.Controls.OfType<StatisticsControl>().FirstOrDefault();
+            statsControl?.RefreshStatistics();
+        }
+
         private void BookInfoForm_SizeChanged(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -302,8 +328,7 @@ namespace Biblio.AppForms
         {
             newBookmarkButton.Text = e.CategoryName;
 
-            var statsControl = statisticsPanel.Controls.OfType<StatisticsControl>().FirstOrDefault();
-            statsControl?.RefreshStatistics();
+            UpdateEvaluationForm();
         }
 
         private void BookmarksControl_BookmarkRemoved(object sender, EventArgs e)
@@ -312,13 +337,22 @@ namespace Biblio.AppForms
 
             newBookmarkButton.Text = "В закладки";
 
-            var statsControl = statisticsPanel.Controls.OfType<StatisticsControl>().FirstOrDefault();
-            statsControl?.RefreshStatistics();
+            UpdateEvaluationForm();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void evaluateButton_Click(object sender, EventArgs e)
         {
-            EvaluationForm form = new EvaluationForm(_book, _currentUserId);
+            EvaluationForm form = new EvaluationForm(_book, _currentUserId, evaluateButton);
+            form.ShowDialog();
+
+            ShowRating();
+
+            UpdateEvaluationForm();
+        }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            BookReportForm form = new BookReportForm();
             form.ShowDialog();
         }
     }

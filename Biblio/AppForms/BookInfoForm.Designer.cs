@@ -45,7 +45,6 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.ratingCountLabel = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.genreLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.authorLabel = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.evaluateButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
@@ -248,33 +248,12 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.guna2Button1);
+            this.panel15.Controls.Add(this.evaluateButton);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel15.Location = new System.Drawing.Point(0, 41);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(105, 21);
             this.panel15.TabIndex = 4;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DefaultAutoSize = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(27, 0);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2Button1.Size = new System.Drawing.Size(78, 21);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Оценить";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // genreLabel
             // 
@@ -356,6 +335,7 @@
             this.reportButton.Size = new System.Drawing.Size(146, 28);
             this.reportButton.TabIndex = 38;
             this.reportButton.Text = "Пожаловаться";
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
             // panel25
             // 
@@ -462,6 +442,27 @@
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
             // 
+            // evaluateButton
+            // 
+            this.evaluateButton.Animated = true;
+            this.evaluateButton.BorderRadius = 10;
+            this.evaluateButton.DefaultAutoSize = true;
+            this.evaluateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.evaluateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.evaluateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.evaluateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.evaluateButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.evaluateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.evaluateButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.evaluateButton.ForeColor = System.Drawing.Color.White;
+            this.evaluateButton.Location = new System.Drawing.Point(27, 0);
+            this.evaluateButton.Name = "evaluateButton";
+            this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
+            this.evaluateButton.TabIndex = 2;
+            this.evaluateButton.Text = "Оценить";
+            this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
+            // 
             // navigationControl
             // 
             this.navigationControl.AutoSize = true;
@@ -525,7 +526,6 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label ratingCountLabel;
         private System.Windows.Forms.Panel panel15;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label genreLabel;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label authorLabel;
@@ -547,5 +547,6 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Panel panel12;
+        private Guna.UI2.WinForms.Guna2Button evaluateButton;
     }
 }

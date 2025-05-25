@@ -41,14 +41,6 @@ namespace Biblio.CustomControls
             LoadBookmarkStatus();
 
             removeBookmarkButton.Visible = _isBookmarked;
-
-            // Настройка обработчиков событий
-            categoryButton1.Click += CategoryButton_Click;
-            categoryButton2.Click += CategoryButton_Click;
-            categoryButton3.Click += CategoryButton_Click;
-            categoryButton4.Click += CategoryButton_Click;
-            categoryButton5.Click += CategoryButton_Click;
-            removeBookmarkButton.Click += RemoveBookmarkButton_Click;
         }
 
         public void LoadBookmarkStatus()

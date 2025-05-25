@@ -11,12 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.CustomControls
 {
     public partial class MainControl : UserControl
     {
-        private Books _books;
+        private Books _book;
         public event EventHandler<Books> BookClicked;
         public event EventHandler OpenChanged;
 
@@ -24,18 +25,20 @@ namespace Biblio.CustomControls
         {
             InitializeComponent();
 
-            _books = books;
+            _book = books;
 
-            authorLabel.Text = books.Author.ToString();
-            nameLabel.Text = books.Title.ToString();
+            authorLabel.Text = _book.Author.ToString();
+            nameLabel.Text = _book.Title.ToString();
 
-            Image image = ImageLoader.LoadBookImage(books.ImagePath);
+            Image image = ImageLoader.LoadBookImage(_book.ImagePath);
             if (image != null)
             {
                 bookPictureBox.Image = image;
             }
 
-            ratingLabel.Text = ((double)books.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
+            _book = Program.context.Books.AsNoTracking().FirstOrDefault(b => b.BookID == _book.BookID);
+
+            ratingLabel.Text = ((double)_book.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
 
             RoundingHelper.SetRoundedRegion(ratingPanel, 20, 20);
 
@@ -53,7 +56,7 @@ namespace Biblio.CustomControls
         private void MainControl_Click(object sender, EventArgs e)
         {
             OpenChanged?.Invoke(this, EventArgs.Empty);
-            BookClicked?.Invoke(this, _books);
+            BookClicked?.Invoke(this, _book);
         }
     }
 }
