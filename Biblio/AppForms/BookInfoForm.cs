@@ -318,7 +318,8 @@ namespace Biblio.AppForms
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            EvaluationForm form = new EvaluationForm(_book, _currentUserId);
+            form.ShowDialog();
         }
     }
 }

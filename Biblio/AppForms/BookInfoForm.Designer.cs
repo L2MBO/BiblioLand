@@ -259,6 +259,7 @@
             // 
             this.guna2Button1.Animated = true;
             this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DefaultAutoSize = true;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -267,10 +268,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(31, 0);
+            this.guna2Button1.Location = new System.Drawing.Point(27, 0);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2Button1.Size = new System.Drawing.Size(74, 21);
+            this.guna2Button1.Size = new System.Drawing.Size(78, 21);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Оценить";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -446,7 +447,7 @@
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 38;
@@ -456,7 +457,7 @@
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
@@ -503,6 +504,7 @@
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.bookPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.ResumeLayout(false);

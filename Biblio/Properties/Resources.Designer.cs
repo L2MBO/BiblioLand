@@ -63,6 +63,16 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _10 {
+            get {
+                object obj = ResourceManager.GetObject("10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap abandoned {
             get {
                 object obj = ResourceManager.GetObject("abandoned", resourceCulture);
@@ -593,6 +603,16 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap whiteXmark {
+            get {
+                object obj = ResourceManager.GetObject("whiteXmark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap willReading {
             get {
                 object obj = ResourceManager.GetObject("willReading", resourceCulture);
@@ -606,6 +626,26 @@ namespace Biblio.Properties {
         internal static System.Drawing.Bitmap yellowStar {
             get {
                 object obj = ResourceManager.GetObject("yellowStar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yinYang {
+            get {
+                object obj = ResourceManager.GetObject("yinYang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yinYangBackground {
+            get {
+                object obj = ResourceManager.GetObject("yinYangBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
