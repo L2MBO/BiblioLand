@@ -68,7 +68,7 @@ namespace Biblio.CustomControls
         {
             int bookId = _book.BookID;
 
-            var bookmarks = Program.context.UserBooks.Where(b => b.BookID == bookId).ToList();
+            var bookmarks = Program.context.UserBookmarks.Where(b => b.BookID == bookId).ToList();
 
             Dictionary<int, int> bookmarkCounts = new Dictionary<int, int>();
 
@@ -102,6 +102,12 @@ namespace Biblio.CustomControls
                     labelControl.Text = count.ToString();
                 }
             }
+        }
+
+        public void RefreshStatistics()
+        {
+            LoadRatings();
+            LoadBookmarks();
         }
     }
 }

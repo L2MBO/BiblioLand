@@ -1,4 +1,5 @@
 ﻿using Biblio.Classes.Customization;
+using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.Classes.Pdf.OpenPdf;
 using Biblio.CustomControls;
@@ -24,6 +25,7 @@ namespace Biblio.AppForms
     public partial class BookInfoForm : MaterialForm
     {
         private Books _book;
+        private int _currentUserId = Program.CurrentUser.UserID;
         private int _bookmarkX;
 
         public BookInfoForm(Books book)
@@ -83,6 +85,26 @@ namespace Biblio.AppForms
             descriptionLabel.Text = _book.Description;
 
             ShowStatisticsBooks();
+            UpdateBookmarkButtonText();
+            UpdateContinueReadingButtonText();
+        }
+
+        private void UpdateBookmarkButtonText()
+        {
+            var bookmark = Program.context.UserBookmarks.FirstOrDefault(
+                b => b.UserID == _currentUserId && b.BookID == _book.BookID);
+
+            if (bookmark != null)
+            {
+                var bookmarkName = Program.context.UserCategories.FirstOrDefault(category => category.CategoryID == bookmark.CategoryID);
+
+                newBookmarkButton.Text = bookmarkName.CategoryName;
+            }
+
+            else
+            {
+                newBookmarkButton.Text = "В закладки";
+            }
         }
 
         private void ShowRating()
@@ -95,10 +117,12 @@ namespace Biblio.AppForms
             {
                 ratingLabel.ForeColor = Color.Red;
             }
+
             else if (rating <= 8.0)
             {
                 ratingLabel.ForeColor = Color.Yellow;
             }
+
             else
             {
                 ratingLabel.ForeColor = Color.Green;
@@ -161,6 +185,56 @@ namespace Biblio.AppForms
             }
         }
 
+        private void UpdateBookmarkStatus()
+        {
+            var bookmark = Program.context.UserBookmarks.FirstOrDefault(
+                    b => b.UserID == _currentUserId && b.BookID == _book.BookID);
+
+            if (bookmark == null)
+            {
+                bookmark = new UserBookmarks
+                {
+                    UserID = _currentUserId,
+                    BookID = _book.BookID,
+                    CategoryID = 2,
+                    LastReadDate = DateTime.Now
+                };
+
+                Program.context.UserBookmarks.Add(bookmark);
+                Program.context.SaveChanges();
+
+                UpdateBookmarkButtonText();
+
+                var statsControl = statisticsPanel.Controls.OfType<StatisticsControl>().FirstOrDefault();
+                statsControl?.RefreshStatistics();
+            }
+            else
+            {
+                bookmark.LastReadDate = DateTime.Now;
+                Program.context.SaveChanges();
+            }
+        }
+
+        private void UpdateCurrentPage()
+        {
+            int currentPage = UserBookDataHelper.GetCurrentPage(_currentUserId, _book.BookID);
+
+            if (currentPage == 0)
+            {
+                UserBookDataHelper.SetCurrentPage(_currentUserId, _book.BookID, 1);
+            }
+        }
+
+        private void UpdateContinueReadingButtonText()
+        {
+            int currentPage = UserBookDataHelper.GetCurrentPage(_currentUserId, _book.BookID);
+
+            if (currentPage > 0)
+            {
+                continueReadingButton.Text = "Продолжить\nСтраница " + currentPage.ToString();
+            }
+        }
+
         private void BookInfoForm_SizeChanged(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
@@ -199,6 +273,9 @@ namespace Biblio.AppForms
         private void continueRadingButton_Click(object sender, EventArgs e)
         {
             PdfLoader.OpenPdfFile(_book.PdfPath);
+            UpdateBookmarkStatus();
+            UpdateCurrentPage();
+            UpdateContinueReadingButtonText();
         }
 
         private void newBookmarkButton_Click(object sender, EventArgs e)
@@ -209,12 +286,39 @@ namespace Biblio.AppForms
                 return;
             }
 
-            bookmarksControl = new BookmarksControl();
+            bookmarksControl = new BookmarksControl(_book, _currentUserId);
+            bookmarksControl.CategorySelected += BookmarksControl_CategorySelected;
+            bookmarksControl.BookmarkRemoved += BookmarksControl_BookmarkRemoved;
             UpdateBookmarksControlPosition();
 
             mainPanel.Controls.Add(bookmarksControl);
             bookmarksControl.BringToFront();
             bookmarksControl.Visible = true;
+
+            bookmarksControl.LoadBookmarkStatus();
+        }
+
+        private void BookmarksControl_CategorySelected(object sender, CategorySelectedEventArgs e)
+        {
+            newBookmarkButton.Text = e.CategoryName;
+
+            var statsControl = statisticsPanel.Controls.OfType<StatisticsControl>().FirstOrDefault();
+            statsControl?.RefreshStatistics();
+        }
+
+        private void BookmarksControl_BookmarkRemoved(object sender, EventArgs e)
+        {
+            continueReadingButton.Text = "Читать";
+
+            newBookmarkButton.Text = "В закладки";
+
+            var statsControl = statisticsPanel.Controls.OfType<StatisticsControl>().FirstOrDefault();
+            statsControl?.RefreshStatistics();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

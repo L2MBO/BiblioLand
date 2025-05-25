@@ -83,7 +83,6 @@ namespace Biblio.CustomControls
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка при обновлении прогресса чтения: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 

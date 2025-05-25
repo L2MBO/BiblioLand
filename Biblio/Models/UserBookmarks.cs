@@ -19,7 +19,7 @@ namespace Biblio.Models
 
         public int? CategoryID { get; set; }
 
-        public DateTime? AddedDate { get; set; }
+        public DateTime? LastReadDate { get; set; }
 
         public virtual Books Books { get; set; }
 

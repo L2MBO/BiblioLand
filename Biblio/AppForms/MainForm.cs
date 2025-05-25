@@ -22,6 +22,8 @@ using Biblio.Classes.Coding;
 using Biblio.Classes.Images.InstallingImages;
 using Org.BouncyCastle.Asn1.X509;
 using Biblio.Interface;
+using static Guna.UI2.Native.WinApi;
+using System.Net;
 
 namespace Biblio.AppForms
 {
@@ -89,14 +91,22 @@ namespace Biblio.AppForms
             {
                 int currentUserId = Program.CurrentUser.UserID;
 
-                var books = Program.context.UserBooks
-                    .Where(category => category.UserID == currentUserId && category.CategoryID == 2)
-                    .Select(category => category.BookID)
-                    .ToList();
+                var userBooksWithDates = Program.context.UserBookmarks
+            .Where(book => book.UserID == currentUserId && book.CurrentPage >= 1)
+            .Select(book => new
+            {
+                BookID = book.BookID,
+                LastReadDate = book.LastReadDate
+            })
+            .ToList();
+
+                var bookIds = userBooksWithDates.Select(b => b.BookID).ToList();
 
                 List<Books> filteredBooks = Program.context.Books
-                    .Where(book => books.Contains(book.BookID))
-                    .OrderByDescending(book => book.AddedDate)
+                    .Where(book => bookIds.Contains(book.BookID))
+                    .AsEnumerable()
+                    .OrderByDescending(book =>
+                        userBooksWithDates.FirstOrDefault(ub => ub.BookID == book.BookID)?.LastReadDate)
                     .ToList();
 
                 continueReadingPanel.Controls.Clear();
@@ -111,13 +121,6 @@ namespace Biblio.AppForms
 
                 foreach (Books book in filteredBooks)
                 {
-                    int currentPage = UserBookDataHelper.GetCurrentPage(currentUserId, book.BookID);
-
-                    if (currentPage == 0)
-                    {
-                        UserBookDataHelper.SetCurrentPage(currentUserId, book.BookID, 1);
-                    }
-
                     var bookControl = new ContinueReadingControl(book, currentUserId);
                     bookControl.Margin = new Padding(10);
                     bookControl.BookClicked += BookControl_BookClicked;

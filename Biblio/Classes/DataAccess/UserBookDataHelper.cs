@@ -17,7 +17,7 @@ namespace Biblio.Classes.DataAccess
         {
             try
             {
-                var userBook = Program.context.UserBooks.FirstOrDefault(ub => ub.UserID == userId && ub.BookID == bookId);
+                var userBook = Program.context.UserBookmarks.FirstOrDefault(ub => ub.UserID == userId && ub.BookID == bookId);
 
                 userBook.CurrentPage = currentPage;
                 Program.context.SaveChanges();
@@ -42,7 +42,7 @@ namespace Biblio.Classes.DataAccess
         {
             try
             {
-                var userBook = Program.context.UserBooks.FirstOrDefault(ub => ub.UserID == userId && ub.BookID == bookId);
+                var userBook = Program.context.UserBookmarks.FirstOrDefault(ub => ub.UserID == userId && ub.BookID == bookId);
 
                 if (userBook != null)
                 {

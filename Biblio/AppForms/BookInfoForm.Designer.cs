@@ -55,7 +55,7 @@
             this.panel25 = new System.Windows.Forms.Panel();
             this.newBookmarkButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.continueRadingButton = new Guna.UI2.WinForms.Guna2Button();
+            this.continueReadingButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel23 = new System.Windows.Forms.Panel();
             this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -273,6 +273,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(74, 21);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Оценить";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // genreLabel
             // 
@@ -321,7 +322,7 @@
             this.bookPanel.Controls.Add(this.panel25);
             this.bookPanel.Controls.Add(this.newBookmarkButton);
             this.bookPanel.Controls.Add(this.panel24);
-            this.bookPanel.Controls.Add(this.continueRadingButton);
+            this.bookPanel.Controls.Add(this.continueReadingButton);
             this.bookPanel.Controls.Add(this.panel23);
             this.bookPanel.Controls.Add(this.bookPictureBox);
             this.bookPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -391,25 +392,25 @@
             this.panel24.Size = new System.Drawing.Size(146, 10);
             this.panel24.TabIndex = 35;
             // 
-            // continueRadingButton
+            // continueReadingButton
             // 
-            this.continueRadingButton.Animated = true;
-            this.continueRadingButton.BorderRadius = 20;
-            this.continueRadingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.continueRadingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.continueRadingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.continueRadingButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.continueRadingButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.continueRadingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.continueRadingButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.continueRadingButton.ForeColor = System.Drawing.Color.White;
-            this.continueRadingButton.Location = new System.Drawing.Point(0, 226);
-            this.continueRadingButton.Name = "continueRadingButton";
-            this.continueRadingButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.continueRadingButton.Size = new System.Drawing.Size(146, 41);
-            this.continueRadingButton.TabIndex = 34;
-            this.continueRadingButton.Text = "Читать";
-            this.continueRadingButton.Click += new System.EventHandler(this.continueRadingButton_Click);
+            this.continueReadingButton.Animated = true;
+            this.continueReadingButton.BorderRadius = 20;
+            this.continueReadingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.continueReadingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.continueReadingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.continueReadingButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.continueReadingButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.continueReadingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.continueReadingButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.continueReadingButton.ForeColor = System.Drawing.Color.White;
+            this.continueReadingButton.Location = new System.Drawing.Point(0, 226);
+            this.continueReadingButton.Name = "continueReadingButton";
+            this.continueReadingButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.continueReadingButton.Size = new System.Drawing.Size(146, 41);
+            this.continueReadingButton.TabIndex = 34;
+            this.continueReadingButton.Text = "Читать";
+            this.continueReadingButton.Click += new System.EventHandler(this.continueRadingButton_Click);
             // 
             // panel23
             // 
@@ -445,7 +446,7 @@
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 38;
@@ -455,7 +456,7 @@
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
@@ -532,7 +533,7 @@
         private System.Windows.Forms.Panel panel25;
         private Guna.UI2.WinForms.Guna2Button newBookmarkButton;
         private System.Windows.Forms.Panel panel24;
-        private Guna.UI2.WinForms.Guna2Button continueRadingButton;
+        private Guna.UI2.WinForms.Guna2Button continueReadingButton;
         private System.Windows.Forms.Panel panel23;
         private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
         private System.Windows.Forms.Panel panel3;

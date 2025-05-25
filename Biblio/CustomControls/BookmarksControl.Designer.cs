@@ -30,17 +30,17 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cardButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bookButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.removeBookmarkButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.categoryButton5 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.categoryButton4 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.categoryButton3 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.categoryButton2 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.categoryButton1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,153 +59,42 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.guna2Button4);
+            this.panel1.Controls.Add(this.removeBookmarkButton);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.guna2Button3);
+            this.panel1.Controls.Add(this.categoryButton5);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.guna2Button2);
+            this.panel1.Controls.Add(this.categoryButton4);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.categoryButton3);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.cardButton);
+            this.panel1.Controls.Add(this.categoryButton2);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.bookButton);
+            this.panel1.Controls.Add(this.categoryButton1);
             this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(141, 170);
             this.panel1.TabIndex = 0;
             // 
-            // cardButton
+            // removeBookmarkButton
             // 
-            this.cardButton.Animated = true;
-            this.cardButton.BorderRadius = 10;
-            this.cardButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cardButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.cardButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.cardButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.cardButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.cardButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cardButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.cardButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cardButton.ForeColor = System.Drawing.Color.White;
-            this.cardButton.Location = new System.Drawing.Point(0, 30);
-            this.cardButton.Name = "cardButton";
-            this.cardButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.cardButton.Size = new System.Drawing.Size(141, 20);
-            this.cardButton.TabIndex = 5;
-            this.cardButton.Text = "Буду читать";
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(141, 10);
-            this.panel2.TabIndex = 4;
-            // 
-            // bookButton
-            // 
-            this.bookButton.Animated = true;
-            this.bookButton.BorderRadius = 10;
-            this.bookButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bookButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bookButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bookButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bookButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bookButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bookButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.bookButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bookButton.ForeColor = System.Drawing.Color.White;
-            this.bookButton.Location = new System.Drawing.Point(0, 0);
-            this.bookButton.Name = "bookButton";
-            this.bookButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.bookButton.Size = new System.Drawing.Size(141, 20);
-            this.bookButton.TabIndex = 2;
-            this.bookButton.Text = "Читаю";
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 50);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(141, 10);
-            this.panel3.TabIndex = 6;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 60);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2Button1.Size = new System.Drawing.Size(141, 20);
-            this.guna2Button1.TabIndex = 7;
-            this.guna2Button1.Text = "Прочитано";
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 80);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(141, 10);
-            this.panel4.TabIndex = 8;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(0, 90);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2Button2.Size = new System.Drawing.Size(141, 20);
-            this.guna2Button2.TabIndex = 9;
-            this.guna2Button2.Text = "Брошено";
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 110);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(141, 10);
-            this.panel5.TabIndex = 10;
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(0, 120);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2Button3.Size = new System.Drawing.Size(141, 20);
-            this.guna2Button3.TabIndex = 11;
-            this.guna2Button3.Text = "Отложено";
+            this.removeBookmarkButton.Animated = true;
+            this.removeBookmarkButton.BorderRadius = 10;
+            this.removeBookmarkButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.removeBookmarkButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.removeBookmarkButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.removeBookmarkButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.removeBookmarkButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.removeBookmarkButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.removeBookmarkButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.removeBookmarkButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.removeBookmarkButton.ForeColor = System.Drawing.Color.White;
+            this.removeBookmarkButton.Location = new System.Drawing.Point(0, 150);
+            this.removeBookmarkButton.Name = "removeBookmarkButton";
+            this.removeBookmarkButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.removeBookmarkButton.Size = new System.Drawing.Size(141, 20);
+            this.removeBookmarkButton.TabIndex = 13;
+            this.removeBookmarkButton.Text = "Удалить из закладок";
+            this.removeBookmarkButton.Visible = false;
             // 
             // panel6
             // 
@@ -215,25 +104,137 @@
             this.panel6.Size = new System.Drawing.Size(141, 10);
             this.panel6.TabIndex = 12;
             // 
-            // guna2Button4
+            // categoryButton5
             // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BorderRadius = 10;
-            this.guna2Button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(0, 150);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2Button4.Size = new System.Drawing.Size(141, 20);
-            this.guna2Button4.TabIndex = 13;
-            this.guna2Button4.Text = "Удалить из закладок";
+            this.categoryButton5.Animated = true;
+            this.categoryButton5.BorderRadius = 10;
+            this.categoryButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.categoryButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.categoryButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.categoryButton5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.categoryButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.categoryButton5.ForeColor = System.Drawing.Color.White;
+            this.categoryButton5.Location = new System.Drawing.Point(0, 120);
+            this.categoryButton5.Name = "categoryButton5";
+            this.categoryButton5.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryButton5.Size = new System.Drawing.Size(141, 20);
+            this.categoryButton5.TabIndex = 11;
+            this.categoryButton5.Text = "Отложено";
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 110);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(141, 10);
+            this.panel5.TabIndex = 10;
+            // 
+            // categoryButton4
+            // 
+            this.categoryButton4.Animated = true;
+            this.categoryButton4.BorderRadius = 10;
+            this.categoryButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.categoryButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.categoryButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.categoryButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.categoryButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.categoryButton4.ForeColor = System.Drawing.Color.White;
+            this.categoryButton4.Location = new System.Drawing.Point(0, 90);
+            this.categoryButton4.Name = "categoryButton4";
+            this.categoryButton4.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryButton4.Size = new System.Drawing.Size(141, 20);
+            this.categoryButton4.TabIndex = 9;
+            this.categoryButton4.Text = "Брошено";
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 80);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(141, 10);
+            this.panel4.TabIndex = 8;
+            // 
+            // categoryButton3
+            // 
+            this.categoryButton3.Animated = true;
+            this.categoryButton3.BorderRadius = 10;
+            this.categoryButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.categoryButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.categoryButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.categoryButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.categoryButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.categoryButton3.ForeColor = System.Drawing.Color.White;
+            this.categoryButton3.Location = new System.Drawing.Point(0, 60);
+            this.categoryButton3.Name = "categoryButton3";
+            this.categoryButton3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryButton3.Size = new System.Drawing.Size(141, 20);
+            this.categoryButton3.TabIndex = 7;
+            this.categoryButton3.Text = "Прочитано";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 50);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(141, 10);
+            this.panel3.TabIndex = 6;
+            // 
+            // categoryButton2
+            // 
+            this.categoryButton2.Animated = true;
+            this.categoryButton2.BorderRadius = 10;
+            this.categoryButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.categoryButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.categoryButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.categoryButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.categoryButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.categoryButton2.ForeColor = System.Drawing.Color.White;
+            this.categoryButton2.Location = new System.Drawing.Point(0, 30);
+            this.categoryButton2.Name = "categoryButton2";
+            this.categoryButton2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryButton2.Size = new System.Drawing.Size(141, 20);
+            this.categoryButton2.TabIndex = 5;
+            this.categoryButton2.Text = "Буду читать";
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 20);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(141, 10);
+            this.panel2.TabIndex = 4;
+            // 
+            // categoryButton1
+            // 
+            this.categoryButton1.Animated = true;
+            this.categoryButton1.BorderRadius = 10;
+            this.categoryButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.categoryButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.categoryButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.categoryButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.categoryButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.categoryButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.categoryButton1.ForeColor = System.Drawing.Color.White;
+            this.categoryButton1.Location = new System.Drawing.Point(0, 0);
+            this.categoryButton1.Name = "categoryButton1";
+            this.categoryButton1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryButton1.Size = new System.Drawing.Size(141, 20);
+            this.categoryButton1.TabIndex = 2;
+            this.categoryButton1.Text = "Читаю";
             // 
             // BookmarksControl
             // 
@@ -253,16 +254,16 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button cardButton;
+        private Guna.UI2.WinForms.Guna2Button categoryButton2;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button bookButton;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button categoryButton1;
+        private Guna.UI2.WinForms.Guna2Button removeBookmarkButton;
         private System.Windows.Forms.Panel panel6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button categoryButton5;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button categoryButton4;
         private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button categoryButton3;
         private System.Windows.Forms.Panel panel3;
     }
 }
