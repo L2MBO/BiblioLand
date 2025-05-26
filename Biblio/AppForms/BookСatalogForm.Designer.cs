@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookСatalogForm));
             this.mainPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -65,15 +67,27 @@
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 21;
             // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.AnimateWindow = true;
+            this.BorderlessForm.BorderRadius = 11;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessForm.DragForm = false;
+            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
+            // 
             // navigationControl
             // 
             this.navigationControl.AutoSize = true;
             this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
             // 
@@ -105,5 +119,6 @@
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel rightPanel;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
     }
 }

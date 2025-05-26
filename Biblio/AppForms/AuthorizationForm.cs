@@ -4,6 +4,7 @@ using Biblio.Classes.Hash;
 using Biblio.HideClasses;
 using Biblio.Models;
 using Biblio.ValidationClasses;
+using Guna.UI2.WinForms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
@@ -19,7 +20,7 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class AuthorizationForm : MaterialForm
+    public partial class AuthorizationForm : Form
     {
         public AuthorizationForm()
         {
@@ -81,8 +82,11 @@ namespace Biblio.AppForms
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            //ReleaseCapture();
+            //this.FindForm().Opacity = 0.7;
+
+            //SendMessage(this.Handle, 0x112, 0xf012, 0);
+            //this.FindForm().Opacity = 1;
         }
 
         private void closeButton_Click(object sender, EventArgs e) 

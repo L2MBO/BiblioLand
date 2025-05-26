@@ -1,5 +1,4 @@
-﻿using Biblio.CustomControls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class BookmarksForm : Form
+    public partial class BookTopForm : Form
     {
-        public BookmarksForm()
+        public BookTopForm()
         {
             InitializeComponent();
 
@@ -21,7 +20,7 @@ namespace Biblio.AppForms
             navigationControl.rightPanel = rightPanel;
         }
 
-        private void BookmarksForm_Resize(object sender, EventArgs e)
+        private void BookTopForm_Resize(object sender, EventArgs e)
         {
             navigationControl.HandleFormResize(this);
         }

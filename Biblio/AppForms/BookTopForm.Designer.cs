@@ -1,6 +1,6 @@
 ﻿namespace Biblio.AppForms
 {
-    partial class ProfileForm
+    partial class BookTopForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookTopForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,20 +48,6 @@
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             this.BorderlessForm.TransparentWhileDrag = true;
             // 
-            // navigationControl
-            // 
-            this.navigationControl.AutoSize = true;
-            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationControl.leftPanel = null;
-            this.navigationControl.LeftPanelWidth = 0;
-            this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Name = "navigationControl";
-            this.navigationControl.rightPanel = null;
-            this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(726, 52);
-            this.navigationControl.TabIndex = 2;
-            // 
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.rightPanel);
@@ -70,7 +56,7 @@
             this.mainPanel.Location = new System.Drawing.Point(0, 52);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
-            this.mainPanel.TabIndex = 3;
+            this.mainPanel.TabIndex = 4;
             // 
             // rightPanel
             // 
@@ -91,7 +77,21 @@
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 21;
             // 
-            // ProfileForm
+            // navigationControl
+            // 
+            this.navigationControl.AutoSize = true;
+            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
+            this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Name = "navigationControl";
+            this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.TabIndex = 3;
+            // 
+            // BookTopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,9 +101,11 @@
             this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "ProfileForm";
-            this.Text = "ProfileForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "BookTopForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TopForm";
+            this.Resize += new System.EventHandler(this.BookTopForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,9 +115,9 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
-        private CustomControls.NavigationControl navigationControl;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel leftPanel;
+        private CustomControls.NavigationControl navigationControl;
     }
 }

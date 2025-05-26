@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lastUpdatesPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -71,6 +73,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // FormRounded
+            // 
+            this.FormRounded.BorderRadius = 11;
+            this.FormRounded.ContainerControl = this;
+            this.FormRounded.DockIndicatorTransparencyValue = 0.6D;
+            this.FormRounded.DragForm = false;
+            this.FormRounded.ResizeForm = false;
             // 
             // mainPanel
             // 
@@ -327,12 +337,13 @@
             this.showMoreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.showMoreButton.Animated = true;
             this.showMoreButton.BorderRadius = 17;
+            this.showMoreButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showMoreButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.showMoreButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.showMoreButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.showMoreButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.showMoreButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.showMoreButton.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showMoreButton.Font = new System.Drawing.Font("Segoe UI", 10.875F);
             this.showMoreButton.ForeColor = System.Drawing.Color.White;
             this.showMoreButton.Location = new System.Drawing.Point(201, 2);
             this.showMoreButton.Margin = new System.Windows.Forms.Padding(2);
@@ -460,5 +471,6 @@
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.FlowLayoutPanel mainBooksPanel;
+        private Guna.UI2.WinForms.Guna2BorderlessForm FormRounded;
     }
 }

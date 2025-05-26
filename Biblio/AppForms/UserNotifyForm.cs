@@ -15,6 +15,14 @@ namespace Biblio.AppForms
         public UserNotifyForm()
         {
             InitializeComponent();
+
+            navigationControl.leftPanel = leftPanel;
+            navigationControl.rightPanel = rightPanel;
+        }
+
+        private void UserNotifyForm_Resize(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
         }
     }
 }

@@ -148,6 +148,7 @@
             // bookmarksButton
             // 
             this.bookmarksButton.Animated = true;
+            this.bookmarksButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bookmarksButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bookmarksButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.bookmarksButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -176,6 +177,7 @@
             // notificationsButton
             // 
             this.notificationsButton.Animated = true;
+            this.notificationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notificationsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.notificationsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.notificationsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

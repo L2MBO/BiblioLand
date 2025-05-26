@@ -22,8 +22,9 @@ using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
-    public partial class BookInfoForm : MaterialForm
+    public partial class BookInfoForm : Form
     {
+        private OverlayForm _overlayForm;
         private Books _book;
         private int _currentUserId = Program.CurrentUser.UserID;
         private int _bookmarkX;
@@ -340,10 +341,22 @@ namespace Biblio.AppForms
             UpdateEvaluationForm();
         }
 
+        public void ShowDialogWithOverlay(Form dialogForm)
+        {
+            _overlayForm = new OverlayForm(this);
+
+            _overlayForm.Show(this);
+
+            dialogForm.StartPosition = FormStartPosition.CenterParent;
+            dialogForm.FormClosed += (s, args) => _overlayForm.Close();
+
+            dialogForm.ShowDialog(this);
+        }
+
         private void evaluateButton_Click(object sender, EventArgs e)
         {
-            EvaluationForm form = new EvaluationForm(_book, _currentUserId, evaluateButton);
-            form.ShowDialog();
+            var form = new EvaluationForm(_book, _currentUserId, evaluateButton);
+            ShowDialogWithOverlay(form);
 
             ShowRating();
 
@@ -352,8 +365,8 @@ namespace Biblio.AppForms
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            BookReportForm form = new BookReportForm();
-            form.ShowDialog();
+            var form = new BookReportForm();
+            ShowDialogWithOverlay(form);
         }
     }
 }

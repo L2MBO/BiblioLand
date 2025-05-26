@@ -180,6 +180,12 @@
     <Compile Include="AppForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\OverlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\OverlayForm.Designer.cs">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\ProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,11 +222,11 @@
     <Compile Include="AppForms\StoreForm.Designer.cs">
       <DependentUpon>StoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\TopForm.cs">
+    <Compile Include="AppForms\BookTopForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\TopForm.Designer.cs">
-      <DependentUpon>TopForm.cs</DependentUpon>
+    <Compile Include="AppForms\BookTopForm.Designer.cs">
+      <DependentUpon>BookTopForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\BookСatalogForm.cs">
       <SubType>Form</SubType>
@@ -243,9 +249,9 @@
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\SendMessageCode.cs" />
-    <Compile Include="Classes\Customization\AutoScrollHelper.cs" />
+    <Compile Include="Classes\Customization\FormCustomization\AutoScrollHelper.cs" />
     <Compile Include="Classes\Customization\ImagesCustomization\BlurImage.cs" />
-    <Compile Include="Classes\Customization\RoundingHelper.cs" />
+    <Compile Include="Classes\Customization\FormCustomization\RoundingHelper.cs" />
     <Compile Include="Classes\Customization\ImagesCustomization\WhiteLevelReducer.cs" />
     <Compile Include="Classes\DataAccess\UserAvatarDataHelper.cs" />
     <Compile Include="Classes\DataAccess\UserBookDataHelper.cs" />
@@ -337,11 +343,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Validation\ValidationHelper.cs" />
+    <EmbeddedResource Include="AppForms\AddBookForm.resx">
+      <DependentUpon>AddBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AddCardForm.resx">
+      <DependentUpon>AddCardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\BookInfoForm.resx">
       <DependentUpon>BookInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\BookmarksForm.resx">
+      <DependentUpon>BookmarksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\BookReportForm.resx">
       <DependentUpon>BookReportForm.cs</DependentUpon>
@@ -360,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\OverlayForm.resx">
+      <DependentUpon>OverlayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
@@ -385,8 +403,14 @@
     <EmbeddedResource Include="AppForms\StoreForm.resx">
       <DependentUpon>StoreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\TopForm.resx">
-      <DependentUpon>TopForm.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\BookTopForm.resx">
+      <DependentUpon>BookTopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\UserNotifyForm.resx">
+      <DependentUpon>UserNotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\UserTopForm.resx">
+      <DependentUpon>UserTopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AddContentControl.resx">
       <DependentUpon>AddContentControl.cs</DependentUpon>

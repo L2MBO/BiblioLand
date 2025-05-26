@@ -24,6 +24,7 @@ using Org.BouncyCastle.Asn1.X509;
 using Biblio.Interface;
 using static Guna.UI2.Native.WinApi;
 using System.Net;
+using Guna.UI2.WinForms;
 
 namespace Biblio.AppForms
 {
@@ -58,7 +59,6 @@ namespace Biblio.AppForms
             addContentControl = new AddContentControl();
         }
 
-        
         private void ShowMainBooks()
         {
             List<Books> books = Program.context.Books.Where(category => category.CategoryID == 1).OrderBy(name => name.Title).ToList();
@@ -92,13 +92,13 @@ namespace Biblio.AppForms
                 int currentUserId = Program.CurrentUser.UserID;
 
                 var userBooksWithDates = Program.context.UserBookmarks
-            .Where(book => book.UserID == currentUserId && book.CurrentPage >= 1)
-            .Select(book => new
-            {
-                BookID = book.BookID,
-                LastReadDate = book.LastReadDate
-            })
-            .ToList();
+                    .Where(book => book.UserID == currentUserId && book.CurrentPage >= 1)
+                    .Select(book => new
+                        {
+                            BookID = book.BookID,
+                            LastReadDate = book.LastReadDate
+                        })
+                    .ToList();
 
                 var bookIds = userBooksWithDates.Select(b => b.BookID).ToList();
 
@@ -139,7 +139,10 @@ namespace Biblio.AppForms
 
         private void ShowPopularBooks()
         {
-            List<Books> books = Program.context.Books.Where(category => category.CategoryID == 3).OrderBy(name => name.Title).ToList();
+            List<Books> books = Program.context.Books
+                .Where(category => category.CategoryID == 3)
+                .OrderBy(name => name.Title)
+                .ToList();
             foreach (Books book in books)
             {
                 var bookControl = new MainControl(book);
@@ -155,7 +158,10 @@ namespace Biblio.AppForms
         private void ShowLastUpdates()
         {
             DateTime now = DateTime.Now;
-            var books = Program.context.Books.Where(addDate => addDate.AddedDate != null).OrderByDescending(date => date.AddedDate).ToList();
+            var books = Program.context.Books
+                .Where(addDate => addDate.AddedDate != null)
+                .OrderByDescending(date => date.AddedDate)
+                .ToList();
             int booksToShow = Math.Min(_displayedBooksCount, books.Count);
 
             while (lastUpdatesPanel.Controls.Count > booksToShow)
@@ -205,7 +211,6 @@ namespace Biblio.AppForms
             ShowContinueReadingBooks();
             ShowPopularBooks();
             ShowLastUpdates();
-            //ImageLoader.LoadAvatarImage(avatarPictureBox);
         }
 
         private void showMoreButton_Click(object sender, EventArgs e)

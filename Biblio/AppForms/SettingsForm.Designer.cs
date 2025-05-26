@@ -28,21 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.navigationControl1 = new Biblio.CustomControls.NavigationControl();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.rightPanel = new System.Windows.Forms.Panel();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.AnimateWindow = true;
+            this.BorderlessForm.BorderRadius = 11;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessForm.DragForm = false;
+            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
+            // 
+            // navigationControl1
+            // 
+            this.navigationControl1.AutoSize = true;
+            this.navigationControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl1.leftPanel = null;
+            this.navigationControl1.LeftPanelWidth = 0;
+            this.navigationControl1.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl1.Name = "navigationControl1";
+            this.navigationControl1.rightPanel = null;
+            this.navigationControl1.RightPanelWidth = 0;
+            this.navigationControl1.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl1.TabIndex = 0;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.rightPanel);
+            this.mainPanel.Controls.Add(this.leftPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 52);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(726, 378);
+            this.mainPanel.TabIndex = 3;
+            // 
+            // rightPanel
+            // 
+            this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightPanel.Location = new System.Drawing.Point(626, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.Size = new System.Drawing.Size(100, 378);
+            this.rightPanel.TabIndex = 22;
+            // 
+            // leftPanel
+            // 
+            this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftPanel.Location = new System.Drawing.Point(0, 0);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(100, 378);
+            this.leftPanel.TabIndex = 21;
             // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.ClientSize = new System.Drawing.Size(726, 430);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.navigationControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingsForm";
             this.Text = "SettingsForm";
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private CustomControls.NavigationControl navigationControl;
+        private CustomControls.NavigationControl navigationControl1;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel rightPanel;
+        private System.Windows.Forms.Panel leftPanel;
     }
 }

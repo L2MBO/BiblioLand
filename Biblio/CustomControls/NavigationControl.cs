@@ -1,5 +1,7 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Customization;
+using Biblio.Classes.Images.InstallingImages;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,7 +50,7 @@ namespace Biblio.CustomControls
             // Навигация по формам
             mainButton.Click += (s, e) => OpenForm<MainForm>();
             catalogButton.Click += (s, e) => OpenForm<BookСatalogForm>();
-            topButton.Click += (s, e) => OpenForm<TopForm>();
+            topButton.Click += (s, e) => OpenForm<BookTopForm>();
             bookmarksButton.Click += (s, e) => OpenForm<BookmarksForm>();
             notificationsButton.Click += (s, e) => OpenForm<UserNotifyForm>();
 
@@ -63,6 +65,17 @@ namespace Biblio.CustomControls
             topRightPanel.MouseDown += Form_MouseDown;
             topNavigationPanel.MouseDown += Form_MouseDown;
             bottomNavigationPanel.MouseDown += Form_MouseDown;
+
+            // подгрузка аватара пользователя
+            //this.Load += NavigationControl_Load;
+        }
+
+        private void NavigationControl_Load(object sender, EventArgs e)
+        {
+            if (!DesignMode)
+            {
+                ImageLoader.LoadAvatarImage(avatarPictureBox);
+            }
         }
 
         private void OpenForm<T>() where T : Form, new()
@@ -75,6 +88,10 @@ namespace Biblio.CustomControls
                 newForm.Owner = parentForm;
                 parentForm.Hide();
             }
+
+            newForm.StartPosition = FormStartPosition.Manual;
+            newForm.Location = parentForm.Location;
+            newForm.WindowState = parentForm.WindowState;
 
             newForm.Show();
         }
@@ -147,9 +164,16 @@ namespace Biblio.CustomControls
 
         public void HandleFormResize(Form form)
         {
+            var borderlessForm = form.GetType()
+                .GetFields(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
+                .FirstOrDefault(f => f.FieldType == typeof(Guna2BorderlessForm))?
+                .GetValue(form) as Guna2BorderlessForm;
+
+
             if (form.WindowState == FormWindowState.Maximized)
             {
-                RoundingHelper.SetRoundedRegion(form, 0, 0);
+                if (borderlessForm != null)
+                    borderlessForm.BorderRadius = 0;
                 maximizeButton.Visible = false;
                 restoreButton.Visible = true;
                 if (leftPanel != null) leftPanel.Width = 300;
@@ -163,7 +187,8 @@ namespace Biblio.CustomControls
             }
             else
             {
-                RoundingHelper.SetRoundedRegion(form, 11, 11);
+                if (borderlessForm != null)
+                    borderlessForm.BorderRadius = 11;
                 maximizeButton.Visible = true;
                 restoreButton.Visible = false;
                 if (leftPanel != null) leftPanel.Width = 100;
@@ -193,7 +218,10 @@ namespace Biblio.CustomControls
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
+            this.FindForm().Opacity = 0.7;
+
             SendMessage(FindForm().Handle, 0x112, 0xf012, 0);
+            this.FindForm().Opacity = 1;
         }
 
         public void OnControlOpenChanged(object sender, EventArgs e)

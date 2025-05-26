@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookInfoForm));
             this.mainPanel = new System.Windows.Forms.Panel();
             this.statisticsPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -45,6 +46,7 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.ratingCountLabel = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.evaluateButton = new Guna.UI2.WinForms.Guna2Button();
             this.genreLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.authorLabel = new System.Windows.Forms.Label();
@@ -60,8 +62,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.evaluateButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.mainPanel.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -255,6 +257,27 @@
             this.panel15.Size = new System.Drawing.Size(105, 21);
             this.panel15.TabIndex = 4;
             // 
+            // evaluateButton
+            // 
+            this.evaluateButton.Animated = true;
+            this.evaluateButton.BorderRadius = 10;
+            this.evaluateButton.DefaultAutoSize = true;
+            this.evaluateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.evaluateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.evaluateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.evaluateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.evaluateButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.evaluateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.evaluateButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.evaluateButton.ForeColor = System.Drawing.Color.White;
+            this.evaluateButton.Location = new System.Drawing.Point(27, 0);
+            this.evaluateButton.Name = "evaluateButton";
+            this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
+            this.evaluateButton.TabIndex = 2;
+            this.evaluateButton.Text = "Оценить";
+            this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
+            // 
             // genreLabel
             // 
             this.genreLabel.AutoSize = true;
@@ -442,27 +465,6 @@
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
             // 
-            // evaluateButton
-            // 
-            this.evaluateButton.Animated = true;
-            this.evaluateButton.BorderRadius = 10;
-            this.evaluateButton.DefaultAutoSize = true;
-            this.evaluateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.evaluateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.evaluateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.evaluateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.evaluateButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.evaluateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.evaluateButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.evaluateButton.ForeColor = System.Drawing.Color.White;
-            this.evaluateButton.Location = new System.Drawing.Point(27, 0);
-            this.evaluateButton.Name = "evaluateButton";
-            this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
-            this.evaluateButton.TabIndex = 2;
-            this.evaluateButton.Text = "Оценить";
-            this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
-            // 
             // navigationControl
             // 
             this.navigationControl.AutoSize = true;
@@ -478,6 +480,15 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
             // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.AnimateWindow = true;
+            this.BorderlessForm.BorderRadius = 11;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
+            // 
             // BookInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,6 +497,7 @@
             this.ClientSize = new System.Drawing.Size(726, 430);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.navigationControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BookInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -548,5 +560,6 @@
         private System.Windows.Forms.Label descriptionLabel;
         private System.Windows.Forms.Panel panel12;
         private Guna.UI2.WinForms.Guna2Button evaluateButton;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
     }
 }

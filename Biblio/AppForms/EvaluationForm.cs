@@ -28,8 +28,6 @@ namespace Biblio.AppForms
             _currentUserId = currentUserId;
             _evaluateButton = evaluateButton;
 
-            RoundingHelper.SetRoundedRegion(this, 38, 38);
-
             LoadExistingRating();
             UpdateButtonColors();
             UpdateEvaluateButtonText();

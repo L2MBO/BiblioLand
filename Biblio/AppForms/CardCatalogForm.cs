@@ -16,5 +16,10 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
         }
+
+        private void navigationControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
