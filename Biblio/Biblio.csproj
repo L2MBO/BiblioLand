@@ -482,21 +482,6 @@
   <ItemGroup>
     <None Include="Resources\visiblePussword.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logIn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registration.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registr.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\autoriz.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\passwordRecovery.png" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\defaultAvatar.png" />
@@ -509,9 +494,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\greyLine.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\newPassword.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\squareGreyLine.png" />
@@ -529,13 +511,7 @@
     <None Include="Resources\maximaze.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blackMaximaze.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\restore.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blackrestore.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blackClose.png" />
@@ -544,46 +520,22 @@
     <None Include="Resources\magnifyingGlass.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blackMagnifyingGlass.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bookmark.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blackBookmark.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bell.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blackBell.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\rank.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blackRank.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cards.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blackCards.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\rightArrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blackRightArrow.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\chat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blackChat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blackGear.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear.png" />
@@ -592,13 +544,7 @@
     <None Include="Resources\store.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blackStore.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\download.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blackDownload.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\coin.png" />
