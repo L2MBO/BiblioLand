@@ -273,7 +273,7 @@
             this.evaluateButton.Location = new System.Drawing.Point(27, 0);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
@@ -474,6 +474,7 @@
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
             // 
             // navigationControl
             // 

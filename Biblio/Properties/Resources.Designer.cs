@@ -83,59 +83,9 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap autoriz {
-            get {
-                object obj = ResourceManager.GetObject("autoriz", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bell {
             get {
                 object obj = ResourceManager.GetObject("bell", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackBell {
-            get {
-                object obj = ResourceManager.GetObject("blackBell", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackBookmark {
-            get {
-                object obj = ResourceManager.GetObject("blackBookmark", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackCards {
-            get {
-                object obj = ResourceManager.GetObject("blackCards", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackChat {
-            get {
-                object obj = ResourceManager.GetObject("blackChat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,86 +106,6 @@ namespace Biblio.Properties {
         internal static System.Drawing.Bitmap blackCollapse {
             get {
                 object obj = ResourceManager.GetObject("blackCollapse", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackDownload {
-            get {
-                object obj = ResourceManager.GetObject("blackDownload", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackGear {
-            get {
-                object obj = ResourceManager.GetObject("blackGear", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackMagnifyingGlass {
-            get {
-                object obj = ResourceManager.GetObject("blackMagnifyingGlass", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackMaximaze {
-            get {
-                object obj = ResourceManager.GetObject("blackMaximaze", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackRank {
-            get {
-                object obj = ResourceManager.GetObject("blackRank", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackrestore {
-            get {
-                object obj = ResourceManager.GetObject("blackrestore", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackRightArrow {
-            get {
-                object obj = ResourceManager.GetObject("blackRightArrow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap blackStore {
-            get {
-                object obj = ResourceManager.GetObject("blackStore", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -371,16 +241,6 @@ namespace Biblio.Properties {
         }
         
         /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logIn {
-            get {
-                object obj = ResourceManager.GetObject("logIn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
         /// </summary>
         internal static System.Drawing.Icon logo {
@@ -423,29 +283,9 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap newPassword {
-            get {
-                object obj = ResourceManager.GetObject("newPassword", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap noResults {
             get {
                 object obj = ResourceManager.GetObject("noResults", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap passwordRecovery {
-            get {
-                object obj = ResourceManager.GetObject("passwordRecovery", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -476,26 +316,6 @@ namespace Biblio.Properties {
         internal static System.Drawing.Bitmap reading {
             get {
                 object obj = ResourceManager.GetObject("reading", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap registr {
-            get {
-                object obj = ResourceManager.GetObject("registr", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap registration {
-            get {
-                object obj = ResourceManager.GetObject("registration", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

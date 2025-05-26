@@ -124,53 +124,14 @@
   <data name="abandoned" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abandoned.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="autoriz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\autoriz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bell" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackBell" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackBell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackBookmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackBookmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackCards" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackCards.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackChat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackChat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blackClose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blackClose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blackCollapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blackCollapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackDownload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackDownload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackGear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackGear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackMagnifyingGlass" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackMagnifyingGlass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackMaximaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackMaximaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackRank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackRank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackrestore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackrestore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackRightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackRightArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackStore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackStore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bookmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,9 +169,6 @@
   <data name="greyLine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\greyLine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logIn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logIn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,14 +184,8 @@
   <data name="maximaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximaze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newPassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newPassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="noResults" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\noResults.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="passwordRecovery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\passwordRecovery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="postponed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\postponed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -243,12 +195,6 @@
   </data>
   <data name="reading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reading.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="registr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\registr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="registration" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\registration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
