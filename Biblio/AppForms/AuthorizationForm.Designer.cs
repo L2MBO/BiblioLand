@@ -39,13 +39,13 @@
             this.visiblePassword = new System.Windows.Forms.PictureBox();
             this.timerLabel = new System.Windows.Forms.Label();
             this.blockLogInLabel = new System.Windows.Forms.Label();
-            this.logInButton = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logInButton = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.registrationButton = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.registrationButton = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.collapseButton = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
@@ -53,10 +53,8 @@
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.unvisiblePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visiblePassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logInButton)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrationButton)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collapseButton)).BeginInit();
@@ -181,18 +179,6 @@
             this.blockLogInLabel.Text = "Повторите попытку через:";
             this.blockLogInLabel.Visible = false;
             // 
-            // logInButton
-            // 
-            this.logInButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logInButton.Image = global::Biblio.Properties.Resources.logIn;
-            this.logInButton.Location = new System.Drawing.Point(90, 270);
-            this.logInButton.Name = "logInButton";
-            this.logInButton.Size = new System.Drawing.Size(118, 34);
-            this.logInButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.logInButton.TabIndex = 10;
-            this.logInButton.TabStop = false;
-            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.logInButton);
@@ -209,6 +195,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 326);
             this.panel1.TabIndex = 0;
+            // 
+            // logInButton
+            // 
+            this.logInButton.Animated = true;
+            this.logInButton.BorderRadius = 17;
+            this.logInButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logInButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logInButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logInButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logInButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logInButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.logInButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.logInButton.ForeColor = System.Drawing.Color.White;
+            this.logInButton.IndicateFocus = true;
+            this.logInButton.Location = new System.Drawing.Point(90, 270);
+            this.logInButton.Name = "logInButton";
+            this.logInButton.PressedColor = System.Drawing.Color.Maroon;
+            this.logInButton.Size = new System.Drawing.Size(118, 34);
+            this.logInButton.TabIndex = 3;
+            this.logInButton.Text = "ВХОД";
+            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
             // 
             // pictureBox2
             // 
@@ -242,29 +249,40 @@
             this.label3.Text = "Введи свои личные данные и начни путешествие вместе с нами";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // registrationButton
-            // 
-            this.registrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registrationButton.Image = global::Biblio.Properties.Resources.registr;
-            this.registrationButton.Location = new System.Drawing.Point(81, 204);
-            this.registrationButton.Name = "registrationButton";
-            this.registrationButton.Size = new System.Drawing.Size(152, 34);
-            this.registrationButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.registrationButton.TabIndex = 11;
-            this.registrationButton.TabStop = false;
-            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.registrationButton);
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(300, 24);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 326);
             this.panel2.TabIndex = 1;
+            // 
+            // registrationButton
+            // 
+            this.registrationButton.Animated = true;
+            this.registrationButton.BorderColor = System.Drawing.Color.White;
+            this.registrationButton.BorderRadius = 17;
+            this.registrationButton.BorderThickness = 1;
+            this.registrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registrationButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.registrationButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.registrationButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.registrationButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.registrationButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.registrationButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationButton.ForeColor = System.Drawing.Color.White;
+            this.registrationButton.IndicateFocus = true;
+            this.registrationButton.Location = new System.Drawing.Point(81, 204);
+            this.registrationButton.Name = "registrationButton";
+            this.registrationButton.PressedColor = System.Drawing.Color.Maroon;
+            this.registrationButton.Size = new System.Drawing.Size(152, 34);
+            this.registrationButton.TabIndex = 4;
+            this.registrationButton.Text = "РЕГИСТРАЦИЯ";
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // pictureBox3
             // 
@@ -319,6 +337,7 @@
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
             // 
             // AuthorizationForm
             // 
@@ -336,11 +355,9 @@
             this.Text = "AuthorizationForm";
             ((System.ComponentModel.ISupportInitialize)(this.unvisiblePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visiblePassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logInButton)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrationButton)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -358,11 +375,9 @@
         private System.Windows.Forms.PictureBox collapseButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox registrationButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox logInButton;
         private System.Windows.Forms.Label blockLogInLabel;
         private System.Windows.Forms.Label timerLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -373,5 +388,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField passwordTextField;
         private MaterialSkin.Controls.MaterialSingleLineTextField nameTextField;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private Guna.UI2.WinForms.Guna2Button logInButton;
+        private Guna.UI2.WinForms.Guna2Button registrationButton;
     }
 }

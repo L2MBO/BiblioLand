@@ -118,6 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="authorizationButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
+  </data>
+  <data name="authorizationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 225</value>
+  </data>
+  <data name="authorizationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="authorizationButton.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="authorizationButton.Text" xml:space="preserve">
+    <value>АВТОРИЗАЦИЯ</value>
+  </data>
+  <data name="&gt;&gt;authorizationButton.Name" xml:space="preserve">
+    <value>authorizationButton</value>
+  </data>
+  <data name="&gt;&gt;authorizationButton.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;authorizationButton.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;authorizationButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, -4</value>
   </data>
@@ -128,7 +156,6 @@
   <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
@@ -142,114 +169,6 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="autorizationButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="autorizationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="autorizationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 225</value>
-  </data>
-  <data name="autorizationButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 34</value>
-  </data>
-  <data name="autorizationButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="autorizationButton.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;autorizationButton.Name" xml:space="preserve">
-    <value>autorizationButton</value>
-  </data>
-  <data name="&gt;&gt;autorizationButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;autorizationButton.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;autorizationButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
@@ -339,6 +258,33 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="registrationButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
+  </data>
+  <data name="registrationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 259</value>
+  </data>
+  <data name="registrationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 34</value>
+  </data>
+  <data name="registrationButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="registrationButton.Text" xml:space="preserve">
+    <value>ЗАРЕГИСТРИРОВАТЬСЯ</value>
+  </data>
+  <data name="&gt;&gt;registrationButton.Name" xml:space="preserve">
+    <value>registrationButton</value>
+  </data>
+  <data name="&gt;&gt;registrationButton.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;registrationButton.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;registrationButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>-11, -4</value>
   </data>
@@ -361,33 +307,6 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="registrationButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="registrationButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 259</value>
-  </data>
-  <data name="registrationButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 34</value>
-  </data>
-  <data name="registrationButton.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="registrationButton.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;registrationButton.Name" xml:space="preserve">
-    <value>registrationButton</value>
-  </data>
-  <data name="&gt;&gt;registrationButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;registrationButton.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;registrationButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="mailTextField.Font" type="System.Drawing.Font, System.Drawing">

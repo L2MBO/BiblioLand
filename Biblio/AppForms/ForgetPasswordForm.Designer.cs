@@ -36,16 +36,15 @@
             this.ResendVerificationCodeLabel = new System.Windows.Forms.Label();
             this.verificationCodeTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.VerificationCodeInfoLabel = new System.Windows.Forms.Label();
-            this.recoverPasswordButton = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.mailTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.whitePanel = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.collapseButton = new System.Windows.Forms.PictureBox();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.recoverPasswordButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.recoverPasswordButton)).BeginInit();
             this.whitePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collapseButton)).BeginInit();
@@ -53,12 +52,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.recoverPasswordButton);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.timerLabel);
             this.panel1.Controls.Add(this.ResendVerificationCodeLabel);
             this.panel1.Controls.Add(this.verificationCodeTextField);
             this.panel1.Controls.Add(this.VerificationCodeInfoLabel);
-            this.panel1.Controls.Add(this.recoverPasswordButton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.mailTextField);
             this.panel1.Location = new System.Drawing.Point(0, 24);
@@ -117,7 +116,7 @@
             this.verificationCodeTextField.SelectionLength = 0;
             this.verificationCodeTextField.SelectionStart = 0;
             this.verificationCodeTextField.Size = new System.Drawing.Size(223, 23);
-            this.verificationCodeTextField.TabIndex = 19;
+            this.verificationCodeTextField.TabIndex = 2;
             this.verificationCodeTextField.UseSystemPasswordChar = false;
             this.verificationCodeTextField.Visible = false;
             // 
@@ -131,19 +130,6 @@
             this.VerificationCodeInfoLabel.Text = "Мы отправили на вашу почту код подтверждения, пожалуйста введите его в поле ниже";
             this.VerificationCodeInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.VerificationCodeInfoLabel.Visible = false;
-            // 
-            // recoverPasswordButton
-            // 
-            this.recoverPasswordButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.recoverPasswordButton.Image = global::Biblio.Properties.Resources.passwordRecovery;
-            this.recoverPasswordButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.recoverPasswordButton.Location = new System.Drawing.Point(37, 296);
-            this.recoverPasswordButton.Name = "recoverPasswordButton";
-            this.recoverPasswordButton.Size = new System.Drawing.Size(224, 34);
-            this.recoverPasswordButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.recoverPasswordButton.TabIndex = 17;
-            this.recoverPasswordButton.TabStop = false;
-            this.recoverPasswordButton.Click += new System.EventHandler(this.recoverPasswordButton_Click);
             // 
             // label1
             // 
@@ -170,7 +156,7 @@
             this.mailTextField.SelectionLength = 0;
             this.mailTextField.SelectionStart = 0;
             this.mailTextField.Size = new System.Drawing.Size(223, 23);
-            this.mailTextField.TabIndex = 2;
+            this.mailTextField.TabIndex = 1;
             this.mailTextField.UseSystemPasswordChar = false;
             // 
             // whitePanel
@@ -216,6 +202,29 @@
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
+            // 
+            // recoverPasswordButton
+            // 
+            this.recoverPasswordButton.Animated = true;
+            this.recoverPasswordButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.recoverPasswordButton.BorderRadius = 17;
+            this.recoverPasswordButton.BorderThickness = 1;
+            this.recoverPasswordButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.recoverPasswordButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.recoverPasswordButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.recoverPasswordButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.recoverPasswordButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(45)))), ((int)(((byte)(168)))));
+            this.recoverPasswordButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recoverPasswordButton.ForeColor = System.Drawing.Color.White;
+            this.recoverPasswordButton.IndicateFocus = true;
+            this.recoverPasswordButton.Location = new System.Drawing.Point(37, 296);
+            this.recoverPasswordButton.Name = "recoverPasswordButton";
+            this.recoverPasswordButton.PressedColor = System.Drawing.Color.Indigo;
+            this.recoverPasswordButton.Size = new System.Drawing.Size(224, 34);
+            this.recoverPasswordButton.TabIndex = 3;
+            this.recoverPasswordButton.Text = "ВОССТАНОВИТЬ ПАРОЛЬ";
+            this.recoverPasswordButton.Click += new System.EventHandler(this.recoverPasswordButton_Click);
             // 
             // ForgetPasswordForm
             // 
@@ -224,6 +233,7 @@
             this.ClientSize = new System.Drawing.Size(300, 400);
             this.Controls.Add(this.whitePanel);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ForgetPasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,7 +241,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.recoverPasswordButton)).EndInit();
             this.whitePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collapseButton)).EndInit();
@@ -244,7 +253,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialSingleLineTextField mailTextField;
-        private System.Windows.Forms.PictureBox recoverPasswordButton;
         private MaterialSkin.Controls.MaterialSingleLineTextField verificationCodeTextField;
         private System.Windows.Forms.Label VerificationCodeInfoLabel;
         private System.Windows.Forms.Label ResendVerificationCodeLabel;
@@ -254,5 +262,6 @@
         private System.Windows.Forms.PictureBox collapseButton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private Guna.UI2.WinForms.Guna2Button recoverPasswordButton;
     }
 }

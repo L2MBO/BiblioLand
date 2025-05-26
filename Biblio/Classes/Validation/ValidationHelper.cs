@@ -24,6 +24,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using DnsClient;
+using Guna.UI2.WinForms;
 
 namespace Biblio.ValidationClasses
 {
@@ -31,7 +32,7 @@ namespace Biblio.ValidationClasses
     {
         private int _failedAttempts = 0;
 
-        public bool ValidateLogIn(MaterialSingleLineTextField loginField, MaterialSingleLineTextField passwordField, Label loginInfo, Label timeInfo, PictureBox loginButton)
+        public bool ValidateLogIn(MaterialSingleLineTextField loginField, MaterialSingleLineTextField passwordField, Label loginInfo, Label timeInfo, Guna2Button loginButton)
         {
             List<Users> users = Program.context.Users.ToList();
             string login = loginField.Text;

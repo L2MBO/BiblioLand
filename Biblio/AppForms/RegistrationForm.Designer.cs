@@ -32,12 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.autorizationButton = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.registrationButton = new System.Windows.Forms.PictureBox();
             this.mailTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.confirmPasswordTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.visiblePassword = new System.Windows.Forms.PictureBox();
@@ -50,12 +48,12 @@
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.collapseButton = new System.Windows.Forms.PictureBox();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.registrationButton = new Guna.UI2.WinForms.Guna2Button();
+            this.authorizationButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autorizationButton)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrationButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visiblePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unvisiblePassword)).BeginInit();
             this.whitePanel.SuspendLayout();
@@ -66,8 +64,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(47)))));
+            this.panel2.Controls.Add(this.authorizationButton);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.autorizationButton);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             resources.ApplyResources(this.panel2, "panel2");
@@ -79,14 +77,6 @@
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
-            // 
-            // autorizationButton
-            // 
-            this.autorizationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.autorizationButton, "autorizationButton");
-            this.autorizationButton.Name = "autorizationButton";
-            this.autorizationButton.TabStop = false;
-            this.autorizationButton.Click += new System.EventHandler(this.autorizationButton_Click);
             // 
             // label3
             // 
@@ -102,8 +92,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.registrationButton);
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.mailTextField);
             this.panel1.Controls.Add(this.confirmPasswordTextField);
             this.panel1.Controls.Add(this.visiblePassword);
@@ -120,15 +110,6 @@
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
-            // 
-            // registrationButton
-            // 
-            this.registrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registrationButton.Image = global::Biblio.Properties.Resources.registration;
-            resources.ApplyResources(this.registrationButton, "registrationButton");
-            this.registrationButton.Name = "registrationButton";
-            this.registrationButton.TabStop = false;
-            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // mailTextField
             // 
@@ -255,6 +236,41 @@
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             this.BorderlessForm.TransparentWhileDrag = true;
             // 
+            // registrationButton
+            // 
+            this.registrationButton.Animated = true;
+            this.registrationButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.registrationButton.BorderRadius = 17;
+            this.registrationButton.BorderThickness = 1;
+            this.registrationButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.registrationButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.registrationButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.registrationButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.registrationButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(47)))));
+            resources.ApplyResources(this.registrationButton, "registrationButton");
+            this.registrationButton.ForeColor = System.Drawing.Color.White;
+            this.registrationButton.IndicateFocus = true;
+            this.registrationButton.Name = "registrationButton";
+            this.registrationButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
+            // 
+            // authorizationButton
+            // 
+            this.authorizationButton.Animated = true;
+            this.authorizationButton.BorderColor = System.Drawing.Color.White;
+            this.authorizationButton.BorderRadius = 17;
+            this.authorizationButton.BorderThickness = 1;
+            this.authorizationButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.authorizationButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.authorizationButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.authorizationButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.authorizationButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(47)))));
+            resources.ApplyResources(this.authorizationButton, "authorizationButton");
+            this.authorizationButton.ForeColor = System.Drawing.Color.White;
+            this.authorizationButton.Name = "authorizationButton";
+            this.authorizationButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.authorizationButton.Click += new System.EventHandler(this.authorizationButton_Click);
+            // 
             // RegistrationForm
             // 
             resources.ApplyResources(this, "$this");
@@ -267,11 +283,9 @@
             this.Name = "RegistrationForm";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autorizationButton)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrationButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visiblePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unvisiblePassword)).EndInit();
             this.whitePanel.ResumeLayout(false);
@@ -292,10 +306,8 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField nameTextField;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox autorizationButton;
         private MaterialSkin.Controls.MaterialSingleLineTextField mailTextField;
         private MaterialSkin.Controls.MaterialSingleLineTextField confirmPasswordTextField;
-        private System.Windows.Forms.PictureBox registrationButton;
         private System.Windows.Forms.Panel orangePanel;
         private System.Windows.Forms.Panel whitePanel;
         private System.Windows.Forms.PictureBox closeButton;
@@ -303,5 +315,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private Guna.UI2.WinForms.Guna2Button authorizationButton;
+        private Guna.UI2.WinForms.Guna2Button registrationButton;
     }
 }

@@ -45,7 +45,7 @@ namespace Biblio.AppForms
             VisibilityHelper.HidePassword(passwordFields, visiblePassword, unvisiblePassword);
         }
 
-        private void autorizationButton_Click(object sender, EventArgs e)
+        private void authorizationButton_Click(object sender, EventArgs e)
         {
             AuthorizationForm form = new AuthorizationForm();
             form.Show();

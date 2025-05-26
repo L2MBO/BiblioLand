@@ -36,17 +36,16 @@
             this.unvisiblePassword = new System.Windows.Forms.PictureBox();
             this.passwordTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.changePasswordButton = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.whitePanel = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.collapseButton = new System.Windows.Forms.PictureBox();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.changePasswordButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.visiblePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unvisiblePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePasswordButton)).BeginInit();
             this.whitePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collapseButton)).BeginInit();
@@ -54,12 +53,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.changePasswordButton);
             this.panel1.Controls.Add(this.confirmPasswordTextField);
             this.panel1.Controls.Add(this.visiblePassword);
             this.panel1.Controls.Add(this.unvisiblePassword);
             this.panel1.Controls.Add(this.passwordTextField);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.changePasswordButton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
@@ -81,7 +80,7 @@
             this.confirmPasswordTextField.SelectionLength = 0;
             this.confirmPasswordTextField.SelectionStart = 0;
             this.confirmPasswordTextField.Size = new System.Drawing.Size(190, 23);
-            this.confirmPasswordTextField.TabIndex = 26;
+            this.confirmPasswordTextField.TabIndex = 2;
             this.confirmPasswordTextField.UseSystemPasswordChar = false;
             // 
             // visiblePassword
@@ -126,7 +125,7 @@
             this.passwordTextField.SelectionLength = 0;
             this.passwordTextField.SelectionStart = 0;
             this.passwordTextField.Size = new System.Drawing.Size(190, 23);
-            this.passwordTextField.TabIndex = 23;
+            this.passwordTextField.TabIndex = 1;
             this.passwordTextField.UseSystemPasswordChar = false;
             // 
             // pictureBox2
@@ -138,19 +137,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
-            // 
-            // changePasswordButton
-            // 
-            this.changePasswordButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.changePasswordButton.Image = global::Biblio.Properties.Resources.newPassword;
-            this.changePasswordButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.changePasswordButton.Location = new System.Drawing.Point(66, 296);
-            this.changePasswordButton.Name = "changePasswordButton";
-            this.changePasswordButton.Size = new System.Drawing.Size(170, 34);
-            this.changePasswordButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.changePasswordButton.TabIndex = 17;
-            this.changePasswordButton.TabStop = false;
-            this.changePasswordButton.Click += new System.EventHandler(this.changePasswordButton_Click);
             // 
             // label1
             // 
@@ -205,6 +191,29 @@
             this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
+            // 
+            // changePasswordButton
+            // 
+            this.changePasswordButton.Animated = true;
+            this.changePasswordButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.changePasswordButton.BorderRadius = 17;
+            this.changePasswordButton.BorderThickness = 1;
+            this.changePasswordButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.changePasswordButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.changePasswordButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.changePasswordButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.changePasswordButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
+            this.changePasswordButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changePasswordButton.ForeColor = System.Drawing.Color.White;
+            this.changePasswordButton.IndicateFocus = true;
+            this.changePasswordButton.Location = new System.Drawing.Point(66, 296);
+            this.changePasswordButton.Name = "changePasswordButton";
+            this.changePasswordButton.PressedColor = System.Drawing.Color.MidnightBlue;
+            this.changePasswordButton.Size = new System.Drawing.Size(170, 34);
+            this.changePasswordButton.TabIndex = 3;
+            this.changePasswordButton.Text = "СМЕНИТЬ ПАРОЛЬ";
+            this.changePasswordButton.Click += new System.EventHandler(this.changePasswordButton_Click);
             // 
             // RecoverPasswordForm
             // 
@@ -213,6 +222,7 @@
             this.ClientSize = new System.Drawing.Size(300, 400);
             this.Controls.Add(this.whitePanel);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RecoverPasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -221,7 +231,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.visiblePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unvisiblePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changePasswordButton)).EndInit();
             this.whitePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collapseButton)).EndInit();
@@ -233,7 +242,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox changePasswordButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel whitePanel;
         private System.Windows.Forms.PictureBox closeButton;
@@ -243,5 +251,6 @@
         private System.Windows.Forms.PictureBox unvisiblePassword;
         private MaterialSkin.Controls.MaterialSingleLineTextField passwordTextField;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private Guna.UI2.WinForms.Guna2Button changePasswordButton;
     }
 }

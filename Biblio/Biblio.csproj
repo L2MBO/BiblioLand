@@ -497,9 +497,7 @@
   <ItemGroup>
     <None Include="Resources\passwordRecovery.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Docs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\defaultAvatar.png" />
   </ItemGroup>
