@@ -1,5 +1,6 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Customization;
+using Biblio.HideClasses;
 using Biblio.Interface;
 using Biblio.Models;
 using System;
@@ -31,7 +32,11 @@ namespace Biblio.CustomControls
         {
             booksPanel.Controls.Clear();
 
-            List<Books> books = Program.context.Books.Where(book => book.OftenSearched == 1).OrderBy(name => name.Title).ToList();
+            List<Books> books = Program.context.Books
+                .Where(book => book.OftenSearched == 1)
+                .OrderBy(name => name.Title)
+                .ToList();
+
             foreach (Books book in books)
             {
                 var bookControl = new BookSearchControl((Form)_parent, book);
@@ -44,7 +49,7 @@ namespace Biblio.CustomControls
         private void BookControl_BookClicked(object sender, Books book)
         {
             var bookInfoForm = new BookInfoForm(book);
-            bookInfoForm.Show();
+            VisibilityHelper.ShowNewForm(this.FindForm(), bookInfoForm);
             this.Parent.Hide();
         }
 
@@ -65,10 +70,10 @@ namespace Biblio.CustomControls
             else
             {
                 List<Books> filteredBooks = Program.context.Books
-                    .Where(book =>
-                        book.Title.ToLower().Contains(result) ||
-                        book.Author.ToLower().Contains(result))
-                    .OrderBy(book => book.Title).ToList();
+                    .Where(book => book.Title.ToLower()
+                    .Contains(result) || book.Author.ToLower().Contains(result))
+                    .OrderBy(book => book.Title)
+                    .ToList();
 
                 if (filteredBooks.Count > 0)
                 {
@@ -115,7 +120,7 @@ namespace Biblio.CustomControls
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
     }
 }

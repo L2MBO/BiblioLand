@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgetPasswordForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,7 @@
             this.whitePanel = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.collapseButton = new System.Windows.Forms.PictureBox();
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recoverPasswordButton)).BeginInit();
@@ -180,6 +182,7 @@
             this.whitePanel.Name = "whitePanel";
             this.whitePanel.Size = new System.Drawing.Size(300, 24);
             this.whitePanel.TabIndex = 19;
+            this.whitePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // closeButton
             // 
@@ -204,6 +207,15 @@
             this.collapseButton.TabIndex = 19;
             this.collapseButton.TabStop = false;
             this.collapseButton.Click += new System.EventHandler(this.collapseButton_Click);
+            // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.AnimateWindow = true;
+            this.BorderlessForm.BorderRadius = 20;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessForm.DragForm = false;
+            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             // 
             // ForgetPasswordForm
             // 
@@ -241,5 +253,6 @@
         private System.Windows.Forms.PictureBox closeButton;
         private System.Windows.Forms.PictureBox collapseButton;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
     }
 }

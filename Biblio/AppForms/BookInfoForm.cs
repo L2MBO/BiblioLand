@@ -33,14 +33,19 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
 
+            _book = book;
+
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
             this.DoubleBuffered = true;
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
             UpdateStyles();
 
             AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: false, disableVertical: true);
-
-            _book = book;
 
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;

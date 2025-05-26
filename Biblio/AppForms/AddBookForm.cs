@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblio.CustomControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace Biblio.AppForms
         public AddBookForm()
         {
             InitializeComponent();
+        }
+
+        private void AddBookForm_Resize(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
         }
     }
 }

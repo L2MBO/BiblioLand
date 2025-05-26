@@ -30,8 +30,8 @@
         {
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.bookPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.authorLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
+            this.authorLabel = new System.Windows.Forms.Label();
             this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.mainPanel.SuspendLayout();
             this.bookPanel.SuspendLayout();
@@ -48,6 +48,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(244, 69);
             this.mainPanel.TabIndex = 0;
+            this.mainPanel.Click += new System.EventHandler(this.BookSearchControl_Click);
             // 
             // bookPanel
             // 
@@ -58,6 +59,18 @@
             this.bookPanel.Name = "bookPanel";
             this.bookPanel.Size = new System.Drawing.Size(228, 53);
             this.bookPanel.TabIndex = 0;
+            this.bookPanel.Click += new System.EventHandler(this.BookSearchControl_Click);
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoEllipsis = true;
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(49, 21);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(174, 26);
+            this.nameLabel.TabIndex = 4;
+            this.nameLabel.Text = "Название";
+            this.nameLabel.Click += new System.EventHandler(this.BookSearchControl_Click);
             // 
             // authorLabel
             // 
@@ -69,16 +82,7 @@
             this.authorLabel.Size = new System.Drawing.Size(31, 12);
             this.authorLabel.TabIndex = 3;
             this.authorLabel.Text = "Автор";
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoEllipsis = true;
-            this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(49, 21);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(174, 26);
-            this.nameLabel.TabIndex = 4;
-            this.nameLabel.Text = "Название";
+            this.authorLabel.Click += new System.EventHandler(this.BookSearchControl_Click);
             // 
             // bookPictureBox
             // 
@@ -91,6 +95,7 @@
             this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bookPictureBox.TabIndex = 2;
             this.bookPictureBox.TabStop = false;
+            this.bookPictureBox.Click += new System.EventHandler(this.BookSearchControl_Click);
             // 
             // BookSearchControl
             // 
@@ -101,6 +106,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "BookSearchControl";
             this.Size = new System.Drawing.Size(245, 70);
+            this.Click += new System.EventHandler(this.BookSearchControl_Click);
             this.mainPanel.ResumeLayout(false);
             this.bookPanel.ResumeLayout(false);
             this.bookPanel.PerformLayout();

@@ -1,6 +1,8 @@
 ﻿using Biblio.AppForms;
+using Biblio.Classes.Animations;
 using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.HideClasses;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -41,6 +43,9 @@ namespace Biblio.CustomControls
         {
             InitializeComponent();
 
+            // подгрузка аватара пользователя
+            this.Load += NavigationControl_Load;
+
             // Привязка событий кнопок
             closeButton.Click += (s, e) => Application.Exit();
             minimizeButton.Click += (s, e) => FindForm().WindowState = FormWindowState.Minimized;
@@ -53,21 +58,6 @@ namespace Biblio.CustomControls
             topButton.Click += (s, e) => OpenForm<BookTopForm>();
             bookmarksButton.Click += (s, e) => OpenForm<BookmarksForm>();
             notificationsButton.Click += (s, e) => OpenForm<UserNotifyForm>();
-
-            // Поиск и другие элементы
-            searchButton.Click += searchButton_Click;
-            otherButton.Click += otherButton_Click;
-            avatarPictureBox.Click += avatarPictureBox_Click;
-
-            // Перемещение формы
-            this.MouseDown += Form_MouseDown;
-            topLeftPanel.MouseDown += Form_MouseDown;
-            topRightPanel.MouseDown += Form_MouseDown;
-            topNavigationPanel.MouseDown += Form_MouseDown;
-            bottomNavigationPanel.MouseDown += Form_MouseDown;
-
-            // подгрузка аватара пользователя
-            //this.Load += NavigationControl_Load;
         }
 
         private void NavigationControl_Load(object sender, EventArgs e)
@@ -89,11 +79,7 @@ namespace Biblio.CustomControls
                 parentForm.Hide();
             }
 
-            newForm.StartPosition = FormStartPosition.Manual;
-            newForm.Location = parentForm.Location;
-            newForm.WindowState = parentForm.WindowState;
-
-            newForm.Show();
+            VisibilityHelper.ShowNewForm(parentForm, newForm);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -124,7 +110,6 @@ namespace Biblio.CustomControls
             }
 
             otherControl = new OtherControl();
-            otherControl.OpenChanged += OnControlOpenChanged;
             otherControl.Location = new Point(otherButton.Left + _otherX, otherButton.Bottom + 10);
             FindForm().Controls.Add(otherControl);
             otherControl.BringToFront();
@@ -142,7 +127,6 @@ namespace Biblio.CustomControls
             }
 
             avatarControl = new AvatarControl(FindForm());
-            avatarControl.OpenChanged += OnControlOpenChanged;
             avatarControl.Location = new Point(avatarPictureBox.Right + _avatarX, avatarPictureBox.Bottom + 10);
             FindForm().Controls.Add(avatarControl);
             avatarControl.BringToFront();
@@ -179,7 +163,7 @@ namespace Biblio.CustomControls
                 if (leftPanel != null) leftPanel.Width = 300;
                 if (rightPanel != null) rightPanel.Width = 300;
                 topLeftPanel.Width = 300;
-                topRightPanel.Width = 300;
+                panel1.Width = 300;
                 searchButton.Width = 300;
                 searchButton.Text = "Что ищем, читатель?";
                 _otherX = 300;
@@ -194,7 +178,7 @@ namespace Biblio.CustomControls
                 if (leftPanel != null) leftPanel.Width = 100;
                 if (rightPanel != null) rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
-                topRightPanel.Width = 100;
+                panel1.Width = 100;
                 searchButton.Width = 136;
                 searchButton.Text = "Что ищем?";
                 _otherX = 100;
@@ -217,11 +201,7 @@ namespace Biblio.CustomControls
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            this.FindForm().Opacity = 0.7;
-
-            SendMessage(FindForm().Handle, 0x112, 0xf012, 0);
-            this.FindForm().Opacity = 1;
+            FormDrag.DragingForm(FindForm());
         }
 
         public void OnControlOpenChanged(object sender, EventArgs e)

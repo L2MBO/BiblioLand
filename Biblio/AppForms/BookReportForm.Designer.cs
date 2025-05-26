@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookReportForm));
+            this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.SuspendLayout();
             // 
-            // guna2BorderlessForm1
+            // FormRounded
             // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 200;
-            this.guna2BorderlessForm1.BorderRadius = 25;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.2D;
-            this.guna2BorderlessForm1.DragForm = false;
-            this.guna2BorderlessForm1.HasFormShadow = false;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.FormRounded.AnimateWindow = true;
+            this.FormRounded.AnimationInterval = 200;
+            this.FormRounded.BorderRadius = 25;
+            this.FormRounded.ContainerControl = this;
+            this.FormRounded.DockIndicatorTransparencyValue = 0.6D;
+            this.FormRounded.DragEndTransparencyValue = 0.2D;
+            this.FormRounded.DragForm = false;
+            this.FormRounded.HasFormShadow = false;
+            this.FormRounded.TransparentWhileDrag = true;
             // 
             // BookReportForm
             // 
@@ -51,7 +52,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.ClientSize = new System.Drawing.Size(181, 189);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BookReportForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookReportForm";
             this.ResumeLayout(false);
@@ -60,6 +63,6 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm FormRounded;
     }
 }

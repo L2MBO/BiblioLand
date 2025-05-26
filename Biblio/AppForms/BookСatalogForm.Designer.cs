@@ -105,7 +105,6 @@
             this.Name = "BookСatalogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "СatalogForm";
-            this.Load += new System.EventHandler(this.BookСatalogForm_Load);
             this.Resize += new System.EventHandler(this.BookСatalogForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);

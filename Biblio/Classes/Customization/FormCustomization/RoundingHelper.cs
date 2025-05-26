@@ -42,14 +42,5 @@ namespace Biblio.Classes.Customization
                 panel.Region = System.Drawing.Region.FromHrgn(region);
             }
         }
-
-        public static void SetRoundedRegion(PictureBox pictureBox, int widthEllipse, int heightEllipse)
-        {
-            IntPtr region = CreateRoundRectRgn(0, 0, pictureBox.Width, pictureBox.Height, widthEllipse, heightEllipse);
-            if (region != IntPtr.Zero)
-            {
-                pictureBox.Region = System.Drawing.Region.FromHrgn(region);
-            }
-        }
     }
 }

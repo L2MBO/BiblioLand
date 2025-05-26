@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.Customization;
+﻿using Biblio.Classes.Animations;
+using Biblio.Classes.Customization;
 using Biblio.HideClasses;
 using Biblio.ValidationClasses;
 using MaterialSkin;
@@ -15,18 +16,26 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class RecoverPasswordForm : MaterialForm
+    public partial class RecoverPasswordForm : Form
     {
+        private ValidationHelper _validationHelper;
+        private string _userEmail;
+
         public RecoverPasswordForm(ValidationHelper validationHelper, string userEmail)
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            RoundingHelper.SetRoundedRegion(this, 20, 20);
-            whitePanel.MouseDown += Form_MouseDown;
+
             _validationHelper = validationHelper;
             _userEmail = userEmail;
+
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
+            var materialSkinManager = MaterialSkinManager.Instance;
+
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
         private void visiblePassword_Click(object sender, EventArgs e)
@@ -41,9 +50,6 @@ namespace Biblio.AppForms
             VisibilityHelper.HidePassword(passwordFields, visiblePassword, unvisiblePassword);
         }
 
-        private ValidationHelper _validationHelper;
-        private string _userEmail;
-
         private async void changePasswordButton_Click(object sender, EventArgs e)
         {
             MaterialSingleLineTextField[] fields = { passwordTextField, confirmPasswordTextField };
@@ -56,7 +62,7 @@ namespace Biblio.AppForms
                     {
                         AuthorizationForm form = new AuthorizationForm();
                         form.Show();
-                        this.Close();
+                        this.Hide();
                     }
                 }
             }
@@ -64,14 +70,14 @@ namespace Biblio.AppForms
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            FormDrag.DragingForm(this);
         }
 
         private void closeButton_Click(object sender, EventArgs e) 
         {
-            this.Owner.Show();
-            this.Close();
+            ForgetPasswordForm form = new ForgetPasswordForm();
+            form.Show();
+            this.Hide();
         }
 
         private void collapseButton_Click(object sender, EventArgs e)

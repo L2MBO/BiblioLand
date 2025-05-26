@@ -51,7 +51,6 @@
             this.navigationControl.RightPanelWidth = 0;
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 1;
-            this.navigationControl.Load += new System.EventHandler(this.navigationControl_Load);
             // 
             // mainPanel
             // 
@@ -102,10 +101,11 @@
             this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CardCatalogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CardCatalogForm";
+            this.Resize += new System.EventHandler(this.CardCatalogForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

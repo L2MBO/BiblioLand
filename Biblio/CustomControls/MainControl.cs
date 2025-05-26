@@ -19,7 +19,6 @@ namespace Biblio.CustomControls
     {
         private Books _book;
         public event EventHandler<Books> BookClicked;
-        public event EventHandler OpenChanged;
 
         public MainControl(Books books)
         {
@@ -27,10 +26,16 @@ namespace Biblio.CustomControls
 
             _book = books;
 
+            LoadMainInfo();
+        }
+
+        private void LoadMainInfo()
+        {
             authorLabel.Text = _book.Author.ToString();
             nameLabel.Text = _book.Title.ToString();
 
             Image image = ImageLoader.LoadBookImage(_book.ImagePath);
+
             if (image != null)
             {
                 bookPictureBox.Image = image;
@@ -41,21 +46,10 @@ namespace Biblio.CustomControls
             ratingLabel.Text = ((double)_book.AverageRating).ToString("F1", CultureInfo.InvariantCulture);
 
             RoundingHelper.SetRoundedRegion(ratingPanel, 20, 20);
-
-            this.Click += MainControl_Click;
-            bookPictureBox.Click += MainControl_Click;
-            authorLabel.Click += MainControl_Click;
-            nameLabel.Click += MainControl_Click;
-            infoPanel.Click += MainControl_Click;
-            ratingLabel.Click += MainControl_Click;
-            ratingPanel.Click += MainControl_Click;
-            starPictureBox.Click += MainControl_Click;
-            starPanel.Click += MainControl_Click;
         }
 
         private void MainControl_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             BookClicked?.Invoke(this, _book);
         }
     }

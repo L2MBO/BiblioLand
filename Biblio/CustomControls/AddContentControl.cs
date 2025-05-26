@@ -1,5 +1,6 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Customization;
+using Biblio.HideClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,6 @@ namespace Biblio.CustomControls
 {
     public partial class AddContentControl : UserControl
     {
-        public event EventHandler OpenChanged;
 
         public AddContentControl()
         {
@@ -25,17 +25,15 @@ namespace Biblio.CustomControls
 
         private void bookButton_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             AddBookForm form = new AddBookForm();
-            form.Show();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
             this.Parent.Hide();
         }
 
         private void cardButton_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             AddCardForm form = new AddCardForm();
-            form.Show();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
             this.Parent.Hide();
         }
     }

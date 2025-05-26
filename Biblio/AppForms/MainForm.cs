@@ -25,6 +25,7 @@ using Biblio.Interface;
 using static Guna.UI2.Native.WinApi;
 using System.Net;
 using Guna.UI2.WinForms;
+using Biblio.HideClasses;
 
 namespace Biblio.AppForms
 {
@@ -40,6 +41,13 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
 
+            SetFormStyle();
+
+            addContentControl = new AddContentControl();
+        }
+
+        private void SetFormStyle()
+        {
             AutoScrollHelper.ConfigureScrollbars(mainBooksPanel, disableHorizontal: true, disableVertical: false);
             AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: true, disableVertical: true);
             AutoScrollHelper.ConfigureScrollbars(newBooksPanel, disableHorizontal: true, disableVertical: false);
@@ -55,8 +63,6 @@ namespace Biblio.AppForms
                 Title = "",
                 ImagePath = ""
             });
-
-            addContentControl = new AddContentControl();
         }
 
         private void ShowMainBooks()
@@ -67,7 +73,6 @@ namespace Biblio.AppForms
                 var bookControl = new MainControl(book);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
-                bookControl.OpenChanged += OnControlOpenChanged;
                 mainBooksPanel.Controls.Add(bookControl);
             }
         }
@@ -80,7 +85,6 @@ namespace Biblio.AppForms
                 var bookControl = new MainControl(book);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
-                bookControl.OpenChanged += OnControlOpenChanged;
                 newBooksPanel.Controls.Add(bookControl);
             }
         }
@@ -124,7 +128,6 @@ namespace Biblio.AppForms
                     var bookControl = new ContinueReadingControl(book, currentUserId);
                     bookControl.Margin = new Padding(10);
                     bookControl.BookClicked += BookControl_BookClicked;
-                    bookControl.OpenChanged += OnControlOpenChanged;
                     continueReadingPanel.Controls.Add(bookControl);
                 }
             }
@@ -148,7 +151,6 @@ namespace Biblio.AppForms
                 var bookControl = new MainControl(book);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
-                bookControl.OpenChanged += OnControlOpenChanged;
                 popularBooksPanel.Controls.Add(bookControl);
             }
         }
@@ -183,25 +185,17 @@ namespace Biblio.AppForms
                 bookControl.SetTime(timeAgo);
                 bookControl.Margin = new Padding(10);
                 bookControl.BookClicked += BookControl_BookClicked;
-                bookControl.OpenChanged += OnControlOpenChanged;
                 lastUpdatesPanel.Controls.Add(bookControl);
             }
 
             showMoreButton.Visible = (_displayedBooksCount < books.Count);
         }
 
-        public void OnControlOpenChanged(object sender, EventArgs e)
-        {
-            if (sender is Control control && control.Visible)
-            {
-                this.Hide();
-            }
-        }
-
         private void BookControl_BookClicked(object sender, Books book)
         {
             var bookInfoForm = new BookInfoForm(book);
-            bookInfoForm.Show();
+            VisibilityHelper.ShowNewForm(this, bookInfoForm);
+            this.Hide();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

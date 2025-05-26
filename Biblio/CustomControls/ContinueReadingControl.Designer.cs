@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.infoPanel = new System.Windows.Forms.Panel();
             this.readingBookProgressBar = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.readingBookProgressLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.bookPictureBox = new System.Windows.Forms.PictureBox();
             this.mainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.rightPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -51,17 +51,32 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(275, 94);
             this.mainPanel.TabIndex = 2;
+            this.mainPanel.Click += new System.EventHandler(this.ContinueReadingControl_Click);
+            // 
+            // bookPictureBox
+            // 
+            this.bookPictureBox.BorderRadius = 12;
+            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bookPictureBox.ImageRotate = 0F;
+            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.bookPictureBox.Name = "bookPictureBox";
+            this.bookPictureBox.Size = new System.Drawing.Size(64, 94);
+            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bookPictureBox.TabIndex = 4;
+            this.bookPictureBox.TabStop = false;
+            this.bookPictureBox.Click += new System.EventHandler(this.ContinueReadingControl_Click);
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.rightPanel.Controls.Add(this.infoPanel);
-            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightPanel.Location = new System.Drawing.Point(64, 0);
             this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(211, 94);
-            this.rightPanel.TabIndex = 2;
+            this.rightPanel.TabIndex = 5;
+            this.rightPanel.Click += new System.EventHandler(this.ContinueReadingControl_Click);
             // 
             // infoPanel
             // 
@@ -74,6 +89,7 @@
             this.infoPanel.Name = "infoPanel";
             this.infoPanel.Size = new System.Drawing.Size(199, 75);
             this.infoPanel.TabIndex = 3;
+            this.infoPanel.Click += new System.EventHandler(this.ContinueReadingControl_Click);
             // 
             // readingBookProgressBar
             // 
@@ -101,6 +117,7 @@
             this.readingBookProgressLabel.Size = new System.Drawing.Size(199, 37);
             this.readingBookProgressLabel.TabIndex = 5;
             this.readingBookProgressLabel.Text = "Страница ? из ?";
+            this.readingBookProgressLabel.Click += new System.EventHandler(this.ContinueReadingControl_Click);
             // 
             // nameLabel
             // 
@@ -114,18 +131,7 @@
             this.nameLabel.Size = new System.Drawing.Size(199, 36);
             this.nameLabel.TabIndex = 3;
             this.nameLabel.Text = "Название";
-            // 
-            // bookPictureBox
-            // 
-            this.bookPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.bookPictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.bookPictureBox.Name = "bookPictureBox";
-            this.bookPictureBox.Size = new System.Drawing.Size(64, 94);
-            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bookPictureBox.TabIndex = 1;
-            this.bookPictureBox.TabStop = false;
+            this.nameLabel.Click += new System.EventHandler(this.ContinueReadingControl_Click);
             // 
             // ContinueReadingControl
             // 
@@ -133,13 +139,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.Controls.Add(this.mainPanel);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ContinueReadingControl";
             this.Size = new System.Drawing.Size(290, 109);
+            this.Click += new System.EventHandler(this.ContinueReadingControl_Click);
             this.mainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.rightPanel.ResumeLayout(false);
             this.infoPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,11 +155,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel mainPanel;
+        private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel infoPanel;
         private Guna.UI2.WinForms.Guna2ProgressBar readingBookProgressBar;
         private System.Windows.Forms.Label readingBookProgressLabel;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.PictureBox bookPictureBox;
     }
 }

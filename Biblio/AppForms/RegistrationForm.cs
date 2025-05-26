@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.ConfirmationCode;
+﻿using Biblio.Classes.Animations;
+using Biblio.Classes.ConfirmationCode;
 using Biblio.Classes.Customization;
 using Biblio.HideClasses;
 using Biblio.ValidationClasses;
@@ -16,17 +17,20 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class RegistrationForm : MaterialForm
+    public partial class RegistrationForm : Form
     {
         public RegistrationForm()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
+
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
             var materialSkinManager = MaterialSkinManager.Instance;
+
             materialSkinManager.ColorScheme = new ColorScheme(Primary.DeepOrange700, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            RoundingHelper.SetRoundedRegion(this, 20, 20);
-            orangePanel.MouseDown += Form_MouseDown;
-            whitePanel.MouseDown += Form_MouseDown;
         }
 
         private void visiblePassword_Click(object sender, EventArgs e)
@@ -43,8 +47,9 @@ namespace Biblio.AppForms
 
         private void autorizationButton_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
-            this.Close();
+            AuthorizationForm form = new AuthorizationForm();
+            form.Show();
+            this.Hide();
         }
 
         private async void registrationButton_Click(object sender, EventArgs e)
@@ -57,7 +62,12 @@ namespace Biblio.AppForms
                 {
                     if (ValidationHelper.ValidationPasswordField(passwordTextField, confirmPasswordTextField))
                     {
-                        ValidationHelper.ValidationRegistration(nameTextField, mailTextField, passwordTextField, confirmPasswordTextField);
+                        if(ValidationHelper.ValidationRegistration(nameTextField, mailTextField, passwordTextField, confirmPasswordTextField))
+                        {
+                            AuthorizationForm form = new AuthorizationForm();
+                            form.Show();
+                            this.Hide();
+                        }
                     }
                 }
             }
@@ -65,8 +75,7 @@ namespace Biblio.AppForms
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            FormDrag.DragingForm(this);
         }
 
         private void closeButton_Click(object sender, EventArgs e)

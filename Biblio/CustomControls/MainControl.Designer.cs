@@ -59,6 +59,7 @@
             this.infoPanel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.infoPanel.Size = new System.Drawing.Size(146, 65);
             this.infoPanel.TabIndex = 1;
+            this.infoPanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // nameLabel
             // 
@@ -73,6 +74,7 @@
             this.nameLabel.Size = new System.Drawing.Size(146, 36);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Название";
+            this.nameLabel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // authorLabel
             // 
@@ -88,6 +90,7 @@
             this.authorLabel.Size = new System.Drawing.Size(146, 18);
             this.authorLabel.TabIndex = 0;
             this.authorLabel.Text = "Автор";
+            this.authorLabel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // imagePanel
             // 
@@ -99,6 +102,7 @@
             this.imagePanel.Name = "imagePanel";
             this.imagePanel.Size = new System.Drawing.Size(146, 216);
             this.imagePanel.TabIndex = 2;
+            this.imagePanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // ratingPanel
             // 
@@ -110,6 +114,7 @@
             this.ratingPanel.Name = "ratingPanel";
             this.ratingPanel.Size = new System.Drawing.Size(65, 23);
             this.ratingPanel.TabIndex = 2;
+            this.ratingPanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // ratingTextPanel
             // 
@@ -120,6 +125,7 @@
             this.ratingTextPanel.Name = "ratingTextPanel";
             this.ratingTextPanel.Size = new System.Drawing.Size(38, 23);
             this.ratingTextPanel.TabIndex = 3;
+            this.ratingTextPanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // ratingLabel
             // 
@@ -133,6 +139,7 @@
             this.ratingLabel.TabIndex = 1;
             this.ratingLabel.Text = "0.0";
             this.ratingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ratingLabel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // starPanel
             // 
@@ -143,6 +150,7 @@
             this.starPanel.Name = "starPanel";
             this.starPanel.Size = new System.Drawing.Size(22, 23);
             this.starPanel.TabIndex = 3;
+            this.starPanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // starPictureBox
             // 
@@ -154,6 +162,7 @@
             this.starPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.starPictureBox.TabIndex = 1;
             this.starPictureBox.TabStop = false;
+            this.starPictureBox.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // bookPictureBox
             // 
@@ -167,6 +176,7 @@
             this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bookPictureBox.TabIndex = 3;
             this.bookPictureBox.TabStop = false;
+            this.bookPictureBox.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // MainControl
             // 
@@ -179,6 +189,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainControl";
             this.Size = new System.Drawing.Size(146, 281);
+            this.Click += new System.EventHandler(this.MainControl_Click);
             this.infoPanel.ResumeLayout(false);
             this.imagePanel.ResumeLayout(false);
             this.ratingPanel.ResumeLayout(false);

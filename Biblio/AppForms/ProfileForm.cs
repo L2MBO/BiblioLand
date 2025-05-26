@@ -15,6 +15,19 @@ namespace Biblio.AppForms
         public ProfileForm()
         {
             InitializeComponent();
+
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
+            navigationControl.leftPanel = leftPanel;
+            navigationControl.rightPanel = rightPanel;
+        }
+
+        private void ProfileForm_Resize(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
         }
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.navigationControl1 = new Biblio.CustomControls.NavigationControl();
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
@@ -48,19 +48,19 @@
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             this.BorderlessForm.TransparentWhileDrag = true;
             // 
-            // navigationControl1
+            // navigationControl
             // 
-            this.navigationControl1.AutoSize = true;
-            this.navigationControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.navigationControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationControl1.leftPanel = null;
-            this.navigationControl1.LeftPanelWidth = 0;
-            this.navigationControl1.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl1.Name = "navigationControl1";
-            this.navigationControl1.rightPanel = null;
-            this.navigationControl1.RightPanelWidth = 0;
-            this.navigationControl1.Size = new System.Drawing.Size(726, 52);
-            this.navigationControl1.TabIndex = 0;
+            this.navigationControl.AutoSize = true;
+            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
+            this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Name = "navigationControl";
+            this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.TabIndex = 0;
             // 
             // mainPanel
             // 
@@ -70,7 +70,7 @@
             this.mainPanel.Location = new System.Drawing.Point(0, 52);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
-            this.mainPanel.TabIndex = 3;
+            this.mainPanel.TabIndex = 4;
             // 
             // rightPanel
             // 
@@ -98,12 +98,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.ClientSize = new System.Drawing.Size(726, 430);
             this.Controls.Add(this.mainPanel);
-            this.Controls.Add(this.navigationControl1);
+            this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SettingsForm";
             this.Text = "SettingsForm";
+            this.Resize += new System.EventHandler(this.SettingsForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,10 +114,9 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
-        private CustomControls.NavigationControl navigationControl;
-        private CustomControls.NavigationControl navigationControl1;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel leftPanel;
+        private CustomControls.NavigationControl navigationControl;
     }
 }

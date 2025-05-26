@@ -331,6 +331,7 @@
             this.userInfoPanel.Name = "userInfoPanel";
             this.userInfoPanel.Size = new System.Drawing.Size(160, 40);
             this.userInfoPanel.TabIndex = 13;
+            this.userInfoPanel.Click += new System.EventHandler(this.userProfile_Click);
             // 
             // panel2
             // 
@@ -352,6 +353,7 @@
             this.coinCountLabel.Size = new System.Drawing.Size(38, 13);
             this.coinCountLabel.TabIndex = 4;
             this.coinCountLabel.Text = "монет";
+            this.coinCountLabel.Click += new System.EventHandler(this.userProfile_Click);
             // 
             // coinPictureBox
             // 
@@ -362,6 +364,7 @@
             this.coinPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.coinPictureBox.TabIndex = 3;
             this.coinPictureBox.TabStop = false;
+            this.coinPictureBox.Click += new System.EventHandler(this.userProfile_Click);
             // 
             // userNameLabel
             // 
@@ -375,7 +378,7 @@
             this.userNameLabel.Size = new System.Drawing.Size(32, 13);
             this.userNameLabel.TabIndex = 2;
             this.userNameLabel.Text = "Имя";
-            this.userNameLabel.Click += new System.EventHandler(this.userNameLabel_Click);
+            this.userNameLabel.Click += new System.EventHandler(this.userProfile_Click);
             this.userNameLabel.MouseEnter += new System.EventHandler(this.UserNameLabel_MouseEnter);
             this.userNameLabel.MouseLeave += new System.EventHandler(this.UserNameLabel_MouseLeave);
             // 
@@ -391,6 +394,7 @@
             this.userAvatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userAvatarPictureBox.TabIndex = 1;
             this.userAvatarPictureBox.TabStop = false;
+            this.userAvatarPictureBox.Click += new System.EventHandler(this.userProfile_Click);
             // 
             // AvatarControl
             // 

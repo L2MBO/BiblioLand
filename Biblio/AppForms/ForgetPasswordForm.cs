@@ -1,5 +1,7 @@
-﻿using Biblio.Classes.ConfirmationCode;
+﻿using Biblio.Classes.Animations;
+using Biblio.Classes.ConfirmationCode;
 using Biblio.Classes.Customization;
+using Biblio.HideClasses;
 using Biblio.ValidationClasses;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -16,20 +18,25 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class ForgetPasswordForm : MaterialForm
+    public partial class ForgetPasswordForm : Form
     {
+        private ValidationHelper _validationHelper;
+
         public ForgetPasswordForm()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.DeepPurple700, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            RoundingHelper.SetRoundedRegion(this, 20, 20);
-            whitePanel.MouseDown += Form_MouseDown;
+            
             _validationHelper = new ValidationHelper();
+
+            SetFormStyle();
         }
 
-        private ValidationHelper _validationHelper;
+        private void SetFormStyle()
+        {
+            var materialSkinManager = MaterialSkinManager.Instance;
+
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.DeepPurple700, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+        }
 
         private async void recoverPasswordButton_Click(object sender, EventArgs e)
         {
@@ -42,9 +49,8 @@ namespace Biblio.AppForms
                 if (result.success)
                 {
                     RecoverPasswordForm form = new RecoverPasswordForm(_validationHelper, result.email);
-                    form.Owner = this;
-                    this.Hide();
                     form.Show();
+                    this.Hide();
                 }
             }
         }
@@ -56,14 +62,14 @@ namespace Biblio.AppForms
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            FormDrag.DragingForm(this);
         }
 
         private void closeButton_Click(object sender, EventArgs e) 
         {
-            this.Owner.Show();
-            this.Close();
+            AuthorizationForm form = new AuthorizationForm();
+            form.Show();
+            this.Hide();
             ValidationHelper._isCodeSent = false;
         }
 

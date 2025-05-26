@@ -101,6 +101,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserTopForm";
             this.Text = "UserTopForm";
+            this.Resize += new System.EventHandler(this.UserTopForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -22,11 +22,6 @@ namespace Biblio.AppForms
             navigationControl.rightPanel = rightPanel;
         }
 
-        private void BookСatalogForm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void BookСatalogForm_Resize(object sender, EventArgs e)
         {
             navigationControl.HandleFormResize(this);

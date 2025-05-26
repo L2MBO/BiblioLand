@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,7 @@
             this.whitePanel = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.collapseButton = new System.Windows.Forms.PictureBox();
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autorizationButton)).BeginInit();
@@ -216,6 +218,7 @@
             this.orangePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(47)))));
             resources.ApplyResources(this.orangePanel, "orangePanel");
             this.orangePanel.Name = "orangePanel";
+            this.orangePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // whitePanel
             // 
@@ -224,6 +227,7 @@
             this.whitePanel.Controls.Add(this.collapseButton);
             resources.ApplyResources(this.whitePanel, "whitePanel");
             this.whitePanel.Name = "whitePanel";
+            this.whitePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // closeButton
             // 
@@ -241,6 +245,16 @@
             this.collapseButton.TabStop = false;
             this.collapseButton.Click += new System.EventHandler(this.collapseButton_Click);
             // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.AnimateWindow = true;
+            this.BorderlessForm.BorderRadius = 20;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessForm.DragForm = false;
+            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            this.BorderlessForm.TransparentWhileDrag = true;
+            // 
             // RegistrationForm
             // 
             resources.ApplyResources(this, "$this");
@@ -249,6 +263,7 @@
             this.Controls.Add(this.orangePanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrationForm";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -287,5 +302,6 @@
         private System.Windows.Forms.PictureBox collapseButton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
     }
 }

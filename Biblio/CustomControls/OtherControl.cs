@@ -1,5 +1,6 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Customization;
+using Biblio.HideClasses;
 using Biblio.Models;
 using System;
 using System.Collections.Generic;
@@ -16,41 +17,25 @@ namespace Biblio.CustomControls
 {
     public partial class OtherControl : UserControl
     {
-        public event EventHandler OpenChanged;
-
         public OtherControl()
         {
             InitializeComponent();
 
             RoundingHelper.SetRoundedRegion(this, 25, 25);
-
-            catalogPanel.Click += catalogPanel_Click;
-            catalogLabel.Click += catalogPanel_Click;
-            catalogInfoLabel.Click += catalogPanel_Click;
-            cardsPictureBox.Click += catalogPanel_Click;
-            catalogRightArrowPictureBox.Click += catalogPanel_Click;
-
-            rankPanel.Click += rankPanel_Click;
-            rankLabel.Click += rankPanel_Click;
-            rankInfoLabel.Click += rankPanel_Click;
-            rankPictureBox.Click += rankPanel_Click;
-            rankRightArrowPictureBox.Click += rankPanel_Click;
         }
 
         private void catalogPanel_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             CardCatalogForm form = new CardCatalogForm();
-            form.Show();
-            this.Hide();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
+            this.Parent.Hide();
         }
 
         private void rankPanel_Click(Object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             UserTopForm form = new UserTopForm();
-            form.Show();
-            this.Hide();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
+            this.Parent.Hide();
         }
     }
 }

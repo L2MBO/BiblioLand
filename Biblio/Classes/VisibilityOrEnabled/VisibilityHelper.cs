@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Biblio.AppForms;
 using MaterialSkin.Controls;
 
 namespace Biblio.HideClasses
@@ -44,6 +45,14 @@ namespace Biblio.HideClasses
         {
             LogInInfo.Visible = true;
             TimeInfo.Visible = true;
+        }
+
+        public static void ShowNewForm(Form form, Form newForm)
+        {
+            newForm.StartPosition = FormStartPosition.Manual;
+            newForm.Location = form.Location;
+            newForm.WindowState = form.WindowState;
+            newForm.Show();
         }
     }
 }

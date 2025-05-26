@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.ConfirmationCode;
+﻿using Biblio.Classes.Animations;
+using Biblio.Classes.ConfirmationCode;
 using Biblio.Classes.Customization;
 using Biblio.Classes.Hash;
 using Biblio.HideClasses;
@@ -22,24 +23,29 @@ namespace Biblio.AppForms
 {
     public partial class AuthorizationForm : Form
     {
+        private ValidationHelper validationHelper;
+
         public AuthorizationForm()
         {
             InitializeComponent();
+
             validationHelper = new ValidationHelper();
-            this.MaximizeBox = false;
+
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
             var materialSkinManager = MaterialSkinManager.Instance;
+
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Red900, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            RoundingHelper.SetRoundedRegion(this, 20, 20);
-            redPanel.MouseDown += Form_MouseDown;
-            whitePanel.MouseDown += Form_MouseDown;
         }
 
         private void fogetPasswordLabel_Click(object sender, EventArgs e)
         {
             ForgetPasswordForm form = new ForgetPasswordForm();
-            form.Owner = this;
-            this.Hide();
             form.Show();
+            this.Hide();
         }
 
         private void visiblePassword_Click(object sender, EventArgs e)
@@ -57,12 +63,9 @@ namespace Biblio.AppForms
         private void registrationButton_Click(object sender, EventArgs e)
         {
             RegistrationForm form = new RegistrationForm();
-            form.Owner = this;
-            this.Hide();
             form.Show();
+            this.Hide();
         }
-
-        private ValidationHelper validationHelper;
 
         private async void logInButton_Click(object sender, EventArgs e)
         {
@@ -73,20 +76,15 @@ namespace Biblio.AppForms
                 if (validationHelper.ValidateLogIn(nameTextField, passwordTextField, blockLogInLabel, timerLabel, logInButton))
                 {
                     MainForm form = new MainForm();
-                    form.Owner = this;
-                    this.Hide();
                     form.Show();
+                    this.Hide();
                 }
             }
         }
 
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
-            //ReleaseCapture();
-            //this.FindForm().Opacity = 0.7;
-
-            //SendMessage(this.Handle, 0x112, 0xf012, 0);
-            //this.FindForm().Opacity = 1;
+            FormDrag.DragingForm(this);
         }
 
         private void closeButton_Click(object sender, EventArgs e) 

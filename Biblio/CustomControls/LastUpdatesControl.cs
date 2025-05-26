@@ -21,7 +21,6 @@ namespace Biblio.CustomControls
     {
         private Books _books;
         public event EventHandler<Books> BookClicked;
-        public event EventHandler OpenChanged;
 
         public LastUpdatesControl(Books books)
         {
@@ -29,30 +28,24 @@ namespace Biblio.CustomControls
 
             _books = books;
 
-            authorLabel.Text = books.Author.ToString();
-            nameLabel.Text = books.Title.ToString();
+            LoadLastUpdatesInfo();
+        }
 
-            Image image = ImageLoader.LoadBookImage(books.ImagePath);
+        private void LoadLastUpdatesInfo()
+        {
+            authorLabel.Text = _books.Author.ToString();
+            nameLabel.Text = _books.Title.ToString();
+
+            Image image = ImageLoader.LoadBookImage(_books.ImagePath);
+
             if (image != null)
             {
                 bookPictureBox.Image = image;
             }
 
             RoundingHelper.SetRoundedRegion(this, 30, 30);
-            RoundingHelper.SetRoundedRegion(bookPictureBox, 20, 20);
 
             timeLabel.Font = new Font(timeLabel.Font.FontFamily, 8, FontStyle.Regular);
-
-            this.Click += MainControl_Click;
-            
-            middlePanel.Click += MainControl_Click;
-            authorLabel.Click += MainControl_Click;
-            nameLabel.Click += MainControl_Click;
-            infoPanel.Click += MainControl_Click;
-            bookPictureBox.Click += MainControl_Click;
-            rightPanel.Click += MainControl_Click;
-            timeLabel.Click += MainControl_Click;
-            timePanel.Click += MainControl_Click;
         }
 
         public void SetTime(string time)
@@ -60,9 +53,8 @@ namespace Biblio.CustomControls
             timeLabel.Text = time;
         }
 
-        private void MainControl_Click(object sender, EventArgs e)
+        private void LastUpdatesControl_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             BookClicked?.Invoke(this, _books);
         }
     }

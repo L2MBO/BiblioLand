@@ -15,6 +15,19 @@ namespace Biblio.AppForms
         public StoreForm()
         {
             InitializeComponent();
+
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
+            navigationControl.leftPanel = leftPanel;
+            navigationControl.rightPanel = rightPanel;
+        }
+
+        private void StoreForm_Resize(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
         }
     }
 }

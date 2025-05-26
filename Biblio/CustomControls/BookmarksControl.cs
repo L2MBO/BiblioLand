@@ -30,14 +30,13 @@ namespace Biblio.CustomControls
             _book = book;
             _currentUserId = currentUserId;
 
-            RoundingHelper.SetRoundedRegion(this, 36, 36);
-
             InitializeUI();
         }
 
         private void InitializeUI()
         {
-            // Загрузка текущего состояния закладки
+            RoundingHelper.SetRoundedRegion(this, 36, 36);
+
             LoadBookmarkStatus();
 
             removeBookmarkButton.Visible = _isBookmarked;
@@ -52,7 +51,6 @@ namespace Biblio.CustomControls
             {
                 _isBookmarked = true;
 
-                // Выбрать текущую категорию
                 switch (bookmark.CategoryID)
                 {
                     case 1:
@@ -97,7 +95,6 @@ namespace Biblio.CustomControls
 
             if (bookmark == null)
             {
-                // Добавляем новую закладку
                 bookmark = new UserBookmarks
                 {
                     UserID = _currentUserId,
@@ -110,13 +107,11 @@ namespace Biblio.CustomControls
             }
             else
             {
-                // Обновляем существующую закладку
                 bookmark.CategoryID = GetCategoryID(button.Text);
             }
 
             Program.context.SaveChanges();
 
-            // Обновляем выделение
             ResetCategorySelection();
             this.Hide();
 
@@ -136,7 +131,6 @@ namespace Biblio.CustomControls
                 Program.context.SaveChanges();
             }
 
-            // Обновляем UI
             _isBookmarked = false;
             ResetCategorySelection();
             this.Hide();

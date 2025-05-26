@@ -3,6 +3,7 @@ using Biblio.Classes.Coding;
 using Biblio.Classes.Customization;
 using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.HideClasses;
 using Biblio.Interface;
 using Biblio.Properties;
 using System;
@@ -21,10 +22,9 @@ namespace Biblio.CustomControls
 {
     public partial class AvatarControl : UserControl
     {
-        public event EventHandler OpenChanged;
         private IAvatarParentForm _parent;
-        private int contentX = 460;
-        int currentUserId = Program.CurrentUser.UserID;
+        private int _contentX = 460;
+        int _currentUserId = Program.CurrentUser.UserID;
 
         public AvatarControl(Form parentForm)
         {
@@ -32,29 +32,28 @@ namespace Biblio.CustomControls
 
             _parent = parentForm as IAvatarParentForm;
 
+            LoadUserInfo();
+        }
+
+        private void LoadUserInfo()
+        {
+            RoundingHelper.SetRoundedRegion(this, 25, 25);
+
             if (_parent != null)
             {
                 _parent.WindowStateChanged += Form_WindowStateChanged;
-                OpenChanged += _parent.OnControlOpenChanged;
             }
             else
             {
                 Debug.WriteLine("_parent имеет значение null в конструкторе AvatarControl.");
             }
 
-            var curentUser = Program.context.Users.FirstOrDefault(user => user.UserID == currentUserId);
+            var curentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
             userNameLabel.Text = curentUser.Username;
 
             coinCountLabel.Text = curentUser.CoinsNumber.ToString() + " монет";
 
             ImageLoader.LoadAvatarImage(userAvatarPictureBox);
-
-            RoundingHelper.SetRoundedRegion(this, 25, 25);
-
-            userAvatarPictureBox.Click += userNameLabel_Click;
-            userInfoPanel.Click += userNameLabel_Click;
-            coinPictureBox.Click += userNameLabel_Click;
-            coinCountLabel.Click += userNameLabel_Click;
 
             this.VisibleChanged += AvatarControl_VisibleChanged;
         }
@@ -63,7 +62,7 @@ namespace Biblio.CustomControls
         {
             if (_parent == null) return;
 
-            contentX = (_parent.WindowState == FormWindowState.Maximized) ? 1450 : 460;
+            _contentX = (_parent.WindowState == FormWindowState.Maximized) ? 1450 : 460;
 
             UpdateAddContentControlPosition();
         }
@@ -74,7 +73,7 @@ namespace Biblio.CustomControls
         {
             if (addContentControl != null)
             {
-                int x = addContentButton.Right + contentX;
+                int x = addContentButton.Right + _contentX;
                 int y = addContentButton.Bottom + 20;
 
                 addContentControl.Location = new Point(x, y);
@@ -113,11 +112,6 @@ namespace Biblio.CustomControls
 
             addContentControl = new AddContentControl();
 
-            if (_parent != null)
-            {
-                addContentControl.OpenChanged += _parent.OnControlOpenChanged;
-            }
-
             UpdateAddContentControlPosition();
 
             this.Parent.Controls.Add(addContentControl);
@@ -125,44 +119,39 @@ namespace Biblio.CustomControls
             addContentControl.Visible = true;
         }
 
-        private void userNameLabel_Click(object sender, EventArgs e)
+        private void userProfile_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             ProfileForm form = new ProfileForm();
-            form.Show();
-            this.Hide();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
+            this.Parent.Hide();
         }
 
         private void feedbackButton_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             FeedbackForm form = new FeedbackForm();
-            form.Show();
-            this.Hide();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
+            this.Parent.Hide();
         }
 
         private void storeButton_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             StoreForm form = new StoreForm();
-            form.Show();
-            this.Hide();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
+            this.Parent.Hide();
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             SettingsForm form = new SettingsForm();
-            form.Show();
-            this.Hide();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
+            this.Parent.Hide();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             AuthorizationForm form = new AuthorizationForm();
             form.Show();
-            this.Hide();
+            this.Parent.Hide();
         }
 
         private void UserNameLabel_MouseEnter(object sender, EventArgs e)

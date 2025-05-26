@@ -81,6 +81,7 @@
             this.FormRounded.DockIndicatorTransparencyValue = 0.6D;
             this.FormRounded.DragForm = false;
             this.FormRounded.ResizeForm = false;
+            this.FormRounded.TransparentWhileDrag = true;
             // 
             // mainPanel
             // 

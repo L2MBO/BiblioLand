@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
             this.whitePanel = new System.Windows.Forms.Panel();
             this.nameTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -49,6 +50,7 @@
             this.collapseButton = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.redPanel = new System.Windows.Forms.Panel();
+            this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.unvisiblePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visiblePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logInButton)).BeginInit();
@@ -69,6 +71,7 @@
             this.whitePanel.Name = "whitePanel";
             this.whitePanel.Size = new System.Drawing.Size(300, 24);
             this.whitePanel.TabIndex = 20;
+            this.whitePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // nameTextField
             // 
@@ -306,6 +309,16 @@
             this.redPanel.Name = "redPanel";
             this.redPanel.Size = new System.Drawing.Size(300, 24);
             this.redPanel.TabIndex = 19;
+            this.redPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.AnimateWindow = true;
+            this.BorderlessForm.BorderRadius = 20;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessForm.DragForm = false;
+            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             // 
             // AuthorizationForm
             // 
@@ -318,8 +331,6 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(600, 350);
-            this.MinimumSize = new System.Drawing.Size(600, 350);
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AuthorizationForm";
@@ -361,5 +372,6 @@
         private System.Windows.Forms.Label label1;
         private MaterialSkin.Controls.MaterialSingleLineTextField passwordTextField;
         private MaterialSkin.Controls.MaterialSingleLineTextField nameTextField;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
     }
 }

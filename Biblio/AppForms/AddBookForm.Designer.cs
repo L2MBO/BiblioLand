@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.navigationControl1 = new Biblio.CustomControls.NavigationControl();
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
@@ -37,19 +37,19 @@
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // navigationControl1
+            // navigationControl
             // 
-            this.navigationControl1.AutoSize = true;
-            this.navigationControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.navigationControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationControl1.leftPanel = null;
-            this.navigationControl1.LeftPanelWidth = 0;
-            this.navigationControl1.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl1.Name = "navigationControl1";
-            this.navigationControl1.rightPanel = null;
-            this.navigationControl1.RightPanelWidth = 0;
-            this.navigationControl1.Size = new System.Drawing.Size(726, 52);
-            this.navigationControl1.TabIndex = 0;
+            this.navigationControl.AutoSize = true;
+            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
+            this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Name = "navigationControl";
+            this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.TabIndex = 0;
             // 
             // mainPanel
             // 
@@ -97,10 +97,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.ClientSize = new System.Drawing.Size(726, 430);
             this.Controls.Add(this.mainPanel);
-            this.Controls.Add(this.navigationControl1);
+            this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddBookForm";
             this.Text = "AddBookForm";
+            this.Resize += new System.EventHandler(this.AddBookForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,7 +109,7 @@
         }
 
         #endregion
-        private CustomControls.NavigationControl navigationControl1;
+        private CustomControls.NavigationControl navigationControl;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel leftPanel;

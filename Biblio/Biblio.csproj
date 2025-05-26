@@ -247,6 +247,7 @@
       <DependentUpon>UserTopForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
+    <Compile Include="Classes\Animations\FormDrag.cs" />
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\SendMessageCode.cs" />
     <Compile Include="Classes\Customization\FormCustomization\AutoScrollHelper.cs" />

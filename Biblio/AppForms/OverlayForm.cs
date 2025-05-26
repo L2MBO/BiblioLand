@@ -1,4 +1,5 @@
 ﻿using Biblio.Classes.Customization;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,11 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
 
+            SetFormStyle(parentForm);
+        }
+
+        private void SetFormStyle(Form parentForm)
+        {
             this.Opacity = 0.7;
             this.ShowInTaskbar = false;
 

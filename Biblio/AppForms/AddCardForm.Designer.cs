@@ -101,6 +101,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCardForm";
             this.Text = "AddCardForm";
+            this.Resize += new System.EventHandler(this.AddCardForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

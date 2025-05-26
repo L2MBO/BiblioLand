@@ -16,5 +16,10 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
         }
+
+        private void FeedbackForm_Resize(object sender, EventArgs e)
+        {
+            navigationControl.HandleFormResize(this);
+        }
     }
 }

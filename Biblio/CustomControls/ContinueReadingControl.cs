@@ -19,7 +19,6 @@ namespace Biblio.CustomControls
         private readonly Books _books;
         private readonly int _userId;
         public event EventHandler<Books> BookClicked;
-        public event EventHandler OpenChanged;
 
         public ContinueReadingControl(Books books, int userId)
         {
@@ -28,9 +27,14 @@ namespace Biblio.CustomControls
             _books = books;
             _userId = userId;
 
-            nameLabel.Text = books.Title.ToString();
+            LoadContinueReadingInfo();
+        }
 
-            Image image = ImageLoader.LoadBookImage(books.ImagePath);
+        private void LoadContinueReadingInfo()
+        {
+            nameLabel.Text = _books.Title.ToString();
+
+            Image image = ImageLoader.LoadBookImage(_books.ImagePath);
             if (image != null)
             {
                 bookPictureBox.Image = image;
@@ -39,16 +43,6 @@ namespace Biblio.CustomControls
             UpdateReadingProgress();
 
             RoundingHelper.SetRoundedRegion(this, 30, 30);
-            RoundingHelper.SetRoundedRegion(bookPictureBox, 20, 20);
-
-            this.Click += MainControl_Click;
-            mainPanel.Click += MainControl_Click;
-            infoPanel.Click += MainControl_Click;
-            rightPanel.Click += MainControl_Click;
-            nameLabel.Click += MainControl_Click;
-            readingBookProgressLabel.Click += MainControl_Click;
-            readingBookProgressBar.Click += MainControl_Click;
-            bookPictureBox.Click += MainControl_Click;
         }
 
         /// <summary>
@@ -86,9 +80,8 @@ namespace Biblio.CustomControls
             }
         }
 
-        private void MainControl_Click(object sender, EventArgs e)
+        private void ContinueReadingControl_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             BookClicked?.Invoke(this, _books);
         }
     }

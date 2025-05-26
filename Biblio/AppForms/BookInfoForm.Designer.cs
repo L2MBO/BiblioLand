@@ -62,8 +62,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -273,7 +273,7 @@
             this.evaluateButton.Location = new System.Drawing.Point(27, 0);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
@@ -465,6 +465,16 @@
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
             // 
+            // BorderlessForm
+            // 
+            this.BorderlessForm.AnimateWindow = true;
+            this.BorderlessForm.AnimationInterval = 200;
+            this.BorderlessForm.BorderRadius = 11;
+            this.BorderlessForm.ContainerControl = this;
+            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessForm.DragForm = false;
+            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
+            // 
             // navigationControl
             // 
             this.navigationControl.AutoSize = true;
@@ -479,15 +489,6 @@
             this.navigationControl.RightPanelWidth = 0;
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
-            // 
-            // BorderlessForm
-            // 
-            this.BorderlessForm.AnimateWindow = true;
-            this.BorderlessForm.BorderRadius = 11;
-            this.BorderlessForm.ContainerControl = this;
-            this.BorderlessForm.DockIndicatorTransparencyValue = 0.6D;
-            this.BorderlessForm.DragStartTransparencyValue = 0.4D;
-            this.BorderlessForm.TransparentWhileDrag = true;
             // 
             // BookInfoForm
             // 

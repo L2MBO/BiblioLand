@@ -20,44 +20,33 @@ namespace Biblio.CustomControls
     {
         private Books _books;
         public event EventHandler<Books> BookClicked;
-        public event EventHandler OpenChanged;
-        private IAvatarParentForm _parent;
 
         public BookSearchControl(Form parentForm, Books books)
         {
             InitializeComponent();
 
-            _parent = parentForm as IAvatarParentForm;
-
-            if (_parent != null)
-            {
-                OpenChanged += _parent.OnControlOpenChanged;
-            }
-
             _books = books;
 
-            authorLabel.Text = books.Author.ToString();
-            nameLabel.Text = books.Title.ToString();
+            LoadBookSearchInfo();
+        }
 
-            Image image = ImageLoader.LoadBookImage(books.ImagePath);
+        private void LoadBookSearchInfo()
+        {
+            authorLabel.Text = _books.Author.ToString();
+            nameLabel.Text = _books.Title.ToString();
+
+            Image image = ImageLoader.LoadBookImage(_books.ImagePath);
+
             if (image != null)
             {
                 bookPictureBox.Image = image;
             }
 
             RoundingHelper.SetRoundedRegion(this, 10, 10);
-
-            this.Click += MainControl_Click;
-            mainPanel.Click += MainControl_Click;
-            bookPanel.Click += MainControl_Click;
-            bookPictureBox.Click += MainControl_Click;
-            authorLabel.Click += MainControl_Click;
-            nameLabel.Click += MainControl_Click;
         }
 
-        private void MainControl_Click(object sender, EventArgs e)
+        private void BookSearchControl_Click(object sender, EventArgs e)
         {
-            OpenChanged?.Invoke(this, EventArgs.Empty);
             BookClicked?.Invoke(this, _books);
         }
     }

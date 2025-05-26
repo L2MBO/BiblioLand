@@ -17,9 +17,9 @@ namespace Biblio.AppForms
             InitializeComponent();
         }
 
-        private void navigationControl_Load(object sender, EventArgs e)
+        private void CardCatalogForm_Resize(object sender, EventArgs e)
         {
-
+            navigationControl.HandleFormResize(this);
         }
     }
 }

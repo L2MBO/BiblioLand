@@ -62,6 +62,7 @@
             this.catalogPanel.Name = "catalogPanel";
             this.catalogPanel.Size = new System.Drawing.Size(250, 50);
             this.catalogPanel.TabIndex = 2;
+            this.catalogPanel.Click += new System.EventHandler(this.catalogPanel_Click);
             // 
             // catalogInfoLabel
             // 
@@ -73,6 +74,7 @@
             this.catalogInfoLabel.Size = new System.Drawing.Size(157, 13);
             this.catalogInfoLabel.TabIndex = 3;
             this.catalogInfoLabel.Text = "Все карты нашей библиотеки";
+            this.catalogInfoLabel.Click += new System.EventHandler(this.catalogPanel_Click);
             // 
             // catalogLabel
             // 
@@ -84,6 +86,7 @@
             this.catalogLabel.Size = new System.Drawing.Size(93, 16);
             this.catalogLabel.TabIndex = 2;
             this.catalogLabel.Text = "Каталог карт";
+            this.catalogLabel.Click += new System.EventHandler(this.catalogPanel_Click);
             // 
             // catalogRightArrowPictureBox
             // 
@@ -94,6 +97,7 @@
             this.catalogRightArrowPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.catalogRightArrowPictureBox.TabIndex = 1;
             this.catalogRightArrowPictureBox.TabStop = false;
+            this.catalogRightArrowPictureBox.Click += new System.EventHandler(this.catalogPanel_Click);
             // 
             // cardsPictureBox
             // 
@@ -104,6 +108,7 @@
             this.cardsPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cardsPictureBox.TabIndex = 0;
             this.cardsPictureBox.TabStop = false;
+            this.cardsPictureBox.Click += new System.EventHandler(this.catalogPanel_Click);
             // 
             // rankPanel
             // 
@@ -120,6 +125,7 @@
             this.rankPanel.Name = "rankPanel";
             this.rankPanel.Size = new System.Drawing.Size(250, 50);
             this.rankPanel.TabIndex = 3;
+            this.rankPanel.Click += new System.EventHandler(this.rankPanel_Click);
             // 
             // rankInfoLabel
             // 
@@ -131,6 +137,7 @@
             this.rankInfoLabel.Size = new System.Drawing.Size(162, 13);
             this.rankInfoLabel.TabIndex = 5;
             this.rankInfoLabel.Text = "Посмотри, какое место у тебя";
+            this.rankInfoLabel.Click += new System.EventHandler(this.rankPanel_Click);
             // 
             // rankLabel
             // 
@@ -142,6 +149,7 @@
             this.rankLabel.Size = new System.Drawing.Size(146, 16);
             this.rankLabel.TabIndex = 4;
             this.rankLabel.Text = "Топы пользователей";
+            this.rankLabel.Click += new System.EventHandler(this.rankPanel_Click);
             // 
             // rankRightArrowPictureBox
             // 
@@ -152,6 +160,7 @@
             this.rankRightArrowPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rankRightArrowPictureBox.TabIndex = 2;
             this.rankRightArrowPictureBox.TabStop = false;
+            this.rankRightArrowPictureBox.Click += new System.EventHandler(this.rankPanel_Click);
             // 
             // rankPictureBox
             // 
@@ -162,6 +171,7 @@
             this.rankPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rankPictureBox.TabIndex = 1;
             this.rankPictureBox.TabStop = false;
+            this.rankPictureBox.Click += new System.EventHandler(this.rankPanel_Click);
             // 
             // OtherControl
             // 
