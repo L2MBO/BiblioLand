@@ -100,6 +100,7 @@
             this.exitButton.Animated = true;
             this.exitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.exitButton.BorderRadius = 9;
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.exitButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.exitButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -152,6 +153,7 @@
             this.settingsButton.Animated = true;
             this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.settingsButton.BorderRadius = 9;
+            this.settingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.settingsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.settingsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.settingsButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -187,6 +189,7 @@
             this.storeButton.Animated = true;
             this.storeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.storeButton.BorderRadius = 9;
+            this.storeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.storeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.storeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.storeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -239,6 +242,7 @@
             this.addContentButton.Animated = true;
             this.addContentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.addContentButton.BorderRadius = 9;
+            this.addContentButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addContentButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.addContentButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addContentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -274,6 +278,7 @@
             this.feedbackButton.Animated = true;
             this.feedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.feedbackButton.BorderRadius = 9;
+            this.feedbackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.feedbackButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.feedbackButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.feedbackButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

@@ -1,4 +1,5 @@
 ﻿using Biblio.Classes.Customization;
+using Biblio.Classes.Customization.ImagesCustomization;
 using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.Classes.Pdf.OpenPdf;
@@ -18,6 +19,7 @@ namespace Biblio.AppForms
         private Books _book;
         private int _currentUserId = Program.CurrentUser.UserID;
         private int _bookmarkX;
+        private BackgroundImageRenderer backgroundImageRenderer;
 
         public BookInfoForm(Books book)
         {
@@ -41,6 +43,8 @@ namespace Biblio.AppForms
             navigationControl.rightPanel = rightPanel;
 
             descriptionLabel.TextChanged += DescriptionLabel_TextChanged;
+
+            backgroundImageRenderer = new BackgroundImageRenderer();
 
             LoadBookInfo();
 
@@ -72,8 +76,8 @@ namespace Biblio.AppForms
             if (backimage != null)
             {
                 var bitmap = backimage as Bitmap ?? new Bitmap(backimage);
-                Image preparedBackground = WhiteLevelReducer.PrepareBackground(bitmap, 20, 0.6f);
-                mainPanel.BackgroundImage = preparedBackground;
+                Image preparedBackground = WhiteLevelReducer.PrepareBackground(bitmap, 15, 0.6f);
+                backgroundImageRenderer.SetBackgroundImage(preparedBackground);
             }
 
             descriptionLabel.Text = _book.Description;
@@ -279,6 +283,21 @@ namespace Biblio.AppForms
             navigationControl.UpdatePanelsWidth();
             DescriptionLabel_TextChanged(descriptionLabel, EventArgs.Empty);
             UpdateBookmarksControlPosition();
+        }
+
+        private void mainPanel_Scroll(object sender, ScrollEventArgs e)
+        {
+            mainPanel.Invalidate();
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (backgroundImageRenderer != null)
+            {
+                int scrollY = -mainPanel.AutoScrollPosition.Y;
+
+                backgroundImageRenderer.DrawBackgroundImage(e.Graphics, mainPanel.Width, mainPanel.Height, scrollY);
+            }
         }
 
         private void BookInfoForm_Load(object sender, EventArgs e)

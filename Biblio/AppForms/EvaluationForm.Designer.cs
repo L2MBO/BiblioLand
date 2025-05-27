@@ -79,6 +79,7 @@
             this.closeButton.AllowDrop = true;
             this.closeButton.Animated = true;
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.closeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.closeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -101,6 +102,7 @@
             this.ratingButton1.AllowDrop = true;
             this.ratingButton1.Animated = true;
             this.ratingButton1.BackColor = System.Drawing.Color.Transparent;
+            this.ratingButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -122,6 +124,7 @@
             this.ratingButton10.AllowDrop = true;
             this.ratingButton10.Animated = true;
             this.ratingButton10.BackColor = System.Drawing.Color.Transparent;
+            this.ratingButton10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -143,6 +146,7 @@
             this.ratingButton9.AllowDrop = true;
             this.ratingButton9.Animated = true;
             this.ratingButton9.BackColor = System.Drawing.Color.Transparent;
+            this.ratingButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -163,6 +167,7 @@
             // 
             this.ratingButton8.AllowDrop = true;
             this.ratingButton8.Animated = true;
+            this.ratingButton8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -183,6 +188,7 @@
             // 
             this.ratingButton7.AllowDrop = true;
             this.ratingButton7.Animated = true;
+            this.ratingButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -203,6 +209,7 @@
             // 
             this.ratingButton6.AllowDrop = true;
             this.ratingButton6.Animated = true;
+            this.ratingButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -223,6 +230,7 @@
             // 
             this.ratingButton5.AllowDrop = true;
             this.ratingButton5.Animated = true;
+            this.ratingButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -243,6 +251,7 @@
             // 
             this.ratingButton4.AllowDrop = true;
             this.ratingButton4.Animated = true;
+            this.ratingButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -263,6 +272,7 @@
             // 
             this.ratingButton3.AllowDrop = true;
             this.ratingButton3.Animated = true;
+            this.ratingButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -284,6 +294,7 @@
             this.ratingButton2.AllowDrop = true;
             this.ratingButton2.Animated = true;
             this.ratingButton2.BackColor = System.Drawing.Color.Transparent;
+            this.ratingButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ratingButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

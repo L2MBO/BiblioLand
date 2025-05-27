@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookReportForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.sendReportButton = new Guna.UI2.WinForms.Guna2Button();
+            this.reportMessageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.reportMessageLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.reportReasonLabel = new System.Windows.Forms.Label();
             this.reportReasonComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.reportMessageLabel = new System.Windows.Forms.Label();
-            this.reportMessageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.sendReportButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,60 @@
             this.guna2Panel1.Size = new System.Drawing.Size(330, 250);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // sendReportButton
+            // 
+            this.sendReportButton.Animated = true;
+            this.sendReportButton.BorderRadius = 17;
+            this.sendReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sendReportButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sendReportButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sendReportButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sendReportButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sendReportButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.sendReportButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sendReportButton.ForeColor = System.Drawing.Color.White;
+            this.sendReportButton.Location = new System.Drawing.Point(181, 197);
+            this.sendReportButton.Name = "sendReportButton";
+            this.sendReportButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.sendReportButton.Size = new System.Drawing.Size(130, 36);
+            this.sendReportButton.TabIndex = 37;
+            this.sendReportButton.Text = "Отправить жалобу";
+            this.sendReportButton.Click += new System.EventHandler(this.sendReportButton_Click);
+            // 
+            // reportMessageTextBox
+            // 
+            this.reportMessageTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.reportMessageTextBox.BorderRadius = 17;
+            this.reportMessageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.reportMessageTextBox.DefaultText = "";
+            this.reportMessageTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.reportMessageTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.reportMessageTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.reportMessageTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.reportMessageTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.reportMessageTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.reportMessageTextBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.reportMessageTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.reportMessageTextBox.ForeColor = System.Drawing.Color.White;
+            this.reportMessageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.reportMessageTextBox.Location = new System.Drawing.Point(20, 147);
+            this.reportMessageTextBox.Name = "reportMessageTextBox";
+            this.reportMessageTextBox.PlaceholderText = "";
+            this.reportMessageTextBox.SelectedText = "";
+            this.reportMessageTextBox.Size = new System.Drawing.Size(291, 36);
+            this.reportMessageTextBox.TabIndex = 36;
+            // 
+            // reportMessageLabel
+            // 
+            this.reportMessageLabel.AutoSize = true;
+            this.reportMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reportMessageLabel.ForeColor = System.Drawing.Color.White;
+            this.reportMessageLabel.Location = new System.Drawing.Point(20, 126);
+            this.reportMessageLabel.Name = "reportMessageLabel";
+            this.reportMessageLabel.Size = new System.Drawing.Size(82, 15);
+            this.reportMessageLabel.TabIndex = 35;
+            this.reportMessageLabel.Text = "Сообщение";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -87,6 +141,7 @@
             this.closeButton.AllowDrop = true;
             this.closeButton.Animated = true;
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.closeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.closeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -120,6 +175,7 @@
             this.reportReasonComboBox.BackColor = System.Drawing.Color.Transparent;
             this.reportReasonComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.reportReasonComboBox.BorderRadius = 17;
+            this.reportReasonComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportReasonComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.reportReasonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.reportReasonComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
@@ -141,59 +197,6 @@
             this.reportReasonComboBox.TabIndex = 31;
             this.reportReasonComboBox.TabStop = false;
             this.reportReasonComboBox.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // reportMessageLabel
-            // 
-            this.reportMessageLabel.AutoSize = true;
-            this.reportMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reportMessageLabel.ForeColor = System.Drawing.Color.White;
-            this.reportMessageLabel.Location = new System.Drawing.Point(20, 126);
-            this.reportMessageLabel.Name = "reportMessageLabel";
-            this.reportMessageLabel.Size = new System.Drawing.Size(82, 15);
-            this.reportMessageLabel.TabIndex = 35;
-            this.reportMessageLabel.Text = "Сообщение";
-            // 
-            // reportMessageTextBox
-            // 
-            this.reportMessageTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.reportMessageTextBox.BorderRadius = 17;
-            this.reportMessageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.reportMessageTextBox.DefaultText = "";
-            this.reportMessageTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.reportMessageTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.reportMessageTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.reportMessageTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.reportMessageTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.reportMessageTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.reportMessageTextBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.reportMessageTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.reportMessageTextBox.ForeColor = System.Drawing.Color.White;
-            this.reportMessageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.reportMessageTextBox.Location = new System.Drawing.Point(20, 147);
-            this.reportMessageTextBox.Name = "reportMessageTextBox";
-            this.reportMessageTextBox.PlaceholderText = "";
-            this.reportMessageTextBox.SelectedText = "";
-            this.reportMessageTextBox.Size = new System.Drawing.Size(291, 36);
-            this.reportMessageTextBox.TabIndex = 36;
-            // 
-            // sendReportButton
-            // 
-            this.sendReportButton.Animated = true;
-            this.sendReportButton.BorderRadius = 17;
-            this.sendReportButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.sendReportButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.sendReportButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.sendReportButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.sendReportButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.sendReportButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.sendReportButton.ForeColor = System.Drawing.Color.White;
-            this.sendReportButton.Location = new System.Drawing.Point(181, 197);
-            this.sendReportButton.Name = "sendReportButton";
-            this.sendReportButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.sendReportButton.Size = new System.Drawing.Size(130, 36);
-            this.sendReportButton.TabIndex = 37;
-            this.sendReportButton.Text = "Отправить жалобу";
-            this.sendReportButton.Click += new System.EventHandler(this.sendReportButton_Click);
             // 
             // BookReportForm
             // 

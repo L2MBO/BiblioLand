@@ -94,6 +94,8 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 25;
+            this.mainPanel.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mainPanel_Scroll);
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // statisticsPanel
             // 
@@ -261,6 +263,7 @@
             // 
             this.evaluateButton.Animated = true;
             this.evaluateButton.BorderRadius = 10;
+            this.evaluateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.evaluateButton.DefaultAutoSize = true;
             this.evaluateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.evaluateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -340,6 +343,7 @@
             this.reportButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.reportButton.BorderRadius = 13;
             this.reportButton.BorderThickness = 2;
+            this.reportButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.reportButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.reportButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -372,6 +376,7 @@
             // 
             this.newBookmarkButton.Animated = true;
             this.newBookmarkButton.BorderRadius = 13;
+            this.newBookmarkButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newBookmarkButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.newBookmarkButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.newBookmarkButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -400,6 +405,7 @@
             // 
             this.continueReadingButton.Animated = true;
             this.continueReadingButton.BorderRadius = 20;
+            this.continueReadingButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.continueReadingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.continueReadingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.continueReadingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -450,7 +456,7 @@
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 38;
@@ -460,7 +466,7 @@
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
@@ -484,7 +490,7 @@
             this.navigationControl.leftPanel = null;
             this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(6);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
             this.navigationControl.RightPanelWidth = 0;
