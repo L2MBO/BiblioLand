@@ -11,6 +11,7 @@ namespace Biblio.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Users()
         {
+            BookReport = new HashSet<BookReport>();
             Rating = new HashSet<Rating>();
             Reviews = new HashSet<Reviews>();
             UserBookmarks = new HashSet<UserBookmarks>();
@@ -45,6 +46,9 @@ namespace Biblio.Models
 
         [Required]
         public string AvatarPath { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BookReport> BookReport { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rating> Rating { get; set; }

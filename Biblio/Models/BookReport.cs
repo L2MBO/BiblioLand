@@ -6,22 +6,20 @@ namespace Biblio.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Reviews
+    [Table("BookReport")]
+    public partial class BookReport
     {
-        [Key]
-        public int ReviewID { get; set; }
+        public int BookReportID { get; set; }
 
         public int? UserID { get; set; }
 
         public int? BookID { get; set; }
 
-        public string Comment { get; set; }
-
-        public DateTime? ReviewDate { get; set; }
-
-        public int? LikesCount { get; set; }
+        public int? ReportCategoryID { get; set; }
 
         public virtual Books Books { get; set; }
+
+        public virtual ReportCategory ReportCategory { get; set; }
 
         public virtual Users Users { get; set; }
     }
