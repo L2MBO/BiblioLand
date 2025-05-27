@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblio", "Biblio\Biblio.csproj", "{AC3EE6F7-F7F2-4585-8238-2AD36F3853CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioLand", "Biblio\BiblioLand.csproj", "{AC3EE6F7-F7F2-4585-8238-2AD36F3853CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
