@@ -4,21 +4,11 @@ using Biblio.Classes.Images.InstallingImages;
 using Biblio.Classes.Pdf.OpenPdf;
 using Biblio.CustomControls;
 using Biblio.Models;
-using Guna.UI2.WinForms;
-using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {

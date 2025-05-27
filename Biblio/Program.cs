@@ -1,10 +1,6 @@
 ﻿using Biblio.AppForms;
-using Biblio.Classes.ConfirmationCode;
 using Biblio.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Biblio
@@ -13,14 +9,14 @@ namespace Biblio
     {
         public static Users CurrentUser { get; set; }
         public static BiblioModel context = new BiblioModel();
-        
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            if(!context.Database.Exists())
+            if (!context.Database.Exists())
             {
                 MessageBox.Show("Ошибка подключения к БД", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

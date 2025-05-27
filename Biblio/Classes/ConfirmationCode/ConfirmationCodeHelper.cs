@@ -1,11 +1,7 @@
 ﻿using Biblio.Classes.VisibilityOrEnabled;
 using Biblio.Models;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Biblio.Classes.ConfirmationCode

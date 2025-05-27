@@ -1,7 +1,6 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Biblio.Classes.Coding
@@ -18,7 +17,7 @@ namespace Biblio.Classes.Coding
 
                 if (!string.IsNullOrEmpty(imagePath))
                 {
-                    imageBytes =  File.ReadAllBytes(imagePath);
+                    imageBytes = File.ReadAllBytes(imagePath);
                 }
 
                 // Если путь не предоставлен, используем встроенный ресурс
@@ -33,7 +32,7 @@ namespace Biblio.Classes.Coding
                 using (var memoryStream = new MemoryStream())
                 {
                     bitmap.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
-                    imageBytes =  memoryStream.ToArray();
+                    imageBytes = memoryStream.ToArray();
                 }
 
                 // Преобразуем массив байтов в строку Base64

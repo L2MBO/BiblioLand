@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MaterialSkin.Controls;
 using System.Windows.Forms;
-using Biblio.AppForms;
-using MaterialSkin.Controls;
 
 namespace Biblio.HideClasses
 {
     public class VisibilityHelper
     {
-        public static void ShowPassword( MaterialSingleLineTextField[] passwordFields, PictureBox showButton, PictureBox hideButton)
+        public static void ShowPassword(MaterialSingleLineTextField[] passwordFields, PictureBox showButton, PictureBox hideButton)
         {
             showButton.Visible = false;
             hideButton.Visible = true;

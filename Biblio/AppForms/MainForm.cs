@@ -1,31 +1,15 @@
-﻿using Biblio.Classes.Animations;
-using Biblio.Classes.Customization;
+﻿using Biblio.Classes.Customization;
+using Biblio.Classes.Validation;
 using Biblio.CustomControls;
+using Biblio.HideClasses;
 using Biblio.Models;
-using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Diagnostics;
-using Biblio.ValidationClasses;
-using Biblio.Classes.Validation;
 using System.IO;
-using Biblio.Classes.DataAccess;
-using Biblio.Classes.Coding;
-using Biblio.Classes.Images.InstallingImages;
-using Org.BouncyCastle.Asn1.X509;
-using Biblio.Interface;
-using static Guna.UI2.Native.WinApi;
-using System.Net;
-using Guna.UI2.WinForms;
-using Biblio.HideClasses;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
@@ -98,10 +82,10 @@ namespace Biblio.AppForms
                 var userBooksWithDates = Program.context.UserBookmarks
                     .Where(book => book.UserID == currentUserId && book.CurrentPage >= 1)
                     .Select(book => new
-                        {
-                            BookID = book.BookID,
-                            LastReadDate = book.LastReadDate
-                        })
+                    {
+                        BookID = book.BookID,
+                        LastReadDate = book.LastReadDate
+                    })
                     .ToList();
 
                 var bookIds = userBooksWithDates.Select(b => b.BookID).ToList();

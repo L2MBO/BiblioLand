@@ -1,12 +1,4 @@
-﻿using MaterialSkin.Controls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Biblio.Classes.Hash
+﻿namespace Biblio.Classes.Hash
 {
     /// <summary>
     /// Хэширование и верификация пароля.

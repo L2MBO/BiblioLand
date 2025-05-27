@@ -1,30 +1,17 @@
-﻿using Biblio.AppForms;
-using Biblio.Classes.Coding;
+﻿using Biblio.Classes.Coding;
 using Biblio.Classes.ConfirmationCode;
 using Biblio.Classes.Hash;
 using Biblio.HideClasses;
 using Biblio.Models;
+using Guna.UI2.WinForms;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity.Validation;
 using System.Drawing;
-using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Net.Sockets;
-using System.Net;
-using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using DnsClient;
-using Guna.UI2.WinForms;
 
 namespace Biblio.ValidationClasses
 {
@@ -55,7 +42,7 @@ namespace Biblio.ValidationClasses
             }
 
             _failedAttempts++;
-            
+
             if (_failedAttempts >= 5)
             {
                 VisibilityHelper.ShowLogInLabel(loginInfo, timeInfo);
@@ -236,7 +223,7 @@ namespace Biblio.ValidationClasses
                 //if (result.IsSuccess)
                 //{
                 ConfirmationCodeHelper.StartResendTimer(TimeInfo, ResendVerificationCode);
-                    ShowInformationMessage("Новый код подтверждения отправлен на вашу электронную почту.", "Проверьте почту");
+                ShowInformationMessage("Новый код подтверждения отправлен на вашу электронную почту.", "Проверьте почту");
                 //}
                 //else
                 //{
@@ -362,7 +349,7 @@ namespace Biblio.ValidationClasses
                 ShowErrorMessage("Пароль не должен превышать 64 символа.");
                 return false;
             }
-            
+
             if (password != confirmPassword)
             {
                 ShowErrorMessage("Пароли не совпадают.");

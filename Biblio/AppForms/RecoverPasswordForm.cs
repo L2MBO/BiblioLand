@@ -1,17 +1,9 @@
 ﻿using Biblio.Classes.Animations;
-using Biblio.Classes.Customization;
 using Biblio.HideClasses;
 using Biblio.ValidationClasses;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Biblio.AppForms
@@ -73,7 +65,7 @@ namespace Biblio.AppForms
             FormDrag.DragingForm(this);
         }
 
-        private void closeButton_Click(object sender, EventArgs e) 
+        private void closeButton_Click(object sender, EventArgs e)
         {
             ForgetPasswordForm form = new ForgetPasswordForm();
             form.Show();

@@ -5,12 +5,8 @@ using Biblio.Interface;
 using Biblio.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Biblio.CustomControls
@@ -88,7 +84,7 @@ namespace Biblio.CustomControls
                 }
             }
 
-            if (searchTextField.Text != "") 
+            if (searchTextField.Text != "")
             {
                 clearTextButton.Visible = true;
             }

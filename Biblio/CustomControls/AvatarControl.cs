@@ -1,21 +1,12 @@
 ﻿using Biblio.AppForms;
-using Biblio.Classes.Coding;
 using Biblio.Classes.Customization;
-using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.HideClasses;
 using Biblio.Interface;
-using Biblio.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Biblio.CustomControls
