@@ -17,9 +17,9 @@ namespace Biblio.Models
 
         public string Comment { get; set; }
 
-        public DateTime? ReviewDate { get; set; }
-
         public int? LikesCount { get; set; }
+
+        public DateTime? ReviewDate { get; set; }
 
         public virtual Books Books { get; set; }
 

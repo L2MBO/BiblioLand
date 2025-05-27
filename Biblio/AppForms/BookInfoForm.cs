@@ -370,7 +370,7 @@ namespace Biblio.AppForms
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            var form = new BookReportForm();
+            var form = new BookReportForm(_book, _currentUserId);
             ShowDialogWithOverlay(form);
         }
     }

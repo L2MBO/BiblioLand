@@ -331,14 +331,13 @@
     </Compile>
     <Compile Include="Interface\IAvatarParentForm.cs" />
     <Compile Include="Models\BiblioModel.cs" />
-    <Compile Include="Models\BookReport.cs" />
+    <Compile Include="Models\BookReports.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\ReportCategory.cs" />
     <Compile Include="Models\Reviews.cs" />
-    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\UserBookmarks.cs" />
     <Compile Include="Models\UserCategories.cs" />
     <Compile Include="Models\UserRoles.cs" />

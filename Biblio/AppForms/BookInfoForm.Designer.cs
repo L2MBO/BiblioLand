@@ -90,10 +90,9 @@
             this.mainPanel.Controls.Add(this.rightPanel);
             this.mainPanel.Controls.Add(this.leftPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 100);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mainPanel.Location = new System.Drawing.Point(0, 52);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1452, 727);
+            this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 25;
             // 
             // statisticsPanel
@@ -101,10 +100,9 @@
             this.statisticsPanel.AutoSize = true;
             this.statisticsPanel.BackColor = System.Drawing.Color.Transparent;
             this.statisticsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statisticsPanel.Location = new System.Drawing.Point(512, 255);
-            this.statisticsPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.statisticsPanel.Location = new System.Drawing.Point(256, 133);
             this.statisticsPanel.Name = "statisticsPanel";
-            this.statisticsPanel.Size = new System.Drawing.Size(740, 0);
+            this.statisticsPanel.Size = new System.Drawing.Size(370, 0);
             this.statisticsPanel.TabIndex = 46;
             // 
             // panel8
@@ -112,10 +110,9 @@
             this.panel8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(512, 236);
-            this.panel8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel8.Location = new System.Drawing.Point(256, 123);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(740, 19);
+            this.panel8.Size = new System.Drawing.Size(370, 10);
             this.panel8.TabIndex = 45;
             // 
             // descriptionPanel
@@ -131,15 +128,14 @@
             this.descriptionPanel.FillColor2 = System.Drawing.Color.Transparent;
             this.descriptionPanel.FillColor3 = System.Drawing.Color.Transparent;
             this.descriptionPanel.FillColor4 = System.Drawing.Color.Transparent;
-            this.descriptionPanel.Location = new System.Drawing.Point(512, 169);
-            this.descriptionPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.descriptionPanel.Location = new System.Drawing.Point(256, 88);
             this.descriptionPanel.Name = "descriptionPanel";
             this.descriptionPanel.Quality = 1;
             this.descriptionPanel.ShadowDecoration.BorderRadius = 20;
             this.descriptionPanel.ShadowDecoration.Depth = 150;
             this.descriptionPanel.ShadowDecoration.Enabled = true;
             this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.descriptionPanel.Size = new System.Drawing.Size(740, 67);
+            this.descriptionPanel.Size = new System.Drawing.Size(370, 35);
             this.descriptionPanel.TabIndex = 44;
             // 
             // panel13
@@ -147,10 +143,9 @@
             this.panel13.AutoSize = true;
             this.panel13.Controls.Add(this.descriptionLabel);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 19);
-            this.panel13.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel13.Location = new System.Drawing.Point(0, 10);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(720, 29);
+            this.panel13.Size = new System.Drawing.Size(360, 15);
             this.panel13.TabIndex = 7;
             // 
             // descriptionLabel
@@ -158,48 +153,43 @@
             this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.descriptionLabel.ForeColor = System.Drawing.Color.White;
             this.descriptionLabel.Location = new System.Drawing.Point(0, 0);
-            this.descriptionLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.descriptionLabel.Size = new System.Drawing.Size(720, 29);
+            this.descriptionLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.descriptionLabel.Size = new System.Drawing.Size(360, 15);
             this.descriptionLabel.TabIndex = 5;
             this.descriptionLabel.Text = "Описание";
             // 
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(720, 19);
-            this.panel12.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel12.Location = new System.Drawing.Point(360, 10);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(20, 29);
+            this.panel12.Size = new System.Drawing.Size(10, 15);
             this.panel12.TabIndex = 3;
             // 
             // panel11
             // 
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 48);
-            this.panel11.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel11.Location = new System.Drawing.Point(0, 25);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(740, 19);
+            this.panel11.Size = new System.Drawing.Size(370, 10);
             this.panel11.TabIndex = 2;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(740, 19);
+            this.panel10.Size = new System.Drawing.Size(370, 10);
             this.panel10.TabIndex = 1;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(512, 150);
-            this.panel6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel6.Location = new System.Drawing.Point(256, 78);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(740, 19);
+            this.panel6.Size = new System.Drawing.Size(370, 10);
             this.panel6.TabIndex = 43;
             // 
             // panel7
@@ -210,10 +200,9 @@
             this.panel7.Controls.Add(this.nameLabel);
             this.panel7.Controls.Add(this.authorLabel);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(512, 31);
-            this.panel7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel7.Location = new System.Drawing.Point(256, 16);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(740, 119);
+            this.panel7.Size = new System.Drawing.Size(370, 62);
             this.panel7.TabIndex = 42;
             // 
             // panel14
@@ -222,10 +211,9 @@
             this.panel14.Controls.Add(this.panel18);
             this.panel14.Controls.Add(this.panel15);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel14.Location = new System.Drawing.Point(530, 0);
-            this.panel14.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel14.Location = new System.Drawing.Point(265, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(210, 119);
+            this.panel14.Size = new System.Drawing.Size(105, 62);
             this.panel14.TabIndex = 3;
             // 
             // ratingLabel
@@ -234,10 +222,9 @@
             this.ratingLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.ratingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ratingLabel.ForeColor = System.Drawing.Color.White;
-            this.ratingLabel.Location = new System.Drawing.Point(80, 0);
-            this.ratingLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ratingLabel.Location = new System.Drawing.Point(34, 0);
             this.ratingLabel.Name = "ratingLabel";
-            this.ratingLabel.Size = new System.Drawing.Size(130, 37);
+            this.ratingLabel.Size = new System.Drawing.Size(71, 20);
             this.ratingLabel.TabIndex = 7;
             this.ratingLabel.Text = "Оценка";
             // 
@@ -245,10 +232,9 @@
             // 
             this.panel18.Controls.Add(this.ratingCountLabel);
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel18.Location = new System.Drawing.Point(0, 41);
-            this.panel18.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel18.Location = new System.Drawing.Point(0, 21);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(210, 38);
+            this.panel18.Size = new System.Drawing.Size(105, 20);
             this.panel18.TabIndex = 6;
             // 
             // ratingCountLabel
@@ -256,10 +242,9 @@
             this.ratingCountLabel.AutoSize = true;
             this.ratingCountLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.ratingCountLabel.ForeColor = System.Drawing.Color.White;
-            this.ratingCountLabel.Location = new System.Drawing.Point(53, 0);
-            this.ratingCountLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ratingCountLabel.Location = new System.Drawing.Point(22, 0);
             this.ratingCountLabel.Name = "ratingCountLabel";
-            this.ratingCountLabel.Size = new System.Drawing.Size(157, 25);
+            this.ratingCountLabel.Size = new System.Drawing.Size(83, 13);
             this.ratingCountLabel.TabIndex = 0;
             this.ratingCountLabel.Text = "Число голосов";
             // 
@@ -267,10 +252,9 @@
             // 
             this.panel15.Controls.Add(this.evaluateButton);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel15.Location = new System.Drawing.Point(0, 79);
-            this.panel15.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel15.Location = new System.Drawing.Point(0, 41);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(210, 40);
+            this.panel15.Size = new System.Drawing.Size(105, 21);
             this.panel15.TabIndex = 4;
             // 
             // evaluateButton
@@ -286,11 +270,10 @@
             this.evaluateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.evaluateButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.evaluateButton.ForeColor = System.Drawing.Color.White;
-            this.evaluateButton.Location = new System.Drawing.Point(79, 0);
-            this.evaluateButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.evaluateButton.Location = new System.Drawing.Point(27, 0);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(131, 40);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
@@ -299,10 +282,9 @@
             // 
             this.genreLabel.AutoSize = true;
             this.genreLabel.ForeColor = System.Drawing.Color.White;
-            this.genreLabel.Location = new System.Drawing.Point(12, 85);
-            this.genreLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.genreLabel.Location = new System.Drawing.Point(6, 44);
             this.genreLabel.Name = "genreLabel";
-            this.genreLabel.Size = new System.Drawing.Size(67, 25);
+            this.genreLabel.Size = new System.Drawing.Size(36, 13);
             this.genreLabel.TabIndex = 2;
             this.genreLabel.Text = "Жанр";
             // 
@@ -311,10 +293,9 @@
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(10, 37);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.nameLabel.Location = new System.Drawing.Point(5, 19);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(154, 37);
+            this.nameLabel.Size = new System.Drawing.Size(83, 20);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Название";
             // 
@@ -322,10 +303,9 @@
             // 
             this.authorLabel.AutoSize = true;
             this.authorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(189)))));
-            this.authorLabel.Location = new System.Drawing.Point(12, 6);
-            this.authorLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.authorLabel.Location = new System.Drawing.Point(6, 3);
             this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(71, 25);
+            this.authorLabel.Size = new System.Drawing.Size(37, 13);
             this.authorLabel.TabIndex = 0;
             this.authorLabel.Text = "Автор";
             // 
@@ -333,10 +313,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(492, 31);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel4.Location = new System.Drawing.Point(246, 16);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(20, 696);
+            this.panel4.Size = new System.Drawing.Size(10, 362);
             this.panel4.TabIndex = 41;
             // 
             // bookPanel
@@ -350,10 +329,9 @@
             this.bookPanel.Controls.Add(this.panel23);
             this.bookPanel.Controls.Add(this.bookPictureBox);
             this.bookPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bookPanel.Location = new System.Drawing.Point(200, 31);
-            this.bookPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bookPanel.Location = new System.Drawing.Point(100, 16);
             this.bookPanel.Name = "bookPanel";
-            this.bookPanel.Size = new System.Drawing.Size(292, 696);
+            this.bookPanel.Size = new System.Drawing.Size(146, 362);
             this.bookPanel.TabIndex = 40;
             // 
             // reportButton
@@ -374,11 +352,10 @@
             this.reportButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.reportButton.ImageOffset = new System.Drawing.Point(5, 0);
             this.reportButton.ImageSize = new System.Drawing.Size(15, 13);
-            this.reportButton.Location = new System.Drawing.Point(0, 605);
-            this.reportButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.reportButton.Location = new System.Drawing.Point(0, 315);
             this.reportButton.Name = "reportButton";
             this.reportButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.reportButton.Size = new System.Drawing.Size(292, 54);
+            this.reportButton.Size = new System.Drawing.Size(146, 28);
             this.reportButton.TabIndex = 38;
             this.reportButton.Text = "Пожаловаться";
             this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
@@ -386,10 +363,9 @@
             // panel25
             // 
             this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel25.Location = new System.Drawing.Point(0, 586);
-            this.panel25.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel25.Location = new System.Drawing.Point(0, 305);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(292, 19);
+            this.panel25.Size = new System.Drawing.Size(146, 10);
             this.panel25.TabIndex = 37;
             // 
             // newBookmarkButton
@@ -404,11 +380,10 @@
             this.newBookmarkButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.newBookmarkButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.newBookmarkButton.ForeColor = System.Drawing.Color.White;
-            this.newBookmarkButton.Location = new System.Drawing.Point(0, 532);
-            this.newBookmarkButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.newBookmarkButton.Location = new System.Drawing.Point(0, 277);
             this.newBookmarkButton.Name = "newBookmarkButton";
             this.newBookmarkButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.newBookmarkButton.Size = new System.Drawing.Size(292, 54);
+            this.newBookmarkButton.Size = new System.Drawing.Size(146, 28);
             this.newBookmarkButton.TabIndex = 36;
             this.newBookmarkButton.Text = "В закладки";
             this.newBookmarkButton.Click += new System.EventHandler(this.newBookmarkButton_Click);
@@ -416,10 +391,9 @@
             // panel24
             // 
             this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 513);
-            this.panel24.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel24.Location = new System.Drawing.Point(0, 267);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(292, 19);
+            this.panel24.Size = new System.Drawing.Size(146, 10);
             this.panel24.TabIndex = 35;
             // 
             // continueReadingButton
@@ -434,11 +408,10 @@
             this.continueReadingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.continueReadingButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.continueReadingButton.ForeColor = System.Drawing.Color.White;
-            this.continueReadingButton.Location = new System.Drawing.Point(0, 434);
-            this.continueReadingButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.continueReadingButton.Location = new System.Drawing.Point(0, 226);
             this.continueReadingButton.Name = "continueReadingButton";
             this.continueReadingButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.continueReadingButton.Size = new System.Drawing.Size(292, 79);
+            this.continueReadingButton.Size = new System.Drawing.Size(146, 41);
             this.continueReadingButton.TabIndex = 34;
             this.continueReadingButton.Text = "Читать";
             this.continueReadingButton.Click += new System.EventHandler(this.continueRadingButton_Click);
@@ -446,10 +419,9 @@
             // panel23
             // 
             this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel23.Location = new System.Drawing.Point(0, 415);
-            this.panel23.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel23.Location = new System.Drawing.Point(0, 216);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(292, 19);
+            this.panel23.Size = new System.Drawing.Size(146, 10);
             this.panel23.TabIndex = 33;
             // 
             // bookPictureBox
@@ -458,9 +430,8 @@
             this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.bookPictureBox.ImageRotate = 0F;
             this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.bookPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bookPictureBox.Name = "bookPictureBox";
-            this.bookPictureBox.Size = new System.Drawing.Size(292, 415);
+            this.bookPictureBox.Size = new System.Drawing.Size(146, 216);
             this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bookPictureBox.TabIndex = 4;
             this.bookPictureBox.TabStop = false;
@@ -469,20 +440,19 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(200, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Location = new System.Drawing.Point(100, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1052, 31);
+            this.panel3.Size = new System.Drawing.Size(526, 16);
             this.panel3.TabIndex = 39;
             // 
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1252, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rightPanel.Location = new System.Drawing.Point(626, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(200, 727);
+            this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 38;
             // 
             // leftPanel
@@ -490,9 +460,9 @@
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 727);
+            this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
             // 
             // BorderlessForm
@@ -514,24 +484,23 @@
             this.navigationControl.leftPanel = null;
             this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
             this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(1452, 100);
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
             // 
             // BookInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(1452, 827);
+            this.ClientSize = new System.Drawing.Size(726, 430);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "BookInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookForm";

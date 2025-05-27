@@ -281,6 +281,7 @@
             this.registrationButton.PressedColor = System.Drawing.Color.Maroon;
             this.registrationButton.Size = new System.Drawing.Size(152, 34);
             this.registrationButton.TabIndex = 4;
+            this.registrationButton.TabStop = false;
             this.registrationButton.Text = "РЕГИСТРАЦИЯ";
             this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 

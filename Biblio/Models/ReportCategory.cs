@@ -12,7 +12,7 @@ namespace Biblio.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ReportCategory()
         {
-            BookReport = new HashSet<BookReport>();
+            BookReports = new HashSet<BookReports>();
         }
 
         public int ReportCategoryID { get; set; }
@@ -22,6 +22,6 @@ namespace Biblio.Models
         public string ReportCategoryName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BookReport> BookReport { get; set; }
+        public virtual ICollection<BookReports> BookReports { get; set; }
     }
 }
