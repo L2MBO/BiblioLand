@@ -50,8 +50,8 @@
             this.bottomNavigationPanel = new System.Windows.Forms.Panel();
             this.topNavigationPanel = new System.Windows.Forms.Panel();
             this.topLeftPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.topRightPanel = new System.Windows.Forms.Panel();
+            this.topRight = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.maximizeButton = new System.Windows.Forms.PictureBox();
             this.restoreButton = new System.Windows.Forms.PictureBox();
@@ -63,8 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainButton)).BeginInit();
-            this.panel1.SuspendLayout();
             this.topRightPanel.SuspendLayout();
+            this.topRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).BeginInit();
@@ -78,7 +78,7 @@
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.topPanel.Controls.Add(this.navigationPanel);
             this.topPanel.Controls.Add(this.topLeftPanel);
-            this.topPanel.Controls.Add(this.panel1);
+            this.topPanel.Controls.Add(this.topRightPanel);
             this.topPanel.Controls.Add(this.pictureBox2);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -360,28 +360,29 @@
             this.topLeftPanel.TabIndex = 24;
             this.topLeftPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.topRightPanel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(626, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 44);
-            this.panel1.TabIndex = 21;
-            // 
             // topRightPanel
             // 
-            this.topRightPanel.Controls.Add(this.closeButton);
-            this.topRightPanel.Controls.Add(this.maximizeButton);
-            this.topRightPanel.Controls.Add(this.restoreButton);
-            this.topRightPanel.Controls.Add(this.minimizeButton);
+            this.topRightPanel.Controls.Add(this.topRight);
             this.topRightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.topRightPanel.Location = new System.Drawing.Point(0, 0);
+            this.topRightPanel.Location = new System.Drawing.Point(626, 0);
+            this.topRightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topRightPanel.Name = "topRightPanel";
             this.topRightPanel.Size = new System.Drawing.Size(100, 44);
-            this.topRightPanel.TabIndex = 54;
+            this.topRightPanel.TabIndex = 21;
             this.topRightPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            // 
+            // topRight
+            // 
+            this.topRight.Controls.Add(this.closeButton);
+            this.topRight.Controls.Add(this.maximizeButton);
+            this.topRight.Controls.Add(this.restoreButton);
+            this.topRight.Controls.Add(this.minimizeButton);
+            this.topRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.topRight.Location = new System.Drawing.Point(0, 0);
+            this.topRight.Name = "topRight";
+            this.topRight.Size = new System.Drawing.Size(100, 44);
+            this.topRight.TabIndex = 54;
+            this.topRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // closeButton
             // 
@@ -451,8 +452,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainButton)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.topRightPanel.ResumeLayout(false);
+            this.topRight.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).EndInit();
@@ -485,8 +486,8 @@
         private System.Windows.Forms.Panel bottomNavigationPanel;
         private System.Windows.Forms.Panel topNavigationPanel;
         private System.Windows.Forms.Panel topLeftPanel;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel topRightPanel;
+        private System.Windows.Forms.Panel topRight;
         private System.Windows.Forms.PictureBox closeButton;
         private System.Windows.Forms.PictureBox maximizeButton;
         private System.Windows.Forms.PictureBox restoreButton;

@@ -49,6 +49,7 @@
             this.panel3.SuspendLayout();
             this.noResultPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).BeginInit();
+            this.booksPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
@@ -82,7 +83,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.noResultPanel);
             this.panel3.Controls.Add(this.booksPanel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 102);
@@ -93,7 +93,7 @@
             // noResultPanel
             // 
             this.noResultPanel.Controls.Add(this.noResultPictureBox);
-            this.noResultPanel.Location = new System.Drawing.Point(7, 3);
+            this.noResultPanel.Location = new System.Drawing.Point(3, 3);
             this.noResultPanel.Name = "noResultPanel";
             this.noResultPanel.Size = new System.Drawing.Size(509, 155);
             this.noResultPanel.TabIndex = 1;
@@ -111,6 +111,7 @@
             // 
             // booksPanel
             // 
+            this.booksPanel.Controls.Add(this.noResultPanel);
             this.booksPanel.Location = new System.Drawing.Point(4, 0);
             this.booksPanel.Name = "booksPanel";
             this.booksPanel.Size = new System.Drawing.Size(514, 158);
@@ -253,6 +254,7 @@
             this.panel3.ResumeLayout(false);
             this.noResultPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.noResultPictureBox)).EndInit();
+            this.booksPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);

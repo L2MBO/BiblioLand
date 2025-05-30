@@ -261,6 +261,7 @@
     <Compile Include="Classes\Images\StoreImages\CodingOrDecoding.cs" />
     <Compile Include="Classes\Hash\HashHelper.cs" />
     <Compile Include="Classes\Pdf\OpenPdf\PdfLoader.cs" />
+    <Compile Include="Classes\SaveUserSettings\SaveUserFilter.cs" />
     <Compile Include="Classes\Validation\TimeValidation.cs" />
     <Compile Include="Classes\VisibilityOrEnabled\EnabledHelper.cs" />
     <Compile Include="Classes\VisibilityOrEnabled\VisibilityHelper.cs" />
@@ -484,7 +485,9 @@
   <ItemGroup>
     <None Include="Resources\visiblePussword.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\blueUnderLine.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\defaultAvatar.png" />
   </ItemGroup>
@@ -595,6 +598,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\whiteXmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ascendingArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descendingArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparentCircleCloseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TransparentNoResults.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

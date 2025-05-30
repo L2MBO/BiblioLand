@@ -156,7 +156,7 @@ namespace Biblio.CustomControls
                 if (leftPanel != null) leftPanel.Width = 300;
                 if (rightPanel != null) rightPanel.Width = 300;
                 topLeftPanel.Width = 300;
-                panel1.Width = 300;
+                topRightPanel.Width = 300;
                 searchButton.Width = 300;
                 searchButton.Text = "Что ищем, читатель?";
                 _otherX = 300;
@@ -171,7 +171,7 @@ namespace Biblio.CustomControls
                 if (leftPanel != null) leftPanel.Width = 100;
                 if (rightPanel != null) rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
-                panel1.Width = 100;
+                topRightPanel.Width = 100;
                 searchButton.Width = 136;
                 searchButton.Text = "Что ищем?";
                 _otherX = 100;

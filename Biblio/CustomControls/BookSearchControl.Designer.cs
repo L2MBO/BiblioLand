@@ -86,7 +86,7 @@
             // 
             // bookPictureBox
             // 
-            this.bookPictureBox.BorderRadius = 13;
+            this.bookPictureBox.BorderRadius = 10;
             this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.bookPictureBox.ImageRotate = 0F;
             this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
