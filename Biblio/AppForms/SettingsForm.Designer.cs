@@ -58,13 +58,25 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.userNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.descriptionPanel = new System.Windows.Forms.Panel();
             this.saveProfileButton = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.oldPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.oldPasswordLabel = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.newPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.newPasswordLabel = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.confirmPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.confirmPasswordLabel = new System.Windows.Forms.Label();
+            this.savePasswordButton = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
             this.profilePage.SuspendLayout();
+            this.changePasswordPage.SuspendLayout();
             this.panel4.SuspendLayout();
             this.avatarPanel.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -72,7 +84,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.descriptionPanel.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -198,6 +213,7 @@
             this.settingsTabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
             this.settingsTabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.settingsTabControl.TabButtonSize = new System.Drawing.Size(105, 30);
+            this.settingsTabControl.TabButtonTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.settingsTabControl.TabIndex = 25;
             this.settingsTabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             // 
@@ -215,6 +231,11 @@
             // changePasswordPage
             // 
             this.changePasswordPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.changePasswordPage.Controls.Add(this.savePasswordButton);
+            this.changePasswordPage.Controls.Add(this.panel13);
+            this.changePasswordPage.Controls.Add(this.panel12);
+            this.changePasswordPage.Controls.Add(this.panel11);
+            this.changePasswordPage.Controls.Add(this.panel6);
             this.changePasswordPage.Location = new System.Drawing.Point(109, 4);
             this.changePasswordPage.Name = "changePasswordPage";
             this.changePasswordPage.Padding = new System.Windows.Forms.Padding(3);
@@ -234,7 +255,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.descriptionPanel);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.avatarPanel);
@@ -279,6 +300,7 @@
             this.deleteAvatarButton.Animated = true;
             this.deleteAvatarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.deleteAvatarButton.BorderRadius = 9;
+            this.deleteAvatarButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteAvatarButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.deleteAvatarButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.deleteAvatarButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -298,6 +320,7 @@
             this.changeAvatarButton.Animated = true;
             this.changeAvatarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.changeAvatarButton.BorderRadius = 9;
+            this.changeAvatarButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeAvatarButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.changeAvatarButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changeAvatarButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -326,6 +349,7 @@
             // avatarPictureBox
             // 
             this.avatarPictureBox.BorderRadius = 7;
+            this.avatarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.avatarPictureBox.ImageRotate = 0F;
             this.avatarPictureBox.Location = new System.Drawing.Point(0, 20);
             this.avatarPictureBox.Name = "avatarPictureBox";
@@ -420,15 +444,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Никнейм";
             // 
-            // panel6
+            // descriptionPanel
             // 
-            this.panel6.Controls.Add(this.saveProfileButton);
-            this.panel6.Controls.Add(this.guna2TextBox1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(10, 196);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 105);
-            this.panel6.TabIndex = 45;
+            this.descriptionPanel.Controls.Add(this.saveProfileButton);
+            this.descriptionPanel.Controls.Add(this.descriptionTextBox);
+            this.descriptionPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.descriptionPanel.Location = new System.Drawing.Point(10, 196);
+            this.descriptionPanel.Name = "descriptionPanel";
+            this.descriptionPanel.Size = new System.Drawing.Size(397, 105);
+            this.descriptionPanel.TabIndex = 45;
             // 
             // saveProfileButton
             // 
@@ -442,37 +466,203 @@
             this.saveProfileButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.saveProfileButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.saveProfileButton.ForeColor = System.Drawing.Color.White;
-            this.saveProfileButton.Location = new System.Drawing.Point(0, 77);
+            this.saveProfileButton.Location = new System.Drawing.Point(0, 74);
             this.saveProfileButton.Name = "saveProfileButton";
             this.saveProfileButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
             this.saveProfileButton.Size = new System.Drawing.Size(156, 28);
             this.saveProfileButton.TabIndex = 48;
             this.saveProfileButton.Text = "Сохранить изменения";
             // 
-            // guna2TextBox1
+            // descriptionTextBox
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2TextBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2TextBox1.MaxLength = 600;
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(397, 67);
-            this.guna2TextBox1.TabIndex = 47;
+            this.descriptionTextBox.Animated = true;
+            this.descriptionTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.descriptionTextBox.BorderRadius = 10;
+            this.descriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.descriptionTextBox.DefaultText = "";
+            this.descriptionTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.descriptionTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.descriptionTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.descriptionTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.descriptionTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
+            this.descriptionTextBox.Location = new System.Drawing.Point(0, 0);
+            this.descriptionTextBox.MaxLength = 600;
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.descriptionTextBox.PlaceholderText = "";
+            this.descriptionTextBox.SelectedText = "";
+            this.descriptionTextBox.Size = new System.Drawing.Size(397, 66);
+            this.descriptionTextBox.TabIndex = 47;
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 301);
+            this.panel6.TabIndex = 1;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.oldPasswordTextBox);
+            this.panel11.Controls.Add(this.oldPasswordLabel);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(13, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(397, 71);
+            this.panel11.TabIndex = 44;
+            // 
+            // oldPasswordTextBox
+            // 
+            this.oldPasswordTextBox.Animated = true;
+            this.oldPasswordTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.oldPasswordTextBox.BorderRadius = 17;
+            this.oldPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.oldPasswordTextBox.DefaultText = "";
+            this.oldPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.oldPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.oldPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.oldPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.oldPasswordTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.oldPasswordTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.oldPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.oldPasswordTextBox.ForeColor = System.Drawing.Color.White;
+            this.oldPasswordTextBox.Location = new System.Drawing.Point(0, 35);
+            this.oldPasswordTextBox.MaxLength = 20;
+            this.oldPasswordTextBox.Name = "oldPasswordTextBox";
+            this.oldPasswordTextBox.PasswordChar = '*';
+            this.oldPasswordTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.oldPasswordTextBox.PlaceholderText = "";
+            this.oldPasswordTextBox.SelectedText = "";
+            this.oldPasswordTextBox.Size = new System.Drawing.Size(397, 36);
+            this.oldPasswordTextBox.TabIndex = 11;
+            // 
+            // oldPasswordLabel
+            // 
+            this.oldPasswordLabel.AutoSize = true;
+            this.oldPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.oldPasswordLabel.ForeColor = System.Drawing.Color.White;
+            this.oldPasswordLabel.Location = new System.Drawing.Point(-2, 15);
+            this.oldPasswordLabel.Name = "oldPasswordLabel";
+            this.oldPasswordLabel.Size = new System.Drawing.Size(97, 13);
+            this.oldPasswordLabel.TabIndex = 5;
+            this.oldPasswordLabel.Text = "Старый пароль";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.newPasswordTextBox);
+            this.panel12.Controls.Add(this.newPasswordLabel);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(13, 74);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(397, 71);
+            this.panel12.TabIndex = 45;
+            // 
+            // newPasswordTextBox
+            // 
+            this.newPasswordTextBox.Animated = true;
+            this.newPasswordTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.newPasswordTextBox.BorderRadius = 17;
+            this.newPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.newPasswordTextBox.DefaultText = "";
+            this.newPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.newPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.newPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.newPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.newPasswordTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.newPasswordTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.newPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.newPasswordTextBox.ForeColor = System.Drawing.Color.White;
+            this.newPasswordTextBox.Location = new System.Drawing.Point(0, 35);
+            this.newPasswordTextBox.MaxLength = 20;
+            this.newPasswordTextBox.Name = "newPasswordTextBox";
+            this.newPasswordTextBox.PasswordChar = '*';
+            this.newPasswordTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.newPasswordTextBox.PlaceholderText = "";
+            this.newPasswordTextBox.SelectedText = "";
+            this.newPasswordTextBox.Size = new System.Drawing.Size(397, 36);
+            this.newPasswordTextBox.TabIndex = 11;
+            // 
+            // newPasswordLabel
+            // 
+            this.newPasswordLabel.AutoSize = true;
+            this.newPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.newPasswordLabel.ForeColor = System.Drawing.Color.White;
+            this.newPasswordLabel.Location = new System.Drawing.Point(-2, 15);
+            this.newPasswordLabel.Name = "newPasswordLabel";
+            this.newPasswordLabel.Size = new System.Drawing.Size(92, 13);
+            this.newPasswordLabel.TabIndex = 5;
+            this.newPasswordLabel.Text = "Новый пароль";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.confirmPasswordTextBox);
+            this.panel13.Controls.Add(this.confirmPasswordLabel);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(13, 145);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(397, 71);
+            this.panel13.TabIndex = 46;
+            // 
+            // confirmPasswordTextBox
+            // 
+            this.confirmPasswordTextBox.Animated = true;
+            this.confirmPasswordTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.confirmPasswordTextBox.BorderRadius = 17;
+            this.confirmPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.confirmPasswordTextBox.DefaultText = "";
+            this.confirmPasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.confirmPasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.confirmPasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.confirmPasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.confirmPasswordTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.confirmPasswordTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.confirmPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.confirmPasswordTextBox.ForeColor = System.Drawing.Color.White;
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(0, 35);
+            this.confirmPasswordTextBox.MaxLength = 20;
+            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
+            this.confirmPasswordTextBox.PasswordChar = '*';
+            this.confirmPasswordTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.confirmPasswordTextBox.PlaceholderText = "";
+            this.confirmPasswordTextBox.SelectedText = "";
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(397, 36);
+            this.confirmPasswordTextBox.TabIndex = 11;
+            // 
+            // confirmPasswordLabel
+            // 
+            this.confirmPasswordLabel.AutoSize = true;
+            this.confirmPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.confirmPasswordLabel.ForeColor = System.Drawing.Color.White;
+            this.confirmPasswordLabel.Location = new System.Drawing.Point(-2, 15);
+            this.confirmPasswordLabel.Name = "confirmPasswordLabel";
+            this.confirmPasswordLabel.Size = new System.Drawing.Size(151, 13);
+            this.confirmPasswordLabel.TabIndex = 5;
+            this.confirmPasswordLabel.Text = "Новый пароль повторно";
+            // 
+            // savePasswordButton
+            // 
+            this.savePasswordButton.Animated = true;
+            this.savePasswordButton.BorderRadius = 13;
+            this.savePasswordButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.savePasswordButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.savePasswordButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.savePasswordButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.savePasswordButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.savePasswordButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.savePasswordButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.savePasswordButton.ForeColor = System.Drawing.Color.White;
+            this.savePasswordButton.Location = new System.Drawing.Point(13, 233);
+            this.savePasswordButton.Name = "savePasswordButton";
+            this.savePasswordButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.savePasswordButton.Size = new System.Drawing.Size(156, 28);
+            this.savePasswordButton.TabIndex = 49;
+            this.savePasswordButton.Text = "Сохранить изменения";
+            this.savePasswordButton.Click += new System.EventHandler(this.savePasswordButton_Click);
             // 
             // SettingsForm
             // 
@@ -493,6 +683,7 @@
             this.panel1.PerformLayout();
             this.settingsTabControl.ResumeLayout(false);
             this.profilePage.ResumeLayout(false);
+            this.changePasswordPage.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.avatarPanel.ResumeLayout(false);
             this.avatarPanel.PerformLayout();
@@ -504,7 +695,13 @@
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
+            this.descriptionPanel.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,8 +737,19 @@
         private System.Windows.Forms.Panel panel9;
         private Guna.UI2.WinForms.Guna2PictureBox avatarPictureBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel descriptionPanel;
         private Guna.UI2.WinForms.Guna2Button saveProfileButton;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox descriptionTextBox;
+        private System.Windows.Forms.Panel panel13;
+        private Guna.UI2.WinForms.Guna2TextBox confirmPasswordTextBox;
+        private System.Windows.Forms.Label confirmPasswordLabel;
+        private System.Windows.Forms.Panel panel12;
+        private Guna.UI2.WinForms.Guna2TextBox newPasswordTextBox;
+        private System.Windows.Forms.Label newPasswordLabel;
+        private System.Windows.Forms.Panel panel11;
+        private Guna.UI2.WinForms.Guna2TextBox oldPasswordTextBox;
+        private System.Windows.Forms.Label oldPasswordLabel;
+        private System.Windows.Forms.Panel panel6;
+        private Guna.UI2.WinForms.Guna2Button savePasswordButton;
     }
 }

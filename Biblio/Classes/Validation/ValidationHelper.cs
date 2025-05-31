@@ -25,7 +25,7 @@ namespace Biblio.ValidationClasses
             string login = loginField.Text;
             string password = passwordField.Text;
 
-            Users verification = users.FirstOrDefault(p => p.Username == login);
+            Users verification = users.FirstOrDefault(user => user.Username == login || user.Email == login);
 
             if (verification != null)
             {
@@ -169,14 +169,11 @@ namespace Biblio.ValidationClasses
             }
         }
 
-        public bool ValidationPasswordRecovery(string email, MaterialSingleLineTextField PasswordField, MaterialSingleLineTextField ConfirmPasswordField)
+        public bool ValidationPasswordFields(Users user, string PasswordField)
         {
-            string newPassword = PasswordField.Text;
-            string passwordHash = HashHelper.HashPassword(newPassword);
+            string passwordHash = HashHelper.HashPassword(PasswordField);
 
-            Users user = Program.context.Users.FirstOrDefault(u => u.Email == email);
-
-            bool isPasswordValid = HashHelper.VerifyPassword(newPassword, user.PasswordHash);
+            bool isPasswordValid = HashHelper.VerifyPassword(PasswordField, user.PasswordHash);
 
             if (isPasswordValid)
             {
@@ -187,15 +184,45 @@ namespace Biblio.ValidationClasses
             {
                 user.PasswordHash = passwordHash;
                 Program.context.SaveChanges();
-                PasswordField.Clear();
-                ConfirmPasswordField.Clear();
-                ShowInformationMessage("Пожалуйста войдите в систему", "Вы успешно сменили пароль");
                 return true;
             }
             else
             {
                 ShowErrorMessage("Пользователь не найден");
                 return false;
+            }
+        }
+
+        public bool ValidationPasswordRecovery(string email, MaterialSingleLineTextField PasswordField, MaterialSingleLineTextField ConfirmPasswordField)
+        {
+            string newPassword = PasswordField.Text;
+
+            Users user = Program.context.Users.FirstOrDefault(u => u.Email == email);
+
+            if (ValidationPasswordFields(user, newPassword))
+            {
+                PasswordField.Clear();
+                ConfirmPasswordField.Clear();
+                ShowInformationMessage("Пожалуйста войдите в систему", "Вы успешно сменили пароль");
+                return true;
+            }
+
+            return false;
+        }
+
+        private void ValidationResetPassword(Guna2TextBox PasswordField, Guna2TextBox ConfirmPasswordField)
+        {
+            string newPassword = PasswordField.Text;
+
+            int currentUserId = Program.CurrentUser.UserID;
+
+            Users currentUser = Program.context.Users.FirstOrDefault(u => u.UserID == currentUserId);
+
+            if (ValidationPasswordFields(currentUser, newPassword))
+            {
+                PasswordField.Clear();
+                ConfirmPasswordField.Clear();
+                ShowInformationMessage("Смена пароля прошла успешно", "Данные обновлены");
             }
         }
 
@@ -297,11 +324,8 @@ namespace Biblio.ValidationClasses
         private static readonly Regex _hasDigit = new Regex(@"\d");
         private static readonly Regex _hasSpecialChar = new Regex(@"[\W_]");
 
-        public static bool ValidationPasswordField(MaterialSingleLineTextField passwordField, MaterialSingleLineTextField confirmPasswordField)
+        public static bool ValidatePasswords(string password, string confirmPassword)
         {
-            string password = passwordField.Text;
-            string confirmPassword = confirmPasswordField.Text;
-
             if (!_onlyEnglishChars.IsMatch(password))
             {
                 ShowErrorMessage("Пароль должен содержать только английские буквы.");
@@ -356,6 +380,16 @@ namespace Biblio.ValidationClasses
                 return false;
             }
             return true;
+        }
+
+        public static bool ValidationPasswordField(MaterialSingleLineTextField passwordField, MaterialSingleLineTextField confirmPasswordField)
+        {
+            return ValidatePasswords(passwordField.Text, confirmPasswordField.Text);
+        }
+
+        public static bool ValidationPasswordField(Guna2TextBox passwordField, Guna2TextBox confirmPasswordField)
+        {
+            return ValidatePasswords(passwordField.Text, confirmPasswordField.Text);
         }
 
         public static void ShowErrorMessage(string message)

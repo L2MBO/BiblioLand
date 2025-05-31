@@ -1,5 +1,7 @@
 ﻿using Biblio.Classes.Customization;
+using Biblio.ValidationClasses;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
@@ -39,6 +41,26 @@ namespace Biblio.AppForms
                 avatarPictureBox.Height = 44;
                 avatarPictureBox.BorderRadius = 7;
                 avatarPanel.Height = 70;
+            }
+        }
+
+        private bool IsReportEmpty()
+        {
+            oldPasswordLabel.ForeColor = oldPasswordTextBox.Text == "" ? Color.Red : Color.White;
+            newPasswordLabel.ForeColor = newPasswordTextBox.Text == "" ? Color.Red : Color.White;
+            confirmPasswordLabel.ForeColor = confirmPasswordTextBox.Text == "" ? Color.Red : Color.White;
+            return oldPasswordTextBox.Text == "" || newPasswordTextBox.Text == "" || confirmPasswordTextBox.Text == "" ? false : true;
+        }
+
+        private void savePasswordButton_Click(object sender, EventArgs e)
+        {
+            if (IsReportEmpty())
+            {
+                if (ValidationHelper.ValidationPasswordField(newPasswordTextBox, confirmPasswordTextBox))
+                {
+                    MessageBox.Show("sdsdcs");
+                }
+                    
             }
         }
     }

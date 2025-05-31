@@ -77,7 +77,7 @@
             this.nameTextField.Depth = 0;
             this.nameTextField.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameTextField.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.nameTextField.Hint = "Имя пользователя";
+            this.nameTextField.Hint = "Имя пользователя или почта";
             this.nameTextField.Location = new System.Drawing.Point(39, 133);
             this.nameTextField.MouseState = MaterialSkin.MouseState.HOVER;
             this.nameTextField.Name = "nameTextField";
