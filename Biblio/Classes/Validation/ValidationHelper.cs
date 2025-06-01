@@ -169,7 +169,7 @@ namespace Biblio.ValidationClasses
             }
         }
 
-        public bool ValidationPasswordFields(Users user, string PasswordField)
+        public static bool ValidationPasswordFields(Users user, string PasswordField)
         {
             string passwordHash = HashHelper.HashPassword(PasswordField);
 
@@ -210,19 +210,41 @@ namespace Biblio.ValidationClasses
             return false;
         }
 
-        private void ValidationResetPassword(Guna2TextBox PasswordField, Guna2TextBox ConfirmPasswordField)
+        public static void ValidationResetPassword(Guna2TextBox OldPasswordField, Guna2TextBox PasswordField, Guna2TextBox ConfirmPasswordField)
         {
             string newPassword = PasswordField.Text;
+            string oldPassword = OldPasswordField.Text;
 
             int currentUserId = Program.CurrentUser.UserID;
 
             Users currentUser = Program.context.Users.FirstOrDefault(u => u.UserID == currentUserId);
 
-            if (ValidationPasswordFields(currentUser, newPassword))
+            if (ValidationOldPassword(currentUser, oldPassword))
             {
-                PasswordField.Clear();
-                ConfirmPasswordField.Clear();
-                ShowInformationMessage("Смена пароля прошла успешно", "Данные обновлены");
+                if (ValidationPasswordFields(currentUser, newPassword))
+                {
+                    OldPasswordField.Clear();
+                    PasswordField.Clear();
+                    ConfirmPasswordField.Clear();
+                    ShowInformationMessage("Смена пароля прошла успешно", "Данные обновлены");
+                }
+            }
+        }
+
+        public static bool ValidationOldPassword(Users user, string OldPasswordField)
+        {
+            string passwordHash = HashHelper.HashPassword(OldPasswordField);
+
+            bool isPasswordCorrect = HashHelper.VerifyPassword(OldPasswordField, user.PasswordHash);
+
+            if (isPasswordCorrect)
+            {
+                return true;
+            }
+            else
+            {
+                ShowErrorMessage("Неверный пароль");
+                return false;
             }
         }
 
@@ -381,6 +403,8 @@ namespace Biblio.ValidationClasses
             }
             return true;
         }
+
+
 
         public static bool ValidationPasswordField(MaterialSingleLineTextField passwordField, MaterialSingleLineTextField confirmPasswordField)
         {

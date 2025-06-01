@@ -58,9 +58,8 @@ namespace Biblio.AppForms
             {
                 if (ValidationHelper.ValidationPasswordField(newPasswordTextBox, confirmPasswordTextBox))
                 {
-                    MessageBox.Show("sdsdcs");
+                    ValidationHelper.ValidationResetPassword(oldPasswordTextBox, newPasswordTextBox, confirmPasswordTextBox);
                 }
-                    
             }
         }
     }
