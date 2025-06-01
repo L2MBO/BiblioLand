@@ -36,10 +36,12 @@
             this.profilePage = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.descriptionPanel = new System.Windows.Forms.Panel();
-            this.saveProfileButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.userNameRuleLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.userNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -84,6 +86,8 @@
             this.profilePage.SuspendLayout();
             this.panel4.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.avatarPanel.SuspendLayout();
@@ -167,6 +171,8 @@
             // 
             // panel4
             // 
+            this.panel4.AutoSize = true;
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel4.Controls.Add(this.descriptionPanel);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel7);
@@ -180,32 +186,53 @@
             // 
             // descriptionPanel
             // 
-            this.descriptionPanel.Controls.Add(this.saveProfileButton);
-            this.descriptionPanel.Controls.Add(this.descriptionTextBox);
+            this.descriptionPanel.AutoSize = true;
+            this.descriptionPanel.Controls.Add(this.panel17);
+            this.descriptionPanel.Controls.Add(this.panel16);
             this.descriptionPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.descriptionPanel.Location = new System.Drawing.Point(10, 196);
             this.descriptionPanel.Name = "descriptionPanel";
             this.descriptionPanel.Size = new System.Drawing.Size(397, 105);
             this.descriptionPanel.TabIndex = 45;
             // 
-            // saveProfileButton
+            // panel17
             // 
-            this.saveProfileButton.Animated = true;
-            this.saveProfileButton.BorderRadius = 13;
-            this.saveProfileButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveProfileButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.saveProfileButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.saveProfileButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.saveProfileButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.saveProfileButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.saveProfileButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.saveProfileButton.ForeColor = System.Drawing.Color.White;
-            this.saveProfileButton.Location = new System.Drawing.Point(0, 74);
-            this.saveProfileButton.Name = "saveProfileButton";
-            this.saveProfileButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.saveProfileButton.Size = new System.Drawing.Size(156, 28);
-            this.saveProfileButton.TabIndex = 48;
-            this.saveProfileButton.Text = "Сохранить изменения";
+            this.panel17.Controls.Add(this.guna2Button1);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel17.Location = new System.Drawing.Point(0, 66);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(397, 39);
+            this.panel17.TabIndex = 50;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BorderRadius = 13;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(0, 9);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.guna2Button1.Size = new System.Drawing.Size(156, 28);
+            this.guna2Button1.TabIndex = 49;
+            this.guna2Button1.Text = "Сохранить изменения";
+            this.guna2Button1.Click += new System.EventHandler(this.saveProfileButton_Click);
+            // 
+            // panel16
+            // 
+            this.panel16.AutoSize = true;
+            this.panel16.Controls.Add(this.descriptionTextBox);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(397, 66);
+            this.panel16.TabIndex = 49;
             // 
             // descriptionTextBox
             // 
@@ -224,17 +251,19 @@
             this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
             this.descriptionTextBox.Location = new System.Drawing.Point(0, 0);
             this.descriptionTextBox.MaxLength = 600;
+            this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.descriptionTextBox.PlaceholderText = "";
             this.descriptionTextBox.SelectedText = "";
             this.descriptionTextBox.Size = new System.Drawing.Size(397, 66);
-            this.descriptionTextBox.TabIndex = 47;
+            this.descriptionTextBox.TabIndex = 48;
+            this.descriptionTextBox.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label4);
+            this.panel8.Controls.Add(this.userNameRuleLabel);
             this.panel8.Controls.Add(this.label5);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(10, 141);
@@ -242,15 +271,15 @@
             this.panel8.Size = new System.Drawing.Size(397, 55);
             this.panel8.TabIndex = 44;
             // 
-            // label4
+            // userNameRuleLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(-2, 1);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(318, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "За недопустимый по правилам ник Вы можете получить бан.";
+            this.userNameRuleLabel.AutoSize = true;
+            this.userNameRuleLabel.ForeColor = System.Drawing.Color.Silver;
+            this.userNameRuleLabel.Location = new System.Drawing.Point(-2, 1);
+            this.userNameRuleLabel.Name = "userNameRuleLabel";
+            this.userNameRuleLabel.Size = new System.Drawing.Size(318, 13);
+            this.userNameRuleLabel.TabIndex = 12;
+            this.userNameRuleLabel.Text = "За недопустимый по правилам ник Вы можете получить бан.";
             // 
             // label5
             // 
@@ -348,6 +377,7 @@
             this.deleteAvatarButton.Size = new System.Drawing.Size(79, 19);
             this.deleteAvatarButton.TabIndex = 10;
             this.deleteAvatarButton.Text = "Удалить";
+            this.deleteAvatarButton.Click += new System.EventHandler(this.deleteAvatarButton_Click);
             // 
             // changeAvatarButton
             // 
@@ -368,6 +398,7 @@
             this.changeAvatarButton.Size = new System.Drawing.Size(79, 19);
             this.changeAvatarButton.TabIndex = 9;
             this.changeAvatarButton.Text = "Изменить";
+            this.changeAvatarButton.Click += new System.EventHandler(this.changeAvatarButton_Click);
             // 
             // panel9
             // 
@@ -388,8 +419,10 @@
             this.avatarPictureBox.Location = new System.Drawing.Point(0, 20);
             this.avatarPictureBox.Name = "avatarPictureBox";
             this.avatarPictureBox.Size = new System.Drawing.Size(44, 44);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.avatarPictureBox.TabIndex = 8;
             this.avatarPictureBox.TabStop = false;
+            this.avatarPictureBox.Click += new System.EventHandler(this.changeAvatarButton_Click);
             // 
             // label2
             // 
@@ -675,7 +708,6 @@
             this.newMailTextBox.Location = new System.Drawing.Point(0, 35);
             this.newMailTextBox.MaxLength = 60;
             this.newMailTextBox.Name = "newMailTextBox";
-            this.newMailTextBox.PasswordChar = '*';
             this.newMailTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.newMailTextBox.PlaceholderText = "";
             this.newMailTextBox.SelectedText = "";
@@ -790,8 +822,13 @@
             this.mainPanel.ResumeLayout(false);
             this.settingsTabControl.ResumeLayout(false);
             this.profilePage.ResumeLayout(false);
+            this.profilePage.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.descriptionPanel.ResumeLayout(false);
+            this.descriptionPanel.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -838,10 +875,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label userNameRuleLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel7;
-        private Guna.UI2.WinForms.Guna2TextBox userNameTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel avatarPanel;
         private System.Windows.Forms.Panel panel10;
@@ -851,8 +887,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox avatarPictureBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel descriptionPanel;
-        private Guna.UI2.WinForms.Guna2Button saveProfileButton;
-        private Guna.UI2.WinForms.Guna2TextBox descriptionTextBox;
         private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2TextBox confirmPasswordTextBox;
         private System.Windows.Forms.Label confirmPasswordLabel;
@@ -871,5 +905,10 @@
         private System.Windows.Forms.Label newMailLabel;
         private System.Windows.Forms.Panel panel14;
         private Guna.UI2.WinForms.Guna2Button saveMailButton;
+        private System.Windows.Forms.Panel panel17;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Panel panel16;
+        private Guna.UI2.WinForms.Guna2TextBox userNameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox descriptionTextBox;
     }
 }

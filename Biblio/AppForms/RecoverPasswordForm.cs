@@ -28,6 +28,13 @@ namespace Biblio.AppForms
             var materialSkinManager = MaterialSkinManager.Instance;
 
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue800, Primary.Grey500, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+
+            var passwordTextBox = (TextBox)passwordTextField.Controls[0];
+            var confirmPasswordTextBox = (TextBox)confirmPasswordTextField.Controls[0];
+
+
+            passwordTextBox.MaxLength = 32;
+            confirmPasswordTextBox.MaxLength = 32;
         }
 
         private void visiblePassword_Click(object sender, EventArgs e)

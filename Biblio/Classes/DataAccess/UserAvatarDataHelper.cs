@@ -6,11 +6,13 @@ namespace Biblio.Classes.DataAccess
     {
         public static string GetBase64ImageFromDatabase(int currentUserAvatar)
         {
-            var user = Program.context.Users.FirstOrDefault(u => u.UserID == currentUserAvatar);
-            if (user != null)
+            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == currentUserAvatar);
+
+            if (currentUser != null)
             {
-                return user.AvatarPath;
+                return currentUser.AvatarPath;
             }
+
             return null;
         }
     }

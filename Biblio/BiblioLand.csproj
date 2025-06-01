@@ -174,6 +174,12 @@
     <Compile Include="AppForms\ForgetPasswordForm.Designer.cs">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\ImageLoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\ImageLoadForm.Designer.cs">
+      <DependentUpon>ImageLoadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,7 @@
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\SendMessageCode.cs" />
     <Compile Include="Classes\Customization\FormCustomization\AutoScrollHelper.cs" />
+    <Compile Include="Classes\Customization\FormCustomization\DialogWithOverlayService.cs" />
     <Compile Include="Classes\Customization\ImagesCustomization\BackgroundImageRenderer.cs" />
     <Compile Include="Classes\Customization\ImagesCustomization\BlurImage.cs" />
     <Compile Include="Classes\Customization\FormCustomization\RoundingHelper.cs" />
@@ -376,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\ImageLoadForm.resx">
+      <DependentUpon>ImageLoadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

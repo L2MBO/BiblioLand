@@ -1,4 +1,5 @@
 ﻿using Biblio.Classes.Customization;
+using Biblio.Classes.Customization.FormCustomization;
 using Biblio.Classes.Customization.ImagesCustomization;
 using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
@@ -15,7 +16,7 @@ namespace Biblio.AppForms
 {
     public partial class BookInfoForm : Form
     {
-        private OverlayForm _overlayForm;
+        private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
         private Books _book;
         private int _currentUserId = Program.CurrentUser.UserID;
         private int _bookmarkX;
@@ -355,22 +356,10 @@ namespace Biblio.AppForms
             UpdateEvaluationForm();
         }
 
-        public void ShowDialogWithOverlay(Form dialogForm)
-        {
-            _overlayForm = new OverlayForm(this);
-
-            _overlayForm.Show(this);
-
-            dialogForm.StartPosition = FormStartPosition.CenterParent;
-            dialogForm.FormClosed += (s, args) => _overlayForm.Close();
-
-            dialogForm.ShowDialog(this);
-        }
-
         private void evaluateButton_Click(object sender, EventArgs e)
         {
             var form = new EvaluationForm(_book, _currentUserId, evaluateButton);
-            ShowDialogWithOverlay(form);
+            _dialogService.ShowDialogWithOverlay(this, form);
 
             ShowRating();
 
@@ -380,7 +369,7 @@ namespace Biblio.AppForms
         private void reportButton_Click(object sender, EventArgs e)
         {
             var form = new BookReportForm(_book, _currentUserId);
-            ShowDialogWithOverlay(form);
+            _dialogService.ShowDialogWithOverlay(this, form);
         }
     }
 }

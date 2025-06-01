@@ -68,13 +68,18 @@ namespace Biblio.ValidationClasses
 
         public static bool ValidationRegistration(MaterialSingleLineTextField LoginField, MaterialSingleLineTextField MailField, MaterialSingleLineTextField PasswordField, MaterialSingleLineTextField ConfirmPasswordField)
         {
-            string newUsername = LoginField.Text;
-            string newMail = MailField.Text;
-            string newPassword = PasswordField.Text;
+            string originalUsername = LoginField.Text;
+            string newUsername = originalUsername?.Replace(" ", "");
+            string originalMail = MailField.Text;
+            string newMail = originalMail?.Replace(" ", "");
+            string originalPassword = PasswordField.Text;
+            string newPassword = originalPassword?.Replace(" ", "");
+
+            bool hadSpaces = originalUsername.Contains(" ") || originalMail.Contains(" ") || originalPassword.Contains(" ");
 
             if (_onlyEnglishChars.IsMatch(newUsername))
             {
-                if (!IsUsernameOrMailTaken(LoginField, MailField))
+                if (!IsUsernameOrMailTaken(newUsername, newMail))
                 {
                     string passwordHash = HashHelper.HashPassword(newPassword);
                     string base64Avatar = CodingOrDecoding.ImageCoding(null);
@@ -97,13 +102,19 @@ namespace Biblio.ValidationClasses
 
                     Program.context.Users.Add(newUser);
                     Program.context.SaveChanges();
-                    ShowInformationMessage("Приветствуем в наших рядах читателей!", "Вы успешно зарегестрировались");
+
+                    string registrationMessage = hadSpaces
+                        ? "Пробелы в полях были удалены.\n\nПриветствуем в наших рядах читателей!"
+                        : "Приветствуем в наших рядах читателей!";
+
+                    ShowInformationMessage(registrationMessage, "Регистрация прошла успешно");
 
                     return true;
                 }
                 ShowErrorMessage("Имя пользователя или почта уже существуют.");
+                return false;
             }
-            ShowErrorMessage("Имя пользователя должно содержать только английские буквы.");
+            ShowErrorMessage("Имя пользователя должно содержать только английские буквы, символы или цифры.");
             return false;
         }
 
@@ -197,9 +208,9 @@ namespace Biblio.ValidationClasses
         {
             string newPassword = PasswordField.Text;
 
-            Users user = Program.context.Users.FirstOrDefault(u => u.Email == email);
+            Users currentUser = Program.context.Users.FirstOrDefault(user => user.Email == email);
 
-            if (ValidationPasswordFields(user, newPassword))
+            if (ValidationPasswordFields(currentUser, newPassword))
             {
                 PasswordField.Clear();
                 ConfirmPasswordField.Clear();
@@ -217,7 +228,7 @@ namespace Biblio.ValidationClasses
 
             int currentUserId = Program.CurrentUser.UserID;
 
-            Users currentUser = Program.context.Users.FirstOrDefault(u => u.UserID == currentUserId);
+            Users currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == currentUserId);
 
             if (ValidationOldPassword(currentUser, oldPassword))
             {
@@ -307,12 +318,14 @@ namespace Biblio.ValidationClasses
             return allFieldsFilled;
         }
 
-        public static bool IsUsernameOrMailTaken(MaterialSingleLineTextField LoginField, MaterialSingleLineTextField MailField)
+        public static bool IsUsernameOrMailTaken(string login, string mail)
         {
-            List<Users> users = Program.context.Users.ToList();
-            string login = LoginField.Text;
-            string mail = MailField.Text;
-            return users.Any(name => name.Username == login || name.Email == mail);
+            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(mail))
+                return true;
+
+            // Используем запрос к базе данных без загрузки всех пользователей
+            return Program.context.Users
+                .Any(u => u.Username == login || u.Email == mail);
         }
 
         public static bool ValidateMailField(string mail)
@@ -408,9 +421,9 @@ namespace Biblio.ValidationClasses
                 return false;
             }
 
-            if (password.Length > 64)
+            if (password.Length > 32)
             {
-                ShowErrorMessage("Пароль не должен превышать 64 символа.");
+                ShowErrorMessage("Пароль не должен превышать 32 символа.");
                 return false;
             }
 
@@ -421,8 +434,6 @@ namespace Biblio.ValidationClasses
             }
             return true;
         }
-
-
 
         public static bool ValidationPasswordField(MaterialSingleLineTextField passwordField, MaterialSingleLineTextField confirmPasswordField)
         {

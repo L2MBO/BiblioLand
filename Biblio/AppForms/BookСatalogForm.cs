@@ -4,9 +4,7 @@ using Biblio.HideClasses;
 using Biblio.Models;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Web.Profile;
 using System.Windows.Forms;
 using static Biblio.Classes.SaveUserSettings.SaveUserFilter;
 

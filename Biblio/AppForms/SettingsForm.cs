@@ -1,14 +1,30 @@
-﻿using Biblio.Classes.Customization;
+﻿using Biblio.Classes.Coding;
+using Biblio.Classes.Customization;
+using Biblio.Classes.Customization.FormCustomization;
+using Biblio.Classes.DataAccess;
+using Biblio.Classes.Images.InstallingImages;
+using Biblio.Models;
 using Biblio.ValidationClasses;
 using System;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
     public partial class SettingsForm : Form
     {
+        private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
+        private static int _currentUserId = Program.CurrentUser.UserID;
+        private Users _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+        private static readonly Regex _onlyEnglishChars = new Regex(@"^[A-Za-z\d\W_]+$");
+        private static readonly Regex _whitespaceRegex = new Regex(@"\s+");
+        private string _base64Avatar;
+        private bool _isAvatarDeleted = false;
+
         public SettingsForm()
         {
             InitializeComponent();
@@ -21,12 +37,20 @@ namespace Biblio.AppForms
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
 
-            AutoScrollHelper.ConfigureScrollbars(profilePage, disableHorizontal: false, disableVertical: true);
+            AutoScrollHelper.ConfigureScrollbars(panel4, disableHorizontal: true, disableVertical: true);
+
+            ImageLoader.LoadAvatarImage(avatarPictureBox);
+
+            userNameTextBox.Text = _currentUser.Username;
+            descriptionTextBox.Text = _currentUser.Descriotion;
+
+            PerformLayout();
         }
 
         private void SettingsForm_Resize(object sender, EventArgs e)
         {
             navigationControl.HandleFormResize(this);
+            settingsTabControl.Update();
 
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -34,7 +58,9 @@ namespace Biblio.AppForms
                 avatarPictureBox.Height = 200;
                 avatarPictureBox.BorderRadius = 15;
                 avatarPanel.Height = 226;
+                userNameRuleLabel.Text = "Состоит из английских букв, цифр и символов @/./+/-/_. За недопустимый по правилам ник Вы можете получить бан.";
                 passwordRuleLabel.Text = "Пароль должен содержать заглавные и строчные буквы, а также символы и цифры. Минимальная длина - 8 символов";
+                descriptionTextBox.MaximumSize = new System.Drawing.Size(0, 1400);
             }
             else
             {
@@ -42,8 +68,29 @@ namespace Biblio.AppForms
                 avatarPictureBox.Height = 44;
                 avatarPictureBox.BorderRadius = 7;
                 avatarPanel.Height = 70;
+                userNameRuleLabel.Text = "За недопустимый по правилам ник Вы можете получить бан.";
                 passwordRuleLabel.Text = "Заглавные, строчные, символы и цифры. Минимум 8 символов";
+                descriptionTextBox.MaximumSize = new System.Drawing.Size(0, 286);
             }
+        }
+
+        private int CalculateTextBoxHeight(string text, Font font, int width)
+        {
+            string adjustedText = "\n\n" + text;
+
+            using (Graphics graphics = this.CreateGraphics())
+            {
+                SizeF textSize = TextRenderer.MeasureText(adjustedText, font, new Size(width, 0), TextFormatFlags.TextBoxControl | TextFormatFlags.WordBreak);
+
+                return (int)Math.Ceiling(textSize.Height) + descriptionTextBox.Margin.Vertical + descriptionTextBox.Padding.Vertical;
+            }
+        }
+
+        private bool IsUserNameValid()
+        {
+            userNameTextBox.ForeColor = userNameTextBox.Text == "" || !_onlyEnglishChars.IsMatch(userNameTextBox.Text) ? Color.Red : Color.White;
+
+            return userNameTextBox.Text == "" || !_onlyEnglishChars.IsMatch(userNameTextBox.Text) ? false : true;
         }
 
         private bool IsReportEmpty()
@@ -60,6 +107,54 @@ namespace Biblio.AppForms
             newMailLabel.ForeColor = newMailTextBox.Text == "" ? Color.Red : Color.White;
 
             return newMailTextBox.Text == "" ? false : true;
+        }
+
+        private void saveProfileButton_Click(object sender, EventArgs e)
+        {
+            if (IsUserNameValid())
+            {
+                bool hadSpaces = userNameTextBox.Text.Contains(" ");
+                bool changesMade = false;
+
+                if (userNameTextBox.Text != _currentUser.Username)
+                {
+                    _currentUser.Username = userNameTextBox.Text?.Replace(" ", "");
+                    changesMade = true;
+                }
+
+                if (_whitespaceRegex.Replace(descriptionTextBox.Text ?? "", "")
+                    != _whitespaceRegex.Replace(_currentUser.Descriotion ?? "", ""))
+                {
+                    _currentUser.Descriotion = descriptionTextBox.Text;
+                    changesMade = true;
+                }
+
+                if (_isAvatarDeleted)
+                {
+                    _currentUser.AvatarPath = _base64Avatar;
+                    changesMade = true;
+                    _isAvatarDeleted = false;
+                }
+                else if (!string.IsNullOrEmpty(_base64Avatar) &&
+                        _base64Avatar != UserAvatarDataHelper.GetBase64ImageFromDatabase(_currentUserId))
+                {
+                    _currentUser.AvatarPath = _base64Avatar;
+                    changesMade = true;
+                }
+
+                if (changesMade)
+                {
+                    Program.context.SaveChanges();
+
+                    navigationControl.RefreshAvatar();
+
+                    string saveSettingsMessage = hadSpaces
+                        ? "Пробелы у имени пользователя были удалены.\n\nДанные обновлены"
+                        : "Данные обновлены";
+
+                    ValidationHelper.ShowInformationMessage(saveSettingsMessage, "Успех");
+                }
+            }
         }
 
         private void savePasswordButton_Click(object sender, EventArgs e)
@@ -84,6 +179,45 @@ namespace Biblio.AppForms
                     ValidationHelper.ValidateNewMail(newMailTextBox);
                 }
             }
+        }
+
+        private void changeAvatarButton_Click(object sender, EventArgs e)
+        {
+            var form = new ImageLoadForm(_currentUserId);
+
+            if (_dialogService.ShowDialogWithOverlay(this, form) == DialogResult.OK)
+            {
+                _base64Avatar = form.Base64Avatar;
+                ImageLoader.LoadAvatarImageFromString(_base64Avatar, avatarPictureBox);
+            }
+        }
+
+        private void deleteAvatarButton_Click(object sender, EventArgs e)
+        {
+            string defaultBase64Avatar = CodingOrDecoding.ImageCoding(null);
+
+            string currentAvatar = UserAvatarDataHelper.GetBase64ImageFromDatabase(_currentUserId);
+
+            if (currentAvatar == defaultBase64Avatar)
+            {
+                return;
+            }
+
+            ImageLoader.LoadAvatarImageFromString(defaultBase64Avatar, avatarPictureBox);
+
+            _base64Avatar = defaultBase64Avatar;
+            _isAvatarDeleted = true;
+        }
+
+        private void descriptionTextBox_TextChanged(object sender, EventArgs e)
+        {
+            int textBoxWidth = descriptionTextBox.Width;
+
+            int preferredHeight = CalculateTextBoxHeight(descriptionTextBox.Text, descriptionTextBox.Font, textBoxWidth);
+
+            descriptionTextBox.Height = preferredHeight;
+
+            descriptionPanel.PerformLayout();
         }
     }
 }

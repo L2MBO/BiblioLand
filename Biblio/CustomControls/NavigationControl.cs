@@ -192,6 +192,14 @@ namespace Biblio.CustomControls
                 rightPanel.Width = RightPanelWidth > 0 ? RightPanelWidth : _rightPanelDefaultWidth;
         }
 
+        public void RefreshAvatar()
+        {
+            if (!DesignMode)
+            {
+                ImageLoader.LoadAvatarImage(avatarPictureBox);
+            }
+        }
+
         private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             FormDrag.DragingForm(FindForm());

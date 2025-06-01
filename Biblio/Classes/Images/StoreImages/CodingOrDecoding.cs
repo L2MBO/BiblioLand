@@ -17,22 +17,28 @@ namespace Biblio.Classes.Coding
 
                 if (!string.IsNullOrEmpty(imagePath))
                 {
-                    imageBytes = File.ReadAllBytes(imagePath);
+                    using (var bitmap = new Bitmap(Image.FromFile(imagePath)))
+
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        bitmap.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+                        imageBytes = memoryStream.ToArray();
+                    }
                 }
-
-                // Если путь не предоставлен, используем встроенный ресурс
-                var bitmap = Properties.Resources.defaultAvatar;
-
-                if (bitmap == null)
+                else
                 {
-                    throw new InvalidOperationException("Ресурс defaultAvatar недоступен.");
-                }
+                    // Если путь не предоставлен, используем встроенный ресурс
+                    var bitmap = Properties.Resources.defaultAvatar;
 
-                // Сохраняем Bitmap в MemoryStream в формате PNG
-                using (var memoryStream = new MemoryStream())
-                {
-                    bitmap.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
-                    imageBytes = memoryStream.ToArray();
+                    if (bitmap == null)
+                        throw new InvalidOperationException("Ресурс defaultAvatar недоступен.");
+
+                    // Сохраняем Bitmap в MemoryStream в формате PNG
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        bitmap.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+                        imageBytes = memoryStream.ToArray();
+                    }
                 }
 
                 // Преобразуем массив байтов в строку Base64
@@ -50,7 +56,7 @@ namespace Biblio.Classes.Coding
             }
             catch (Exception ex)
             {
-                File.AppendAllText(_logPath, $"[{DateTime.Now}] Неожиданная ошибка:{ex.Message}\n");
+                File.AppendAllText(_logPath, $"[{DateTime.Now}] Неожиданная ошибка: {ex.Message}\n");
                 throw;
             }
         }
