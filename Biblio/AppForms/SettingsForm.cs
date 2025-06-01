@@ -8,10 +8,8 @@ using Biblio.ValidationClasses;
 using System;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
