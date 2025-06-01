@@ -60,7 +60,6 @@ namespace Biblio.AppForms
                 avatarPanel.Height = 226;
                 userNameRuleLabel.Text = "Состоит из английских букв, цифр и символов @/./+/-/_. За недопустимый по правилам ник Вы можете получить бан.";
                 passwordRuleLabel.Text = "Пароль должен содержать заглавные и строчные буквы, а также символы и цифры. Минимальная длина - 8 символов";
-                descriptionTextBox.MaximumSize = new System.Drawing.Size(0, 1400);
             }
             else
             {
@@ -70,17 +69,17 @@ namespace Biblio.AppForms
                 avatarPanel.Height = 70;
                 userNameRuleLabel.Text = "За недопустимый по правилам ник Вы можете получить бан.";
                 passwordRuleLabel.Text = "Заглавные, строчные, символы и цифры. Минимум 8 символов";
-                descriptionTextBox.MaximumSize = new System.Drawing.Size(0, 286);
             }
         }
 
         private int CalculateTextBoxHeight(string text, Font font, int width)
         {
-            string adjustedText = "\n\n" + text;
+            string adjustedText = text.Length > 0 ? Environment.NewLine + Environment.NewLine + text : text;
 
             using (Graphics graphics = this.CreateGraphics())
             {
-                SizeF textSize = TextRenderer.MeasureText(adjustedText, font, new Size(width, 0), TextFormatFlags.TextBoxControl | TextFormatFlags.WordBreak);
+                SizeF textSize = TextRenderer.MeasureText(adjustedText, font, new Size(width, 0),
+                    TextFormatFlags.TextBoxControl | TextFormatFlags.WordBreak);
 
                 return (int)Math.Ceiling(textSize.Height) + descriptionTextBox.Margin.Vertical + descriptionTextBox.Padding.Vertical;
             }
