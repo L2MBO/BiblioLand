@@ -34,6 +34,7 @@ namespace Biblio.AppForms
                 avatarPictureBox.Height = 200;
                 avatarPictureBox.BorderRadius = 15;
                 avatarPanel.Height = 226;
+                passwordRuleLabel.Text = "Пароль должен содержать заглавные и строчные буквы, а также символы и цифры. Минимальная длина - 8 символов";
             }
             else
             {
@@ -41,6 +42,7 @@ namespace Biblio.AppForms
                 avatarPictureBox.Height = 44;
                 avatarPictureBox.BorderRadius = 7;
                 avatarPanel.Height = 70;
+                passwordRuleLabel.Text = "Заглавные, строчные, символы и цифры. Минимум 8 символов";
             }
         }
 
@@ -49,7 +51,15 @@ namespace Biblio.AppForms
             oldPasswordLabel.ForeColor = oldPasswordTextBox.Text == "" ? Color.Red : Color.White;
             newPasswordLabel.ForeColor = newPasswordTextBox.Text == "" ? Color.Red : Color.White;
             confirmPasswordLabel.ForeColor = confirmPasswordTextBox.Text == "" ? Color.Red : Color.White;
+
             return oldPasswordTextBox.Text == "" || newPasswordTextBox.Text == "" || confirmPasswordTextBox.Text == "" ? false : true;
+        }
+
+        private bool IsMailEmpty()
+        {
+            newMailLabel.ForeColor = newMailTextBox.Text == "" ? Color.Red : Color.White;
+
+            return newMailTextBox.Text == "" ? false : true;
         }
 
         private void savePasswordButton_Click(object sender, EventArgs e)
@@ -59,6 +69,19 @@ namespace Biblio.AppForms
                 if (ValidationHelper.ValidationPasswordField(newPasswordTextBox, confirmPasswordTextBox))
                 {
                     ValidationHelper.ValidationResetPassword(oldPasswordTextBox, newPasswordTextBox, confirmPasswordTextBox);
+                }
+            }
+        }
+
+        private void saveMailButton_Click(object sender, EventArgs e)
+        {
+            string mail = newMailTextBox.Text?.Trim();
+
+            if (IsMailEmpty())
+            {
+                if (ValidationHelper.ValidateMailField(mail))
+                {
+                    ValidationHelper.ValidateNewMail(newMailTextBox);
                 }
             }
         }

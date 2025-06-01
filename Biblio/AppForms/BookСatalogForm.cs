@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Web.Profile;
 using System.Windows.Forms;
 using static Biblio.Classes.SaveUserSettings.SaveUserFilter;
 
@@ -19,10 +20,15 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
 
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
 
-            AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: false, disableVertical: true);
+            AutoScrollHelper.ConfigureScrollbars(booksPanel, disableHorizontal: true, disableVertical: true);
 
             sortComboBox.SelectedIndex = _currentSortIndex;
 

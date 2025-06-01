@@ -46,10 +46,11 @@ namespace Biblio.AppForms
         private async void registrationButton_Click(object sender, EventArgs e)
         {
             MaterialSingleLineTextField[] fields = { nameTextField, mailTextField, passwordTextField, confirmPasswordTextField };
+            string mail = mailTextField.Text?.Trim();
 
             if (await ValidationHelper.ValidateFieldIsEmpty(fields))
             {
-                if (ValidationHelper.ValidateMailField(mailTextField))
+                if (ValidationHelper.ValidateMailField(mail))
                 {
                     if (ValidationHelper.ValidationPasswordField(passwordTextField, confirmPasswordTextField))
                     {

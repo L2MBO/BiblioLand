@@ -315,10 +315,8 @@ namespace Biblio.ValidationClasses
             return users.Any(name => name.Username == login || name.Email == mail);
         }
 
-        public static bool ValidateMailField(MaterialSingleLineTextField mailField)
+        public static bool ValidateMailField(string mail)
         {
-            string mail = mailField.Text?.Trim();
-
             try
             {
                 if (!Regex.IsMatch(mail, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
@@ -338,6 +336,26 @@ namespace Biblio.ValidationClasses
             {
                 ShowErrorMessage("Слишком сложный email. Попробуйте ещё раз.");
                 return false;
+            }
+        }
+
+        public static void ValidateNewMail(Guna2TextBox newMail)
+        {
+            string mail = newMail.Text?.Trim();
+            int currentUserId = Program.CurrentUser.UserID;
+
+            Users currentUser = Program.context.Users.FirstOrDefault(u => u.UserID == currentUserId);
+
+            if (mail != currentUser.Email)
+            {
+                currentUser.Email = mail;
+                Program.context.SaveChanges();
+                newMail.Clear();
+                ShowInformationMessage("Смена почты прошла успешно", "Данные обновлены");
+            }
+            else
+            {
+                ShowErrorMessage("Новая почта должна отличаться от старой");
             }
         }
 
