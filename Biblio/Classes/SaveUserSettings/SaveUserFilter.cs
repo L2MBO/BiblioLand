@@ -17,12 +17,18 @@ namespace Biblio.Classes.SaveUserSettings
 
         public static class FilterContext
         {
-            public static FilterState CurrentFilterState { get; set; } = new FilterState
+            public static FilterState _currentFilterState { get; set; } = new FilterState
             {
                 SortIndex = 2, // По умолчанию
                 IsDescending = true, // По умолчанию
                 SearchQuery = ""
             };
+
+            public static FilterState CurrentFilterState
+            {
+                get => _currentFilterState;
+                set => _currentFilterState = value ?? new FilterState();
+            }
         }
     }
 }

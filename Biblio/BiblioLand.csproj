@@ -228,12 +228,6 @@
     <Compile Include="AppForms\StoreForm.Designer.cs">
       <DependentUpon>StoreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\BookTopForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppForms\BookTopForm.Designer.cs">
-      <DependentUpon>BookTopForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\BookСatalogForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,9 +410,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\StoreForm.resx">
       <DependentUpon>StoreForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\BookTopForm.resx">
-      <DependentUpon>BookTopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\UserNotifyForm.resx">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>

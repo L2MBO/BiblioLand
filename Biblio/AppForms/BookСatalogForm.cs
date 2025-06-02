@@ -25,73 +25,77 @@ namespace Biblio.AppForms
         {
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
-
             AutoScrollHelper.ConfigureScrollbars(booksPanel, disableHorizontal: true, disableVertical: true);
 
-            sortComboBox.SelectedIndex = _currentSortIndex;
+            // Инициализация UI из сохраненного состояния
+            sortComboBox.SelectedIndex = FilterContext.CurrentFilterState.SortIndex;
+            searchTextField.Text = FilterContext.CurrentFilterState.SearchQuery;
+            UpdateSortButtons();
 
-            RestoreFilterState();
+            // Первоначальная загрузка данных
+            ApplyFiltersAndSort();
         }
 
-        private void BookСatalogForm_Resize(object sender, EventArgs e)
+        private void UpdateSortButtons()
         {
-            navigationControl.HandleFormResize(this);
+            ascendingButton.Visible = !FilterContext.CurrentFilterState.IsDescending;
+            descendingButton.Visible = FilterContext.CurrentFilterState.IsDescending;
         }
 
-        private void SortBooks(bool applyFilters = true)
+        private void ApplyFiltersAndSort()
         {
-            string searchQuery = FilterContext.CurrentFilterState.SearchQuery;
-            int sortIndex = FilterContext.CurrentFilterState.SortIndex;
-            bool descending = FilterContext.CurrentFilterState.IsDescending;
-
+            var state = FilterContext.CurrentFilterState;
             IQueryable<Books> query = Program.context.Books;
 
-            if (!string.IsNullOrEmpty(searchQuery) && applyFilters)
+            // Применяем поиск
+            if (!string.IsNullOrEmpty(state.SearchQuery))
             {
-                query = query.Where(book => book.Title.ToLower().Contains(searchQuery) || book.Author.ToLower().Contains(searchQuery));
+                string searchLower = state.SearchQuery.ToLower();
+                query = query.Where(book =>
+                    book.Title.ToLower().Contains(searchLower) ||
+                    book.Author.ToLower().Contains(searchLower));
             }
 
-            switch (sortIndex)
+            // Применяем сортировку
+            switch (state.SortIndex)
             {
                 case 0: // По новизне
-                    query = descending
+                    query = state.IsDescending
                         ? query.OrderByDescending(book => book.AddedDate)
                         : query.OrderBy(book => book.AddedDate);
                     break;
 
                 case 1: // По количеству страниц
-                    query = descending
+                    query = state.IsDescending
                         ? query.OrderByDescending(book => book.TotalPages)
                         : query.OrderBy(book => book.TotalPages);
                     break;
 
-                case 2: // По популярности (заглушка, аналогично сортировке по оценке)
-                    query = descending
-                        ? query.OrderByDescending(book => book.AverageRating)
-                        : query.OrderBy(book => book.AverageRating);
-                    break;
-
+                case 2: // По популярности
                 case 3: // По оценке
-                    query = descending
+                    query = state.IsDescending
                         ? query.OrderByDescending(book => book.AverageRating)
                         : query.OrderBy(book => book.AverageRating);
                     break;
 
                 case 4: // По количеству оценок
-                    query = descending
+                    query = state.IsDescending
                         ? query.OrderByDescending(book => Program.context.Rating.Count(r => r.BookID == book.BookID))
                         : query.OrderBy(book => Program.context.Rating.Count(r => r.BookID == book.BookID));
                     break;
 
                 default:
-                    query = descending
+                    query = state.IsDescending
                         ? query.OrderByDescending(book => book.AverageRating)
                         : query.OrderBy(book => book.AverageRating);
                     break;
             }
 
-            List<Books> books = query.ToList();
+            UpdateBooksList(query.ToList());
+        }
 
+        private void UpdateBooksList(List<Books> books)
+        {
             booksPanel.Controls.Clear();
 
             if (books.Count > 0)
@@ -103,68 +107,44 @@ namespace Biblio.AppForms
                     bookControl.BookClicked += BookControl_BookClicked;
                     booksPanel.Controls.Add(bookControl);
                 }
-
                 booksPanel.BackgroundImage = null;
             }
             else
             {
-                booksPanel.Controls.Clear();
                 booksPanel.BackgroundImage = Properties.Resources.TransparentNoResults;
             }
         }
 
-        private void RestoreFilterState()
+        private void BookСatalogForm_Resize(object sender, EventArgs e)
         {
-            int sortIndex = FilterContext.CurrentFilterState.SortIndex;
-            bool isDescending = FilterContext.CurrentFilterState.IsDescending;
-            string searchQuery = FilterContext.CurrentFilterState.SearchQuery;
-
-            sortComboBox.SelectedIndex = sortIndex;
-
-            ascendingButton.Visible = !isDescending;
-            descendingButton.Visible = isDescending;
-
-            searchTextField.Text = searchQuery;
-
-            SortBooks();
+            navigationControl.HandleFormResize(this);
         }
 
         private void searchTextField_TextChanged(object sender, EventArgs e)
         {
-            string result = searchTextField.Text.Trim().ToLower();
-
-            FilterContext.CurrentFilterState.SearchQuery = result;
-            FilterContext.CurrentFilterState.IsDescending = !ascendingButton.Visible;
-
-            SortBooks();
+            FilterContext.CurrentFilterState.SearchQuery = searchTextField.Text.Trim();
+            clearTextButton.Visible = !string.IsNullOrEmpty(searchTextField.Text);
+            ApplyFiltersAndSort();
         }
 
         private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             FilterContext.CurrentFilterState.SortIndex = sortComboBox.SelectedIndex;
-            FilterContext.CurrentFilterState.IsDescending = !ascendingButton.Visible;
-
-            SortBooks();
+            ApplyFiltersAndSort();
         }
 
         private void descendingButton_Click(object sender, EventArgs e)
         {
-            ascendingButton.Visible = true;
-            descendingButton.Visible = false;
-
             FilterContext.CurrentFilterState.IsDescending = false;
-
-            SortBooks();
+            UpdateSortButtons();
+            ApplyFiltersAndSort();
         }
 
         private void ascendingButton_Click(object sender, EventArgs e)
         {
-            ascendingButton.Visible = false;
-            descendingButton.Visible = true;
-
             FilterContext.CurrentFilterState.IsDescending = true;
-
-            SortBooks();
+            UpdateSortButtons();
+            ApplyFiltersAndSort();
         }
 
         private void BookControl_BookClicked(object sender, Books book)

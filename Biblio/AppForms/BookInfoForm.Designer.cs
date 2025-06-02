@@ -274,6 +274,8 @@
             this.evaluateButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.evaluateButton.ForeColor = System.Drawing.Color.White;
             this.evaluateButton.Location = new System.Drawing.Point(27, 0);
+            this.evaluateButton.MaximumSize = new System.Drawing.Size(0, 21);
+            this.evaluateButton.MinimumSize = new System.Drawing.Size(0, 21);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.evaluateButton.Size = new System.Drawing.Size(78, 21);

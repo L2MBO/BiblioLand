@@ -48,7 +48,6 @@ namespace Biblio.CustomControls
             // Навигация по формам
             mainButton.Click += (s, e) => OpenForm<MainForm>();
             catalogButton.Click += (s, e) => OpenForm<BookСatalogForm>();
-            topButton.Click += (s, e) => OpenForm<BookTopForm>();
             bookmarksButton.Click += (s, e) => OpenForm<BookmarksForm>();
             notificationsButton.Click += (s, e) => OpenForm<UserNotifyForm>();
         }
@@ -158,9 +157,8 @@ namespace Biblio.CustomControls
                 topLeftPanel.Width = 300;
                 topRightPanel.Width = 300;
                 searchButton.Width = 300;
-                searchButton.Text = "Что ищем, читатель?";
                 _otherX = 300;
-                _avatarX = 999;
+                _avatarX = 1004;
             }
             else
             {
@@ -172,10 +170,9 @@ namespace Biblio.CustomControls
                 if (rightPanel != null) rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
                 topRightPanel.Width = 100;
-                searchButton.Width = 136;
-                searchButton.Text = "Что ищем?";
+                searchButton.Width = 226;
                 _otherX = 100;
-                _avatarX = 175;
+                _avatarX = 83;
             }
 
             if (otherControl != null) otherControl.Location = new Point(otherButton.Left + _otherX, otherButton.Bottom + 10);

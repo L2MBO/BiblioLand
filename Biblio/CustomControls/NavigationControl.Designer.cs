@@ -33,16 +33,14 @@
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.searchButton = new Guna.UI2.WinForms.Guna2Button();
-            this.delimiter4 = new System.Windows.Forms.Panel();
+            this.delimiter3 = new System.Windows.Forms.Panel();
             this.bookmarksButton = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.delimiter4 = new System.Windows.Forms.Panel();
             this.notificationsButton = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.delimiter6 = new System.Windows.Forms.Panel();
+            this.delimiter5 = new System.Windows.Forms.Panel();
             this.avatarPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.otherButton = new Guna.UI2.WinForms.Guna2Button();
-            this.delimiter3 = new System.Windows.Forms.Panel();
-            this.topButton = new Guna.UI2.WinForms.Guna2Button();
             this.delimiter2 = new System.Windows.Forms.Panel();
             this.catalogButton = new Guna.UI2.WinForms.Guna2Button();
             this.delimiter1 = new System.Windows.Forms.Panel();
@@ -103,16 +101,16 @@
             // 
             this.panel17.AutoSize = true;
             this.panel17.Controls.Add(this.searchButton);
-            this.panel17.Controls.Add(this.delimiter4);
+            this.panel17.Controls.Add(this.delimiter3);
             this.panel17.Controls.Add(this.bookmarksButton);
-            this.panel17.Controls.Add(this.panel3);
+            this.panel17.Controls.Add(this.delimiter4);
             this.panel17.Controls.Add(this.notificationsButton);
-            this.panel17.Controls.Add(this.delimiter6);
+            this.panel17.Controls.Add(this.delimiter5);
             this.panel17.Controls.Add(this.avatarPictureBox);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel17.Location = new System.Drawing.Point(273, 7);
+            this.panel17.Location = new System.Drawing.Point(183, 7);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(253, 34);
+            this.panel17.Size = new System.Drawing.Size(343, 34);
             this.panel17.TabIndex = 56;
             // 
             // searchButton
@@ -133,19 +131,19 @@
             this.searchButton.Location = new System.Drawing.Point(0, 0);
             this.searchButton.Name = "searchButton";
             this.searchButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.searchButton.Size = new System.Drawing.Size(136, 34);
+            this.searchButton.Size = new System.Drawing.Size(226, 34);
             this.searchButton.TabIndex = 78;
-            this.searchButton.Text = "Что ищем?";
+            this.searchButton.Text = "Что ищем, читатель?";
             this.searchButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // delimiter4
+            // delimiter3
             // 
-            this.delimiter4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter4.Location = new System.Drawing.Point(136, 0);
-            this.delimiter4.Name = "delimiter4";
-            this.delimiter4.Size = new System.Drawing.Size(5, 34);
-            this.delimiter4.TabIndex = 68;
+            this.delimiter3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter3.Location = new System.Drawing.Point(226, 0);
+            this.delimiter3.Name = "delimiter3";
+            this.delimiter3.Size = new System.Drawing.Size(5, 34);
+            this.delimiter3.TabIndex = 68;
             // 
             // bookmarksButton
             // 
@@ -161,20 +159,20 @@
             this.bookmarksButton.ForeColor = System.Drawing.Color.White;
             this.bookmarksButton.Image = global::Biblio.Properties.Resources.bookmark;
             this.bookmarksButton.ImageSize = new System.Drawing.Size(16, 20);
-            this.bookmarksButton.Location = new System.Drawing.Point(141, 0);
+            this.bookmarksButton.Location = new System.Drawing.Point(231, 0);
             this.bookmarksButton.Name = "bookmarksButton";
             this.bookmarksButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.bookmarksButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.bookmarksButton.Size = new System.Drawing.Size(34, 34);
             this.bookmarksButton.TabIndex = 58;
             // 
-            // panel3
+            // delimiter4
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(175, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 34);
-            this.panel3.TabIndex = 57;
+            this.delimiter4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter4.Location = new System.Drawing.Point(265, 0);
+            this.delimiter4.Name = "delimiter4";
+            this.delimiter4.Size = new System.Drawing.Size(5, 34);
+            this.delimiter4.TabIndex = 57;
             // 
             // notificationsButton
             // 
@@ -190,27 +188,27 @@
             this.notificationsButton.ForeColor = System.Drawing.Color.White;
             this.notificationsButton.Image = global::Biblio.Properties.Resources.bell;
             this.notificationsButton.ImageSize = new System.Drawing.Size(18, 20);
-            this.notificationsButton.Location = new System.Drawing.Point(180, 0);
+            this.notificationsButton.Location = new System.Drawing.Point(270, 0);
             this.notificationsButton.Name = "notificationsButton";
             this.notificationsButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.notificationsButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.notificationsButton.Size = new System.Drawing.Size(34, 34);
             this.notificationsButton.TabIndex = 56;
             // 
-            // delimiter6
+            // delimiter5
             // 
-            this.delimiter6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.delimiter6.Location = new System.Drawing.Point(214, 0);
-            this.delimiter6.Name = "delimiter6";
-            this.delimiter6.Size = new System.Drawing.Size(5, 34);
-            this.delimiter6.TabIndex = 1;
+            this.delimiter5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.delimiter5.Location = new System.Drawing.Point(304, 0);
+            this.delimiter5.Name = "delimiter5";
+            this.delimiter5.Size = new System.Drawing.Size(5, 34);
+            this.delimiter5.TabIndex = 1;
             // 
             // avatarPictureBox
             // 
             this.avatarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.avatarPictureBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.avatarPictureBox.ImageRotate = 0F;
-            this.avatarPictureBox.Location = new System.Drawing.Point(219, 0);
+            this.avatarPictureBox.Location = new System.Drawing.Point(309, 0);
             this.avatarPictureBox.Name = "avatarPictureBox";
             this.avatarPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.avatarPictureBox.Size = new System.Drawing.Size(34, 34);
@@ -223,8 +221,6 @@
             // 
             this.panel16.AutoSize = true;
             this.panel16.Controls.Add(this.otherButton);
-            this.panel16.Controls.Add(this.delimiter3);
-            this.panel16.Controls.Add(this.topButton);
             this.panel16.Controls.Add(this.delimiter2);
             this.panel16.Controls.Add(this.catalogButton);
             this.panel16.Controls.Add(this.delimiter1);
@@ -232,7 +228,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel16.Location = new System.Drawing.Point(0, 7);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(269, 34);
+            this.panel16.Size = new System.Drawing.Size(179, 34);
             this.panel16.TabIndex = 55;
             // 
             // otherButton
@@ -248,41 +244,13 @@
             this.otherButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.otherButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.otherButton.ForeColor = System.Drawing.Color.White;
-            this.otherButton.Location = new System.Drawing.Point(219, 0);
+            this.otherButton.Location = new System.Drawing.Point(129, 0);
             this.otherButton.Name = "otherButton";
             this.otherButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.otherButton.Size = new System.Drawing.Size(50, 34);
             this.otherButton.TabIndex = 73;
             this.otherButton.Text = "•••";
             this.otherButton.Click += new System.EventHandler(this.otherButton_Click);
-            // 
-            // delimiter3
-            // 
-            this.delimiter3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.delimiter3.Location = new System.Drawing.Point(214, 0);
-            this.delimiter3.Name = "delimiter3";
-            this.delimiter3.Size = new System.Drawing.Size(5, 34);
-            this.delimiter3.TabIndex = 72;
-            // 
-            // topButton
-            // 
-            this.topButton.Animated = true;
-            this.topButton.BorderRadius = 17;
-            this.topButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.topButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.topButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.topButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.topButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.topButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.topButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.topButton.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.topButton.ForeColor = System.Drawing.Color.White;
-            this.topButton.Location = new System.Drawing.Point(129, 0);
-            this.topButton.Name = "topButton";
-            this.topButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.topButton.Size = new System.Drawing.Size(85, 34);
-            this.topButton.TabIndex = 71;
-            this.topButton.Text = "Топы";
             // 
             // delimiter2
             // 
@@ -469,16 +437,14 @@
         private System.Windows.Forms.Panel navigationPanel;
         private System.Windows.Forms.Panel panel17;
         private Guna.UI2.WinForms.Guna2Button searchButton;
-        private System.Windows.Forms.Panel delimiter4;
         private Guna.UI2.WinForms.Guna2CircleButton bookmarksButton;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel delimiter4;
         private Guna.UI2.WinForms.Guna2CircleButton notificationsButton;
-        private System.Windows.Forms.Panel delimiter6;
+        private System.Windows.Forms.Panel delimiter5;
         private Guna.UI2.WinForms.Guna2CirclePictureBox avatarPictureBox;
         private System.Windows.Forms.Panel panel16;
         private Guna.UI2.WinForms.Guna2Button otherButton;
         private System.Windows.Forms.Panel delimiter3;
-        private Guna.UI2.WinForms.Guna2Button topButton;
         private System.Windows.Forms.Panel delimiter2;
         private Guna.UI2.WinForms.Guna2Button catalogButton;
         private System.Windows.Forms.Panel delimiter1;

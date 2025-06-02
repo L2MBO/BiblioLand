@@ -80,6 +80,7 @@ namespace Biblio.CustomControls
                 else
                 {
                     booksPanel.Controls.Clear();
+                    oftenSearchedLabel.Visible = false;
                     noResultPanel.Visible = true;
                 }
             }
@@ -112,6 +113,7 @@ namespace Biblio.CustomControls
         private void clearTextButton_Click(object sender, EventArgs e)
         {
             searchTextField.Clear();
+            noResultPanel.Visible = false;
         }
 
         private void closeButton_Click(object sender, EventArgs e)
