@@ -42,7 +42,7 @@ namespace Biblio.CustomControls
             var curentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
             userNameLabel.Text = curentUser.Username;
 
-            coinCountLabel.Text = curentUser.CoinsNumber.ToString() + " монет";
+            
 
             ImageLoader.LoadAvatarImage(userAvatarPictureBox);
 
@@ -120,13 +120,6 @@ namespace Biblio.CustomControls
         private void feedbackButton_Click(object sender, EventArgs e)
         {
             FeedbackForm form = new FeedbackForm();
-            VisibilityHelper.ShowNewForm(this.FindForm(), form);
-            this.Parent.Hide();
-        }
-
-        private void storeButton_Click(object sender, EventArgs e)
-        {
-            StoreForm form = new StoreForm();
             VisibilityHelper.ShowNewForm(this.FindForm(), form);
             this.Parent.Hide();
         }

@@ -60,6 +60,7 @@ namespace Biblio.CustomControls
 
             if (result == "")
             {
+                noResultPanel.Visible = false;
                 oftenSearchedLabel.Visible = true;
                 ShowOftenSearchBooks();
             }

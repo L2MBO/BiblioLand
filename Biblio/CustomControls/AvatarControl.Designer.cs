@@ -48,15 +48,12 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.userInfoPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.coinCountLabel = new System.Windows.Forms.Label();
-            this.coinPictureBox = new System.Windows.Forms.PictureBox();
             this.userNameLabel = new System.Windows.Forms.Label();
             this.userAvatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.userInfoPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coinPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,7 +207,6 @@
             this.storeButton.Text = "Магазин";
             this.storeButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.storeButton.TextOffset = new System.Drawing.Point(-5, -1);
-            this.storeButton.Click += new System.EventHandler(this.storeButton_Click);
             // 
             // panel3
             // 
@@ -340,49 +336,23 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.coinCountLabel);
-            this.panel2.Controls.Add(this.coinPictureBox);
             this.panel2.Controls.Add(this.userNameLabel);
             this.panel2.Location = new System.Drawing.Point(49, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(111, 30);
             this.panel2.TabIndex = 2;
             // 
-            // coinCountLabel
-            // 
-            this.coinCountLabel.AutoSize = true;
-            this.coinCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.coinCountLabel.ForeColor = System.Drawing.Color.White;
-            this.coinCountLabel.Location = new System.Drawing.Point(18, 16);
-            this.coinCountLabel.Name = "coinCountLabel";
-            this.coinCountLabel.Size = new System.Drawing.Size(38, 13);
-            this.coinCountLabel.TabIndex = 4;
-            this.coinCountLabel.Text = "монет";
-            this.coinCountLabel.Click += new System.EventHandler(this.userProfile_Click);
-            // 
-            // coinPictureBox
-            // 
-            this.coinPictureBox.Image = global::Biblio.Properties.Resources.coin;
-            this.coinPictureBox.Location = new System.Drawing.Point(0, 15);
-            this.coinPictureBox.Name = "coinPictureBox";
-            this.coinPictureBox.Size = new System.Drawing.Size(15, 15);
-            this.coinPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coinPictureBox.TabIndex = 3;
-            this.coinPictureBox.TabStop = false;
-            this.coinPictureBox.Click += new System.EventHandler(this.userProfile_Click);
-            // 
             // userNameLabel
             // 
             this.userNameLabel.AutoEllipsis = true;
-            this.userNameLabel.AutoSize = true;
-            this.userNameLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.userNameLabel.ForeColor = System.Drawing.Color.White;
             this.userNameLabel.Location = new System.Drawing.Point(0, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(32, 13);
+            this.userNameLabel.Size = new System.Drawing.Size(103, 30);
             this.userNameLabel.TabIndex = 2;
             this.userNameLabel.Text = "Имя";
+            this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.userNameLabel.Click += new System.EventHandler(this.userProfile_Click);
             this.userNameLabel.MouseEnter += new System.EventHandler(this.UserNameLabel_MouseEnter);
             this.userNameLabel.MouseLeave += new System.EventHandler(this.UserNameLabel_MouseLeave);
@@ -413,8 +383,6 @@
             this.panel1.ResumeLayout(false);
             this.userInfoPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coinPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userAvatarPictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -429,8 +397,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel userInfoPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label coinCountLabel;
-        private System.Windows.Forms.PictureBox coinPictureBox;
         private System.Windows.Forms.Label userNameLabel;
         private Guna.UI2.WinForms.Guna2PictureBox userAvatarPictureBox;
         private Guna.UI2.WinForms.Guna2Button addContentButton;

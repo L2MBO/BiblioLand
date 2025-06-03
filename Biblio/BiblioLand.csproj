@@ -150,12 +150,6 @@
     <Compile Include="AppForms\BookReportForm.Designer.cs">
       <DependentUpon>BookReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\CardCatalogForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppForms\CardCatalogForm.Designer.cs">
-      <DependentUpon>CardCatalogForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\EvaluationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,12 +192,6 @@
     <Compile Include="AppForms\ProfileForm.Designer.cs">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\RankForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppForms\RankForm.Designer.cs">
-      <DependentUpon>RankForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\RecoverPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,12 +210,6 @@
     <Compile Include="AppForms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\StoreForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppForms\StoreForm.Designer.cs">
-      <DependentUpon>StoreForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\BookСatalogForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,12 +221,6 @@
     </Compile>
     <Compile Include="AppForms\UserNotifyForm.Designer.cs">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AppForms\UserTopForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppForms\UserTopForm.Designer.cs">
-      <DependentUpon>UserTopForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\Animations\FormDrag.cs" />
@@ -314,12 +290,6 @@
     <Compile Include="CustomControls\NavigationControl.Designer.cs">
       <DependentUpon>NavigationControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\OtherControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CustomControls\OtherControl.Designer.cs">
-      <DependentUpon>OtherControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomControls\SearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -366,9 +336,6 @@
     <EmbeddedResource Include="AppForms\BookReportForm.resx">
       <DependentUpon>BookReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\CardCatalogForm.resx">
-      <DependentUpon>CardCatalogForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\EvaluationForm.resx">
       <DependentUpon>EvaluationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,9 +357,6 @@
     <EmbeddedResource Include="AppForms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\RankForm.resx">
-      <DependentUpon>RankForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\RecoverPasswordForm.resx">
       <DependentUpon>RecoverPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,14 +372,8 @@
     <EmbeddedResource Include="AppForms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\StoreForm.resx">
-      <DependentUpon>StoreForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\UserNotifyForm.resx">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\UserTopForm.resx">
-      <DependentUpon>UserTopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AddContentControl.resx">
       <DependentUpon>AddContentControl.cs</DependentUpon>
@@ -440,9 +398,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\NavigationControl.resx">
       <DependentUpon>NavigationControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\OtherControl.resx">
-      <DependentUpon>OtherControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>

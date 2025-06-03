@@ -21,11 +21,9 @@ namespace Biblio.CustomControls
 
         // Контролы
         private SearchControl searchControl;
-        private OtherControl otherControl;
         private AvatarControl avatarControl;
 
         // Координаты для выпадающих элементов
-        private int _otherX;
         private int _avatarX;
 
         // Дефолтный размер панелей
@@ -91,23 +89,6 @@ namespace Biblio.CustomControls
             SetSearchControlPosition();
         }
 
-        private void otherButton_Click(object sender, EventArgs e)
-        {
-            if (otherControl != null && otherControl.Visible)
-            {
-                otherControl.Visible = false;
-                otherControl.Dispose();
-                otherControl = null;
-                return;
-            }
-
-            otherControl = new OtherControl();
-            otherControl.Location = new Point(otherButton.Left + _otherX, otherButton.Bottom + 10);
-            FindForm().Controls.Add(otherControl);
-            otherControl.BringToFront();
-            otherControl.Visible = true;
-        }
-
         private void avatarPictureBox_Click(object sender, EventArgs e)
         {
             if (avatarControl != null && avatarControl.Visible)
@@ -156,9 +137,7 @@ namespace Biblio.CustomControls
                 if (rightPanel != null) rightPanel.Width = 300;
                 topLeftPanel.Width = 300;
                 topRightPanel.Width = 300;
-                searchButton.Width = 300;
-                _otherX = 300;
-                _avatarX = 1004;
+                _avatarX = 1304;
             }
             else
             {
@@ -170,12 +149,9 @@ namespace Biblio.CustomControls
                 if (rightPanel != null) rightPanel.Width = 100;
                 topLeftPanel.Width = 100;
                 topRightPanel.Width = 100;
-                searchButton.Width = 226;
-                _otherX = 100;
-                _avatarX = 83;
+                _avatarX = 310;
             }
 
-            if (otherControl != null) otherControl.Location = new Point(otherButton.Left + _otherX, otherButton.Bottom + 10);
             if (searchControl != null) SetSearchControlPosition();
             if (avatarControl != null) avatarControl.Location = new Point(avatarPictureBox.Right + _avatarX, avatarPictureBox.Bottom + 10);
         }
