@@ -65,10 +65,10 @@ namespace Biblio.AppForms
                         : query.OrderBy(book => book.AddedDate);
                     break;
 
-                case 1: // По количеству страниц
+                case 1: // По количеству оценок
                     query = state.IsDescending
-                        ? query.OrderByDescending(book => book.TotalPages)
-                        : query.OrderBy(book => book.TotalPages);
+                        ? query.OrderByDescending(book => Program.context.Rating.Count(r => r.BookID == book.BookID))
+                        : query.OrderBy(book => Program.context.Rating.Count(r => r.BookID == book.BookID));
                     break;
 
                 case 2: // По популярности
@@ -76,12 +76,6 @@ namespace Biblio.AppForms
                     query = state.IsDescending
                         ? query.OrderByDescending(book => book.AverageRating)
                         : query.OrderBy(book => book.AverageRating);
-                    break;
-
-                case 4: // По количеству оценок
-                    query = state.IsDescending
-                        ? query.OrderByDescending(book => Program.context.Rating.Count(r => r.BookID == book.BookID))
-                        : query.OrderBy(book => Program.context.Rating.Count(r => r.BookID == book.BookID));
                     break;
 
                 default:

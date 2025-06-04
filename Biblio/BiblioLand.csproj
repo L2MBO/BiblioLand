@@ -233,7 +233,6 @@
     <Compile Include="Classes\Customization\FormCustomization\RoundingHelper.cs" />
     <Compile Include="Classes\Customization\ImagesCustomization\WhiteLevelReducer.cs" />
     <Compile Include="Classes\DataAccess\UserAvatarDataHelper.cs" />
-    <Compile Include="Classes\DataAccess\UserBookDataHelper.cs" />
     <Compile Include="Classes\Images\InstallingImages\ImageLoader.cs" />
     <Compile Include="Classes\Images\StoreImages\CodingOrDecoding.cs" />
     <Compile Include="Classes\Hash\HashHelper.cs" />
@@ -311,6 +310,7 @@
     <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\ReportCategory.cs" />
     <Compile Include="Models\Reviews.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\UserBookmarks.cs" />
     <Compile Include="Models\UserCategories.cs" />
     <Compile Include="Models\UserRoles.cs" />

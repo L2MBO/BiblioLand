@@ -278,7 +278,7 @@
             this.evaluateButton.MinimumSize = new System.Drawing.Size(0, 21);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
@@ -513,6 +513,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookForm";
             this.Load += new System.EventHandler(this.BookInfoForm_Load);
+            this.Shown += new System.EventHandler(this.BookInfoForm_Shown);
             this.SizeChanged += new System.EventHandler(this.BookInfoForm_SizeChanged);
             this.Resize += new System.EventHandler(this.BookInfoForm_Resize);
             this.mainPanel.ResumeLayout(false);

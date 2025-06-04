@@ -1,11 +1,14 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
+using System.Linq;
 
 namespace Biblio.Models
 {
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel19")
+            : base("name=BiblioModel20")
         {
         }
 
@@ -16,6 +19,7 @@ namespace Biblio.Models
         public virtual DbSet<Rating> Rating { get; set; }
         public virtual DbSet<ReportCategory> ReportCategory { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserBookmarks> UserBookmarks { get; set; }
         public virtual DbSet<UserCategories> UserCategories { get; set; }
         public virtual DbSet<UserRoles> UserRoles { get; set; }

@@ -80,7 +80,7 @@ namespace Biblio.AppForms
                 int currentUserId = Program.CurrentUser.UserID;
 
                 var userBooksWithDates = Program.context.UserBookmarks
-                    .Where(book => book.UserID == currentUserId && book.CurrentPage >= 1)
+                    .Where(book => book.UserID == currentUserId && book.IsReading == 1)
                     .Select(book => new
                     {
                         BookID = book.BookID,
@@ -109,7 +109,7 @@ namespace Biblio.AppForms
 
                 foreach (Books book in filteredBooks)
                 {
-                    var bookControl = new ContinueReadingControl(book, currentUserId);
+                    var bookControl = new ContinueReadingControl(book);
                     bookControl.Margin = new Padding(10);
                     bookControl.BookClicked += BookControl_BookClicked;
                     continueReadingPanel.Controls.Add(bookControl);

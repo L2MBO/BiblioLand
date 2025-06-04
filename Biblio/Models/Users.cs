@@ -3,6 +3,8 @@ namespace Biblio.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     public partial class Users
     {
@@ -21,8 +23,6 @@ namespace Biblio.Models
         [Required]
         [StringLength(50)]
         public string Username { get; set; }
-
-        public int? CoinsNumber { get; set; }
 
         public string Descriotion { get; set; }
 
@@ -43,7 +43,7 @@ namespace Biblio.Models
         public DateTime? ConfirmationCodeExpiration { get; set; }
 
         [Required]
-        public string AvatarPath { get; set; }
+        public string Avatar { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookReports> BookReports { get; set; }

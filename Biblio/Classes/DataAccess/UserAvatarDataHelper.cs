@@ -10,7 +10,7 @@ namespace Biblio.Classes.DataAccess
 
             if (currentUser != null)
             {
-                return currentUser.AvatarPath;
+                return currentUser.Avatar;
             }
 
             return null;

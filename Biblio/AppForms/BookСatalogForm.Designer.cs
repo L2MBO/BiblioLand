@@ -330,10 +330,9 @@
             this.sortComboBox.ItemHeight = 30;
             this.sortComboBox.Items.AddRange(new object[] {
             "По новизне",
-            "По кол-ву страниц",
+            "По кол-ву оценок",
             "По популярности",
-            "По оценке",
-            "По кол-ву оценок"});
+            "По оценке"});
             this.sortComboBox.Location = new System.Drawing.Point(0, 0);
             this.sortComboBox.Name = "sortComboBox";
             this.sortComboBox.Size = new System.Drawing.Size(170, 36);

@@ -5,12 +5,15 @@ using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.Classes.Pdf.OpenPdf;
 using Biblio.CustomControls;
+using Biblio.HideClasses;
 using Biblio.Models;
+using Biblio.ValidationClasses;
 using System;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
@@ -19,6 +22,7 @@ namespace Biblio.AppForms
         private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
         private Books _book;
         private int _currentUserId = Program.CurrentUser.UserID;
+        private bool _isUserAdmin = false;
         private int _bookmarkX;
         private BackgroundImageRenderer backgroundImageRenderer;
 
@@ -48,6 +52,10 @@ namespace Biblio.AppForms
             backgroundImageRenderer = new BackgroundImageRenderer();
 
             LoadBookInfo();
+
+            CheckUserRole();
+
+            UpdateBookmarksControlPosition();
 
             mainPanel.Scroll += (sender, e) => UpdateBookmarksControlPosition();
         }
@@ -221,23 +229,24 @@ namespace Biblio.AppForms
             }
         }
 
-        private void UpdateCurrentPage()
+        private void UpdateReadingStatus()
         {
-            int currentPage = UserBookDataHelper.GetCurrentPage(_currentUserId, _book.BookID);
+            var currentBook = Program.context.UserBookmarks.FirstOrDefault(book => book.UserID == _currentUserId && book.BookID == _book.BookID);
 
-            if (currentPage == 0)
+            if (currentBook.IsReading != 1)
             {
-                UserBookDataHelper.SetCurrentPage(_currentUserId, _book.BookID, 1);
+                currentBook.IsReading = 1;
+                Program.context.SaveChanges();
             }
         }
 
         private void UpdateContinueReadingButtonText()
         {
-            int currentPage = UserBookDataHelper.GetCurrentPage(_currentUserId, _book.BookID);
+            var currentBook = Program.context.UserBookmarks.FirstOrDefault(book => book.UserID == _currentUserId && book.BookID == _book.BookID);
 
-            if (currentPage > 0)
+            if (currentBook != null && currentBook.IsReading == 1)
             {
-                continueReadingButton.Text = "Продолжить\nСтраница " + currentPage.ToString();
+                continueReadingButton.Text = "Продолжить\nчтение";
             }
         }
 
@@ -260,6 +269,65 @@ namespace Biblio.AppForms
         {
             var statsControl = statisticsPanel.Controls.OfType<StatisticsControl>().FirstOrDefault();
             statsControl?.RefreshStatistics();
+        }
+
+        private void CheckUserRole()
+        {
+            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+
+            if (_currentUser != null)
+            {
+                reportButton.Image = null;
+                reportButton.Text = "Удалить";
+                _isUserAdmin = true;
+            }
+        }
+
+        private void DeleteBook()
+        {
+            var bookToRemove = Program.context.Books.Find(_book.BookID);
+
+            if (bookToRemove != null)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Вы уверены, что хотите удалить эту книгу?",
+                    "Подтверждение удаления",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Program.context.Books.Remove(bookToRemove);
+                        Program.context.SaveChanges();
+
+                        ValidationHelper.ShowInformationMessage("Книга успешно удалена", "Успех");
+
+                        var mainform = new MainForm();
+                        VisibilityHelper.ShowNewForm(this, mainform);
+                        this.Hide();
+                    }
+                    catch (Exception ex)
+                    {
+                        ValidationHelper.ShowErrorMessage("Произошла ошибка при удалении книги: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                ValidationHelper.ShowErrorMessage("Книга не найдена в базе данных.");
+            }
+        }
+
+        private void BookInfoForm_Shown(object sender, EventArgs e)
+        {
+            BookInfoForm_SizeChanged(sender, e);
         }
 
         private void BookInfoForm_SizeChanged(object sender, EventArgs e)
@@ -316,7 +384,7 @@ namespace Biblio.AppForms
         {
             PdfLoader.OpenPdfFile(_book.PdfPath);
             UpdateBookmarkStatus();
-            UpdateCurrentPage();
+            UpdateReadingStatus();
             UpdateContinueReadingButtonText();
         }
 
@@ -368,8 +436,15 @@ namespace Biblio.AppForms
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            var form = new BookReportForm(_book, _currentUserId);
-            _dialogService.ShowDialogWithOverlay(this, form);
+            if (_isUserAdmin)
+            {
+                DeleteBook();
+            }
+            else
+            {
+                var form = new BookReportForm(_book, _currentUserId);
+                _dialogService.ShowDialogWithOverlay(this, form);
+            }
         }
     }
 }

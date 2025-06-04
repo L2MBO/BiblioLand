@@ -122,20 +122,20 @@ namespace Biblio.AppForms
                 if (_whitespaceRegex.Replace(descriptionTextBox.Text ?? "", "")
                     != _whitespaceRegex.Replace(_currentUser.Descriotion ?? "", ""))
                 {
-                    _currentUser.Descriotion = descriptionTextBox.Text;
+                    _currentUser.Descriotion = descriptionTextBox.Text?.Trim();
                     changesMade = true;
                 }
 
                 if (_isAvatarDeleted)
                 {
-                    _currentUser.AvatarPath = _base64Avatar;
+                    _currentUser.Avatar = _base64Avatar;
                     changesMade = true;
                     _isAvatarDeleted = false;
                 }
                 else if (!string.IsNullOrEmpty(_base64Avatar) &&
                         _base64Avatar != UserAvatarDataHelper.GetBase64ImageFromDatabase(_currentUserId))
                 {
-                    _currentUser.AvatarPath = _base64Avatar;
+                    _currentUser.Avatar = _base64Avatar;
                     changesMade = true;
                 }
 

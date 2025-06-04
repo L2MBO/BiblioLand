@@ -87,12 +87,11 @@ namespace Biblio.ValidationClasses
                     Users newUser = new Users
                     {
                         Username = newUsername,
-                        CoinsNumber = 0,
                         Email = newMail,
                         PasswordHash = passwordHash,
                         UserRoleID = 1,
                         RegistrationDate = DateTime.Now,
-                        AvatarPath = base64Avatar
+                        Avatar = base64Avatar
                     };
 
                     LoginField.Clear();
