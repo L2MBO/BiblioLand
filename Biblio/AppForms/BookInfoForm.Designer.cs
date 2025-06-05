@@ -31,6 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookInfoForm));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.writeCommentPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.commentTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.sendCommentButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.statisticsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -64,7 +74,15 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.sortNewCommentButton = new Guna.UI2.WinForms.Guna2Button();
+            this.sortInterestingCommentButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel22 = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
+            this.writeCommentPanel.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -73,12 +91,19 @@
             this.panel15.SuspendLayout();
             this.bookPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
+            this.panel21.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPanel.Controls.Add(this.panel22);
+            this.mainPanel.Controls.Add(this.panel21);
+            this.mainPanel.Controls.Add(this.panel20);
+            this.mainPanel.Controls.Add(this.writeCommentPanel);
+            this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.statisticsPanel);
             this.mainPanel.Controls.Add(this.panel8);
             this.mainPanel.Controls.Add(this.descriptionPanel);
@@ -96,6 +121,136 @@
             this.mainPanel.TabIndex = 25;
             this.mainPanel.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mainPanel_Scroll);
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // writeCommentPanel
+            // 
+            this.writeCommentPanel.AutoSize = true;
+            this.writeCommentPanel.BackColor = System.Drawing.Color.Transparent;
+            this.writeCommentPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.writeCommentPanel.BorderRadius = 10;
+            this.writeCommentPanel.BorderThickness = 2;
+            this.writeCommentPanel.Controls.Add(this.commentTextBox);
+            this.writeCommentPanel.Controls.Add(this.panel17);
+            this.writeCommentPanel.Controls.Add(this.panel19);
+            this.writeCommentPanel.Controls.Add(this.panel16);
+            this.writeCommentPanel.Controls.Add(this.panel9);
+            this.writeCommentPanel.Controls.Add(this.panel5);
+            this.writeCommentPanel.Controls.Add(this.panel2);
+            this.writeCommentPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.writeCommentPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.writeCommentPanel.Location = new System.Drawing.Point(256, 143);
+            this.writeCommentPanel.MaximumSize = new System.Drawing.Size(370, 0);
+            this.writeCommentPanel.Name = "writeCommentPanel";
+            this.writeCommentPanel.Size = new System.Drawing.Size(370, 86);
+            this.writeCommentPanel.TabIndex = 51;
+            // 
+            // commentTextBox
+            // 
+            this.commentTextBox.Animated = true;
+            this.commentTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.commentTextBox.BorderColor = System.Drawing.Color.Empty;
+            this.commentTextBox.BorderThickness = 0;
+            this.commentTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.commentTextBox.DefaultText = "";
+            this.commentTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.commentTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.commentTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.commentTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.commentTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.commentTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.commentTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.commentTextBox.ForeColor = System.Drawing.Color.White;
+            this.commentTextBox.Location = new System.Drawing.Point(10, 10);
+            this.commentTextBox.MaxLength = 600;
+            this.commentTextBox.MinimumSize = new System.Drawing.Size(0, 31);
+            this.commentTextBox.Multiline = true;
+            this.commentTextBox.Name = "commentTextBox";
+            this.commentTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.commentTextBox.PlaceholderText = "Оставить комментарий";
+            this.commentTextBox.SelectedText = "";
+            this.commentTextBox.Size = new System.Drawing.Size(350, 31);
+            this.commentTextBox.TabIndex = 57;
+            this.commentTextBox.TextChanged += new System.EventHandler(this.commentTextBox_TextChanged);
+            // 
+            // panel17
+            // 
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel17.Location = new System.Drawing.Point(10, 41);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(350, 10);
+            this.panel17.TabIndex = 56;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.sendCommentButton);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel19.Location = new System.Drawing.Point(10, 51);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(350, 25);
+            this.panel19.TabIndex = 55;
+            // 
+            // sendCommentButton
+            // 
+            this.sendCommentButton.Animated = true;
+            this.sendCommentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.sendCommentButton.BorderRadius = 11;
+            this.sendCommentButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sendCommentButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sendCommentButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sendCommentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sendCommentButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sendCommentButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.sendCommentButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sendCommentButton.ForeColor = System.Drawing.Color.White;
+            this.sendCommentButton.Location = new System.Drawing.Point(264, 0);
+            this.sendCommentButton.Name = "sendCommentButton";
+            this.sendCommentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.sendCommentButton.Size = new System.Drawing.Size(86, 25);
+            this.sendCommentButton.TabIndex = 37;
+            this.sendCommentButton.Text = "Отправить";
+            this.sendCommentButton.Click += new System.EventHandler(this.sendCommentButton_Click);
+            // 
+            // panel16
+            // 
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(10, 76);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(350, 10);
+            this.panel16.TabIndex = 3;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(360, 10);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 76);
+            this.panel9.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 76);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(370, 10);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(256, 133);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(370, 10);
+            this.panel1.TabIndex = 47;
             // 
             // statisticsPanel
             // 
@@ -278,7 +433,7 @@
             this.evaluateButton.MinimumSize = new System.Drawing.Size(0, 21);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
@@ -499,6 +654,91 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
             // 
+            // panel20
+            // 
+            this.panel20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel20.BackColor = System.Drawing.Color.Transparent;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(256, 229);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(370, 10);
+            this.panel20.TabIndex = 52;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Transparent;
+            this.panel21.Controls.Add(this.guna2Panel1);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(256, 239);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(370, 32);
+            this.panel21.TabIndex = 53;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 12;
+            this.guna2Panel1.Controls.Add(this.sortInterestingCommentButton);
+            this.guna2Panel1.Controls.Add(this.sortNewCommentButton);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(172, 32);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // sortNewCommentButton
+            // 
+            this.sortNewCommentButton.Animated = true;
+            this.sortNewCommentButton.BackColor = System.Drawing.Color.Transparent;
+            this.sortNewCommentButton.BorderRadius = 11;
+            this.sortNewCommentButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sortNewCommentButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sortNewCommentButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sortNewCommentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sortNewCommentButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sortNewCommentButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.sortNewCommentButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sortNewCommentButton.ForeColor = System.Drawing.Color.White;
+            this.sortNewCommentButton.Location = new System.Drawing.Point(3, 3);
+            this.sortNewCommentButton.Name = "sortNewCommentButton";
+            this.sortNewCommentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.sortNewCommentButton.Size = new System.Drawing.Size(65, 25);
+            this.sortNewCommentButton.TabIndex = 38;
+            this.sortNewCommentButton.Text = "Новые";
+            this.sortNewCommentButton.Click += new System.EventHandler(this.sortNewCommentButton_Click);
+            // 
+            // sortInterestingCommentButton
+            // 
+            this.sortInterestingCommentButton.Animated = true;
+            this.sortInterestingCommentButton.BackColor = System.Drawing.Color.Transparent;
+            this.sortInterestingCommentButton.BorderRadius = 11;
+            this.sortInterestingCommentButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sortInterestingCommentButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sortInterestingCommentButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sortInterestingCommentButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sortInterestingCommentButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sortInterestingCommentButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.sortInterestingCommentButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sortInterestingCommentButton.ForeColor = System.Drawing.Color.White;
+            this.sortInterestingCommentButton.Location = new System.Drawing.Point(74, 3);
+            this.sortInterestingCommentButton.Name = "sortInterestingCommentButton";
+            this.sortInterestingCommentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.sortInterestingCommentButton.Size = new System.Drawing.Size(95, 25);
+            this.sortInterestingCommentButton.TabIndex = 39;
+            this.sortInterestingCommentButton.Text = "Интересные";
+            this.sortInterestingCommentButton.Click += new System.EventHandler(this.sortInterestingCommentButton_Click);
+            // 
+            // panel22
+            // 
+            this.panel22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel22.BackColor = System.Drawing.Color.Transparent;
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(256, 271);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(370, 10);
+            this.panel22.TabIndex = 54;
+            // 
             // BookInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +758,8 @@
             this.Resize += new System.EventHandler(this.BookInfoForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.writeCommentPanel.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
             this.descriptionPanel.ResumeLayout(false);
             this.descriptionPanel.PerformLayout();
             this.panel13.ResumeLayout(false);
@@ -531,6 +773,8 @@
             this.panel15.PerformLayout();
             this.bookPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
+            this.panel21.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,5 +816,21 @@
         private System.Windows.Forms.Panel panel12;
         private Guna.UI2.WinForms.Guna2Button evaluateButton;
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Panel writeCommentPanel;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel19;
+        private Guna.UI2.WinForms.Guna2Button sendCommentButton;
+        private Guna.UI2.WinForms.Guna2TextBox commentTextBox;
+        private System.Windows.Forms.Panel panel21;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Panel panel20;
+        private Guna.UI2.WinForms.Guna2Button sortNewCommentButton;
+        private Guna.UI2.WinForms.Guna2Button sortInterestingCommentButton;
+        private System.Windows.Forms.Panel panel22;
     }
 }

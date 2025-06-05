@@ -12,8 +12,6 @@ namespace Biblio.AppForms
 {
     public partial class BookСatalogForm : Form
     {
-        private int _currentSortIndex = 2;
-
         public BookСatalogForm()
         {
             InitializeComponent();

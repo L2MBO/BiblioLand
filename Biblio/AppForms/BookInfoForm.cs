@@ -8,6 +8,7 @@ using Biblio.CustomControls;
 using Biblio.HideClasses;
 using Biblio.Models;
 using Biblio.ValidationClasses;
+using Guna.UI2.WinForms;
 using System;
 using System.Drawing;
 using System.Globalization;
@@ -97,6 +98,15 @@ namespace Biblio.AppForms
             UpdateEvaluateButtonText();
         }
 
+        private void SetActiveButton(Guna2Button activeButton, Guna2Button inactiveButton)
+        {
+            activeButton.FillColor = Color.FromArgb(60, 132, 246);
+            activeButton.PressedColor = Color.FromArgb(56, 120, 224);
+
+            inactiveButton.FillColor = Color.FromArgb(26, 27, 30);
+            inactiveButton.PressedColor = Color.FromArgb(38, 39, 43);
+        }
+
         private void UpdateBookmarkButtonText()
         {
             var bookmark = Program.context.UserBookmarks.FirstOrDefault(
@@ -168,6 +178,19 @@ namespace Biblio.AppForms
                 SizeF textSize = TextRenderer.MeasureText(text, font, new Size(width, 0), TextFormatFlags.WordBreak);
 
                 return (int)Math.Ceiling(textSize.Height);
+            }
+        }
+
+        private int CalculateTextBoxHeight(string text, Font font, int width)
+        {
+            string adjustedText = text.Length > 0 ? Environment.NewLine + Environment.NewLine + text : text;
+
+            using (Graphics graphics = this.CreateGraphics())
+            {
+                SizeF textSize = TextRenderer.MeasureText(adjustedText, font, new Size(width, 0),
+                    TextFormatFlags.TextBoxControl | TextFormatFlags.WordBreak);
+
+                return (int)Math.Ceiling(textSize.Height) + commentTextBox.Margin.Vertical + commentTextBox.Padding.Vertical;
             }
         }
 
@@ -445,6 +468,32 @@ namespace Biblio.AppForms
                 var form = new BookReportForm(_book, _currentUserId);
                 _dialogService.ShowDialogWithOverlay(this, form);
             }
+        }
+
+        private void commentTextBox_TextChanged(object sender, EventArgs e)
+        {
+            int textBoxWidth = commentTextBox.Width;
+
+            int preferredHeight = CalculateTextBoxHeight(commentTextBox.Text, commentTextBox.Font, textBoxWidth);
+
+            commentTextBox.Height = preferredHeight;
+
+            descriptionPanel.PerformLayout();
+        }
+
+        private void sendCommentButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sortNewCommentButton_Click(object sender, EventArgs e)
+        {
+            SetActiveButton(sortNewCommentButton, sortInterestingCommentButton);
+        }
+
+        private void sortInterestingCommentButton_Click(object sender, EventArgs e)
+        {
+            SetActiveButton(sortInterestingCommentButton, sortNewCommentButton);
         }
     }
 }
