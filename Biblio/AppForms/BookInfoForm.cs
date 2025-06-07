@@ -10,6 +10,7 @@ using Biblio.Models;
 using Biblio.ValidationClasses;
 using Guna.UI2.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Biblio.AppForms
         private Books _book;
         private int _currentUserId = Program.CurrentUser.UserID;
         private bool _isUserAdmin = false;
+        private string _currentSortMode = "new";
         private int _bookmarkX;
         private BackgroundImageRenderer backgroundImageRenderer;
 
@@ -57,6 +59,10 @@ namespace Biblio.AppForms
             CheckUserRole();
 
             UpdateBookmarksControlPosition();
+
+            SetActiveButton(sortNewCommentButton, sortInterestingCommentButton);
+
+            SortCommentsByDate();
 
             mainPanel.Scroll += (sender, e) => UpdateBookmarksControlPosition();
         }
@@ -93,6 +99,7 @@ namespace Biblio.AppForms
             descriptionLabel.Text = _book.Description;
 
             ShowStatisticsBooks();
+            ShowComments();
             UpdateBookmarkButtonText();
             UpdateContinueReadingButtonText();
             UpdateEvaluateButtonText();
@@ -158,6 +165,19 @@ namespace Biblio.AppForms
             var statisticsControl = new StatisticsControl(_book);
 
             statisticsPanel.Controls.Add(statisticsControl);
+        }
+
+        private void ShowComments()
+        {
+            List<Reviews> comments = Program.context.Reviews.Where(book => book.BookID == _book.BookID).OrderBy(date => date.ReviewDate).ToList();
+
+            foreach (Reviews comment in comments)
+            {
+                var commentControl = new UserCommentsControl(comment);
+                commentControl.Margin = new Padding(10);
+                //commentControl.BookClicked += commentControl_ReportClicked;
+                commentsPanel.Controls.Add(commentControl);
+            }
         }
 
         private void DescriptionLabel_TextChanged(object sender, EventArgs e)
@@ -483,17 +503,41 @@ namespace Biblio.AppForms
 
         private void sendCommentButton_Click(object sender, EventArgs e)
         {
+            ///
 
+            ShowComments();
+        }
+
+        private void SortCommentsByDate()
+        {
+            // Ваш код сортировки комментариев по дате
+            // Например: commentsList = commentsList.OrderByDescending(c => c.Date).ToList();
+            // И обновление отображения
+        }
+
+        private void SortCommentsByLikes()
+        {
+            // Ваш код сортировки комментариев по количеству лайков
+            // Например: commentsList = commentsList.OrderByDescending(c => c.Likes).ToList();
+            // И обновление отображения
         }
 
         private void sortNewCommentButton_Click(object sender, EventArgs e)
         {
+            if (_currentSortMode == "new") return;
+
             SetActiveButton(sortNewCommentButton, sortInterestingCommentButton);
+            _currentSortMode = "new";
+            SortCommentsByDate();
         }
 
         private void sortInterestingCommentButton_Click(object sender, EventArgs e)
         {
+            if (_currentSortMode == "interesting") return;
+
             SetActiveButton(sortInterestingCommentButton, sortNewCommentButton);
+            _currentSortMode = "interesting";
+            SortCommentsByLikes();
         }
     }
 }

@@ -301,6 +301,12 @@
     <Compile Include="CustomControls\StatisticsControl.Designer.cs">
       <DependentUpon>StatisticsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\UserCommentsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\UserCommentsControl.Designer.cs">
+      <DependentUpon>UserCommentsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\IAvatarParentForm.cs" />
     <Compile Include="Models\BiblioModel.cs" />
     <Compile Include="Models\BookReports.cs" />
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\StatisticsControl.resx">
       <DependentUpon>StatisticsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\UserCommentsControl.resx">
+      <DependentUpon>UserCommentsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
