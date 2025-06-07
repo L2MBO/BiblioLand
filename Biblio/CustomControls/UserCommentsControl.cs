@@ -1,5 +1,7 @@
-﻿using Biblio.Classes.Images.InstallingImages;
+﻿using Biblio.AppForms;
+using Biblio.Classes.Images.InstallingImages;
 using Biblio.Models;
+using Biblio.ValidationClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -99,6 +101,55 @@ namespace Biblio.CustomControls
             likesCountLabel.Text = review.LikesCount.ToString();
         }
 
+        private void SendReportToDatabase()
+        {
+            bool alreadyReported = Program.context.ReviewReports
+                .Any(rr => rr.UserID == _currentUserId && rr.ReviewID == _comment.ReviewID);
+
+            if (alreadyReported)
+            {
+                ValidationHelper.ShowErrorMessage("Вы уже отправляли жалобу на этот обзор.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                    "Вы уверены, что хотите пожаловаться на этот комментарий?",
+                    "Подтверждение жалобы",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                var reviewReport = new ReviewReports
+                {
+                    UserID = _currentUserId,
+                    ReviewID = _comment.ReviewID,
+                    ReportDate = DateTime.Now
+                };
+
+                Program.context.ReviewReports.Add(reviewReport);
+                Program.context.SaveChanges();
+
+                ValidationHelper.ShowInformationMessage("Мы рассмотрим вашу жалобу и примем меры!", "Жалоба успешно отправлена!");
+            }
+        }
+
+        private void SetUserId()
+        {
+            if (_comment.UserID != _currentUserId)
+            {
+                ProfileForm form = new ProfileForm((int)_comment.UserID);
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                ProfileForm form = new ProfileForm(_currentUserId);
+                form.Show();
+                this.Hide();
+            }
+        }
+
         private void commentLabel_TextChanged(object sender, EventArgs e)
         {
             int labelWidth = commentLabel.Width;
@@ -117,7 +168,12 @@ namespace Biblio.CustomControls
 
         private void reportButton_Click(object sender, EventArgs e)
         {
+            SendReportToDatabase();
+        }
 
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            SetUserId();
         }
     }
 }

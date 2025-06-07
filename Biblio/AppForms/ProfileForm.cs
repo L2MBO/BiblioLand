@@ -5,9 +5,13 @@ namespace Biblio.AppForms
 {
     public partial class ProfileForm : Form
     {
-        public ProfileForm()
+        private int _currentUserId;
+
+        public ProfileForm(int currentUserId)
         {
             InitializeComponent();
+
+            _currentUserId = currentUserId;
 
             SetFormStyle();
         }
@@ -16,6 +20,8 @@ namespace Biblio.AppForms
         {
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
+
+            // Заполнять данные исходя из того чей профиль открыт хранится в _currentUserId
         }
 
         private void ProfileForm_Resize(object sender, EventArgs e)

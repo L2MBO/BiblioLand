@@ -51,8 +51,7 @@ namespace Biblio.AppForms
             Program.context.BookReports.Add(bookReport);
             Program.context.SaveChanges();
 
-            ValidationHelper.ShowInformationMessage("Мы рассмотрим вашу жалобу и в скором времени ответим вам!"
-                , "Жалоба успешно отправлена!");
+            ValidationHelper.ShowInformationMessage("Мы рассмотрим вашу жалобу и примем меры!", "Жалоба успешно отправлена!");
         }
 
         private void ProcessReportSubmission()

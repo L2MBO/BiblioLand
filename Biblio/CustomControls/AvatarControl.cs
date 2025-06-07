@@ -112,7 +112,7 @@ namespace Biblio.CustomControls
 
         private void userProfile_Click(object sender, EventArgs e)
         {
-            ProfileForm form = new ProfileForm();
+            ProfileForm form = new ProfileForm(_currentUserId);
             VisibilityHelper.ShowNewForm(this.FindForm(), form);
             this.Parent.Hide();
         }

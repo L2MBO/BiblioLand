@@ -76,6 +76,7 @@
             this.profileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profileButton.TabIndex = 9;
             this.profileButton.TabStop = false;
+            this.profileButton.Click += new System.EventHandler(this.profileButton_Click);
             // 
             // panel4
             // 
