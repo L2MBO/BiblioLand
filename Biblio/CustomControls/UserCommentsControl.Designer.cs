@@ -179,6 +179,9 @@
             // 
             this.descriptionPanel.AutoSize = true;
             this.descriptionPanel.BackColor = System.Drawing.Color.Transparent;
+            this.descriptionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.descriptionPanel.BorderRadius = 10;
+            this.descriptionPanel.BorderThickness = 1;
             this.descriptionPanel.Controls.Add(this.panel26);
             this.descriptionPanel.Controls.Add(this.panel27);
             this.descriptionPanel.Controls.Add(this.panel3);
@@ -194,7 +197,7 @@
             this.descriptionPanel.Location = new System.Drawing.Point(43, 0);
             this.descriptionPanel.Name = "descriptionPanel";
             this.descriptionPanel.Quality = 1;
-            this.descriptionPanel.ShadowDecoration.BorderRadius = 15;
+            this.descriptionPanel.ShadowDecoration.BorderRadius = 10;
             this.descriptionPanel.ShadowDecoration.Depth = 150;
             this.descriptionPanel.ShadowDecoration.Enabled = true;
             this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);

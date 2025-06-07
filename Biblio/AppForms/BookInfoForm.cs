@@ -169,11 +169,19 @@ namespace Biblio.AppForms
             statisticsPanel.Controls.Add(statisticsControl);
         }
 
-        private void ShowComments()
+        private void ShowComments(Func<IQueryable<Reviews>, IOrderedQueryable<Reviews>> sortingFunction = null)
         {
+            commentsPanel.Controls.Clear();
+
             DateTime now = DateTime.Now;
 
-            List<Reviews> comments = Program.context.Reviews.Where(book => book.BookID == _book.BookID).OrderBy(date => date.ReviewDate).ToList();
+            IQueryable<Reviews> query = Program.context.Reviews.Where(book => book.BookID == _book.BookID);
+
+            IOrderedQueryable<Reviews> orderedQuery = sortingFunction != null ?
+                sortingFunction(query) :
+                query.OrderByDescending(date => date.ReviewDate);
+
+            List<Reviews> comments = orderedQuery.ToList();
 
             foreach (Reviews comment in comments)
             {
@@ -516,16 +524,13 @@ namespace Biblio.AppForms
 
         private void SortCommentsByDate()
         {
-            // Ваш код сортировки комментариев по дате
-            // Например: commentsList = commentsList.OrderByDescending(c => c.Date).ToList();
-            // И обновление отображения
+            ShowComments(q => q.OrderByDescending(date => date.ReviewDate));
         }
 
         private void SortCommentsByLikes()
         {
-            // Ваш код сортировки комментариев по количеству лайков
-            // Например: commentsList = commentsList.OrderByDescending(c => c.Likes).ToList();
-            // И обновление отображения
+            ShowComments(q => q.OrderByDescending(comment => comment.LikesCount)
+                .ThenByDescending(date => date.ReviewDate));
         }
 
         private void sortNewCommentButton_Click(object sender, EventArgs e)
@@ -534,7 +539,7 @@ namespace Biblio.AppForms
 
             SetActiveButton(sortNewCommentButton, sortInterestingCommentButton);
             _currentSortMode = "new";
-            SortCommentsByDate();
+            ShowComments();
         }
 
         private void sortInterestingCommentButton_Click(object sender, EventArgs e)

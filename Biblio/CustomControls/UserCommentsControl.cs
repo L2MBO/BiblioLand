@@ -1,5 +1,6 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.HideClasses;
 using Biblio.Models;
 using Biblio.ValidationClasses;
 using System;
@@ -139,14 +140,14 @@ namespace Biblio.CustomControls
             if (_comment.UserID != _currentUserId)
             {
                 ProfileForm form = new ProfileForm((int)_comment.UserID);
-                form.Show();
-                this.Hide();
+                VisibilityHelper.ShowNewForm(this.FindForm(), form);
+                this.Parent.Hide();
             }
             else
             {
                 ProfileForm form = new ProfileForm(_currentUserId);
-                form.Show();
-                this.Hide();
+                VisibilityHelper.ShowNewForm(this.FindForm(), form);
+                this.Parent.Hide();
             }
         }
 
