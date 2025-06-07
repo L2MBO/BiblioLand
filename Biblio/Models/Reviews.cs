@@ -8,6 +8,12 @@ namespace Biblio.Models
 
     public partial class Reviews
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Reviews()
+        {
+            Likes = new HashSet<Likes>();
+        }
+
         [Key]
         public int ReviewID { get; set; }
 
@@ -22,6 +28,9 @@ namespace Biblio.Models
         public DateTime? ReviewDate { get; set; }
 
         public virtual Books Books { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Likes> Likes { get; set; }
 
         public virtual Users Users { get; set; }
     }

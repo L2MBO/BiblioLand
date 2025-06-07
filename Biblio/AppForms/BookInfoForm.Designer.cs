@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookInfoForm));
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.commentsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -79,7 +80,6 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.commentsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -123,6 +123,16 @@
             this.mainPanel.TabIndex = 25;
             this.mainPanel.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mainPanel_Scroll);
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // commentsPanel
+            // 
+            this.commentsPanel.AutoSize = true;
+            this.commentsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.commentsPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.commentsPanel.Location = new System.Drawing.Point(256, 281);
+            this.commentsPanel.Name = "commentsPanel";
+            this.commentsPanel.Size = new System.Drawing.Size(370, 0);
+            this.commentsPanel.TabIndex = 55;
             // 
             // panel22
             // 
@@ -520,7 +530,7 @@
             this.evaluateButton.MinimumSize = new System.Drawing.Size(0, 21);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
@@ -725,16 +735,6 @@
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             this.BorderlessForm.TransparentWhileDrag = true;
-            // 
-            // commentsPanel
-            // 
-            this.commentsPanel.AutoSize = true;
-            this.commentsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.commentsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.commentsPanel.Location = new System.Drawing.Point(256, 281);
-            this.commentsPanel.Name = "commentsPanel";
-            this.commentsPanel.Size = new System.Drawing.Size(370, 0);
-            this.commentsPanel.TabIndex = 55;
             // 
             // navigationControl
             // 

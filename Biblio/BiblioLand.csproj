@@ -313,6 +313,7 @@
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Genres.cs" />
+    <Compile Include="Models\Likes.cs" />
     <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\ReportCategory.cs" />
     <Compile Include="Models\Reviews.cs" />
@@ -579,6 +580,13 @@
   <ItemGroup>
     <None Include="Resources\TransparentNoResults.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redLike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whiteLike.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

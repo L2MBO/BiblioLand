@@ -25,12 +25,10 @@ namespace Biblio.AppForms
             navigationControl.rightPanel = rightPanel;
             AutoScrollHelper.ConfigureScrollbars(booksPanel, disableHorizontal: true, disableVertical: true);
 
-            // Инициализация UI из сохраненного состояния
             sortComboBox.SelectedIndex = FilterContext.CurrentFilterState.SortIndex;
             searchTextField.Text = FilterContext.CurrentFilterState.SearchQuery;
-            UpdateSortButtons();
 
-            // Первоначальная загрузка данных
+            UpdateSortButtons();
             ApplyFiltersAndSort();
         }
 
@@ -45,7 +43,6 @@ namespace Biblio.AppForms
             var state = FilterContext.CurrentFilterState;
             IQueryable<Books> query = Program.context.Books;
 
-            // Применяем поиск
             if (!string.IsNullOrEmpty(state.SearchQuery))
             {
                 string searchLower = state.SearchQuery.ToLower();
@@ -54,7 +51,6 @@ namespace Biblio.AppForms
                     book.Author.ToLower().Contains(searchLower));
             }
 
-            // Применяем сортировку
             switch (state.SortIndex)
             {
                 case 0: // По новизне
@@ -70,6 +66,11 @@ namespace Biblio.AppForms
                     break;
 
                 case 2: // По популярности
+                    query = state.IsDescending
+                        ? query.OrderByDescending(book => Program.context.Reviews.Count(r => r.BookID == book.BookID))
+                        : query.OrderBy(book => Program.context.Reviews.Count(r => r.BookID == book.BookID));
+                    break;
+
                 case 3: // По оценке
                     query = state.IsDescending
                         ? query.OrderByDescending(book => book.AverageRating)

@@ -363,6 +363,16 @@ namespace Biblio.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap redLike {
+            get {
+                object obj = ResourceManager.GetObject("redLike", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap report {
             get {
                 object obj = ResourceManager.GetObject("report", resourceCulture);
@@ -476,6 +486,16 @@ namespace Biblio.Properties {
         internal static System.Drawing.Bitmap wasRead {
             get {
                 object obj = ResourceManager.GetObject("wasRead", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whiteLike {
+            get {
+                object obj = ResourceManager.GetObject("whiteLike", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

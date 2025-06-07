@@ -29,24 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.writeCommentPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.commentLabel = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.profileButton = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.nameLabel = new System.Windows.Forms.Label();
             this.reportButton = new System.Windows.Forms.PictureBox();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.profileButton = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.commentLabel = new System.Windows.Forms.Label();
+            this.descriptionPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.likesButton = new System.Windows.Forms.PictureBox();
+            this.likesCountLabel = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.writeCommentPanel.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reportButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileButton)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reportButton)).BeginInit();
+            this.panel26.SuspendLayout();
+            this.descriptionPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.likesButton)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,69 +62,62 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(43, 63);
+            this.panel1.Size = new System.Drawing.Size(43, 79);
             this.panel1.TabIndex = 0;
             // 
-            // writeCommentPanel
+            // profileButton
             // 
-            this.writeCommentPanel.AutoSize = true;
-            this.writeCommentPanel.BackColor = System.Drawing.Color.Transparent;
-            this.writeCommentPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.writeCommentPanel.BorderRadius = 10;
-            this.writeCommentPanel.BorderThickness = 1;
-            this.writeCommentPanel.Controls.Add(this.panel26);
-            this.writeCommentPanel.Controls.Add(this.panel27);
-            this.writeCommentPanel.Controls.Add(this.panel2);
-            this.writeCommentPanel.Controls.Add(this.panel16);
-            this.writeCommentPanel.Controls.Add(this.panel9);
-            this.writeCommentPanel.Controls.Add(this.panel5);
-            this.writeCommentPanel.Controls.Add(this.panel3);
-            this.writeCommentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.writeCommentPanel.FillColor = System.Drawing.Color.Transparent;
-            this.writeCommentPanel.Location = new System.Drawing.Point(43, 0);
-            this.writeCommentPanel.MaximumSize = new System.Drawing.Size(370, 0);
-            this.writeCommentPanel.Name = "writeCommentPanel";
-            this.writeCommentPanel.Size = new System.Drawing.Size(317, 63);
-            this.writeCommentPanel.TabIndex = 53;
+            this.profileButton.BorderRadius = 7;
+            this.profileButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.profileButton.ImageRotate = 0F;
+            this.profileButton.Location = new System.Drawing.Point(0, 0);
+            this.profileButton.Name = "profileButton";
+            this.profileButton.Size = new System.Drawing.Size(40, 40);
+            this.profileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profileButton.TabIndex = 9;
+            this.profileButton.TabStop = false;
             // 
-            // panel26
+            // panel4
             // 
-            this.panel26.AutoSize = true;
-            this.panel26.Controls.Add(this.commentLabel);
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel26.Location = new System.Drawing.Point(10, 36);
-            this.panel26.MinimumSize = new System.Drawing.Size(0, 16);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(297, 16);
-            this.panel26.TabIndex = 68;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(317, 10);
+            this.panel4.TabIndex = 68;
             // 
-            // commentLabel
+            // panel5
             // 
-            this.commentLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.commentLabel.ForeColor = System.Drawing.Color.White;
-            this.commentLabel.Location = new System.Drawing.Point(0, 0);
-            this.commentLabel.Name = "commentLabel";
-            this.commentLabel.Size = new System.Drawing.Size(297, 16);
-            this.commentLabel.TabIndex = 0;
-            this.commentLabel.Text = "Комментарий";
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 53);
+            this.panel5.TabIndex = 69;
             // 
-            // panel27
+            // panel9
             // 
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(10, 26);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(297, 10);
-            this.panel27.TabIndex = 67;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(307, 10);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(10, 53);
+            this.panel9.TabIndex = 70;
             // 
-            // panel2
+            // panel16
             // 
-            this.panel2.Controls.Add(this.nameLabel);
-            this.panel2.Controls.Add(this.reportButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(10, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(297, 16);
-            this.panel2.TabIndex = 4;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(10, 53);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(297, 10);
+            this.panel16.TabIndex = 71;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.nameLabel);
+            this.panel3.Controls.Add(this.reportButton);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(10, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(297, 16);
+            this.panel3.TabIndex = 72;
             // 
             // nameLabel
             // 
@@ -134,6 +133,7 @@
             // 
             // reportButton
             // 
+            this.reportButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.reportButton.Image = global::Biblio.Properties.Resources.report;
             this.reportButton.Location = new System.Drawing.Point(281, 0);
@@ -142,50 +142,111 @@
             this.reportButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.reportButton.TabIndex = 0;
             this.reportButton.TabStop = false;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
-            // panel16
+            // panel27
             // 
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(10, 53);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(297, 10);
-            this.panel16.TabIndex = 3;
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel27.Location = new System.Drawing.Point(10, 26);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(297, 10);
+            this.panel27.TabIndex = 73;
             // 
-            // panel9
+            // panel26
             // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(307, 10);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(10, 53);
-            this.panel9.TabIndex = 2;
+            this.panel26.AutoSize = true;
+            this.panel26.Controls.Add(this.commentLabel);
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel26.Location = new System.Drawing.Point(10, 36);
+            this.panel26.MinimumSize = new System.Drawing.Size(0, 16);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(297, 16);
+            this.panel26.TabIndex = 74;
             // 
-            // panel5
+            // commentLabel
             // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 10);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 53);
-            this.panel5.TabIndex = 1;
+            this.commentLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.commentLabel.ForeColor = System.Drawing.Color.White;
+            this.commentLabel.Location = new System.Drawing.Point(0, 0);
+            this.commentLabel.Name = "commentLabel";
+            this.commentLabel.Size = new System.Drawing.Size(297, 16);
+            this.commentLabel.TabIndex = 0;
+            this.commentLabel.Text = "Комментарий";
+            this.commentLabel.TextChanged += new System.EventHandler(this.commentLabel_TextChanged);
             // 
-            // panel3
+            // descriptionPanel
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(317, 10);
-            this.panel3.TabIndex = 0;
+            this.descriptionPanel.AutoSize = true;
+            this.descriptionPanel.BackColor = System.Drawing.Color.Transparent;
+            this.descriptionPanel.Controls.Add(this.panel26);
+            this.descriptionPanel.Controls.Add(this.panel27);
+            this.descriptionPanel.Controls.Add(this.panel3);
+            this.descriptionPanel.Controls.Add(this.panel16);
+            this.descriptionPanel.Controls.Add(this.panel9);
+            this.descriptionPanel.Controls.Add(this.panel5);
+            this.descriptionPanel.Controls.Add(this.panel4);
+            this.descriptionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.descriptionPanel.FillColor = System.Drawing.Color.Transparent;
+            this.descriptionPanel.FillColor2 = System.Drawing.Color.Transparent;
+            this.descriptionPanel.FillColor3 = System.Drawing.Color.Transparent;
+            this.descriptionPanel.FillColor4 = System.Drawing.Color.Transparent;
+            this.descriptionPanel.Location = new System.Drawing.Point(43, 0);
+            this.descriptionPanel.Name = "descriptionPanel";
+            this.descriptionPanel.Quality = 1;
+            this.descriptionPanel.ShadowDecoration.BorderRadius = 15;
+            this.descriptionPanel.ShadowDecoration.Depth = 150;
+            this.descriptionPanel.ShadowDecoration.Enabled = true;
+            this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
+            this.descriptionPanel.Size = new System.Drawing.Size(317, 63);
+            this.descriptionPanel.TabIndex = 45;
             // 
-            // profileButton
+            // panel2
             // 
-            this.profileButton.BorderRadius = 7;
-            this.profileButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.profileButton.ImageRotate = 0F;
-            this.profileButton.Location = new System.Drawing.Point(0, 0);
-            this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(40, 40);
-            this.profileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.profileButton.TabIndex = 9;
-            this.profileButton.TabStop = false;
+            this.panel2.Controls.Add(this.likesButton);
+            this.panel2.Controls.Add(this.likesCountLabel);
+            this.panel2.Controls.Add(this.timeLabel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(43, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(317, 16);
+            this.panel2.TabIndex = 2;
+            // 
+            // likesButton
+            // 
+            this.likesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.likesButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.likesButton.Image = global::Biblio.Properties.Resources.whiteLike;
+            this.likesButton.Location = new System.Drawing.Point(226, 0);
+            this.likesButton.Name = "likesButton";
+            this.likesButton.Size = new System.Drawing.Size(16, 16);
+            this.likesButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.likesButton.TabIndex = 2;
+            this.likesButton.TabStop = false;
+            this.likesButton.Click += new System.EventHandler(this.likesButton_Click);
+            // 
+            // likesCountLabel
+            // 
+            this.likesCountLabel.AutoSize = true;
+            this.likesCountLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.likesCountLabel.ForeColor = System.Drawing.Color.White;
+            this.likesCountLabel.Location = new System.Drawing.Point(242, 0);
+            this.likesCountLabel.Name = "likesCountLabel";
+            this.likesCountLabel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.likesCountLabel.Size = new System.Drawing.Size(75, 15);
+            this.likesCountLabel.TabIndex = 1;
+            this.likesCountLabel.Text = " Чило лайков";
+            this.likesCountLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.timeLabel.ForeColor = System.Drawing.Color.White;
+            this.timeLabel.Location = new System.Drawing.Point(0, 0);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(157, 13);
+            this.timeLabel.TabIndex = 0;
+            this.timeLabel.Text = "Время добавления коммента";
             // 
             // UserCommentsControl
             // 
@@ -193,18 +254,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.writeCommentPanel);
+            this.Controls.Add(this.descriptionPanel);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(360, 63);
+            this.MinimumSize = new System.Drawing.Size(360, 79);
             this.Name = "UserCommentsControl";
-            this.Size = new System.Drawing.Size(360, 63);
+            this.Size = new System.Drawing.Size(360, 79);
             this.panel1.ResumeLayout(false);
-            this.writeCommentPanel.ResumeLayout(false);
-            this.writeCommentPanel.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reportButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileButton)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reportButton)).EndInit();
+            this.panel26.ResumeLayout(false);
+            this.descriptionPanel.ResumeLayout(false);
+            this.descriptionPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.likesButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,17 +278,21 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Panel writeCommentPanel;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Label commentLabel;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Panel panel2;
+        private Guna.UI2.WinForms.Guna2PictureBox profileButton;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.PictureBox reportButton;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2PictureBox profileButton;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Label commentLabel;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel descriptionPanel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.PictureBox likesButton;
+        private System.Windows.Forms.Label likesCountLabel;
     }
 }

@@ -4,6 +4,7 @@ using Biblio.Classes.Customization.ImagesCustomization;
 using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.Classes.Pdf.OpenPdf;
+using Biblio.Classes.Validation;
 using Biblio.CustomControls;
 using Biblio.HideClasses;
 using Biblio.Models;
@@ -11,6 +12,7 @@ using Biblio.ValidationClasses;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -169,13 +171,17 @@ namespace Biblio.AppForms
 
         private void ShowComments()
         {
+            DateTime now = DateTime.Now;
+
             List<Reviews> comments = Program.context.Reviews.Where(book => book.BookID == _book.BookID).OrderBy(date => date.ReviewDate).ToList();
 
             foreach (Reviews comment in comments)
             {
                 var commentControl = new UserCommentsControl(comment);
+                TimeSpan timeDifference = (TimeSpan)(now - comment.ReviewDate);
+                string timeAgo = TimeValidation.FormatTimeAgo(timeDifference);
+                commentControl.SetTime(timeAgo);
                 commentControl.Margin = new Padding(10);
-                //commentControl.BookClicked += commentControl_ReportClicked;
                 commentsPanel.Controls.Add(commentControl);
             }
         }
