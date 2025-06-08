@@ -46,11 +46,20 @@ namespace Biblio.CustomControls
             _isLiked = Program.context.Likes.Any(like => like.UserID == _currentUserId && like.ReviewID == _comment.ReviewID);
 
             UpdateLikeButtonImage();
+            UpdateReportImage();
         }
 
         private void UpdateLikeButtonImage()
         {
             likesButton.Image = _isLiked ? Properties.Resources.redLike : Properties.Resources.whiteLike;
+        }
+
+        private void UpdateReportImage()
+        {
+            if (_comment.UserID == _currentUserId)
+            {
+                reportButton.Image = Properties.Resources.trash;
+            }
         }
 
         private int CalculateLabelHeight(string text, Font font, int width)
@@ -100,6 +109,52 @@ namespace Biblio.CustomControls
             Program.context.SaveChanges();
             UpdateLikeButtonImage();
             likesCountLabel.Text = review.LikesCount.ToString();
+        }
+
+        private void CheckCommentOwner()
+        {
+            if (_comment.UserID == _currentUserId)
+            {
+                reportButton.Image = Properties.Resources.trash;
+                DeleteComment();
+            }
+            else
+            {
+                SendReportToDatabase();
+            }
+        }
+
+        private void DeleteComment()
+        {
+            DialogResult result = MessageBox.Show(
+                "Вы уверены, что хотите удалить этот комментарий?",
+                "Подтверждение удаления",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    var likesToDelete = Program.context.Likes.Where(like => like.ReviewID == _comment.ReviewID);
+                    Program.context.Likes.RemoveRange(likesToDelete);
+
+                    var reportsToDelete = Program.context.ReviewReports.Where(report => report.ReviewID == _comment.ReviewID);
+                    Program.context.ReviewReports.RemoveRange(reportsToDelete);
+
+                    Program.context.Reviews.Remove(_comment);
+
+                    Program.context.SaveChanges();
+
+                    this.Parent?.Controls.Remove(this);
+
+                    ValidationHelper.ShowInformationMessage("Комментарий успешно удален.", "Успех");
+                }
+                catch (Exception)
+                {
+                    ValidationHelper.ShowErrorMessage("Ошибка при удалении комментария.");
+                }
+            }
         }
 
         private void SendReportToDatabase()
@@ -169,7 +224,7 @@ namespace Biblio.CustomControls
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            SendReportToDatabase();
+            CheckCommentOwner();
         }
 
         private void profileButton_Click(object sender, EventArgs e)

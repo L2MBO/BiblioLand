@@ -17,6 +17,8 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Shapes;
+using System.Xml.Linq;
 using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
@@ -330,7 +332,7 @@ namespace Biblio.AppForms
 
         private void CheckUserRole()
         {
-            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID == 2);
 
             if (_currentUser != null)
             {
@@ -338,6 +340,76 @@ namespace Biblio.AppForms
                 reportButton.Text = "Удалить";
                 _isUserAdmin = true;
             }
+        }
+
+        private bool AddCommentValidation()
+        {
+            var commentCount = Program.context.Reviews.Count(comment => comment.UserID == _currentUserId 
+                && comment.BookID == _book.BookID);
+
+            if (commentCount <= 2)
+            {
+                if (!string.IsNullOrWhiteSpace(commentTextBox.Text))
+                {
+                    Reviews review = new Reviews
+                    {
+                        UserID = _currentUserId,
+                        BookID = _book.BookID,
+                        Comment = commentTextBox.Text,
+                        LikesCount = 0,
+                        ReviewDate = DateTime.Now
+                    };
+
+                    Program.context.Reviews.Add(review);
+                    Program.context.SaveChanges();
+
+                    AddCommentCustomization();
+
+                    if (_currentSortMode == "new")
+                        SortCommentsByDate();
+                    else
+                        SortCommentsByLikes();
+
+                    return true;
+                }
+                else
+                {
+                    sendCommentButton.ForeColor = Color.Red;
+                    CommentTimer(1000);
+                    return false;
+                }
+            }
+            else
+            {
+                ValidationHelper.ShowCustomTitleErrorMessage("Вы отправили слишком много комментариев для этой книги"
+                    , "Превышено допустимое кол-во комментариев");
+                return false;
+            }
+        }
+
+        private void AddCommentCustomization()
+        {
+            commentTextBox.Text = string.Empty;
+
+            sendCommentButton.Text = "✓ Отправлено";
+            sendCommentButton.ForeColor = Color.Green;
+
+            CommentTimer(2000);
+        }
+
+        private void CommentTimer(int interval)
+        {
+            Timer timer = new Timer();
+            timer.Interval = interval;
+
+            timer.Tick += (s, args) =>
+            {
+                sendCommentButton.Text = "Отправить";
+                sendCommentButton.ForeColor = Color.White;
+                timer.Stop();
+                timer.Dispose();
+            };
+            timer.Start();
         }
 
         private void DeleteBook()
@@ -517,9 +589,7 @@ namespace Biblio.AppForms
 
         private void sendCommentButton_Click(object sender, EventArgs e)
         {
-            ///
-
-            ShowComments();
+            AddCommentValidation();
         }
 
         private void SortCommentsByDate()
@@ -539,7 +609,7 @@ namespace Biblio.AppForms
 
             SetActiveButton(sortNewCommentButton, sortInterestingCommentButton);
             _currentSortMode = "new";
-            ShowComments();
+            SortCommentsByDate();
         }
 
         private void sortInterestingCommentButton_Click(object sender, EventArgs e)
