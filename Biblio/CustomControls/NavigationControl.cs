@@ -114,7 +114,7 @@ namespace Biblio.CustomControls
             int controlWidth = searchControl.Width;
 
             int x = (centerX - controlWidth / 2) + 3;
-            int y = searchButton.Bottom + 10;
+            int y = searchButton.Bottom + 3;
 
             searchControl.Location = new Point(x, y);
         }

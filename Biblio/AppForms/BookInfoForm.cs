@@ -479,18 +479,11 @@ namespace Biblio.AppForms
             UpdateBookmarksControlPosition();
         }
 
-        private void mainPanel_Scroll(object sender, ScrollEventArgs e)
-        {
-            mainPanel.Invalidate();
-        }
-
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
             if (backgroundImageRenderer != null)
             {
-                int scrollY = -mainPanel.AutoScrollPosition.Y;
-
-                backgroundImageRenderer.DrawBackgroundImage(e.Graphics, mainPanel.Width, mainPanel.Height, scrollY);
+                backgroundImageRenderer.DrawBackgroundImage(e.Graphics, mainPanel.Width, mainPanel.Height);
             }
         }
 

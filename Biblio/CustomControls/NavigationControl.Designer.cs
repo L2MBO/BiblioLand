@@ -100,7 +100,9 @@
             // searchButton
             // 
             this.searchButton.Animated = true;
+            this.searchButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.searchButton.BorderRadius = 17;
+            this.searchButton.BorderThickness = 1;
             this.searchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.searchButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -145,6 +147,8 @@
             // bookmarksButton
             // 
             this.bookmarksButton.Animated = true;
+            this.bookmarksButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.bookmarksButton.BorderThickness = 1;
             this.bookmarksButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bookmarksButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.bookmarksButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -174,6 +178,8 @@
             // notificationsButton
             // 
             this.notificationsButton.Animated = true;
+            this.notificationsButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.notificationsButton.BorderThickness = 1;
             this.notificationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notificationsButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.notificationsButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -238,7 +244,9 @@
             // catalogButton
             // 
             this.catalogButton.Animated = true;
+            this.catalogButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.catalogButton.BorderRadius = 17;
+            this.catalogButton.BorderThickness = 1;
             this.catalogButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.catalogButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.catalogButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

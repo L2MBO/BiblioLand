@@ -11,7 +11,7 @@ namespace Biblio.Classes.Customization.ImagesCustomization
             backgroundImage = image;
         }
 
-        public void DrawBackgroundImage(Graphics graphics, int panelWidth, int panelHeight, int scrollY)
+        public void DrawBackgroundImage(Graphics graphics, int panelWidth, int panelHeight)
         {
             if (backgroundImage == null)
                 return;
@@ -30,8 +30,8 @@ namespace Biblio.Classes.Customization.ImagesCustomization
                 // Определяем часть изображения, которая должна быть отображена
                 int visibleImageHeight = (int)(panelHeight / scaleFactor); // Высота видимой части изображения
 
-                // Вычисляем начальную координату Y для отображаемой части изображения
-                int startImageY = (int)(scrollY / scaleFactor); // Преобразуем смещение прокрутки в координаты изображения
+                // Фиксированная позиция изображения (например, верхняя часть)
+                int startImageY = 0;
 
                 // Рисуем только нужную часть изображения
                 graphics.DrawImage(

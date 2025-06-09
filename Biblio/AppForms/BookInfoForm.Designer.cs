@@ -121,7 +121,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 25;
-            this.mainPanel.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mainPanel_Scroll);
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // commentsPanel
@@ -258,7 +257,7 @@
             this.commentTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.commentTextBox.ForeColor = System.Drawing.Color.White;
             this.commentTextBox.Location = new System.Drawing.Point(10, 10);
-            this.commentTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.commentTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.commentTextBox.MaxLength = 600;
             this.commentTextBox.MinimumSize = new System.Drawing.Size(0, 31);
             this.commentTextBox.Multiline = true;
@@ -305,7 +304,7 @@
             this.sendCommentButton.Location = new System.Drawing.Point(260, 0);
             this.sendCommentButton.Name = "sendCommentButton";
             this.sendCommentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.sendCommentButton.Size = new System.Drawing.Size(90, 25);
+            this.sendCommentButton.Size = new System.Drawing.Size(90, 27);
             this.sendCommentButton.TabIndex = 37;
             this.sendCommentButton.Text = "Отправить";
             this.sendCommentButton.Click += new System.EventHandler(this.sendCommentButton_Click);
@@ -517,7 +516,9 @@
             // evaluateButton
             // 
             this.evaluateButton.Animated = true;
+            this.evaluateButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.evaluateButton.BorderRadius = 10;
+            this.evaluateButton.BorderThickness = 1;
             this.evaluateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.evaluateButton.DefaultAutoSize = true;
             this.evaluateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -526,7 +527,7 @@
             this.evaluateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.evaluateButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.evaluateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.evaluateButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.evaluateButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.evaluateButton.ForeColor = System.Drawing.Color.White;
             this.evaluateButton.Location = new System.Drawing.Point(27, 0);
             this.evaluateButton.MaximumSize = new System.Drawing.Size(0, 21);
@@ -713,7 +714,7 @@
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 38;
@@ -723,7 +724,7 @@
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 37;
@@ -747,7 +748,7 @@
             this.navigationControl.leftPanel = null;
             this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(6);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
             this.navigationControl.RightPanelWidth = 0;
