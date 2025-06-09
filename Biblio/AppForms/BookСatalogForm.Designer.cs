@@ -45,6 +45,8 @@
             this.clearTextButton = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.glasPanel = new System.Windows.Forms.Panel();
             this.glasPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.sortGenreComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.descendingButton = new System.Windows.Forms.PictureBox();
@@ -82,20 +84,18 @@
             this.mainPanel.Controls.Add(this.rightPanel);
             this.mainPanel.Controls.Add(this.leftPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 100);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mainPanel.Location = new System.Drawing.Point(0, 52);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1452, 727);
+            this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 1;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.booksPanel);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(200, 192);
-            this.panel8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel8.Location = new System.Drawing.Point(100, 100);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1052, 535);
+            this.panel8.Size = new System.Drawing.Size(526, 278);
             this.panel8.TabIndex = 73;
             // 
             // booksPanel
@@ -103,42 +103,40 @@
             this.booksPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.booksPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.booksPanel.Location = new System.Drawing.Point(0, 0);
-            this.booksPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.booksPanel.Name = "booksPanel";
-            this.booksPanel.Size = new System.Drawing.Size(1052, 535);
+            this.booksPanel.Size = new System.Drawing.Size(526, 278);
             this.booksPanel.TabIndex = 74;
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(200, 173);
-            this.panel7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel7.Location = new System.Drawing.Point(100, 90);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1052, 19);
+            this.panel7.Size = new System.Drawing.Size(526, 10);
             this.panel7.TabIndex = 72;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.sortGenreComboBox);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Location = new System.Drawing.Point(100, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1052, 173);
+            this.panel1.Size = new System.Drawing.Size(526, 90);
             this.panel1.TabIndex = 71;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.searchPanel);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 104);
-            this.panel6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel6.Location = new System.Drawing.Point(0, 54);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(622, 69);
-            this.panel6.TabIndex = 7;
+            this.panel6.Size = new System.Drawing.Size(204, 36);
+            this.panel6.TabIndex = 10;
             // 
             // searchPanel
             // 
@@ -153,9 +151,8 @@
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.searchPanel.Location = new System.Drawing.Point(0, 0);
-            this.searchPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(622, 69);
+            this.searchPanel.Size = new System.Drawing.Size(204, 36);
             this.searchPanel.TabIndex = 72;
             // 
             // panel2
@@ -165,10 +162,9 @@
             this.panel2.Controls.Add(this.guna2Panel3);
             this.panel2.Controls.Add(this.guna2Panel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(68, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Location = new System.Drawing.Point(34, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(464, 69);
+            this.panel2.Size = new System.Drawing.Size(125, 36);
             this.panel2.TabIndex = 75;
             // 
             // searchTextField
@@ -189,13 +185,13 @@
             this.searchTextField.ForeColor = System.Drawing.Color.White;
             this.searchTextField.HideSelection = false;
             this.searchTextField.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchTextField.Location = new System.Drawing.Point(0, 8);
-            this.searchTextField.Margin = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.searchTextField.Location = new System.Drawing.Point(0, 4);
+            this.searchTextField.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.searchTextField.Name = "searchTextField";
             this.searchTextField.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.searchTextField.PlaceholderText = "Поиск по названию";
+            this.searchTextField.PlaceholderText = "По названию";
             this.searchTextField.SelectedText = "";
-            this.searchTextField.Size = new System.Drawing.Size(464, 53);
+            this.searchTextField.Size = new System.Drawing.Size(125, 28);
             this.searchTextField.TabIndex = 0;
             this.searchTextField.TextOffset = new System.Drawing.Point(0, -2);
             this.searchTextField.TextChanged += new System.EventHandler(this.searchTextField_TextChanged);
@@ -206,10 +202,9 @@
             this.guna2Panel3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 61);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 32);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(464, 8);
+            this.guna2Panel3.Size = new System.Drawing.Size(125, 4);
             this.guna2Panel3.TabIndex = 1;
             // 
             // guna2Panel2
@@ -219,9 +214,8 @@
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(464, 8);
+            this.guna2Panel2.Size = new System.Drawing.Size(125, 4);
             this.guna2Panel2.TabIndex = 0;
             // 
             // panel3
@@ -229,10 +223,9 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.clearTextButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(532, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Location = new System.Drawing.Point(159, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(90, 69);
+            this.panel3.Size = new System.Drawing.Size(45, 36);
             this.panel3.TabIndex = 74;
             // 
             // clearTextButton
@@ -242,11 +235,10 @@
             this.clearTextButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.clearTextButton.Image = global::Biblio.Properties.Resources.transparentCircleCloseButton;
             this.clearTextButton.ImageRotate = 0F;
-            this.clearTextButton.Location = new System.Drawing.Point(14, 6);
-            this.clearTextButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.clearTextButton.Location = new System.Drawing.Point(7, 3);
             this.clearTextButton.Name = "clearTextButton";
             this.clearTextButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.clearTextButton.Size = new System.Drawing.Size(60, 58);
+            this.clearTextButton.Size = new System.Drawing.Size(30, 30);
             this.clearTextButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.clearTextButton.TabIndex = 71;
             this.clearTextButton.TabStop = false;
@@ -259,9 +251,8 @@
             this.glasPanel.Controls.Add(this.glasPictureBox);
             this.glasPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.glasPanel.Location = new System.Drawing.Point(0, 0);
-            this.glasPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.glasPanel.Name = "glasPanel";
-            this.glasPanel.Size = new System.Drawing.Size(68, 69);
+            this.glasPanel.Size = new System.Drawing.Size(34, 36);
             this.glasPanel.TabIndex = 55;
             // 
             // glasPictureBox
@@ -270,21 +261,62 @@
             this.glasPictureBox.FillColor = System.Drawing.Color.Transparent;
             this.glasPictureBox.Image = global::Biblio.Properties.Resources.magnifyingGlass;
             this.glasPictureBox.ImageRotate = 0F;
-            this.glasPictureBox.Location = new System.Drawing.Point(36, 15);
-            this.glasPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.glasPictureBox.Location = new System.Drawing.Point(18, 8);
             this.glasPictureBox.Name = "glasPictureBox";
-            this.glasPictureBox.Size = new System.Drawing.Size(40, 38);
+            this.glasPictureBox.Size = new System.Drawing.Size(20, 20);
             this.glasPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.glasPictureBox.TabIndex = 55;
             this.glasPictureBox.TabStop = false;
             // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(204, 54);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(11, 36);
+            this.panel9.TabIndex = 9;
+            // 
+            // sortGenreComboBox
+            // 
+            this.sortGenreComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.sortGenreComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sortGenreComboBox.BorderRadius = 17;
+            this.sortGenreComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sortGenreComboBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.sortGenreComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.sortGenreComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sortGenreComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.sortGenreComboBox.FocusedColor = System.Drawing.Color.Empty;
+            this.sortGenreComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.sortGenreComboBox.ForeColor = System.Drawing.Color.White;
+            this.sortGenreComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sortGenreComboBox.ItemHeight = 30;
+            this.sortGenreComboBox.Items.AddRange(new object[] {
+            "По жанру",
+            "Военное дело",
+            "Политика",
+            "Философия",
+            "Фантастика",
+            "Детектив",
+            "Биография",
+            "Научная литература",
+            "Художественная литература",
+            "Роман",
+            "Ужасы"});
+            this.sortGenreComboBox.Location = new System.Drawing.Point(215, 54);
+            this.sortGenreComboBox.Name = "sortGenreComboBox";
+            this.sortGenreComboBox.Size = new System.Drawing.Size(106, 36);
+            this.sortGenreComboBox.StartIndex = 0;
+            this.sortGenreComboBox.TabIndex = 8;
+            this.sortGenreComboBox.TextOffset = new System.Drawing.Point(7, 0);
+            this.sortGenreComboBox.SelectedIndexChanged += new System.EventHandler(this.sortGenreComboBox_SelectedIndexChanged);
+            // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(622, 104);
-            this.panel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel5.Location = new System.Drawing.Point(321, 54);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(22, 69);
+            this.panel5.Size = new System.Drawing.Size(11, 36);
             this.panel5.TabIndex = 6;
             // 
             // guna2Panel1
@@ -297,10 +329,9 @@
             this.guna2Panel1.Controls.Add(this.sortComboBox);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(644, 104);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.guna2Panel1.Location = new System.Drawing.Point(332, 54);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(408, 69);
+            this.guna2Panel1.Size = new System.Drawing.Size(194, 36);
             this.guna2Panel1.TabIndex = 4;
             // 
             // descendingButton
@@ -308,10 +339,9 @@
             this.descendingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.descendingButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.descendingButton.Image = global::Biblio.Properties.Resources.descendingArrow;
-            this.descendingButton.Location = new System.Drawing.Point(352, 15);
-            this.descendingButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.descendingButton.Location = new System.Drawing.Point(169, 8);
             this.descendingButton.Name = "descendingButton";
-            this.descendingButton.Size = new System.Drawing.Size(28, 38);
+            this.descendingButton.Size = new System.Drawing.Size(14, 20);
             this.descendingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.descendingButton.TabIndex = 2;
             this.descendingButton.TabStop = false;
@@ -322,10 +352,9 @@
             this.ascendingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.ascendingButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ascendingButton.Image = global::Biblio.Properties.Resources.ascendingArrow;
-            this.ascendingButton.Location = new System.Drawing.Point(352, 15);
-            this.ascendingButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.ascendingButton.Location = new System.Drawing.Point(169, 8);
             this.ascendingButton.Name = "ascendingButton";
-            this.ascendingButton.Size = new System.Drawing.Size(28, 38);
+            this.ascendingButton.Size = new System.Drawing.Size(14, 20);
             this.ascendingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ascendingButton.TabIndex = 1;
             this.ascendingButton.TabStop = false;
@@ -353,11 +382,11 @@
             "По популярности",
             "По оценке"});
             this.sortComboBox.Location = new System.Drawing.Point(0, 0);
-            this.sortComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sortComboBox.Name = "sortComboBox";
-            this.sortComboBox.Size = new System.Drawing.Size(336, 36);
+            this.sortComboBox.Size = new System.Drawing.Size(164, 36);
             this.sortComboBox.StartIndex = 2;
             this.sortComboBox.TabIndex = 0;
+            this.sortComboBox.TextOffset = new System.Drawing.Point(7, 0);
             this.sortComboBox.SelectedIndexChanged += new System.EventHandler(this.sortComboBox_SelectedIndexChanged);
             // 
             // panel4
@@ -366,18 +395,16 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1052, 104);
+            this.panel4.Size = new System.Drawing.Size(526, 54);
             this.panel4.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Biblio.Properties.Resources.blueUnderLine;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 63);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(202, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(101, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -387,10 +414,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(2, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 48);
+            this.label1.Size = new System.Drawing.Size(99, 25);
             this.label1.TabIndex = 21;
             this.label1.Text = "Каталог";
             // 
@@ -398,19 +425,19 @@
             // 
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(1252, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rightPanel.Location = new System.Drawing.Point(626, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(200, 727);
+            this.rightPanel.Size = new System.Drawing.Size(100, 378);
             this.rightPanel.TabIndex = 22;
             // 
             // leftPanel
             // 
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(200, 727);
+            this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 21;
             // 
             // BorderlessForm
@@ -431,27 +458,28 @@
             this.navigationControl.leftPanel = null;
             this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(6);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
             this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(1452, 100);
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
             // 
             // BookСatalogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(1452, 827);
+            this.ClientSize = new System.Drawing.Size(726, 430);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BookСatalogForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "СatalogForm";
+            this.SizeChanged += new System.EventHandler(this.BookСatalogForm_SizeChanged);
             this.Resize += new System.EventHandler(this.BookСatalogForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -492,6 +520,8 @@
         private System.Windows.Forms.PictureBox descendingButton;
         private System.Windows.Forms.PictureBox ascendingButton;
         private Guna.UI2.WinForms.Guna2ComboBox sortComboBox;
+        private System.Windows.Forms.Panel panel5;
+        private Guna.UI2.WinForms.Guna2ComboBox sortGenreComboBox;
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2Panel searchPanel;
         private System.Windows.Forms.Panel panel2;
@@ -502,6 +532,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox clearTextButton;
         private System.Windows.Forms.Panel glasPanel;
         private Guna.UI2.WinForms.Guna2PictureBox glasPictureBox;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel9;
     }
 }

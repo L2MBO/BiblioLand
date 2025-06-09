@@ -1,7 +1,6 @@
 ﻿using Biblio.Classes.Customization;
 using Biblio.Classes.Customization.FormCustomization;
 using Biblio.Classes.Customization.ImagesCustomization;
-using Biblio.Classes.DataAccess;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.Classes.Pdf.OpenPdf;
 using Biblio.Classes.Validation;
@@ -17,9 +16,6 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using System.Windows.Shapes;
-using System.Xml.Linq;
-using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
@@ -344,7 +340,7 @@ namespace Biblio.AppForms
 
         private bool AddCommentValidation()
         {
-            var commentCount = Program.context.Reviews.Count(comment => comment.UserID == _currentUserId 
+            var commentCount = Program.context.Reviews.Count(comment => comment.UserID == _currentUserId
                 && comment.BookID == _book.BookID);
 
             if (commentCount <= 2)

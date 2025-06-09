@@ -5,6 +5,7 @@ using Biblio.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using static Biblio.Classes.SaveUserSettings.SaveUserFilter;
 
@@ -27,6 +28,7 @@ namespace Biblio.AppForms
 
             sortComboBox.SelectedIndex = FilterContext.CurrentFilterState.SortIndex;
             searchTextField.Text = FilterContext.CurrentFilterState.SearchQuery;
+            sortGenreComboBox.SelectedIndex = FilterContext.CurrentFilterState.GenreIndex;
 
             UpdateSortButtons();
             ApplyFiltersAndSort();
@@ -43,6 +45,7 @@ namespace Biblio.AppForms
             var state = FilterContext.CurrentFilterState;
             IQueryable<Books> query = Program.context.Books;
 
+            // Применяем фильтр по поиску
             if (!string.IsNullOrEmpty(state.SearchQuery))
             {
                 string searchLower = state.SearchQuery.ToLower();
@@ -51,6 +54,13 @@ namespace Biblio.AppForms
                     book.Author.ToLower().Contains(searchLower));
             }
 
+            // Применяем фильтр по жанру (если выбран)
+            if (state.GenreIndex > 0)
+            {
+                query = query.Where(book => book.GenreID == state.GenreIndex);
+            }
+
+            // Применяем сортировку
             switch (state.SortIndex)
             {
                 case 0: // По новизне
@@ -108,6 +118,20 @@ namespace Biblio.AppForms
             }
         }
 
+        private void BookСatalogForm_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                sortGenreComboBox.Width = 225;
+                searchTextField.PlaceholderText = "Поиск по названию";
+            }
+            else
+            {
+                sortGenreComboBox.Width = 106;
+                searchTextField.PlaceholderText = "По названию";
+            }
+        }
+
         private void BookСatalogForm_Resize(object sender, EventArgs e)
         {
             navigationControl.HandleFormResize(this);
@@ -123,6 +147,12 @@ namespace Biblio.AppForms
         private void sortComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             FilterContext.CurrentFilterState.SortIndex = sortComboBox.SelectedIndex;
+            ApplyFiltersAndSort();
+        }
+
+        private void sortGenreComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FilterContext.CurrentFilterState.GenreIndex = sortGenreComboBox.SelectedIndex;
             ApplyFiltersAndSort();
         }
 

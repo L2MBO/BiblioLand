@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Biblio.Classes.SaveUserSettings
+﻿namespace Biblio.Classes.SaveUserSettings
 {
     internal class SaveUserFilter
     {
@@ -13,6 +7,7 @@ namespace Biblio.Classes.SaveUserSettings
             public int SortIndex { get; set; }
             public bool IsDescending { get; set; }
             public string SearchQuery { get; set; }
+            public int GenreIndex { get; set; }
         }
 
         public static class FilterContext
@@ -21,7 +16,8 @@ namespace Biblio.Classes.SaveUserSettings
             {
                 SortIndex = 2, // По умолчанию
                 IsDescending = true, // По умолчанию
-                SearchQuery = ""
+                SearchQuery = "", // По умолчанию
+                GenreIndex = 0 // По умолчанию (не выбрано)
             };
 
             public static FilterState CurrentFilterState
