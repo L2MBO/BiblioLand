@@ -1,4 +1,6 @@
 ﻿using Biblio.Classes.Customization;
+using Biblio.Models;
+using Biblio.ValidationClasses;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -9,6 +11,7 @@ namespace Biblio.AppForms
 {
     public partial class FeedbackForm : Form
     {
+        private int _currentUserId = Program.CurrentUser.UserID;
         private int _selectedCategory = 0;
 
         public FeedbackForm()
@@ -72,10 +75,28 @@ namespace Biblio.AppForms
 
         private bool IsFieldsEmpty()
         {
-            titleTextField.BorderColor = string.IsNullOrWhiteSpace(titleTextField.Text) ? Color.Red : Color.White;
-            descriptionTextField.BorderColor = string.IsNullOrWhiteSpace(descriptionTextField.Text) ? Color.Red : Color.White;
+            bool isEmpty = string.IsNullOrWhiteSpace(titleTextField.Text) ||
+                   string.IsNullOrWhiteSpace(descriptionTextField.Text);
 
-            return string.IsNullOrWhiteSpace(titleTextField.Text) || string.IsNullOrWhiteSpace(descriptionTextField.Text) ? false : true;
+            if (isEmpty)
+            {
+                titleTextField.BorderColor = Color.Red;
+                descriptionTextField.BorderColor = Color.Red;
+
+                Timer timer = new Timer();
+                timer.Interval = 1000;
+                timer.Tick += (sender, e) =>
+                {
+                    titleTextField.BorderColor = Color.FromArgb(64, 64, 64);
+                    descriptionTextField.BorderColor = Color.FromArgb(64, 64, 64);
+
+                    timer.Stop();
+                    timer.Dispose();
+                };
+                timer.Start();
+            }
+
+            return isEmpty;
         }
 
         private void FeedbackValidation()
@@ -104,13 +125,28 @@ namespace Biblio.AppForms
                 }
 
                 _selectedCategory = 0;
-
-                MessageBox.Show("Спасибо за ваш отзыв!");
             }
             catch (Exception)
             {
                 MessageBox.Show($"Ошибка при сохранении");
             }
+        }
+
+        private void SaveFeedbackToDatabase(int category, string title, string description)
+        {
+            var feedback = new Feedback
+            {
+                UserID = _currentUserId,
+                FeedbackCategoryID = category,
+                FeedbackTitle = title,
+                FeedbackMessage = description,
+                FeedbackDate = DateTime.Now
+            };
+
+            Program.context.Feedback.Add(feedback);
+            Program.context.SaveChanges();
+            
+            MessageBox.Show("Спасибо за ваш отзыв!");
         }
 
         private int CalculateTextBoxHeight(string text, Font font, int width)
@@ -179,7 +215,7 @@ namespace Biblio.AppForms
 
         private void submitButton_Click(object sender, EventArgs e)
         {
-
+            FeedbackValidation();
         }
     }
 }

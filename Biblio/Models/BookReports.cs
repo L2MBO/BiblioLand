@@ -21,9 +21,9 @@ namespace Biblio.Models
 
         public DateTime? ReportDate { get; set; }
 
-        public virtual Books Books { get; set; }
+        public virtual BookReportCategory BookReportCategory { get; set; }
 
-        public virtual ReportCategory ReportCategory { get; set; }
+        public virtual Books Books { get; set; }
 
         public virtual Users Users { get; set; }
     }

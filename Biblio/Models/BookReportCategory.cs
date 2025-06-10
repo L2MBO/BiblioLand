@@ -6,15 +6,16 @@ namespace Biblio.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ReportCategory")]
-    public partial class ReportCategory
+    [Table("BookReportCategory")]
+    public partial class BookReportCategory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ReportCategory()
+        public BookReportCategory()
         {
             BookReports = new HashSet<BookReports>();
         }
 
+        [Key]
         public int ReportCategoryID { get; set; }
 
         [Required]

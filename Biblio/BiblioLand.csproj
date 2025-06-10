@@ -309,13 +309,15 @@
     </Compile>
     <Compile Include="Interface\IAvatarParentForm.cs" />
     <Compile Include="Models\BiblioModel.cs" />
+    <Compile Include="Models\BookReportCategory.cs" />
     <Compile Include="Models\BookReports.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\FeedbackCategory.cs" />
     <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\Likes.cs" />
     <Compile Include="Models\Rating.cs" />
-    <Compile Include="Models\ReportCategory.cs" />
     <Compile Include="Models\ReviewReports.cs" />
     <Compile Include="Models\Reviews.cs" />
     <Compile Include="Models\sysdiagrams.cs" />
@@ -602,6 +604,7 @@
   <ItemGroup>
     <None Include="Resources\fingerUp.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

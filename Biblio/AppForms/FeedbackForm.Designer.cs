@@ -165,7 +165,7 @@
             this.descriptionTextField.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.descriptionTextField.ForeColor = System.Drawing.Color.White;
             this.descriptionTextField.Location = new System.Drawing.Point(0, 0);
-            this.descriptionTextField.MaxLength = 600;
+            this.descriptionTextField.MaxLength = 1000;
             this.descriptionTextField.MinimumSize = new System.Drawing.Size(0, 66);
             this.descriptionTextField.Multiline = true;
             this.descriptionTextField.Name = "descriptionTextField";
@@ -201,6 +201,7 @@
             this.titleTextField.ForeColor = System.Drawing.Color.White;
             this.titleTextField.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.titleTextField.Location = new System.Drawing.Point(0, 0);
+            this.titleTextField.MaxLength = 60;
             this.titleTextField.Name = "titleTextField";
             this.titleTextField.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.titleTextField.PlaceholderText = "Заголовок";
