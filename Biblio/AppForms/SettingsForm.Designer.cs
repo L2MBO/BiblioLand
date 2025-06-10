@@ -34,7 +34,7 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.settingsTabControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.profilePage = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.profileMainPanel = new System.Windows.Forms.Panel();
             this.descriptionPanel = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -84,7 +84,7 @@
             this.mainPanel.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
             this.profilePage.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.profileMainPanel.SuspendLayout();
             this.descriptionPanel.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -161,7 +161,7 @@
             // profilePage
             // 
             this.profilePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.profilePage.Controls.Add(this.panel4);
+            this.profilePage.Controls.Add(this.profileMainPanel);
             this.profilePage.Location = new System.Drawing.Point(109, 4);
             this.profilePage.Name = "profilePage";
             this.profilePage.Padding = new System.Windows.Forms.Padding(3);
@@ -169,20 +169,20 @@
             this.profilePage.TabIndex = 0;
             this.profilePage.Text = "Профиль";
             // 
-            // panel4
+            // profileMainPanel
             // 
-            this.panel4.AutoSize = true;
-            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel4.Controls.Add(this.descriptionPanel);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.avatarPanel);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(407, 301);
-            this.panel4.TabIndex = 8;
+            this.profileMainPanel.AutoSize = true;
+            this.profileMainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.profileMainPanel.Controls.Add(this.descriptionPanel);
+            this.profileMainPanel.Controls.Add(this.panel8);
+            this.profileMainPanel.Controls.Add(this.panel7);
+            this.profileMainPanel.Controls.Add(this.avatarPanel);
+            this.profileMainPanel.Controls.Add(this.panel5);
+            this.profileMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileMainPanel.Location = new System.Drawing.Point(3, 3);
+            this.profileMainPanel.Name = "profileMainPanel";
+            this.profileMainPanel.Size = new System.Drawing.Size(407, 301);
+            this.profileMainPanel.TabIndex = 8;
             // 
             // descriptionPanel
             // 
@@ -823,8 +823,8 @@
             this.settingsTabControl.ResumeLayout(false);
             this.profilePage.ResumeLayout(false);
             this.profilePage.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.profileMainPanel.ResumeLayout(false);
+            this.profileMainPanel.PerformLayout();
             this.descriptionPanel.ResumeLayout(false);
             this.descriptionPanel.PerformLayout();
             this.panel17.ResumeLayout(false);
@@ -872,7 +872,7 @@
         private System.Windows.Forms.TabPage changePasswordPage;
         private System.Windows.Forms.TabPage changeMailPage;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel profileMainPanel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label userNameRuleLabel;

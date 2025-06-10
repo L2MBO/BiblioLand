@@ -35,7 +35,7 @@ namespace Biblio.AppForms
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
 
-            AutoScrollHelper.ConfigureScrollbars(panel4, disableHorizontal: true, disableVertical: true);
+            AutoScrollHelper.ConfigureScrollbars(profileMainPanel, disableHorizontal: true, disableVertical: true);
 
             ImageLoader.LoadAvatarImage(avatarPictureBox);
 
