@@ -83,6 +83,18 @@ namespace Biblio.AppForms
             }
         }
 
+        private void SetUserAnonymity()
+        {
+            if (privateToggleSwitch.Checked == true)
+            {
+                _currentUser.
+            }
+            else
+            {
+
+            }
+        }
+
         private bool IsUserNameValid()
         {
             userNameTextBox.ForeColor = userNameTextBox.Text == "" || !_onlyEnglishChars.IsMatch(userNameTextBox.Text) ? Color.Red : Color.White;
@@ -215,6 +227,17 @@ namespace Biblio.AppForms
             descriptionTextBox.Height = preferredHeight;
 
             descriptionPanel.PerformLayout();
+        }
+
+        private void privateToggleSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            SetUserAnonymity();
+        }
+
+        private void savePrivateButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данные успешно обновлены");
+            Program.context.SaveChanges();
         }
     }
 }
