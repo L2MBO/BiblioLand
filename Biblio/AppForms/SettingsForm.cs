@@ -42,7 +42,21 @@ namespace Biblio.AppForms
             userNameTextBox.Text = _currentUser.Username;
             descriptionTextBox.Text = _currentUser.Descriotion;
 
+            SetUserAnonymity();
+
             PerformLayout();
+        }
+
+        private void SetUserAnonymity()
+        {
+            if (_currentUser.PrivateProfile == 1)
+            {
+                privateToggleSwitch.Checked = true;
+            }
+            else
+            {
+                privateToggleSwitch.Checked = false;
+            }
         }
 
         private void SettingsForm_Resize(object sender, EventArgs e)
@@ -58,6 +72,7 @@ namespace Biblio.AppForms
                 avatarPanel.Height = 226;
                 userNameRuleLabel.Text = "Состоит из английских букв, цифр и символов @/./+/-/_. За недопустимый по правилам ник Вы можете получить бан.";
                 passwordRuleLabel.Text = "Пароль должен содержать заглавные и строчные буквы, а также символы и цифры. Минимальная длина - 8 символов";
+                privateDescriptionLabel.Text = "Другие будут видеть только аватар, никнейм и чуть-чуть статистики. Закладки — только Ваши.";
             }
             else
             {
@@ -67,6 +82,7 @@ namespace Biblio.AppForms
                 avatarPanel.Height = 70;
                 userNameRuleLabel.Text = "За недопустимый по правилам ник Вы можете получить бан.";
                 passwordRuleLabel.Text = "Заглавные, строчные, символы и цифры. Минимум 8 символов";
+                privateDescriptionLabel.Text = "Другие будут видеть только аватар, никнейм и чуть-чуть статистики.";
             }
         }
 
@@ -83,16 +99,23 @@ namespace Biblio.AppForms
             }
         }
 
-        private void SetUserAnonymity()
+        private bool ChangeUserAnonymity()
         {
-            if (privateToggleSwitch.Checked == true)
-            {
-                _currentUser.
-            }
-            else
-            {
+            var currentValue = Program.context.Users
+                .AsNoTracking()
+                .Where(u => u.UserID == _currentUser.UserID)
+                .Select(u => u.PrivateProfile)
+                .FirstOrDefault();
 
+            int newValue = privateToggleSwitch.Checked ? 1 : 0;
+
+            if (currentValue != newValue)
+            {
+                _currentUser.PrivateProfile = newValue;
+                return true;
             }
+
+            return false;
         }
 
         private bool IsUserNameValid()
@@ -229,15 +252,16 @@ namespace Biblio.AppForms
             descriptionPanel.PerformLayout();
         }
 
-        private void privateToggleSwitch_CheckedChanged(object sender, EventArgs e)
-        {
-            SetUserAnonymity();
-        }
-
         private void savePrivateButton_Click(object sender, EventArgs e)
         {
+            bool hasChanges = ChangeUserAnonymity();
+
+            if (hasChanges)
+            {
+                Program.context.SaveChanges();
+            }
+
             MessageBox.Show("Данные успешно обновлены");
-            Program.context.SaveChanges();
         }
     }
 }

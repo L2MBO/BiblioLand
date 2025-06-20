@@ -74,6 +74,11 @@
             this.newMailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.newMailLabel = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.privatePage = new System.Windows.Forms.TabPage();
+            this.privateToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.label4 = new System.Windows.Forms.Label();
+            this.savePrivateButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -81,11 +86,7 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.privatePage = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.savePrivateButton = new Guna.UI2.WinForms.Guna2Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.privateToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.privateDescriptionLabel = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
             this.profilePage.SuspendLayout();
@@ -105,8 +106,8 @@
             this.panel11.SuspendLayout();
             this.changeMailPage.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.privatePage.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -281,12 +282,13 @@
             // userNameRuleLabel
             // 
             this.userNameRuleLabel.AutoSize = true;
+            this.userNameRuleLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.userNameRuleLabel.ForeColor = System.Drawing.Color.Silver;
             this.userNameRuleLabel.Location = new System.Drawing.Point(-2, 1);
             this.userNameRuleLabel.Name = "userNameRuleLabel";
-            this.userNameRuleLabel.Size = new System.Drawing.Size(318, 13);
+            this.userNameRuleLabel.Size = new System.Drawing.Size(336, 13);
             this.userNameRuleLabel.TabIndex = 12;
-            this.userNameRuleLabel.Text = "За недопустимый по правилам ник Вы можете получить бан.";
+            this.userNameRuleLabel.Text = "За недопустимый по правилам ник вы можете получить бан.";
             // 
             // label5
             // 
@@ -499,11 +501,11 @@
             // passwordRuleLabel
             // 
             this.passwordRuleLabel.AutoSize = true;
-            this.passwordRuleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passwordRuleLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordRuleLabel.ForeColor = System.Drawing.Color.Silver;
             this.passwordRuleLabel.Location = new System.Drawing.Point(-2, 1);
             this.passwordRuleLabel.Name = "passwordRuleLabel";
-            this.passwordRuleLabel.Size = new System.Drawing.Size(331, 13);
+            this.passwordRuleLabel.Size = new System.Drawing.Size(347, 13);
             this.passwordRuleLabel.TabIndex = 12;
             this.passwordRuleLabel.Text = "Заглавные, строчные, символы и цифры. Минимум 8 символов";
             // 
@@ -680,10 +682,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.Silver;
             this.label7.Location = new System.Drawing.Point(11, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(203, 13);
+            this.label7.Size = new System.Drawing.Size(213, 13);
             this.label7.TabIndex = 46;
             this.label7.Text = "На нее будут приходить новые письма";
             // 
@@ -739,6 +742,75 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(10, 301);
             this.panel14.TabIndex = 2;
+            // 
+            // privatePage
+            // 
+            this.privatePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.privatePage.Controls.Add(this.privateDescriptionLabel);
+            this.privatePage.Controls.Add(this.privateToggleSwitch);
+            this.privatePage.Controls.Add(this.label4);
+            this.privatePage.Controls.Add(this.savePrivateButton);
+            this.privatePage.Controls.Add(this.panel4);
+            this.privatePage.Location = new System.Drawing.Point(109, 4);
+            this.privatePage.Name = "privatePage";
+            this.privatePage.Padding = new System.Windows.Forms.Padding(3);
+            this.privatePage.Size = new System.Drawing.Size(413, 307);
+            this.privatePage.TabIndex = 3;
+            this.privatePage.Text = "Приватность";
+            // 
+            // privateToggleSwitch
+            // 
+            this.privateToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.privateToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.privateToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.privateToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.privateToggleSwitch.Location = new System.Drawing.Point(14, 21);
+            this.privateToggleSwitch.Name = "privateToggleSwitch";
+            this.privateToggleSwitch.Size = new System.Drawing.Size(35, 20);
+            this.privateToggleSwitch.TabIndex = 53;
+            this.privateToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.privateToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.privateToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.privateToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(54, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 13);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Закрытый профиль";
+            // 
+            // savePrivateButton
+            // 
+            this.savePrivateButton.Animated = true;
+            this.savePrivateButton.BorderRadius = 13;
+            this.savePrivateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.savePrivateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.savePrivateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.savePrivateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.savePrivateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.savePrivateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.savePrivateButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.savePrivateButton.ForeColor = System.Drawing.Color.White;
+            this.savePrivateButton.Location = new System.Drawing.Point(14, 81);
+            this.savePrivateButton.Name = "savePrivateButton";
+            this.savePrivateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.savePrivateButton.Size = new System.Drawing.Size(162, 28);
+            this.savePrivateButton.TabIndex = 51;
+            this.savePrivateButton.Text = "Сохранить изменения";
+            this.savePrivateButton.Click += new System.EventHandler(this.savePrivateButton_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 301);
+            this.panel4.TabIndex = 3;
             // 
             // panel3
             // 
@@ -812,74 +884,16 @@
             this.navigationControl.TabIndex = 0;
             this.navigationControl.TabStop = false;
             // 
-            // privatePage
+            // privateDescriptionLabel
             // 
-            this.privatePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.privatePage.Controls.Add(this.privateToggleSwitch);
-            this.privatePage.Controls.Add(this.label4);
-            this.privatePage.Controls.Add(this.savePrivateButton);
-            this.privatePage.Controls.Add(this.panel4);
-            this.privatePage.Location = new System.Drawing.Point(109, 4);
-            this.privatePage.Name = "privatePage";
-            this.privatePage.Padding = new System.Windows.Forms.Padding(3);
-            this.privatePage.Size = new System.Drawing.Size(413, 307);
-            this.privatePage.TabIndex = 3;
-            this.privatePage.Text = "Приватность";
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 301);
-            this.panel4.TabIndex = 3;
-            // 
-            // savePrivateButton
-            // 
-            this.savePrivateButton.Animated = true;
-            this.savePrivateButton.BorderRadius = 13;
-            this.savePrivateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.savePrivateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.savePrivateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.savePrivateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.savePrivateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.savePrivateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.savePrivateButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.savePrivateButton.ForeColor = System.Drawing.Color.White;
-            this.savePrivateButton.Location = new System.Drawing.Point(14, 56);
-            this.savePrivateButton.Name = "savePrivateButton";
-            this.savePrivateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.savePrivateButton.Size = new System.Drawing.Size(162, 28);
-            this.savePrivateButton.TabIndex = 51;
-            this.savePrivateButton.Text = "Сохранить изменения";
-            this.savePrivateButton.Click += new System.EventHandler(this.savePrivateButton_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(54, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 13);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "Закрытый профиль";
-            // 
-            // privateToggleSwitch
-            // 
-            this.privateToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.privateToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.privateToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.privateToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.privateToggleSwitch.Location = new System.Drawing.Point(14, 21);
-            this.privateToggleSwitch.Name = "privateToggleSwitch";
-            this.privateToggleSwitch.Size = new System.Drawing.Size(35, 20);
-            this.privateToggleSwitch.TabIndex = 53;
-            this.privateToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.privateToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.privateToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.privateToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.privateToggleSwitch.CheckedChanged += new System.EventHandler(this.privateToggleSwitch_CheckedChanged);
+            this.privateDescriptionLabel.AutoSize = true;
+            this.privateDescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.privateDescriptionLabel.ForeColor = System.Drawing.Color.Silver;
+            this.privateDescriptionLabel.Location = new System.Drawing.Point(11, 44);
+            this.privateDescriptionLabel.Name = "privateDescriptionLabel";
+            this.privateDescriptionLabel.Size = new System.Drawing.Size(375, 13);
+            this.privateDescriptionLabel.TabIndex = 54;
+            this.privateDescriptionLabel.Text = "Другие будут видеть только аватар, никнейм и чуть-чуть статистики.";
             // 
             // SettingsForm
             // 
@@ -926,10 +940,10 @@
             this.changeMailPage.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.privatePage.ResumeLayout(false);
             this.privatePage.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -993,5 +1007,6 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button savePrivateButton;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label privateDescriptionLabel;
     }
 }
