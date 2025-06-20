@@ -8,7 +8,7 @@ namespace Biblio.Models
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel26")
+            : base("name=BiblioModel27")
         {
         }
 

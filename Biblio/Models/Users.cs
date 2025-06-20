@@ -34,6 +34,9 @@ namespace Biblio.Models
         public string Email { get; set; }
 
         [Required]
+        public string Avatar { get; set; }
+
+        [Required]
         public string PasswordHash { get; set; }
 
         public int UserRoleID { get; set; }
@@ -45,8 +48,7 @@ namespace Biblio.Models
 
         public DateTime? ConfirmationCodeExpiration { get; set; }
 
-        [Required]
-        public string Avatar { get; set; }
+        public int? PrivateProfile { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookReports> BookReports { get; set; }
