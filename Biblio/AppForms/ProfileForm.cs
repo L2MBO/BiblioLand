@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static Guna.UI2.Native.WinApi;
@@ -50,6 +51,7 @@ namespace Biblio.AppForms
             ShowBookmarks();
             ChangeSettingsButtonImage();
             CheckUserRole();
+            CheckUserPrivacy();
         }
 
         private void SetStatisticsCount()
@@ -80,6 +82,7 @@ namespace Biblio.AppForms
             {
                 buttonPanel.Width = 505;
                 UpdateButtonsCount();
+                anotherLockPanel.Width = 511;
             }
             else
             {
@@ -94,6 +97,7 @@ namespace Biblio.AppForms
                 abandonedButton.Image = Properties.Resources.abandoned;
                 postponedButton.Text = "";
                 postponedButton.Image = Properties.Resources.postponed;
+                anotherLockPanel.Width = 266;
             }
         }
 
@@ -174,11 +178,31 @@ namespace Biblio.AppForms
 
         private void CheckUserRole()
         {
-            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == Program.CurrentUser.UserID && user.UserRoleID == 2);
+            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == Program.CurrentUser.UserID && user.UserRoleID == 2);
 
-            if (_currentUser != null)
+            if (currentUser != null)
             {
                 _isUserAdmin = true;
+            }
+        }
+
+        private void CheckUserPrivacy()
+        {
+            if (_currentUser.PrivateProfile == 1 && _currentUser.UserID != Program.CurrentUser.UserID)
+            {
+                bookmarksButtonPanel.Visible = false;
+                bookmarksPanel.Visible = false;
+                lockPanel.Visible = true;
+                lockPanel.BringToFront();
+                anotherLockPanel.Visible = true;
+                anotherLockPanel.BringToFront();
+            }
+            else
+            {
+                bookmarksButtonPanel.Visible = true;
+                bookmarksPanel.Visible = true;
+                lockPanel.Visible = false;
+                anotherLockPanel.Visible = false;
             }
         }
 

@@ -75,6 +75,7 @@
             this.newMailLabel = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.privatePage = new System.Windows.Forms.TabPage();
+            this.privateDescriptionLabel = new System.Windows.Forms.Label();
             this.privateToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.label4 = new System.Windows.Forms.Label();
             this.savePrivateButton = new Guna.UI2.WinForms.Guna2Button();
@@ -86,7 +87,6 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.privateDescriptionLabel = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.settingsTabControl.SuspendLayout();
             this.profilePage.SuspendLayout();
@@ -758,8 +758,20 @@
             this.privatePage.TabIndex = 3;
             this.privatePage.Text = "Приватность";
             // 
+            // privateDescriptionLabel
+            // 
+            this.privateDescriptionLabel.AutoSize = true;
+            this.privateDescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.privateDescriptionLabel.ForeColor = System.Drawing.Color.Silver;
+            this.privateDescriptionLabel.Location = new System.Drawing.Point(11, 44);
+            this.privateDescriptionLabel.Name = "privateDescriptionLabel";
+            this.privateDescriptionLabel.Size = new System.Drawing.Size(375, 13);
+            this.privateDescriptionLabel.TabIndex = 54;
+            this.privateDescriptionLabel.Text = "Другие будут видеть только аватар, никнейм и чуть-чуть статистики.";
+            // 
             // privateToggleSwitch
             // 
+            this.privateToggleSwitch.Animated = true;
             this.privateToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.privateToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.privateToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
@@ -883,17 +895,6 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
             this.navigationControl.TabStop = false;
-            // 
-            // privateDescriptionLabel
-            // 
-            this.privateDescriptionLabel.AutoSize = true;
-            this.privateDescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.privateDescriptionLabel.ForeColor = System.Drawing.Color.Silver;
-            this.privateDescriptionLabel.Location = new System.Drawing.Point(11, 44);
-            this.privateDescriptionLabel.Name = "privateDescriptionLabel";
-            this.privateDescriptionLabel.Size = new System.Drawing.Size(375, 13);
-            this.privateDescriptionLabel.TabIndex = 54;
-            this.privateDescriptionLabel.Text = "Другие будут видеть только аватар, никнейм и чуть-чуть статистики.";
             // 
             // SettingsForm
             // 

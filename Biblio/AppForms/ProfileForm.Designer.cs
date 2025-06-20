@@ -32,6 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.lockPanel = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lockDescriptionLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bookmarksPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.bookmarksButtonPanel = new System.Windows.Forms.Panel();
+            this.buttonPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.anotherLockPanel = new System.Windows.Forms.Panel();
+            this.postponedButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.abandonedButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.wasReadButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.willReadingButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.readingButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.registrationDateLabel = new System.Windows.Forms.Label();
@@ -56,23 +77,11 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.buttonPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.bookmarksPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.readingButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.willReadingButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.wasReadButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.abandonedButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.postponedButton = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
+            this.lockPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.bookmarksButtonPanel.SuspendLayout();
+            this.buttonPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -84,8 +93,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.buttonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -100,8 +107,9 @@
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.lockPanel);
             this.mainPanel.Controls.Add(this.bookmarksPanel);
-            this.mainPanel.Controls.Add(this.panel5);
+            this.mainPanel.Controls.Add(this.bookmarksButtonPanel);
             this.mainPanel.Controls.Add(this.panel4);
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.rightPanel);
@@ -111,6 +119,288 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 3;
+            // 
+            // lockPanel
+            // 
+            this.lockPanel.Controls.Add(this.pictureBox4);
+            this.lockPanel.Controls.Add(this.lockDescriptionLabel);
+            this.lockPanel.Controls.Add(this.label2);
+            this.lockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lockPanel.Location = new System.Drawing.Point(360, 173);
+            this.lockPanel.Name = "lockPanel";
+            this.lockPanel.Size = new System.Drawing.Size(266, 205);
+            this.lockPanel.TabIndex = 64;
+            this.lockPanel.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Biblio.Properties.Resources._lock;
+            this.pictureBox4.Location = new System.Drawing.Point(101, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lockDescriptionLabel
+            // 
+            this.lockDescriptionLabel.AutoSize = true;
+            this.lockDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lockDescriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.lockDescriptionLabel.Location = new System.Drawing.Point(16, 118);
+            this.lockDescriptionLabel.Name = "lockDescriptionLabel";
+            this.lockDescriptionLabel.Size = new System.Drawing.Size(235, 13);
+            this.lockDescriptionLabel.TabIndex = 1;
+            this.lockDescriptionLabel.Text = "Только владелец может его просматривать.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(19, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Это закрытый аккаунт";
+            // 
+            // bookmarksPanel
+            // 
+            this.bookmarksPanel.AutoSize = true;
+            this.bookmarksPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bookmarksPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bookmarksPanel.Location = new System.Drawing.Point(360, 173);
+            this.bookmarksPanel.Name = "bookmarksPanel";
+            this.bookmarksPanel.Size = new System.Drawing.Size(266, 0);
+            this.bookmarksPanel.TabIndex = 63;
+            // 
+            // bookmarksButtonPanel
+            // 
+            this.bookmarksButtonPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bookmarksButtonPanel.Controls.Add(this.buttonPanel);
+            this.bookmarksButtonPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bookmarksButtonPanel.Location = new System.Drawing.Point(360, 140);
+            this.bookmarksButtonPanel.Name = "bookmarksButtonPanel";
+            this.bookmarksButtonPanel.Size = new System.Drawing.Size(266, 33);
+            this.bookmarksButtonPanel.TabIndex = 62;
+            // 
+            // buttonPanel
+            // 
+            this.buttonPanel.BackColor = System.Drawing.Color.Transparent;
+            this.buttonPanel.BorderRadius = 14;
+            this.buttonPanel.Controls.Add(this.anotherLockPanel);
+            this.buttonPanel.Controls.Add(this.postponedButton);
+            this.buttonPanel.Controls.Add(this.panel13);
+            this.buttonPanel.Controls.Add(this.abandonedButton);
+            this.buttonPanel.Controls.Add(this.panel12);
+            this.buttonPanel.Controls.Add(this.wasReadButton);
+            this.buttonPanel.Controls.Add(this.panel11);
+            this.buttonPanel.Controls.Add(this.willReadingButton);
+            this.buttonPanel.Controls.Add(this.panel6);
+            this.buttonPanel.Controls.Add(this.readingButton);
+            this.buttonPanel.Controls.Add(this.panel10);
+            this.buttonPanel.Controls.Add(this.panel9);
+            this.buttonPanel.Controls.Add(this.panel8);
+            this.buttonPanel.Controls.Add(this.panel7);
+            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.buttonPanel.Location = new System.Drawing.Point(0, 0);
+            this.buttonPanel.Name = "buttonPanel";
+            this.buttonPanel.Size = new System.Drawing.Size(260, 33);
+            this.buttonPanel.TabIndex = 2;
+            // 
+            // anotherLockPanel
+            // 
+            this.anotherLockPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.anotherLockPanel.Location = new System.Drawing.Point(0, 0);
+            this.anotherLockPanel.Name = "anotherLockPanel";
+            this.anotherLockPanel.Size = new System.Drawing.Size(266, 33);
+            this.anotherLockPanel.TabIndex = 6;
+            this.anotherLockPanel.Visible = false;
+            // 
+            // postponedButton
+            // 
+            this.postponedButton.Animated = true;
+            this.postponedButton.BackColor = System.Drawing.Color.Transparent;
+            this.postponedButton.BorderRadius = 13;
+            this.postponedButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.postponedButton.DefaultAutoSize = true;
+            this.postponedButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.postponedButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.postponedButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.postponedButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.postponedButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.postponedButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.postponedButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.postponedButton.ForeColor = System.Drawing.Color.White;
+            this.postponedButton.Image = global::Biblio.Properties.Resources.postponed;
+            this.postponedButton.Location = new System.Drawing.Point(211, 3);
+            this.postponedButton.MinimumSize = new System.Drawing.Size(0, 27);
+            this.postponedButton.Name = "postponedButton";
+            this.postponedButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.postponedButton.Size = new System.Drawing.Size(46, 27);
+            this.postponedButton.TabIndex = 85;
+            this.postponedButton.Click += new System.EventHandler(this.postponedButton_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(205, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(6, 27);
+            this.panel13.TabIndex = 84;
+            // 
+            // abandonedButton
+            // 
+            this.abandonedButton.Animated = true;
+            this.abandonedButton.BackColor = System.Drawing.Color.Transparent;
+            this.abandonedButton.BorderRadius = 13;
+            this.abandonedButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.abandonedButton.DefaultAutoSize = true;
+            this.abandonedButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.abandonedButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.abandonedButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.abandonedButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.abandonedButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.abandonedButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.abandonedButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.abandonedButton.ForeColor = System.Drawing.Color.White;
+            this.abandonedButton.Image = global::Biblio.Properties.Resources.abandoned;
+            this.abandonedButton.Location = new System.Drawing.Point(159, 3);
+            this.abandonedButton.MinimumSize = new System.Drawing.Size(0, 27);
+            this.abandonedButton.Name = "abandonedButton";
+            this.abandonedButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.abandonedButton.Size = new System.Drawing.Size(46, 27);
+            this.abandonedButton.TabIndex = 83;
+            this.abandonedButton.Click += new System.EventHandler(this.abandonedButton_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(153, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(6, 27);
+            this.panel12.TabIndex = 82;
+            // 
+            // wasReadButton
+            // 
+            this.wasReadButton.Animated = true;
+            this.wasReadButton.BackColor = System.Drawing.Color.Transparent;
+            this.wasReadButton.BorderRadius = 13;
+            this.wasReadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.wasReadButton.DefaultAutoSize = true;
+            this.wasReadButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.wasReadButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.wasReadButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.wasReadButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.wasReadButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.wasReadButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.wasReadButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.wasReadButton.ForeColor = System.Drawing.Color.White;
+            this.wasReadButton.Image = global::Biblio.Properties.Resources.wasRead;
+            this.wasReadButton.Location = new System.Drawing.Point(107, 3);
+            this.wasReadButton.MinimumSize = new System.Drawing.Size(0, 27);
+            this.wasReadButton.Name = "wasReadButton";
+            this.wasReadButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.wasReadButton.Size = new System.Drawing.Size(46, 27);
+            this.wasReadButton.TabIndex = 81;
+            this.wasReadButton.Click += new System.EventHandler(this.wasReadButton_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(101, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(6, 27);
+            this.panel11.TabIndex = 80;
+            // 
+            // willReadingButton
+            // 
+            this.willReadingButton.Animated = true;
+            this.willReadingButton.BackColor = System.Drawing.Color.Transparent;
+            this.willReadingButton.BorderRadius = 13;
+            this.willReadingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.willReadingButton.DefaultAutoSize = true;
+            this.willReadingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.willReadingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.willReadingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.willReadingButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.willReadingButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.willReadingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.willReadingButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.willReadingButton.ForeColor = System.Drawing.Color.White;
+            this.willReadingButton.Image = global::Biblio.Properties.Resources.willReading;
+            this.willReadingButton.Location = new System.Drawing.Point(55, 3);
+            this.willReadingButton.MinimumSize = new System.Drawing.Size(0, 27);
+            this.willReadingButton.Name = "willReadingButton";
+            this.willReadingButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.willReadingButton.Size = new System.Drawing.Size(46, 27);
+            this.willReadingButton.TabIndex = 79;
+            this.willReadingButton.Click += new System.EventHandler(this.willReadingButton_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel6.Location = new System.Drawing.Point(49, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(6, 27);
+            this.panel6.TabIndex = 78;
+            // 
+            // readingButton
+            // 
+            this.readingButton.Animated = true;
+            this.readingButton.BackColor = System.Drawing.Color.Transparent;
+            this.readingButton.BorderRadius = 13;
+            this.readingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.readingButton.DefaultAutoSize = true;
+            this.readingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.readingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.readingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.readingButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.readingButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.readingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.readingButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.readingButton.ForeColor = System.Drawing.Color.White;
+            this.readingButton.Image = global::Biblio.Properties.Resources.reading;
+            this.readingButton.Location = new System.Drawing.Point(3, 3);
+            this.readingButton.MinimumSize = new System.Drawing.Size(0, 27);
+            this.readingButton.Name = "readingButton";
+            this.readingButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.readingButton.Size = new System.Drawing.Size(46, 27);
+            this.readingButton.TabIndex = 77;
+            this.readingButton.Click += new System.EventHandler(this.readingButton_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(257, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(3, 27);
+            this.panel10.TabIndex = 76;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(3, 30);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(257, 3);
+            this.panel9.TabIndex = 75;
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(3, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(257, 3);
+            this.panel8.TabIndex = 74;
+            // 
+            // panel7
+            // 
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(3, 33);
+            this.panel7.TabIndex = 73;
             // 
             // panel4
             // 
@@ -382,234 +672,6 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.buttonPanel);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(360, 140);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(266, 33);
-            this.panel5.TabIndex = 62;
-            // 
-            // buttonPanel
-            // 
-            this.buttonPanel.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPanel.BorderRadius = 14;
-            this.buttonPanel.Controls.Add(this.postponedButton);
-            this.buttonPanel.Controls.Add(this.panel13);
-            this.buttonPanel.Controls.Add(this.abandonedButton);
-            this.buttonPanel.Controls.Add(this.panel12);
-            this.buttonPanel.Controls.Add(this.wasReadButton);
-            this.buttonPanel.Controls.Add(this.panel11);
-            this.buttonPanel.Controls.Add(this.willReadingButton);
-            this.buttonPanel.Controls.Add(this.panel6);
-            this.buttonPanel.Controls.Add(this.readingButton);
-            this.buttonPanel.Controls.Add(this.panel10);
-            this.buttonPanel.Controls.Add(this.panel9);
-            this.buttonPanel.Controls.Add(this.panel8);
-            this.buttonPanel.Controls.Add(this.panel7);
-            this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.buttonPanel.Location = new System.Drawing.Point(0, 0);
-            this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(260, 33);
-            this.buttonPanel.TabIndex = 0;
-            // 
-            // bookmarksPanel
-            // 
-            this.bookmarksPanel.AutoSize = true;
-            this.bookmarksPanel.BackColor = System.Drawing.Color.Transparent;
-            this.bookmarksPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bookmarksPanel.Location = new System.Drawing.Point(360, 173);
-            this.bookmarksPanel.Name = "bookmarksPanel";
-            this.bookmarksPanel.Size = new System.Drawing.Size(266, 0);
-            this.bookmarksPanel.TabIndex = 63;
-            // 
-            // panel7
-            // 
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(3, 33);
-            this.panel7.TabIndex = 73;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(257, 3);
-            this.panel8.TabIndex = 74;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(3, 30);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(257, 3);
-            this.panel9.TabIndex = 75;
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(257, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(3, 27);
-            this.panel10.TabIndex = 76;
-            // 
-            // readingButton
-            // 
-            this.readingButton.Animated = true;
-            this.readingButton.BackColor = System.Drawing.Color.Transparent;
-            this.readingButton.BorderRadius = 13;
-            this.readingButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.readingButton.DefaultAutoSize = true;
-            this.readingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.readingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.readingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.readingButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.readingButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.readingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.readingButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.readingButton.ForeColor = System.Drawing.Color.White;
-            this.readingButton.Image = global::Biblio.Properties.Resources.reading;
-            this.readingButton.Location = new System.Drawing.Point(3, 3);
-            this.readingButton.MinimumSize = new System.Drawing.Size(0, 27);
-            this.readingButton.Name = "readingButton";
-            this.readingButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.readingButton.Size = new System.Drawing.Size(46, 27);
-            this.readingButton.TabIndex = 77;
-            this.readingButton.Click += new System.EventHandler(this.readingButton_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel6.Location = new System.Drawing.Point(49, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(6, 27);
-            this.panel6.TabIndex = 78;
-            // 
-            // willReadingButton
-            // 
-            this.willReadingButton.Animated = true;
-            this.willReadingButton.BackColor = System.Drawing.Color.Transparent;
-            this.willReadingButton.BorderRadius = 13;
-            this.willReadingButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.willReadingButton.DefaultAutoSize = true;
-            this.willReadingButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.willReadingButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.willReadingButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.willReadingButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.willReadingButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.willReadingButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.willReadingButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.willReadingButton.ForeColor = System.Drawing.Color.White;
-            this.willReadingButton.Image = global::Biblio.Properties.Resources.willReading;
-            this.willReadingButton.Location = new System.Drawing.Point(55, 3);
-            this.willReadingButton.MinimumSize = new System.Drawing.Size(0, 27);
-            this.willReadingButton.Name = "willReadingButton";
-            this.willReadingButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.willReadingButton.Size = new System.Drawing.Size(46, 27);
-            this.willReadingButton.TabIndex = 79;
-            this.willReadingButton.Click += new System.EventHandler(this.willReadingButton_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(101, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(6, 27);
-            this.panel11.TabIndex = 80;
-            // 
-            // wasReadButton
-            // 
-            this.wasReadButton.Animated = true;
-            this.wasReadButton.BackColor = System.Drawing.Color.Transparent;
-            this.wasReadButton.BorderRadius = 13;
-            this.wasReadButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wasReadButton.DefaultAutoSize = true;
-            this.wasReadButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.wasReadButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.wasReadButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.wasReadButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.wasReadButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.wasReadButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.wasReadButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.wasReadButton.ForeColor = System.Drawing.Color.White;
-            this.wasReadButton.Image = global::Biblio.Properties.Resources.wasRead;
-            this.wasReadButton.Location = new System.Drawing.Point(107, 3);
-            this.wasReadButton.MinimumSize = new System.Drawing.Size(0, 27);
-            this.wasReadButton.Name = "wasReadButton";
-            this.wasReadButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.wasReadButton.Size = new System.Drawing.Size(46, 27);
-            this.wasReadButton.TabIndex = 81;
-            this.wasReadButton.Click += new System.EventHandler(this.wasReadButton_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(153, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(6, 27);
-            this.panel12.TabIndex = 82;
-            // 
-            // abandonedButton
-            // 
-            this.abandonedButton.Animated = true;
-            this.abandonedButton.BackColor = System.Drawing.Color.Transparent;
-            this.abandonedButton.BorderRadius = 13;
-            this.abandonedButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.abandonedButton.DefaultAutoSize = true;
-            this.abandonedButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.abandonedButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.abandonedButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.abandonedButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.abandonedButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.abandonedButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.abandonedButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.abandonedButton.ForeColor = System.Drawing.Color.White;
-            this.abandonedButton.Image = global::Biblio.Properties.Resources.abandoned;
-            this.abandonedButton.Location = new System.Drawing.Point(159, 3);
-            this.abandonedButton.MinimumSize = new System.Drawing.Size(0, 27);
-            this.abandonedButton.Name = "abandonedButton";
-            this.abandonedButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.abandonedButton.Size = new System.Drawing.Size(46, 27);
-            this.abandonedButton.TabIndex = 83;
-            this.abandonedButton.Click += new System.EventHandler(this.abandonedButton_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel13.Location = new System.Drawing.Point(205, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(6, 27);
-            this.panel13.TabIndex = 84;
-            // 
-            // postponedButton
-            // 
-            this.postponedButton.Animated = true;
-            this.postponedButton.BackColor = System.Drawing.Color.Transparent;
-            this.postponedButton.BorderRadius = 13;
-            this.postponedButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.postponedButton.DefaultAutoSize = true;
-            this.postponedButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.postponedButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.postponedButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.postponedButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.postponedButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.postponedButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.postponedButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.postponedButton.ForeColor = System.Drawing.Color.White;
-            this.postponedButton.Image = global::Biblio.Properties.Resources.postponed;
-            this.postponedButton.Location = new System.Drawing.Point(211, 3);
-            this.postponedButton.MinimumSize = new System.Drawing.Size(0, 27);
-            this.postponedButton.Name = "postponedButton";
-            this.postponedButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.postponedButton.Size = new System.Drawing.Size(46, 27);
-            this.postponedButton.TabIndex = 85;
-            this.postponedButton.Click += new System.EventHandler(this.postponedButton_Click);
-            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -626,6 +688,12 @@
             this.Resize += new System.EventHandler(this.ProfileForm_Resize);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
+            this.lockPanel.ResumeLayout(false);
+            this.lockPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.bookmarksButtonPanel.ResumeLayout(false);
+            this.buttonPanel.ResumeLayout(false);
+            this.buttonPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -640,9 +708,6 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.buttonPanel.ResumeLayout(false);
-            this.buttonPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,13 +741,13 @@
         private System.Windows.Forms.Label registrationDateLabel;
         private System.Windows.Forms.Label userNameLabel;
         private Guna.UI2.WinForms.Guna2CircleButton settingsButton;
-        private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2Panel buttonPanel;
+        private System.Windows.Forms.Panel bookmarksButtonPanel;
         private System.Windows.Forms.FlowLayoutPanel bookmarksPanel;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel lockPanel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lockDescriptionLabel;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI2.WinForms.Guna2Panel buttonPanel;
         private Guna.UI2.WinForms.Guna2Button postponedButton;
         private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2Button abandonedButton;
@@ -692,5 +757,10 @@
         private Guna.UI2.WinForms.Guna2Button willReadingButton;
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2Button readingButton;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel anotherLockPanel;
     }
 }
