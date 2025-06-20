@@ -216,11 +216,23 @@
     <Compile Include="AppForms\BookСatalogForm.Designer.cs">
       <DependentUpon>BookСatalogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\UserBanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\UserBanForm.Designer.cs">
+      <DependentUpon>UserBanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\UserNotifyForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AppForms\UserNotifyForm.Designer.cs">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\UserReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\UserReportForm.Designer.cs">
+      <DependentUpon>UserReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\Animations\FormDrag.cs" />
@@ -382,8 +394,14 @@
     <EmbeddedResource Include="AppForms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\UserBanForm.resx">
+      <DependentUpon>UserBanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\UserNotifyForm.resx">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\UserReportForm.resx">
+      <DependentUpon>UserReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AddContentControl.resx">
       <DependentUpon>AddContentControl.cs</DependentUpon>

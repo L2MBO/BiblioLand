@@ -45,31 +45,28 @@ namespace Biblio.AppForms
                 button.Checked = (button == selectedButton);
             }
 
-            // Показываем панель (если была скрыта)
             feedbackPanel.Visible = true;
 
-            // Устанавливаем текст в зависимости от выбранной категории
             switch (category)
             {
                 case 1: // Like
                     titleTextField.PlaceholderText = "Что вам больше всего нравится?";
-                    descriptionTextField.PlaceholderText = "Расскажите почему...";
+                    descriptionTextField.PlaceholderText = "Расскажите, почему вам это нравится или как мы можем сделать приложение еще лучше!";
                     break;
                 case 2: // Hate
                     titleTextField.PlaceholderText = "Что вам не нравится?";
-                    descriptionTextField.PlaceholderText = "Расскажите подробнее...";
+                    descriptionTextField.PlaceholderText = "Расскажите что вам не нравится и почему.";
                     break;
                 case 3: // Bug
-                    titleTextField.PlaceholderText = "Опишите проблему";
-                    descriptionTextField.PlaceholderText = "Подробно расскажите о баге...";
+                    titleTextField.PlaceholderText = "С какой ошибкой вы столкнулись?";
+                    descriptionTextField.PlaceholderText = "Расскажите, когда и при каких условиях возникает ошибка.";
                     break;
                 case 4: // Idea
-                    titleTextField.PlaceholderText = "Ваша идея";
-                    descriptionTextField.PlaceholderText = "Опишите ваше предложение...";
+                    titleTextField.PlaceholderText = "Как вкратце можно описать идею?";
+                    descriptionTextField.PlaceholderText = "Опишите, что должна делать функция, как ее получить и как она должна выглядеть.";
                     break;
             }
 
-            // Запоминаем выбранную категорию
             _selectedCategory = category;
         }
 

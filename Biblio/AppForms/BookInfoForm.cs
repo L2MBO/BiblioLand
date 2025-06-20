@@ -332,7 +332,7 @@ namespace Biblio.AppForms
 
             if (_currentUser != null)
             {
-                reportButton.Image = null;
+                reportButton.Image = Properties.Resources.trash;
                 reportButton.Text = "Удалить";
                 _isUserAdmin = true;
             }

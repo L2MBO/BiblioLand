@@ -22,6 +22,7 @@ namespace Biblio.CustomControls
     {
         private Reviews _comment;
         private int _currentUserId = Program.CurrentUser.UserID;
+        private bool _isUserAdmin = false;
         private bool _isLiked;
 
         public UserCommentsControl(Reviews reviews)
@@ -46,6 +47,7 @@ namespace Biblio.CustomControls
             _isLiked = Program.context.Likes.Any(like => like.UserID == _currentUserId && like.ReviewID == _comment.ReviewID);
 
             UpdateLikeButtonImage();
+            CheckUserRole();
             UpdateReportImage();
         }
 
@@ -56,7 +58,7 @@ namespace Biblio.CustomControls
 
         private void UpdateReportImage()
         {
-            if (_comment.UserID == _currentUserId)
+            if (_comment.UserID == _currentUserId || _isUserAdmin)
             {
                 reportButton.Image = Properties.Resources.trash;
             }
@@ -111,9 +113,19 @@ namespace Biblio.CustomControls
             likesCountLabel.Text = review.LikesCount.ToString();
         }
 
+        private void CheckUserRole()
+        {
+            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID == 2);
+
+            if (_currentUser != null)
+            {
+                _isUserAdmin = true;
+            }
+        }
+
         private void CheckCommentOwner()
         {
-            if (_comment.UserID == _currentUserId)
+            if (_comment.UserID == _currentUserId || _isUserAdmin)
             {
                 reportButton.Image = Properties.Resources.trash;
                 DeleteComment();
@@ -196,13 +208,13 @@ namespace Biblio.CustomControls
             {
                 ProfileForm form = new ProfileForm((int)_comment.UserID);
                 VisibilityHelper.ShowNewForm(this.FindForm(), form);
-                this.Parent.Hide();
+                this.Parent.Parent.Parent.Hide();
             }
             else
             {
                 ProfileForm form = new ProfileForm(_currentUserId);
                 VisibilityHelper.ShowNewForm(this.FindForm(), form);
-                this.Parent.Hide();
+                this.Parent.Parent.Parent.Hide();
             }
         }
 

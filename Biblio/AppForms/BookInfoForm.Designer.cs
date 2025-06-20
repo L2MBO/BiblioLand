@@ -128,7 +128,7 @@
             this.commentsPanel.AutoSize = true;
             this.commentsPanel.BackColor = System.Drawing.Color.Transparent;
             this.commentsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.commentsPanel.Location = new System.Drawing.Point(256, 281);
+            this.commentsPanel.Location = new System.Drawing.Point(256, 280);
             this.commentsPanel.Name = "commentsPanel";
             this.commentsPanel.Size = new System.Drawing.Size(370, 0);
             this.commentsPanel.TabIndex = 55;
@@ -138,7 +138,7 @@
             this.panel22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel22.BackColor = System.Drawing.Color.Transparent;
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel22.Location = new System.Drawing.Point(256, 271);
+            this.panel22.Location = new System.Drawing.Point(256, 270);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(370, 10);
             this.panel22.TabIndex = 54;
@@ -150,7 +150,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel21.Location = new System.Drawing.Point(256, 239);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(370, 32);
+            this.panel21.Size = new System.Drawing.Size(370, 31);
             this.panel21.TabIndex = 53;
             // 
             // guna2Panel1
@@ -163,7 +163,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(172, 32);
+            this.guna2Panel1.Size = new System.Drawing.Size(172, 31);
             this.guna2Panel1.TabIndex = 0;
             // 
             // sortInterestingCommentButton

@@ -31,11 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dateLabel = new System.Windows.Forms.Label();
+            this.registrationDateLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -48,16 +47,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.nameLabel = new System.Windows.Forms.Label();
+            this.userNameLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.settingsButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.bookmarksPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -82,20 +80,6 @@
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             this.BorderlessForm.TransparentWhileDrag = true;
-            // 
-            // navigationControl
-            // 
-            this.navigationControl.AutoSize = true;
-            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationControl.leftPanel = null;
-            this.navigationControl.LeftPanelWidth = 0;
-            this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Name = "navigationControl";
-            this.navigationControl.rightPanel = null;
-            this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(726, 52);
-            this.navigationControl.TabIndex = 2;
             // 
             // mainPanel
             // 
@@ -126,7 +110,7 @@
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.BorderThickness = 1;
-            this.guna2Panel3.Controls.Add(this.dateLabel);
+            this.guna2Panel3.Controls.Add(this.registrationDateLabel);
             this.guna2Panel3.Controls.Add(this.label5);
             this.guna2Panel3.Controls.Add(this.pictureBox3);
             this.guna2Panel3.Location = new System.Drawing.Point(0, 86);
@@ -134,17 +118,17 @@
             this.guna2Panel3.Size = new System.Drawing.Size(254, 80);
             this.guna2Panel3.TabIndex = 3;
             // 
-            // dateLabel
+            // registrationDateLabel
             // 
-            this.dateLabel.AutoSize = true;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateLabel.ForeColor = System.Drawing.Color.White;
-            this.dateLabel.Location = new System.Drawing.Point(7, 51);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(43, 16);
-            this.dateLabel.TabIndex = 2;
-            this.dateLabel.Text = "Дата";
-            this.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.registrationDateLabel.AutoSize = true;
+            this.registrationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationDateLabel.ForeColor = System.Drawing.Color.White;
+            this.registrationDateLabel.Location = new System.Drawing.Point(7, 51);
+            this.registrationDateLabel.Name = "registrationDateLabel";
+            this.registrationDateLabel.Size = new System.Drawing.Size(43, 16);
+            this.registrationDateLabel.TabIndex = 2;
+            this.registrationDateLabel.Text = "Дата";
+            this.registrationDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -259,12 +243,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.avatarPictureBox);
             this.panel1.Controls.Add(this.flowLayoutPanel4);
             this.panel1.Controls.Add(this.flowLayoutPanel3);
-            this.panel1.Controls.Add(this.flowLayoutPanel2);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(100, 0);
             this.panel1.Name = "panel1";
@@ -273,29 +254,29 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.nameLabel);
+            this.panel3.Controls.Add(this.userNameLabel);
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(110, 30);
+            this.panel3.Location = new System.Drawing.Point(80, 30);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(360, 80);
+            this.panel3.Size = new System.Drawing.Size(446, 80);
             this.panel3.TabIndex = 10;
             // 
-            // nameLabel
+            // userNameLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(23, 29);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(43, 20);
-            this.nameLabel.TabIndex = 6;
-            this.nameLabel.Text = "Имя";
+            this.userNameLabel.AutoEllipsis = true;
+            this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userNameLabel.ForeColor = System.Drawing.Color.White;
+            this.userNameLabel.Location = new System.Drawing.Point(23, 29);
+            this.userNameLabel.Name = "userNameLabel";
+            this.userNameLabel.Size = new System.Drawing.Size(99, 20);
+            this.userNameLabel.TabIndex = 6;
+            this.userNameLabel.Text = "Имя";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.settingsButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(470, 30);
+            this.panel2.Location = new System.Drawing.Point(148, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(26, 80);
             this.panel2.TabIndex = 8;
@@ -320,49 +301,35 @@
             this.settingsButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.settingsButton.Size = new System.Drawing.Size(26, 25);
             this.settingsButton.TabIndex = 7;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // avatarPictureBox
             // 
             this.avatarPictureBox.BorderRadius = 10;
             this.avatarPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.avatarPictureBox.ImageRotate = 0F;
-            this.avatarPictureBox.Location = new System.Drawing.Point(30, 30);
+            this.avatarPictureBox.Location = new System.Drawing.Point(0, 30);
             this.avatarPictureBox.Name = "avatarPictureBox";
             this.avatarPictureBox.Size = new System.Drawing.Size(80, 80);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.avatarPictureBox.TabIndex = 5;
             this.avatarPictureBox.TabStop = false;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(30, 110);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 110);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(466, 30);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(526, 30);
             this.flowLayoutPanel4.TabIndex = 4;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(30, 0);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(466, 30);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(526, 30);
             this.flowLayoutPanel3.TabIndex = 2;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(496, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(30, 140);
-            this.flowLayoutPanel2.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(30, 140);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // rightPanel
             // 
@@ -382,6 +349,20 @@
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 21;
+            // 
+            // navigationControl
+            // 
+            this.navigationControl.AutoSize = true;
+            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
+            this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Name = "navigationControl";
+            this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.TabIndex = 2;
             // 
             // bookmarksPanel
             // 
@@ -421,7 +402,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -440,10 +420,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox avatarPictureBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label nameLabel;
-        private Guna.UI2.WinForms.Guna2CircleButton settingsButton;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
@@ -456,9 +432,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label registrationDateLabel;
+        private System.Windows.Forms.Label userNameLabel;
+        private Guna.UI2.WinForms.Guna2CircleButton settingsButton;
         private System.Windows.Forms.FlowLayoutPanel bookmarksPanel;
     }
 }
