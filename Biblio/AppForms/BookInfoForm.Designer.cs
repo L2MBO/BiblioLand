@@ -304,7 +304,7 @@
             this.sendCommentButton.Location = new System.Drawing.Point(260, 0);
             this.sendCommentButton.Name = "sendCommentButton";
             this.sendCommentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.sendCommentButton.Size = new System.Drawing.Size(90, 27);
+            this.sendCommentButton.Size = new System.Drawing.Size(90, 25);
             this.sendCommentButton.TabIndex = 37;
             this.sendCommentButton.Text = "Отправить";
             this.sendCommentButton.Click += new System.EventHandler(this.sendCommentButton_Click);
