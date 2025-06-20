@@ -15,14 +15,18 @@ namespace Biblio.CustomControls
         private int _currentUserId = Program.CurrentUser.UserID;
         public event EventHandler<Books> BookClicked;
 
-        public MainControl(Books books)
+        public MainControl(Books books, bool checkBookmarks = true)
         {
             InitializeComponent();
 
             _book = books;
 
             LoadMainInfo();
-            CheckBookmarks();
+
+            if (checkBookmarks)
+            {
+                CheckBookmarks();
+            }
         }
 
         private void LoadMainInfo()

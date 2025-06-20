@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.bookmarksPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.registrationDateLabel = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.bookmarksPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -94,6 +94,16 @@
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 3;
             // 
+            // bookmarksPanel
+            // 
+            this.bookmarksPanel.AutoSize = true;
+            this.bookmarksPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bookmarksPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bookmarksPanel.Location = new System.Drawing.Point(354, 140);
+            this.bookmarksPanel.Name = "bookmarksPanel";
+            this.bookmarksPanel.Size = new System.Drawing.Size(272, 0);
+            this.bookmarksPanel.TabIndex = 56;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.guna2Panel3);
@@ -102,7 +112,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(100, 140);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(260, 238);
+            this.panel4.Size = new System.Drawing.Size(254, 238);
             this.panel4.TabIndex = 24;
             // 
             // guna2Panel3
@@ -363,16 +373,6 @@
             this.navigationControl.RightPanelWidth = 0;
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
-            // 
-            // bookmarksPanel
-            // 
-            this.bookmarksPanel.AutoSize = true;
-            this.bookmarksPanel.BackColor = System.Drawing.Color.Transparent;
-            this.bookmarksPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bookmarksPanel.Location = new System.Drawing.Point(360, 140);
-            this.bookmarksPanel.Name = "bookmarksPanel";
-            this.bookmarksPanel.Size = new System.Drawing.Size(266, 0);
-            this.bookmarksPanel.TabIndex = 56;
             // 
             // ProfileForm
             // 
