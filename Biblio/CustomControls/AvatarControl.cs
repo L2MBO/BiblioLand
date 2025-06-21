@@ -55,7 +55,7 @@ namespace Biblio.CustomControls
 
         private void UpdateContentXBasedOnWindowState()
         {
-            _contentX = (_parentForm.WindowState == FormWindowState.Maximized) ? 1450 : 460;
+            _contentX = (_parentForm.WindowState == FormWindowState.Maximized) ? 1448 : 453;
         }
 
         private AddContentControl addContentControl;

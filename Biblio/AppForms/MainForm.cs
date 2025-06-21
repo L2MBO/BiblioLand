@@ -150,7 +150,7 @@ namespace Biblio.AppForms
                     continue;
                 }
 
-                var bookControl = new LastUpdatesControl(book);
+                var bookControl = new LastUpdatesControl(this, lastUpdatesPanel, book);
                 TimeSpan timeDifference = (TimeSpan)(now - book.AddedDate);
                 string timeAgo = TimeValidation.FormatTimeAgo(timeDifference);
                 bookControl.SetTime(timeAgo);
