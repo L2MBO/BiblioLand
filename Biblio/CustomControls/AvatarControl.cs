@@ -3,6 +3,7 @@ using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.HideClasses;
 using Biblio.Interface;
+using Biblio.Models;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -13,49 +14,48 @@ namespace Biblio.CustomControls
 {
     public partial class AvatarControl : UserControl
     {
-        private IAvatarParentForm _parent;
+        private Form _parentForm;
         private int _contentX = 460;
-        int _currentUserId = Program.CurrentUser.UserID;
+        private int _currentUserId = Program.CurrentUser.UserID;
 
         public AvatarControl(Form parentForm)
         {
             InitializeComponent();
 
-            _parent = parentForm as IAvatarParentForm;
+            _parentForm = parentForm;
 
             LoadUserInfo();
         }
 
         private void LoadUserInfo()
         {
+            CheckUserRole();
+
             RoundingHelper.SetRoundedRegion(this, 25, 25);
 
-            if (_parent != null)
-            {
-                _parent.WindowStateChanged += Form_WindowStateChanged;
-            }
-            else
-            {
-                Debug.WriteLine("_parent имеет значение null в конструкторе AvatarControl.");
-            }
+            _parentForm.Resize += ParentForm_Resize;
 
-            var curentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
-            userNameLabel.Text = curentUser.Username;
+            UpdateContentXBasedOnWindowState();
+            UpdateAddContentControlPosition();
 
-            
+            var _curentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+
+            userNameLabel.Text = _curentUser.Username;
 
             ImageLoader.LoadAvatarImage(userAvatarPictureBox);
 
             this.VisibleChanged += AvatarControl_VisibleChanged;
         }
 
-        private void Form_WindowStateChanged(object sender, EventArgs e)
+        private void ParentForm_Resize(object sender, EventArgs e)
         {
-            if (_parent == null) return;
-
-            _contentX = (_parent.WindowState == FormWindowState.Maximized) ? 1450 : 460;
-
+            UpdateContentXBasedOnWindowState();
             UpdateAddContentControlPosition();
+        }
+
+        private void UpdateContentXBasedOnWindowState()
+        {
+            _contentX = (_parentForm.WindowState == FormWindowState.Maximized) ? 1450 : 460;
         }
 
         private AddContentControl addContentControl;
@@ -93,6 +93,43 @@ namespace Biblio.CustomControls
             }
         }
 
+        private void CheckUserRole()
+        {
+            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID == 2);
+
+            if (_currentUser != null)
+            {
+                AddAdminFunctional();
+            }
+            else
+            {
+                this.Height = 193;
+                mainPanel.Height = 192;
+                avatarPanel.PerformLayout();
+
+                Panel dividerLine = new Panel
+                {
+                    BackColor = Color.FromArgb(64, 64, 64),
+                    Width = 160,
+                    Height = 1,
+                    Location = new Point(20, 191),
+                };
+
+                mainPanel.Controls.Add(dividerLine);
+                dividerLine.BringToFront();
+            }
+        }
+
+        private void AddAdminFunctional()
+        {
+            delimiter1.Visible = true;
+            delimiter2.Visible = true;
+            delimiter3.Visible = true;
+            line1.Visible = true;
+            addContentButton.Visible = true;
+            adminButton.Visible = true;
+        }
+
         private void addContentButton_Click(object sender, EventArgs e)
         {
             if (addContentControl != null && addContentControl.Visible)
@@ -124,6 +161,13 @@ namespace Biblio.CustomControls
             this.Parent.Hide();
         }
 
+        private void adminButton_Click(object sender, EventArgs e)
+        {
+            AdminPanelForm form = new AdminPanelForm();
+            VisibilityHelper.ShowNewForm(this.FindForm(), form);
+            this.Parent.Hide();
+        }
+
         private void settingsButton_Click(object sender, EventArgs e)
         {
             SettingsForm form = new SettingsForm();
@@ -135,7 +179,7 @@ namespace Biblio.CustomControls
         {
             AuthorizationForm form = new AuthorizationForm();
             form.Show();
-            this.Parent.Hide();
+            this.Parent.Dispose();
         }
 
         private void UserNameLabel_MouseEnter(object sender, EventArgs e)

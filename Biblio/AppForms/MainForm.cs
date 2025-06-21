@@ -15,19 +15,13 @@ namespace Biblio.AppForms
 {
     public partial class MainForm : MaterialForm
     {
-        private AddContentControl addContentControl;
-        #pragma warning disable CS0067
-        public event EventHandler WindowStateChanged;
-        #pragma warning restore CS0067
-        private BookSearchControl bookSearchControl;
+        public event EventHandler WindowStateChanged = delegate { };
 
         public MainForm()
         {
             InitializeComponent();
 
             SetFormStyle();
-
-            addContentControl = new AddContentControl();
         }
 
         private void SetFormStyle()
@@ -40,13 +34,6 @@ namespace Biblio.AppForms
 
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
-            WindowStateChanged += (sender, e) => { };
-            bookSearchControl = new BookSearchControl(this, new Books
-            {
-                Author = "",
-                Title = "",
-                ImagePath = ""
-            });
         }
 
         private void ShowMainBooks()
@@ -200,6 +187,7 @@ namespace Biblio.AppForms
         private void MainForm_Resize(object sender, EventArgs e)
         {
             navigationControl.HandleFormResize(this);
+            WindowStateChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.avatarPanel = new System.Windows.Forms.Panel();
             this.exitButton = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.settingsButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.storeButton = new Guna.UI2.WinForms.Guna2Button();
+            this.delimiter3 = new System.Windows.Forms.Panel();
+            this.adminButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.line1 = new System.Windows.Forms.Panel();
+            this.delimiter2 = new System.Windows.Forms.Panel();
             this.addContentButton = new Guna.UI2.WinForms.Guna2Button();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.delimiter1 = new System.Windows.Forms.Panel();
             this.feedbackButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -50,47 +50,47 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.userNameLabel = new System.Windows.Forms.Label();
             this.userAvatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
+            this.avatarPanel.SuspendLayout();
             this.userInfoPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userAvatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // mainPanel
             // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Panel1.BorderRadius = 15;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.panel1);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(200, 263);
-            this.guna2Panel1.TabIndex = 0;
+            this.mainPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.mainPanel.BorderRadius = 15;
+            this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.avatarPanel);
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(200, 263);
+            this.mainPanel.TabIndex = 0;
             // 
-            // panel1
+            // avatarPanel
             // 
-            this.panel1.Controls.Add(this.exitButton);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.settingsButton);
-            this.panel1.Controls.Add(this.panel14);
-            this.panel1.Controls.Add(this.storeButton);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel12);
-            this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.addContentButton);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.feedbackButton);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.flowLayoutPanel2);
-            this.panel1.Controls.Add(this.userInfoPanel);
-            this.panel1.Location = new System.Drawing.Point(20, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 223);
-            this.panel1.TabIndex = 0;
+            this.avatarPanel.Controls.Add(this.exitButton);
+            this.avatarPanel.Controls.Add(this.flowLayoutPanel1);
+            this.avatarPanel.Controls.Add(this.panel7);
+            this.avatarPanel.Controls.Add(this.panel4);
+            this.avatarPanel.Controls.Add(this.settingsButton);
+            this.avatarPanel.Controls.Add(this.delimiter3);
+            this.avatarPanel.Controls.Add(this.adminButton);
+            this.avatarPanel.Controls.Add(this.panel3);
+            this.avatarPanel.Controls.Add(this.line1);
+            this.avatarPanel.Controls.Add(this.delimiter2);
+            this.avatarPanel.Controls.Add(this.addContentButton);
+            this.avatarPanel.Controls.Add(this.delimiter1);
+            this.avatarPanel.Controls.Add(this.feedbackButton);
+            this.avatarPanel.Controls.Add(this.panel5);
+            this.avatarPanel.Controls.Add(this.panel6);
+            this.avatarPanel.Controls.Add(this.flowLayoutPanel2);
+            this.avatarPanel.Controls.Add(this.userInfoPanel);
+            this.avatarPanel.Location = new System.Drawing.Point(20, 20);
+            this.avatarPanel.Name = "avatarPanel";
+            this.avatarPanel.Size = new System.Drawing.Size(160, 223);
+            this.avatarPanel.TabIndex = 0;
             // 
             // exitButton
             // 
@@ -173,40 +173,43 @@
             this.settingsButton.TextOffset = new System.Drawing.Point(-5, -1);
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
-            // panel14
+            // delimiter3
             // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 152);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(160, 10);
-            this.panel14.TabIndex = 41;
+            this.delimiter3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.delimiter3.Location = new System.Drawing.Point(0, 152);
+            this.delimiter3.Name = "delimiter3";
+            this.delimiter3.Size = new System.Drawing.Size(160, 10);
+            this.delimiter3.TabIndex = 41;
+            this.delimiter3.Visible = false;
             // 
-            // storeButton
+            // adminButton
             // 
-            this.storeButton.Animated = true;
-            this.storeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.storeButton.BorderRadius = 9;
-            this.storeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.storeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.storeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.storeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.storeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.storeButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.storeButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.storeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.storeButton.ForeColor = System.Drawing.Color.White;
-            this.storeButton.Image = global::Biblio.Properties.Resources.store;
-            this.storeButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.storeButton.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.storeButton.ImageSize = new System.Drawing.Size(15, 15);
-            this.storeButton.Location = new System.Drawing.Point(0, 132);
-            this.storeButton.Name = "storeButton";
-            this.storeButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.storeButton.Size = new System.Drawing.Size(160, 20);
-            this.storeButton.TabIndex = 40;
-            this.storeButton.Text = "Магазин";
-            this.storeButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.storeButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.adminButton.Animated = true;
+            this.adminButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.adminButton.BorderRadius = 9;
+            this.adminButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.adminButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.adminButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.adminButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.adminButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.adminButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.adminButton.ForeColor = System.Drawing.Color.White;
+            this.adminButton.Image = global::Biblio.Properties.Resources.admin;
+            this.adminButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.adminButton.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.adminButton.ImageSize = new System.Drawing.Size(15, 15);
+            this.adminButton.Location = new System.Drawing.Point(0, 132);
+            this.adminButton.Name = "adminButton";
+            this.adminButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.adminButton.Size = new System.Drawing.Size(160, 20);
+            this.adminButton.TabIndex = 40;
+            this.adminButton.Text = "Админ панель";
+            this.adminButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.adminButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.adminButton.Visible = false;
+            this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
             // 
             // panel3
             // 
@@ -216,22 +219,24 @@
             this.panel3.Size = new System.Drawing.Size(160, 10);
             this.panel3.TabIndex = 39;
             // 
-            // panel12
+            // line1
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 121);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(160, 1);
-            this.panel12.TabIndex = 38;
+            this.line1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.line1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.line1.Location = new System.Drawing.Point(0, 121);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(160, 1);
+            this.line1.TabIndex = 38;
+            this.line1.Visible = false;
             // 
-            // panel10
+            // delimiter2
             // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 111);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(160, 10);
-            this.panel10.TabIndex = 37;
+            this.delimiter2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.delimiter2.Location = new System.Drawing.Point(0, 111);
+            this.delimiter2.Name = "delimiter2";
+            this.delimiter2.Size = new System.Drawing.Size(160, 10);
+            this.delimiter2.TabIndex = 37;
+            this.delimiter2.Visible = false;
             // 
             // addContentButton
             // 
@@ -259,15 +264,17 @@
             this.addContentButton.Text = "Добавить контент";
             this.addContentButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.addContentButton.TextOffset = new System.Drawing.Point(-5, -1);
+            this.addContentButton.Visible = false;
             this.addContentButton.Click += new System.EventHandler(this.addContentButton_Click);
             // 
-            // panel8
+            // delimiter1
             // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 81);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(160, 10);
-            this.panel8.TabIndex = 35;
+            this.delimiter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.delimiter1.Location = new System.Drawing.Point(0, 81);
+            this.delimiter1.Name = "delimiter1";
+            this.delimiter1.Size = new System.Drawing.Size(160, 10);
+            this.delimiter1.TabIndex = 35;
+            this.delimiter1.Visible = false;
             // 
             // feedbackButton
             // 
@@ -376,11 +383,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.mainPanel);
             this.Name = "AvatarControl";
             this.Size = new System.Drawing.Size(201, 264);
-            this.guna2Panel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
+            this.avatarPanel.ResumeLayout(false);
             this.userInfoPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userAvatarPictureBox)).EndInit();
@@ -390,8 +397,8 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Panel mainPanel;
+        private System.Windows.Forms.Panel avatarPanel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -400,17 +407,17 @@
         private System.Windows.Forms.Label userNameLabel;
         private Guna.UI2.WinForms.Guna2PictureBox userAvatarPictureBox;
         private Guna.UI2.WinForms.Guna2Button addContentButton;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel delimiter1;
         private Guna.UI2.WinForms.Guna2Button feedbackButton;
         private Guna.UI2.WinForms.Guna2Button exitButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button settingsButton;
-        private System.Windows.Forms.Panel panel14;
-        private Guna.UI2.WinForms.Guna2Button storeButton;
+        private System.Windows.Forms.Panel delimiter3;
+        private Guna.UI2.WinForms.Guna2Button adminButton;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel line1;
+        private System.Windows.Forms.Panel delimiter2;
     }
 }
