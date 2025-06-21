@@ -4,17 +4,10 @@ using Biblio.HideClasses;
 using Biblio.Models;
 using Biblio.ValidationClasses;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.CustomControls
 {
@@ -81,7 +74,7 @@ namespace Biblio.CustomControls
 
         private void ToggleLike()
         {
-            var like = Program.context.Likes.FirstOrDefault(userLike => userLike.UserID 
+            var like = Program.context.Likes.FirstOrDefault(userLike => userLike.UserID
             == _currentUserId && userLike.ReviewID
             == _comment.ReviewID);
 
@@ -115,7 +108,7 @@ namespace Biblio.CustomControls
 
         private void CheckUserRole()
         {
-            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID == 2);
+            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID != 1);
 
             if (_currentUser != null)
             {

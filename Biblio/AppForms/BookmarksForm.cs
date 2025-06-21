@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
@@ -90,7 +89,7 @@ namespace Biblio.AppForms
 
             var userBookmarksQuery = Program.context.UserBookmarks.Where(user => user.UserID == _currentUserId);
 
-            IQueryable<int?> bookIdsQuery = filterFunction != null? filterFunction(userBookmarksQuery): userBookmarksQuery
+            IQueryable<int?> bookIdsQuery = filterFunction != null ? filterFunction(userBookmarksQuery) : userBookmarksQuery
                 .Where(b => b.CategoryID == 2)
                 .Select(b => b.BookID);
 

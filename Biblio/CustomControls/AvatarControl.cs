@@ -2,10 +2,7 @@
 using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.HideClasses;
-using Biblio.Interface;
-using Biblio.Models;
 using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -95,7 +92,7 @@ namespace Biblio.CustomControls
 
         private void CheckUserRole()
         {
-            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID == 2);
+            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID != 1);
 
             if (_currentUser != null)
             {

@@ -1,7 +1,6 @@
 ﻿using Biblio.Classes.Customization;
 using Biblio.Classes.Customization.FormCustomization;
 using Biblio.Classes.Images.InstallingImages;
-using Biblio.Classes.Validation;
 using Biblio.CustomControls;
 using Biblio.HideClasses;
 using Biblio.Models;
@@ -10,10 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Windows.Controls;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
@@ -178,7 +174,7 @@ namespace Biblio.AppForms
 
         private void CheckUserRole()
         {
-            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == Program.CurrentUser.UserID && user.UserRoleID == 2);
+            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == Program.CurrentUser.UserID && user.UserRoleID != 1);
 
             if (currentUser != null)
             {

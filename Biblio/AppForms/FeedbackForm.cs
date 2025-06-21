@@ -1,6 +1,5 @@
 ﻿using Biblio.Classes.Customization;
 using Biblio.Models;
-using Biblio.ValidationClasses;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -142,7 +141,7 @@ namespace Biblio.AppForms
 
             Program.context.Feedback.Add(feedback);
             Program.context.SaveChanges();
-            
+
             MessageBox.Show("Спасибо за ваш отзыв!");
         }
 

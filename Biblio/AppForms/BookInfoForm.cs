@@ -328,7 +328,7 @@ namespace Biblio.AppForms
 
         private void CheckUserRole()
         {
-            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID == 2);
+            var _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID != 1);
 
             if (_currentUser != null)
             {
