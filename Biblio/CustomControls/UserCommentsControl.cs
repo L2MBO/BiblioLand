@@ -1,4 +1,5 @@
 ﻿using Biblio.AppForms;
+using Biblio.Classes.Customization.FormCustomization;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.HideClasses;
 using Biblio.Models;
@@ -13,15 +14,18 @@ namespace Biblio.CustomControls
 {
     public partial class UserCommentsControl : UserControl
     {
+        private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
+        private readonly Form _parentForm;
         private Reviews _comment;
         private int _currentUserId = Program.CurrentUser.UserID;
         private bool _isUserAdmin = false;
         private bool _isLiked;
 
-        public UserCommentsControl(Reviews reviews)
+        public UserCommentsControl(Form parentForm, Reviews reviews)
         {
             InitializeComponent();
 
+            _parentForm = parentForm;
             _comment = reviews;
 
             LoadCommentInfo();
@@ -125,7 +129,8 @@ namespace Biblio.CustomControls
             }
             else
             {
-                SendReportToDatabase();
+                var form = new ReportForm(null, _comment.ReviewID, 0, _currentUserId, "Comment");
+                _dialogService.ShowDialogWithOverlay(_parentForm, form);
             }
         }
 
@@ -159,39 +164,6 @@ namespace Biblio.CustomControls
                 {
                     ValidationHelper.ShowErrorMessage("Ошибка при удалении комментария.");
                 }
-            }
-        }
-
-        private void SendReportToDatabase()
-        {
-            bool alreadyReported = Program.context.ReviewReports
-                .Any(rr => rr.UserID == _currentUserId && rr.ReviewID == _comment.ReviewID);
-
-            if (alreadyReported)
-            {
-                ValidationHelper.ShowErrorMessage("Вы уже отправляли жалобу на этот обзор.");
-                return;
-            }
-
-            DialogResult result = MessageBox.Show(
-                    "Вы уверены, что хотите пожаловаться на этот комментарий?",
-                    "Подтверждение жалобы",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                var reviewReport = new ReviewReports
-                {
-                    UserID = _currentUserId,
-                    ReviewID = _comment.ReviewID,
-                    ReportDate = DateTime.Now
-                };
-
-                Program.context.ReviewReports.Add(reviewReport);
-                Program.context.SaveChanges();
-
-                ValidationHelper.ShowInformationMessage("Мы рассмотрим вашу жалобу и примем меры!", "Жалоба успешно отправлена!");
             }
         }
 

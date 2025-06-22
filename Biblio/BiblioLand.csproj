@@ -150,11 +150,11 @@
     <Compile Include="AppForms\BookmarksForm.Designer.cs">
       <DependentUpon>BookmarksForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\BookReportForm.cs">
+    <Compile Include="AppForms\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\BookReportForm.Designer.cs">
-      <DependentUpon>BookReportForm.cs</DependentUpon>
+    <Compile Include="AppForms\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppForms\EvaluationForm.cs">
       <SubType>Form</SubType>
@@ -357,8 +357,8 @@
     <EmbeddedResource Include="AppForms\BookmarksForm.resx">
       <DependentUpon>BookmarksForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\BookReportForm.resx">
-      <DependentUpon>BookReportForm.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\EvaluationForm.resx">
       <DependentUpon>EvaluationForm.cs</DependentUpon>

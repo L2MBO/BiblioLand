@@ -16,6 +16,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Biblio.AppForms
 {
@@ -183,7 +184,7 @@ namespace Biblio.AppForms
 
             foreach (Reviews comment in comments)
             {
-                var commentControl = new UserCommentsControl(comment);
+                var commentControl = new UserCommentsControl(this, comment);
                 TimeSpan timeDifference = (TimeSpan)(now - comment.ReviewDate);
                 string timeAgo = TimeValidation.FormatTimeAgo(timeDifference);
                 commentControl.SetTime(timeAgo);
@@ -560,9 +561,15 @@ namespace Biblio.AppForms
             }
             else
             {
-                var form = new BookReportForm(_book, _currentUserId);
+                var form = new ReportForm(_book, 0, 0, _currentUserId, "Book");
                 _dialogService.ShowDialogWithOverlay(this, form);
             }
+        }
+
+        private void ShowReviewReportForm(int comment)
+        {
+            var form = new ReportForm(null, comment, 0, _currentUserId, "Comment");
+            _dialogService.ShowDialogWithOverlay(this, form);
         }
 
         private void commentTextBox_TextChanged(object sender, EventArgs e)

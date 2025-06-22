@@ -71,21 +71,22 @@ namespace Biblio.AppForms
 
         private bool IsFieldsEmpty()
         {
-            bool isEmpty = string.IsNullOrWhiteSpace(titleTextField.Text) ||
-                   string.IsNullOrWhiteSpace(descriptionTextField.Text);
+            bool isTitleEmpty = string.IsNullOrWhiteSpace(titleTextField.Text);
+            bool isDescriptionEmpty = string.IsNullOrWhiteSpace(descriptionTextField.Text);
+            bool isEmpty = isTitleEmpty || isDescriptionEmpty;
 
             if (isEmpty)
             {
-                titleTextField.BorderColor = Color.Red;
-                descriptionTextField.BorderColor = Color.Red;
+                titleTextField.BorderColor = isTitleEmpty ? Color.Red : Color.FromArgb(64, 64, 64);
+                descriptionTextField.BorderColor = isDescriptionEmpty ? Color.Red : Color.FromArgb(64, 64, 64);
 
+                // Таймер для сброса подсветки через 1 секунду
                 Timer timer = new Timer();
                 timer.Interval = 1000;
                 timer.Tick += (sender, e) =>
                 {
                     titleTextField.BorderColor = Color.FromArgb(64, 64, 64);
                     descriptionTextField.BorderColor = Color.FromArgb(64, 64, 64);
-
                     timer.Stop();
                     timer.Dispose();
                 };

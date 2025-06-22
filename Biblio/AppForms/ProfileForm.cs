@@ -18,6 +18,7 @@ namespace Biblio.AppForms
         private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
         private int _currentUserId;
         private Users _currentUser;
+        private int _sendReportUserId = Program.CurrentUser.UserID;
         private string _currentSortMode = "reading";
         private bool _isUserAdmin = false;
 
@@ -213,7 +214,7 @@ namespace Biblio.AppForms
                 }
                 else
                 {
-                    var form = new UserReportForm(_currentUserId);
+                    var form = new ReportForm(null, 0, _currentUserId, _sendReportUserId, "User");
                     _dialogService.ShowDialogWithOverlay(this, form);
                 }
             }

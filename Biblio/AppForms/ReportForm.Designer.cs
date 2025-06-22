@@ -1,6 +1,6 @@
 ﻿namespace Biblio.AppForms
 {
-    partial class BookReportForm
+    partial class ReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookReportForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.sendReportButton = new Guna.UI2.WinForms.Guna2Button();
@@ -113,6 +113,7 @@
             this.reportMessageTextBox.SelectedText = "";
             this.reportMessageTextBox.Size = new System.Drawing.Size(291, 36);
             this.reportMessageTextBox.TabIndex = 36;
+            this.reportMessageTextBox.TextChanged += new System.EventHandler(this.reportMessageTextBox_TextChanged);
             // 
             // reportMessageLabel
             // 
@@ -197,6 +198,7 @@
             this.reportReasonComboBox.TabIndex = 31;
             this.reportReasonComboBox.TabStop = false;
             this.reportReasonComboBox.TextOffset = new System.Drawing.Point(5, 0);
+            this.reportReasonComboBox.SelectedIndexChanged += new System.EventHandler(this.reportReasonComboBox_SelectedIndexChanged);
             // 
             // BookReportForm
             // 

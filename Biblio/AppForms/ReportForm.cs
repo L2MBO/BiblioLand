@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class BookReportForm : Form
+    public partial class ReportForm : Form
     {
         private Books _book;
         private int _currentUserId;
@@ -17,7 +17,7 @@ namespace Biblio.AppForms
         public bool _reportMessageIsEmpty = false;
         private string _reportType;
 
-        public BookReportForm(Books book, int commentId, int reportedUserId, int currentUserId, string reportType)
+        public ReportForm(Books book, int commentId, int reportedUserId, int currentUserId, string reportType)
         {
             InitializeComponent();
 
@@ -100,30 +100,48 @@ namespace Biblio.AppForms
 
         private void SendReportToDatabase()
         {
-            var report = new BookReports
-            {
-                UserID = _currentUserId,
-                ReportCategoryID = reportReasonComboBox.SelectedIndex + 1,
-                ReportMessage = reportMessageTextBox.Text,
-                ReportDate = DateTime.Now
-            };
-
-            // В зависимости от типа репорта заполняем нужные поля
             switch (_reportType)
             {
                 case "Book":
-                    report.BookID = _book.BookID;
-                    Program.context.BookReports.Add(report);
+
+                    var bookReport = new BookReports
+                    {
+                        UserID = _currentUserId,
+                        BookID = _book.BookID,
+                        ReportCategoryID = reportReasonComboBox.SelectedIndex + 1,
+                        ReportMessage = reportMessageTextBox.Text,
+                        ReportDate = DateTime.Now
+                    };
+
+                    Program.context.BookReports.Add(bookReport);
                     break;
 
                 case "Comment":
-                    report.ReviewID = _commentId;
-                    Program.context.ReviewReports.Add(report);
+
+                    var reviewReport = new ReviewReports
+                    {
+                        UserID = _currentUserId,
+                        ReviewID = _commentId,
+                        ReportCategoryID = reportReasonComboBox.SelectedIndex + 1,
+                        ReportMessage = reportMessageTextBox.Text,
+                        ReportDate = DateTime.Now
+                    };
+
+                    Program.context.ReviewReports.Add(reviewReport);
                     break;
 
                 case "User":
-                    report.ReportedUserID = _reportedUserId;
-                    Program.context.UserReports.Add(report);
+
+                    var userReport = new UserReports
+                    {
+                        UserID = _currentUserId,
+                        ReportedUserID = _reportedUserId,
+                        ReportCategoryID = reportReasonComboBox.SelectedIndex + 1,
+                        ReportMessage = reportMessageTextBox.Text,
+                        ReportDate = DateTime.Now
+                    };
+
+                    Program.context.UserReports.Add(userReport);
                     break;
             }
 
@@ -176,6 +194,22 @@ namespace Biblio.AppForms
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void reportMessageTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (reportMessageLabel.ForeColor == Color.Red)
+            {
+                reportMessageLabel.ForeColor = Color.White;
+            }
+        }
+
+        private void reportReasonComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (reportReasonLabel.ForeColor == Color.Red)
+            {
+                reportReasonLabel.ForeColor = Color.White;
+            }
         }
     }
 }

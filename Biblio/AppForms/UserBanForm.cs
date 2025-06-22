@@ -4,13 +4,16 @@ namespace Biblio.AppForms
 {
     public partial class UserBanForm : Form
     {
-        private int _currentUserId;
+        private int _currentUserId = Program.CurrentUser.UserID;
+        private int _reportedUserId;
 
-        public UserBanForm(int currentUserId)
+        public UserBanForm(int reportedUserId)
         {
             InitializeComponent();
 
-            _currentUserId = currentUserId;
+            _reportedUserId = reportedUserId;
         }
+
+
     }
 }
