@@ -11,15 +11,61 @@ namespace Biblio.AppForms
     {
         private Books _book;
         private int _currentUserId;
+        private int _commentId;
+        private int _reportedUserId;
         public bool _reportReasonIsEmpty = false;
         public bool _reportMessageIsEmpty = false;
+        private string _reportType;
 
-        public BookReportForm(Books book, int currentUserId)
+        public BookReportForm(Books book, int commentId, int reportedUserId, int currentUserId, string reportType)
         {
             InitializeComponent();
 
             _book = book;
+            _commentId = commentId;
+            _reportedUserId = reportedUserId;
             _currentUserId = currentUserId;
+            _reportType = reportType;
+
+            FillReportReasonComboBox();
+        }
+
+        private void FillReportReasonComboBox()
+        {
+            reportReasonComboBox.Items.Clear();
+
+            switch (_reportType)
+            {
+                case "Book":
+                    reportReasonComboBox.Items.AddRange(new object[] {
+                        "Дубль",
+                        "Несоответвие жанра",
+                        "Другое"
+                });
+                    break;
+
+                case "Comment":
+                    reportReasonComboBox.Items.AddRange(new object[] {
+                        "Нарушение законов РФ",
+                        "Призыв к суициду",
+                        "Призыв к травле",
+                        "Реклама сторонних ресурсов",
+                        "Спам",
+                        "Другое"
+                });
+                    break;
+
+                case "User":
+                    reportReasonComboBox.Items.AddRange(new object[] {
+                        "Нарушение законов РФ",
+                        "Неподобающий никнейм",
+                        "Другое"
+                });
+                    break;
+
+                default:
+                    throw new ArgumentException("Неизвестный тип репорта");
+            }
         }
 
         private void IsReportEmpty()
@@ -33,22 +79,54 @@ namespace Biblio.AppForms
 
         private bool HasExistingReport()
         {
-            return Program.context.BookReports
-                .Any(report => report.UserID == _currentUserId && report.BookID == _book.BookID);
+            switch (_reportType)
+            {
+                case "Book":
+                    return Program.context.BookReports
+                        .Any(report => report.UserID == _currentUserId && report.BookID == _book.BookID);
+
+                case "Comment":
+                    return Program.context.ReviewReports
+                        .Any(report => report.UserID == _currentUserId && report.ReviewID == _commentId);
+
+                case "User":
+                    return Program.context.UserReports
+                        .Any(report => report.UserID == _currentUserId && report.ReportedUserID == _reportedUserId);
+
+                default:
+                    return false;
+            }
         }
 
         private void SendReportToDatabase()
         {
-            var bookReport = new BookReports
+            var report = new BookReports
             {
                 UserID = _currentUserId,
-                BookID = _book.BookID,
                 ReportCategoryID = reportReasonComboBox.SelectedIndex + 1,
                 ReportMessage = reportMessageTextBox.Text,
                 ReportDate = DateTime.Now
             };
 
-            Program.context.BookReports.Add(bookReport);
+            // В зависимости от типа репорта заполняем нужные поля
+            switch (_reportType)
+            {
+                case "Book":
+                    report.BookID = _book.BookID;
+                    Program.context.BookReports.Add(report);
+                    break;
+
+                case "Comment":
+                    report.ReviewID = _commentId;
+                    Program.context.ReviewReports.Add(report);
+                    break;
+
+                case "User":
+                    report.ReportedUserID = _reportedUserId;
+                    Program.context.UserReports.Add(report);
+                    break;
+            }
+
             Program.context.SaveChanges();
 
             ValidationHelper.ShowInformationMessage("Мы рассмотрим вашу жалобу и примем меры!", "Жалоба успешно отправлена!");
@@ -60,7 +138,25 @@ namespace Biblio.AppForms
             {
                 if (HasExistingReport())
                 {
-                    ValidationHelper.ShowErrorMessage("Вы уже отправляли жалобу на эту книгу.");
+                    string errorMessage;
+
+                    switch (_reportType)
+                    {
+                        case "Book":
+                            errorMessage = "Вы уже отправляли жалобу на эту книгу.";
+                            break;
+                        case "Comment":
+                            errorMessage = "Вы уже отправляли жалобу на этот комментарий.";
+                            break;
+                        case "User":
+                            errorMessage = "Вы уже отправляли жалобу на этого пользователя.";
+                            break;
+                        default:
+                            errorMessage = "Вы уже отправляли жалобу на этот объект.";
+                            break;
+                    }
+
+                    ValidationHelper.ShowErrorMessage(errorMessage);
                     this.Close();
                 }
                 else

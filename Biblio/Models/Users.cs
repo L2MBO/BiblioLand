@@ -3,6 +3,8 @@ namespace Biblio.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     public partial class Users
     {
@@ -16,6 +18,8 @@ namespace Biblio.Models
             ReviewReports = new HashSet<ReviewReports>();
             Reviews = new HashSet<Reviews>();
             UserBookmarks = new HashSet<UserBookmarks>();
+            UserReports = new HashSet<UserReports>();
+            UserReports1 = new HashSet<UserReports>();
         }
 
         [Key]
@@ -68,6 +72,12 @@ namespace Biblio.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserBookmarks> UserBookmarks { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserReports> UserReports { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserReports> UserReports1 { get; set; }
 
         public virtual UserRoles UserRoles { get; set; }
     }

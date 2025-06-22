@@ -6,22 +6,23 @@ namespace Biblio.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class UserRoles
+    [Table("ReviewReportCategory")]
+    public partial class ReviewReportCategory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UserRoles()
+        public ReviewReportCategory()
         {
-            Users = new HashSet<Users>();
+            ReviewReports = new HashSet<ReviewReports>();
         }
 
         [Key]
-        public int UserRoleID { get; set; }
+        public int ReportCategoryID { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string RoleName { get; set; }
+        public string ReportCategoryName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Users> Users { get; set; }
+        public virtual ICollection<ReviewReports> ReviewReports { get; set; }
     }
 }

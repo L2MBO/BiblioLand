@@ -6,14 +6,14 @@ namespace Biblio.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class BookReports
+    public partial class UserReports
     {
         [Key]
-        public int BookReportID { get; set; }
+        public int UserReportID { get; set; }
 
         public int? UserID { get; set; }
 
-        public int? BookID { get; set; }
+        public int? ReportedUserID { get; set; }
 
         public int? ReportCategoryID { get; set; }
 
@@ -21,10 +21,10 @@ namespace Biblio.Models
 
         public DateTime? ReportDate { get; set; }
 
-        public virtual BookReportCategory BookReportCategory { get; set; }
-
-        public virtual Books Books { get; set; }
+        public virtual UserReportCategory UserReportCategory { get; set; }
 
         public virtual Users Users { get; set; }
+
+        public virtual Users Users1 { get; set; }
     }
 }

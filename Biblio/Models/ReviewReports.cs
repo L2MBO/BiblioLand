@@ -1,7 +1,10 @@
 namespace Biblio.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     public partial class ReviewReports
     {
@@ -12,7 +15,13 @@ namespace Biblio.Models
 
         public int? ReviewID { get; set; }
 
+        public int? ReportCategoryID { get; set; }
+
+        public string ReportMessage { get; set; }
+
         public DateTime? ReportDate { get; set; }
+
+        public virtual ReviewReportCategory ReviewReportCategory { get; set; }
 
         public virtual Reviews Reviews { get; set; }
 

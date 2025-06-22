@@ -1,11 +1,14 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
+using System.Linq;
 
 namespace Biblio.Models
 {
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel27")
+            : base("name=BiblioModel28")
         {
         }
 
@@ -18,11 +21,13 @@ namespace Biblio.Models
         public virtual DbSet<Genres> Genres { get; set; }
         public virtual DbSet<Likes> Likes { get; set; }
         public virtual DbSet<Rating> Rating { get; set; }
+        public virtual DbSet<ReviewReportCategory> ReviewReportCategory { get; set; }
         public virtual DbSet<ReviewReports> ReviewReports { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserBookmarks> UserBookmarks { get; set; }
         public virtual DbSet<UserCategories> UserCategories { get; set; }
+        public virtual DbSet<UserReportCategory> UserReportCategory { get; set; }
+        public virtual DbSet<UserReports> UserReports { get; set; }
         public virtual DbSet<UserRoles> UserRoles { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
@@ -46,6 +51,16 @@ namespace Biblio.Models
                 .HasMany(e => e.Reviews)
                 .WithOptional(e => e.Users)
                 .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.UserReports)
+                .WithOptional(e => e.Users)
+                .HasForeignKey(e => e.UserID);
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.UserReports1)
+                .WithOptional(e => e.Users1)
+                .HasForeignKey(e => e.ReportedUserID);
         }
     }
 }

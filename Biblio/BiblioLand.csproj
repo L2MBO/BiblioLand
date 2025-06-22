@@ -234,12 +234,6 @@
     <Compile Include="AppForms\UserNotifyForm.Designer.cs">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\UserReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppForms\UserReportForm.Designer.cs">
-      <DependentUpon>UserReportForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\Animations\FormDrag.cs" />
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
@@ -336,11 +330,13 @@
     <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\Likes.cs" />
     <Compile Include="Models\Rating.cs" />
+    <Compile Include="Models\ReviewReportCategory.cs" />
     <Compile Include="Models\ReviewReports.cs" />
     <Compile Include="Models\Reviews.cs" />
-    <Compile Include="Models\sysdiagrams.cs" />
     <Compile Include="Models\UserBookmarks.cs" />
     <Compile Include="Models\UserCategories.cs" />
+    <Compile Include="Models\UserReportCategory.cs" />
+    <Compile Include="Models\UserReports.cs" />
     <Compile Include="Models\UserRoles.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Program.cs" />
@@ -405,9 +401,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\UserNotifyForm.resx">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\UserReportForm.resx">
-      <DependentUpon>UserReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AddContentControl.resx">
       <DependentUpon>AddContentControl.cs</DependentUpon>
