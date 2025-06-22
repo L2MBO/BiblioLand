@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar;
 
 namespace Biblio.AppForms
 {
@@ -17,16 +18,20 @@ namespace Biblio.AppForms
     {
         private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
         private int _currentUserId;
+        private bool _needArrow;
+        private Form _backForm;
         private Users _currentUser;
         private int _sendReportUserId = Program.CurrentUser.UserID;
         private string _currentSortMode = "reading";
         private bool _isUserAdmin = false;
 
-        public ProfileForm(int currentUserId)
+        public ProfileForm(int currentUserId, bool needArrow = false, Form backForm = null)
         {
             InitializeComponent();
 
             _currentUserId = currentUserId;
+            _needArrow = needArrow;
+            _backForm = backForm;
             _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
 
             SetFormStyle();
@@ -49,6 +54,15 @@ namespace Biblio.AppForms
             ChangeSettingsButtonImage();
             CheckUserRole();
             CheckUserPrivacy();
+            ShowBackArrow();
+        }
+
+        private void ShowBackArrow()
+        {
+            if (_needArrow)
+            {
+                arrowPanel.Visible = true;
+            }
         }
 
         private void SetStatisticsCount()
@@ -80,6 +94,9 @@ namespace Biblio.AppForms
                 buttonPanel.Width = 505;
                 UpdateButtonsCount();
                 anotherLockPanel.Width = 511;
+                arrowButton.Width = 124;
+                arrowButton.Location = new Point(18, 0);
+                arrowButton.Text = "Вернуться назад";
             }
             else
             {
@@ -95,6 +112,9 @@ namespace Biblio.AppForms
                 postponedButton.Text = "";
                 postponedButton.Image = Properties.Resources.postponed;
                 anotherLockPanel.Width = 266;
+                arrowButton.Width = 90;
+                arrowButton.Location = new Point(3, 0);
+                arrowButton.Text = "Вернуться";
             }
         }
 
@@ -307,6 +327,24 @@ namespace Biblio.AppForms
         private void settingsButton_Click(object sender, EventArgs e)
         {
             CheckProfileOwner();
+        }
+
+        private void arrrowButton_Click(object sender, EventArgs e)
+        {
+            if (_backForm != null)
+            {
+                _backForm.StartPosition = FormStartPosition.Manual;
+                _backForm.Location = this.Location;
+                _backForm.WindowState = this.WindowState;
+                _backForm.Show();
+                this.Close();
+            }
+            else
+            {
+                MainForm form = new MainForm();
+                VisibilityHelper.ShowNewForm(this.FindForm(), form);
+                this.Hide();
+            }
         }
     }
 }

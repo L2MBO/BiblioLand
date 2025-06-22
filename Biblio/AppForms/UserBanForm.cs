@@ -15,5 +15,10 @@ namespace Biblio.AppForms
         }
 
 
+
+        private void closeButton_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

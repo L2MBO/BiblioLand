@@ -76,7 +76,9 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.arrowPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
+            this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -93,6 +95,8 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
+            this.leftPanel.SuspendLayout();
+            this.arrowPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -651,12 +655,23 @@
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.arrowPanel);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 21;
+            // 
+            // arrowPanel
+            // 
+            this.arrowPanel.Controls.Add(this.arrowButton);
+            this.arrowPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.arrowPanel.Location = new System.Drawing.Point(0, 0);
+            this.arrowPanel.Name = "arrowPanel";
+            this.arrowPanel.Size = new System.Drawing.Size(100, 30);
+            this.arrowPanel.TabIndex = 0;
+            this.arrowPanel.Visible = false;
             // 
             // navigationControl
             // 
@@ -671,6 +686,26 @@
             this.navigationControl.RightPanelWidth = 0;
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
+            // 
+            // arrowButton
+            // 
+            this.arrowButton.Animated = true;
+            this.arrowButton.BorderRadius = 15;
+            this.arrowButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.arrowButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.arrowButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.arrowButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.arrowButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.arrowButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.arrowButton.ForeColor = System.Drawing.Color.White;
+            this.arrowButton.Image = global::Biblio.Properties.Resources.leftArrow;
+            this.arrowButton.Location = new System.Drawing.Point(3, 0);
+            this.arrowButton.Name = "arrowButton";
+            this.arrowButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.arrowButton.Size = new System.Drawing.Size(90, 30);
+            this.arrowButton.TabIndex = 0;
+            this.arrowButton.Text = "Вернуться";
+            this.arrowButton.Click += new System.EventHandler(this.arrrowButton_Click);
             // 
             // ProfileForm
             // 
@@ -708,6 +743,8 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
+            this.leftPanel.ResumeLayout(false);
+            this.arrowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -762,5 +799,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel anotherLockPanel;
+        private System.Windows.Forms.Panel arrowPanel;
+        private Guna.UI2.WinForms.Guna2Button arrowButton;
     }
 }

@@ -171,13 +171,13 @@ namespace Biblio.CustomControls
         {
             if (_comment.UserID != _currentUserId)
             {
-                ProfileForm form = new ProfileForm((int)_comment.UserID);
+                ProfileForm form = new ProfileForm((int)_comment.UserID, true, _parentForm);
                 VisibilityHelper.ShowNewForm(this.FindForm(), form);
                 this.Parent.Parent.Parent.Hide();
             }
             else
             {
-                ProfileForm form = new ProfileForm(_currentUserId);
+                ProfileForm form = new ProfileForm(_currentUserId, true, _parentForm);
                 VisibilityHelper.ShowNewForm(this.FindForm(), form);
                 this.Parent.Parent.Parent.Hide();
             }

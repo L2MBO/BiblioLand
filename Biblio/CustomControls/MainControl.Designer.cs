@@ -32,22 +32,22 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.authorLabel = new System.Windows.Forms.Label();
             this.imagePanel = new System.Windows.Forms.Panel();
-            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.userBookmarkStatusLabel = new System.Windows.Forms.Label();
             this.statusPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.starPanel = new System.Windows.Forms.Panel();
-            this.starPictureBox = new System.Windows.Forms.PictureBox();
+            this.userBookmarkStatusLabel = new System.Windows.Forms.Label();
+            this.ratingPanel = new System.Windows.Forms.Panel();
             this.ratingTextPanel = new System.Windows.Forms.Panel();
             this.ratingLabel = new System.Windows.Forms.Label();
-            this.ratingPanel = new System.Windows.Forms.Panel();
+            this.starPanel = new System.Windows.Forms.Panel();
+            this.starPictureBox = new System.Windows.Forms.PictureBox();
+            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.infoPanel.SuspendLayout();
             this.imagePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.statusPanel.SuspendLayout();
+            this.ratingPanel.SuspendLayout();
+            this.ratingTextPanel.SuspendLayout();
             this.starPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.starPictureBox)).BeginInit();
-            this.ratingTextPanel.SuspendLayout();
-            this.ratingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // infoPanel
@@ -108,19 +108,19 @@
             this.imagePanel.TabIndex = 2;
             this.imagePanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
-            // bookPictureBox
+            // statusPanel
             // 
-            this.bookPictureBox.BorderRadius = 15;
-            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bookPictureBox.FillColor = System.Drawing.Color.Black;
-            this.bookPictureBox.ImageRotate = 0F;
-            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.bookPictureBox.Name = "bookPictureBox";
-            this.bookPictureBox.Size = new System.Drawing.Size(146, 216);
-            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bookPictureBox.TabIndex = 3;
-            this.bookPictureBox.TabStop = false;
-            this.bookPictureBox.Click += new System.EventHandler(this.MainControl_Click);
+            this.statusPanel.AutoSize = true;
+            this.statusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.statusPanel.BorderRadius = 8;
+            this.statusPanel.Controls.Add(this.userBookmarkStatusLabel);
+            this.statusPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.statusPanel.Location = new System.Drawing.Point(9, 9);
+            this.statusPanel.Name = "statusPanel";
+            this.statusPanel.Size = new System.Drawing.Size(50, 18);
+            this.statusPanel.TabIndex = 4;
+            this.statusPanel.Visible = false;
+            this.statusPanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // userBookmarkStatusLabel
             // 
@@ -135,42 +135,19 @@
             this.userBookmarkStatusLabel.TabIndex = 0;
             this.userBookmarkStatusLabel.Text = "Читаю";
             this.userBookmarkStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.userBookmarkStatusLabel.Click += new System.EventHandler(this.MainControl_Click);
             // 
-            // statusPanel
+            // ratingPanel
             // 
-            this.statusPanel.AutoSize = true;
-            this.statusPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.statusPanel.BorderRadius = 8;
-            this.statusPanel.Controls.Add(this.userBookmarkStatusLabel);
-            this.statusPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.statusPanel.Location = new System.Drawing.Point(9, 9);
-            this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(50, 18);
-            this.statusPanel.TabIndex = 4;
-            this.statusPanel.Visible = false;
-            // 
-            // starPanel
-            // 
-            this.starPanel.Controls.Add(this.starPictureBox);
-            this.starPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.starPanel.Location = new System.Drawing.Point(0, 0);
-            this.starPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.starPanel.Name = "starPanel";
-            this.starPanel.Size = new System.Drawing.Size(22, 23);
-            this.starPanel.TabIndex = 3;
-            this.starPanel.Click += new System.EventHandler(this.MainControl_Click);
-            // 
-            // starPictureBox
-            // 
-            this.starPictureBox.Image = global::Biblio.Properties.Resources.star;
-            this.starPictureBox.Location = new System.Drawing.Point(4, 1);
-            this.starPictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.starPictureBox.Name = "starPictureBox";
-            this.starPictureBox.Size = new System.Drawing.Size(18, 18);
-            this.starPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.starPictureBox.TabIndex = 1;
-            this.starPictureBox.TabStop = false;
-            this.starPictureBox.Click += new System.EventHandler(this.MainControl_Click);
+            this.ratingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.ratingPanel.Controls.Add(this.ratingTextPanel);
+            this.ratingPanel.Controls.Add(this.starPanel);
+            this.ratingPanel.Location = new System.Drawing.Point(80, 190);
+            this.ratingPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ratingPanel.Name = "ratingPanel";
+            this.ratingPanel.Size = new System.Drawing.Size(65, 23);
+            this.ratingPanel.TabIndex = 2;
+            this.ratingPanel.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // ratingTextPanel
             // 
@@ -197,17 +174,42 @@
             this.ratingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ratingLabel.Click += new System.EventHandler(this.MainControl_Click);
             // 
-            // ratingPanel
+            // starPanel
             // 
-            this.ratingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.ratingPanel.Controls.Add(this.ratingTextPanel);
-            this.ratingPanel.Controls.Add(this.starPanel);
-            this.ratingPanel.Location = new System.Drawing.Point(80, 190);
-            this.ratingPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.ratingPanel.Name = "ratingPanel";
-            this.ratingPanel.Size = new System.Drawing.Size(65, 23);
-            this.ratingPanel.TabIndex = 2;
-            this.ratingPanel.Click += new System.EventHandler(this.MainControl_Click);
+            this.starPanel.Controls.Add(this.starPictureBox);
+            this.starPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.starPanel.Location = new System.Drawing.Point(0, 0);
+            this.starPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.starPanel.Name = "starPanel";
+            this.starPanel.Size = new System.Drawing.Size(22, 23);
+            this.starPanel.TabIndex = 3;
+            this.starPanel.Click += new System.EventHandler(this.MainControl_Click);
+            // 
+            // starPictureBox
+            // 
+            this.starPictureBox.Image = global::Biblio.Properties.Resources.star;
+            this.starPictureBox.Location = new System.Drawing.Point(4, 1);
+            this.starPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.starPictureBox.Name = "starPictureBox";
+            this.starPictureBox.Size = new System.Drawing.Size(18, 18);
+            this.starPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.starPictureBox.TabIndex = 1;
+            this.starPictureBox.TabStop = false;
+            this.starPictureBox.Click += new System.EventHandler(this.MainControl_Click);
+            // 
+            // bookPictureBox
+            // 
+            this.bookPictureBox.BorderRadius = 15;
+            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bookPictureBox.FillColor = System.Drawing.Color.Black;
+            this.bookPictureBox.ImageRotate = 0F;
+            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.bookPictureBox.Name = "bookPictureBox";
+            this.bookPictureBox.Size = new System.Drawing.Size(146, 216);
+            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bookPictureBox.TabIndex = 3;
+            this.bookPictureBox.TabStop = false;
+            this.bookPictureBox.Click += new System.EventHandler(this.MainControl_Click);
             // 
             // MainControl
             // 
@@ -224,13 +226,13 @@
             this.infoPanel.ResumeLayout(false);
             this.imagePanel.ResumeLayout(false);
             this.imagePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.statusPanel.ResumeLayout(false);
             this.statusPanel.PerformLayout();
+            this.ratingPanel.ResumeLayout(false);
+            this.ratingTextPanel.ResumeLayout(false);
             this.starPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.starPictureBox)).EndInit();
-            this.ratingTextPanel.ResumeLayout(false);
-            this.ratingPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

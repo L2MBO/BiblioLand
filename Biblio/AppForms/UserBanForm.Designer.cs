@@ -155,6 +155,7 @@
             this.closeButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.closeButton.Size = new System.Drawing.Size(33, 33);
             this.closeButton.TabIndex = 33;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // reportReasonLabel
             // 
