@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.Animations;
+﻿using Biblio.AppForms.UserForms;
+using Biblio.Classes.Animations;
 using Biblio.HideClasses;
 using Biblio.ValidationClasses;
 using MaterialSkin;
@@ -62,9 +63,18 @@ namespace Biblio.AppForms
             {
                 if (validationHelper.ValidateLogIn(nameTextField, passwordTextField, blockLogInLabel, timerLabel, logInButton))
                 {
-                    MainForm form = new MainForm();
-                    form.Show();
-                    this.Hide();
+                    if (ValidationHelper.HasUserBan())
+                    {
+                        BanForm form = new BanForm();
+                        form.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MainForm form = new MainForm();
+                        form.Show();
+                        this.Hide();
+                    }
                 }
             }
         }

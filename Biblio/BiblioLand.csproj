@@ -114,124 +114,130 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppForms\AddBookForm.cs">
+    <Compile Include="AppForms\AdminForms\AddBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\AddBookForm.Designer.cs">
+    <Compile Include="AppForms\AdminForms\AddBookForm.Designer.cs">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\AddCardForm.cs">
+    <Compile Include="AppForms\AdminForms\AddCardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\AddCardForm.Designer.cs">
+    <Compile Include="AppForms\AdminForms\AddCardForm.Designer.cs">
       <DependentUpon>AddCardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\AdminPanelForm.cs">
+    <Compile Include="AppForms\AdminForms\AdminPanelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\AdminPanelForm.Designer.cs">
+    <Compile Include="AppForms\AdminForms\AdminPanelForm.Designer.cs">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\AuthorizationForm.cs">
+    <Compile Include="AppForms\UserForms\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\AuthorizationForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\BookInfoForm.cs">
+    <Compile Include="AppForms\UserForms\BanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\BookInfoForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\BanForm.Designer.cs">
+      <DependentUpon>BanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppForms\UserForms\BookInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\UserForms\BookInfoForm.Designer.cs">
       <DependentUpon>BookInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\BookmarksForm.cs">
+    <Compile Include="AppForms\UserForms\BookmarksForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\BookmarksForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\BookmarksForm.Designer.cs">
       <DependentUpon>BookmarksForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\ReportForm.cs">
+    <Compile Include="AppForms\UserForms\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\ReportForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\EvaluationForm.cs">
+    <Compile Include="AppForms\UserForms\EvaluationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\EvaluationForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\EvaluationForm.Designer.cs">
       <DependentUpon>EvaluationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\FeedbackForm.cs">
+    <Compile Include="AppForms\UserForms\FeedbackForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\FeedbackForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\FeedbackForm.Designer.cs">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\ForgetPasswordForm.cs">
+    <Compile Include="AppForms\UserForms\ForgetPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\ForgetPasswordForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\ForgetPasswordForm.Designer.cs">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\ImageLoadForm.cs">
+    <Compile Include="AppForms\UserForms\ImageLoadForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\ImageLoadForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\ImageLoadForm.Designer.cs">
       <DependentUpon>ImageLoadForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\MainForm.cs">
+    <Compile Include="AppForms\UserForms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\MainForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\OverlayForm.cs">
+    <Compile Include="AppForms\UserForms\OverlayForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\OverlayForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\OverlayForm.Designer.cs">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\ProfileForm.cs">
+    <Compile Include="AppForms\UserForms\ProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\ProfileForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\ProfileForm.Designer.cs">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\RecoverPasswordForm.cs">
+    <Compile Include="AppForms\UserForms\RecoverPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\RecoverPasswordForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\RecoverPasswordForm.Designer.cs">
       <DependentUpon>RecoverPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\RegistrationForm.cs">
+    <Compile Include="AppForms\UserForms\RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\RegistrationForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\SettingsForm.cs">
+    <Compile Include="AppForms\UserForms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\SettingsForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\BookСatalogForm.cs">
+    <Compile Include="AppForms\UserForms\BookСatalogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\BookСatalogForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\BookСatalogForm.Designer.cs">
       <DependentUpon>BookСatalogForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\UserBanForm.cs">
+    <Compile Include="AppForms\AdminForms\UserBanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\UserBanForm.Designer.cs">
+    <Compile Include="AppForms\AdminForms\UserBanForm.Designer.cs">
       <DependentUpon>UserBanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\UserNotifyForm.cs">
+    <Compile Include="AppForms\UserForms\UserNotifyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\UserNotifyForm.Designer.cs">
+    <Compile Include="AppForms\UserForms\UserNotifyForm.Designer.cs">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
@@ -344,64 +350,67 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Validation\ValidationHelper.cs" />
-    <EmbeddedResource Include="AppForms\AddBookForm.resx">
+    <EmbeddedResource Include="AppForms\AdminForms\AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\AddCardForm.resx">
+    <EmbeddedResource Include="AppForms\AdminForms\AddCardForm.resx">
       <DependentUpon>AddCardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\AuthorizationForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\BookInfoForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\BanForm.resx">
+      <DependentUpon>BanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\UserForms\BookInfoForm.resx">
       <DependentUpon>BookInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\BookmarksForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\BookmarksForm.resx">
       <DependentUpon>BookmarksForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\ReportForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\EvaluationForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\EvaluationForm.resx">
       <DependentUpon>EvaluationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\FeedbackForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\FeedbackForm.resx">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\ForgetPasswordForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\ForgetPasswordForm.resx">
       <DependentUpon>ForgetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\ImageLoadForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\ImageLoadForm.resx">
       <DependentUpon>ImageLoadForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\MainForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\OverlayForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\OverlayForm.resx">
       <DependentUpon>OverlayForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\ProfileForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\ProfileForm.resx">
       <DependentUpon>ProfileForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\RecoverPasswordForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\RecoverPasswordForm.resx">
       <DependentUpon>RecoverPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\RegistrationForm.asa-TZ.resx">
+    <EmbeddedResource Include="AppForms\UserForms\RegistrationForm.asa-TZ.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\RegistrationForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\BookСatalogForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\BookСatalogForm.resx">
       <DependentUpon>BookСatalogForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\SettingsForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\UserBanForm.resx">
+    <EmbeddedResource Include="AppForms\AdminForms\UserBanForm.resx">
       <DependentUpon>UserBanForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\UserNotifyForm.resx">
+    <EmbeddedResource Include="AppForms\UserForms\UserNotifyForm.resx">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AddContentControl.resx">

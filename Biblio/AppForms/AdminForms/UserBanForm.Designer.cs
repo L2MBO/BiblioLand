@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.banCalendar = new System.Windows.Forms.MonthCalendar();
             this.issueBanButton = new Guna.UI2.WinForms.Guna2Button();
             this.banMessageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,7 +40,6 @@
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.banReasonLabel = new System.Windows.Forms.Label();
             this.banReasonComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,8 +71,19 @@
             this.guna2Panel1.Controls.Add(this.banReasonComboBox);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(330, 456);
+            this.guna2Panel1.Size = new System.Drawing.Size(330, 441);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(20, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 15);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Дата окончания бана";
             // 
             // banCalendar
             // 
@@ -123,6 +134,7 @@
             this.banMessageTextBox.ForeColor = System.Drawing.Color.White;
             this.banMessageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.banMessageTextBox.Location = new System.Drawing.Point(20, 147);
+            this.banMessageTextBox.MaxLength = 200;
             this.banMessageTextBox.Name = "banMessageTextBox";
             this.banMessageTextBox.PlaceholderText = "Не обязательное поле";
             this.banMessageTextBox.SelectedText = "";
@@ -215,23 +227,12 @@
             this.banReasonComboBox.TextOffset = new System.Drawing.Point(5, 0);
             this.banReasonComboBox.SelectedIndexChanged += new System.EventHandler(this.banReasonComboBox_SelectedIndexChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 15);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Дата окончания бана";
-            // 
             // UserBanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(331, 457);
+            this.ClientSize = new System.Drawing.Size(331, 442);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserBanForm";

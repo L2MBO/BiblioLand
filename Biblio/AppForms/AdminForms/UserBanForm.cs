@@ -36,9 +36,12 @@ namespace Biblio.AppForms
 
             _banCalendarIsUncorect = banCalendar.SelectionStart.Date == DateTime.Now.Date;
 
-            if (_banCalendarIsUncorect)
+            if (!_banReasonIsEmpty)
             {
-                ValidationHelper.ShowErrorMessage("Вы не можете поставить сегодняшнюю дату!");
+                if (_banCalendarIsUncorect)
+                {
+                    ValidationHelper.ShowErrorMessage("Вы не можете поставить сегодняшнюю дату!");
+                }
             }
         }
 

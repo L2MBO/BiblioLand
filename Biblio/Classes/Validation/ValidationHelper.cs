@@ -64,6 +64,14 @@ namespace Biblio.ValidationClasses
             }
         }
 
+        public static bool HasUserBan()
+        {
+            int currentUser = Program.CurrentUser.UserID;
+
+            return Program.context.UserBans
+                .Any(ban => ban.BanedUserID == currentUser);
+        }
+
         private static readonly Regex _onlyEnglishChars = new Regex(@"^[A-Za-z\d\W_]+$");
 
         public static bool ValidationRegistration(MaterialSingleLineTextField LoginField, MaterialSingleLineTextField MailField, MaterialSingleLineTextField PasswordField, MaterialSingleLineTextField ConfirmPasswordField)
