@@ -17,6 +17,8 @@ namespace Biblio.Models
             Rating = new HashSet<Rating>();
             ReviewReports = new HashSet<ReviewReports>();
             Reviews = new HashSet<Reviews>();
+            UserBans = new HashSet<UserBans>();
+            UserBans1 = new HashSet<UserBans>();
             UserBookmarks = new HashSet<UserBookmarks>();
             UserReports = new HashSet<UserReports>();
             UserReports1 = new HashSet<UserReports>();
@@ -69,6 +71,12 @@ namespace Biblio.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reviews> Reviews { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserBans> UserBans { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserBans> UserBans1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserBookmarks> UserBookmarks { get; set; }

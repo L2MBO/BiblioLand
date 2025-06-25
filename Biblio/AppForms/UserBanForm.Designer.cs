@@ -31,13 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.sendReportButton = new Guna.UI2.WinForms.Guna2Button();
-            this.reportMessageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.reportMessageLabel = new System.Windows.Forms.Label();
+            this.banCalendar = new System.Windows.Forms.MonthCalendar();
+            this.issueBanButton = new Guna.UI2.WinForms.Guna2Button();
+            this.banMessageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.banMessageLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.reportReasonLabel = new System.Windows.Forms.Label();
-            this.reportReasonComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.banReasonLabel = new System.Windows.Forms.Label();
+            this.banReasonComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,70 +60,85 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.sendReportButton);
-            this.guna2Panel1.Controls.Add(this.reportMessageTextBox);
-            this.guna2Panel1.Controls.Add(this.reportMessageLabel);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.banCalendar);
+            this.guna2Panel1.Controls.Add(this.issueBanButton);
+            this.guna2Panel1.Controls.Add(this.banMessageTextBox);
+            this.guna2Panel1.Controls.Add(this.banMessageLabel);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.closeButton);
-            this.guna2Panel1.Controls.Add(this.reportReasonLabel);
-            this.guna2Panel1.Controls.Add(this.reportReasonComboBox);
+            this.guna2Panel1.Controls.Add(this.banReasonLabel);
+            this.guna2Panel1.Controls.Add(this.banReasonComboBox);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(330, 250);
+            this.guna2Panel1.Size = new System.Drawing.Size(330, 456);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // sendReportButton
+            // banCalendar
             // 
-            this.sendReportButton.Animated = true;
-            this.sendReportButton.BorderRadius = 17;
-            this.sendReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sendReportButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.sendReportButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.sendReportButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.sendReportButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.sendReportButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.sendReportButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.sendReportButton.ForeColor = System.Drawing.Color.White;
-            this.sendReportButton.Location = new System.Drawing.Point(181, 197);
-            this.sendReportButton.Name = "sendReportButton";
-            this.sendReportButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.sendReportButton.Size = new System.Drawing.Size(130, 36);
-            this.sendReportButton.TabIndex = 37;
-            this.sendReportButton.Text = "Отправить жалобу";
+            this.banCalendar.BackColor = System.Drawing.Color.White;
+            this.banCalendar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.banCalendar.Location = new System.Drawing.Point(24, 217);
+            this.banCalendar.MaxSelectionCount = 1;
+            this.banCalendar.MinDate = new System.DateTime(2025, 6, 25, 0, 0, 0, 0);
+            this.banCalendar.Name = "banCalendar";
+            this.banCalendar.ShowTodayCircle = false;
+            this.banCalendar.TabIndex = 38;
+            this.banCalendar.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             // 
-            // reportMessageTextBox
+            // issueBanButton
             // 
-            this.reportMessageTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.reportMessageTextBox.BorderRadius = 17;
-            this.reportMessageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.reportMessageTextBox.DefaultText = "";
-            this.reportMessageTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.reportMessageTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.reportMessageTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.reportMessageTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.reportMessageTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.reportMessageTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.reportMessageTextBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.reportMessageTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.reportMessageTextBox.ForeColor = System.Drawing.Color.White;
-            this.reportMessageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.reportMessageTextBox.Location = new System.Drawing.Point(20, 147);
-            this.reportMessageTextBox.Name = "reportMessageTextBox";
-            this.reportMessageTextBox.PlaceholderText = "";
-            this.reportMessageTextBox.SelectedText = "";
-            this.reportMessageTextBox.Size = new System.Drawing.Size(291, 36);
-            this.reportMessageTextBox.TabIndex = 36;
+            this.issueBanButton.Animated = true;
+            this.issueBanButton.BorderRadius = 17;
+            this.issueBanButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.issueBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.issueBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.issueBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.issueBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.issueBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.issueBanButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.issueBanButton.ForeColor = System.Drawing.Color.White;
+            this.issueBanButton.Location = new System.Drawing.Point(181, 391);
+            this.issueBanButton.Name = "issueBanButton";
+            this.issueBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.issueBanButton.Size = new System.Drawing.Size(130, 36);
+            this.issueBanButton.TabIndex = 37;
+            this.issueBanButton.Text = "Выдать бан";
+            this.issueBanButton.Click += new System.EventHandler(this.issueBanButton_Click);
             // 
-            // reportMessageLabel
+            // banMessageTextBox
             // 
-            this.reportMessageLabel.AutoSize = true;
-            this.reportMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reportMessageLabel.ForeColor = System.Drawing.Color.White;
-            this.reportMessageLabel.Location = new System.Drawing.Point(20, 126);
-            this.reportMessageLabel.Name = "reportMessageLabel";
-            this.reportMessageLabel.Size = new System.Drawing.Size(82, 15);
-            this.reportMessageLabel.TabIndex = 35;
-            this.reportMessageLabel.Text = "Сообщение";
+            this.banMessageTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.banMessageTextBox.BorderRadius = 17;
+            this.banMessageTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.banMessageTextBox.DefaultText = "";
+            this.banMessageTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.banMessageTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.banMessageTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.banMessageTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.banMessageTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.banMessageTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.banMessageTextBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.banMessageTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.banMessageTextBox.ForeColor = System.Drawing.Color.White;
+            this.banMessageTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.banMessageTextBox.Location = new System.Drawing.Point(20, 147);
+            this.banMessageTextBox.Name = "banMessageTextBox";
+            this.banMessageTextBox.PlaceholderText = "Не обязательное поле";
+            this.banMessageTextBox.SelectedText = "";
+            this.banMessageTextBox.Size = new System.Drawing.Size(291, 36);
+            this.banMessageTextBox.TabIndex = 36;
+            // 
+            // banMessageLabel
+            // 
+            this.banMessageLabel.AutoSize = true;
+            this.banMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.banMessageLabel.ForeColor = System.Drawing.Color.White;
+            this.banMessageLabel.Location = new System.Drawing.Point(20, 126);
+            this.banMessageLabel.Name = "banMessageLabel";
+            this.banMessageLabel.Size = new System.Drawing.Size(82, 15);
+            this.banMessageLabel.TabIndex = 35;
+            this.banMessageLabel.Text = "Сообщение";
             // 
             // label2
             // 
@@ -157,54 +174,68 @@
             this.closeButton.TabIndex = 33;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // reportReasonLabel
+            // banReasonLabel
             // 
-            this.reportReasonLabel.AutoSize = true;
-            this.reportReasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reportReasonLabel.ForeColor = System.Drawing.Color.White;
-            this.reportReasonLabel.Location = new System.Drawing.Point(20, 60);
-            this.reportReasonLabel.Name = "reportReasonLabel";
-            this.reportReasonLabel.Size = new System.Drawing.Size(124, 15);
-            this.reportReasonLabel.TabIndex = 32;
-            this.reportReasonLabel.Text = "Причина репорта";
+            this.banReasonLabel.AutoSize = true;
+            this.banReasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.banReasonLabel.ForeColor = System.Drawing.Color.White;
+            this.banReasonLabel.Location = new System.Drawing.Point(20, 60);
+            this.banReasonLabel.Name = "banReasonLabel";
+            this.banReasonLabel.Size = new System.Drawing.Size(100, 15);
+            this.banReasonLabel.TabIndex = 32;
+            this.banReasonLabel.Text = "Причина бана";
             // 
-            // reportReasonComboBox
+            // banReasonComboBox
             // 
-            this.reportReasonComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.reportReasonComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.reportReasonComboBox.BorderRadius = 17;
-            this.reportReasonComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reportReasonComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.reportReasonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.reportReasonComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.reportReasonComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.reportReasonComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.reportReasonComboBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.reportReasonComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.reportReasonComboBox.ForeColor = System.Drawing.Color.White;
-            this.reportReasonComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.reportReasonComboBox.ItemHeight = 30;
-            this.reportReasonComboBox.Items.AddRange(new object[] {
-            "Дубль",
-            "Несоответвие жанра",
+            this.banReasonComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.banReasonComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.banReasonComboBox.BorderRadius = 17;
+            this.banReasonComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.banReasonComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.banReasonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.banReasonComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.banReasonComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.banReasonComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.banReasonComboBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.banReasonComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.banReasonComboBox.ForeColor = System.Drawing.Color.White;
+            this.banReasonComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.banReasonComboBox.ItemHeight = 30;
+            this.banReasonComboBox.Items.AddRange(new object[] {
+            "Нарушение законов РФ",
+            "Неподобающий никнейм",
+            "Нарушение правил написания комментариев",
             "Другое"});
-            this.reportReasonComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.reportReasonComboBox.Location = new System.Drawing.Point(20, 80);
-            this.reportReasonComboBox.Name = "reportReasonComboBox";
-            this.reportReasonComboBox.Size = new System.Drawing.Size(291, 36);
-            this.reportReasonComboBox.TabIndex = 31;
-            this.reportReasonComboBox.TabStop = false;
-            this.reportReasonComboBox.TextOffset = new System.Drawing.Point(5, 0);
+            this.banReasonComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.banReasonComboBox.Location = new System.Drawing.Point(20, 80);
+            this.banReasonComboBox.Name = "banReasonComboBox";
+            this.banReasonComboBox.Size = new System.Drawing.Size(291, 36);
+            this.banReasonComboBox.TabIndex = 31;
+            this.banReasonComboBox.TabStop = false;
+            this.banReasonComboBox.TextOffset = new System.Drawing.Point(5, 0);
+            this.banReasonComboBox.SelectedIndexChanged += new System.EventHandler(this.banReasonComboBox_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(20, 193);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 15);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Дата окончания бана";
             // 
             // UserBanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(331, 251);
+            this.ClientSize = new System.Drawing.Size(331, 457);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserBanForm";
+            this.ShowInTaskbar = false;
             this.Text = "UserBanForm";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -216,12 +247,14 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm FormRounded;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button sendReportButton;
-        private Guna.UI2.WinForms.Guna2TextBox reportMessageTextBox;
-        private System.Windows.Forms.Label reportMessageLabel;
+        private Guna.UI2.WinForms.Guna2Button issueBanButton;
+        private Guna.UI2.WinForms.Guna2TextBox banMessageTextBox;
+        private System.Windows.Forms.Label banMessageLabel;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CircleButton closeButton;
-        private System.Windows.Forms.Label reportReasonLabel;
-        private Guna.UI2.WinForms.Guna2ComboBox reportReasonComboBox;
+        private System.Windows.Forms.Label banReasonLabel;
+        private Guna.UI2.WinForms.Guna2ComboBox banReasonComboBox;
+        private System.Windows.Forms.MonthCalendar banCalendar;
+        private System.Windows.Forms.Label label1;
     }
 }

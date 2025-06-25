@@ -6,23 +6,22 @@ namespace Biblio.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class UserReports
+    public partial class UserBans
     {
         [Key]
-        public int UserReportID { get; set; }
+        public int UserBanID { get; set; }
 
         public int UserID { get; set; }
 
-        public int ReportedUserID { get; set; }
+        public int BanedUserID { get; set; }
 
-        public int ReportCategoryID { get; set; }
+        public int BanCategoryID { get; set; }
 
-        [Required]
-        public string ReportMessage { get; set; }
+        public string BanMessage { get; set; }
 
-        public DateTime ReportDate { get; set; }
+        public DateTime BanExpiration { get; set; }
 
-        public virtual UserReportCategory UserReportCategory { get; set; }
+        public virtual UserBanCategory UserBanCategory { get; set; }
 
         public virtual Users Users { get; set; }
 

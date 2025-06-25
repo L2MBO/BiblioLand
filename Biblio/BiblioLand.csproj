@@ -333,6 +333,8 @@
     <Compile Include="Models\ReviewReportCategory.cs" />
     <Compile Include="Models\ReviewReports.cs" />
     <Compile Include="Models\Reviews.cs" />
+    <Compile Include="Models\UserBanCategory.cs" />
+    <Compile Include="Models\UserBans.cs" />
     <Compile Include="Models\UserBookmarks.cs" />
     <Compile Include="Models\UserCategories.cs" />
     <Compile Include="Models\UserReportCategory.cs" />

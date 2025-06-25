@@ -13,8 +13,8 @@ namespace Biblio.AppForms
         private int _currentUserId;
         private int _commentId;
         private int _reportedUserId;
-        public bool _reportReasonIsEmpty = false;
-        public bool _reportMessageIsEmpty = false;
+        private bool _reportReasonIsEmpty = false;
+        private bool _reportMessageIsEmpty = false;
         private string _reportType;
 
         public ReportForm(Books book, int commentId, int reportedUserId, int currentUserId, string reportType)
