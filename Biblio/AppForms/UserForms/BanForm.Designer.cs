@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BanForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.banPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.reportMessageLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.reportReasonLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.banExpirationLabel = new System.Windows.Forms.Label();
-            this.reasonLabel = new System.Windows.Forms.Label();
             this.messagePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.messageLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reasonLabel = new System.Windows.Forms.Label();
+            this.banExpirationLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.reportMessageLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.reportReasonLabel = new System.Windows.Forms.Label();
             this.banPanel.SuspendLayout();
             this.messagePanel.SuspendLayout();
             this.SuspendLayout();
@@ -78,28 +79,6 @@
             this.banPanel.Size = new System.Drawing.Size(348, 277);
             this.banPanel.TabIndex = 1;
             // 
-            // reportMessageLabel
-            // 
-            this.reportMessageLabel.AutoSize = true;
-            this.reportMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reportMessageLabel.ForeColor = System.Drawing.Color.White;
-            this.reportMessageLabel.Location = new System.Drawing.Point(19, 147);
-            this.reportMessageLabel.Name = "reportMessageLabel";
-            this.reportMessageLabel.Size = new System.Drawing.Size(203, 15);
-            this.reportMessageLabel.TabIndex = 35;
-            this.reportMessageLabel.Text = "Сообщение администратора:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(93, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 20);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Вы были забанены";
-            // 
             // closeButton
             // 
             this.closeButton.AllowDrop = true;
@@ -122,50 +101,6 @@
             this.closeButton.Size = new System.Drawing.Size(33, 33);
             this.closeButton.TabIndex = 33;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // reportReasonLabel
-            // 
-            this.reportReasonLabel.AutoSize = true;
-            this.reportReasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reportReasonLabel.ForeColor = System.Drawing.Color.White;
-            this.reportReasonLabel.Location = new System.Drawing.Point(19, 60);
-            this.reportReasonLabel.Name = "reportReasonLabel";
-            this.reportReasonLabel.Size = new System.Drawing.Size(108, 15);
-            this.reportReasonLabel.TabIndex = 32;
-            this.reportReasonLabel.Text = "Причина бана: ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 118);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 15);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Дата окончания бана:";
-            // 
-            // banExpirationLabel
-            // 
-            this.banExpirationLabel.AutoSize = true;
-            this.banExpirationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.banExpirationLabel.ForeColor = System.Drawing.Color.Red;
-            this.banExpirationLabel.Location = new System.Drawing.Point(180, 118);
-            this.banExpirationLabel.Name = "banExpirationLabel";
-            this.banExpirationLabel.Size = new System.Drawing.Size(41, 15);
-            this.banExpirationLabel.TabIndex = 39;
-            this.banExpirationLabel.Text = "Дата";
-            // 
-            // reasonLabel
-            // 
-            this.reasonLabel.AutoSize = true;
-            this.reasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reasonLabel.ForeColor = System.Drawing.Color.Red;
-            this.reasonLabel.Location = new System.Drawing.Point(19, 89);
-            this.reasonLabel.Name = "reasonLabel";
-            this.reasonLabel.Size = new System.Drawing.Size(64, 15);
-            this.reasonLabel.TabIndex = 41;
-            this.reasonLabel.Text = "Причина";
             // 
             // messagePanel
             // 
@@ -231,6 +166,72 @@
             this.panel1.Size = new System.Drawing.Size(10, 87);
             this.panel1.TabIndex = 0;
             // 
+            // reasonLabel
+            // 
+            this.reasonLabel.AutoSize = true;
+            this.reasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reasonLabel.ForeColor = System.Drawing.Color.Red;
+            this.reasonLabel.Location = new System.Drawing.Point(19, 89);
+            this.reasonLabel.Name = "reasonLabel";
+            this.reasonLabel.Size = new System.Drawing.Size(64, 15);
+            this.reasonLabel.TabIndex = 41;
+            this.reasonLabel.Text = "Причина";
+            // 
+            // banExpirationLabel
+            // 
+            this.banExpirationLabel.AutoSize = true;
+            this.banExpirationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.banExpirationLabel.ForeColor = System.Drawing.Color.Red;
+            this.banExpirationLabel.Location = new System.Drawing.Point(180, 118);
+            this.banExpirationLabel.Name = "banExpirationLabel";
+            this.banExpirationLabel.Size = new System.Drawing.Size(41, 15);
+            this.banExpirationLabel.TabIndex = 39;
+            this.banExpirationLabel.Text = "Дата";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 118);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 15);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Дата окончания бана:";
+            // 
+            // reportMessageLabel
+            // 
+            this.reportMessageLabel.AutoSize = true;
+            this.reportMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reportMessageLabel.ForeColor = System.Drawing.Color.White;
+            this.reportMessageLabel.Location = new System.Drawing.Point(19, 147);
+            this.reportMessageLabel.Name = "reportMessageLabel";
+            this.reportMessageLabel.Size = new System.Drawing.Size(203, 15);
+            this.reportMessageLabel.TabIndex = 35;
+            this.reportMessageLabel.Text = "Сообщение администратора:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(93, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 20);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Вы были забанены";
+            // 
+            // reportReasonLabel
+            // 
+            this.reportReasonLabel.AutoSize = true;
+            this.reportReasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reportReasonLabel.ForeColor = System.Drawing.Color.White;
+            this.reportReasonLabel.Location = new System.Drawing.Point(19, 60);
+            this.reportReasonLabel.Name = "reportReasonLabel";
+            this.reportReasonLabel.Size = new System.Drawing.Size(108, 15);
+            this.reportReasonLabel.TabIndex = 32;
+            this.reportReasonLabel.Text = "Причина бана: ";
+            // 
             // BanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +240,7 @@
             this.ClientSize = new System.Drawing.Size(349, 278);
             this.Controls.Add(this.banPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BanForm";
