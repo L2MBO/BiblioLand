@@ -51,6 +51,11 @@ namespace Biblio.AppForms
                 .Any(ban => ban.BanedUserID == _banedUserId);
         }
 
+        private bool IsUserAdmin()
+        {
+            return Program.context.Users.Any(user => user.UserID == _banedUserId && user.UserRoleID != 1);
+        }
+
         private void ProcessReportSubmission()
         {
             if (!_banReasonIsEmpty && !_banCalendarIsUncorect)
@@ -58,6 +63,11 @@ namespace Biblio.AppForms
                 if (HasUserBan())
                 {
                     ValidationHelper.ShowErrorMessage("Данный пользователь уже забанен. Если вы хотите продлить бан перейдите в админ пнель!");
+                    this.Close();
+                }
+                else if (IsUserAdmin())
+                {
+                    ValidationHelper.ShowCustomTitleErrorMessage("Вы не можете выдать бан администратору!", "Недостаточно прав!");
                     this.Close();
                 }
                 else
