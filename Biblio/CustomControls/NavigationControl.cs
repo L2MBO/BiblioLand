@@ -47,7 +47,7 @@ namespace Biblio.CustomControls
             mainButton.Click += (s, e) => OpenForm<MainForm>();
             catalogButton.Click += (s, e) => OpenForm<BookСatalogForm>();
             bookmarksButton.Click += (s, e) => OpenForm<BookmarksForm>();
-            notificationsButton.Click += (s, e) => OpenForm<UserNotifyForm>();
+            notificationsButton.Click += (s, e) => OpenForm<NotifyForm>();
         }
 
         private void NavigationControl_Load(object sender, EventArgs e)

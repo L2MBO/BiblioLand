@@ -1,6 +1,6 @@
 ﻿namespace Biblio.AppForms
 {
-    partial class UserNotifyForm
+    partial class NotifyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserNotifyForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotifyForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();

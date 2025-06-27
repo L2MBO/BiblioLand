@@ -234,11 +234,11 @@
     <Compile Include="AppForms\AdminForms\UserBanForm.Designer.cs">
       <DependentUpon>UserBanForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\UserForms\UserNotifyForm.cs">
+    <Compile Include="AppForms\UserForms\NotifyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AppForms\UserForms\UserNotifyForm.Designer.cs">
-      <DependentUpon>UserNotifyForm.cs</DependentUpon>
+    <Compile Include="AppForms\UserForms\NotifyForm.Designer.cs">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\Animations\FormDrag.cs" />
@@ -324,6 +324,12 @@
     </Compile>
     <Compile Include="CustomControls\UserCommentsControl.Designer.cs">
       <DependentUpon>UserCommentsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\UserProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\UserProfileControl.Designer.cs">
+      <DependentUpon>UserProfileControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\IAvatarParentForm.cs" />
     <Compile Include="Models\BiblioModel.cs" />
@@ -413,8 +419,8 @@
     <EmbeddedResource Include="AppForms\AdminForms\UserBanForm.resx">
       <DependentUpon>UserBanForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\UserForms\UserNotifyForm.resx">
-      <DependentUpon>UserNotifyForm.cs</DependentUpon>
+    <EmbeddedResource Include="AppForms\UserForms\NotifyForm.resx">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AddContentControl.resx">
       <DependentUpon>AddContentControl.cs</DependentUpon>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\UserCommentsControl.resx">
       <DependentUpon>UserCommentsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\UserProfileControl.resx">
+      <DependentUpon>UserProfileControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

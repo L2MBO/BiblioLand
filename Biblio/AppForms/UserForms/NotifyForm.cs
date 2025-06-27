@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class UserNotifyForm : Form
+    public partial class NotifyForm : Form
     {
-        public UserNotifyForm()
+        public NotifyForm()
         {
             InitializeComponent();
 

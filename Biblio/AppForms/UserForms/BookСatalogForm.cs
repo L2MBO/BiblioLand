@@ -122,7 +122,7 @@ namespace Biblio.AppForms
             if (this.WindowState == FormWindowState.Maximized)
             {
                 sortGenreComboBox.Width = 225;
-                searchTextField.PlaceholderText = "Поиск по названию";
+                searchTextField.PlaceholderText = "Поиск по названию или автору";
             }
             else
             {
