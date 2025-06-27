@@ -70,7 +70,7 @@ namespace Biblio.AppForms.AdminForms
             userBan.BanExpiration = banCalendar.SelectionStart.Date;
             Program.context.SaveChanges();
 
-            ValidationHelper.ShowInformationMessage("Пользователь забанен!", "Успех!");
+            ValidationHelper.ShowInformationMessage("Дата окончания бана обновлена!", "Успех!");
         }
 
         private void closeButton_Click(object sender, EventArgs e)

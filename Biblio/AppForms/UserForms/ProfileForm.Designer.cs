@@ -69,8 +69,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.changeBanPanel = new System.Windows.Forms.Panel();
-            this.unBanButton = new Guna.UI2.WinForms.Guna2Button();
-            this.extendBanButton = new Guna.UI2.WinForms.Guna2Button();
             this.banButton = new Guna.UI2.WinForms.Guna2Button();
             this.settingsButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.userNameLabel = new System.Windows.Forms.Label();
@@ -84,6 +82,8 @@
             this.arrowPanel = new System.Windows.Forms.Panel();
             this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
+            this.unBanButton = new Guna.UI2.WinForms.Guna2Button();
+            this.extendBanButton = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -591,50 +591,7 @@
             this.changeBanPanel.Name = "changeBanPanel";
             this.changeBanPanel.Size = new System.Drawing.Size(142, 55);
             this.changeBanPanel.TabIndex = 14;
-            // 
-            // unBanButton
-            // 
-            this.unBanButton.Animated = true;
-            this.unBanButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.unBanButton.BorderRadius = 12;
-            this.unBanButton.BorderThickness = 1;
-            this.unBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.unBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.unBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.unBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.unBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.unBanButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.unBanButton.ForeColor = System.Drawing.Color.White;
-            this.unBanButton.Location = new System.Drawing.Point(0, 0);
-            this.unBanButton.Name = "unBanButton";
-            this.unBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.unBanButton.Size = new System.Drawing.Size(142, 25);
-            this.unBanButton.TabIndex = 12;
-            this.unBanButton.Text = "Разбанить";
-            this.unBanButton.Visible = false;
-            this.unBanButton.Click += new System.EventHandler(this.unBanButton_Click);
-            // 
-            // extendBanButton
-            // 
-            this.extendBanButton.Animated = true;
-            this.extendBanButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.extendBanButton.BorderRadius = 12;
-            this.extendBanButton.BorderThickness = 1;
-            this.extendBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.extendBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.extendBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.extendBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.extendBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.extendBanButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.extendBanButton.ForeColor = System.Drawing.Color.White;
-            this.extendBanButton.Location = new System.Drawing.Point(0, 30);
-            this.extendBanButton.Name = "extendBanButton";
-            this.extendBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.extendBanButton.Size = new System.Drawing.Size(142, 25);
-            this.extendBanButton.TabIndex = 13;
-            this.extendBanButton.Text = "Обновить срок бана";
-            this.extendBanButton.Visible = false;
-            this.extendBanButton.Click += new System.EventHandler(this.extendBanButton_Click);
+            this.changeBanPanel.Visible = false;
             // 
             // banButton
             // 
@@ -804,6 +761,48 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
             // 
+            // unBanButton
+            // 
+            this.unBanButton.Animated = true;
+            this.unBanButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.unBanButton.BorderRadius = 12;
+            this.unBanButton.BorderThickness = 1;
+            this.unBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.unBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.unBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.unBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.unBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.unBanButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.unBanButton.ForeColor = System.Drawing.Color.White;
+            this.unBanButton.Location = new System.Drawing.Point(0, 0);
+            this.unBanButton.Name = "unBanButton";
+            this.unBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.unBanButton.Size = new System.Drawing.Size(142, 25);
+            this.unBanButton.TabIndex = 14;
+            this.unBanButton.Text = "Разбанить";
+            this.unBanButton.Click += new System.EventHandler(this.unBanButton_Click);
+            // 
+            // extendBanButton
+            // 
+            this.extendBanButton.Animated = true;
+            this.extendBanButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.extendBanButton.BorderRadius = 12;
+            this.extendBanButton.BorderThickness = 1;
+            this.extendBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.extendBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.extendBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.extendBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.extendBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.extendBanButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.extendBanButton.ForeColor = System.Drawing.Color.White;
+            this.extendBanButton.Location = new System.Drawing.Point(0, 30);
+            this.extendBanButton.Name = "extendBanButton";
+            this.extendBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.extendBanButton.Size = new System.Drawing.Size(142, 25);
+            this.extendBanButton.TabIndex = 15;
+            this.extendBanButton.Text = "Обновить срок бана";
+            this.extendBanButton.Click += new System.EventHandler(this.extendBanButton_Click);
+            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -900,11 +899,11 @@
         private System.Windows.Forms.Panel arrowPanel;
         private Guna.UI2.WinForms.Guna2Button arrowButton;
         private Guna.UI2.WinForms.Guna2CircleButton settingsButton;
-        private Guna.UI2.WinForms.Guna2Button unBanButton;
         private Guna.UI2.WinForms.Guna2Button banButton;
-        private Guna.UI2.WinForms.Guna2Button extendBanButton;
         private System.Windows.Forms.Panel changeBanPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label banExpirationLabel;
+        private Guna.UI2.WinForms.Guna2Button unBanButton;
+        private Guna.UI2.WinForms.Guna2Button extendBanButton;
     }
 }

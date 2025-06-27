@@ -245,7 +245,7 @@ namespace Biblio.AppForms
         {
             var userBan = Program.context.UserBans.FirstOrDefault(user => user.BanedUserID == _currentUserId);
             var banDate = userBan.BanExpiration;
-            banExpirationLabel.Text = banDate.ToString("dd.MM.yyyy HH:mm");
+            banExpirationLabel.Text = banDate.ToString("Забанен до: " + "dd.MM.yyyy HH:mm");
         }
 
         private void ShowBanButtons()
