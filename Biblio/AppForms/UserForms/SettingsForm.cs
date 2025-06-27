@@ -40,7 +40,7 @@ namespace Biblio.AppForms
             ImageLoader.LoadAvatarImage(avatarPictureBox);
 
             userNameTextBox.Text = _currentUser.Username;
-            descriptionTextBox.Text = _currentUser.Descriotion;
+            descriptionTextBox.Text = _currentUser.Description;
 
             SetUserAnonymity();
 
@@ -155,9 +155,9 @@ namespace Biblio.AppForms
                 }
 
                 if (_whitespaceRegex.Replace(descriptionTextBox.Text ?? "", "")
-                    != _whitespaceRegex.Replace(_currentUser.Descriotion ?? "", ""))
+                    != _whitespaceRegex.Replace(_currentUser.Description ?? "", ""))
                 {
-                    _currentUser.Descriotion = string.IsNullOrWhiteSpace(descriptionTextBox.Text) ? null : descriptionTextBox.Text.Trim();
+                    _currentUser.Description = string.IsNullOrWhiteSpace(descriptionTextBox.Text) ? null : descriptionTextBox.Text.Trim();
                     changesMade = true;
                 }
 

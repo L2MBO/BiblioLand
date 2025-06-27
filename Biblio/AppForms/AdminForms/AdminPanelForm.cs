@@ -55,11 +55,11 @@ namespace Biblio.AppForms
                 switch (state.DescriptionIndex)
                 {
                     case 1: // Есть описание
-                        query = query.Where(user => user.Descriotion != null);
+                        query = query.Where(user => user.Description != null);
                         break;
 
                     case 2: // Нет описания
-                        query = query.Where(user => user.Descriotion == null);
+                        query = query.Where(user => user.Description == null);
                         break;
                 }
             }
@@ -81,8 +81,8 @@ namespace Biblio.AppForms
 
                 case 2: // По длине описания
                     query = state.IsDescending
-                        ? query.OrderByDescending(user => user.Descriotion)
-                        : query.OrderBy(user => user.Descriotion);
+                        ? query.OrderByDescending(user => user.Description)
+                        : query.OrderBy(user => user.Description);
                     break;
 
                 case 3: // По роли
@@ -109,9 +109,9 @@ namespace Biblio.AppForms
             {
                 foreach (Users user in users)
                 {
-                    var userControl = new MainControl(user);
+                    var userControl = new UserProfileControl(user);
                     userControl.Margin = new Padding(10);
-                    userControl.BookClicked += UserControl_UserClicked;
+                    userControl.UserClicked += UserControl_UserClicked;
                     usersPanel.Controls.Add(userControl);
                 }
                 usersPanel.BackgroundImage = null;
@@ -180,11 +180,10 @@ namespace Biblio.AppForms
             ApplyFiltersAndSort();
         }
 
-        private void UserControl_UserClicked(object sender, Books book)
+        private void UserControl_UserClicked(object sender, Users user)
         {
-            /////////
-            var bookInfoForm = new BookInfoForm(book);
-            VisibilityHelper.ShowNewForm(this, bookInfoForm);
+            var profileForm = new ProfileForm(user.UserID, true, this);
+            VisibilityHelper.ShowNewForm(this, profileForm);
             this.Hide();
         }
 

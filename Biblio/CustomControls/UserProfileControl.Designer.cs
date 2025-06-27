@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UserProfileControl";
             this.Size = new System.Drawing.Size(334, 65);
+            this.Click += new System.EventHandler(this.UserProfileControl_Click);
             this.ResumeLayout(false);
 
         }

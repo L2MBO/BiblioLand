@@ -566,12 +566,6 @@ namespace Biblio.AppForms
             }
         }
 
-        private void ShowReviewReportForm(int comment)
-        {
-            var form = new ReportForm(null, comment, 0, _currentUserId, "Comment");
-            _dialogService.ShowDialogWithOverlay(this, form);
-        }
-
         private void commentTextBox_TextChanged(object sender, EventArgs e)
         {
             int textBoxWidth = commentTextBox.Width;
