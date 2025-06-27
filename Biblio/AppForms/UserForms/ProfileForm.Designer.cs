@@ -68,17 +68,22 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.userNameLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.changeBanPanel = new System.Windows.Forms.Panel();
+            this.unBanButton = new Guna.UI2.WinForms.Guna2Button();
+            this.extendBanButton = new Guna.UI2.WinForms.Guna2Button();
+            this.banButton = new Guna.UI2.WinForms.Guna2Button();
             this.settingsButton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.userNameLabel = new System.Windows.Forms.Label();
             this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.arrowPanel = new System.Windows.Forms.Panel();
-            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.banExpirationLabel = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -93,10 +98,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.changeBanPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
+            this.flowLayoutPanel4.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.arrowPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -566,32 +573,90 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.changeBanPanel);
+            this.panel3.Controls.Add(this.banButton);
+            this.panel3.Controls.Add(this.settingsButton);
             this.panel3.Controls.Add(this.userNameLabel);
-            this.panel3.Controls.Add(this.panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(80, 30);
+            this.panel3.Location = new System.Drawing.Point(85, 28);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(446, 80);
+            this.panel3.Size = new System.Drawing.Size(441, 85);
             this.panel3.TabIndex = 10;
             // 
-            // userNameLabel
+            // changeBanPanel
             // 
-            this.userNameLabel.AutoEllipsis = true;
-            this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userNameLabel.ForeColor = System.Drawing.Color.White;
-            this.userNameLabel.Location = new System.Drawing.Point(23, 29);
-            this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(99, 20);
-            this.userNameLabel.TabIndex = 6;
-            this.userNameLabel.Text = "Имя";
+            this.changeBanPanel.Controls.Add(this.unBanButton);
+            this.changeBanPanel.Controls.Add(this.extendBanButton);
+            this.changeBanPanel.Location = new System.Drawing.Point(149, 30);
+            this.changeBanPanel.Name = "changeBanPanel";
+            this.changeBanPanel.Size = new System.Drawing.Size(164, 55);
+            this.changeBanPanel.TabIndex = 14;
             // 
-            // panel2
+            // unBanButton
             // 
-            this.panel2.Controls.Add(this.settingsButton);
-            this.panel2.Location = new System.Drawing.Point(148, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(26, 80);
-            this.panel2.TabIndex = 8;
+            this.unBanButton.Animated = true;
+            this.unBanButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.unBanButton.BorderRadius = 12;
+            this.unBanButton.BorderThickness = 1;
+            this.unBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.unBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.unBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.unBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.unBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.unBanButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.unBanButton.ForeColor = System.Drawing.Color.White;
+            this.unBanButton.Location = new System.Drawing.Point(0, 0);
+            this.unBanButton.Name = "unBanButton";
+            this.unBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.unBanButton.Size = new System.Drawing.Size(164, 25);
+            this.unBanButton.TabIndex = 12;
+            this.unBanButton.Text = "Разбанить";
+            this.unBanButton.Visible = false;
+            this.unBanButton.Click += new System.EventHandler(this.unBanButton_Click);
+            // 
+            // extendBanButton
+            // 
+            this.extendBanButton.Animated = true;
+            this.extendBanButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.extendBanButton.BorderRadius = 12;
+            this.extendBanButton.BorderThickness = 1;
+            this.extendBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.extendBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.extendBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.extendBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.extendBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.extendBanButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.extendBanButton.ForeColor = System.Drawing.Color.White;
+            this.extendBanButton.Location = new System.Drawing.Point(0, 30);
+            this.extendBanButton.Name = "extendBanButton";
+            this.extendBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.extendBanButton.Size = new System.Drawing.Size(164, 25);
+            this.extendBanButton.TabIndex = 13;
+            this.extendBanButton.Text = "Продлить/сократить бан";
+            this.extendBanButton.Visible = false;
+            this.extendBanButton.Click += new System.EventHandler(this.extendBanButton_Click);
+            // 
+            // banButton
+            // 
+            this.banButton.Animated = true;
+            this.banButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.banButton.BorderRadius = 12;
+            this.banButton.BorderThickness = 1;
+            this.banButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.banButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.banButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.banButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.banButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.banButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.banButton.ForeColor = System.Drawing.Color.White;
+            this.banButton.Location = new System.Drawing.Point(148, 0);
+            this.banButton.Name = "banButton";
+            this.banButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.banButton.Size = new System.Drawing.Size(165, 25);
+            this.banButton.TabIndex = 11;
+            this.banButton.Text = "Забанить";
+            this.banButton.Visible = false;
+            this.banButton.Click += new System.EventHandler(this.banButton_Click);
             // 
             // settingsButton
             // 
@@ -607,32 +672,44 @@
             this.settingsButton.ForeColor = System.Drawing.Color.White;
             this.settingsButton.Image = global::Biblio.Properties.Resources.gear;
             this.settingsButton.ImageSize = new System.Drawing.Size(23, 20);
-            this.settingsButton.Location = new System.Drawing.Point(0, 0);
+            this.settingsButton.Location = new System.Drawing.Point(148, 0);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.settingsButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.settingsButton.Size = new System.Drawing.Size(26, 25);
-            this.settingsButton.TabIndex = 7;
+            this.settingsButton.TabIndex = 10;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
+            // userNameLabel
+            // 
+            this.userNameLabel.AutoEllipsis = true;
+            this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userNameLabel.ForeColor = System.Drawing.Color.White;
+            this.userNameLabel.Location = new System.Drawing.Point(24, 32);
+            this.userNameLabel.Name = "userNameLabel";
+            this.userNameLabel.Size = new System.Drawing.Size(99, 20);
+            this.userNameLabel.TabIndex = 6;
+            this.userNameLabel.Text = "Имя";
             // 
             // avatarPictureBox
             // 
             this.avatarPictureBox.BorderRadius = 10;
             this.avatarPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.avatarPictureBox.ImageRotate = 0F;
-            this.avatarPictureBox.Location = new System.Drawing.Point(0, 30);
+            this.avatarPictureBox.Location = new System.Drawing.Point(0, 28);
             this.avatarPictureBox.Name = "avatarPictureBox";
-            this.avatarPictureBox.Size = new System.Drawing.Size(80, 80);
+            this.avatarPictureBox.Size = new System.Drawing.Size(85, 85);
             this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.avatarPictureBox.TabIndex = 5;
             this.avatarPictureBox.TabStop = false;
             // 
             // flowLayoutPanel4
             // 
+            this.flowLayoutPanel4.Controls.Add(this.panel2);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 110);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(0, 113);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(526, 30);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(526, 27);
             this.flowLayoutPanel4.TabIndex = 4;
             // 
             // flowLayoutPanel3
@@ -640,7 +717,7 @@
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(526, 30);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(526, 28);
             this.flowLayoutPanel3.TabIndex = 2;
             // 
             // rightPanel
@@ -673,20 +750,6 @@
             this.arrowPanel.TabIndex = 0;
             this.arrowPanel.Visible = false;
             // 
-            // navigationControl
-            // 
-            this.navigationControl.AutoSize = true;
-            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationControl.leftPanel = null;
-            this.navigationControl.LeftPanelWidth = 0;
-            this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Name = "navigationControl";
-            this.navigationControl.rightPanel = null;
-            this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(726, 52);
-            this.navigationControl.TabIndex = 2;
-            // 
             // arrowButton
             // 
             this.arrowButton.Animated = true;
@@ -706,6 +769,40 @@
             this.arrowButton.TabIndex = 0;
             this.arrowButton.Text = "Вернуться";
             this.arrowButton.Click += new System.EventHandler(this.arrrowButton_Click);
+            // 
+            // navigationControl
+            // 
+            this.navigationControl.AutoSize = true;
+            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
+            this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Name = "navigationControl";
+            this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.banExpirationLabel);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(424, 21);
+            this.panel2.TabIndex = 0;
+            // 
+            // banExpirationLabel
+            // 
+            this.banExpirationLabel.AutoSize = true;
+            this.banExpirationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.banExpirationLabel.ForeColor = System.Drawing.Color.Red;
+            this.banExpirationLabel.Location = new System.Drawing.Point(107, 2);
+            this.banExpirationLabel.Name = "banExpirationLabel";
+            this.banExpirationLabel.Size = new System.Drawing.Size(120, 16);
+            this.banExpirationLabel.TabIndex = 0;
+            this.banExpirationLabel.Text = "Забанен до: дата";
+            this.banExpirationLabel.Visible = false;
             // 
             // ProfileForm
             // 
@@ -741,10 +838,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.changeBanPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
+            this.flowLayoutPanel4.ResumeLayout(false);
             this.leftPanel.ResumeLayout(false);
             this.arrowPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -762,7 +862,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label likesCountLabel;
@@ -777,7 +876,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label registrationDateLabel;
         private System.Windows.Forms.Label userNameLabel;
-        private Guna.UI2.WinForms.Guna2CircleButton settingsButton;
         private System.Windows.Forms.Panel bookmarksButtonPanel;
         private System.Windows.Forms.FlowLayoutPanel bookmarksPanel;
         private System.Windows.Forms.Panel lockPanel;
@@ -801,5 +899,12 @@
         private System.Windows.Forms.Panel anotherLockPanel;
         private System.Windows.Forms.Panel arrowPanel;
         private Guna.UI2.WinForms.Guna2Button arrowButton;
+        private Guna.UI2.WinForms.Guna2CircleButton settingsButton;
+        private Guna.UI2.WinForms.Guna2Button unBanButton;
+        private Guna.UI2.WinForms.Guna2Button banButton;
+        private Guna.UI2.WinForms.Guna2Button extendBanButton;
+        private System.Windows.Forms.Panel changeBanPanel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label banExpirationLabel;
     }
 }

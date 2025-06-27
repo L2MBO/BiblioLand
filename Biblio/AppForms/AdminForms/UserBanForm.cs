@@ -9,6 +9,7 @@ namespace Biblio.AppForms
 {
     public partial class UserBanForm : Form
     {
+        public event Action BanChanged;
         private int _currentUserId = Program.CurrentUser.UserID;
         private int _banedUserId;
         private bool _banReasonIsEmpty = false;
@@ -62,7 +63,7 @@ namespace Biblio.AppForms
             {
                 if (HasUserBan())
                 {
-                    ValidationHelper.ShowErrorMessage("Данный пользователь уже забанен. Если вы хотите продлить бан перейдите в админ пнель!");
+                    ValidationHelper.ShowErrorMessage("Данный пользователь уже забанен. Если вы хотите продлить бан нажмите на соответствующую кнопку!");
                     this.Close();
                 }
                 else if (IsUserAdmin())
@@ -72,8 +73,17 @@ namespace Biblio.AppForms
                 }
                 else
                 {
-                    SendBanToDatabase();
-                    this.Close();
+                    var result = MessageBox.Show("Вы уверены, что хотите выдать бан этому пользователю?",
+                        "Подтвердите действие!",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        SendBanToDatabase();
+                        BanChanged?.Invoke();
+                        this.Close();
+                    }
                 }
             }
         }

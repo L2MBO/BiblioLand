@@ -1,9 +1,11 @@
-﻿using Biblio.Classes.Customization;
+﻿using Biblio.AppForms.AdminForms;
+using Biblio.Classes.Customization;
 using Biblio.Classes.Customization.FormCustomization;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.CustomControls;
 using Biblio.HideClasses;
 using Biblio.Models;
+using Biblio.ValidationClasses;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -23,7 +25,7 @@ namespace Biblio.AppForms
         private Users _currentUser;
         private int _sendReportUserId = Program.CurrentUser.UserID;
         private string _currentSortMode = "reading";
-        private bool _isUserAdmin = false;
+        //private bool _isUserAdmin = false;
 
         public ProfileForm(int currentUserId, bool needArrow = false, Form backForm = null)
         {
@@ -199,7 +201,8 @@ namespace Biblio.AppForms
 
             if (currentUser != null)
             {
-                _isUserAdmin = true;
+                settingsButton.Visible = false;
+                ShowBanButtons();
             }
         }
 
@@ -227,22 +230,71 @@ namespace Biblio.AppForms
         {
             if (_currentUserId != Program.CurrentUser.UserID)
             {
-                if (_isUserAdmin)
-                {
-                    var form = new UserBanForm(_currentUserId);
-                    _dialogService.ShowDialogWithOverlay(this, form);
-                }
-                else
-                {
-                    var form = new ReportForm(null, 0, _currentUserId, _sendReportUserId, "User");
-                    _dialogService.ShowDialogWithOverlay(this, form);
-                }
+                var form = new ReportForm(null, 0, _currentUserId, _sendReportUserId, "User");
+                _dialogService.ShowDialogWithOverlay(this, form);
             }
             else
             {
                 SettingsForm form = new SettingsForm();
                 VisibilityHelper.ShowNewForm(this, form);
                 this.Hide();
+            }
+        }
+
+        private void ShowBanExpiration()
+        {
+            var userBan = Program.context.UserBans.FirstOrDefault(user => user.BanedUserID == _currentUserId);
+            var banDate = userBan.BanExpiration;
+            banExpirationLabel.Text = banDate.ToString("dd.MM.yyyy HH:mm");
+        }
+
+        private void ShowBanButtons()
+        {
+            banButton.Visible = true;
+
+            if (IsUserBaned())
+            {
+                changeBanPanel.Visible = true;
+                banExpirationLabel.Visible = true;
+                ShowBanExpiration();
+            }
+            else
+            {
+                changeBanPanel.Visible = false;
+                banExpirationLabel.Visible = false;
+            }
+        }
+
+        private bool IsUserBaned()
+        {
+            return Program.context.UserBans.Any(user => user.BanedUserID == _currentUserId);
+        }
+
+        private void UnBanUser()
+        {
+            try
+            {
+                var userBan = Program.context.UserBans
+                    .FirstOrDefault(user => user.BanedUserID == _currentUserId);
+
+                if (userBan == null)
+                {
+                    MessageBox.Show("Пользователь не забанен!", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Program.context.UserBans.Remove(userBan);
+                Program.context.SaveChanges();
+
+                ShowBanButtons();
+
+                ValidationHelper.ShowInformationMessage("Бан успешно снят!", "Успех");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при снятии бана: {ex.Message}", "Ошибка",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -345,6 +397,34 @@ namespace Biblio.AppForms
                 VisibilityHelper.ShowNewForm(this.FindForm(), form);
                 this.Hide();
             }
+        }
+
+        private void banButton_Click(object sender, EventArgs e)
+        {
+            var form = new UserBanForm(_currentUserId);
+            form.BanChanged += ShowBanButtons;
+            _dialogService.ShowDialogWithOverlay(this, form);
+        }
+
+        private void unBanButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Вы уверены, что хотите снять бан у этого пользователя?", 
+                "Подтвердите действие!", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question, 
+                MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                UnBanUser();
+            }
+        }
+
+        private void extendBanButton_Click(object sender, EventArgs e)
+        {
+            var form = new ExtendBanForm(_currentUserId);
+            form.DateChanged += ShowBanExpiration;
+            _dialogService.ShowDialogWithOverlay(this, form);
         }
     }
 }

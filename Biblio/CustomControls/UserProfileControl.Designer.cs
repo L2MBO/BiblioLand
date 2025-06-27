@@ -36,9 +36,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.registrationDateLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.statusPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statusPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,6 +66,7 @@
             this.mainPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.mainPanel.BorderRadius = 10;
             this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.statusPictureBox);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.nameLabel);
@@ -90,7 +93,7 @@
             // 
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(47, 16);
+            this.nameLabel.Location = new System.Drawing.Point(65, 16);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(134, 18);
             this.nameLabel.TabIndex = 1;
@@ -122,13 +125,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(241, 19);
+            this.label1.Location = new System.Drawing.Point(265, 18);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Супер администратор";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // statusPictureBox
+            // 
+            this.statusPictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.statusPictureBox.ImageRotate = 0F;
+            this.statusPictureBox.Location = new System.Drawing.Point(49, 20);
+            this.statusPictureBox.Name = "statusPictureBox";
+            this.statusPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.statusPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.statusPictureBox.TabIndex = 5;
+            this.statusPictureBox.TabStop = false;
             // 
             // UserProfileControl
             // 
@@ -146,6 +160,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.statusPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,5 +175,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label registrationDateLabel;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox statusPictureBox;
     }
 }

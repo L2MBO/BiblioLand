@@ -28,7 +28,13 @@ namespace Biblio.CustomControls
 
         private void LoadUserInfo()
         {
-            
+
+            statusPictureBox.FillColor = IsUserBaned() ? Color.Red : Color.FromArgb(0, 192, 0);
+        }
+
+        private bool IsUserBaned()
+        {
+            return Program.context.UserBans.Any(user => user.BanedUserID == _user.UserID);
         }
 
         private void UserProfileControl_Click(object sender, EventArgs e)
