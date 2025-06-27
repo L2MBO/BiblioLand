@@ -54,11 +54,19 @@ namespace Biblio.AppForms
             {
                 switch (state.DescriptionIndex)
                 {
-                    case 1: // Есть описание
+                    case 1: // Забанен
+                        query = query.Where(user => Program.context.UserBans.Any(ban => ban.BanedUserID == user.UserID));
+                        break;
+
+                    case 2: // Не забанен
+                        query = query.Where(user => !Program.context.UserBans.Any(ban => ban.BanedUserID == user.UserID));
+                        break;
+
+                    case 3: // Есть описание
                         query = query.Where(user => user.Description != null);
                         break;
 
-                    case 2: // Нет описания
+                    case 4: // Нет описания
                         query = query.Where(user => user.Description == null);
                         break;
                 }

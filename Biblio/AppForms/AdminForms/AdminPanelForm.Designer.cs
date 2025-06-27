@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanelForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.usersPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -59,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.mainPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -85,20 +85,6 @@
             this.BorderlessForm.DragForm = false;
             this.BorderlessForm.DragStartTransparencyValue = 0.4D;
             this.BorderlessForm.TransparentWhileDrag = true;
-            // 
-            // navigationControl
-            // 
-            this.navigationControl.AutoSize = true;
-            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navigationControl.leftPanel = null;
-            this.navigationControl.LeftPanelWidth = 0;
-            this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Name = "navigationControl";
-            this.navigationControl.rightPanel = null;
-            this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(726, 52);
-            this.navigationControl.TabIndex = 0;
             // 
             // mainPanel
             // 
@@ -159,7 +145,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 54);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(174, 36);
+            this.panel6.Size = new System.Drawing.Size(166, 36);
             this.panel6.TabIndex = 10;
             // 
             // searchPanel
@@ -176,7 +162,7 @@
             this.searchPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.searchPanel.Location = new System.Drawing.Point(0, 0);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(174, 36);
+            this.searchPanel.Size = new System.Drawing.Size(166, 36);
             this.searchPanel.TabIndex = 72;
             // 
             // panel2
@@ -188,7 +174,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(34, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(95, 36);
+            this.panel2.Size = new System.Drawing.Size(87, 36);
             this.panel2.TabIndex = 75;
             // 
             // searchTextField
@@ -215,7 +201,7 @@
             this.searchTextField.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.searchTextField.PlaceholderText = "По имени";
             this.searchTextField.SelectedText = "";
-            this.searchTextField.Size = new System.Drawing.Size(95, 28);
+            this.searchTextField.Size = new System.Drawing.Size(87, 28);
             this.searchTextField.TabIndex = 0;
             this.searchTextField.TextOffset = new System.Drawing.Point(0, -2);
             this.searchTextField.TextChanged += new System.EventHandler(this.searchTextField_TextChanged);
@@ -228,7 +214,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 32);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(95, 4);
+            this.guna2Panel3.Size = new System.Drawing.Size(87, 4);
             this.guna2Panel3.TabIndex = 1;
             // 
             // guna2Panel2
@@ -239,7 +225,7 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(95, 4);
+            this.guna2Panel2.Size = new System.Drawing.Size(87, 4);
             this.guna2Panel2.TabIndex = 0;
             // 
             // panel3
@@ -247,7 +233,7 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.clearTextButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(129, 0);
+            this.panel3.Location = new System.Drawing.Point(121, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(45, 36);
             this.panel3.TabIndex = 74;
@@ -295,7 +281,7 @@
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(174, 54);
+            this.panel9.Location = new System.Drawing.Point(166, 54);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(11, 36);
             this.panel9.TabIndex = 9;
@@ -316,12 +302,14 @@
             this.sortDescriptionComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.sortDescriptionComboBox.ItemHeight = 30;
             this.sortDescriptionComboBox.Items.AddRange(new object[] {
-            "По описанию",
+            "Доп. фильтры",
+            "Забанен",
+            "Не забанен",
             "Есть описание",
             "Нет описания"});
-            this.sortDescriptionComboBox.Location = new System.Drawing.Point(185, 54);
+            this.sortDescriptionComboBox.Location = new System.Drawing.Point(177, 54);
             this.sortDescriptionComboBox.Name = "sortDescriptionComboBox";
-            this.sortDescriptionComboBox.Size = new System.Drawing.Size(136, 36);
+            this.sortDescriptionComboBox.Size = new System.Drawing.Size(144, 36);
             this.sortDescriptionComboBox.StartIndex = 0;
             this.sortDescriptionComboBox.TabIndex = 8;
             this.sortDescriptionComboBox.TextOffset = new System.Drawing.Point(7, 0);
@@ -455,6 +443,20 @@
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(100, 378);
             this.leftPanel.TabIndex = 21;
+            // 
+            // navigationControl
+            // 
+            this.navigationControl.AutoSize = true;
+            this.navigationControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.navigationControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationControl.leftPanel = null;
+            this.navigationControl.LeftPanelWidth = 0;
+            this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Name = "navigationControl";
+            this.navigationControl.rightPanel = null;
+            this.navigationControl.RightPanelWidth = 0;
+            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.TabIndex = 0;
             // 
             // AdminPanelForm
             // 
