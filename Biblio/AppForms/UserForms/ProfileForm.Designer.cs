@@ -76,14 +76,14 @@
             this.userNameLabel = new System.Windows.Forms.Label();
             this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.banExpirationLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.arrowPanel = new System.Windows.Forms.Panel();
             this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.banExpirationLabel = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -101,9 +101,9 @@
             this.changeBanPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.flowLayoutPanel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.arrowPanel.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -589,7 +589,7 @@
             this.changeBanPanel.Controls.Add(this.extendBanButton);
             this.changeBanPanel.Location = new System.Drawing.Point(149, 30);
             this.changeBanPanel.Name = "changeBanPanel";
-            this.changeBanPanel.Size = new System.Drawing.Size(164, 55);
+            this.changeBanPanel.Size = new System.Drawing.Size(142, 55);
             this.changeBanPanel.TabIndex = 14;
             // 
             // unBanButton
@@ -608,7 +608,7 @@
             this.unBanButton.Location = new System.Drawing.Point(0, 0);
             this.unBanButton.Name = "unBanButton";
             this.unBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.unBanButton.Size = new System.Drawing.Size(164, 25);
+            this.unBanButton.Size = new System.Drawing.Size(142, 25);
             this.unBanButton.TabIndex = 12;
             this.unBanButton.Text = "Разбанить";
             this.unBanButton.Visible = false;
@@ -630,9 +630,9 @@
             this.extendBanButton.Location = new System.Drawing.Point(0, 30);
             this.extendBanButton.Name = "extendBanButton";
             this.extendBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.extendBanButton.Size = new System.Drawing.Size(164, 25);
+            this.extendBanButton.Size = new System.Drawing.Size(142, 25);
             this.extendBanButton.TabIndex = 13;
-            this.extendBanButton.Text = "Продлить/сократить бан";
+            this.extendBanButton.Text = "Обновить срок бана";
             this.extendBanButton.Visible = false;
             this.extendBanButton.Click += new System.EventHandler(this.extendBanButton_Click);
             // 
@@ -652,7 +652,7 @@
             this.banButton.Location = new System.Drawing.Point(148, 0);
             this.banButton.Name = "banButton";
             this.banButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.banButton.Size = new System.Drawing.Size(165, 25);
+            this.banButton.Size = new System.Drawing.Size(143, 25);
             this.banButton.TabIndex = 11;
             this.banButton.Text = "Забанить";
             this.banButton.Visible = false;
@@ -711,6 +711,26 @@
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(526, 27);
             this.flowLayoutPanel4.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.banExpirationLabel);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(424, 21);
+            this.panel2.TabIndex = 0;
+            // 
+            // banExpirationLabel
+            // 
+            this.banExpirationLabel.AutoSize = true;
+            this.banExpirationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.banExpirationLabel.ForeColor = System.Drawing.Color.Red;
+            this.banExpirationLabel.Location = new System.Drawing.Point(107, 2);
+            this.banExpirationLabel.Name = "banExpirationLabel";
+            this.banExpirationLabel.Size = new System.Drawing.Size(120, 16);
+            this.banExpirationLabel.TabIndex = 0;
+            this.banExpirationLabel.Text = "Забанен до: дата";
+            this.banExpirationLabel.Visible = false;
             // 
             // flowLayoutPanel3
             // 
@@ -784,26 +804,6 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.banExpirationLabel);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(424, 21);
-            this.panel2.TabIndex = 0;
-            // 
-            // banExpirationLabel
-            // 
-            this.banExpirationLabel.AutoSize = true;
-            this.banExpirationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.banExpirationLabel.ForeColor = System.Drawing.Color.Red;
-            this.banExpirationLabel.Location = new System.Drawing.Point(107, 2);
-            this.banExpirationLabel.Name = "banExpirationLabel";
-            this.banExpirationLabel.Size = new System.Drawing.Size(120, 16);
-            this.banExpirationLabel.TabIndex = 0;
-            this.banExpirationLabel.Text = "Забанен до: дата";
-            this.banExpirationLabel.Visible = false;
-            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -841,10 +841,10 @@
             this.changeBanPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.flowLayoutPanel4.ResumeLayout(false);
-            this.leftPanel.ResumeLayout(false);
-            this.arrowPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.leftPanel.ResumeLayout(false);
+            this.arrowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -95,6 +95,7 @@
             this.issueBanButton.Size = new System.Drawing.Size(130, 36);
             this.issueBanButton.TabIndex = 37;
             this.issueBanButton.Text = "Выдать бан";
+            this.issueBanButton.Click += new System.EventHandler(this.issueBanButton_Click);
             // 
             // label2
             // 
@@ -128,6 +129,7 @@
             this.closeButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.closeButton.Size = new System.Drawing.Size(33, 33);
             this.closeButton.TabIndex = 33;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // FormRounded
             // 
