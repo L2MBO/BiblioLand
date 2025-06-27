@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeRoleForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.banReasonComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.pastRoleLabel = new System.Windows.Forms.Label();
+            this.roleComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.changeRoleButton = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
@@ -57,43 +57,54 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.banReasonComboBox);
+            this.guna2Panel1.Controls.Add(this.pastRoleLabel);
+            this.guna2Panel1.Controls.Add(this.roleComboBox);
             this.guna2Panel1.Controls.Add(this.closeButton);
-            this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.changeRoleButton);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(245, 302);
+            this.guna2Panel1.Size = new System.Drawing.Size(245, 177);
             this.guna2Panel1.TabIndex = 4;
             // 
-            // banReasonComboBox
+            // pastRoleLabel
             // 
-            this.banReasonComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.banReasonComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.banReasonComboBox.BorderRadius = 17;
-            this.banReasonComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.banReasonComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.banReasonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.banReasonComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.banReasonComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.banReasonComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.banReasonComboBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.banReasonComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.banReasonComboBox.ForeColor = System.Drawing.Color.White;
-            this.banReasonComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.banReasonComboBox.ItemHeight = 30;
-            this.banReasonComboBox.Items.AddRange(new object[] {
+            this.pastRoleLabel.AutoSize = true;
+            this.pastRoleLabel.ForeColor = System.Drawing.Color.White;
+            this.pastRoleLabel.Location = new System.Drawing.Point(45, 63);
+            this.pastRoleLabel.Name = "pastRoleLabel";
+            this.pastRoleLabel.Size = new System.Drawing.Size(83, 13);
+            this.pastRoleLabel.TabIndex = 42;
+            this.pastRoleLabel.Text = "Прошлая роль:";
+            // 
+            // roleComboBox
+            // 
+            this.roleComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.roleComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roleComboBox.BorderRadius = 17;
+            this.roleComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roleComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.roleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.roleComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.roleComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roleComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.roleComboBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.roleComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.roleComboBox.ForeColor = System.Drawing.Color.White;
+            this.roleComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.roleComboBox.ItemHeight = 30;
+            this.roleComboBox.Items.AddRange(new object[] {
             "Пользователь",
             "Админ"});
-            this.banReasonComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.banReasonComboBox.Location = new System.Drawing.Point(35, 91);
-            this.banReasonComboBox.Name = "banReasonComboBox";
-            this.banReasonComboBox.Size = new System.Drawing.Size(181, 36);
-            this.banReasonComboBox.StartIndex = 0;
-            this.banReasonComboBox.TabIndex = 41;
-            this.banReasonComboBox.TabStop = false;
-            this.banReasonComboBox.TextOffset = new System.Drawing.Point(5, 0);
+            this.roleComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.roleComboBox.Location = new System.Drawing.Point(35, 79);
+            this.roleComboBox.Name = "roleComboBox";
+            this.roleComboBox.Size = new System.Drawing.Size(181, 36);
+            this.roleComboBox.StartIndex = 0;
+            this.roleComboBox.TabIndex = 41;
+            this.roleComboBox.TabStop = false;
+            this.roleComboBox.TextOffset = new System.Drawing.Point(5, 0);
+            this.roleComboBox.SelectedIndexChanged += new System.EventHandler(this.roleComboBox_SelectedIndexChanged);
             // 
             // closeButton
             // 
@@ -118,17 +129,6 @@
             this.closeButton.TabIndex = 33;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 15);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Новая роль пользователя";
-            // 
             // changeRoleButton
             // 
             this.changeRoleButton.Animated = true;
@@ -141,12 +141,13 @@
             this.changeRoleButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.changeRoleButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.changeRoleButton.ForeColor = System.Drawing.Color.White;
-            this.changeRoleButton.Location = new System.Drawing.Point(86, 137);
+            this.changeRoleButton.Location = new System.Drawing.Point(86, 130);
             this.changeRoleButton.Name = "changeRoleButton";
             this.changeRoleButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
             this.changeRoleButton.Size = new System.Drawing.Size(130, 36);
             this.changeRoleButton.TabIndex = 37;
             this.changeRoleButton.Text = "Сменить роль";
+            this.changeRoleButton.Click += new System.EventHandler(this.changeRoleButton_Click);
             // 
             // label2
             // 
@@ -164,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(246, 303);
+            this.ClientSize = new System.Drawing.Size(246, 178);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -182,9 +183,9 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm FormRounded;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2CircleButton closeButton;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button changeRoleButton;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox banReasonComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox roleComboBox;
+        private System.Windows.Forms.Label pastRoleLabel;
     }
 }

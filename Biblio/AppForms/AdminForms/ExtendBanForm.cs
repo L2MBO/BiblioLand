@@ -11,11 +11,11 @@ namespace Biblio.AppForms.AdminForms
         private int _banedUserId;
         private bool _banCalendarIsUncorect = false;
 
-        public ExtendBanForm(int reportedUserId)
+        public ExtendBanForm(int banedUserId)
         {
             InitializeComponent();
 
-            _banedUserId = reportedUserId;
+            _banedUserId = banedUserId;
 
             SetExtenedBanFormStyle();
         }

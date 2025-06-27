@@ -76,6 +76,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.changeRoleButton = new Guna.UI2.WinForms.Guna2Button();
             this.changeBanPanel = new System.Windows.Forms.Panel();
             this.unBanButton = new Guna.UI2.WinForms.Guna2Button();
             this.extendBanButton = new Guna.UI2.WinForms.Guna2Button();
@@ -92,7 +93,6 @@
             this.arrowPanel = new System.Windows.Forms.Panel();
             this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.changeRoleButton = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -682,6 +682,28 @@
             this.panel3.Size = new System.Drawing.Size(441, 85);
             this.panel3.TabIndex = 10;
             // 
+            // changeRoleButton
+            // 
+            this.changeRoleButton.Animated = true;
+            this.changeRoleButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.changeRoleButton.BorderRadius = 12;
+            this.changeRoleButton.BorderThickness = 1;
+            this.changeRoleButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.changeRoleButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.changeRoleButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.changeRoleButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.changeRoleButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.changeRoleButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.changeRoleButton.ForeColor = System.Drawing.Color.White;
+            this.changeRoleButton.Location = new System.Drawing.Point(297, 0);
+            this.changeRoleButton.Name = "changeRoleButton";
+            this.changeRoleButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.changeRoleButton.Size = new System.Drawing.Size(143, 25);
+            this.changeRoleButton.TabIndex = 15;
+            this.changeRoleButton.Text = "Сменить роль";
+            this.changeRoleButton.Visible = false;
+            this.changeRoleButton.Click += new System.EventHandler(this.changeRoleButton_Click);
+            // 
             // changeBanPanel
             // 
             this.changeBanPanel.Controls.Add(this.unBanButton);
@@ -901,28 +923,6 @@
             this.navigationControl.RightPanelWidth = 0;
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
-            // 
-            // changeRoleButton
-            // 
-            this.changeRoleButton.Animated = true;
-            this.changeRoleButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.changeRoleButton.BorderRadius = 12;
-            this.changeRoleButton.BorderThickness = 1;
-            this.changeRoleButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.changeRoleButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.changeRoleButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.changeRoleButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.changeRoleButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.changeRoleButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.changeRoleButton.ForeColor = System.Drawing.Color.White;
-            this.changeRoleButton.Location = new System.Drawing.Point(297, 0);
-            this.changeRoleButton.Name = "changeRoleButton";
-            this.changeRoleButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.changeRoleButton.Size = new System.Drawing.Size(143, 25);
-            this.changeRoleButton.TabIndex = 15;
-            this.changeRoleButton.Text = "Сменить роль";
-            this.changeRoleButton.Visible = false;
-            this.changeRoleButton.Click += new System.EventHandler(this.changeRoleButton_Click);
             // 
             // ProfileForm
             // 

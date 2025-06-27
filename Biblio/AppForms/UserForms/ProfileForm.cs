@@ -202,7 +202,7 @@ namespace Biblio.AppForms
 
             if (currentUser != null && _currentUserId != Program.CurrentUser.UserID)
             {
-                changeRoleButton.Visible = currentUser.UserRoleID == 3;
+                changeRoleButton.Visible = currentUser.UserRoleID == 3 && _currentUser.UserRoleID != 3;
                 settingsButton.Visible = false;
                 ShowBanButtons();
             }
@@ -405,7 +405,7 @@ namespace Biblio.AppForms
         }
 
         private void arrrowButton_Click(object sender, EventArgs e)
-        {
+        {//
             if (_backForm != null)
             {
                 _backForm.StartPosition = FormStartPosition.Manual;
@@ -452,7 +452,8 @@ namespace Biblio.AppForms
 
         private void changeRoleButton_Click(object sender, EventArgs e)
         {
-
+            var form = new ChangeRoleForm(_currentUserId);
+            _dialogService.ShowDialogWithOverlay(this, form);
         }
     }
 }
