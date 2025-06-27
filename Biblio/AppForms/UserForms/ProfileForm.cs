@@ -12,7 +12,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar;
 
 namespace Biblio.AppForms
 {
@@ -431,10 +430,10 @@ namespace Biblio.AppForms
 
         private void unBanButton_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Вы уверены, что хотите снять бан у этого пользователя?", 
-                "Подтвердите действие!", 
-                MessageBoxButtons.YesNo, 
-                MessageBoxIcon.Question, 
+            var result = MessageBox.Show("Вы уверены, что хотите снять бан у этого пользователя?",
+                "Подтвердите действие!",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.Yes)

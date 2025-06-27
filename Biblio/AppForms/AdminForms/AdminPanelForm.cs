@@ -13,6 +13,8 @@ namespace Biblio.AppForms
 {
     public partial class AdminPanelForm : Form
     {
+        private List<Users> _currentUsers;
+
         public AdminPanelForm()
         {
             InitializeComponent();
@@ -27,13 +29,19 @@ namespace Biblio.AppForms
 
             AutoScrollHelper.ConfigureScrollbars(usersPanel, disableHorizontal: true, disableVertical: true);
 
+            sortComboBox.SelectedIndex = FilterContext.CurrentFilterState.SortIndex;
+            searchTextField.Text = FilterContext.CurrentFilterState.SearchQuery;
+            sortDescriptionComboBox.SelectedIndex = FilterContext.CurrentFilterState.DescriptionIndex;
+
             UpdateSortButtons();
             ApplyFiltersAndSort();
+            this.SizeChanged += (s, e) => UpdateControlsSize();
         }
 
         private void UpdateSortButtons()
         {
-            
+            ascendingButton.Visible = !FilterContext.CurrentFilterState.IsDescending;
+            descendingButton.Visible = FilterContext.CurrentFilterState.IsDescending;
         }
 
         private void ApplyFiltersAndSort()
@@ -111,6 +119,7 @@ namespace Biblio.AppForms
 
         private void UpdateUsersList(List<Users> users)
         {
+            _currentUsers = users;
             usersPanel.Controls.Clear();
 
             if (users.Count > 0)
@@ -118,8 +127,9 @@ namespace Biblio.AppForms
                 foreach (Users user in users)
                 {
                     var userControl = new UserProfileControl(user);
-                    userControl.Margin = new Padding(10);
+                    userControl.Margin = new Padding(0, 0, 0, 10);
                     userControl.UserClicked += UserControl_UserClicked;
+                    UpdateControlSize(userControl);
                     usersPanel.Controls.Add(userControl);
                 }
                 usersPanel.BackgroundImage = null;
@@ -148,6 +158,26 @@ namespace Biblio.AppForms
                 ascendingButton.Location = new Point(169, 8);
                 searchTextField.PlaceholderText = "По имени";
             }
+
+            UpdateControlsSize();
+        }
+
+        private void UpdateControlsSize()
+        {
+            if (_currentUsers == null) return;
+
+            foreach (Control control in usersPanel.Controls)
+            {
+                if (control is UserProfileControl userControl)
+                {
+                    UpdateControlSize(userControl);
+                }
+            }
+        }
+
+        private void UpdateControlSize(UserProfileControl control)
+        {
+            control.Width = this.WindowState == FormWindowState.Maximized ? 1320 : 526;
         }
 
         private void AdminPanelForm_Resize(object sender, EventArgs e)

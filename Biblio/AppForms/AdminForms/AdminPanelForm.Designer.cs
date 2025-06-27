@@ -328,9 +328,9 @@
             this.sortPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.sortPanel.BorderRadius = 17;
             this.sortPanel.BorderThickness = 1;
-            this.sortPanel.Controls.Add(this.descendingButton);
             this.sortPanel.Controls.Add(this.ascendingButton);
             this.sortPanel.Controls.Add(this.sortComboBox);
+            this.sortPanel.Controls.Add(this.descendingButton);
             this.sortPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.sortPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.sortPanel.Location = new System.Drawing.Point(332, 54);
@@ -349,6 +349,7 @@
             this.descendingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.descendingButton.TabIndex = 2;
             this.descendingButton.TabStop = false;
+            this.descendingButton.Visible = false;
             this.descendingButton.Click += new System.EventHandler(this.descendingButton_Click);
             // 
             // ascendingButton
@@ -362,7 +363,6 @@
             this.ascendingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ascendingButton.TabIndex = 1;
             this.ascendingButton.TabStop = false;
-            this.ascendingButton.Visible = false;
             this.ascendingButton.Click += new System.EventHandler(this.ascendingButton_Click);
             // 
             // sortComboBox

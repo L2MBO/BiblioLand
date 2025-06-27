@@ -13,7 +13,7 @@ namespace Biblio.AppForms
 {
     public partial class BookmarksForm : Form
     {
-        private static int _currentUserId = Program.CurrentUser.UserID;
+        private int _currentUserId = Program.CurrentUser.UserID;
         private string _currentSortMode = "reading";
 
         public BookmarksForm()

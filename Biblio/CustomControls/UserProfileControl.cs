@@ -1,15 +1,9 @@
 ﻿using Biblio.Classes.Images.InstallingImages;
 using Biblio.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.CustomControls
 {
@@ -30,9 +24,13 @@ namespace Biblio.CustomControls
         private void LoadUserInfo()
         {
             ImageLoader.LoadAvatarImageFromUserID(_currentUser.UserID, avatarPictureBox);
-            nameLabel.Text = _currentUser.Username;
-            registrationDateLabel.Text = _currentUser.RegistrationDate?.ToShortDateString() ?? DateTime.Now.ToString();
             statusPictureBox.FillColor = IsUserBaned() ? Color.Red : Color.FromArgb(0, 192, 0);
+            nameLabel.Text = _currentUser.Username;
+            roleLabel.Text = _currentUser.UserRoles.RoleName;
+            roleLabel.ForeColor = _currentUser.UserRoleID == 1 ? Color.White
+                                : _currentUser.UserRoleID == 2 ? Color.Red
+                                : Color.FromArgb(60, 132, 246);
+            registrationDateLabel.Text = _currentUser.RegistrationDate?.ToShortDateString() ?? DateTime.Now.ToString();
         }
 
         private bool IsUserBaned()

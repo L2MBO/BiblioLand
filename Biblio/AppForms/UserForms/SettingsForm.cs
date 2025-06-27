@@ -16,8 +16,8 @@ namespace Biblio.AppForms
     public partial class SettingsForm : Form
     {
         private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
-        private static int _currentUserId = Program.CurrentUser.UserID;
-        private Users _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+        private int _currentUserId = Program.CurrentUser.UserID;
+        private Users _currentUser;
         private static readonly Regex _onlyEnglishChars = new Regex(@"^[A-Za-z\d\W_]+$");
         private static readonly Regex _whitespaceRegex = new Regex(@"\s+");
         private string _base64Avatar;
@@ -26,6 +26,8 @@ namespace Biblio.AppForms
         public SettingsForm()
         {
             InitializeComponent();
+
+            _currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
 
             SetFormStyle();
         }

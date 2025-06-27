@@ -54,6 +54,14 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.descriptionPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.registrationDateLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -84,20 +92,15 @@
             this.arrowPanel = new System.Windows.Forms.Panel();
             this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.descriptionPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bookmarksButtonPanel.SuspendLayout();
             this.buttonPanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.descriptionPanel.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -112,8 +115,6 @@
             this.panel2.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.arrowPanel.SuspendLayout();
-            this.descriptionPanel.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessForm
@@ -435,6 +436,92 @@
             this.panel4.Size = new System.Drawing.Size(260, 238);
             this.panel4.TabIndex = 24;
             // 
+            // descriptionPanel
+            // 
+            this.descriptionPanel.AutoSize = true;
+            this.descriptionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.descriptionPanel.BorderRadius = 15;
+            this.descriptionPanel.BorderThickness = 1;
+            this.descriptionPanel.Controls.Add(this.descriptionLabel);
+            this.descriptionPanel.Controls.Add(this.panel17);
+            this.descriptionPanel.Controls.Add(this.panel16);
+            this.descriptionPanel.Controls.Add(this.panel15);
+            this.descriptionPanel.Controls.Add(this.panel14);
+            this.descriptionPanel.Controls.Add(this.panel5);
+            this.descriptionPanel.Location = new System.Drawing.Point(0, 172);
+            this.descriptionPanel.MinimumSize = new System.Drawing.Size(254, 64);
+            this.descriptionPanel.Name = "descriptionPanel";
+            this.descriptionPanel.Size = new System.Drawing.Size(254, 64);
+            this.descriptionPanel.TabIndex = 4;
+            this.descriptionPanel.Visible = false;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(10, 24);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(234, 27);
+            this.descriptionLabel.TabIndex = 8;
+            this.descriptionLabel.TextChanged += new System.EventHandler(this.DescriptionLabel_TextChanged);
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Transparent;
+            this.panel17.Controls.Add(this.label6);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(10, 10);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(234, 14);
+            this.panel17.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(-2, -1);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Описание";
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Transparent;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(10, 54);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(234, 10);
+            this.panel16.TabIndex = 6;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(10, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(234, 10);
+            this.panel15.TabIndex = 5;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Transparent;
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(10, 64);
+            this.panel14.TabIndex = 4;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(244, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 64);
+            this.panel5.TabIndex = 3;
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -584,6 +671,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.guna2Button1);
             this.panel3.Controls.Add(this.changeBanPanel);
             this.panel3.Controls.Add(this.banButton);
             this.panel3.Controls.Add(this.settingsButton);
@@ -814,91 +902,26 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
             // 
-            // descriptionPanel
+            // guna2Button1
             // 
-            this.descriptionPanel.AutoSize = true;
-            this.descriptionPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.descriptionPanel.BorderRadius = 15;
-            this.descriptionPanel.BorderThickness = 1;
-            this.descriptionPanel.Controls.Add(this.descriptionLabel);
-            this.descriptionPanel.Controls.Add(this.panel17);
-            this.descriptionPanel.Controls.Add(this.panel16);
-            this.descriptionPanel.Controls.Add(this.panel15);
-            this.descriptionPanel.Controls.Add(this.panel14);
-            this.descriptionPanel.Controls.Add(this.panel5);
-            this.descriptionPanel.Location = new System.Drawing.Point(0, 172);
-            this.descriptionPanel.MinimumSize = new System.Drawing.Size(254, 64);
-            this.descriptionPanel.Name = "descriptionPanel";
-            this.descriptionPanel.Size = new System.Drawing.Size(254, 64);
-            this.descriptionPanel.TabIndex = 4;
-            this.descriptionPanel.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(244, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 64);
-            this.panel5.TabIndex = 3;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Transparent;
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(10, 64);
-            this.panel14.TabIndex = 4;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Transparent;
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(10, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(234, 10);
-            this.panel15.TabIndex = 5;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.Transparent;
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(10, 54);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(234, 10);
-            this.panel16.TabIndex = 6;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.Transparent;
-            this.panel17.Controls.Add(this.label6);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(10, 10);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(234, 14);
-            this.panel17.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(-2, -1);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Описание";
-            // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
-            this.descriptionLabel.Location = new System.Drawing.Point(10, 24);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(234, 27);
-            this.descriptionLabel.TabIndex = 8;
-            this.descriptionLabel.TextChanged += new System.EventHandler(this.DescriptionLabel_TextChanged);
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Button1.BorderRadius = 12;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(297, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.guna2Button1.Size = new System.Drawing.Size(143, 25);
+            this.guna2Button1.TabIndex = 15;
+            this.guna2Button1.Text = "Сменить роль";
+            this.guna2Button1.Visible = false;
             // 
             // ProfileForm
             // 
@@ -924,6 +947,9 @@
             this.buttonPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.descriptionPanel.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -942,9 +968,6 @@
             this.panel2.PerformLayout();
             this.leftPanel.ResumeLayout(false);
             this.arrowPanel.ResumeLayout(false);
-            this.descriptionPanel.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1014,5 +1037,6 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel16;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

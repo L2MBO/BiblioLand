@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Biblio.Classes.SaveUserSettings
+﻿namespace Biblio.Classes.SaveUserSettings
 {
     internal class SaveAdminFilter
     {
@@ -20,8 +14,8 @@ namespace Biblio.Classes.SaveUserSettings
         {
             public static FilterState _currentFilterState { get; set; } = new FilterState
             {
-                SortIndex = 2, // По умолчанию
-                IsDescending = true, // По умолчанию
+                SortIndex = 0, // По умолчанию
+                IsDescending = false, // По умолчанию
                 SearchQuery = "", // По умолчанию
                 DescriptionIndex = 0 // По умолчанию (не выбрано)
             };
