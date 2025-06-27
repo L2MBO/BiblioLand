@@ -25,7 +25,6 @@ namespace Biblio.AppForms
         private Users _currentUser;
         private int _sendReportUserId = Program.CurrentUser.UserID;
         private string _currentSortMode = "reading";
-        //private bool _isUserAdmin = false;
 
         public ProfileForm(int currentUserId, bool needArrow = false, Form backForm = null)
         {
@@ -50,7 +49,7 @@ namespace Biblio.AppForms
 
             userNameLabel.Text = _currentUser.Username;
 
-            SetStatisticsCount();
+            SetStatistics();
             SetActiveButton(readingButton);
             ShowBookmarks();
             ChangeSettingsButtonImage();
@@ -67,15 +66,18 @@ namespace Biblio.AppForms
             }
         }
 
-        private void SetStatisticsCount()
+        private void SetStatistics()
         {
             var likesCount = Program.context.Likes.Where(user => user.UserID == _currentUserId).Count();
             var commentsCount = Program.context.Reviews.Where(user => user.UserID == _currentUserId).Count();
             var registrationDate = _currentUser.RegistrationDate;
+            var description = _currentUser.Description;
 
             likesCountLabel.Text = likesCount.ToString();
             commentsCountLabel.Text = commentsCount.ToString();
             registrationDateLabel.Text = registrationDate?.ToShortDateString() ?? DateTime.Now.ToString();
+            descriptionPanel.Visible = description != null;
+            descriptionLabel.Text = description;
         }
 
         private Dictionary<int, int> GetBookCountsByCategory()
@@ -199,7 +201,7 @@ namespace Biblio.AppForms
         {
             var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == Program.CurrentUser.UserID && user.UserRoleID != 1);
 
-            if (currentUser != null)
+            if (currentUser != null && _currentUserId != Program.CurrentUser.UserID)
             {
                 settingsButton.Visible = false;
                 ShowBanButtons();
@@ -361,6 +363,27 @@ namespace Biblio.AppForms
             SetActiveButton(postponedButton);
             _currentSortMode = "postponed";
             ShowPostponedBookmarks();
+        }
+
+        private void DescriptionLabel_TextChanged(object sender, EventArgs e)
+        {
+            int labelWidth = descriptionLabel.Width;
+
+            int preferredHeight = CalculateLabelHeight(descriptionLabel.Text, descriptionLabel.Font, labelWidth);
+
+            descriptionLabel.Height = preferredHeight;
+
+            descriptionPanel.PerformLayout();
+        }
+
+        private int CalculateLabelHeight(string text, Font font, int width)
+        {
+            using (Graphics graphics = this.CreateGraphics())
+            {
+                SizeF textSize = TextRenderer.MeasureText(text, font, new Size(width, 0), TextFormatFlags.WordBreak);
+
+                return (int)Math.Ceiling(textSize.Height);
+            }
         }
 
         private void BookControl_BookClicked(object sender, Books book)
