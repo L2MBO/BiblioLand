@@ -27,7 +27,7 @@ namespace Biblio.AppForms
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
 
-            AutoScrollHelper.ConfigureScrollbars(usersPanel, disableHorizontal: true, disableVertical: true);
+            AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: true, disableVertical: true);
 
             sortComboBox.SelectedIndex = FilterContext.CurrentFilterState.SortIndex;
             searchTextField.Text = FilterContext.CurrentFilterState.SearchQuery;

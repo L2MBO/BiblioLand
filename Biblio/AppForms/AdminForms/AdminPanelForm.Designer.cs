@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanelForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.usersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -50,17 +48,17 @@
             this.sortDescriptionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.sortPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.descendingButton = new System.Windows.Forms.PictureBox();
             this.ascendingButton = new System.Windows.Forms.PictureBox();
             this.sortComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.descendingButton = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
+            this.usersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.searchPanel.SuspendLayout();
@@ -70,8 +68,8 @@
             this.glasPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).BeginInit();
             this.sortPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.descendingButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ascendingButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descendingButton)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +86,7 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.panel8);
+            this.mainPanel.Controls.Add(this.usersPanel);
             this.mainPanel.Controls.Add(this.panel7);
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.rightPanel);
@@ -98,24 +96,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 2;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.usersPanel);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(100, 100);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(526, 278);
-            this.panel8.TabIndex = 73;
-            // 
-            // usersPanel
-            // 
-            this.usersPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.usersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usersPanel.Location = new System.Drawing.Point(0, 0);
-            this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(526, 278);
-            this.usersPanel.TabIndex = 74;
             // 
             // panel7
             // 
@@ -338,20 +318,6 @@
             this.sortPanel.Size = new System.Drawing.Size(194, 36);
             this.sortPanel.TabIndex = 4;
             // 
-            // descendingButton
-            // 
-            this.descendingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.descendingButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.descendingButton.Image = global::Biblio.Properties.Resources.descendingArrow;
-            this.descendingButton.Location = new System.Drawing.Point(169, 8);
-            this.descendingButton.Name = "descendingButton";
-            this.descendingButton.Size = new System.Drawing.Size(14, 20);
-            this.descendingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.descendingButton.TabIndex = 2;
-            this.descendingButton.TabStop = false;
-            this.descendingButton.Visible = false;
-            this.descendingButton.Click += new System.EventHandler(this.descendingButton_Click);
-            // 
             // ascendingButton
             // 
             this.ascendingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
@@ -392,6 +358,20 @@
             this.sortComboBox.TabIndex = 0;
             this.sortComboBox.TextOffset = new System.Drawing.Point(7, 0);
             this.sortComboBox.SelectedIndexChanged += new System.EventHandler(this.sortComboBox_SelectedIndexChanged);
+            // 
+            // descendingButton
+            // 
+            this.descendingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.descendingButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.descendingButton.Image = global::Biblio.Properties.Resources.descendingArrow;
+            this.descendingButton.Location = new System.Drawing.Point(169, 8);
+            this.descendingButton.Name = "descendingButton";
+            this.descendingButton.Size = new System.Drawing.Size(14, 20);
+            this.descendingButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.descendingButton.TabIndex = 2;
+            this.descendingButton.TabStop = false;
+            this.descendingButton.Visible = false;
+            this.descendingButton.Click += new System.EventHandler(this.descendingButton_Click);
             // 
             // panel4
             // 
@@ -458,6 +438,16 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
             // 
+            // usersPanel
+            // 
+            this.usersPanel.AutoSize = true;
+            this.usersPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.usersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usersPanel.Location = new System.Drawing.Point(100, 100);
+            this.usersPanel.Name = "usersPanel";
+            this.usersPanel.Size = new System.Drawing.Size(526, 0);
+            this.usersPanel.TabIndex = 75;
+            // 
             // AdminPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,7 +464,7 @@
             this.SizeChanged += new System.EventHandler(this.AdminPanelForm_SizeChanged);
             this.Resize += new System.EventHandler(this.AdminPanelForm_Resize);
             this.mainPanel.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
@@ -484,8 +474,8 @@
             this.glasPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.glasPictureBox)).EndInit();
             this.sortPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.descendingButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ascendingButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.descendingButton)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -499,8 +489,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessForm;
         private CustomControls.NavigationControl navigationControl;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.FlowLayoutPanel usersPanel;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
@@ -525,5 +513,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel leftPanel;
+        private System.Windows.Forms.FlowLayoutPanel usersPanel;
     }
 }
