@@ -92,7 +92,7 @@
             this.arrowPanel = new System.Windows.Forms.Panel();
             this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.changeRoleButton = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -671,7 +671,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.guna2Button1);
+            this.panel3.Controls.Add(this.changeRoleButton);
             this.panel3.Controls.Add(this.changeBanPanel);
             this.panel3.Controls.Add(this.banButton);
             this.panel3.Controls.Add(this.settingsButton);
@@ -902,26 +902,27 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
             // 
-            // guna2Button1
+            // changeRoleButton
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button1.BorderRadius = 12;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(297, 0);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.guna2Button1.Size = new System.Drawing.Size(143, 25);
-            this.guna2Button1.TabIndex = 15;
-            this.guna2Button1.Text = "Сменить роль";
-            this.guna2Button1.Visible = false;
+            this.changeRoleButton.Animated = true;
+            this.changeRoleButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.changeRoleButton.BorderRadius = 12;
+            this.changeRoleButton.BorderThickness = 1;
+            this.changeRoleButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.changeRoleButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.changeRoleButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.changeRoleButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.changeRoleButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.changeRoleButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.changeRoleButton.ForeColor = System.Drawing.Color.White;
+            this.changeRoleButton.Location = new System.Drawing.Point(297, 0);
+            this.changeRoleButton.Name = "changeRoleButton";
+            this.changeRoleButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.changeRoleButton.Size = new System.Drawing.Size(143, 25);
+            this.changeRoleButton.TabIndex = 15;
+            this.changeRoleButton.Text = "Сменить роль";
+            this.changeRoleButton.Visible = false;
+            this.changeRoleButton.Click += new System.EventHandler(this.changeRoleButton_Click);
             // 
             // ProfileForm
             // 
@@ -1037,6 +1038,6 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel16;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button changeRoleButton;
     }
 }

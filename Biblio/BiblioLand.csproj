@@ -132,6 +132,12 @@
     <Compile Include="AppForms\AdminForms\AdminPanelForm.Designer.cs">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\AdminForms\ChangeRoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AdminForms\ChangeRoleForm.Designer.cs">
+      <DependentUpon>ChangeRoleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\AdminForms\ExtendBanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AdminForms\AdminPanelForm.resx">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AdminForms\ChangeRoleForm.resx">
+      <DependentUpon>ChangeRoleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AdminForms\ExtendBanForm.resx">
       <DependentUpon>ExtendBanForm.cs</DependentUpon>

@@ -202,6 +202,7 @@ namespace Biblio.AppForms
 
             if (currentUser != null && _currentUserId != Program.CurrentUser.UserID)
             {
+                changeRoleButton.Visible = currentUser.UserRoleID == 3;
                 settingsButton.Visible = false;
                 ShowBanButtons();
             }
@@ -447,6 +448,11 @@ namespace Biblio.AppForms
             var form = new ExtendBanForm(_currentUserId);
             form.DateChanged += ShowBanExpiration;
             _dialogService.ShowDialogWithOverlay(this, form);
+        }
+
+        private void changeRoleButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

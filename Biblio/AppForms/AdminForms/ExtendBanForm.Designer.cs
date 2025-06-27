@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExtendBanForm));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.banCalendar = new System.Windows.Forms.MonthCalendar();
-            this.issueBanButton = new Guna.UI2.WinForms.Guna2Button();
+            this.changeDateButton = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,66 +48,12 @@
             this.guna2Panel1.Controls.Add(this.closeButton);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.banCalendar);
-            this.guna2Panel1.Controls.Add(this.issueBanButton);
+            this.guna2Panel1.Controls.Add(this.changeDateButton);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(245, 302);
             this.guna2Panel1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(47, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 15);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Дата окончания бана";
-            // 
-            // banCalendar
-            // 
-            this.banCalendar.BackColor = System.Drawing.Color.White;
-            this.banCalendar.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.banCalendar.Location = new System.Drawing.Point(41, 79);
-            this.banCalendar.MaxSelectionCount = 1;
-            this.banCalendar.MinDate = new System.DateTime(2025, 6, 25, 0, 0, 0, 0);
-            this.banCalendar.Name = "banCalendar";
-            this.banCalendar.ShowTodayCircle = false;
-            this.banCalendar.TabIndex = 38;
-            this.banCalendar.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            // 
-            // issueBanButton
-            // 
-            this.issueBanButton.Animated = true;
-            this.issueBanButton.BorderRadius = 17;
-            this.issueBanButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.issueBanButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.issueBanButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.issueBanButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.issueBanButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.issueBanButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.issueBanButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.issueBanButton.ForeColor = System.Drawing.Color.White;
-            this.issueBanButton.Location = new System.Drawing.Point(75, 253);
-            this.issueBanButton.Name = "issueBanButton";
-            this.issueBanButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.issueBanButton.Size = new System.Drawing.Size(130, 36);
-            this.issueBanButton.TabIndex = 37;
-            this.issueBanButton.Text = "Выдать бан";
-            this.issueBanButton.Click += new System.EventHandler(this.issueBanButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(25, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 20);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Обновить сроки бана";
             // 
             // closeButton
             // 
@@ -131,6 +78,60 @@
             this.closeButton.TabIndex = 33;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(47, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 15);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Дата окончания бана";
+            // 
+            // banCalendar
+            // 
+            this.banCalendar.BackColor = System.Drawing.Color.White;
+            this.banCalendar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.banCalendar.Location = new System.Drawing.Point(41, 79);
+            this.banCalendar.MaxSelectionCount = 1;
+            this.banCalendar.MinDate = new System.DateTime(2025, 6, 25, 0, 0, 0, 0);
+            this.banCalendar.Name = "banCalendar";
+            this.banCalendar.ShowTodayCircle = false;
+            this.banCalendar.TabIndex = 38;
+            this.banCalendar.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            // 
+            // changeDateButton
+            // 
+            this.changeDateButton.Animated = true;
+            this.changeDateButton.BorderRadius = 17;
+            this.changeDateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.changeDateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.changeDateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.changeDateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.changeDateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.changeDateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.changeDateButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeDateButton.ForeColor = System.Drawing.Color.White;
+            this.changeDateButton.Location = new System.Drawing.Point(75, 253);
+            this.changeDateButton.Name = "changeDateButton";
+            this.changeDateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
+            this.changeDateButton.Size = new System.Drawing.Size(130, 36);
+            this.changeDateButton.TabIndex = 37;
+            this.changeDateButton.Text = "Обновить дату";
+            this.changeDateButton.Click += new System.EventHandler(this.issueBanButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(25, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 20);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Обновить сроки бана";
+            // 
             // FormRounded
             // 
             this.FormRounded.AnimateWindow = true;
@@ -151,7 +152,9 @@
             this.ClientSize = new System.Drawing.Size(246, 303);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExtendBanForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExtendBanForm";
             this.guna2Panel1.ResumeLayout(false);
@@ -165,7 +168,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton closeButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar banCalendar;
-        private Guna.UI2.WinForms.Guna2Button issueBanButton;
+        private Guna.UI2.WinForms.Guna2Button changeDateButton;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormRounded;
     }
