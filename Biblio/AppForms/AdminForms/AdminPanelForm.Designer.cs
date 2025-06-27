@@ -395,6 +395,7 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "По никнейму",
             "По дате регистрации",
+            "По длине описания",
             "По роли"});
             this.sortComboBox.Location = new System.Drawing.Point(0, 0);
             this.sortComboBox.Name = "sortComboBox";

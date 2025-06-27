@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static Biblio.Classes.SaveUserSettings.SaveUserFilter;
+using static Biblio.Classes.SaveUserSettings.SaveAdminFilter;
 
 namespace Biblio.AppForms
 {
@@ -39,72 +39,80 @@ namespace Biblio.AppForms
         private void ApplyFiltersAndSort()
         {
             var state = FilterContext.CurrentFilterState;
-            IQueryable<Books> query = Program.context.Books;
+            IQueryable<Users> query = Program.context.Users;
 
             // Применяем фильтр по поиску
             if (!string.IsNullOrEmpty(state.SearchQuery))
             {
                 string searchLower = state.SearchQuery.ToLower();
-                query = query.Where(book =>
-                    book.Title.ToLower().Contains(searchLower) ||
-                    book.Author.ToLower().Contains(searchLower));
+                query = query.Where(user =>
+                    user.Username.ToLower().Contains(searchLower));
             }
 
-            // Применяем фильтр по жанру (если выбран)
-            if (state.GenreIndex > 0)
+            // Применяем фильтр по описанию (если выбран)
+            if (state.DescriptionIndex > 0)
             {
-                query = query.Where(book => book.GenreID == state.GenreIndex);
+                switch (state.DescriptionIndex)
+                {
+                    case 1: // Есть описание
+                        query = query.Where(user => user.Descriotion != null);
+                        break;
+
+                    case 2: // Нет описания
+                        query = query.Where(user => user.Descriotion == null);
+                        break;
+                }
             }
 
             // Применяем сортировку
             switch (state.SortIndex)
             {
-                case 0: // По новизне
+                case 0: // По имени
                     query = state.IsDescending
-                        ? query.OrderByDescending(book => book.AddedDate)
-                        : query.OrderBy(book => book.AddedDate);
+                        ? query.OrderByDescending(user => user.Username)
+                        : query.OrderBy(user => user.Username);
                     break;
 
-                case 1: // По количеству оценок
+                case 1: // По дате регистрации
                     query = state.IsDescending
-                        ? query.OrderByDescending(book => Program.context.Rating.Count(r => r.BookID == book.BookID))
-                        : query.OrderBy(book => Program.context.Rating.Count(r => r.BookID == book.BookID));
+                        ? query.OrderByDescending(user => user.RegistrationDate)
+                        : query.OrderBy(user => user.RegistrationDate);
                     break;
 
-                case 2: // По популярности
+                case 2: // По длине описания
                     query = state.IsDescending
-                        ? query.OrderByDescending(book => Program.context.Reviews.Count(r => r.BookID == book.BookID))
-                        : query.OrderBy(book => Program.context.Reviews.Count(r => r.BookID == book.BookID));
+                        ? query.OrderByDescending(user => user.Descriotion)
+                        : query.OrderBy(user => user.Descriotion);
                     break;
 
-                case 3: // По оценке
+                case 3: // По роли
                     query = state.IsDescending
-                        ? query.OrderByDescending(book => book.AverageRating)
-                        : query.OrderBy(book => book.AverageRating);
+                        ? query.OrderByDescending(user => user.UserRoleID)
+                        : query.OrderBy(user => user.UserRoleID);
                     break;
 
                 default:
                     query = state.IsDescending
-                        ? query.OrderByDescending(book => book.AverageRating)
-                        : query.OrderBy(book => book.AverageRating);
+                        ? query.OrderByDescending(user => user.Username)
+                        : query.OrderBy(user => user.Username);
                     break;
             }
 
-            UpdateBooksList(query.ToList());
+            UpdateUsersList(query.ToList());
         }
 
-        private void UpdateBooksList(List<Books> books)
+        private void UpdateUsersList(List<Users> users)
         {
             usersPanel.Controls.Clear();
 
-            if (books.Count > 0)
+            if (users.Count > 0)
             {
-                foreach (Books book in books)
+                foreach (Users user in users)
                 {
-                    var bookControl = new MainControl(book);
-                    bookControl.Margin = new Padding(10);
-                    bookControl.BookClicked += UserControl_UserClicked;
-                    usersPanel.Controls.Add(bookControl);
+                    var userControl = new MainControl(user);
+                    userControl.Margin = new Padding(10);
+                    userControl.BookClicked += UserControl_UserClicked;
+                    usersPanel.Controls.Add(userControl);
                 }
                 usersPanel.BackgroundImage = null;
             }
@@ -154,7 +162,7 @@ namespace Biblio.AppForms
 
         private void sortDescriptionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FilterContext.CurrentFilterState.GenreIndex = sortDescriptionComboBox.SelectedIndex;
+            FilterContext.CurrentFilterState.DescriptionIndex = sortDescriptionComboBox.SelectedIndex;
             ApplyFiltersAndSort();
         }
 

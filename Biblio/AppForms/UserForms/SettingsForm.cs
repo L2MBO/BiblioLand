@@ -136,9 +136,9 @@ namespace Biblio.AppForms
 
         private bool IsMailEmpty()
         {
-            newMailLabel.ForeColor = newMailTextBox.Text == "" ? Color.Red : Color.White;
+            newMailLabel.ForeColor = string.IsNullOrWhiteSpace(newMailTextBox.Text) ? Color.Red : Color.White;
 
-            return newMailTextBox.Text == "" ? false : true;
+            return string.IsNullOrWhiteSpace(newMailTextBox.Text) ? false : true;
         }
 
         private void saveProfileButton_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace Biblio.AppForms
                 if (_whitespaceRegex.Replace(descriptionTextBox.Text ?? "", "")
                     != _whitespaceRegex.Replace(_currentUser.Descriotion ?? "", ""))
                 {
-                    _currentUser.Descriotion = descriptionTextBox.Text?.Trim();
+                    _currentUser.Descriotion = string.IsNullOrWhiteSpace(descriptionTextBox.Text) ? null : descriptionTextBox.Text.Trim();
                     changesMade = true;
                 }
 

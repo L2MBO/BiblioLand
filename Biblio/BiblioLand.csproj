@@ -255,6 +255,7 @@
     <Compile Include="Classes\Images\StoreImages\CodingOrDecoding.cs" />
     <Compile Include="Classes\Hash\HashHelper.cs" />
     <Compile Include="Classes\Pdf\OpenPdf\PdfLoader.cs" />
+    <Compile Include="Classes\SaveUserSettings\SaveAdminFilter.cs" />
     <Compile Include="Classes\SaveUserSettings\SaveUserFilter.cs" />
     <Compile Include="Classes\Validation\TimeValidation.cs" />
     <Compile Include="Classes\VisibilityOrEnabled\EnabledHelper.cs" />
