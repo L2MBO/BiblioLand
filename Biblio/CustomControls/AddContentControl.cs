@@ -1,6 +1,6 @@
 ﻿using Biblio.AppForms;
 using Biblio.Classes.Customization;
-using Biblio.HideClasses;
+using Biblio.Classes.Customization.FormCustomization;
 using System;
 using System.Windows.Forms;
 
@@ -8,6 +8,7 @@ namespace Biblio.CustomControls
 {
     public partial class AddContentControl : UserControl
     {
+        private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
 
         public AddContentControl()
         {
@@ -18,9 +19,8 @@ namespace Biblio.CustomControls
 
         private void bookButton_Click(object sender, EventArgs e)
         {
-            AddBookForm form = new AddBookForm();
-            VisibilityHelper.ShowNewForm(this.FindForm(), form);
-            this.Parent.Hide();
+            var form = new NotifyForm();
+            _dialogService.ShowDialogWithOverlay(this.FindForm(), form);
         }
     }
 }

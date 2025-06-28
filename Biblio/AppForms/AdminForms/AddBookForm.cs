@@ -14,13 +14,12 @@ namespace Biblio.AppForms
 
         private void SetFormStyle()
         {
-            navigationControl.leftPanel = leftPanel;
-            navigationControl.rightPanel = rightPanel;
+
         }
 
-        private void AddBookForm_Resize(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-            navigationControl.HandleFormResize(this);
+            this.Close();
         }
     }
 }
