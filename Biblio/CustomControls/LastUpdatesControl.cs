@@ -31,7 +31,7 @@ namespace Biblio.CustomControls
 
             authorLabel.Text = _book.Author;
             nameLabel.Text = _book.Title;
-            bookPictureBox.Image = ImageLoader.LoadBookImage(_book.ImagePath);
+            bookPictureBox.Image = ImageLoader.LoadBookImage(_book.ImageName);
             RoundingHelper.SetRoundedRegion(this, 30, 30);
 
             _parentForm.Resize += ParentForm_Resize;

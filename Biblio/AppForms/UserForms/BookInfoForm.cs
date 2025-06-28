@@ -80,14 +80,14 @@ namespace Biblio.AppForms
 
             ShowRating();
 
-            Image bookimage = ImageLoader.LoadBookImage(_book.ImagePath);
+            Image bookimage = ImageLoader.LoadBookImage(_book.ImageName);
 
             if (bookimage != null)
             {
                 bookPictureBox.Image = bookimage;
             }
 
-            Image backimage = ImageLoader.LoadBookImage(_book.ImagePath);
+            Image backimage = ImageLoader.LoadBookImage(_book.ImageName);
 
             if (backimage != null)
             {
@@ -500,7 +500,7 @@ namespace Biblio.AppForms
 
         private void continueRadingButton_Click(object sender, EventArgs e)
         {
-            PdfLoader.OpenPdfFile(_book.PdfPath);
+            PdfLoader.OpenPdfFile(_book.PdfName);
             UpdateBookmarkStatus();
             UpdateReadingStatus();
             UpdateContinueReadingButtonText();

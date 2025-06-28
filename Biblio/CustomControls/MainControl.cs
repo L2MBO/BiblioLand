@@ -34,7 +34,7 @@ namespace Biblio.CustomControls
             authorLabel.Text = _book.Author.ToString();
             nameLabel.Text = _book.Title.ToString();
 
-            Image image = ImageLoader.LoadBookImage(_book.ImagePath);
+            Image image = ImageLoader.LoadBookImage(_book.ImageName);
 
             if (image != null)
             {

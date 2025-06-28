@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBookForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.categoryLabel = new System.Windows.Forms.Label();
+            this.categoryComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.selectPdfLabel = new System.Windows.Forms.Label();
+            this.selectPdfButton = new Guna.UI2.WinForms.Guna2Button();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.nameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,12 +48,6 @@
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.nameLabel = new System.Windows.Forms.Label();
             this.genreComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.descriptionLabel = new System.Windows.Forms.Label();
-            this.selectPdfButton = new Guna.UI2.WinForms.Guna2Button();
-            this.selectPdfLabel = new System.Windows.Forms.Label();
-            this.categoryComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.categoryLabel = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +90,122 @@
             this.guna2Panel1.Size = new System.Drawing.Size(330, 537);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // categoryLabel
+            // 
+            this.categoryLabel.AutoSize = true;
+            this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.categoryLabel.ForeColor = System.Drawing.Color.White;
+            this.categoryLabel.Location = new System.Drawing.Point(21, 269);
+            this.categoryLabel.Name = "categoryLabel";
+            this.categoryLabel.Size = new System.Drawing.Size(78, 15);
+            this.categoryLabel.TabIndex = 54;
+            this.categoryLabel.Text = "Категория";
+            // 
+            // categoryComboBox
+            // 
+            this.categoryComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.categoryComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.categoryComboBox.BorderRadius = 17;
+            this.categoryComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.categoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoryComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.categoryComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.categoryComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.categoryComboBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.categoryComboBox.ForeColor = System.Drawing.Color.White;
+            this.categoryComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.categoryComboBox.ItemHeight = 30;
+            this.categoryComboBox.Items.AddRange(new object[] {
+            "Не обязательное поле",
+            "Главное",
+            "Популярное",
+            "Новинки"});
+            this.categoryComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.categoryComboBox.Location = new System.Drawing.Point(24, 287);
+            this.categoryComboBox.Name = "categoryComboBox";
+            this.categoryComboBox.Size = new System.Drawing.Size(287, 36);
+            this.categoryComboBox.StartIndex = 0;
+            this.categoryComboBox.TabIndex = 53;
+            this.categoryComboBox.TabStop = false;
+            this.categoryComboBox.TextOffset = new System.Drawing.Point(5, 0);
+            // 
+            // selectPdfLabel
+            // 
+            this.selectPdfLabel.AutoSize = true;
+            this.selectPdfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectPdfLabel.ForeColor = System.Drawing.Color.White;
+            this.selectPdfLabel.Location = new System.Drawing.Point(21, 425);
+            this.selectPdfLabel.Name = "selectPdfLabel";
+            this.selectPdfLabel.Size = new System.Drawing.Size(74, 15);
+            this.selectPdfLabel.TabIndex = 52;
+            this.selectPdfLabel.Text = "PDF файл";
+            // 
+            // selectPdfButton
+            // 
+            this.selectPdfButton.Animated = true;
+            this.selectPdfButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.selectPdfButton.BorderRadius = 13;
+            this.selectPdfButton.BorderThickness = 1;
+            this.selectPdfButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selectPdfButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.selectPdfButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.selectPdfButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.selectPdfButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.selectPdfButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.selectPdfButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.selectPdfButton.ForeColor = System.Drawing.Color.White;
+            this.selectPdfButton.Image = global::Biblio.Properties.Resources.download;
+            this.selectPdfButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.selectPdfButton.ImageOffset = new System.Drawing.Point(0, -1);
+            this.selectPdfButton.ImageSize = new System.Drawing.Size(16, 16);
+            this.selectPdfButton.Location = new System.Drawing.Point(24, 443);
+            this.selectPdfButton.Name = "selectPdfButton";
+            this.selectPdfButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.selectPdfButton.Size = new System.Drawing.Size(122, 28);
+            this.selectPdfButton.TabIndex = 51;
+            this.selectPdfButton.Text = "Выбрать файл";
+            this.selectPdfButton.TextOffset = new System.Drawing.Point(10, 0);
+            this.selectPdfButton.Click += new System.EventHandler(this.selectPdfButton_Click);
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(21, 331);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(72, 15);
+            this.descriptionLabel.TabIndex = 50;
+            this.descriptionLabel.Text = "Описание";
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.Animated = true;
+            this.descriptionTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.descriptionTextBox.BorderRadius = 10;
+            this.descriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.descriptionTextBox.DefaultText = "";
+            this.descriptionTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.descriptionTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.descriptionTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.descriptionTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
+            this.descriptionTextBox.Location = new System.Drawing.Point(24, 349);
+            this.descriptionTextBox.MaxLength = 600;
+            this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.descriptionTextBox.PlaceholderText = "";
+            this.descriptionTextBox.SelectedText = "";
+            this.descriptionTextBox.Size = new System.Drawing.Size(287, 66);
+            this.descriptionTextBox.TabIndex = 49;
+            this.descriptionTextBox.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
+            // 
             // bookPictureBox
             // 
             this.bookPictureBox.BorderRadius = 13;
@@ -122,10 +238,11 @@
             this.nameTextBox.Location = new System.Drawing.Point(128, 90);
             this.nameTextBox.MaxLength = 200;
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.PlaceholderText = "Не обязательное поле";
+            this.nameTextBox.PlaceholderText = "";
             this.nameTextBox.SelectedText = "";
             this.nameTextBox.Size = new System.Drawing.Size(183, 36);
             this.nameTextBox.TabIndex = 40;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // label1
             // 
@@ -177,10 +294,11 @@
             this.authorTextBox.Location = new System.Drawing.Point(128, 152);
             this.authorTextBox.MaxLength = 200;
             this.authorTextBox.Name = "authorTextBox";
-            this.authorTextBox.PlaceholderText = "Не обязательное поле";
+            this.authorTextBox.PlaceholderText = "";
             this.authorTextBox.SelectedText = "";
             this.authorTextBox.Size = new System.Drawing.Size(183, 36);
             this.authorTextBox.TabIndex = 36;
+            this.authorTextBox.TextChanged += new System.EventHandler(this.authorTextBox_TextChanged);
             // 
             // authorLabel
             // 
@@ -274,121 +392,6 @@
             this.genreComboBox.TabStop = false;
             this.genreComboBox.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // descriptionTextBox
-            // 
-            this.descriptionTextBox.Animated = true;
-            this.descriptionTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.descriptionTextBox.BorderRadius = 10;
-            this.descriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.descriptionTextBox.DefaultText = "";
-            this.descriptionTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.descriptionTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.descriptionTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.descriptionTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
-            this.descriptionTextBox.Location = new System.Drawing.Point(24, 349);
-            this.descriptionTextBox.MaxLength = 600;
-            this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
-            this.descriptionTextBox.Multiline = true;
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.descriptionTextBox.PlaceholderText = "";
-            this.descriptionTextBox.SelectedText = "";
-            this.descriptionTextBox.Size = new System.Drawing.Size(287, 66);
-            this.descriptionTextBox.TabIndex = 49;
-            // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
-            this.descriptionLabel.Location = new System.Drawing.Point(21, 331);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(72, 15);
-            this.descriptionLabel.TabIndex = 50;
-            this.descriptionLabel.Text = "Описание";
-            // 
-            // selectPdfButton
-            // 
-            this.selectPdfButton.Animated = true;
-            this.selectPdfButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.selectPdfButton.BorderRadius = 13;
-            this.selectPdfButton.BorderThickness = 1;
-            this.selectPdfButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selectPdfButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.selectPdfButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.selectPdfButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.selectPdfButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.selectPdfButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.selectPdfButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.selectPdfButton.ForeColor = System.Drawing.Color.White;
-            this.selectPdfButton.Image = global::Biblio.Properties.Resources.download;
-            this.selectPdfButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.selectPdfButton.ImageOffset = new System.Drawing.Point(0, -1);
-            this.selectPdfButton.ImageSize = new System.Drawing.Size(16, 16);
-            this.selectPdfButton.Location = new System.Drawing.Point(24, 443);
-            this.selectPdfButton.Name = "selectPdfButton";
-            this.selectPdfButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.selectPdfButton.Size = new System.Drawing.Size(122, 28);
-            this.selectPdfButton.TabIndex = 51;
-            this.selectPdfButton.Text = "Выбрать файл";
-            this.selectPdfButton.TextOffset = new System.Drawing.Point(10, 0);
-            this.selectPdfButton.Click += new System.EventHandler(this.selectPdfButton_Click);
-            // 
-            // selectPdfLabel
-            // 
-            this.selectPdfLabel.AutoSize = true;
-            this.selectPdfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.selectPdfLabel.ForeColor = System.Drawing.Color.White;
-            this.selectPdfLabel.Location = new System.Drawing.Point(21, 425);
-            this.selectPdfLabel.Name = "selectPdfLabel";
-            this.selectPdfLabel.Size = new System.Drawing.Size(74, 15);
-            this.selectPdfLabel.TabIndex = 52;
-            this.selectPdfLabel.Text = "PDF файл";
-            // 
-            // categoryComboBox
-            // 
-            this.categoryComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.categoryComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.categoryComboBox.BorderRadius = 17;
-            this.categoryComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.categoryComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.categoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.categoryComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.categoryComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.categoryComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.categoryComboBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.categoryComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.categoryComboBox.ForeColor = System.Drawing.Color.White;
-            this.categoryComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.categoryComboBox.ItemHeight = 30;
-            this.categoryComboBox.Items.AddRange(new object[] {
-            "Не обязательное поле",
-            "Главное",
-            "Популярное",
-            "Новинки"});
-            this.categoryComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
-            this.categoryComboBox.Location = new System.Drawing.Point(24, 287);
-            this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(287, 36);
-            this.categoryComboBox.StartIndex = 0;
-            this.categoryComboBox.TabIndex = 53;
-            this.categoryComboBox.TabStop = false;
-            this.categoryComboBox.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // categoryLabel
-            // 
-            this.categoryLabel.AutoSize = true;
-            this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.categoryLabel.ForeColor = System.Drawing.Color.White;
-            this.categoryLabel.Location = new System.Drawing.Point(21, 269);
-            this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(78, 15);
-            this.categoryLabel.TabIndex = 54;
-            this.categoryLabel.Text = "Категория";
-            // 
             // AddBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +402,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddBookForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBookForm";
             this.guna2Panel1.ResumeLayout(false);
