@@ -217,7 +217,7 @@ namespace Biblio.AppForms
 
         private void changeAvatarButton_Click(object sender, EventArgs e)
         {
-            var form = new ImageLoadForm(_currentUserId);
+            var form = new ImageLoadForm();
 
             if (_dialogService.ShowDialogWithOverlay(this, form) == DialogResult.OK)
             {

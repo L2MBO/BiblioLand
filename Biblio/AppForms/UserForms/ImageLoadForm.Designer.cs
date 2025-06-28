@@ -112,6 +112,7 @@
             this.label1.Size = new System.Drawing.Size(190, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Вы можете загрузить файл до 5 MB";
+            this.label1.Click += new System.EventHandler(this.loadImageButton_Click);
             // 
             // label3
             // 
@@ -123,6 +124,7 @@
             this.label3.Size = new System.Drawing.Size(133, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Нажмите чтобы выбрать";
+            this.label3.Click += new System.EventHandler(this.loadImageButton_Click);
             // 
             // loadImageButton
             // 
