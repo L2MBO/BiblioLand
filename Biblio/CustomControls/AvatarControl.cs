@@ -12,7 +12,7 @@ namespace Biblio.CustomControls
     public partial class AvatarControl : UserControl
     {
         private Form _parentForm;
-        private int _contentX = 460;
+        private int _contentX;
         private int _currentUserId = Program.CurrentUser.UserID;
 
         public AvatarControl(Form parentForm)
@@ -62,7 +62,7 @@ namespace Biblio.CustomControls
             if (addContentControl != null)
             {
                 int x = addContentButton.Right + _contentX;
-                int y = addContentButton.Bottom + 20;
+                int y = addContentButton.Bottom + 33;
 
                 addContentControl.Location = new Point(x, y);
             }

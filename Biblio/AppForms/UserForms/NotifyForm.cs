@@ -9,6 +9,11 @@ namespace Biblio.AppForms
         {
             InitializeComponent();
 
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
         }

@@ -22,12 +22,5 @@ namespace Biblio.CustomControls
             VisibilityHelper.ShowNewForm(this.FindForm(), form);
             this.Parent.Hide();
         }
-
-        private void cardButton_Click(object sender, EventArgs e)
-        {
-            AddCardForm form = new AddCardForm();
-            VisibilityHelper.ShowNewForm(this.FindForm(), form);
-            this.Parent.Hide();
-        }
     }
 }

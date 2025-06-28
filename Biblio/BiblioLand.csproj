@@ -120,12 +120,6 @@
     <Compile Include="AppForms\AdminForms\AddBookForm.Designer.cs">
       <DependentUpon>AddBookForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppForms\AdminForms\AddCardForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AppForms\AdminForms\AddCardForm.Designer.cs">
-      <DependentUpon>AddCardForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppForms\AdminForms\AdminPanelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,9 +365,6 @@
     <Compile Include="Classes\Validation\ValidationHelper.cs" />
     <EmbeddedResource Include="AppForms\AdminForms\AddBookForm.resx">
       <DependentUpon>AddBookForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppForms\AdminForms\AddCardForm.resx">
-      <DependentUpon>AddCardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AdminForms\AdminPanelForm.resx">
       <DependentUpon>AdminPanelForm.cs</DependentUpon>

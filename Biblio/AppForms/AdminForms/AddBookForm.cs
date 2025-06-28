@@ -8,6 +8,14 @@ namespace Biblio.AppForms
         public AddBookForm()
         {
             InitializeComponent();
+
+            SetFormStyle();
+        }
+
+        private void SetFormStyle()
+        {
+            navigationControl.leftPanel = leftPanel;
+            navigationControl.rightPanel = rightPanel;
         }
 
         private void AddBookForm_Resize(object sender, EventArgs e)
