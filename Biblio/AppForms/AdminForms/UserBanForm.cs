@@ -81,8 +81,6 @@ namespace Biblio.AppForms
                     if (result == DialogResult.Yes)
                     {
                         SendBanToDatabase();
-                        BanChanged?.Invoke();
-                        this.Close();
                     }
                 }
             }
@@ -103,6 +101,9 @@ namespace Biblio.AppForms
             Program.context.SaveChanges();
 
             ValidationHelper.ShowInformationMessage("Пользователь забанен!", "Успех!");
+
+            BanChanged?.Invoke();
+            this.Close();
         }
 
         private void closeButton_Click(object sender, System.EventArgs e)

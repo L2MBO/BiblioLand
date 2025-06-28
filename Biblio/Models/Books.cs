@@ -3,6 +3,8 @@ namespace Biblio.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     public partial class Books
     {
@@ -29,10 +31,10 @@ namespace Biblio.Models
         public string Description { get; set; }
 
         [StringLength(255)]
-        public string ImagePath { get; set; }
+        public string ImageName { get; set; }
 
         [StringLength(255)]
-        public string PdfPath { get; set; }
+        public string PdfName { get; set; }
 
         public int? GenreID { get; set; }
 

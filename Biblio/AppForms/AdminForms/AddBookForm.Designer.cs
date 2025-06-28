@@ -37,15 +37,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.addBookButton = new Guna.UI2.WinForms.Guna2Button();
             this.authorTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.banMessageLabel = new System.Windows.Forms.Label();
+            this.authorLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.banReasonLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.genreComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.descriptionLabel = new System.Windows.Forms.Label();
             this.selectPdfButton = new Guna.UI2.WinForms.Guna2Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.selectPdfLabel = new System.Windows.Forms.Label();
+            this.categoryComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.categoryLabel = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -67,23 +69,25 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.categoryLabel);
+            this.guna2Panel1.Controls.Add(this.categoryComboBox);
+            this.guna2Panel1.Controls.Add(this.selectPdfLabel);
             this.guna2Panel1.Controls.Add(this.selectPdfButton);
-            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.descriptionLabel);
             this.guna2Panel1.Controls.Add(this.descriptionTextBox);
             this.guna2Panel1.Controls.Add(this.bookPictureBox);
             this.guna2Panel1.Controls.Add(this.nameTextBox);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.addBookButton);
             this.guna2Panel1.Controls.Add(this.authorTextBox);
-            this.guna2Panel1.Controls.Add(this.banMessageLabel);
+            this.guna2Panel1.Controls.Add(this.authorLabel);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.closeButton);
-            this.guna2Panel1.Controls.Add(this.banReasonLabel);
+            this.guna2Panel1.Controls.Add(this.nameLabel);
             this.guna2Panel1.Controls.Add(this.genreComboBox);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(330, 475);
+            this.guna2Panel1.Size = new System.Drawing.Size(330, 537);
             this.guna2Panel1.TabIndex = 2;
             // 
             // bookPictureBox
@@ -97,6 +101,7 @@
             this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bookPictureBox.TabIndex = 41;
             this.bookPictureBox.TabStop = false;
+            this.bookPictureBox.Click += new System.EventHandler(this.bookPictureBox_Click);
             // 
             // nameTextBox
             // 
@@ -145,12 +150,13 @@
             this.addBookButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.addBookButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addBookButton.ForeColor = System.Drawing.Color.White;
-            this.addBookButton.Location = new System.Drawing.Point(181, 420);
+            this.addBookButton.Location = new System.Drawing.Point(181, 484);
             this.addBookButton.Name = "addBookButton";
             this.addBookButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
             this.addBookButton.Size = new System.Drawing.Size(130, 36);
             this.addBookButton.TabIndex = 37;
             this.addBookButton.Text = "Добавить книгу";
+            this.addBookButton.Click += new System.EventHandler(this.addBookButton_Click);
             // 
             // authorTextBox
             // 
@@ -176,16 +182,16 @@
             this.authorTextBox.Size = new System.Drawing.Size(183, 36);
             this.authorTextBox.TabIndex = 36;
             // 
-            // banMessageLabel
+            // authorLabel
             // 
-            this.banMessageLabel.AutoSize = true;
-            this.banMessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.banMessageLabel.ForeColor = System.Drawing.Color.White;
-            this.banMessageLabel.Location = new System.Drawing.Point(125, 134);
-            this.banMessageLabel.Name = "banMessageLabel";
-            this.banMessageLabel.Size = new System.Drawing.Size(47, 15);
-            this.banMessageLabel.TabIndex = 35;
-            this.banMessageLabel.Text = "Автор";
+            this.authorLabel.AutoSize = true;
+            this.authorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.authorLabel.ForeColor = System.Drawing.Color.White;
+            this.authorLabel.Location = new System.Drawing.Point(125, 134);
+            this.authorLabel.Name = "authorLabel";
+            this.authorLabel.Size = new System.Drawing.Size(47, 15);
+            this.authorLabel.TabIndex = 35;
+            this.authorLabel.Text = "Автор";
             // 
             // label2
             // 
@@ -221,16 +227,16 @@
             this.closeButton.TabIndex = 33;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // banReasonLabel
+            // nameLabel
             // 
-            this.banReasonLabel.AutoSize = true;
-            this.banReasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.banReasonLabel.ForeColor = System.Drawing.Color.White;
-            this.banReasonLabel.Location = new System.Drawing.Point(125, 72);
-            this.banReasonLabel.Name = "banReasonLabel";
-            this.banReasonLabel.Size = new System.Drawing.Size(72, 15);
-            this.banReasonLabel.TabIndex = 32;
-            this.banReasonLabel.Text = "Название";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(125, 72);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(72, 15);
+            this.nameLabel.TabIndex = 32;
+            this.nameLabel.Text = "Название";
             // 
             // genreComboBox
             // 
@@ -282,7 +288,7 @@
             this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
-            this.descriptionTextBox.Location = new System.Drawing.Point(24, 285);
+            this.descriptionTextBox.Location = new System.Drawing.Point(24, 349);
             this.descriptionTextBox.MaxLength = 600;
             this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
             this.descriptionTextBox.Multiline = true;
@@ -293,16 +299,16 @@
             this.descriptionTextBox.Size = new System.Drawing.Size(287, 66);
             this.descriptionTextBox.TabIndex = 49;
             // 
-            // label4
+            // descriptionLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(21, 267);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 15);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Описание";
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(21, 331);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(72, 15);
+            this.descriptionLabel.TabIndex = 50;
+            this.descriptionLabel.Text = "Описание";
             // 
             // selectPdfButton
             // 
@@ -322,31 +328,73 @@
             this.selectPdfButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.selectPdfButton.ImageOffset = new System.Drawing.Point(0, -1);
             this.selectPdfButton.ImageSize = new System.Drawing.Size(16, 16);
-            this.selectPdfButton.Location = new System.Drawing.Point(24, 379);
+            this.selectPdfButton.Location = new System.Drawing.Point(24, 443);
             this.selectPdfButton.Name = "selectPdfButton";
             this.selectPdfButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.selectPdfButton.Size = new System.Drawing.Size(122, 28);
             this.selectPdfButton.TabIndex = 51;
             this.selectPdfButton.Text = "Выбрать файл";
             this.selectPdfButton.TextOffset = new System.Drawing.Point(10, 0);
+            this.selectPdfButton.Click += new System.EventHandler(this.selectPdfButton_Click);
             // 
-            // label3
+            // selectPdfLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(21, 361);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 15);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "PDF файл";
+            this.selectPdfLabel.AutoSize = true;
+            this.selectPdfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectPdfLabel.ForeColor = System.Drawing.Color.White;
+            this.selectPdfLabel.Location = new System.Drawing.Point(21, 425);
+            this.selectPdfLabel.Name = "selectPdfLabel";
+            this.selectPdfLabel.Size = new System.Drawing.Size(74, 15);
+            this.selectPdfLabel.TabIndex = 52;
+            this.selectPdfLabel.Text = "PDF файл";
+            // 
+            // categoryComboBox
+            // 
+            this.categoryComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.categoryComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.categoryComboBox.BorderRadius = 17;
+            this.categoryComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.categoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categoryComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.categoryComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.categoryComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.categoryComboBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.categoryComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.categoryComboBox.ForeColor = System.Drawing.Color.White;
+            this.categoryComboBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.categoryComboBox.ItemHeight = 30;
+            this.categoryComboBox.Items.AddRange(new object[] {
+            "Не обязательное поле",
+            "Главное",
+            "Популярное",
+            "Новинки"});
+            this.categoryComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
+            this.categoryComboBox.Location = new System.Drawing.Point(24, 287);
+            this.categoryComboBox.Name = "categoryComboBox";
+            this.categoryComboBox.Size = new System.Drawing.Size(287, 36);
+            this.categoryComboBox.StartIndex = 0;
+            this.categoryComboBox.TabIndex = 53;
+            this.categoryComboBox.TabStop = false;
+            this.categoryComboBox.TextOffset = new System.Drawing.Point(5, 0);
+            // 
+            // categoryLabel
+            // 
+            this.categoryLabel.AutoSize = true;
+            this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.categoryLabel.ForeColor = System.Drawing.Color.White;
+            this.categoryLabel.Location = new System.Drawing.Point(21, 269);
+            this.categoryLabel.Name = "categoryLabel";
+            this.categoryLabel.Size = new System.Drawing.Size(78, 15);
+            this.categoryLabel.TabIndex = 54;
+            this.categoryLabel.Text = "Категория";
             // 
             // AddBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(331, 476);
+            this.ClientSize = new System.Drawing.Size(331, 538);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -367,16 +415,18 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button addBookButton;
         private Guna.UI2.WinForms.Guna2TextBox authorTextBox;
-        private System.Windows.Forms.Label banMessageLabel;
+        private System.Windows.Forms.Label authorLabel;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CircleButton closeButton;
-        private System.Windows.Forms.Label banReasonLabel;
+        private System.Windows.Forms.Label nameLabel;
         private Guna.UI2.WinForms.Guna2ComboBox genreComboBox;
         private Guna.UI2.WinForms.Guna2TextBox nameTextBox;
         private Guna.UI2.WinForms.Guna2PictureBox bookPictureBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label descriptionLabel;
         private Guna.UI2.WinForms.Guna2TextBox descriptionTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label selectPdfLabel;
         private Guna.UI2.WinForms.Guna2Button selectPdfButton;
+        private System.Windows.Forms.Label categoryLabel;
+        private Guna.UI2.WinForms.Guna2ComboBox categoryComboBox;
     }
 }

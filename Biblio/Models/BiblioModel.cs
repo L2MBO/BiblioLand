@@ -1,11 +1,14 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
+using System.Linq;
 
 namespace Biblio.Models
 {
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel31")
+            : base("name=BiblioModel32")
         {
         }
 

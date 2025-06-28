@@ -19,7 +19,7 @@ namespace Biblio.CustomControls
 
         private void bookButton_Click(object sender, EventArgs e)
         {
-            var form = new NotifyForm();
+            var form = new AddBookForm();
             _dialogService.ShowDialogWithOverlay(this.FindForm(), form);
         }
     }
