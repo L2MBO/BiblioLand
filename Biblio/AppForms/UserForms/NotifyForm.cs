@@ -16,6 +16,10 @@ namespace Biblio.AppForms
         {
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
+
+            buttonsPanel.Visible = false;
+            writeNotifyButton.Visible = false;
+            typeComboBox.Visible = false;
         }
 
         private void UserNotifyForm_Resize(object sender, EventArgs e)

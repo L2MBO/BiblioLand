@@ -666,6 +666,9 @@
   <ItemGroup>
     <None Include="Resources\leftArrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
