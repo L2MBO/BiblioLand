@@ -11,15 +11,16 @@ namespace Biblio.Models
         [Key]
         public int ReviewReportID { get; set; }
 
-        public int? UserID { get; set; }
+        public int UserID { get; set; }
 
-        public int? ReviewID { get; set; }
+        public int ReviewID { get; set; }
 
-        public int? ReportCategoryID { get; set; }
+        public int ReportCategoryID { get; set; }
 
+        [Required]
         public string ReportMessage { get; set; }
 
-        public DateTime? ReportDate { get; set; }
+        public DateTime ReportDate { get; set; }
 
         public virtual ReviewReportCategory ReviewReportCategory { get; set; }
 

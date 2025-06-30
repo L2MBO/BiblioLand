@@ -1,16 +1,20 @@
-﻿using Biblio.CustomControls;
+﻿using Biblio.AppForms.AdminForms;
+using Biblio.Classes.Customization.FormCustomization;
+using Biblio.CustomControls;
 using Biblio.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Biblio.AppForms
 {
     public partial class NotifyForm : Form
     {
+        private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
         private int _currentUserId = Program.CurrentUser.UserID;
+        private bool _isUpdatingComboBoxes = false;
+        private List<object> _currentNotifications;
 
         public NotifyForm()
         {
@@ -24,6 +28,10 @@ namespace Biblio.AppForms
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
 
+            reportTypeComboBox.SelectedIndexChanged += (s, e) => ShowAdminNotify();
+            feedbackTypeComboBox.SelectedIndexChanged += (s, e) => ShowAdminNotify();
+            sortComboBox.SelectedIndexChanged += (s, e) => ShowAdminNotify();
+
             CheckUserRole();
         }
 
@@ -31,76 +39,51 @@ namespace Biblio.AppForms
         {
             var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId && user.UserRoleID != 1);
 
-            if (currentUser != null && _currentUserId != Program.CurrentUser.UserID)
+            if (currentUser != null)
             {
-                reportTypeComboBox.Visible = true;
-                writeNotifyButton.Visible = true;
+                AddAdminFunctional();
                 ShowAdminNotify();
-                
             }
             else
             {
+                buttonsPanel.Width = 28;
                 ShowUserNotify();
             }
         }
 
+        private void AddAdminFunctional()
+        {
+            reportTypeComboBox.Visible = true;
+            feedbackTypeComboBox.Visible = true;
+            writeNotifyButton.Visible = true;
+        }
+
         private void ShowUserNotify()
-        {
-
-        }
-
-        private void ShowAdminNotify()
-        {
-            IQueryable<Feedback> query = Program.context.Feedback;
-            // выводим информацию, по выбранной админом типом жалобы: 
-            //Все жалобы - 0
-            //Жалоба на книгу - 1
-            //Жалоба на комментарий - 2
-            //Жалоба на профиль - 3
-
-            //switch (reportTypeComboBox.SelectedIndex)
-            //{
-            //    case 0: // передать все записи в таблицах: BookReports, ReviewReports, UserReports в контрол NotifyControl
-            // В остльных индексах передавать соответствующие таблицы
-            //}
-
-            //выводим информацию, по выбранному админом типу обращения: 
-            switch (feedbackTypeComboBox.SelectedIndex)
-            {
-                case 0:
-                    // выводим все типы
-                    break;
-
-                case 1: // Понравилось
-                    query = query.Where(type => type.FeedbackCategoryID == 1);
-                    break;
-
-                case 2: // Не понравилось
-                    query = query.Where(type => type.FeedbackCategoryID == 2);
-                    break;
-
-                case 3: // Баг
-                    query = query.Where(type => type.FeedbackCategoryID == 3);
-                    break;
-
-                case 4: // Идея
-                    query = query.Where(type => type.FeedbackCategoryID == 4);
-                    break;
-            }
-
-            UpdateNotifyList(query.ToList());
-        }
-
-        private void UpdateNotifyList(List<Feedback> messages)
         {
             notifyPanel.Controls.Clear();
 
-            if (messages.Count > 0)
+            var hiddenNotificationIds = Program.context.DeletedNotifications
+                .Where(dn => dn.UserID == _currentUserId)
+                .Select(dn => dn.NotifyID)
+                .ToList();
+
+            var notifications = Program.context.SystemNotifications
+                .Where(n => !hiddenNotificationIds.Contains(n.NotifyID))
+                .OrderByDescending(n => n.NotifyDate)
+                .Cast<object>()
+                .ToList();
+
+            notifications = ApplySorting(notifications);
+
+            _currentNotifications = notifications.Cast<object>().ToList();
+
+            if (notifications.Count > 0)
             {
-                foreach (Feedback message in messages)
+                foreach (SystemNotifications notification in notifications)
                 {
-                    var userControl = new NotifyControl(message);
+                    var userControl = new NotifyControl(notification);
                     userControl.Margin = new Padding(0, 0, 0, 10);
+                    userControl.CheckChanged += NotifyControl_CheckChanged;
                     UpdateControlSize(userControl);
                     notifyPanel.Controls.Add(userControl);
                 }
@@ -114,8 +97,182 @@ namespace Biblio.AppForms
             }
         }
 
+        private void ShowAdminNotify()
+        {
+            if (_isUpdatingComboBoxes) return;
+
+            _isUpdatingComboBoxes = true;
+
+
+            var changedComboBox = reportTypeComboBox.Focused ? reportTypeComboBox :
+                            feedbackTypeComboBox.Focused ? feedbackTypeComboBox : null;
+
+            // Если пользователь изменил reportType
+            if (changedComboBox == reportTypeComboBox && reportTypeComboBox.SelectedIndex > 0)
+            {
+                feedbackTypeComboBox.SelectedIndex = 0;
+            }
+            // Если пользователь изменил feedbackType
+            else if (changedComboBox == feedbackTypeComboBox && feedbackTypeComboBox.SelectedIndex > 0)
+            {
+                reportTypeComboBox.SelectedIndex = 0;
+            }
+
+            notifyPanel.Controls.Clear();
+            List<object> notifications = new List<object>();
+
+            if (feedbackTypeComboBox.SelectedIndex == 0)
+            {
+                switch (reportTypeComboBox.SelectedIndex)
+                {
+                    case 0: // Все жалобы
+                        notifications.AddRange(Program.context.BookReports.ToList());
+                        notifications.AddRange(Program.context.ReviewReports.ToList());
+                        notifications.AddRange(Program.context.UserReports.ToList());
+                        break;
+
+                    case 1: // Жалобы на книги
+                        notifications.AddRange(Program.context.BookReports.ToList());
+                        break;
+
+                    case 2: // Жалобы на комментарии
+                        notifications.AddRange(Program.context.ReviewReports.ToList());
+                        break;
+
+                    case 3: // Жалобы на профили
+                        notifications.AddRange(Program.context.UserReports.ToList());
+                        break;
+                }
+            }
+
+            if (reportTypeComboBox.SelectedIndex == 0)
+            {
+                IQueryable<Feedback> feedbackQuery = Program.context.Feedback;
+
+                switch (feedbackTypeComboBox.SelectedIndex)
+                {
+                    case 1: // Понравилось
+                        feedbackQuery = feedbackQuery.Where(type => type.FeedbackCategoryID == 1);
+                        break;
+                    case 2: // Не понравилось
+                        feedbackQuery = feedbackQuery.Where(type => type.FeedbackCategoryID == 2);
+                        break;
+                    case 3: // Баг
+                        feedbackQuery = feedbackQuery.Where(type => type.FeedbackCategoryID == 3);
+                        break;
+                    case 4: // Идея
+                        feedbackQuery = feedbackQuery.Where(type => type.FeedbackCategoryID == 4);
+                        break;
+                }
+
+                notifications.AddRange(feedbackQuery.ToList().Cast<object>());
+            }
+
+            notifications = ApplySorting(notifications);
+
+            _currentNotifications = notifications;
+
+            if (notifications.Count > 0)
+            {
+                foreach (var notification in notifications)
+                {
+                    var userControl = new NotifyControl(notification);
+                    userControl.Margin = new Padding(0, 0, 0, 10);
+                    userControl.CheckChanged += NotifyControl_CheckChanged;
+                    UpdateControlSize(userControl);
+                    notifyPanel.Controls.Add(userControl);
+                }
+                notifyPanel.Dock = DockStyle.Top;
+                notifyPanel.BackgroundImage = null;
+            }
+            else
+            {
+                notifyPanel.Dock = DockStyle.Fill;
+                notifyPanel.BackgroundImage = Properties.Resources.blueNoResults;
+            }
+
+            _isUpdatingComboBoxes = false;
+        }
+
+        private List<object> ApplySorting(List<object> notifications)
+        {
+            if (notifications == null || !notifications.Any())
+                return notifications;
+
+            switch (sortComboBox.SelectedIndex)
+            {
+                case 0: // Новые
+                    return notifications.OrderByDescending(n => GetNotificationDate(n)).ToList();
+                case 1: // Старые
+                    return notifications.OrderBy(n => GetNotificationDate(n)).ToList();
+                default:
+                    return notifications;
+            }
+        }
+
+        private DateTime GetNotificationDate(object notification)
+        {
+            switch (notification)
+            {
+                case SystemNotifications sysNotif:
+                    return sysNotif.NotifyDate;
+                case BookReports bookReport:
+                    return bookReport.ReportDate;
+                case ReviewReports reviewReport:
+                    return reviewReport.ReportDate;
+                case UserReports userReport:
+                    return userReport.ReportDate;
+                case Feedback feedback:
+                    return feedback.FeedbackDate;
+                default:
+                    return DateTime.MinValue;
+            }
+        }
+
+        private void DeleteNotificationPermanently(object notificationData)
+        {
+            switch (notificationData)
+            {
+                case SystemNotifications sysNotif:
+                    Program.context.SystemNotifications.Remove(sysNotif);
+                    break;
+                case BookReports bookReport:
+                    Program.context.BookReports.Remove(bookReport);
+                    break;
+                case ReviewReports reviewReport:
+                    Program.context.ReviewReports.Remove(reviewReport);
+                    break;
+                case UserReports userReport:
+                    Program.context.UserReports.Remove(userReport);
+                    break;
+                case Feedback feedback:
+                    Program.context.Feedback.Remove(feedback);
+                    break;
+            }
+        }
+
+        private void HideNotificationForUser(object notificationData)
+        {
+            if (notificationData is SystemNotifications sysNotif)
+            {
+                // Проверяем, не скрыто ли уже это уведомление
+                if (!Program.context.DeletedNotifications.Any(dn =>
+                    dn.NotifyID == sysNotif.NotifyID && dn.UserID == _currentUserId))
+                {
+                    Program.context.DeletedNotifications.Add(new DeletedNotifications
+                    {
+                        NotifyID = sysNotif.NotifyID,
+                        UserID = _currentUserId,
+                        DeletedDate = DateTime.Now
+                    });
+                }
+            }
+        }
+
         private void UpdateControlsSize()
         {
+            if (_currentNotifications == null) return;
+
             foreach (Control control in notifyPanel.Controls)
             {
                 if (control is NotifyControl userControl)
@@ -134,6 +291,62 @@ namespace Biblio.AppForms
         {
             navigationControl.HandleFormResize(this);
             UpdateControlsSize();
+        }
+
+        private void writeNotifyButton_Click(object sender, EventArgs e)
+        {
+            var form = new WriteNotifyForm();
+            _dialogService.ShowDialogWithOverlay(this.FindForm(), form);
+        }
+
+        private void deleteNotifyButton_Click(object sender, EventArgs e)
+        {
+            var checkedControls = notifyPanel.Controls.OfType<NotifyControl>()
+                .Where(control => control.IsChecked)
+                .ToList();
+
+            if (checkedControls.Count == 0) return;
+
+            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+            bool isAdmin = currentUser?.UserRoleID != 1;
+
+            try
+            {
+                foreach (var control in checkedControls)
+                {
+                    if (isAdmin)
+                    {
+                        // Полное удаление для админа
+                        DeleteNotificationPermanently(control.NotificationData);
+                    }
+                    else
+                    {
+                        // Скрытие уведомления для обычного пользователя
+                        HideNotificationForUser(control.NotificationData);
+                    }
+                }
+
+                Program.context.SaveChanges();
+
+                deleteNotifyButton.Enabled = false;
+
+                // Обновляем список уведомлений
+                if (isAdmin)
+                    ShowAdminNotify();
+                else
+                    ShowUserNotify();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при удалении: {ex.Message}");
+            }
+        }
+
+        private void NotifyControl_CheckChanged(object sender, EventArgs e)
+        {
+            // Активируем кнопку удаления, если есть выбранные элементы
+            deleteNotifyButton.Enabled = notifyPanel.Controls.OfType<NotifyControl>()
+                .Any(control => control.IsChecked);
         }
     }
 }

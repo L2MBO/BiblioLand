@@ -8,7 +8,7 @@ namespace Biblio.Models
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel33")
+            : base("name=BiblioModel37")
         {
         }
 
@@ -16,6 +16,7 @@ namespace Biblio.Models
         public virtual DbSet<BookReports> BookReports { get; set; }
         public virtual DbSet<Books> Books { get; set; }
         public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<DeletedNotifications> DeletedNotifications { get; set; }
         public virtual DbSet<Feedback> Feedback { get; set; }
         public virtual DbSet<FeedbackCategory> FeedbackCategory { get; set; }
         public virtual DbSet<Genres> Genres { get; set; }
@@ -36,14 +37,44 @@ namespace Biblio.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BookReportCategory>()
+                .HasMany(e => e.BookReports)
+                .WithRequired(e => e.BookReportCategory)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Books>()
                 .Property(e => e.AverageRating)
                 .HasPrecision(5, 2);
 
             modelBuilder.Entity<Books>()
+                .HasMany(e => e.BookReports)
+                .WithRequired(e => e.Books)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Books>()
                 .HasMany(e => e.Reviews)
                 .WithOptional(e => e.Books)
                 .WillCascadeOnDelete();
+
+            modelBuilder.Entity<FeedbackCategory>()
+                .HasMany(e => e.Feedback)
+                .WithRequired(e => e.FeedbackCategory)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ReviewReportCategory>()
+                .HasMany(e => e.ReviewReports)
+                .WithRequired(e => e.ReviewReportCategory)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Reviews>()
+                .HasMany(e => e.ReviewReports)
+                .WithRequired(e => e.Reviews)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<SystemNotifications>()
+                .HasMany(e => e.DeletedNotifications)
+                .WithRequired(e => e.SystemNotifications)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<UserBanCategory>()
                 .HasMany(e => e.UserBans)
@@ -58,6 +89,26 @@ namespace Biblio.Models
             modelBuilder.Entity<UserRoles>()
                 .HasMany(e => e.Users)
                 .WithRequired(e => e.UserRoles)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.BookReports)
+                .WithRequired(e => e.Users)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.DeletedNotifications)
+                .WithRequired(e => e.Users)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.Feedback)
+                .WithRequired(e => e.Users)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.ReviewReports)
+                .WithRequired(e => e.Users)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Users>()

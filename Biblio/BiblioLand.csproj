@@ -252,6 +252,12 @@
     <Compile Include="AppForms\UserForms\NotifyForm.Designer.cs">
       <DependentUpon>NotifyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\UserForms\ShowNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\UserForms\ShowNotify.Designer.cs">
+      <DependentUpon>ShowNotify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\Animations\FormDrag.cs" />
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
@@ -356,6 +362,7 @@
     <Compile Include="Models\BookReports.cs" />
     <Compile Include="Models\Books.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\DeletedNotifications.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\FeedbackCategory.cs" />
     <Compile Include="Models\Genres.cs" />
@@ -688,6 +695,7 @@
   <ItemGroup>
     <None Include="Resources\blueNoResults.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

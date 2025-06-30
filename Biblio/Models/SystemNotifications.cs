@@ -8,8 +8,13 @@ namespace Biblio.Models
 
     public partial class SystemNotifications
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SystemNotifications()
+        {
+            DeletedNotifications = new HashSet<DeletedNotifications>();
+        }
+
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int NotifyID { get; set; }
 
         public int UserID { get; set; }
@@ -20,6 +25,11 @@ namespace Biblio.Models
 
         [Required]
         public string NotifyMessage { get; set; }
+
+        public DateTime NotifyDate { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DeletedNotifications> DeletedNotifications { get; set; }
 
         public virtual Users Users { get; set; }
     }

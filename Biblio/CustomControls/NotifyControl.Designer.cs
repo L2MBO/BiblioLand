@@ -34,9 +34,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.deleteCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.deleteCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,10 +68,11 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.typeLabel);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(251, 0);
+            this.panel4.Location = new System.Drawing.Point(241, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(163, 51);
+            this.panel4.Size = new System.Drawing.Size(167, 51);
             this.panel4.TabIndex = 9;
+            this.panel4.Click += new System.EventHandler(this.mainPanel_Click);
             // 
             // typeLabel
             // 
@@ -85,16 +86,18 @@
             this.typeLabel.TabIndex = 4;
             this.typeLabel.Text = "Жалоба на комментарий";
             this.typeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.typeLabel.Click += new System.EventHandler(this.mainPanel_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.dateLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(414, 0);
+            this.panel3.Location = new System.Drawing.Point(408, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(83, 51);
+            this.panel3.Size = new System.Drawing.Size(85, 51);
             this.panel3.TabIndex = 8;
+            this.panel3.Click += new System.EventHandler(this.mainPanel_Click);
             // 
             // dateLabel
             // 
@@ -107,32 +110,17 @@
             this.dateLabel.Size = new System.Drawing.Size(37, 13);
             this.dateLabel.TabIndex = 3;
             this.dateLabel.Text = "Дата";
+            this.dateLabel.Click += new System.EventHandler(this.mainPanel_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.deleteCheckBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(497, 0);
+            this.panel1.Location = new System.Drawing.Point(493, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(29, 51);
+            this.panel1.Size = new System.Drawing.Size(33, 51);
             this.panel1.TabIndex = 7;
-            // 
-            // deleteCheckBox
-            // 
-            this.deleteCheckBox.AutoSize = true;
-            this.deleteCheckBox.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.deleteCheckBox.CheckedState.BorderRadius = 0;
-            this.deleteCheckBox.CheckedState.BorderThickness = 0;
-            this.deleteCheckBox.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.deleteCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.deleteCheckBox.Location = new System.Drawing.Point(7, 18);
-            this.deleteCheckBox.Name = "deleteCheckBox";
-            this.deleteCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.deleteCheckBox.TabIndex = 10;
-            this.deleteCheckBox.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.deleteCheckBox.UncheckedState.BorderRadius = 0;
-            this.deleteCheckBox.UncheckedState.BorderThickness = 0;
             // 
             // nameLabel
             // 
@@ -142,7 +130,7 @@
             this.nameLabel.ForeColor = System.Drawing.Color.White;
             this.nameLabel.Location = new System.Drawing.Point(44, 16);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(218, 18);
+            this.nameLabel.Size = new System.Drawing.Size(201, 18);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Отправил: ";
             this.nameLabel.Click += new System.EventHandler(this.mainPanel_Click);
@@ -160,6 +148,25 @@
             this.avatarPictureBox.TabIndex = 0;
             this.avatarPictureBox.TabStop = false;
             this.avatarPictureBox.Click += new System.EventHandler(this.mainPanel_Click);
+            // 
+            // deleteCheckBox
+            // 
+            this.deleteCheckBox.Animated = true;
+            this.deleteCheckBox.AutoSize = true;
+            this.deleteCheckBox.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.deleteCheckBox.CheckedState.BorderRadius = 4;
+            this.deleteCheckBox.CheckedState.BorderThickness = 2;
+            this.deleteCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.deleteCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.deleteCheckBox.Location = new System.Drawing.Point(3, 18);
+            this.deleteCheckBox.Name = "deleteCheckBox";
+            this.deleteCheckBox.Size = new System.Drawing.Size(15, 14);
+            this.deleteCheckBox.TabIndex = 13;
+            this.deleteCheckBox.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.deleteCheckBox.UncheckedState.BorderRadius = 4;
+            this.deleteCheckBox.UncheckedState.BorderThickness = 2;
+            this.deleteCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.deleteCheckBox.CheckedChanged += new System.EventHandler(this.deleteCheckBox_CheckedChanged);
             // 
             // NotifyControl
             // 

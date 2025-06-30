@@ -11,16 +11,18 @@ namespace Biblio.Models
     {
         public int FeedbackID { get; set; }
 
-        public int? UserID { get; set; }
+        public int UserID { get; set; }
 
-        public int? FeedbackCategoryID { get; set; }
+        public int FeedbackCategoryID { get; set; }
 
+        [Required]
         [StringLength(100)]
         public string FeedbackTitle { get; set; }
 
+        [Required]
         public string FeedbackMessage { get; set; }
 
-        public DateTime? FeedbackDate { get; set; }
+        public DateTime FeedbackDate { get; set; }
 
         public virtual FeedbackCategory FeedbackCategory { get; set; }
 
