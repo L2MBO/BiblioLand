@@ -132,11 +132,13 @@ namespace Biblio.AppForms
                     UpdateControlSize(userControl);
                     usersPanel.Controls.Add(userControl);
                 }
+                usersPanel.Dock = DockStyle.Top;
                 usersPanel.BackgroundImage = null;
             }
             else
             {
-                usersPanel.BackgroundImage = Properties.Resources.TransparentNoResults;
+                usersPanel.Dock = DockStyle.Fill;
+                usersPanel.BackgroundImage = Properties.Resources.blueNoResults;
             }
         }
 

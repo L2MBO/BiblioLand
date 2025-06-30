@@ -138,6 +138,12 @@
     <Compile Include="AppForms\AdminForms\ExtendBanForm.Designer.cs">
       <DependentUpon>ExtendBanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\AdminForms\WriteNotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AdminForms\WriteNotifyForm.Designer.cs">
+      <DependentUpon>WriteNotifyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\UserForms\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +320,12 @@
     <Compile Include="CustomControls\NavigationControl.Designer.cs">
       <DependentUpon>NavigationControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\NotifyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\NotifyControl.Designer.cs">
+      <DependentUpon>NotifyControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\SearchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -455,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\NavigationControl.resx">
       <DependentUpon>NavigationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\NotifyControl.resx">
+      <DependentUpon>NotifyControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
@@ -668,6 +683,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueNoResults.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

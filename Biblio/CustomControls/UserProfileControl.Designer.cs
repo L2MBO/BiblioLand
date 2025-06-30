@@ -31,18 +31,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.statusPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.roleLabel = new System.Windows.Forms.Label();
+            this.statusPictureBox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.registrationDateLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusPictureBox)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,18 +82,16 @@
             this.mainPanel.TabIndex = 2;
             this.mainPanel.Click += new System.EventHandler(this.UserProfileControl_Click);
             // 
-            // statusPictureBox
+            // panel4
             // 
-            this.statusPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.statusPictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.statusPictureBox.ImageRotate = 0F;
-            this.statusPictureBox.Location = new System.Drawing.Point(49, 19);
-            this.statusPictureBox.Name = "statusPictureBox";
-            this.statusPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.statusPictureBox.Size = new System.Drawing.Size(10, 10);
-            this.statusPictureBox.TabIndex = 5;
-            this.statusPictureBox.TabStop = false;
-            this.statusPictureBox.Click += new System.EventHandler(this.UserProfileControl_Click);
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.roleLabel);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(299, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(143, 50);
+            this.panel4.TabIndex = 6;
+            this.panel4.Click += new System.EventHandler(this.UserProfileControl_Click);
             // 
             // roleLabel
             // 
@@ -108,6 +106,19 @@
             this.roleLabel.Text = "Супер администратор";
             this.roleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.roleLabel.Click += new System.EventHandler(this.UserProfileControl_Click);
+            // 
+            // statusPictureBox
+            // 
+            this.statusPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.statusPictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.statusPictureBox.ImageRotate = 0F;
+            this.statusPictureBox.Location = new System.Drawing.Point(49, 19);
+            this.statusPictureBox.Name = "statusPictureBox";
+            this.statusPictureBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.statusPictureBox.Size = new System.Drawing.Size(10, 10);
+            this.statusPictureBox.TabIndex = 5;
+            this.statusPictureBox.TabStop = false;
+            this.statusPictureBox.Click += new System.EventHandler(this.UserProfileControl_Click);
             // 
             // panel3
             // 
@@ -135,12 +146,13 @@
             // 
             // nameLabel
             // 
+            this.nameLabel.AutoEllipsis = true;
             this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.White;
             this.nameLabel.Location = new System.Drawing.Point(65, 16);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(134, 18);
+            this.nameLabel.Size = new System.Drawing.Size(228, 18);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Имя";
             this.nameLabel.Click += new System.EventHandler(this.UserProfileControl_Click);
@@ -158,17 +170,6 @@
             this.avatarPictureBox.TabStop = false;
             this.avatarPictureBox.Click += new System.EventHandler(this.UserProfileControl_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.roleLabel);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(299, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(143, 50);
-            this.panel4.TabIndex = 6;
-            this.panel4.Click += new System.EventHandler(this.UserProfileControl_Click);
-            // 
             // UserProfileControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,12 +183,12 @@
             this.Size = new System.Drawing.Size(526, 51);
             this.Click += new System.EventHandler(this.UserProfileControl_Click);
             this.mainPanel.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusPictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

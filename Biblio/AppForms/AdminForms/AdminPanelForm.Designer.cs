@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanelForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.usersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -57,7 +58,6 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.usersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -96,6 +96,16 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(726, 378);
             this.mainPanel.TabIndex = 2;
+            // 
+            // usersPanel
+            // 
+            this.usersPanel.AutoSize = true;
+            this.usersPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.usersPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usersPanel.Location = new System.Drawing.Point(100, 100);
+            this.usersPanel.Name = "usersPanel";
+            this.usersPanel.Size = new System.Drawing.Size(526, 0);
+            this.usersPanel.TabIndex = 75;
             // 
             // panel7
             // 
@@ -437,16 +447,6 @@
             this.navigationControl.RightPanelWidth = 0;
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 0;
-            // 
-            // usersPanel
-            // 
-            this.usersPanel.AutoSize = true;
-            this.usersPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.usersPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.usersPanel.Location = new System.Drawing.Point(100, 100);
-            this.usersPanel.Name = "usersPanel";
-            this.usersPanel.Size = new System.Drawing.Size(526, 0);
-            this.usersPanel.TabIndex = 75;
             // 
             // AdminPanelForm
             // 

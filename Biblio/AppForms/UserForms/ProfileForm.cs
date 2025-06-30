@@ -405,7 +405,7 @@ namespace Biblio.AppForms
         }
 
         private void arrrowButton_Click(object sender, EventArgs e)
-        {//
+        {
             if (_backForm != null)
             {
                 _backForm.StartPosition = FormStartPosition.Manual;
