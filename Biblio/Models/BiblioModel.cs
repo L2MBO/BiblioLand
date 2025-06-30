@@ -8,7 +8,7 @@ namespace Biblio.Models
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel32")
+            : base("name=BiblioModel33")
         {
         }
 
@@ -24,6 +24,7 @@ namespace Biblio.Models
         public virtual DbSet<ReviewReportCategory> ReviewReportCategory { get; set; }
         public virtual DbSet<ReviewReports> ReviewReports { get; set; }
         public virtual DbSet<Reviews> Reviews { get; set; }
+        public virtual DbSet<SystemNotifications> SystemNotifications { get; set; }
         public virtual DbSet<UserBanCategory> UserBanCategory { get; set; }
         public virtual DbSet<UserBans> UserBans { get; set; }
         public virtual DbSet<UserBookmarks> UserBookmarks { get; set; }
@@ -63,6 +64,11 @@ namespace Biblio.Models
                 .HasMany(e => e.Reviews)
                 .WithOptional(e => e.Users)
                 .WillCascadeOnDelete();
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.SystemNotifications)
+                .WithRequired(e => e.Users)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Users>()
                 .HasMany(e => e.UserBans)

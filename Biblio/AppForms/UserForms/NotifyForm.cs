@@ -51,6 +51,7 @@ namespace Biblio.AppForms
 
         private void ShowAdminNotify()
         {
+            IQueryable<Feedback> query = Program.context.Feedback;
             // выводим информацию, по выбранной админом типом жалобы: 
             //Все жалобы - 0
             //Жалоба на книгу - 1
@@ -60,27 +61,45 @@ namespace Biblio.AppForms
             //switch (reportTypeComboBox.SelectedIndex)
             //{
             //    case 0: // передать все записи в таблицах: BookReports, ReviewReports, UserReports в контрол NotifyControl
+            // В остльных индексах передавать соответствующие таблицы
             //}
 
             //выводим информацию, по выбранному админом типу обращения: 
-            //switch (feedbackTypeComboBox.SelectedIndex)
-            //{
-            //    case 0:
+            switch (feedbackTypeComboBox.SelectedIndex)
+            {
+                case 0:
+                    // выводим все типы
+                    break;
 
-            //}
+                case 1: // Понравилось
+                    query = query.Where(type => type.FeedbackCategoryID == 1);
+                    break;
 
-            //UpdateUsersList(guery)
+                case 2: // Не понравилось
+                    query = query.Where(type => type.FeedbackCategoryID == 2);
+                    break;
+
+                case 3: // Баг
+                    query = query.Where(type => type.FeedbackCategoryID == 3);
+                    break;
+
+                case 4: // Идея
+                    query = query.Where(type => type.FeedbackCategoryID == 4);
+                    break;
+            }
+
+            UpdateNotifyList(query.ToList());
         }
 
-        private void UpdateUsersList(List<Users> users)
+        private void UpdateNotifyList(List<Feedback> messages)
         {
             notifyPanel.Controls.Clear();
 
-            if (users.Count > 0)
+            if (messages.Count > 0)
             {
-                foreach (Users user in users)
+                foreach (Feedback message in messages)
                 {
-                    var userControl = new UserProfileControl(user);
+                    var userControl = new NotifyControl(message);
                     userControl.Margin = new Padding(0, 0, 0, 10);
                     UpdateControlSize(userControl);
                     notifyPanel.Controls.Add(userControl);
@@ -99,14 +118,14 @@ namespace Biblio.AppForms
         {
             foreach (Control control in notifyPanel.Controls)
             {
-                if (control is UserProfileControl userControl)
+                if (control is NotifyControl userControl)
                 {
                     UpdateControlSize(userControl);
                 }
             }
         }
 
-        private void UpdateControlSize(UserProfileControl control)
+        private void UpdateControlSize(NotifyControl control)
         {
             control.Width = this.WindowState == FormWindowState.Maximized ? 1320 : 526;
         }
