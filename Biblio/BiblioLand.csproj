@@ -395,6 +395,9 @@
     <EmbeddedResource Include="AppForms\AdminForms\ExtendBanForm.resx">
       <DependentUpon>ExtendBanForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AdminForms\WriteNotifyForm.resx">
+      <DependentUpon>WriteNotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AppForms\UserForms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>

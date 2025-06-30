@@ -16,5 +16,10 @@ namespace Biblio.AppForms.AdminForms
         {
             InitializeComponent();
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
