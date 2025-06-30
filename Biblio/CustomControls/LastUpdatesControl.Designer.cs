@@ -40,15 +40,15 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.timeLabel = new System.Windows.Forms.Label();
             this.timePanel = new System.Windows.Forms.Panel();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.bookPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.mainPanel.SuspendLayout();
             this.middlePanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.timePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 8);
+            this.panel1.Size = new System.Drawing.Size(506, 8);
             this.panel1.TabIndex = 3;
             this.panel1.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
@@ -65,7 +65,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 102);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 8);
+            this.panel2.Size = new System.Drawing.Size(506, 8);
             this.panel2.TabIndex = 4;
             this.panel2.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
@@ -81,7 +81,7 @@
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(457, 8);
+            this.panel4.Location = new System.Drawing.Point(498, 8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(8, 94);
             this.panel4.TabIndex = 6;
@@ -97,7 +97,7 @@
             this.mainPanel.Location = new System.Drawing.Point(8, 8);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(449, 94);
+            this.mainPanel.Size = new System.Drawing.Size(490, 94);
             this.mainPanel.TabIndex = 7;
             this.mainPanel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
@@ -111,7 +111,7 @@
             this.middlePanel.Location = new System.Drawing.Point(64, 0);
             this.middlePanel.Margin = new System.Windows.Forms.Padding(2);
             this.middlePanel.Name = "middlePanel";
-            this.middlePanel.Size = new System.Drawing.Size(284, 94);
+            this.middlePanel.Size = new System.Drawing.Size(325, 94);
             this.middlePanel.TabIndex = 7;
             this.middlePanel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
@@ -124,7 +124,7 @@
             this.infoPanel.Location = new System.Drawing.Point(8, 24);
             this.infoPanel.Margin = new System.Windows.Forms.Padding(2);
             this.infoPanel.Name = "infoPanel";
-            this.infoPanel.Size = new System.Drawing.Size(276, 44);
+            this.infoPanel.Size = new System.Drawing.Size(317, 44);
             this.infoPanel.TabIndex = 8;
             this.infoPanel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
@@ -138,7 +138,7 @@
             this.authorLabel.Location = new System.Drawing.Point(0, 0);
             this.authorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(276, 16);
+            this.authorLabel.Size = new System.Drawing.Size(317, 16);
             this.authorLabel.TabIndex = 4;
             this.authorLabel.Text = "Автор";
             this.authorLabel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
@@ -153,7 +153,7 @@
             this.nameLabel.Location = new System.Drawing.Point(0, 22);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(276, 22);
+            this.nameLabel.Size = new System.Drawing.Size(317, 22);
             this.nameLabel.TabIndex = 3;
             this.nameLabel.Text = "Название";
             this.nameLabel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
@@ -163,7 +163,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(8, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(276, 24);
+            this.panel6.Size = new System.Drawing.Size(317, 24);
             this.panel6.TabIndex = 7;
             this.panel6.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
@@ -181,25 +181,23 @@
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.rightPanel.Controls.Add(this.timePanel);
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(348, 0);
+            this.rightPanel.Location = new System.Drawing.Point(389, 0);
             this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(101, 94);
             this.rightPanel.TabIndex = 6;
             this.rightPanel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
-            // bookPictureBox
+            // timePanel
             // 
-            this.bookPictureBox.BorderRadius = 10;
-            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bookPictureBox.ImageRotate = 0F;
-            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.bookPictureBox.Name = "bookPictureBox";
-            this.bookPictureBox.Size = new System.Drawing.Size(64, 94);
-            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bookPictureBox.TabIndex = 2;
-            this.bookPictureBox.TabStop = false;
-            this.bookPictureBox.Click += new System.EventHandler(this.LastUpdatesControl_Click);
+            this.timePanel.Controls.Add(this.timeLabel);
+            this.timePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(189)))));
+            this.timePanel.Location = new System.Drawing.Point(0, 37);
+            this.timePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.timePanel.Name = "timePanel";
+            this.timePanel.Size = new System.Drawing.Size(101, 19);
+            this.timePanel.TabIndex = 0;
+            this.timePanel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
             // timeLabel
             // 
@@ -216,16 +214,18 @@
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.timeLabel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
-            // timePanel
+            // bookPictureBox
             // 
-            this.timePanel.Controls.Add(this.timeLabel);
-            this.timePanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(188)))), ((int)(((byte)(189)))));
-            this.timePanel.Location = new System.Drawing.Point(0, 37);
-            this.timePanel.Margin = new System.Windows.Forms.Padding(2);
-            this.timePanel.Name = "timePanel";
-            this.timePanel.Size = new System.Drawing.Size(101, 19);
-            this.timePanel.TabIndex = 0;
-            this.timePanel.Click += new System.EventHandler(this.LastUpdatesControl_Click);
+            this.bookPictureBox.BorderRadius = 10;
+            this.bookPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.bookPictureBox.ImageRotate = 0F;
+            this.bookPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.bookPictureBox.Name = "bookPictureBox";
+            this.bookPictureBox.Size = new System.Drawing.Size(64, 94);
+            this.bookPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bookPictureBox.TabIndex = 2;
+            this.bookPictureBox.TabStop = false;
+            this.bookPictureBox.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             // 
             // LastUpdatesControl
             // 
@@ -240,15 +240,15 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LastUpdatesControl";
-            this.Size = new System.Drawing.Size(465, 110);
+            this.Size = new System.Drawing.Size(506, 110);
             this.Click += new System.EventHandler(this.LastUpdatesControl_Click);
             this.mainPanel.ResumeLayout(false);
             this.middlePanel.ResumeLayout(false);
             this.infoPanel.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.timePanel.ResumeLayout(false);
             this.timePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }

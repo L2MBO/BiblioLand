@@ -269,6 +269,63 @@ namespace Biblio.AppForms
             }
         }
 
+        private void DeleteSelectedNotifications()
+        {
+            var checkedControls = GetCheckedNotificationControls();
+            if (checkedControls.Count == 0) return;
+
+            bool isAdmin = IsCurrentUserAdmin();
+
+            try
+            {
+                ProcessNotificationsDeletion(checkedControls, isAdmin);
+                SaveChangesAndUpdateUI(isAdmin);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при удалении: {ex.Message}");
+            }
+        }
+
+        private List<NotifyControl> GetCheckedNotificationControls()
+        {
+            return notifyPanel.Controls.OfType<NotifyControl>()
+                .Where(control => control.IsChecked)
+                .ToList();
+        }
+
+        private bool IsCurrentUserAdmin()
+        {
+            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+            return currentUser?.UserRoleID != 1;
+        }
+
+        private void ProcessNotificationsDeletion(List<NotifyControl> controls, bool isAdmin)
+        {
+            foreach (var control in controls)
+            {
+                if (isAdmin)
+                {
+                    DeleteNotificationPermanently(control.NotificationData);
+                }
+                else
+                {
+                    HideNotificationForUser(control.NotificationData);
+                }
+            }
+        }
+
+        private void SaveChangesAndUpdateUI(bool isAdmin)
+        {
+            Program.context.SaveChanges();
+            deleteNotifyButton.Enabled = false;
+
+            if (isAdmin)
+                ShowAdminNotify();
+            else
+                ShowUserNotify();
+        }
+
         private void UpdateControlsSize()
         {
             if (_currentNotifications == null) return;
@@ -301,45 +358,7 @@ namespace Biblio.AppForms
 
         private void deleteNotifyButton_Click(object sender, EventArgs e)
         {
-            var checkedControls = notifyPanel.Controls.OfType<NotifyControl>()
-                .Where(control => control.IsChecked)
-                .ToList();
-
-            if (checkedControls.Count == 0) return;
-
-            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
-            bool isAdmin = currentUser?.UserRoleID != 1;
-
-            try
-            {
-                foreach (var control in checkedControls)
-                {
-                    if (isAdmin)
-                    {
-                        // Полное удаление для админа
-                        DeleteNotificationPermanently(control.NotificationData);
-                    }
-                    else
-                    {
-                        // Скрытие уведомления для обычного пользователя
-                        HideNotificationForUser(control.NotificationData);
-                    }
-                }
-
-                Program.context.SaveChanges();
-
-                deleteNotifyButton.Enabled = false;
-
-                // Обновляем список уведомлений
-                if (isAdmin)
-                    ShowAdminNotify();
-                else
-                    ShowUserNotify();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при удалении: {ex.Message}");
-            }
+            DeleteSelectedNotifications();
         }
 
         private void NotifyControl_CheckChanged(object sender, EventArgs e)

@@ -27,7 +27,7 @@ namespace Biblio.CustomControls
             _book = book;
             _parentPanel = parentPanel;
 
-            this.Width = _parentForm.WindowState == FormWindowState.Maximized ? 1300 : 460;
+            this.Width = _parentForm.WindowState == FormWindowState.Maximized ? 1300 : 506;
 
             authorLabel.Text = _book.Author;
             nameLabel.Text = _book.Title;

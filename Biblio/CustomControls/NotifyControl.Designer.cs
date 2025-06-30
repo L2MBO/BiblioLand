@@ -158,7 +158,7 @@
             this.deleteCheckBox.CheckedState.BorderThickness = 2;
             this.deleteCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             this.deleteCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.deleteCheckBox.Location = new System.Drawing.Point(3, 18);
+            this.deleteCheckBox.Location = new System.Drawing.Point(2, 17);
             this.deleteCheckBox.Name = "deleteCheckBox";
             this.deleteCheckBox.Size = new System.Drawing.Size(15, 14);
             this.deleteCheckBox.TabIndex = 13;
