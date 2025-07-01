@@ -35,7 +35,7 @@
             this.sendNotifyButton = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.titleTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.nameLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
@@ -61,7 +61,7 @@
             this.guna2Panel1.Controls.Add(this.descriptionLabel);
             this.guna2Panel1.Controls.Add(this.descriptionTextBox);
             this.guna2Panel1.Controls.Add(this.titleTextBox);
-            this.guna2Panel1.Controls.Add(this.nameLabel);
+            this.guna2Panel1.Controls.Add(this.titleLabel);
             this.guna2Panel1.Controls.Add(this.closeButton);
             this.guna2Panel1.Controls.Add(this.sendNotifyButton);
             this.guna2Panel1.Controls.Add(this.label2);
@@ -111,6 +111,7 @@
             this.sendNotifyButton.Size = new System.Drawing.Size(97, 36);
             this.sendNotifyButton.TabIndex = 37;
             this.sendNotifyButton.Text = "Отправить";
+            this.sendNotifyButton.Click += new System.EventHandler(this.sendNotifyButton_Click);
             // 
             // label2
             // 
@@ -146,17 +147,18 @@
             this.titleTextBox.SelectedText = "";
             this.titleTextBox.Size = new System.Drawing.Size(176, 36);
             this.titleTextBox.TabIndex = 42;
+            this.titleTextBox.TextChanged += new System.EventHandler(this.titleTextBox_TextChanged);
             // 
-            // nameLabel
+            // titleLabel
             // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(32, 66);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(77, 15);
-            this.nameLabel.TabIndex = 41;
-            this.nameLabel.Text = "Заголовок";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(32, 66);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(77, 15);
+            this.titleLabel.TabIndex = 41;
+            this.titleLabel.Text = "Заголовок";
             // 
             // descriptionLabel
             // 
@@ -193,6 +195,7 @@
             this.descriptionTextBox.SelectedText = "";
             this.descriptionTextBox.Size = new System.Drawing.Size(176, 66);
             this.descriptionTextBox.TabIndex = 51;
+            this.descriptionTextBox.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
             // 
             // WriteNotifyForm
             // 
@@ -218,7 +221,7 @@
         private Guna.UI2.WinForms.Guna2Button sendNotifyButton;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox titleTextBox;
-        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label descriptionLabel;
         private Guna.UI2.WinForms.Guna2TextBox descriptionTextBox;
     }
