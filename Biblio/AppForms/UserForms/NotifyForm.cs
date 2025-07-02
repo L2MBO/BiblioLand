@@ -198,7 +198,7 @@ namespace Biblio.AppForms
             _isUpdatingComboBoxes = false;
         }
 
-        private void RefreshNotifications()
+        public void RefreshNotifications()
         {
             var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
             bool isAdmin = currentUser?.UserRoleID != 1;

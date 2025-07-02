@@ -38,7 +38,7 @@ namespace Biblio.CustomControls
             this.Load += NavigationControl_Load;
 
             // Привязка событий кнопок
-            closeButton.Click += (s, e) => Application.Exit();
+            HideOrClose();
             minimizeButton.Click += (s, e) => FindForm().WindowState = FormWindowState.Minimized;
             maximizeButton.Click += (s, e) => FindForm().WindowState = FormWindowState.Maximized;
             restoreButton.Click += (s, e) => FindForm().WindowState = FormWindowState.Normal;
@@ -48,6 +48,18 @@ namespace Biblio.CustomControls
             catalogButton.Click += (s, e) => OpenForm<BookСatalogForm>();
             bookmarksButton.Click += (s, e) => OpenForm<BookmarksForm>();
             notificationsButton.Click += (s, e) => OpenForm<NotifyForm>();
+        }
+
+        private void HideOrClose()
+        {
+            if (IsHide)
+            {
+                closeButton.Click += (s, e) => FindForm().Hide();
+            }
+            else
+            {
+                closeButton.Click += (s, e) => Application.Exit();
+            }
         }
 
         private void NavigationControl_Load(object sender, EventArgs e)
@@ -191,5 +203,7 @@ namespace Biblio.CustomControls
 
         public int LeftPanelWidth { get; set; }
         public int RightPanelWidth { get; set; }
+
+        public static bool IsHide { get; set; } = false;
     }
 }

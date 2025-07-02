@@ -25,13 +25,8 @@ namespace Biblio.AppForms.AdminForms
 
         private void LoadNotifyInfo()
         {
-            //if (_notificationData is SystemNotifications systemNotification)
-            //{
-            //    titleLabel.Text = systemNotification.NotifyTitle;
-            //    typeLabel.Text = "Системное уведомление";
-            //    dateLabel.Text = systemNotification.NotifyDate.ToShortDateString();
-            //}
-            //else if (_notificationData is BookReports bookReport)
+            descriptionTextBox.Text = "skmsmssfsfs\n sdsudhsss wuf wuf wu\n jf wif jw bwfwifw w\n sdsdjwodjwodjwdwdjwd\n dkfjnsdfdsf dfnds fdsod sfdfnds djdsfod fdsjdssd fjsdfodsf sdjfsodf sdjfsdf sdjfsdof sdjfsdjfsd dssdosd sdkf";
+            //if (_notificationData is BookReports bookReport)
             //{
             //    titleLabel.Text = "Жалоба на книгу";
             //    nameLabel.Text = $"Отправил {bookReport.Users.Username}";

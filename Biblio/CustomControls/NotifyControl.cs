@@ -67,6 +67,8 @@ namespace Biblio.CustomControls
                 nameLabel.Text = reviewReport.Users.Username;
                 typeLabel.Text = "Жалоба на комментарий";
                 dateLabel.Text = reviewReport.ReportDate.ToShortDateString();
+                _form = new CommentNotifyForm(reviewReport);
+                return;
             }
             else if (_notificationData is UserReports userReport)
             {
@@ -88,7 +90,17 @@ namespace Biblio.CustomControls
 
         private void mainPanel_Click(object sender, EventArgs e)
         {
-            
+            if (_form is CommentNotifyForm commentForm)
+            {
+                commentForm.CommentDeleted += () =>
+                {
+                    if (this.FindForm() is NotifyForm notifyForm)
+                    {
+                        notifyForm.RefreshNotifications();
+                    }
+                };
+            }
+
             _dialogService.ShowDialogWithOverlay(this.FindForm(), _form);
             deleteCheckBox.Checked = true;
         }

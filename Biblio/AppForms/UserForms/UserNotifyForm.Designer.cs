@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserNotifyForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,7 +62,7 @@
             this.guna2Panel1.Controls.Add(this.closeButton);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(330, 200);
+            this.guna2Panel1.Size = new System.Drawing.Size(330, 185);
             this.guna2Panel1.TabIndex = 2;
             // 
             // descriptionTextBox
@@ -79,7 +80,7 @@
             this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
-            this.descriptionTextBox.Location = new System.Drawing.Point(28, 116);
+            this.descriptionTextBox.Location = new System.Drawing.Point(28, 103);
             this.descriptionTextBox.MaxLength = 600;
             this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
             this.descriptionTextBox.Multiline = true;
@@ -96,7 +97,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 98);
+            this.label1.Location = new System.Drawing.Point(25, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 15);
             this.label1.TabIndex = 39;
@@ -109,7 +110,7 @@
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(33, 38);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(269, 54);
+            this.titleLabel.Size = new System.Drawing.Size(269, 40);
             this.titleLabel.TabIndex = 34;
             this.titleLabel.Text = "Тема";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,10 +143,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(331, 201);
+            this.ClientSize = new System.Drawing.Size(331, 186);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserNotifyForm";
+            this.ShowInTaskbar = false;
             this.Text = "ShowNotify";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
