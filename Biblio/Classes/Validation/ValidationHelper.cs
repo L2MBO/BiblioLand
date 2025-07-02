@@ -142,7 +142,7 @@ namespace Biblio.ValidationClasses
 
             if (!_isCodeSent)
             {
-                if (user.ConfirmationCode == null || user.ConfirmationCodeExpiration == null || user.ConfirmationCodeExpiration < DateTime.Now)
+                if (user.ConfirmationCodeHash == null || user.ConfirmationCodeExpiration == null || user.ConfirmationCodeExpiration < DateTime.Now)
                 {
                     ConfirmationCodeHelper.GenerateAndSetConfirmationCode(user);
 
@@ -170,9 +170,9 @@ namespace Biblio.ValidationClasses
 
             else
             {
-                if (VerificationCodeField.Text == user.ConfirmationCode)
+                if (VerificationCodeField.Text == user.ConfirmationCodeHash)
                 {
-                    user.ConfirmationCode = null;
+                    user.ConfirmationCodeHash = null;
                     user.ConfirmationCodeExpiration = null;
                     Program.context.SaveChanges();
 

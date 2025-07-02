@@ -27,8 +27,8 @@ namespace Biblio.Classes.ConfirmationCode
         /// <param name="user">Пользователь, которому будет установлен код подтверждения</param>
         public static void GenerateAndSetConfirmationCode(Users user)
         {
-            string confirmationCode = ConfirmationCodeHelper.GenerateConfirmationCode();
-            user.ConfirmationCode = confirmationCode;
+            string confirmationCode = GenerateConfirmationCode();
+            user.ConfirmationCodeHash = confirmationCode;
             user.ConfirmationCodeExpiration = DateTime.Now.AddMinutes(5);
             Program.context.SaveChanges();
         }

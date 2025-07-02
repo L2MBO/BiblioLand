@@ -33,12 +33,6 @@ namespace Biblio.AppForms.AdminForms
 
             //    dateLabel.Text = bookReport.ReportDate.ToShortDateString();
             //}
-            //else if (_notificationData is ReviewReports reviewReport)
-            //{
-            //    nameLabel.Text = $"Отправил {reviewReport.Users.Username}";
-            //    titleLabel.Text = "Жалоба на комментарий";
-            //    dateLabel.Text = reviewReport.ReportDate.ToShortDateString();
-            //}
             //else if (_notificationData is UserReports userReport)
             //{
             //    nameLabel.Text = $"Отправил {userReport.Users.Username}";

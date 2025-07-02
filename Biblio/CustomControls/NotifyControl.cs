@@ -83,6 +83,8 @@ namespace Biblio.CustomControls
                 nameLabel.Text = feedback.Users.Username;
                 typeLabel.Text = feedback.FeedbackCategory.FeedbackCategoryName;
                 dateLabel.Text = feedback.FeedbackDate.ToShortDateString();
+                _form = new FeedbackNotifyForm(feedback);
+                return;
             }
 
             _form = new AdminNotifyForm(_notificationData);

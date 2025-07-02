@@ -150,6 +150,12 @@
     <Compile Include="AppForms\AdminForms\ExtendBanForm.Designer.cs">
       <DependentUpon>ExtendBanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\AdminForms\FeedbackNotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\AdminForms\FeedbackNotifyForm.Designer.cs">
+      <DependentUpon>FeedbackNotifyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\AdminForms\WriteNotifyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -412,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AdminForms\ExtendBanForm.resx">
       <DependentUpon>ExtendBanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\AdminForms\FeedbackNotifyForm.resx">
+      <DependentUpon>FeedbackNotifyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\AdminForms\WriteNotifyForm.resx">
       <DependentUpon>WriteNotifyForm.cs</DependentUpon>
