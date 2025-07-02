@@ -1,4 +1,5 @@
 ﻿using Biblio.AppForms;
+using Biblio.AppForms.AdminForms;
 using Biblio.AppForms.UserForms;
 using Biblio.Classes.Customization.FormCustomization;
 using Biblio.HideClasses;
@@ -14,6 +15,7 @@ namespace Biblio.CustomControls
         public event EventHandler CheckChanged;
         private object _notificationData;
         private int _currentUser;
+        Form _form;
         public bool IsChecked => deleteCheckBox.Checked;
         public object NotificationData => _notificationData;
 
@@ -49,6 +51,8 @@ namespace Biblio.CustomControls
                 titleLabel.Text = systemNotification.NotifyTitle;
                 typeLabel.Text = "Системное уведомление";
                 dateLabel.Text = systemNotification.NotifyDate.ToShortDateString();
+                _form = new UserNotifyForm(systemNotification);
+                return;
             }
             else if (_notificationData is BookReports bookReport)
             {
@@ -78,12 +82,15 @@ namespace Biblio.CustomControls
                 typeLabel.Text = feedback.FeedbackCategory.FeedbackCategoryName;
                 dateLabel.Text = feedback.FeedbackDate.ToShortDateString();
             }
+
+            _form = new AdminNotifyForm(_notificationData);
         }
 
         private void mainPanel_Click(object sender, EventArgs e)
         {
-            var form = new ShowNotify(_notificationData);
-            _dialogService.ShowDialogWithOverlay(this.FindForm(), form);
+            
+            _dialogService.ShowDialogWithOverlay(this.FindForm(), _form);
+            deleteCheckBox.Checked = true;
         }
 
         private void deleteCheckBox_CheckedChanged(object sender, EventArgs e)

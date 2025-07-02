@@ -1,5 +1,4 @@
-﻿using Biblio.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
-namespace Biblio.AppForms.UserForms
+namespace Biblio.AppForms.AdminForms
 {
-    public partial class ShowNotify : Form
+    public partial class AdminNotifyForm : Form
     {
         private object _notificationData;
 
-        public ShowNotify(object notificationData)
+        public AdminNotifyForm(object notificationData)
         {
             InitializeComponent();
 
@@ -35,8 +33,9 @@ namespace Biblio.AppForms.UserForms
             //}
             //else if (_notificationData is BookReports bookReport)
             //{
-            //    nameLabel.Text = $"Отправил {bookReport.Users.Username}";
             //    titleLabel.Text = "Жалоба на книгу";
+            //    nameLabel.Text = $"Отправил {bookReport.Users.Username}";
+
             //    dateLabel.Text = bookReport.ReportDate.ToShortDateString();
             //}
             //else if (_notificationData is ReviewReports reviewReport)
@@ -62,6 +61,16 @@ namespace Biblio.AppForms.UserForms
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

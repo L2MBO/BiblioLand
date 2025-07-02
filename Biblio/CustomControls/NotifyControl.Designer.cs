@@ -36,8 +36,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.deleteCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -147,15 +147,29 @@
             // nameLabel
             // 
             this.nameLabel.AutoEllipsis = true;
+            this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.White;
             this.nameLabel.Location = new System.Drawing.Point(127, 16);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(111, 18);
+            this.nameLabel.Size = new System.Drawing.Size(36, 16);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Имя";
             this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoEllipsis = true;
+            this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(44, 16);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(84, 18);
+            this.titleLabel.TabIndex = 10;
+            this.titleLabel.Text = "Отправил:";
+            this.titleLabel.Click += new System.EventHandler(this.mainPanel_Click);
             // 
             // avatarPictureBox
             // 
@@ -171,19 +185,6 @@
             this.avatarPictureBox.TabStop = false;
             this.avatarPictureBox.Click += new System.EventHandler(this.mainPanel_Click);
             // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoEllipsis = true;
-            this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(44, 16);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(84, 18);
-            this.titleLabel.TabIndex = 10;
-            this.titleLabel.Text = "Отправил:";
-            this.titleLabel.Click += new System.EventHandler(this.mainPanel_Click);
-            // 
             // NotifyControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +195,7 @@
             this.Size = new System.Drawing.Size(526, 51);
             this.Click += new System.EventHandler(this.mainPanel_Click);
             this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
