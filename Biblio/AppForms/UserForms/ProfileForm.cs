@@ -204,7 +204,7 @@ namespace Biblio.AppForms
             {
                 changeRoleButton.Visible = currentUser.UserRoleID == 3 && _currentUser.UserRoleID != 3;
                 settingsButton.Visible = false;
-                ShowBanButtons();
+                ShowAdminButtons();
             }
         }
 
@@ -243,6 +243,31 @@ namespace Biblio.AppForms
             }
         }
 
+        private void CopyUserEmail()
+        {
+            if (_currentUser.UserRoleID != 1 && Program.CurrentUser.UserRoleID != 3)
+            {
+                ValidationHelper.ShowCustomTitleErrorMessage("Вы не можете получить почту администратора!", "Недостаточно прав!");
+                return;
+            }
+
+            Clipboard.SetText(_currentUser.Email);
+
+            getUserEmailButton.Text = "Почта скопирована";
+            getUserEmailButton.ForeColor = Color.Green;
+
+            Timer timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += (sender, e) =>
+            {
+                getUserEmailButton.Text = "Получить почту";
+                getUserEmailButton.ForeColor = Color.White;
+                timer.Stop();
+                timer.Dispose();
+            };
+            timer.Start();
+        }
+
         private void ShowBanExpiration()
         {
             var userBan = Program.context.UserBans.FirstOrDefault(user => user.BanedUserID == _currentUserId);
@@ -250,9 +275,10 @@ namespace Biblio.AppForms
             banExpirationLabel.Text = banDate.ToString("Забанен до: " + "dd.MM.yyyy HH:mm");
         }
 
-        private void ShowBanButtons()
+        private void ShowAdminButtons()
         {
             banButton.Visible = true;
+            getUserEmailButton.Visible = true;
 
             if (IsUserBaned())
             {
@@ -289,7 +315,7 @@ namespace Biblio.AppForms
                 Program.context.UserBans.Remove(userBan);
                 Program.context.SaveChanges();
 
-                ShowBanButtons();
+                ShowAdminButtons();
 
                 ValidationHelper.ShowInformationMessage("Бан успешно снят!", "Успех");
             }
@@ -425,8 +451,13 @@ namespace Biblio.AppForms
         private void banButton_Click(object sender, EventArgs e)
         {
             var form = new UserBanForm(_currentUserId);
-            form.BanChanged += ShowBanButtons;
+            form.BanChanged += ShowAdminButtons;
             _dialogService.ShowDialogWithOverlay(this, form);
+        }
+
+        private void getUserEmailButton_Click(object sender, EventArgs e)
+        {
+            CopyUserEmail();
         }
 
         private void unBanButton_Click(object sender, EventArgs e)

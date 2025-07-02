@@ -54,21 +54,21 @@ namespace Biblio.CustomControls
             {
                 _currentUser = bookReport.Users.UserID;
                 nameLabel.Text = bookReport.Users.Username;
-                typeLabel.Text = $"Жалоба на книгу";
+                typeLabel.Text = "Жалоба на книгу";
                 dateLabel.Text = bookReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is ReviewReports reviewReport)
             {
                 _currentUser = reviewReport.Users.UserID;
                 nameLabel.Text = reviewReport.Users.Username;
-                typeLabel.Text = $"Жалоба на комментарий";
+                typeLabel.Text = "Жалоба на комментарий";
                 dateLabel.Text = reviewReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is UserReports userReport)
             {
                 _currentUser = userReport.Users.UserID;
                 nameLabel.Text = userReport.Users.Username;
-                typeLabel.Text = $"Жалоба на пользователя";
+                typeLabel.Text = "Жалоба на пользователя";
                 dateLabel.Text = userReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is Feedback feedback)

@@ -32,11 +32,10 @@
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.banCalendar = new System.Windows.Forms.MonthCalendar();
             this.issueBanButton = new Guna.UI2.WinForms.Guna2Button();
             this.banMessageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.banMessageLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.banReasonLabel = new System.Windows.Forms.Label();
             this.banReasonComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -61,11 +60,10 @@
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.banCalendar);
             this.guna2Panel1.Controls.Add(this.issueBanButton);
             this.guna2Panel1.Controls.Add(this.banMessageTextBox);
             this.guna2Panel1.Controls.Add(this.banMessageLabel);
-            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.titleLabel);
             this.guna2Panel1.Controls.Add(this.closeButton);
             this.guna2Panel1.Controls.Add(this.banReasonLabel);
             this.guna2Panel1.Controls.Add(this.banReasonComboBox);
@@ -84,18 +82,6 @@
             this.label1.Size = new System.Drawing.Size(151, 15);
             this.label1.TabIndex = 39;
             this.label1.Text = "Дата окончания бана";
-            // 
-            // banCalendar
-            // 
-            this.banCalendar.BackColor = System.Drawing.Color.White;
-            this.banCalendar.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.banCalendar.Location = new System.Drawing.Point(24, 217);
-            this.banCalendar.MaxSelectionCount = 1;
-            this.banCalendar.MinDate = new System.DateTime(2025, 6, 25, 0, 0, 0, 0);
-            this.banCalendar.Name = "banCalendar";
-            this.banCalendar.ShowTodayCircle = false;
-            this.banCalendar.TabIndex = 38;
-            this.banCalendar.TrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
             // 
             // issueBanButton
             // 
@@ -151,16 +137,16 @@
             this.banMessageLabel.TabIndex = 35;
             this.banMessageLabel.Text = "Сообщение";
             // 
-            // label2
+            // titleLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Тема";
+            this.titleLabel.AutoEllipsis = true;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(20, 24);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(269, 20);
+            this.titleLabel.TabIndex = 34;
+            this.titleLabel.Text = "Тема";
             // 
             // closeButton
             // 
@@ -246,11 +232,10 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm FormRounded;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar banCalendar;
         private Guna.UI2.WinForms.Guna2Button issueBanButton;
         private Guna.UI2.WinForms.Guna2TextBox banMessageTextBox;
         private System.Windows.Forms.Label banMessageLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label titleLabel;
         private Guna.UI2.WinForms.Guna2CircleButton closeButton;
         private System.Windows.Forms.Label banReasonLabel;
         private Guna.UI2.WinForms.Guna2ComboBox banReasonComboBox;

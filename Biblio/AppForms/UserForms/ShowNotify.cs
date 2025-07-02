@@ -29,32 +29,32 @@ namespace Biblio.AppForms.UserForms
         {
             //if (_notificationData is SystemNotifications systemNotification)
             //{
-            //    nameLabel.Text = systemNotification.NotifyTitle;
+            //    titleLabel.Text = systemNotification.NotifyTitle;
             //    typeLabel.Text = "Системное уведомление";
             //    dateLabel.Text = systemNotification.NotifyDate.ToShortDateString();
             //}
             //else if (_notificationData is BookReports bookReport)
             //{
             //    nameLabel.Text = $"Отправил {bookReport.Users.Username}";
-            //    typeLabel.Text = $"Жалоба на книгу";
+            //    titleLabel.Text = "Жалоба на книгу";
             //    dateLabel.Text = bookReport.ReportDate.ToShortDateString();
             //}
             //else if (_notificationData is ReviewReports reviewReport)
             //{
             //    nameLabel.Text = $"Отправил {reviewReport.Users.Username}";
-            //    typeLabel.Text = $"Жалоба на комментарий";
+            //    titleLabel.Text = "Жалоба на комментарий";
             //    dateLabel.Text = reviewReport.ReportDate.ToShortDateString();
             //}
             //else if (_notificationData is UserReports userReport)
             //{
             //    nameLabel.Text = $"Отправил {userReport.Users.Username}";
-            //    typeLabel.Text = $"Жалоба на пользователя";
+            //    titleLabel.Text = "Жалоба на пользователя";
             //    dateLabel.Text = userReport.ReportDate.ToShortDateString();
             //}
             //else if (_notificationData is Feedback feedback)
             //{
             //    nameLabel.Text = $"Отправил {feedback.Users.Username}";
-            //    typeLabel.Text = feedback.FeedbackCategory.FeedbackCategoryName;
+            //    titleLabel.Text = feedback.FeedbackCategory.FeedbackCategoryName;
             //    dateLabel.Text = feedback.FeedbackDate.ToShortDateString();
             //}
         }

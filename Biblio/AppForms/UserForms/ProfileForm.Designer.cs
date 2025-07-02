@@ -93,6 +93,7 @@
             this.arrowPanel = new System.Windows.Forms.Panel();
             this.arrowButton = new Guna.UI2.WinForms.Guna2Button();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
+            this.getUserEmailButton = new Guna.UI2.WinForms.Guna2Button();
             this.mainPanel.SuspendLayout();
             this.lockPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -671,6 +672,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.getUserEmailButton);
             this.panel3.Controls.Add(this.changeRoleButton);
             this.panel3.Controls.Add(this.changeBanPanel);
             this.panel3.Controls.Add(this.banButton);
@@ -695,7 +697,7 @@
             this.changeRoleButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.changeRoleButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changeRoleButton.ForeColor = System.Drawing.Color.White;
-            this.changeRoleButton.Location = new System.Drawing.Point(297, 0);
+            this.changeRoleButton.Location = new System.Drawing.Point(297, 30);
             this.changeRoleButton.Name = "changeRoleButton";
             this.changeRoleButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
             this.changeRoleButton.Size = new System.Drawing.Size(143, 25);
@@ -924,6 +926,28 @@
             this.navigationControl.Size = new System.Drawing.Size(726, 52);
             this.navigationControl.TabIndex = 2;
             // 
+            // getUserEmailButton
+            // 
+            this.getUserEmailButton.Animated = true;
+            this.getUserEmailButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.getUserEmailButton.BorderRadius = 12;
+            this.getUserEmailButton.BorderThickness = 1;
+            this.getUserEmailButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.getUserEmailButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.getUserEmailButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.getUserEmailButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.getUserEmailButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.getUserEmailButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.getUserEmailButton.ForeColor = System.Drawing.Color.White;
+            this.getUserEmailButton.Location = new System.Drawing.Point(297, 0);
+            this.getUserEmailButton.Name = "getUserEmailButton";
+            this.getUserEmailButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.getUserEmailButton.Size = new System.Drawing.Size(143, 25);
+            this.getUserEmailButton.TabIndex = 16;
+            this.getUserEmailButton.Text = "Получить почту";
+            this.getUserEmailButton.Visible = false;
+            this.getUserEmailButton.Click += new System.EventHandler(this.getUserEmailButton_Click);
+            // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1039,5 +1063,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel16;
         private Guna.UI2.WinForms.Guna2Button changeRoleButton;
+        private Guna.UI2.WinForms.Guna2Button getUserEmailButton;
     }
 }
