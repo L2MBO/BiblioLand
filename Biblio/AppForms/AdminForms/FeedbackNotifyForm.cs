@@ -1,4 +1,5 @@
-﻿using Biblio.Models;
+﻿using Biblio.CustomControls;
+using Biblio.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,23 @@ namespace Biblio.AppForms.AdminForms
 
         private void LoadNotifyInfo()
         {
+            titleLabel.Text = _feedback.FeedbackTitle;
+            nameLabel.Text = _feedback.Users.Username;
+            categoryLabel.Text = _feedback.FeedbackCategory.FeedbackCategoryName;
+            descriptionTextBox.Text = _feedback.FeedbackMessage;
+        }
 
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+            NavigationControl.IsHide = true;
+            var profileForm = new ProfileForm(_feedback.Users.UserID);
+            profileForm.ShowDialog();
+            NavigationControl.IsHide = false;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

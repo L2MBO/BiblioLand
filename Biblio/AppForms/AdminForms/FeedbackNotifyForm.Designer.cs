@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FeedbackNotifyForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.reportLabel = new System.Windows.Forms.Label();
+            this.categoryLabel = new System.Windows.Forms.Label();
             this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,57 +60,31 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.reportLabel);
+            this.guna2Panel1.Controls.Add(this.closeButton);
+            this.guna2Panel1.Controls.Add(this.categoryLabel);
             this.guna2Panel1.Controls.Add(this.descriptionTextBox);
             this.guna2Panel1.Controls.Add(this.nameLabel);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.reportInfoLabel);
             this.guna2Panel1.Controls.Add(this.titleLabel);
-            this.guna2Panel1.Controls.Add(this.closeButton);
             this.guna2Panel1.Controls.Add(this.banReasonLabel);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(330, 441);
             this.guna2Panel1.TabIndex = 4;
             // 
-            // label2
+            // categoryLabel
             // 
-            this.label2.AutoEllipsis = true;
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(21, 234);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Имя";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(21, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 15);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Причина репорта:";
-            // 
-            // reportLabel
-            // 
-            this.reportLabel.AutoEllipsis = true;
-            this.reportLabel.AutoSize = true;
-            this.reportLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reportLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.reportLabel.ForeColor = System.Drawing.Color.White;
-            this.reportLabel.Location = new System.Drawing.Point(20, 133);
-            this.reportLabel.Name = "reportLabel";
-            this.reportLabel.Size = new System.Drawing.Size(43, 20);
-            this.reportLabel.TabIndex = 50;
-            this.reportLabel.Text = "Имя";
+            this.categoryLabel.AutoEllipsis = true;
+            this.categoryLabel.AutoSize = true;
+            this.categoryLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.categoryLabel.ForeColor = System.Drawing.Color.White;
+            this.categoryLabel.Location = new System.Drawing.Point(20, 180);
+            this.categoryLabel.Name = "categoryLabel";
+            this.categoryLabel.Size = new System.Drawing.Size(43, 20);
+            this.categoryLabel.TabIndex = 50;
+            this.categoryLabel.Text = "Имя";
             // 
             // descriptionTextBox
             // 
@@ -127,7 +100,7 @@
             this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
-            this.descriptionTextBox.Location = new System.Drawing.Point(23, 287);
+            this.descriptionTextBox.Location = new System.Drawing.Point(23, 235);
             this.descriptionTextBox.MaxLength = 600;
             this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
             this.descriptionTextBox.Multiline = true;
@@ -146,44 +119,46 @@
             this.nameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(20, 78);
+            this.nameLabel.Location = new System.Drawing.Point(20, 125);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(43, 20);
             this.nameLabel.TabIndex = 40;
             this.nameLabel.Text = "Имя";
+            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(20, 269);
+            this.label1.Location = new System.Drawing.Point(20, 217);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 15);
+            this.label1.Size = new System.Drawing.Size(72, 15);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Дата окончания бана";
+            this.label1.Text = "Описание";
             // 
             // reportInfoLabel
             // 
             this.reportInfoLabel.AutoSize = true;
             this.reportInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.reportInfoLabel.ForeColor = System.Drawing.Color.White;
-            this.reportInfoLabel.Location = new System.Drawing.Point(20, 115);
+            this.reportInfoLabel.Location = new System.Drawing.Point(20, 162);
             this.reportInfoLabel.Name = "reportInfoLabel";
-            this.reportInfoLabel.Size = new System.Drawing.Size(183, 15);
+            this.reportInfoLabel.Size = new System.Drawing.Size(192, 15);
             this.reportInfoLabel.TabIndex = 35;
-            this.reportInfoLabel.Text = "Репорт на пользователя: ";
+            this.reportInfoLabel.Text = "Категория обратной связи:";
             // 
             // titleLabel
             // 
             this.titleLabel.AutoEllipsis = true;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(20, 24);
+            this.titleLabel.Location = new System.Drawing.Point(23, 33);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(269, 20);
+            this.titleLabel.Size = new System.Drawing.Size(284, 62);
             this.titleLabel.TabIndex = 34;
             this.titleLabel.Text = "Тема";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // closeButton
             // 
@@ -206,13 +181,14 @@
             this.closeButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.closeButton.Size = new System.Drawing.Size(33, 33);
             this.closeButton.TabIndex = 33;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // banReasonLabel
             // 
             this.banReasonLabel.AutoSize = true;
             this.banReasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.banReasonLabel.ForeColor = System.Drawing.Color.White;
-            this.banReasonLabel.Location = new System.Drawing.Point(20, 60);
+            this.banReasonLabel.Location = new System.Drawing.Point(20, 107);
             this.banReasonLabel.Name = "banReasonLabel";
             this.banReasonLabel.Size = new System.Drawing.Size(176, 15);
             this.banReasonLabel.TabIndex = 32;
@@ -226,7 +202,9 @@
             this.ClientSize = new System.Drawing.Size(331, 442);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FeedbackNotifyForm";
+            this.ShowInTaskbar = false;
             this.Text = "FeedbackNotifyForm";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -238,9 +216,7 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm FormRounded;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label reportLabel;
+        private System.Windows.Forms.Label categoryLabel;
         private Guna.UI2.WinForms.Guna2TextBox descriptionTextBox;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label label1;
