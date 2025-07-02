@@ -87,7 +87,7 @@ namespace Biblio.CustomControls
                 return;
             }
 
-            _form = new AdminNotifyForm(_notificationData);
+            _form = new ReportNotifyForm(_notificationData);
         }
 
         private void mainPanel_Click(object sender, EventArgs e)

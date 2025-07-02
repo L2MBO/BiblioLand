@@ -70,7 +70,7 @@
             this.guna2Panel1.Controls.Add(this.banReasonLabel);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(330, 441);
+            this.guna2Panel1.Size = new System.Drawing.Size(330, 315);
             this.guna2Panel1.TabIndex = 4;
             // 
             // categoryLabel
@@ -144,9 +144,9 @@
             this.reportInfoLabel.ForeColor = System.Drawing.Color.White;
             this.reportInfoLabel.Location = new System.Drawing.Point(20, 162);
             this.reportInfoLabel.Name = "reportInfoLabel";
-            this.reportInfoLabel.Size = new System.Drawing.Size(192, 15);
+            this.reportInfoLabel.Size = new System.Drawing.Size(82, 15);
             this.reportInfoLabel.TabIndex = 35;
-            this.reportInfoLabel.Text = "Категория обратной связи:";
+            this.reportInfoLabel.Text = "Категория:";
             // 
             // titleLabel
             // 
@@ -199,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(331, 442);
+            this.ClientSize = new System.Drawing.Size(331, 316);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

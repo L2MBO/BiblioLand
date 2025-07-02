@@ -766,7 +766,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BookInfoForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookForm";
             this.Load += new System.EventHandler(this.BookInfoForm_Load);
             this.Shown += new System.EventHandler(this.BookInfoForm_Shown);
