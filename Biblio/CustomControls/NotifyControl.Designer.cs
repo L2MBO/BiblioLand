@@ -34,9 +34,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dateLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deleteCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.avatarPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.deleteCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -50,11 +51,13 @@
             this.mainPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.mainPanel.BorderRadius = 10;
             this.mainPanel.BorderThickness = 1;
+            this.mainPanel.Controls.Add(this.nameLabel);
+            this.mainPanel.Controls.Add(this.titleLabel);
             this.mainPanel.Controls.Add(this.panel4);
             this.mainPanel.Controls.Add(this.panel3);
             this.mainPanel.Controls.Add(this.panel1);
-            this.mainPanel.Controls.Add(this.nameLabel);
             this.mainPanel.Controls.Add(this.avatarPictureBox);
+            this.mainPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
@@ -80,7 +83,7 @@
             this.typeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.typeLabel.ForeColor = System.Drawing.Color.White;
-            this.typeLabel.Location = new System.Drawing.Point(0, 18);
+            this.typeLabel.Location = new System.Drawing.Point(3, 18);
             this.typeLabel.Name = "typeLabel";
             this.typeLabel.Size = new System.Drawing.Size(156, 13);
             this.typeLabel.TabIndex = 4;
@@ -122,33 +125,6 @@
             this.panel1.Size = new System.Drawing.Size(33, 51);
             this.panel1.TabIndex = 7;
             // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoEllipsis = true;
-            this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.ForeColor = System.Drawing.Color.White;
-            this.nameLabel.Location = new System.Drawing.Point(44, 16);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(201, 18);
-            this.nameLabel.TabIndex = 1;
-            this.nameLabel.Text = "Отправил: ";
-            this.nameLabel.Click += new System.EventHandler(this.mainPanel_Click);
-            // 
-            // avatarPictureBox
-            // 
-            this.avatarPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.avatarPictureBox.BorderRadius = 6;
-            this.avatarPictureBox.Image = global::Biblio.Properties.Resources.logo1;
-            this.avatarPictureBox.ImageRotate = 0F;
-            this.avatarPictureBox.Location = new System.Drawing.Point(10, 10);
-            this.avatarPictureBox.Name = "avatarPictureBox";
-            this.avatarPictureBox.Size = new System.Drawing.Size(30, 30);
-            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.avatarPictureBox.TabIndex = 0;
-            this.avatarPictureBox.TabStop = false;
-            this.avatarPictureBox.Click += new System.EventHandler(this.mainPanel_Click);
-            // 
             // deleteCheckBox
             // 
             this.deleteCheckBox.Animated = true;
@@ -167,6 +143,46 @@
             this.deleteCheckBox.UncheckedState.BorderThickness = 2;
             this.deleteCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
             this.deleteCheckBox.CheckedChanged += new System.EventHandler(this.deleteCheckBox_CheckedChanged);
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoEllipsis = true;
+            this.nameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(127, 16);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(111, 18);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "Имя";
+            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
+            // 
+            // avatarPictureBox
+            // 
+            this.avatarPictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.avatarPictureBox.BorderRadius = 6;
+            this.avatarPictureBox.Image = global::Biblio.Properties.Resources.logo1;
+            this.avatarPictureBox.ImageRotate = 0F;
+            this.avatarPictureBox.Location = new System.Drawing.Point(10, 10);
+            this.avatarPictureBox.Name = "avatarPictureBox";
+            this.avatarPictureBox.Size = new System.Drawing.Size(30, 30);
+            this.avatarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatarPictureBox.TabIndex = 0;
+            this.avatarPictureBox.TabStop = false;
+            this.avatarPictureBox.Click += new System.EventHandler(this.mainPanel_Click);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoEllipsis = true;
+            this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(44, 16);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(84, 18);
+            this.titleLabel.TabIndex = 10;
+            this.titleLabel.Text = "Отправил:";
+            this.titleLabel.Click += new System.EventHandler(this.mainPanel_Click);
             // 
             // NotifyControl
             // 
@@ -200,5 +216,6 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CheckBox deleteCheckBox;
+        private System.Windows.Forms.Label titleLabel;
     }
 }

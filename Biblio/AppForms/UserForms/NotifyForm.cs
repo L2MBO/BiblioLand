@@ -1,4 +1,5 @@
 ﻿using Biblio.AppForms.AdminForms;
+using Biblio.Classes.Customization;
 using Biblio.Classes.Customization.FormCustomization;
 using Biblio.CustomControls;
 using Biblio.Models;
@@ -28,9 +29,11 @@ namespace Biblio.AppForms
             navigationControl.leftPanel = leftPanel;
             navigationControl.rightPanel = rightPanel;
 
+            AutoScrollHelper.ConfigureScrollbars(mainPanel, disableHorizontal: true, disableVertical: true);
+
             reportTypeComboBox.SelectedIndexChanged += (s, e) => ShowAdminNotify();
             feedbackTypeComboBox.SelectedIndexChanged += (s, e) => ShowAdminNotify();
-            sortComboBox.SelectedIndexChanged += (s, e) => ShowAdminNotify();
+            sortComboBox.SelectedIndexChanged += (s, e) => RefreshNotifications();
 
             CheckUserRole();
         }
@@ -70,6 +73,7 @@ namespace Biblio.AppForms
             var notifications = Program.context.SystemNotifications
                 .Where(n => !hiddenNotificationIds.Contains(n.NotifyID))
                 .OrderByDescending(n => n.NotifyDate)
+                .ToList()
                 .Cast<object>()
                 .ToList();
 
@@ -192,6 +196,21 @@ namespace Biblio.AppForms
             }
 
             _isUpdatingComboBoxes = false;
+        }
+
+        private void RefreshNotifications()
+        {
+            var currentUser = Program.context.Users.FirstOrDefault(user => user.UserID == _currentUserId);
+            bool isAdmin = currentUser?.UserRoleID != 1;
+
+            if (isAdmin)
+            {
+                ShowAdminNotify();
+            }
+            else
+            {
+                ShowUserNotify();
+            }
         }
 
         private List<object> ApplySorting(List<object> notifications)

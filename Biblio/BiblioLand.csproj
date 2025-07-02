@@ -455,6 +455,9 @@
     <EmbeddedResource Include="AppForms\UserForms\NotifyForm.resx">
       <DependentUpon>NotifyForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\UserForms\ShowNotify.resx">
+      <DependentUpon>ShowNotify.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\AddContentControl.resx">
       <DependentUpon>AddContentControl.cs</DependentUpon>
     </EmbeddedResource>

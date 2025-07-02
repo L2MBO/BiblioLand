@@ -1,5 +1,7 @@
-﻿using Biblio.AppForms.UserForms;
+﻿using Biblio.AppForms;
+using Biblio.AppForms.UserForms;
 using Biblio.Classes.Customization.FormCustomization;
+using Biblio.HideClasses;
 using Biblio.Models;
 using System;
 using System.Windows.Forms;
@@ -11,6 +13,7 @@ namespace Biblio.CustomControls
         private DialogWithOverlayService _dialogService = new DialogWithOverlayService();
         public event EventHandler CheckChanged;
         private object _notificationData;
+        private int _currentUser;
         public bool IsChecked => deleteCheckBox.Checked;
         public object NotificationData => _notificationData;
 
@@ -23,35 +26,55 @@ namespace Biblio.CustomControls
             LoadNotifyInfo();
         }
 
+        private void DefaultStyle()
+        {
+            nameLabel.Visible = true;
+            titleLabel.Text = "Отправил:";
+            titleLabel.Width = 85;
+        }
+
+        private void NewStyle()
+        {
+            nameLabel.Visible = false;
+            titleLabel.Width = 194;
+        }
+
         private void LoadNotifyInfo()
         {
+            DefaultStyle();
+
             if (_notificationData is SystemNotifications systemNotification)
             {
-                nameLabel.Text = systemNotification.NotifyTitle;
+                NewStyle();
+                titleLabel.Text = systemNotification.NotifyTitle;
                 typeLabel.Text = "Системное уведомление";
                 dateLabel.Text = systemNotification.NotifyDate.ToShortDateString();
             }
             else if (_notificationData is BookReports bookReport)
             {
-                nameLabel.Text = $"Отправил {bookReport.Users.Username}";
+                _currentUser = bookReport.Users.UserID;
+                nameLabel.Text = bookReport.Users.Username;
                 typeLabel.Text = $"Жалоба на книгу";
                 dateLabel.Text = bookReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is ReviewReports reviewReport)
             {
-                nameLabel.Text = $"Отправил {reviewReport.Users.Username}";
+                _currentUser = reviewReport.Users.UserID;
+                nameLabel.Text = reviewReport.Users.Username;
                 typeLabel.Text = $"Жалоба на комментарий";
                 dateLabel.Text = reviewReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is UserReports userReport)
             {
-                nameLabel.Text = $"Отправил {userReport.Users.Username}";
+                _currentUser = userReport.Users.UserID;
+                nameLabel.Text = userReport.Users.Username;
                 typeLabel.Text = $"Жалоба на пользователя";
                 dateLabel.Text = userReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is Feedback feedback)
             {
-                nameLabel.Text = $"Отправил {feedback.Users.Username}";
+                _currentUser = feedback.Users.UserID;
+                nameLabel.Text = feedback.Users.Username;
                 typeLabel.Text = feedback.FeedbackCategory.FeedbackCategoryName;
                 dateLabel.Text = feedback.FeedbackDate.ToShortDateString();
             }
@@ -66,6 +89,13 @@ namespace Biblio.CustomControls
         private void deleteCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+            var profileForm = new ProfileForm(_currentUser, true, this.FindForm());
+            VisibilityHelper.ShowNewForm(this.FindForm(), profileForm);
+            this.FindForm().Hide();
         }
     }
 }
