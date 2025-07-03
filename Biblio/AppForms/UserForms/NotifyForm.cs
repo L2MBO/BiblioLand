@@ -378,6 +378,7 @@ namespace Biblio.AppForms
         private void deleteNotifyButton_Click(object sender, EventArgs e)
         {
             DeleteSelectedNotifications();
+            navigationControl.UpdateNotificationsCount();
         }
 
         private void NotifyControl_CheckChanged(object sender, EventArgs e)

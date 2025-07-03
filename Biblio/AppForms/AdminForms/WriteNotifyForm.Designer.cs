@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.descriptionLabel = new System.Windows.Forms.Label();
+            this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.titleTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.sendNotifyButton = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.titleTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.descriptionLabel = new System.Windows.Forms.Label();
-            this.descriptionTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,79 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(245, 285);
             this.guna2Panel1.TabIndex = 4;
+            // 
+            // descriptionLabel
+            // 
+            this.descriptionLabel.AutoSize = true;
+            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
+            this.descriptionLabel.Location = new System.Drawing.Point(32, 129);
+            this.descriptionLabel.Name = "descriptionLabel";
+            this.descriptionLabel.Size = new System.Drawing.Size(72, 15);
+            this.descriptionLabel.TabIndex = 52;
+            this.descriptionLabel.Text = "Описание";
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.Animated = true;
+            this.descriptionTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.descriptionTextBox.BorderRadius = 10;
+            this.descriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.descriptionTextBox.DefaultText = "";
+            this.descriptionTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.descriptionTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.descriptionTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.descriptionTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
+            this.descriptionTextBox.Location = new System.Drawing.Point(35, 147);
+            this.descriptionTextBox.MaxLength = 600;
+            this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.descriptionTextBox.PlaceholderText = "";
+            this.descriptionTextBox.SelectedText = "";
+            this.descriptionTextBox.Size = new System.Drawing.Size(176, 66);
+            this.descriptionTextBox.TabIndex = 51;
+            this.descriptionTextBox.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
+            // 
+            // titleTextBox
+            // 
+            this.titleTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.titleTextBox.BorderRadius = 17;
+            this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.titleTextBox.DefaultText = "";
+            this.titleTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.titleTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.titleTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.titleTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.titleTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.titleTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.titleTextBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.titleTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.titleTextBox.ForeColor = System.Drawing.Color.White;
+            this.titleTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.titleTextBox.Location = new System.Drawing.Point(35, 84);
+            this.titleTextBox.MaxLength = 30;
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.PlaceholderText = "";
+            this.titleTextBox.SelectedText = "";
+            this.titleTextBox.Size = new System.Drawing.Size(176, 36);
+            this.titleTextBox.TabIndex = 42;
+            this.titleTextBox.TextChanged += new System.EventHandler(this.titleTextBox_TextChanged);
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(32, 66);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(77, 15);
+            this.titleLabel.TabIndex = 41;
+            this.titleLabel.Text = "Заголовок";
             // 
             // closeButton
             // 
@@ -123,79 +196,6 @@
             this.label2.Size = new System.Drawing.Size(180, 20);
             this.label2.TabIndex = 34;
             this.label2.Text = "Новое уведомление";
-            // 
-            // titleTextBox
-            // 
-            this.titleTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.titleTextBox.BorderRadius = 17;
-            this.titleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.titleTextBox.DefaultText = "";
-            this.titleTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.titleTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.titleTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.titleTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.titleTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.titleTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.titleTextBox.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.titleTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.titleTextBox.ForeColor = System.Drawing.Color.White;
-            this.titleTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.titleTextBox.Location = new System.Drawing.Point(35, 84);
-            this.titleTextBox.MaxLength = 30;
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.PlaceholderText = "";
-            this.titleTextBox.SelectedText = "";
-            this.titleTextBox.Size = new System.Drawing.Size(176, 36);
-            this.titleTextBox.TabIndex = 42;
-            this.titleTextBox.TextChanged += new System.EventHandler(this.titleTextBox_TextChanged);
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(32, 66);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(77, 15);
-            this.titleLabel.TabIndex = 41;
-            this.titleLabel.Text = "Заголовок";
-            // 
-            // descriptionLabel
-            // 
-            this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.descriptionLabel.ForeColor = System.Drawing.Color.White;
-            this.descriptionLabel.Location = new System.Drawing.Point(32, 129);
-            this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(72, 15);
-            this.descriptionLabel.TabIndex = 52;
-            this.descriptionLabel.Text = "Описание";
-            // 
-            // descriptionTextBox
-            // 
-            this.descriptionTextBox.Animated = true;
-            this.descriptionTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.descriptionTextBox.BorderRadius = 10;
-            this.descriptionTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.descriptionTextBox.DefaultText = "";
-            this.descriptionTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.descriptionTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.descriptionTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.descriptionTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.descriptionTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
-            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
-            this.descriptionTextBox.Location = new System.Drawing.Point(35, 147);
-            this.descriptionTextBox.MaxLength = 600;
-            this.descriptionTextBox.MinimumSize = new System.Drawing.Size(0, 66);
-            this.descriptionTextBox.Multiline = true;
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.descriptionTextBox.PlaceholderText = "";
-            this.descriptionTextBox.SelectedText = "";
-            this.descriptionTextBox.Size = new System.Drawing.Size(176, 66);
-            this.descriptionTextBox.TabIndex = 51;
-            this.descriptionTextBox.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
             // 
             // WriteNotifyForm
             // 

@@ -54,6 +54,8 @@
             this.restoreButton = new System.Windows.Forms.PictureBox();
             this.minimizeButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.notifyPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.notifyLabel = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.notifyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -124,6 +127,7 @@
             // panel17
             // 
             this.panel17.AutoSize = true;
+            this.panel17.Controls.Add(this.notifyPanel);
             this.panel17.Controls.Add(this.delimiter3);
             this.panel17.Controls.Add(this.bookmarksButton);
             this.panel17.Controls.Add(this.delimiter4);
@@ -387,6 +391,29 @@
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
+            // notifyPanel
+            // 
+            this.notifyPanel.BorderRadius = 5;
+            this.notifyPanel.Controls.Add(this.notifyLabel);
+            this.notifyPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.notifyPanel.Location = new System.Drawing.Point(67, 0);
+            this.notifyPanel.Name = "notifyPanel";
+            this.notifyPanel.Size = new System.Drawing.Size(12, 15);
+            this.notifyPanel.TabIndex = 73;
+            this.notifyPanel.Visible = false;
+            // 
+            // notifyLabel
+            // 
+            this.notifyLabel.AutoSize = true;
+            this.notifyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.notifyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.notifyLabel.ForeColor = System.Drawing.Color.White;
+            this.notifyLabel.Location = new System.Drawing.Point(-1, 1);
+            this.notifyLabel.Name = "notifyLabel";
+            this.notifyLabel.Size = new System.Drawing.Size(14, 13);
+            this.notifyLabel.TabIndex = 71;
+            this.notifyLabel.Text = "1";
+            // 
             // NavigationControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.notifyPanel.ResumeLayout(false);
+            this.notifyPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -441,5 +470,7 @@
         private System.Windows.Forms.PictureBox minimizeButton;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Button searchButton;
+        private Guna.UI2.WinForms.Guna2Panel notifyPanel;
+        private System.Windows.Forms.Label notifyLabel;
     }
 }

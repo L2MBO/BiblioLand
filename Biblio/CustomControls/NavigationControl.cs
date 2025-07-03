@@ -68,6 +68,8 @@ namespace Biblio.CustomControls
             {
                 ImageLoader.LoadAvatarImage(avatarPictureBox);
             }
+
+            UpdateNotificationsCount();
         }
 
         private void OpenForm<T>() where T : Form, new()
@@ -82,6 +84,69 @@ namespace Biblio.CustomControls
             }
 
             VisibilityHelper.ShowNewForm(parentForm, newForm);
+        }
+
+        public void UpdateNotificationsCount()
+        {
+            var currentUser = Program.context.Users.FirstOrDefault(user =>
+                user.UserID == Program.CurrentUser.UserID && user.UserRoleID != 1);
+
+            int notificationsCount = 0;
+            bool hasNotifications = false;
+
+            if (currentUser != null) // Администратор
+            {
+                notificationsCount = CountAdminNotifications();
+            }
+            else // Обычный пользователь
+            {
+                notificationsCount = CountUserNotifications();
+            }
+
+            // Обновляем интерфейс
+            hasNotifications = notificationsCount > 0;
+            notifyLabel.Text = notificationsCount.ToString();
+            notifyPanel.Visible = hasNotifications;
+        }
+
+        private int CountAdminNotifications()
+        {
+            try
+            {
+                // Считаем все типы жалоб и обратной связи
+                int bookReports = Program.context.BookReports.Count();
+                int reviewReports = Program.context.ReviewReports.Count();
+                int userReports = Program.context.UserReports.Count();
+                int feedback = Program.context.Feedback.Count();
+
+                return bookReports + reviewReports + userReports + feedback;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка подсчета уведомлений для админа: {ex.Message}");
+                return 0;
+            }
+        }
+
+        private int CountUserNotifications()
+        {
+            try
+            {
+                // Получаем ID скрытых уведомлений для текущего пользователя
+                var hiddenNotificationIds = Program.context.DeletedNotifications
+                    .Where(dn => dn.UserID == Program.CurrentUser.UserID)
+                    .Select(dn => dn.NotifyID)
+                    .ToList();
+
+                // Считаем только неудаленные уведомления
+                return Program.context.SystemNotifications
+                    .Count(n => !hiddenNotificationIds.Contains(n.NotifyID));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка подсчета уведомлений для пользователя: {ex.Message}");
+                return 0;
+            }
         }
 
         private void searchButton_Click(object sender, EventArgs e)
