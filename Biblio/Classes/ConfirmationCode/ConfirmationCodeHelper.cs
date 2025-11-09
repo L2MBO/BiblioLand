@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.VisibilityOrEnabled;
+﻿using Biblio.Classes.Hash;
+using Biblio.Classes.VisibilityOrEnabled;
 using Biblio.Models;
 using System;
 using System.ComponentModel;
@@ -25,12 +26,14 @@ namespace Biblio.Classes.ConfirmationCode
         /// Метод для генерации и установки кода
         /// </summary>
         /// <param name="user">Пользователь, которому будет установлен код подтверждения</param>
-        public static void GenerateAndSetConfirmationCode(Users user)
+        public static string GenerateAndSetConfirmationCode(Users user)
         {
             string confirmationCode = GenerateConfirmationCode();
-            user.ConfirmationCodeHash = confirmationCode;
+            string confirmationCodeHash = HashHelper.HashData(confirmationCode);
+            user.ConfirmationCodeHash = confirmationCodeHash;
             user.ConfirmationCodeExpiration = DateTime.Now.AddMinutes(5);
             Program.context.SaveChanges();
+            return confirmationCode;
         }
 
         private static System.Windows.Forms.Timer resendTimer;

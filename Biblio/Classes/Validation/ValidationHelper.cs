@@ -29,7 +29,7 @@ namespace Biblio.ValidationClasses
 
             if (verification != null)
             {
-                bool isPasswordValid = HashHelper.VerifyPassword(password, verification.PasswordHash);
+                bool isPasswordValid = HashHelper.VerifyData(password, verification.PasswordHash);
 
                 if (isPasswordValid)
                 {
@@ -89,7 +89,7 @@ namespace Biblio.ValidationClasses
             {
                 if (!IsUsernameOrMailTaken(newUsername, newMail))
                 {
-                    string passwordHash = HashHelper.HashPassword(newPassword);
+                    string passwordHash = HashHelper.HashData(newPassword);
                     string base64Avatar = CodingOrDecoding.ImageCoding(null);
 
                     Users newUser = new Users
@@ -144,33 +144,31 @@ namespace Biblio.ValidationClasses
             {
                 if (user.ConfirmationCodeHash == null || user.ConfirmationCodeExpiration == null || user.ConfirmationCodeExpiration < DateTime.Now)
                 {
-                    ConfirmationCodeHelper.GenerateAndSetConfirmationCode(user);
+                    string confirmationCode = ConfirmationCodeHelper.GenerateAndSetConfirmationCode(user);
 
-                    //string confirmationCode = user.ConfirmationCode;
-
-                    //var sendMessageCode = new SendMessageCode();
-                    //PostResult result = await sendMessageCode.SendPostRequest(email, confirmationCode);
+                    var sendMessageCode = new SendMessageCode();
+                    PostResult result = await sendMessageCode.SendPostRequest(email, confirmationCode);
+                
+                    if (result.IsSuccess)
+                    {
+                        VisibilityHelper.ShowVerificationCode(VerificationCodeInfo, VerificationCodeField, ResendVerificationCode, TimeInfo);
+                        ConfirmationCodeHelper.StartResendTimer(TimeInfo, ResendVerificationCode);
+                        _isCodeSent = true;
+                    }
+                    else
+                    {
+                        ShowErrorMessage("Не удалось отправить код подтверждения.");
+                        user.ConfirmationCodeHash = null;
+                        user.ConfirmationCodeExpiration = null;
+                        return (false, user.Email);
+                    }
                 }
-
-                //if (result.IsSuccess)
-                //{
-                VisibilityHelper.ShowVerificationCode(VerificationCodeInfo, VerificationCodeField, ResendVerificationCode, TimeInfo);
-                ConfirmationCodeHelper.StartResendTimer(TimeInfo, ResendVerificationCode);
-                _isCodeSent = true;
-                //}
-                //else
-                //{
-                //    ShowErrorMessage("Не удалось отправить код подтверждения.");
-                //    user.ConfirmationCode = null;
-                //    user.ConfirmationCodeExpiration = null;
                 return (false, user.Email);
-                //}
-                //return false;
             }
 
             else
             {
-                if (VerificationCodeField.Text == user.ConfirmationCodeHash)
+                if (HashHelper.VerifyData(VerificationCodeField.Text, user.ConfirmationCodeHash))
                 {
                     user.ConfirmationCodeHash = null;
                     user.ConfirmationCodeExpiration = null;
@@ -189,9 +187,9 @@ namespace Biblio.ValidationClasses
 
         public static bool ValidationPasswordFields(Users user, string PasswordField)
         {
-            string passwordHash = HashHelper.HashPassword(PasswordField);
+            string passwordHash = HashHelper.HashData(PasswordField);
 
-            bool isPasswordValid = HashHelper.VerifyPassword(PasswordField, user.PasswordHash);
+            bool isPasswordValid = HashHelper.VerifyData(PasswordField, user.PasswordHash);
 
             if (isPasswordValid)
             {
@@ -251,9 +249,9 @@ namespace Biblio.ValidationClasses
 
         public static bool ValidationOldPassword(Users user, string OldPasswordField)
         {
-            string passwordHash = HashHelper.HashPassword(OldPasswordField);
+            string passwordHash = HashHelper.HashData(OldPasswordField);
 
-            bool isPasswordCorrect = HashHelper.VerifyPassword(OldPasswordField, user.PasswordHash);
+            bool isPasswordCorrect = HashHelper.VerifyData(OldPasswordField, user.PasswordHash);
 
             if (isPasswordCorrect)
             {
@@ -280,22 +278,20 @@ namespace Biblio.ValidationClasses
 
             if (user != null)
             {
-                ConfirmationCodeHelper.GenerateAndSetConfirmationCode(user);
+                string confirmationCode = ConfirmationCodeHelper.GenerateAndSetConfirmationCode(user);
 
-                //string confirmationCode = user.ConfirmationCode;
+                var sendMessageCode = new SendMessageCode();
+                PostResult result = await sendMessageCode.SendPostRequest(email, confirmationCode);
 
-                //var sendMessageCode = new SendMessageCode();
-                //PostResult result = await sendMessageCode.SendPostRequest(email, confirmationCode);
-
-                //if (result.IsSuccess)
-                //{
-                ConfirmationCodeHelper.StartResendTimer(TimeInfo, ResendVerificationCode);
-                ShowInformationMessage("Новый код подтверждения отправлен на вашу электронную почту.", "Проверьте почту");
-                //}
-                //else
-                //{
-                //    ShowErrorMessage("Не удалось отправить код подтверждения.");
-                //}
+                if (result.IsSuccess)
+                {
+                    ConfirmationCodeHelper.StartResendTimer(TimeInfo, ResendVerificationCode);
+                    ShowInformationMessage("Новый код подтверждения отправлен на вашу электронную почту.", "Проверьте почту");
+                }
+                else
+                {
+                    ShowErrorMessage("Не удалось отправить код подтверждения.");
+                }
             }
             else
             {

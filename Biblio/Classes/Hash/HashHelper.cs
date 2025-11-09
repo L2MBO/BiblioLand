@@ -1,29 +1,29 @@
 ﻿namespace Biblio.Classes.Hash
 {
     /// <summary>
-    /// Хэширование и верификация пароля.
+    /// Хэширование и верификация данных.
     /// </summary>
     public class HashHelper
     {
         /// <summary>
-        /// Хэширование пароля.
+        /// Хэширование данных.
         /// </summary>
-        /// <param name="password"></param>
+        /// <param name="field"></param>
         /// <returns>хэшированный пароль</returns>
-        public static string HashPassword(string password)
+        public static string HashData(string field)
         {
-            return BCrypt.Net.BCrypt.HashPassword(password);
+            return BCrypt.Net.BCrypt.HashPassword(field);
         }
 
         /// <summary>
-        /// Верификация пароля.
+        /// Верификация данных.
         /// </summary>
-        /// <param name="password"></param>
+        /// <param name="field"></param>
         /// <param name="storedHash"></param>
-        /// <returns>сравнение пароля</returns>
-        public static bool VerifyPassword(string password, string storedHash)
+        /// <returns>сравнение данных</returns>
+        public static bool VerifyData(string field, string storedHash)
         {
-            return BCrypt.Net.BCrypt.Verify(password, storedHash);
+            return BCrypt.Net.BCrypt.Verify(field, storedHash);
         }
     }
 }

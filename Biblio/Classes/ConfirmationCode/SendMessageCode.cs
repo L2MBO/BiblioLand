@@ -9,7 +9,7 @@ namespace Biblio.Classes.ConfirmationCode
 {
     internal class SendMessageCode
     {
-        private const string Url = "http://192.168.234.155/api.php";
+        private const string Url = "https://biblio.local/index.php";
 
         public async Task<PostResult> SendPostRequest(string email, string code)
         {
