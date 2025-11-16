@@ -1,5 +1,4 @@
-﻿using Biblio.Classes.Coding;
-using Biblio.Models;
+﻿using Biblio.Models;
 using Biblio.ValidationClasses;
 using System;
 using System.Drawing;
@@ -102,7 +101,7 @@ namespace Biblio.AppForms
             catch (Exception ex)
             {
                 ValidationHelper.ShowErrorMessage($"Ошибка при добавлении книги: {ex.Message}");
-            } 
+            }
         }
 
         private string ValidateFiles(string filePath, string[] allowedExtensions, int maxSizeMB)
@@ -144,7 +143,7 @@ namespace Biblio.AppForms
                 {
                     string filePath = openFileDialog.FileName;
 
-                    string[] allowedExtensions = {".jpg", ".jpeg", ".png"};
+                    string[] allowedExtensions = { ".jpg", ".jpeg", ".png" };
 
                     string validationError = ValidateFiles(filePath, allowedExtensions, 5);
 

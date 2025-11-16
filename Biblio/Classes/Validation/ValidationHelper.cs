@@ -148,7 +148,7 @@ namespace Biblio.ValidationClasses
 
                     var sendMessageCode = new SendMessageCode();
                     PostResult result = await sendMessageCode.SendPostRequest(email, confirmationCode);
-                
+
                     if (result.IsSuccess)
                     {
                         VisibilityHelper.ShowVerificationCode(VerificationCodeInfo, VerificationCodeField, ResendVerificationCode, TimeInfo);
