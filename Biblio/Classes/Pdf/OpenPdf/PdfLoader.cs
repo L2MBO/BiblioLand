@@ -6,7 +6,7 @@ namespace Biblio.Classes.Pdf.OpenPdf
 {
     internal class PdfLoader
     {
-        private static readonly string _path = "C:\\Users\\lamki\\Documents\\BiblioLandRes\\bookPdf\\";
+        private static readonly string _path = "C:\\Users\\lamki\\OneDrive\\Документы\\BiblioLandRes\\bookPdf\\";
 
         public static void OpenPdfFile(string pdfFileName)
         {

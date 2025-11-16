@@ -233,7 +233,7 @@
             this.reportLabel.Text = "Имя";
             this.reportLabel.Click += new System.EventHandler(this.reportLabel_Click);
             // 
-            // AdminNotifyForm
+            // ReportNotifyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -242,7 +242,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AdminNotifyForm";
+            this.Name = "ReportNotifyForm";
             this.ShowInTaskbar = false;
             this.Text = "AdminNotifyForm";
             this.guna2Panel1.ResumeLayout(false);

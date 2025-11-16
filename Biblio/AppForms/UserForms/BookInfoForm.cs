@@ -36,14 +36,10 @@ namespace Biblio.AppForms
             _book = book;
 
             SetFormStyle();
-
-            this.Resize += (s, e) => ShowOverlayForSeconds(2);
         }
 
         private void SetFormStyle()
         {
-            ShowOverlayForSeconds(2);
-
             this.DoubleBuffered = true;
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
@@ -69,26 +65,6 @@ namespace Biblio.AppForms
             SortCommentsByDate();
 
             mainPanel.Scroll += (sender, e) => UpdateBookmarksControlPosition();
-        }
-
-        private void ShowOverlayForSeconds(int seconds = 3)
-        {
-            loadingPanel.Visible = true;
-
-            loadingPictureBox.Location = new Point((loadingPictureBox.Parent.ClientSize.Width - loadingPictureBox.Width) / 2,
-                (loadingPictureBox.Parent.ClientSize.Height - loadingPictureBox.Height) / 2
-            );
-
-            Timer timer = new Timer();
-            timer.Interval = seconds * 1000;
-            timer.Tick += (s, e) =>
-            {
-                timer.Stop();
-                timer.Dispose();
-
-                loadingPanel.Visible = false;
-            };
-            timer.Start();
         }
 
         private void LoadBookInfo()

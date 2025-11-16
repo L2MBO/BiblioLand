@@ -189,6 +189,12 @@
     <Compile Include="AppForms\UserForms\BookmarksForm.Designer.cs">
       <DependentUpon>BookmarksForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppForms\UserForms\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppForms\UserForms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppForms\UserForms\ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -439,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\UserForms\BookmarksForm.resx">
       <DependentUpon>BookmarksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppForms\UserForms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AppForms\UserForms\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>

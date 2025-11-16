@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.Customization;
+﻿using Biblio.AppForms.UserForms;
+using Biblio.Classes.Customization;
 using Biblio.CustomControls;
 using Biblio.HideClasses;
 using Biblio.Models;
@@ -171,9 +172,25 @@ namespace Biblio.AppForms
 
         private void BookControl_BookClicked(object sender, Books book)
         {
+            this.Hide();
+
+            var loadingForm = new LoadingForm();
+            loadingForm.TopMost = true;
+            VisibilityHelper.ShowNewForm(this, loadingForm);
+
             var bookInfoForm = new BookInfoForm(book);
             VisibilityHelper.ShowNewForm(this, bookInfoForm);
-            this.Hide();
+
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            while (stopwatch.ElapsedMilliseconds < 1000)
+            {
+                Application.DoEvents(); // даёт форме рендериться
+                System.Threading.Thread.Sleep(10); // снижаем нагрузку
+            }
+            stopwatch.Stop();
+
+            loadingForm.Close();
+            loadingForm.Dispose();
         }
 
         private void BookmarksForm_Resize(object sender, EventArgs e)
