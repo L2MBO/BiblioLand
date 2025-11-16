@@ -49,7 +49,6 @@ namespace Biblio.Models
 
         public DateTime? RegistrationDate { get; set; }
 
-        [StringLength(6)]
         public string ConfirmationCodeHash { get; set; }
 
         public DateTime? ConfirmationCodeExpiration { get; set; }
