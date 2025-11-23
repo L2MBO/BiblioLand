@@ -1,6 +1,6 @@
 ﻿namespace Biblio.AppForms
 {
-    partial class AddBookForm
+    partial class CreateOrUpdateBookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBookForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateOrUpdateBookForm));
             this.FormRounded = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.categoryLabel = new System.Windows.Forms.Label();
@@ -120,8 +120,8 @@
             this.categoryComboBox.Items.AddRange(new object[] {
             "Не обязательное поле",
             "Главное",
-            "Популярное",
-            "Новинки"});
+            "Новинки",
+            "Популярное"});
             this.categoryComboBox.ItemsAppearance.ForeColor = System.Drawing.Color.White;
             this.categoryComboBox.Location = new System.Drawing.Point(24, 287);
             this.categoryComboBox.Name = "categoryComboBox";
@@ -392,7 +392,7 @@
             this.genreComboBox.TabStop = false;
             this.genreComboBox.TextOffset = new System.Drawing.Point(5, 0);
             // 
-            // AddBookForm
+            // CreateOrUpdateBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -401,7 +401,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AddBookForm";
+            this.Name = "CreateOrUpdateBookForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBookForm";

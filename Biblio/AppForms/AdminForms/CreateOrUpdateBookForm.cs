@@ -9,13 +9,14 @@ using System.Windows.Forms;
 
 namespace Biblio.AppForms
 {
-    public partial class AddBookForm : Form
+    public partial class CreateOrUpdateBookForm : Form
     {
+        public event Action BookUpdated;
         private string _selectedImagePath;
         private string _selectedPdfPath;
         private Books _editingBook;
 
-        public AddBookForm(Books book = null)
+        public CreateOrUpdateBookForm(Books book = null)
         {
             InitializeComponent();
 
@@ -28,16 +29,13 @@ namespace Biblio.AppForms
         {
             if (_editingBook != null)
             {
-                // Режим редактирования
                 titleLabel.Text = "Изменить книгу";
                 addBookButton.Text = "Изменить книгу";
 
-                // Заполняем поля
                 nameTextBox.Text = _editingBook.Title;
                 authorTextBox.Text = _editingBook.Author;
                 descriptionTextBox.Text = _editingBook.Description;
 
-                // Устанавливаем жанр и категорию
                 if (_editingBook.GenreID.HasValue)
                     genreComboBox.SelectedIndex = _editingBook.GenreID.Value - 1;
 
@@ -182,6 +180,11 @@ namespace Biblio.AppForms
                 }
 
                 Program.context.SaveChanges();
+
+                if (_editingBook != null)
+                {
+                    BookUpdated?.Invoke();
+                }
 
                 ValidationHelper.ShowInformationMessage(_editingBook == null ? "Книга добавлена!" : "Книга обновлена!", "Успех!");
 

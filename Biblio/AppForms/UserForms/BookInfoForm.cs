@@ -69,6 +69,8 @@ namespace Biblio.AppForms
 
         private void LoadBookInfo()
         {
+            UpdatedBook();
+
             nameLabel.Text = _book.Title;
             authorLabel.Text = _book.Author;
 
@@ -451,6 +453,18 @@ namespace Biblio.AppForms
             }
         }
 
+        private void UpdatedBook()
+        {
+            if (_book != null)
+            {
+                var updated = Program.context.Books.Find(_book.BookID);
+                if (updated != null)
+                {
+                    _book = updated;
+                }
+            }
+        }
+
         private void BookInfoForm_Shown(object sender, EventArgs e)
         {
             BookInfoForm_SizeChanged(sender, e);
@@ -557,8 +571,10 @@ namespace Biblio.AppForms
         {
             if (_isUserAdmin)
             {
-                var form = new AddBookForm(_book);
+                var form = new CreateOrUpdateBookForm(_book);
+                form.BookUpdated += LoadBookInfo;
                 _dialogService.ShowDialogWithOverlay(this, form);
+                form.BookUpdated -= LoadBookInfo;
             }
             else
             {
