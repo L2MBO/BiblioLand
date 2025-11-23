@@ -44,7 +44,7 @@
             this.addBookButton = new Guna.UI2.WinForms.Guna2Button();
             this.authorTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.authorLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.closeButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.nameLabel = new System.Windows.Forms.Label();
             this.genreComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -81,7 +81,7 @@
             this.guna2Panel1.Controls.Add(this.addBookButton);
             this.guna2Panel1.Controls.Add(this.authorTextBox);
             this.guna2Panel1.Controls.Add(this.authorLabel);
-            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.titleLabel);
             this.guna2Panel1.Controls.Add(this.closeButton);
             this.guna2Panel1.Controls.Add(this.nameLabel);
             this.guna2Panel1.Controls.Add(this.genreComboBox);
@@ -311,16 +311,16 @@
             this.authorLabel.TabIndex = 35;
             this.authorLabel.Text = "Автор";
             // 
-            // label2
+            // titleLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 20);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Добавить книгу";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.ForeColor = System.Drawing.Color.White;
+            this.titleLabel.Location = new System.Drawing.Point(20, 24);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(142, 20);
+            this.titleLabel.TabIndex = 34;
+            this.titleLabel.Text = "Добавить книгу";
             // 
             // closeButton
             // 
@@ -420,7 +420,7 @@
         private Guna.UI2.WinForms.Guna2Button addBookButton;
         private Guna.UI2.WinForms.Guna2TextBox authorTextBox;
         private System.Windows.Forms.Label authorLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label titleLabel;
         private Guna.UI2.WinForms.Guna2CircleButton closeButton;
         private System.Windows.Forms.Label nameLabel;
         private Guna.UI2.WinForms.Guna2ComboBox genreComboBox;

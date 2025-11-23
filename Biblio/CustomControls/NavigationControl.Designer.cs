@@ -33,6 +33,8 @@
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.searchButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.notifyPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.notifyLabel = new System.Windows.Forms.Label();
             this.delimiter3 = new System.Windows.Forms.Panel();
             this.bookmarksButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.delimiter4 = new System.Windows.Forms.Panel();
@@ -48,28 +50,26 @@
             this.topNavigationPanel = new System.Windows.Forms.Panel();
             this.topLeftPanel = new System.Windows.Forms.Panel();
             this.topRightPanel = new System.Windows.Forms.Panel();
-            this.topRight = new System.Windows.Forms.Panel();
-            this.closeButton = new System.Windows.Forms.PictureBox();
-            this.maximizeButton = new System.Windows.Forms.PictureBox();
-            this.restoreButton = new System.Windows.Forms.PictureBox();
-            this.minimizeButton = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.notifyPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.notifyLabel = new System.Windows.Forms.Label();
+            this.minimizeButton = new System.Windows.Forms.PictureBox();
+            this.restoreButton = new System.Windows.Forms.PictureBox();
+            this.maximizeButton = new System.Windows.Forms.PictureBox();
+            this.closeButton = new System.Windows.Forms.PictureBox();
+            this.topRight = new System.Windows.Forms.Panel();
             this.topPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.notifyPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainButton)).BeginInit();
             this.topRightPanel.SuspendLayout();
-            this.topRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.notifyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
+            this.topRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -139,6 +139,29 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(117, 34);
             this.panel17.TabIndex = 56;
+            // 
+            // notifyPanel
+            // 
+            this.notifyPanel.BorderRadius = 5;
+            this.notifyPanel.Controls.Add(this.notifyLabel);
+            this.notifyPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
+            this.notifyPanel.Location = new System.Drawing.Point(67, 0);
+            this.notifyPanel.Name = "notifyPanel";
+            this.notifyPanel.Size = new System.Drawing.Size(12, 15);
+            this.notifyPanel.TabIndex = 73;
+            this.notifyPanel.Visible = false;
+            // 
+            // notifyLabel
+            // 
+            this.notifyLabel.AutoSize = true;
+            this.notifyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.notifyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.notifyLabel.ForeColor = System.Drawing.Color.White;
+            this.notifyLabel.Location = new System.Drawing.Point(-1, 1);
+            this.notifyLabel.Name = "notifyLabel";
+            this.notifyLabel.Size = new System.Drawing.Size(14, 13);
+            this.notifyLabel.TabIndex = 71;
+            this.notifyLabel.Text = "1";
             // 
             // delimiter3
             // 
@@ -326,38 +349,26 @@
             this.topRightPanel.TabIndex = 21;
             this.topRightPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
-            // topRight
+            // pictureBox2
             // 
-            this.topRight.Controls.Add(this.closeButton);
-            this.topRight.Controls.Add(this.maximizeButton);
-            this.topRight.Controls.Add(this.restoreButton);
-            this.topRight.Controls.Add(this.minimizeButton);
-            this.topRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.topRight.Location = new System.Drawing.Point(0, 0);
-            this.topRight.Name = "topRight";
-            this.topRight.Size = new System.Drawing.Size(100, 44);
-            this.topRight.TabIndex = 54;
-            this.topRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox2.Image = global::Biblio.Properties.Resources.squareGreyLine;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(726, 8);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
             // 
-            // closeButton
+            // minimizeButton
             // 
-            this.closeButton.Image = global::Biblio.Properties.Resources.close;
-            this.closeButton.Location = new System.Drawing.Point(69, 15);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(15, 15);
-            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closeButton.TabIndex = 7;
-            this.closeButton.TabStop = false;
-            // 
-            // maximizeButton
-            // 
-            this.maximizeButton.Image = global::Biblio.Properties.Resources.maximaze;
-            this.maximizeButton.Location = new System.Drawing.Point(43, 15);
-            this.maximizeButton.Name = "maximizeButton";
-            this.maximizeButton.Size = new System.Drawing.Size(15, 15);
-            this.maximizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.maximizeButton.TabIndex = 6;
-            this.maximizeButton.TabStop = false;
+            this.minimizeButton.Image = global::Biblio.Properties.Resources.collapse;
+            this.minimizeButton.Location = new System.Drawing.Point(17, 15);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(15, 15);
+            this.minimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimizeButton.TabIndex = 4;
+            this.minimizeButton.TabStop = false;
             // 
             // restoreButton
             // 
@@ -370,49 +381,38 @@
             this.restoreButton.TabStop = false;
             this.restoreButton.Visible = false;
             // 
-            // minimizeButton
+            // maximizeButton
             // 
-            this.minimizeButton.Image = global::Biblio.Properties.Resources.collapse;
-            this.minimizeButton.Location = new System.Drawing.Point(17, 15);
-            this.minimizeButton.Name = "minimizeButton";
-            this.minimizeButton.Size = new System.Drawing.Size(15, 15);
-            this.minimizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimizeButton.TabIndex = 4;
-            this.minimizeButton.TabStop = false;
+            this.maximizeButton.Image = global::Biblio.Properties.Resources.maximaze;
+            this.maximizeButton.Location = new System.Drawing.Point(43, 15);
+            this.maximizeButton.Name = "maximizeButton";
+            this.maximizeButton.Size = new System.Drawing.Size(15, 15);
+            this.maximizeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.maximizeButton.TabIndex = 6;
+            this.maximizeButton.TabStop = false;
             // 
-            // pictureBox2
+            // closeButton
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox2.Image = global::Biblio.Properties.Resources.squareGreyLine;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 44);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(726, 8);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
+            this.closeButton.Image = global::Biblio.Properties.Resources.close;
+            this.closeButton.Location = new System.Drawing.Point(69, 15);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(15, 15);
+            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.closeButton.TabIndex = 7;
+            this.closeButton.TabStop = false;
             // 
-            // notifyPanel
+            // topRight
             // 
-            this.notifyPanel.BorderRadius = 5;
-            this.notifyPanel.Controls.Add(this.notifyLabel);
-            this.notifyPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(132)))), ((int)(((byte)(246)))));
-            this.notifyPanel.Location = new System.Drawing.Point(67, 0);
-            this.notifyPanel.Name = "notifyPanel";
-            this.notifyPanel.Size = new System.Drawing.Size(12, 15);
-            this.notifyPanel.TabIndex = 73;
-            this.notifyPanel.Visible = false;
-            // 
-            // notifyLabel
-            // 
-            this.notifyLabel.AutoSize = true;
-            this.notifyLabel.BackColor = System.Drawing.Color.Transparent;
-            this.notifyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.notifyLabel.ForeColor = System.Drawing.Color.White;
-            this.notifyLabel.Location = new System.Drawing.Point(-1, 1);
-            this.notifyLabel.Name = "notifyLabel";
-            this.notifyLabel.Size = new System.Drawing.Size(14, 13);
-            this.notifyLabel.TabIndex = 71;
-            this.notifyLabel.Text = "1";
+            this.topRight.Controls.Add(this.closeButton);
+            this.topRight.Controls.Add(this.maximizeButton);
+            this.topRight.Controls.Add(this.restoreButton);
+            this.topRight.Controls.Add(this.minimizeButton);
+            this.topRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.topRight.Location = new System.Drawing.Point(0, 0);
+            this.topRight.Name = "topRight";
+            this.topRight.Size = new System.Drawing.Size(100, 44);
+            this.topRight.TabIndex = 54;
+            this.topRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
             // 
             // NavigationControl
             // 
@@ -427,18 +427,18 @@
             this.navigationPanel.ResumeLayout(false);
             this.navigationPanel.PerformLayout();
             this.panel17.ResumeLayout(false);
+            this.notifyPanel.ResumeLayout(false);
+            this.notifyPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).EndInit();
             this.panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainButton)).EndInit();
             this.topRightPanel.ResumeLayout(false);
-            this.topRight.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.notifyPanel.ResumeLayout(false);
-            this.notifyPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restoreButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maximizeButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
+            this.topRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -463,14 +463,14 @@
         private System.Windows.Forms.Panel topNavigationPanel;
         private System.Windows.Forms.Panel topLeftPanel;
         private System.Windows.Forms.Panel topRightPanel;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI2.WinForms.Guna2Button searchButton;
+        private Guna.UI2.WinForms.Guna2Panel notifyPanel;
+        private System.Windows.Forms.Label notifyLabel;
         private System.Windows.Forms.Panel topRight;
         private System.Windows.Forms.PictureBox closeButton;
         private System.Windows.Forms.PictureBox maximizeButton;
         private System.Windows.Forms.PictureBox restoreButton;
         private System.Windows.Forms.PictureBox minimizeButton;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2Button searchButton;
-        private Guna.UI2.WinForms.Guna2Panel notifyPanel;
-        private System.Windows.Forms.Label notifyLabel;
     }
 }

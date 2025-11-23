@@ -67,9 +67,9 @@ namespace Biblio.CustomControls
             if (!DesignMode)
             {
                 ImageLoader.LoadAvatarImage(avatarPictureBox);
-            }
 
-            UpdateNotificationsCount();
+                UpdateNotificationsCount();
+            }
         }
 
         private void OpenForm<T>() where T : Form, new()

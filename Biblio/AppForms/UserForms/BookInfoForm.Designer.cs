@@ -69,6 +69,8 @@
             this.authorLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bookPanel = new System.Windows.Forms.Panel();
+            this.deleteButton = new Guna.UI2.WinForms.Guna2Button();
+            this.panel26 = new System.Windows.Forms.Panel();
             this.reportButton = new Guna.UI2.WinForms.Guna2Button();
             this.panel25 = new System.Windows.Forms.Panel();
             this.newBookmarkButton = new Guna.UI2.WinForms.Guna2Button();
@@ -237,7 +239,7 @@
             this.writeCommentPanel.Location = new System.Drawing.Point(256, 143);
             this.writeCommentPanel.MaximumSize = new System.Drawing.Size(370, 0);
             this.writeCommentPanel.Name = "writeCommentPanel";
-            this.writeCommentPanel.Size = new System.Drawing.Size(370, 86);
+            this.writeCommentPanel.Size = new System.Drawing.Size(370, 0);
             this.writeCommentPanel.TabIndex = 51;
             // 
             // commentTextBox
@@ -304,7 +306,7 @@
             this.sendCommentButton.Location = new System.Drawing.Point(260, 0);
             this.sendCommentButton.Name = "sendCommentButton";
             this.sendCommentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.sendCommentButton.Size = new System.Drawing.Size(90, 25);
+            this.sendCommentButton.Size = new System.Drawing.Size(90, 27);
             this.sendCommentButton.TabIndex = 37;
             this.sendCommentButton.Text = "Отправить";
             this.sendCommentButton.Click += new System.EventHandler(this.sendCommentButton_Click);
@@ -534,7 +536,7 @@
             this.evaluateButton.MinimumSize = new System.Drawing.Size(0, 21);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);
@@ -582,6 +584,8 @@
             // bookPanel
             // 
             this.bookPanel.BackColor = System.Drawing.Color.Transparent;
+            this.bookPanel.Controls.Add(this.deleteButton);
+            this.bookPanel.Controls.Add(this.panel26);
             this.bookPanel.Controls.Add(this.reportButton);
             this.bookPanel.Controls.Add(this.panel25);
             this.bookPanel.Controls.Add(this.newBookmarkButton);
@@ -594,6 +598,42 @@
             this.bookPanel.Name = "bookPanel";
             this.bookPanel.Size = new System.Drawing.Size(146, 362);
             this.bookPanel.TabIndex = 40;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Animated = true;
+            this.deleteButton.BorderColor = System.Drawing.Color.Maroon;
+            this.deleteButton.BorderRadius = 13;
+            this.deleteButton.BorderThickness = 2;
+            this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deleteButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deleteButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.deleteButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deleteButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deleteButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(30)))));
+            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.Image = global::Biblio.Properties.Resources.trash;
+            this.deleteButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.deleteButton.ImageOffset = new System.Drawing.Point(5, 0);
+            this.deleteButton.ImageSize = new System.Drawing.Size(15, 13);
+            this.deleteButton.Location = new System.Drawing.Point(0, 353);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
+            this.deleteButton.Size = new System.Drawing.Size(146, 28);
+            this.deleteButton.TabIndex = 40;
+            this.deleteButton.Text = "Удалить";
+            this.deleteButton.Visible = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // panel26
+            // 
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel26.Location = new System.Drawing.Point(0, 343);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(146, 10);
+            this.panel26.TabIndex = 39;
             // 
             // reportButton
             // 
@@ -850,5 +890,7 @@
         private Guna.UI2.WinForms.Guna2Button sortInterestingCommentButton;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.FlowLayoutPanel commentsPanel;
+        private Guna.UI2.WinForms.Guna2Button deleteButton;
+        private System.Windows.Forms.Panel panel26;
     }
 }

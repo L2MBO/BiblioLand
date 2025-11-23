@@ -332,8 +332,9 @@ namespace Biblio.AppForms
 
             if (_currentUser != null)
             {
-                reportButton.Image = Properties.Resources.trash;
-                reportButton.Text = "Удалить";
+                reportButton.Image = Properties.Resources.edit;
+                reportButton.Text = "Изменить";
+                deleteButton.Visible = true;
                 _isUserAdmin = true;
             }
         }
@@ -556,7 +557,8 @@ namespace Biblio.AppForms
         {
             if (_isUserAdmin)
             {
-                DeleteBook();
+                var form = new AddBookForm(_book);
+                _dialogService.ShowDialogWithOverlay(this, form);
             }
             else
             {
@@ -574,6 +576,11 @@ namespace Biblio.AppForms
             commentTextBox.Height = preferredHeight;
 
             descriptionPanel.PerformLayout();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteBook();
         }
 
         private void sendCommentButton_Click(object sender, EventArgs e)

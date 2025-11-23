@@ -1,4 +1,5 @@
-﻿using Biblio.Models;
+﻿using Biblio.Classes.Images.InstallingImages;
+using Biblio.Models;
 using Biblio.ValidationClasses;
 using System;
 using System.Drawing;
@@ -12,10 +13,53 @@ namespace Biblio.AppForms
     {
         private string _selectedImagePath;
         private string _selectedPdfPath;
+        private Books _editingBook;
 
-        public AddBookForm()
+        public AddBookForm(Books book = null)
         {
             InitializeComponent();
+
+            _editingBook = book;
+
+            LoadBookInfo();
+        }
+
+        private void LoadBookInfo()
+        {
+            if (_editingBook != null)
+            {
+                // Режим редактирования
+                titleLabel.Text = "Изменить книгу";
+                addBookButton.Text = "Изменить книгу";
+
+                // Заполняем поля
+                nameTextBox.Text = _editingBook.Title;
+                authorTextBox.Text = _editingBook.Author;
+                descriptionTextBox.Text = _editingBook.Description;
+
+                // Устанавливаем жанр и категорию
+                if (_editingBook.GenreID.HasValue)
+                    genreComboBox.SelectedIndex = _editingBook.GenreID.Value - 1;
+
+                if (_editingBook.CategoryID.HasValue)
+                    categoryComboBox.SelectedIndex = _editingBook.CategoryID.Value;
+                else
+                    categoryComboBox.SelectedIndex = 0;
+
+                Image image = ImageLoader.LoadBookImage(_editingBook.ImageName);
+
+                if (image != null)
+                {
+                    bookPictureBox.Image = image;
+                }
+
+                if (!string.IsNullOrEmpty(_editingBook.PdfName))
+                {
+                    _selectedPdfPath = Path.Combine(@"C:\Users\lamki\Documents\BiblioLandRes\bookPdf", _editingBook.PdfName);
+                    selectPdfLabel.Text = "Выбран файл: " + _editingBook.PdfName;
+                    selectPdfLabel.ForeColor = Color.White;
+                }
+            }
         }
 
         private void AddBookValidation()
@@ -23,8 +67,11 @@ namespace Biblio.AppForms
             var nameIsEmpty = string.IsNullOrEmpty(nameTextBox.Text);
             var authorIsEmpty = string.IsNullOrEmpty(authorTextBox.Text);
             var descriptionIsEmpty = string.IsNullOrEmpty(descriptionTextBox.Text);
-            var imageIsEmpty = string.IsNullOrEmpty(_selectedImagePath);
             var pdfIsEmpty = string.IsNullOrEmpty(_selectedPdfPath);
+
+            bool isEditing = _editingBook != null;
+            bool hasExistingImage = isEditing && !string.IsNullOrEmpty(_editingBook.ImageName);
+            bool imageIsEmpty = string.IsNullOrEmpty(_selectedImagePath) && !hasExistingImage;
 
             nameLabel.ForeColor = nameIsEmpty == true ? Color.Red : Color.White;
             authorLabel.ForeColor = authorIsEmpty == true ? Color.Red : Color.White;
@@ -45,62 +92,97 @@ namespace Biblio.AppForms
 
         private void ProcessReportSubmission()
         {
-            var result = MessageBox.Show("Вы уверены, что хотите добавить эту книгу?",
+            var message = _editingBook != null
+                ? "Вы уверены, что хотите сохранить изменения?"
+                : "Вы уверены, что хотите добавить эту книгу?";
+
+            var result = MessageBox.Show(message,
                 "Подтвердите действие!",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                SendBanToDatabase();
+                SendBookToDatabase();
             }
         }
 
-        private void SendBanToDatabase()
+        private void SendBookToDatabase()
         {
             try
             {
-                string imgDirectory = @"C:\Users\lamki\Documents\BiblioLandRes\bookImg";
-                string pdfDirectory = @"C:\Users\lamki\Documents\BiblioLandRes\bookPdf";
+                string imgDirectory = @"C:\\Users\\lamki\\OneDrive\\Документы\\BiblioLandRes\\bookImg\\bookImg";
+                string pdfDirectory = @"C:\\Users\\lamki\\OneDrive\\Документы\\BiblioLandRes\\bookImg\\bookPdf";
 
-                string imgFileName = Path.GetFileName(_selectedImagePath);
-                string pdfFileName = Path.GetFileName(_selectedPdfPath);
-
-                string destImgPath = Path.Combine(imgDirectory, imgFileName);
-                string destPdfPath = Path.Combine(pdfDirectory, pdfFileName);
-
-                // Создаем директории, если их нет
                 Directory.CreateDirectory(imgDirectory);
                 Directory.CreateDirectory(pdfDirectory);
 
-                // Копируем файлы
-                File.Copy(_selectedImagePath, destImgPath, true);
-                File.Copy(_selectedPdfPath, destPdfPath, true);
+                string imgFileName = _editingBook?.ImageName; // сохраняем старое имя, если файл не менялся
+                string pdfFileName = _editingBook?.PdfName;
 
-                var newBook = new Books
+                if (!string.IsNullOrEmpty(_selectedImagePath))
                 {
-                    Title = nameTextBox.Text,
-                    Author = authorTextBox.Text,
-                    Description = descriptionTextBox.Text,
-                    ImageName = imgFileName,
-                    PdfName = pdfFileName,
-                    GenreID = genreComboBox.SelectedIndex + 1,
-                    CategoryID = categoryComboBox.SelectedIndex == 0 ? (int?)null : categoryComboBox.SelectedIndex,
-                    OftenSearched = null,
-                    AverageRating = (decimal?)0.00,
-                    AddedDate = DateTime.Now
-                };
+                    // Проверяем, изменилось ли изображение
+                    if (_editingBook == null || Path.GetFileName(_selectedImagePath) != _editingBook.ImageName)
+                    {
+                        imgFileName = Path.GetFileName(_selectedImagePath);
+                        string destImgPath = Path.Combine(imgDirectory, imgFileName);
+                        File.Copy(_selectedImagePath, destImgPath, true);
+                    }
+                }
 
-                Program.context.Books.Add(newBook);
+                if (!string.IsNullOrEmpty(_selectedPdfPath))
+                {
+                    if (_editingBook == null || Path.GetFileName(_selectedPdfPath) != _editingBook.PdfName)
+                    {
+                        pdfFileName = Path.GetFileName(_selectedPdfPath);
+                        string destPdfPath = Path.Combine(pdfDirectory, pdfFileName);
+                        File.Copy(_selectedPdfPath, destPdfPath, true);
+                    }
+                }
+
+                if (_editingBook == null)
+                {
+                    var newBook = new Books
+                    {
+                        Title = nameTextBox.Text,
+                        Author = authorTextBox.Text,
+                        Description = descriptionTextBox.Text,
+                        ImageName = imgFileName,
+                        PdfName = pdfFileName,
+                        GenreID = genreComboBox.SelectedIndex + 1,
+                        CategoryID = categoryComboBox.SelectedIndex == 0 ? (int?)null : categoryComboBox.SelectedIndex,
+                        OftenSearched = null,
+                        AverageRating = (decimal?)0.00,
+                        AddedDate = DateTime.Now
+                    };
+
+                    Program.context.Books.Add(newBook);
+                }
+
+                else
+                {
+                    _editingBook.Title = nameTextBox.Text;
+                    _editingBook.Author = authorTextBox.Text;
+                    _editingBook.Description = descriptionTextBox.Text;
+                    _editingBook.ImageName = imgFileName;
+                    _editingBook.PdfName = pdfFileName;
+                    _editingBook.GenreID = genreComboBox.SelectedIndex + 1;
+                    _editingBook.CategoryID = categoryComboBox.SelectedIndex == 0 ? (int?)null : categoryComboBox.SelectedIndex;
+                    // Не обновляем AddedDate, OftenSearched и AverageRating при редактировании
+
+                    Program.context.Entry(_editingBook).State = System.Data.Entity.EntityState.Modified;
+                }
+
                 Program.context.SaveChanges();
 
-                ValidationHelper.ShowInformationMessage("Книга добавлена!", "Успех!");
+                ValidationHelper.ShowInformationMessage(_editingBook == null ? "Книга добавлена!" : "Книга обновлена!", "Успех!");
 
                 this.Close();
             }
             catch (Exception ex)
             {
-                ValidationHelper.ShowErrorMessage($"Ошибка при добавлении книги: {ex.Message}");
+                ValidationHelper.ShowErrorMessage($"Ошибка при сохранении книги: {ex.Message}");
             }
         }
 
