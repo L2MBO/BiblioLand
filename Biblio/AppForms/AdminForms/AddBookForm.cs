@@ -162,16 +162,23 @@ namespace Biblio.AppForms
 
                 else
                 {
-                    _editingBook.Title = nameTextBox.Text;
-                    _editingBook.Author = authorTextBox.Text;
-                    _editingBook.Description = descriptionTextBox.Text;
-                    _editingBook.ImageName = imgFileName;
-                    _editingBook.PdfName = pdfFileName;
-                    _editingBook.GenreID = genreComboBox.SelectedIndex + 1;
-                    _editingBook.CategoryID = categoryComboBox.SelectedIndex == 0 ? (int?)null : categoryComboBox.SelectedIndex;
-                    // Не обновляем AddedDate, OftenSearched и AverageRating при редактировании
+                    var bookToUpdate = Program.context.Books.Find(_editingBook.BookID);
 
-                    Program.context.Entry(_editingBook).State = System.Data.Entity.EntityState.Modified;
+                    if (bookToUpdate != null)
+                    {
+                        bookToUpdate.Title = nameTextBox.Text;
+                        bookToUpdate.Author = authorTextBox.Text;
+                        bookToUpdate.Description = descriptionTextBox.Text;
+                        bookToUpdate.ImageName = imgFileName;
+                        bookToUpdate.PdfName = pdfFileName;
+                        bookToUpdate.GenreID = genreComboBox.SelectedIndex + 1;
+                        bookToUpdate.CategoryID = categoryComboBox.SelectedIndex == 0 ? (int?)null : categoryComboBox.SelectedIndex;
+                        // Не меняем AddedDate, OftenSearched, AverageRating — они не редактируются
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Книга для редактирования не найдена в базе данных.");
+                    }
                 }
 
                 Program.context.SaveChanges();
