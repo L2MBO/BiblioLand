@@ -61,9 +61,8 @@
             this.panel1.Controls.Add(this.profileButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(86, 152);
+            this.panel1.Size = new System.Drawing.Size(43, 150);
             this.panel1.TabIndex = 0;
             // 
             // profileButton
@@ -72,9 +71,8 @@
             this.profileButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.profileButton.ImageRotate = 0F;
             this.profileButton.Location = new System.Drawing.Point(0, 0);
-            this.profileButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(80, 77);
+            this.profileButton.Size = new System.Drawing.Size(40, 40);
             this.profileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profileButton.TabIndex = 9;
             this.profileButton.TabStop = false;
@@ -84,36 +82,32 @@
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(634, 19);
+            this.panel4.Size = new System.Drawing.Size(317, 10);
             this.panel4.TabIndex = 68;
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 19);
-            this.panel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel5.Location = new System.Drawing.Point(0, 10);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(20, 102);
+            this.panel5.Size = new System.Drawing.Size(10, 124);
             this.panel5.TabIndex = 69;
             // 
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(614, 19);
-            this.panel9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel9.Location = new System.Drawing.Point(307, 10);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(20, 102);
+            this.panel9.Size = new System.Drawing.Size(10, 124);
             this.panel9.TabIndex = 70;
             // 
             // panel16
             // 
             this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel16.Location = new System.Drawing.Point(20, 102);
-            this.panel16.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel16.Location = new System.Drawing.Point(10, 124);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(594, 19);
+            this.panel16.Size = new System.Drawing.Size(297, 10);
             this.panel16.TabIndex = 71;
             // 
             // panel3
@@ -121,10 +115,9 @@
             this.panel3.Controls.Add(this.nameLabel);
             this.panel3.Controls.Add(this.reportButton);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(20, 19);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Location = new System.Drawing.Point(10, 10);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(594, 31);
+            this.panel3.Size = new System.Drawing.Size(297, 16);
             this.panel3.TabIndex = 72;
             // 
             // nameLabel
@@ -133,9 +126,8 @@
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.White;
             this.nameLabel.Location = new System.Drawing.Point(0, 0);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(562, 31);
+            this.nameLabel.Size = new System.Drawing.Size(281, 16);
             this.nameLabel.TabIndex = 65;
             this.nameLabel.Text = "Имя";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,10 +137,9 @@
             this.reportButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.reportButton.Image = global::Biblio.Properties.Resources.report;
-            this.reportButton.Location = new System.Drawing.Point(562, 0);
-            this.reportButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.reportButton.Location = new System.Drawing.Point(281, 0);
             this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(32, 31);
+            this.reportButton.Size = new System.Drawing.Size(16, 16);
             this.reportButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.reportButton.TabIndex = 0;
             this.reportButton.TabStop = false;
@@ -157,10 +148,9 @@
             // panel27
             // 
             this.panel27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel27.Location = new System.Drawing.Point(20, 50);
-            this.panel27.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel27.Location = new System.Drawing.Point(10, 26);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(594, 19);
+            this.panel27.Size = new System.Drawing.Size(297, 10);
             this.panel27.TabIndex = 73;
             // 
             // panel26
@@ -168,11 +158,10 @@
             this.panel26.AutoSize = true;
             this.panel26.Controls.Add(this.commentLabel);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel26.Location = new System.Drawing.Point(20, 69);
-            this.panel26.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.panel26.MinimumSize = new System.Drawing.Size(0, 31);
+            this.panel26.Location = new System.Drawing.Point(10, 36);
+            this.panel26.MinimumSize = new System.Drawing.Size(0, 16);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(594, 31);
+            this.panel26.Size = new System.Drawing.Size(297, 16);
             this.panel26.TabIndex = 74;
             // 
             // commentLabel
@@ -180,9 +169,8 @@
             this.commentLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.commentLabel.ForeColor = System.Drawing.Color.White;
             this.commentLabel.Location = new System.Drawing.Point(0, 0);
-            this.commentLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.commentLabel.Name = "commentLabel";
-            this.commentLabel.Size = new System.Drawing.Size(594, 31);
+            this.commentLabel.Size = new System.Drawing.Size(297, 16);
             this.commentLabel.TabIndex = 0;
             this.commentLabel.Text = "Комментарий";
             this.commentLabel.TextChanged += new System.EventHandler(this.commentLabel_TextChanged);
@@ -206,15 +194,14 @@
             this.descriptionPanel.FillColor2 = System.Drawing.Color.Transparent;
             this.descriptionPanel.FillColor3 = System.Drawing.Color.Transparent;
             this.descriptionPanel.FillColor4 = System.Drawing.Color.Transparent;
-            this.descriptionPanel.Location = new System.Drawing.Point(86, 0);
-            this.descriptionPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.descriptionPanel.Location = new System.Drawing.Point(43, 0);
             this.descriptionPanel.Name = "descriptionPanel";
             this.descriptionPanel.Quality = 1;
             this.descriptionPanel.ShadowDecoration.BorderRadius = 10;
             this.descriptionPanel.ShadowDecoration.Depth = 150;
             this.descriptionPanel.ShadowDecoration.Enabled = true;
             this.descriptionPanel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.descriptionPanel.Size = new System.Drawing.Size(634, 121);
+            this.descriptionPanel.Size = new System.Drawing.Size(317, 134);
             this.descriptionPanel.TabIndex = 45;
             // 
             // panel2
@@ -223,10 +210,9 @@
             this.panel2.Controls.Add(this.likesCountLabel);
             this.panel2.Controls.Add(this.timeLabel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(86, 121);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Location = new System.Drawing.Point(43, 134);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(634, 31);
+            this.panel2.Size = new System.Drawing.Size(317, 16);
             this.panel2.TabIndex = 2;
             // 
             // likesButton
@@ -234,10 +220,9 @@
             this.likesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.likesButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.likesButton.Image = global::Biblio.Properties.Resources.whiteLike;
-            this.likesButton.Location = new System.Drawing.Point(458, 0);
-            this.likesButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.likesButton.Location = new System.Drawing.Point(226, 0);
             this.likesButton.Name = "likesButton";
-            this.likesButton.Size = new System.Drawing.Size(32, 31);
+            this.likesButton.Size = new System.Drawing.Size(16, 16);
             this.likesButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.likesButton.TabIndex = 2;
             this.likesButton.TabStop = false;
@@ -248,11 +233,10 @@
             this.likesCountLabel.AutoSize = true;
             this.likesCountLabel.Dock = System.Windows.Forms.DockStyle.Right;
             this.likesCountLabel.ForeColor = System.Drawing.Color.White;
-            this.likesCountLabel.Location = new System.Drawing.Point(490, 0);
-            this.likesCountLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.likesCountLabel.Location = new System.Drawing.Point(242, 0);
             this.likesCountLabel.Name = "likesCountLabel";
-            this.likesCountLabel.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.likesCountLabel.Size = new System.Drawing.Size(144, 29);
+            this.likesCountLabel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.likesCountLabel.Size = new System.Drawing.Size(75, 15);
             this.likesCountLabel.TabIndex = 1;
             this.likesCountLabel.Text = " Чило лайков";
             this.likesCountLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -263,25 +247,23 @@
             this.timeLabel.Dock = System.Windows.Forms.DockStyle.Left;
             this.timeLabel.ForeColor = System.Drawing.Color.White;
             this.timeLabel.Location = new System.Drawing.Point(0, 0);
-            this.timeLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(305, 25);
+            this.timeLabel.Size = new System.Drawing.Size(157, 13);
             this.timeLabel.TabIndex = 0;
             this.timeLabel.Text = "Время добавления коммента";
             // 
             // UserCommentsControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.descriptionPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.MinimumSize = new System.Drawing.Size(720, 152);
+            this.MinimumSize = new System.Drawing.Size(360, 79);
             this.Name = "UserCommentsControl";
-            this.Size = new System.Drawing.Size(720, 152);
+            this.Size = new System.Drawing.Size(360, 150);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.profileButton)).EndInit();
             this.panel3.ResumeLayout(false);

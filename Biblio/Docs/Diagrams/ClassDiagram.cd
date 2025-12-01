@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Biblio.Classes.Animations.FormAnimationHelper">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Biblio.Classes.Animations.FormAnimationHelper.AnimateWindowFlags">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Animations\FormAnimationHelper.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Classes\Animations\FormAnimationHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Animations.FormDrag">
+    <Position X="6.75" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Classes\Animations\FormDrag.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.ConfirmationCode.ConfirmationCodeHelper">
+    <Position X="8.75" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAEAAgBAACAAAAAEBAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\ConfirmationCode\ConfirmationCodeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.ConfirmationCode.SendMessageCode">
+    <Position X="6.75" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAIAAAA=</HashCode>
+      <FileName>Classes\ConfirmationCode\SendMessageCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.ConfirmationCode.PostResult">
+    <Position X="11.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAABAAAAAAAAAAAAAAAAAAAAAAAAAAAIAABAAAAAAA=</HashCode>
+      <FileName>Classes\ConfirmationCode\SendMessageCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Customization.AutoScrollHelper">
+    <Position X="13.75" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Customization\FormCustomization\AutoScrollHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Customization.RoundingHelper">
+    <Position X="11" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Customization\FormCustomization\RoundingHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Customization.BlurImage">
+    <Position X="14" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Customization\ImagesCustomization\BlurImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Customization.WhiteLevelReducer">
+    <Position X="11.5" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Customization\ImagesCustomization\WhiteLevelReducer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Customization.FormCustomization.DialogWithOverlayService">
+    <Position X="4.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAA=</HashCode>
+      <FileName>Classes\Customization\FormCustomization\DialogWithOverlayService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Customization.ImagesCustomization.BackgroundImageRenderer">
+    <Position X="11.5" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEgAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Customization\ImagesCustomization\BackgroundImageRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.DataAccess.UserAvatarDataHelper">
+    <Position X="11" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\DataAccess\UserAvatarDataHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Hash.HashHelper">
+    <Position X="6.75" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Hash\HashHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Images.InstallingImages.ImageLoader">
+    <Position X="8.75" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAACEABAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Classes\Images\InstallingImages\ImageLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Coding.CodingOrDecoding">
+    <Position X="4.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Classes\Images\StoreImages\CodingOrDecoding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Pdf.OpenPdf.PdfLoader">
+    <Position X="12" Y="10" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Pdf\OpenPdf\PdfLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.SaveUserSettings.SaveAdminFilter">
+    <Position X="6.5" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Biblio.Classes.SaveUserSettings.SaveAdminFilter.FilterState">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\SaveUserSettings\SaveAdminFilter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Biblio.Classes.SaveUserSettings.SaveAdminFilter.FilterContext">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\SaveUserSettings\SaveAdminFilter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\SaveUserSettings\SaveAdminFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.SaveUserSettings.SaveUserFilter">
+    <Position X="8.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Biblio.Classes.SaveUserSettings.SaveUserFilter.FilterState">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\SaveUserSettings\SaveUserFilter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="Biblio.Classes.SaveUserSettings.SaveUserFilter.FilterContext">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\SaveUserSettings\SaveUserFilter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\SaveUserSettings\SaveUserFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Validation.TimeValidation">
+    <Position X="4.5" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Validation\TimeValidation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.ValidationClasses.ValidationHelper">
+    <Position X="13.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gBAAAAgAAAQCQASABKBAAAAgAAAEAiAAAI4EAAAACCA=</HashCode>
+      <FileName>Classes\Validation\ValidationHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.VisibilityOrEnabled.EnabledHelper">
+    <Position X="11" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Classes\VisibilityOrEnabled\EnabledHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.HideClasses.VisibilityHelper">
+    <Position X="6.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAgAAAEAAAAAAAAAABAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Classes\VisibilityOrEnabled\VisibilityHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

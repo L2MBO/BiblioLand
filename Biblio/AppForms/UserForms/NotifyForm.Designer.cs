@@ -40,6 +40,9 @@
             this.sortComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.deleteNotifyButton = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.writeNotifyButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.reportTypeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,9 +51,6 @@
             this.rightPanel = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.deleteNotifyButton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.mainPanel.SuspendLayout();
             this.panel21.SuspendLayout();
             this.buttonsPanel.SuspendLayout();
@@ -77,9 +77,10 @@
             this.mainPanel.Controls.Add(this.rightPanel);
             this.mainPanel.Controls.Add(this.leftPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 52);
+            this.mainPanel.Location = new System.Drawing.Point(0, 100);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(6);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(726, 378);
+            this.mainPanel.Size = new System.Drawing.Size(1452, 727);
             this.mainPanel.TabIndex = 4;
             // 
             // notifyPanel
@@ -87,17 +88,19 @@
             this.notifyPanel.AutoSize = true;
             this.notifyPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.notifyPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.notifyPanel.Location = new System.Drawing.Point(100, 105);
+            this.notifyPanel.Location = new System.Drawing.Point(200, 201);
+            this.notifyPanel.Margin = new System.Windows.Forms.Padding(6);
             this.notifyPanel.Name = "notifyPanel";
-            this.notifyPanel.Size = new System.Drawing.Size(526, 0);
+            this.notifyPanel.Size = new System.Drawing.Size(1052, 0);
             this.notifyPanel.TabIndex = 77;
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(100, 95);
+            this.panel7.Location = new System.Drawing.Point(200, 182);
+            this.panel7.Margin = new System.Windows.Forms.Padding(6);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(526, 10);
+            this.panel7.Size = new System.Drawing.Size(1052, 19);
             this.panel7.TabIndex = 76;
             // 
             // panel21
@@ -110,9 +113,10 @@
             this.panel21.Controls.Add(this.buttonsPanel);
             this.panel21.Controls.Add(this.reportTypeComboBox);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(100, 59);
+            this.panel21.Location = new System.Drawing.Point(200, 113);
+            this.panel21.Margin = new System.Windows.Forms.Padding(6);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(526, 36);
+            this.panel21.Size = new System.Drawing.Size(1052, 69);
             this.panel21.TabIndex = 61;
             // 
             // feedbackTypeComboBox
@@ -136,9 +140,10 @@
             "Не понравилось",
             "Баг",
             "Идея"});
-            this.feedbackTypeComboBox.Location = new System.Drawing.Point(169, 0);
+            this.feedbackTypeComboBox.Location = new System.Drawing.Point(334, 0);
+            this.feedbackTypeComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.feedbackTypeComboBox.Name = "feedbackTypeComboBox";
-            this.feedbackTypeComboBox.Size = new System.Drawing.Size(154, 36);
+            this.feedbackTypeComboBox.Size = new System.Drawing.Size(304, 36);
             this.feedbackTypeComboBox.StartIndex = 0;
             this.feedbackTypeComboBox.TabIndex = 71;
             this.feedbackTypeComboBox.TextOffset = new System.Drawing.Point(7, 0);
@@ -147,9 +152,10 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(159, 0);
+            this.panel3.Location = new System.Drawing.Point(314, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 36);
+            this.panel3.Size = new System.Drawing.Size(20, 69);
             this.panel3.TabIndex = 70;
             // 
             // sortComboBox
@@ -170,9 +176,10 @@
             this.sortComboBox.Items.AddRange(new object[] {
             "Новые",
             "Старые"});
-            this.sortComboBox.Location = new System.Drawing.Point(359, 0);
+            this.sortComboBox.Location = new System.Drawing.Point(722, 0);
+            this.sortComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.sortComboBox.Name = "sortComboBox";
-            this.sortComboBox.Size = new System.Drawing.Size(93, 36);
+            this.sortComboBox.Size = new System.Drawing.Size(182, 36);
             this.sortComboBox.StartIndex = 0;
             this.sortComboBox.TabIndex = 69;
             this.sortComboBox.TextOffset = new System.Drawing.Point(7, 0);
@@ -180,9 +187,10 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(452, 0);
+            this.panel2.Location = new System.Drawing.Point(904, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 36);
+            this.panel2.Size = new System.Drawing.Size(20, 69);
             this.panel2.TabIndex = 68;
             // 
             // buttonsPanel
@@ -194,10 +202,53 @@
             this.buttonsPanel.Controls.Add(this.writeNotifyButton);
             this.buttonsPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonsPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.buttonsPanel.Location = new System.Drawing.Point(462, 0);
+            this.buttonsPanel.Location = new System.Drawing.Point(924, 0);
+            this.buttonsPanel.Margin = new System.Windows.Forms.Padding(6);
             this.buttonsPanel.Name = "buttonsPanel";
-            this.buttonsPanel.Size = new System.Drawing.Size(64, 36);
+            this.buttonsPanel.Size = new System.Drawing.Size(128, 69);
             this.buttonsPanel.TabIndex = 65;
+            // 
+            // deleteNotifyButton
+            // 
+            this.deleteNotifyButton.Animated = true;
+            this.deleteNotifyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.deleteNotifyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteNotifyButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deleteNotifyButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deleteNotifyButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.deleteNotifyButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deleteNotifyButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.deleteNotifyButton.Enabled = false;
+            this.deleteNotifyButton.FillColor = System.Drawing.Color.DarkRed;
+            this.deleteNotifyButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.deleteNotifyButton.ForeColor = System.Drawing.Color.White;
+            this.deleteNotifyButton.Image = global::Biblio.Properties.Resources.trash;
+            this.deleteNotifyButton.ImageSize = new System.Drawing.Size(18, 18);
+            this.deleteNotifyButton.Location = new System.Drawing.Point(72, 8);
+            this.deleteNotifyButton.Margin = new System.Windows.Forms.Padding(6);
+            this.deleteNotifyButton.Name = "deleteNotifyButton";
+            this.deleteNotifyButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.deleteNotifyButton.Size = new System.Drawing.Size(56, 53);
+            this.deleteNotifyButton.TabIndex = 81;
+            this.deleteNotifyButton.Click += new System.EventHandler(this.deleteNotifyButton_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 61);
+            this.panel5.Margin = new System.Windows.Forms.Padding(6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(128, 8);
+            this.panel5.TabIndex = 80;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(128, 8);
+            this.panel4.TabIndex = 79;
             // 
             // writeNotifyButton
             // 
@@ -212,11 +263,12 @@
             this.writeNotifyButton.ForeColor = System.Drawing.Color.White;
             this.writeNotifyButton.Image = global::Biblio.Properties.Resources.plas;
             this.writeNotifyButton.ImageSize = new System.Drawing.Size(17, 17);
-            this.writeNotifyButton.Location = new System.Drawing.Point(2, 4);
+            this.writeNotifyButton.Location = new System.Drawing.Point(4, 8);
+            this.writeNotifyButton.Margin = new System.Windows.Forms.Padding(6);
             this.writeNotifyButton.Name = "writeNotifyButton";
             this.writeNotifyButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
             this.writeNotifyButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.writeNotifyButton.Size = new System.Drawing.Size(28, 28);
+            this.writeNotifyButton.Size = new System.Drawing.Size(56, 54);
             this.writeNotifyButton.TabIndex = 76;
             this.writeNotifyButton.Visible = false;
             this.writeNotifyButton.Click += new System.EventHandler(this.writeNotifyButton_Click);
@@ -242,8 +294,9 @@
             "На комментарий",
             "На пользователя"});
             this.reportTypeComboBox.Location = new System.Drawing.Point(0, 0);
+            this.reportTypeComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.reportTypeComboBox.Name = "reportTypeComboBox";
-            this.reportTypeComboBox.Size = new System.Drawing.Size(159, 36);
+            this.reportTypeComboBox.Size = new System.Drawing.Size(314, 36);
             this.reportTypeComboBox.StartIndex = 0;
             this.reportTypeComboBox.TabIndex = 9;
             this.reportTypeComboBox.TextOffset = new System.Drawing.Point(7, 0);
@@ -254,17 +307,19 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(100, 0);
+            this.panel1.Location = new System.Drawing.Point(200, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(526, 59);
+            this.panel1.Size = new System.Drawing.Size(1052, 113);
             this.panel1.TabIndex = 60;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Biblio.Properties.Resources.blueUnderLine;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(-8, 65);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(334, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -274,10 +329,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(4, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 25);
+            this.label1.Size = new System.Drawing.Size(296, 48);
             this.label1.TabIndex = 22;
             this.label1.Text = "Уведомления";
             // 
@@ -285,19 +340,19 @@
             // 
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(626, 0);
-            this.rightPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.rightPanel.Location = new System.Drawing.Point(1252, 0);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(4);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(100, 378);
+            this.rightPanel.Size = new System.Drawing.Size(200, 727);
             this.rightPanel.TabIndex = 22;
             // 
             // leftPanel
             // 
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(4);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(100, 378);
+            this.leftPanel.Size = new System.Drawing.Size(200, 727);
             this.leftPanel.TabIndex = 21;
             // 
             // navigationControl
@@ -308,62 +363,24 @@
             this.navigationControl.leftPanel = null;
             this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
-            this.navigationControl.Margin = new System.Windows.Forms.Padding(6);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(12);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
             this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.Size = new System.Drawing.Size(1452, 100);
             this.navigationControl.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(64, 4);
-            this.panel4.TabIndex = 79;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 32);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(64, 4);
-            this.panel5.TabIndex = 80;
-            // 
-            // deleteNotifyButton
-            // 
-            this.deleteNotifyButton.Animated = true;
-            this.deleteNotifyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.deleteNotifyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteNotifyButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.deleteNotifyButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.deleteNotifyButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.deleteNotifyButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.deleteNotifyButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.deleteNotifyButton.Enabled = false;
-            this.deleteNotifyButton.FillColor = System.Drawing.Color.DarkRed;
-            this.deleteNotifyButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.deleteNotifyButton.ForeColor = System.Drawing.Color.White;
-            this.deleteNotifyButton.Image = global::Biblio.Properties.Resources.trash;
-            this.deleteNotifyButton.ImageSize = new System.Drawing.Size(18, 18);
-            this.deleteNotifyButton.Location = new System.Drawing.Point(36, 4);
-            this.deleteNotifyButton.Name = "deleteNotifyButton";
-            this.deleteNotifyButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.deleteNotifyButton.Size = new System.Drawing.Size(28, 28);
-            this.deleteNotifyButton.TabIndex = 81;
-            this.deleteNotifyButton.Click += new System.EventHandler(this.deleteNotifyButton_Click);
             // 
             // NotifyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(726, 430);
+            this.ClientSize = new System.Drawing.Size(1452, 827);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "NotifyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserNotifyForm";
