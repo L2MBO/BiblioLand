@@ -1,6 +1,7 @@
 ﻿using Biblio.CustomControls;
 using Biblio.Models;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Biblio.AppForms.AdminForms
@@ -34,14 +35,15 @@ namespace Biblio.AppForms.AdminForms
             }
             else if (_notificationData is UserReports userReport)
             {
-                _nameProfile = userReport.Users.UserID;
+                var newUserReport = Program.context.UserReports.AsNoTracking().FirstOrDefault(u => u.UserReportID == userReport.UserReportID);
+                _nameProfile = newUserReport.Users.UserID;
                 reportLabel.AutoSize = true;
                 titleLabel.Text = "Жалоба на пользователя";
-                nameLabel.Text = userReport.Users.Username;
+                nameLabel.Text = newUserReport.Users.Username;
                 reportInfoLabel.Text = "Репорт на пользователя:";
-                reportLabel.Text = userReport.Users1.Username;
-                reasoneLabel.Text = userReport.UserReportCategory.ReportCategoryName;
-                descriptionTextBox.Text = userReport.ReportMessage;
+                reportLabel.Text = newUserReport.Users1.Username;
+                reasoneLabel.Text = newUserReport.UserReportCategory.ReportCategoryName;
+                descriptionTextBox.Text = newUserReport.ReportMessage;
             }
         }
 

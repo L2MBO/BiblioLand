@@ -5,6 +5,7 @@ using Biblio.Classes.Customization.FormCustomization;
 using Biblio.HideClasses;
 using Biblio.Models;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Biblio.CustomControls
@@ -48,6 +49,8 @@ namespace Biblio.CustomControls
             if (_notificationData is SystemNotifications systemNotification)
             {
                 NewStyle();
+                var newBookReport = Program.context.SystemNotifications.AsNoTracking()
+                    .FirstOrDefault(n => n.NotifyID == systemNotification.NotifyID);
                 titleLabel.Text = systemNotification.NotifyTitle;
                 typeLabel.Text = "Системное уведомление";
                 dateLabel.Text = systemNotification.NotifyDate.ToShortDateString();
@@ -56,34 +59,38 @@ namespace Biblio.CustomControls
             }
             else if (_notificationData is BookReports bookReport)
             {
-                _currentUser = bookReport.Users.UserID;
-                nameLabel.Text = bookReport.Users.Username;
+                var newBookReport = Program.context.BookReports.AsNoTracking().FirstOrDefault(b => b.BookReportID == bookReport.BookReportID);
+                _currentUser = newBookReport.Users.UserID;
+                nameLabel.Text = newBookReport.Users.Username;
                 typeLabel.Text = "Жалоба на книгу";
-                dateLabel.Text = bookReport.ReportDate.ToShortDateString();
+                dateLabel.Text = newBookReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is ReviewReports reviewReport)
             {
-                _currentUser = reviewReport.Users.UserID;
-                nameLabel.Text = reviewReport.Users.Username;
+                var newReviewReport = Program.context.ReviewReports.AsNoTracking().FirstOrDefault(r => r.ReviewReportID == reviewReport.ReviewReportID);
+                _currentUser = newReviewReport.Users.UserID;
+                nameLabel.Text = newReviewReport.Users.Username;
                 typeLabel.Text = "Жалоба на комментарий";
-                dateLabel.Text = reviewReport.ReportDate.ToShortDateString();
-                _form = new CommentNotifyForm(reviewReport);
+                dateLabel.Text = newReviewReport.ReportDate.ToShortDateString();
+                _form = new CommentNotifyForm(newReviewReport);
                 return;
             }
             else if (_notificationData is UserReports userReport)
             {
-                _currentUser = userReport.Users.UserID;
-                nameLabel.Text = userReport.Users.Username;
+                var newUserReport = Program.context.UserReports.AsNoTracking().FirstOrDefault(u => u.UserReportID == userReport.UserReportID);
+                _currentUser = newUserReport.Users.UserID;
+                nameLabel.Text = newUserReport.Users.Username;
                 typeLabel.Text = "Жалоба на пользователя";
-                dateLabel.Text = userReport.ReportDate.ToShortDateString();
+                dateLabel.Text = newUserReport.ReportDate.ToShortDateString();
             }
             else if (_notificationData is Feedback feedback)
             {
-                _currentUser = feedback.Users.UserID;
-                nameLabel.Text = feedback.Users.Username;
-                typeLabel.Text = feedback.FeedbackCategory.FeedbackCategoryName;
-                dateLabel.Text = feedback.FeedbackDate.ToShortDateString();
-                _form = new FeedbackNotifyForm(feedback);
+                var newFeedback = Program.context.Feedback.AsNoTracking().FirstOrDefault(f => f.FeedbackID == feedback.FeedbackID);
+                _currentUser = newFeedback.Users.UserID;
+                nameLabel.Text = newFeedback.Users.Username;
+                typeLabel.Text = newFeedback.FeedbackCategory.FeedbackCategoryName;
+                dateLabel.Text = newFeedback.FeedbackDate.ToShortDateString();
+                _form = new FeedbackNotifyForm(newFeedback);
                 return;
             }
 
