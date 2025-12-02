@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingForm));
             this.BorderlessForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.navigationControl = new Biblio.CustomControls.NavigationControl();
             this.loadingPanel = new System.Windows.Forms.Panel();
@@ -55,19 +56,21 @@
             this.navigationControl.leftPanel = null;
             this.navigationControl.LeftPanelWidth = 0;
             this.navigationControl.Location = new System.Drawing.Point(0, 0);
+            this.navigationControl.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.navigationControl.Name = "navigationControl";
             this.navigationControl.rightPanel = null;
             this.navigationControl.RightPanelWidth = 0;
-            this.navigationControl.Size = new System.Drawing.Size(726, 52);
+            this.navigationControl.Size = new System.Drawing.Size(1452, 100);
             this.navigationControl.TabIndex = 2;
             // 
             // loadingPanel
             // 
             this.loadingPanel.Controls.Add(this.loadingPictureBox);
             this.loadingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loadingPanel.Location = new System.Drawing.Point(0, 52);
+            this.loadingPanel.Location = new System.Drawing.Point(0, 100);
+            this.loadingPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.loadingPanel.Name = "loadingPanel";
-            this.loadingPanel.Size = new System.Drawing.Size(726, 378);
+            this.loadingPanel.Size = new System.Drawing.Size(1452, 727);
             this.loadingPanel.TabIndex = 27;
             // 
             // loadingPictureBox
@@ -75,24 +78,27 @@
             this.loadingPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loadingPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.loadingPictureBox.Image = global::Biblio.Properties.Resources.Loading;
-            this.loadingPictureBox.Location = new System.Drawing.Point(252, 119);
+            this.loadingPictureBox.Location = new System.Drawing.Point(504, 229);
+            this.loadingPictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.loadingPictureBox.Name = "loadingPictureBox";
-            this.loadingPictureBox.Size = new System.Drawing.Size(209, 139);
+            this.loadingPictureBox.Size = new System.Drawing.Size(418, 267);
             this.loadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.loadingPictureBox.TabIndex = 0;
             this.loadingPictureBox.TabStop = false;
             // 
             // LoadingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
-            this.ClientSize = new System.Drawing.Size(726, 430);
+            this.ClientSize = new System.Drawing.Size(1452, 827);
             this.Controls.Add(this.loadingPanel);
             this.Controls.Add(this.navigationControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoadingForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FeedbackForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;

@@ -99,7 +99,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Pdf.OpenPdf.PdfLoader">
-    <Position X="14" Y="9.5" Width="1.25" />
+    <Position X="14.5" Y="9.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Pdf\PdfLoader.cs</FileName>
