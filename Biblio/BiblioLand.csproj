@@ -285,7 +285,6 @@
     <Compile Include="AppForms\UserForms\UserNotifyForm.Designer.cs">
       <DependentUpon>UserNotifyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Animations\FormAnimationHelper.cs" />
     <Compile Include="Classes\Animations\FormDrag.cs" />
     <Compile Include="Classes\ConfirmationCode\ConfirmationCodeHelper.cs" />
     <Compile Include="Classes\ConfirmationCode\SendMessageCode.cs" />
@@ -299,7 +298,7 @@
     <Compile Include="Classes\Images\InstallingImages\ImageLoader.cs" />
     <Compile Include="Classes\Images\StoreImages\CodingOrDecoding.cs" />
     <Compile Include="Classes\Hash\HashHelper.cs" />
-    <Compile Include="Classes\Pdf\OpenPdf\PdfLoader.cs" />
+    <Compile Include="Classes\Pdf\PdfLoader.cs" />
     <Compile Include="Classes\SaveUserSettings\SaveAdminFilter.cs" />
     <Compile Include="Classes\SaveUserSettings\SaveUserFilter.cs" />
     <Compile Include="Classes\Validation\TimeValidation.cs" />
@@ -577,16 +576,7 @@
     <None Include="Docs\BiblioLandRes\bookPdf\voina.pdf" />
     <None Include="Docs\BiblioLandRes\bookPdf\voina_i_mir.pdf" />
     <None Include="Docs\Diagrams\ClassDiagram.cd" />
-    <None Include="Docs\Documentations\1_Титл_лист_КП.docx" />
-    <None Include="Docs\Documentations\2_Отзыв.docx" />
-    <None Include="Docs\Documentations\3_Кур_зад_титул.docx" />
-    <None Include="Docs\Documentations\4_Кур_задан_начинка.docx" />
-    <None Include="Docs\Documentations\5_Тех_зад_титул.docx" />
-    <None Include="Docs\Documentations\6_Тех_зад.docx" />
-    <None Include="Docs\Documentations\7_Титул__Пояснительная_Записка.docx" />
-    <None Include="Docs\Documentations\8_Пояснительная_Записка.docx" />
-    <None Include="Docs\Documentations\Библиотека ТЗ.docx" />
-    <None Include="Docs\Project restoration\Restor.docx" />
+    <None Include="Docs\Documentations\Пояснительная записка Лямкин.docx" />
     <None Include="Docs\БД\er-diagram.pdf" />
     <None Include="Docs\БД\Агент.docx" />
     <None Include="packages.config" />
