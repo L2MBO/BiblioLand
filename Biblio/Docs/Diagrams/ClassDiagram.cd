@@ -1,24 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Biblio.Classes.Animations.FormAnimationHelper">
-    <Position X="4.5" Y="0.5" Width="1.75" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <NestedTypes>
-      <Enum Name="Biblio.Classes.Animations.FormAnimationHelper.AnimateWindowFlags">
-        <TypeIdentifier>
-          <NewMemberFileName>Classes\Animations\FormAnimationHelper.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
-      <FileName>Classes\Animations\FormAnimationHelper.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Biblio.Classes.Animations.FormDrag">
-    <Position X="6.75" Y="8.5" Width="1.75" />
+    <Position X="4.5" Y="5.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Classes\Animations\FormDrag.cs</FileName>
@@ -32,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.ConfirmationCode.SendMessageCode">
-    <Position X="6.75" Y="6.75" Width="1.75" />
+    <Position X="4.5" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAIAAAA=</HashCode>
       <FileName>Classes\ConfirmationCode\SendMessageCode.cs</FileName>
@@ -74,7 +57,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Customization.FormCustomization.DialogWithOverlayService">
-    <Position X="4.5" Y="6.75" Width="2" />
+    <Position X="6.5" Y="6.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAA=</HashCode>
       <FileName>Classes\Customization\FormCustomization\DialogWithOverlayService.cs</FileName>
@@ -95,7 +78,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Hash.HashHelper">
-    <Position X="6.75" Y="10.25" Width="1.75" />
+    <Position X="4.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Hash\HashHelper.cs</FileName>
@@ -109,17 +92,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Coding.CodingOrDecoding">
-    <Position X="4.5" Y="4.75" Width="1.75" />
+    <Position X="4.5" Y="2" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Classes\Images\StoreImages\CodingOrDecoding.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Pdf.OpenPdf.PdfLoader">
-    <Position X="12" Y="10" Width="1.25" />
+    <Position X="4.75" Y="7.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Classes\Pdf\OpenPdf\PdfLoader.cs</FileName>
+      <FileName>Classes\Pdf\PdfLoader.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.SaveUserSettings.SaveAdminFilter">
@@ -167,7 +150,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Validation.TimeValidation">
-    <Position X="4.5" Y="8.5" Width="2" />
+    <Position X="6.5" Y="8.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Validation\TimeValidation.cs</FileName>

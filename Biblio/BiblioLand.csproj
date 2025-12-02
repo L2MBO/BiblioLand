@@ -576,7 +576,7 @@
     <None Include="Docs\BiblioLandRes\bookPdf\voina.pdf" />
     <None Include="Docs\BiblioLandRes\bookPdf\voina_i_mir.pdf" />
     <None Include="Docs\Diagrams\ClassDiagram.cd" />
-    <None Include="Docs\Documentations\Пояснительная записка Лямкин.docx" />
+    <None Include="Docs\Documentations\Пояснительная_записка_Лямкин.docx" />
     <None Include="Docs\БД\er-diagram.pdf" />
     <None Include="Docs\БД\Агент.docx" />
     <None Include="packages.config" />
