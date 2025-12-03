@@ -17,13 +17,29 @@ namespace Biblio
         [STAThread]
         static void Main()
         {
-            if (!context.Database.Exists())
-            {
-                ValidationHelper.ShowErrorMessage("Ошибка подключения к БД.\nУбедитесь что вы подключили модели к своей БД в папке models");
-                return;
-            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Path
+                .GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
+
+            try
+            {
+                using (var testContext = new BiblioModel())
+                {
+                    if (!testContext.Database.Exists())
+                    {
+                        ValidationHelper.ShowErrorMessage("База данных не найдена. Убедитесь, что файл Biblio.mdf находится в папке bin/release в зависимости от того, какой тип сборки вы используете.\nЕсли его нет соберите проект и добавьте в bin/release файл Biblio.mdf.\nЕго можно найти по пути: Biblio/Docs/БД");
+                        return;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка подключения к БД:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Application.Run(new AuthorizationForm());
         }
     }
