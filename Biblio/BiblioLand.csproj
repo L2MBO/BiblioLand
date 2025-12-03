@@ -674,9 +674,6 @@
     <None Include="Resources\bell.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rank.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\cards.png" />
   </ItemGroup>
   <ItemGroup>
@@ -687,9 +684,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\store.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download.png" />
