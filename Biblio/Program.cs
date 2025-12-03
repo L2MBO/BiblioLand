@@ -30,7 +30,7 @@ namespace Biblio
                 {
                     if (!testContext.Database.Exists())
                     {
-                        ValidationHelper.ShowErrorMessage("База данных не найдена. Убедитесь, что файл Biblio.mdf находится в папке bin/release в зависимости от того, какой тип сборки вы используете.\nЕсли его нет соберите проект и добавьте в bin/release файл Biblio.mdf.\nЕго можно найти по пути: Biblio/Docs/БД");
+                        ValidationHelper.ShowErrorMessage("База данных не найдена.\nУбедитесь, что файл Biblio.mdf находится рядом с BiblioLand.exe.");
                         return;
                     }
                 }

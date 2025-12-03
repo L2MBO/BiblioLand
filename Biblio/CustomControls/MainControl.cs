@@ -35,8 +35,9 @@ namespace Biblio.CustomControls
         {
             authorLabel.Text = _book.Author.ToString();
             nameLabel.Text = _book.Title.ToString();
+            var bookImage = _book.ImageName;
 
-            Image image = ImageLoader.LoadBookImage(_book.ImageName);
+            Image image = ImageLoader.LoadBookImage(bookImage);
 
             if (image != null)
             {
@@ -46,7 +47,7 @@ namespace Biblio.CustomControls
             {
                 if (!MessageHelper.MissingBookImagesWarningShown)
                 {
-                    ValidationHelper.ShowErrorMessage("Не удалось найти обложки для книг.\nУбедитесь, что папка BiblioLandRes находится в папке bin/release в зависимости от того, какой тип вы используете и содержит обложки книг и pdf файлы в папках bookImg и bookPdf соответственно.\nЕсли ее нет соберите проект и добавте в bin/release папку BiblioLandRes.\nЕе можно найти по пути: Biblio/Docs");
+                    ValidationHelper.ShowErrorMessage($"Не удалось найти обложку книги: {bookImage}.\nУбедитесь, что папка BiblioLandRes находится рядом с приложением и содержит все необходимые изображения для книг в папке bookImg");
                     MessageHelper.MissingBookImagesWarningShown = true;
                 }
             }
