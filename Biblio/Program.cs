@@ -1,4 +1,5 @@
 ﻿using Biblio.AppForms;
+using Biblio.Classes.Services;
 using Biblio.Models;
 using Biblio.ValidationClasses;
 using System;
@@ -33,6 +34,9 @@ namespace Biblio
                         return;
                     }
                 }
+
+                CleanupService.CleanupExpiredConfirmationCodes();
+                CleanupService.CleanupExpiredBans();
             }
             catch (Exception ex)
             {

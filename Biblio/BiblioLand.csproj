@@ -317,6 +317,7 @@
     <Compile Include="Classes\Pdf\PdfLoader.cs" />
     <Compile Include="Classes\SaveUserSettings\SaveAdminFilter.cs" />
     <Compile Include="Classes\SaveUserSettings\SaveUserFilter.cs" />
+    <Compile Include="Classes\Services\CleanupService.cs" />
     <Compile Include="Classes\Validation\TimeValidation.cs" />
     <Compile Include="Classes\VisibilityOrEnabled\EnabledHelper.cs" />
     <Compile Include="Classes\VisibilityOrEnabled\VisibilityHelper.cs" />
