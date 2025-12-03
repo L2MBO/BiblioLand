@@ -239,7 +239,7 @@
             this.writeCommentPanel.Location = new System.Drawing.Point(256, 143);
             this.writeCommentPanel.MaximumSize = new System.Drawing.Size(370, 0);
             this.writeCommentPanel.Name = "writeCommentPanel";
-            this.writeCommentPanel.Size = new System.Drawing.Size(370, 0);
+            this.writeCommentPanel.Size = new System.Drawing.Size(370, 86);
             this.writeCommentPanel.TabIndex = 51;
             // 
             // commentTextBox
@@ -306,7 +306,7 @@
             this.sendCommentButton.Location = new System.Drawing.Point(260, 0);
             this.sendCommentButton.Name = "sendCommentButton";
             this.sendCommentButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(120)))), ((int)(((byte)(224)))));
-            this.sendCommentButton.Size = new System.Drawing.Size(90, 27);
+            this.sendCommentButton.Size = new System.Drawing.Size(90, 25);
             this.sendCommentButton.TabIndex = 37;
             this.sendCommentButton.Text = "Отправить";
             this.sendCommentButton.Click += new System.EventHandler(this.sendCommentButton_Click);
@@ -536,7 +536,7 @@
             this.evaluateButton.MinimumSize = new System.Drawing.Size(0, 21);
             this.evaluateButton.Name = "evaluateButton";
             this.evaluateButton.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(43)))));
-            this.evaluateButton.Size = new System.Drawing.Size(78, 27);
+            this.evaluateButton.Size = new System.Drawing.Size(78, 21);
             this.evaluateButton.TabIndex = 2;
             this.evaluateButton.Text = "Оценить";
             this.evaluateButton.Click += new System.EventHandler(this.evaluateButton_Click);

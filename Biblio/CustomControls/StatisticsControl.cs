@@ -27,7 +27,7 @@ namespace Biblio.CustomControls
         {
             int bookId = _book.BookID;
 
-            _book = Program.context.Books.AsNoTracking().FirstOrDefault(b => b.BookID == _book.BookID);
+            _book = Program.context.Books.AsNoTracking().FirstOrDefault(b => b.BookID == bookId);
 
             var lastRating = _book.AverageRating;
 
