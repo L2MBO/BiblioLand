@@ -19,7 +19,7 @@ namespace Biblio
         {
             if (!context.Database.Exists())
             {
-                ValidationHelper.ShowErrorMessage("Ошибка подключения к БД");
+                ValidationHelper.ShowErrorMessage("Ошибка подключения к БД.\nУбедитесь что вы подключили модели к своей БД в папке models");
                 return;
             }
             Application.EnableVisualStyles();

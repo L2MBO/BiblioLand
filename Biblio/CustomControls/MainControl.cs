@@ -46,7 +46,7 @@ namespace Biblio.CustomControls
             {
                 if (!MessageHelper.MissingBookImagesWarningShown)
                 {
-                    ValidationHelper.ShowErrorMessage("Не удалось найти обложки для книг. Убедитесь, что папка BiblioLandRes находится рядом с приложением и содержит 2 папки с изображениями и pdf файлами");
+                    ValidationHelper.ShowErrorMessage("Не удалось найти обложки для книг.\nУбедитесь, что папка BiblioLandRes находится в папке bin/release в зависимости от того, какой тип вы используете и содержит обложки книг и pdf файлы в папках bookImg и bookPdf соответственно.\nЕсли ее нет соберите проект и добавте в bin/release папку BiblioLandRes.\nЕе можно найти по пути: Biblio/Docs");
                     MessageHelper.MissingBookImagesWarningShown = true;
                 }
             }
