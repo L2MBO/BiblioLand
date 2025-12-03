@@ -1,5 +1,6 @@
 ﻿using Biblio.AppForms;
 using Biblio.Models;
+using Biblio.ValidationClasses;
 using System;
 using System.Windows.Forms;
 
@@ -16,31 +17,13 @@ namespace Biblio
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
-            AppDomain.CurrentDomain.SetData("DataDirectory",System.IO.Path
-                .GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
-
-            try
+            if (!context.Database.Exists())
             {
-                using (var testContext = new BiblioModel())
-                {
-                    if (!testContext.Database.Exists())
-                    {
-                        MessageBox.Show("База данных не найдена. Убедитесь, что файл Biblio.mdf находится рядом с приложением.",
-                            "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка подключения к БД:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ValidationHelper.ShowErrorMessage("Ошибка подключения к БД");
                 return;
             }
-
-
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AuthorizationForm());
         }
     }
