@@ -16,13 +16,31 @@ namespace Biblio
         [STAThread]
         static void Main()
         {
-            if (!context.Database.Exists())
-            {
-                MessageBox.Show("Ошибка подключения к БД", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            AppDomain.CurrentDomain.SetData("DataDirectory",System.IO.Path
+                .GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
+
+            try
+            {
+                using (var testContext = new BiblioModel())
+                {
+                    if (!testContext.Database.Exists())
+                    {
+                        MessageBox.Show("База данных не найдена. Убедитесь, что файл Biblio.mdf находится рядом с приложением.",
+                            "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка подключения к БД:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             Application.Run(new AuthorizationForm());
         }
     }

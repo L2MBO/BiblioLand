@@ -9,11 +9,12 @@ namespace Biblio.Classes.Images.InstallingImages
 {
     internal class ImageLoader
     {
-        private static readonly string _path = "C:\\Users\\lamki\\OneDrive\\Документы\\BiblioLandRes\\bookImg\\";
+        private static readonly string _baseResourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "BiblioLandRes");
+        private static readonly string _path = Path.Combine(_baseResourcePath, "bookImg");
 
         public static Image LoadBookImage(string imagePath)
         {
-            string fullImagePath = _path + imagePath;
+            string fullImagePath = Path.Combine(_path, imagePath);
 
             if (string.IsNullOrEmpty(fullImagePath) || !File.Exists(fullImagePath))
             {

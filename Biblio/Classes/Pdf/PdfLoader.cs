@@ -6,11 +6,12 @@ namespace Biblio.Classes.Pdf.OpenPdf
 {
     internal class PdfLoader
     {
-        private static readonly string _path = "C:\\Users\\lamki\\OneDrive\\Документы\\BiblioLandRes\\bookPdf\\";
+        private static readonly string _baseResourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "BiblioLandRes");
+        private static readonly string _path = Path.Combine(_baseResourcePath, "bookPdf");
 
         public static void OpenPdfFile(string pdfFileName)
         {
-            string fullPdfPath = _path + pdfFileName;
+            string fullPdfPath = Path.Combine(_path, pdfFileName);
 
             if (string.IsNullOrEmpty(fullPdfPath) || !File.Exists(fullPdfPath))
             {

@@ -15,6 +15,9 @@ namespace Biblio.AppForms
         private string _selectedImagePath;
         private string _selectedPdfPath;
         private Books _editingBook;
+        private static readonly string _baseResourcePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "BiblioLandRes");
+        private static readonly string _bookPath = Path.Combine(_baseResourcePath, "bookImg");
+        private static readonly string _pdfPath = Path.Combine(_baseResourcePath, "bookPdf");
 
         public CreateOrUpdateBookForm(Books book = null)
         {
@@ -53,7 +56,7 @@ namespace Biblio.AppForms
 
                 if (!string.IsNullOrEmpty(_editingBook.PdfName))
                 {
-                    _selectedPdfPath = Path.Combine(@"C:\Users\lamki\Documents\BiblioLandRes\bookPdf", _editingBook.PdfName);
+                    _selectedPdfPath = Path.Combine(_pdfPath, _editingBook.PdfName);
                     selectPdfLabel.Text = "Выбран файл: " + _editingBook.PdfName;
                     selectPdfLabel.ForeColor = Color.White;
                 }
@@ -109,8 +112,8 @@ namespace Biblio.AppForms
         {
             try
             {
-                string imgDirectory = @"C:\\Users\\lamki\\OneDrive\\Документы\\BiblioLandRes\\bookImg\\bookImg";
-                string pdfDirectory = @"C:\\Users\\lamki\\OneDrive\\Документы\\BiblioLandRes\\bookImg\\bookPdf";
+                string imgDirectory = _bookPath;
+                string pdfDirectory = _pdfPath;
 
                 Directory.CreateDirectory(imgDirectory);
                 Directory.CreateDirectory(pdfDirectory);

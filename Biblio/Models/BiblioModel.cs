@@ -5,7 +5,7 @@ namespace Biblio.Models
     public partial class BiblioModel : DbContext
     {
         public BiblioModel()
-            : base("name=BiblioModel40")
+            : base("name=BiblioModel")
         {
         }
 
