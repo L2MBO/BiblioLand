@@ -43,7 +43,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Customization.BlurImage">
-    <Position X="14" Y="8" Width="2.25" />
+    <Position X="13.75" Y="8" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Customization\ImagesCustomization\BlurImage.cs</FileName>
@@ -87,7 +87,7 @@
   <Class Name="Biblio.Classes.Images.InstallingImages.ImageLoader">
     <Position X="8.75" Y="7.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAACEABAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AACAAACAAAACEABAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Classes\Images\InstallingImages\ImageLoader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -99,9 +99,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Biblio.Classes.Pdf.OpenPdf.PdfLoader">
-    <Position X="14.5" Y="9.5" Width="1.25" />
+    <Position X="14.5" Y="9.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Classes\Pdf\PdfLoader.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -175,6 +175,13 @@
     <TypeIdentifier>
       <HashCode>QAAAAAAAgAAAEAAAAAAAAAABAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>Classes\VisibilityOrEnabled\VisibilityHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblio.Classes.Messages.MessageHelper">
+    <Position X="11.5" Y="10" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Messages\MessageHelper.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Biblio.Interface.IAvatarParentForm">

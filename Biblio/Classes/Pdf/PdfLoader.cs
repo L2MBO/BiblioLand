@@ -24,6 +24,7 @@ namespace Biblio.Classes.Pdf.OpenPdf
             }
             catch (Exception ex)
             {
+                ValidationHelper.ShowErrorMessage("Не удалось найти pdf файл для этой книги. Убедитесь, что папка BiblioLandRes находится рядом с приложением и содержит 2 папки с изображениями и pdf файлами");
                 string logPath = "errorPdf_log.txt";
                 File.AppendAllText(logPath, $"[{DateTime.Now}] Ошибка при открытии PDF файла: {ex.Message}\n");
                 throw;

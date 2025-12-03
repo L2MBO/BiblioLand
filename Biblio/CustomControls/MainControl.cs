@@ -1,6 +1,8 @@
 ﻿using Biblio.Classes.Customization;
 using Biblio.Classes.Images.InstallingImages;
+using Biblio.Classes.Messages;
 using Biblio.Models;
+using Biblio.ValidationClasses;
 using System;
 using System.Drawing;
 using System.Globalization;
@@ -39,6 +41,14 @@ namespace Biblio.CustomControls
             if (image != null)
             {
                 bookPictureBox.Image = image;
+            }
+            else
+            {
+                if (!MessageHelper.MissingBookImagesWarningShown)
+                {
+                    ValidationHelper.ShowErrorMessage("Не удалось найти обложки для книг. Убедитесь, что папка BiblioLandRes находится рядом с приложением и содержит 2 папки с изображениями и pdf файлами");
+                    MessageHelper.MissingBookImagesWarningShown = true;
+                }
             }
 
             _book = Program.context.Books.AsNoTracking().FirstOrDefault(b => b.BookID == _book.BookID);

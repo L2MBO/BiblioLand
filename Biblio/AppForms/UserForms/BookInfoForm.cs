@@ -562,9 +562,11 @@ namespace Biblio.AppForms
             var form = new EvaluationForm(_book, _currentUserId, evaluateButton);
             _dialogService.ShowDialogWithOverlay(this, form);
 
-            ShowRating();
+            
 
             UpdateEvaluationForm();
+
+            ShowRating();
         }
 
         private void reportButton_Click(object sender, EventArgs e)

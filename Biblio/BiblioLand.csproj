@@ -313,6 +313,7 @@
     <Compile Include="Classes\Images\InstallingImages\ImageLoader.cs" />
     <Compile Include="Classes\Images\StoreImages\CodingOrDecoding.cs" />
     <Compile Include="Classes\Hash\HashHelper.cs" />
+    <Compile Include="Classes\Messages\MessageHelper.cs" />
     <Compile Include="Classes\Pdf\PdfLoader.cs" />
     <Compile Include="Classes\SaveUserSettings\SaveAdminFilter.cs" />
     <Compile Include="Classes\SaveUserSettings\SaveUserFilter.cs" />
@@ -593,6 +594,7 @@
     <None Include="Docs\Diagrams\ClassDiagram.cd" />
     <None Include="Docs\Documentations\Пояснительная_записка_Лямкин.docx" />
     <None Include="Docs\БД\er-diagram.pdf" />
+    <None Include="Docs\БД\unedited er-diagram.pdf" />
     <None Include="Docs\БД\Агент.docx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
