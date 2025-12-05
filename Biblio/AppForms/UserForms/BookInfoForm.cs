@@ -98,6 +98,8 @@ namespace Biblio.AppForms
                 backgroundImageRenderer.SetBackgroundImage(preparedBackground);
             }
 
+            mainPanel.Refresh();
+
             descriptionLabel.Text = _book.Description;
 
             ShowStatisticsBooks();
@@ -164,6 +166,8 @@ namespace Biblio.AppForms
 
         private void ShowStatisticsBooks()
         {
+            statisticsPanel.Controls.Clear();
+
             var statisticsControl = new StatisticsControl(_book);
 
             statisticsPanel.Controls.Add(statisticsControl);
