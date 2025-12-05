@@ -92,23 +92,28 @@ namespace Biblio.CustomControls
             var parentForm = this.FindForm();
             parentForm.Hide();
 
-            var loadingForm = new LoadingForm();
-            loadingForm.TopMost = true;
-            VisibilityHelper.ShowNewForm(parentForm, loadingForm);
-
-            var mainform = new MainForm();
-            VisibilityHelper.ShowNewForm(parentForm, mainform);
-
-            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-            while (stopwatch.ElapsedMilliseconds < 1)
+            if (parentForm.WindowState == FormWindowState.Maximized)
             {
-                Application.DoEvents(); // даёт форме рендериться
-                System.Threading.Thread.Sleep(10); // снижаем нагрузку
-            }
-            stopwatch.Stop();
+                var loadingForm = new LoadingForm();
+                loadingForm.TopMost = true;
+                VisibilityHelper.ShowNewForm(parentForm, loadingForm);
 
-            loadingForm.Close();
-            loadingForm.Dispose();
+                var mainform = new MainForm();
+                VisibilityHelper.ShowNewForm(parentForm, mainform);
+
+                var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+                while (stopwatch.ElapsedMilliseconds < 1)
+                {
+                    Application.DoEvents(); // даёт форме рендериться
+                    System.Threading.Thread.Sleep(10); // снижаем нагрузку
+                }
+                stopwatch.Stop();
+
+                loadingForm.Close();
+                loadingForm.Dispose();
+            }
+            else
+                OpenForm<MainForm>();
         }
 
         public void UpdateNotificationsCount()

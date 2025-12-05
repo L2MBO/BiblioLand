@@ -461,23 +461,31 @@ namespace Biblio.AppForms
             {
                 this.Hide();
 
-                var loadingForm = new LoadingForm();
-                loadingForm.TopMost = true;
-                VisibilityHelper.ShowNewForm(this, loadingForm);
-
-                var mainform = new MainForm();
-                VisibilityHelper.ShowNewForm(this, mainform);
-
-                var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-                while (stopwatch.ElapsedMilliseconds < 1000)
+                if (this.WindowState == FormWindowState.Maximized)
                 {
-                    Application.DoEvents(); // даёт форме рендериться
-                    System.Threading.Thread.Sleep(10); // снижаем нагрузку
-                }
-                stopwatch.Stop();
+                    var loadingForm = new LoadingForm();
+                    loadingForm.TopMost = true;
+                    VisibilityHelper.ShowNewForm(this, loadingForm);
 
-                loadingForm.Close();
-                loadingForm.Dispose();
+                    var mainform = new MainForm();
+                    VisibilityHelper.ShowNewForm(this, mainform);
+
+                    var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+                    while (stopwatch.ElapsedMilliseconds < 1)
+                    {
+                        Application.DoEvents(); // даёт форме рендериться
+                        System.Threading.Thread.Sleep(10); // снижаем нагрузку
+                    }
+                    stopwatch.Stop();
+
+                    loadingForm.Close();
+                    loadingForm.Dispose();
+                }
+                else
+                {
+                    var mainform = new MainForm();
+                    VisibilityHelper.ShowNewForm(this, mainform);
+                }
             }
         }
 
