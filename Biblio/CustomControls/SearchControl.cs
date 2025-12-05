@@ -45,14 +45,15 @@ namespace Biblio.CustomControls
 
         private void BookControl_BookClicked(object sender, Books book)
         {
-            this.Hide();
+            var parentForm = this.FindForm();
+            parentForm.Hide();
 
             var loadingForm = new LoadingForm();
             loadingForm.TopMost = true;
-            VisibilityHelper.ShowNewForm(this.FindForm(), loadingForm);
+            VisibilityHelper.ShowNewForm(parentForm, loadingForm);
 
             var bookInfoForm = new BookInfoForm(book);
-            VisibilityHelper.ShowNewForm(this.FindForm(), bookInfoForm);
+            VisibilityHelper.ShowNewForm(parentForm, bookInfoForm);
 
             var stopwatch = System.Diagnostics.Stopwatch.StartNew();
             while (stopwatch.ElapsedMilliseconds < 1000)

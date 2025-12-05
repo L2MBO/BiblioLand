@@ -459,9 +459,25 @@ namespace Biblio.AppForms
             }
             else
             {
-                MainForm form = new MainForm();
-                VisibilityHelper.ShowNewForm(this.FindForm(), form);
                 this.Hide();
+
+                var loadingForm = new LoadingForm();
+                loadingForm.TopMost = true;
+                VisibilityHelper.ShowNewForm(this, loadingForm);
+
+                var mainform = new MainForm();
+                VisibilityHelper.ShowNewForm(this, mainform);
+
+                var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+                while (stopwatch.ElapsedMilliseconds < 1000)
+                {
+                    Application.DoEvents(); // даёт форме рендериться
+                    System.Threading.Thread.Sleep(10); // снижаем нагрузку
+                }
+                stopwatch.Stop();
+
+                loadingForm.Close();
+                loadingForm.Dispose();
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using Biblio.Classes.Customization;
+﻿using Biblio.AppForms.UserForms;
+using Biblio.Classes.Customization;
 using Biblio.Classes.Customization.FormCustomization;
 using Biblio.Classes.Customization.ImagesCustomization;
 using Biblio.Classes.Images.InstallingImages;
@@ -16,6 +17,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace Biblio.AppForms
 {
@@ -437,9 +439,25 @@ namespace Biblio.AppForms
 
                         ValidationHelper.ShowInformationMessage("Книга успешно удалена", "Успех");
 
+                        this.Hide();
+
+                        var loadingForm = new LoadingForm();
+                        loadingForm.TopMost = true;
+                        VisibilityHelper.ShowNewForm(this, loadingForm);
+
                         var mainform = new MainForm();
                         VisibilityHelper.ShowNewForm(this, mainform);
-                        this.Hide();
+
+                        var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+                        while (stopwatch.ElapsedMilliseconds < 1)
+                        {
+                            Application.DoEvents(); // даёт форме рендериться
+                            System.Threading.Thread.Sleep(10); // снижаем нагрузку
+                        }
+                        stopwatch.Stop();
+
+                        loadingForm.Close();
+                        loadingForm.Dispose();
                     }
                     catch (Exception ex)
                     {
@@ -493,6 +511,7 @@ namespace Biblio.AppForms
                 _bookmarkX = 54;
             }
 
+            this.Icon = Properties.Resources.logo;
             navigationControl.UpdatePanelsWidth();
             DescriptionLabel_TextChanged(descriptionLabel, EventArgs.Empty);
             UpdateBookmarksControlPosition();

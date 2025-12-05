@@ -1,4 +1,5 @@
 ﻿using Biblio.AppForms;
+using Biblio.AppForms.UserForms;
 using Biblio.Classes.Animations;
 using Biblio.Classes.Images.InstallingImages;
 using Biblio.HideClasses;
@@ -44,7 +45,7 @@ namespace Biblio.CustomControls
             restoreButton.Click += (s, e) => FindForm().WindowState = FormWindowState.Normal;
 
             // Навигация по формам
-            mainButton.Click += (s, e) => OpenForm<MainForm>();
+            mainButton.Click += (s, e) => OpenMainForm();
             catalogButton.Click += (s, e) => OpenForm<BookСatalogForm>();
             bookmarksButton.Click += (s, e) => OpenForm<BookmarksForm>();
             notificationsButton.Click += (s, e) => OpenForm<NotifyForm>();
@@ -84,6 +85,30 @@ namespace Biblio.CustomControls
             }
 
             VisibilityHelper.ShowNewForm(parentForm, newForm);
+        }
+
+        private void OpenMainForm()
+        {
+            var parentForm = this.FindForm();
+            parentForm.Hide();
+
+            var loadingForm = new LoadingForm();
+            loadingForm.TopMost = true;
+            VisibilityHelper.ShowNewForm(parentForm, loadingForm);
+
+            var mainform = new MainForm();
+            VisibilityHelper.ShowNewForm(parentForm, mainform);
+
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            while (stopwatch.ElapsedMilliseconds < 1)
+            {
+                Application.DoEvents(); // даёт форме рендериться
+                System.Threading.Thread.Sleep(10); // снижаем нагрузку
+            }
+            stopwatch.Stop();
+
+            loadingForm.Close();
+            loadingForm.Dispose();
         }
 
         public void UpdateNotificationsCount()
