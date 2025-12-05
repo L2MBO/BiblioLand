@@ -128,7 +128,16 @@ namespace Biblio.AppForms
                     {
                         imgFileName = Path.GetFileName(_selectedImagePath);
                         string destImgPath = Path.Combine(imgDirectory, imgFileName);
-                        File.Copy(_selectedImagePath, destImgPath, true);
+                        
+                        try
+                        {
+                            File.Copy(_selectedImagePath, destImgPath, true);
+                        }
+                        catch (IOException)
+                        {
+                            ValidationHelper.ShowErrorMessage("Изображение с таким именем уже существует, пожалуйста переименуйте файл.");
+                            return;
+                        }
                     }
                 }
 
@@ -138,7 +147,16 @@ namespace Biblio.AppForms
                     {
                         pdfFileName = Path.GetFileName(_selectedPdfPath);
                         string destPdfPath = Path.Combine(pdfDirectory, pdfFileName);
-                        File.Copy(_selectedPdfPath, destPdfPath, true);
+
+                        try
+                        {
+                            File.Copy(_selectedPdfPath, destPdfPath, true);
+                        }
+                        catch (IOException)
+                        {
+                            ValidationHelper.ShowErrorMessage("Pdf файл с таким именем уже существует, пожалуйста переименуйте файл.");
+                            return;
+                        }
                     }
                 }
 
