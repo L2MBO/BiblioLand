@@ -17,7 +17,7 @@ namespace Biblio.AppForms.UserForms
 
         private void FillBanFormInfo()
         {
-            var userBan = Program.context.UserBans.FirstOrDefault(user => user.BanedUserID == _currentUserId);
+            var userBan = Program.context.UserBans.AsNoTracking().FirstOrDefault(user => user.BanedUserID == _currentUserId);
 
             reasonLabel.Text = userBan.UserBanCategory.BanCategoryName.ToString();
             banExpirationLabel.Text = userBan.BanExpiration.ToString("yyyy-MM-dd HH:mm");
