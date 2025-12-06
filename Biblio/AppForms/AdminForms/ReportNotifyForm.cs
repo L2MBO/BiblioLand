@@ -24,14 +24,15 @@ namespace Biblio.AppForms.AdminForms
         {
             if (_notificationData is BookReports bookReport)
             {
-                _nameProfile = bookReport.Users.UserID;
+                var newBookReport = Program.context.BookReports.AsNoTracking().FirstOrDefault(b => b.BookReportID == bookReport.BookReportID);
+                _nameProfile = newBookReport.Users.UserID;
                 reportLabel.AutoSize = false;
                 titleLabel.Text = "Жалоба на книгу";
-                nameLabel.Text = bookReport.Users.Username;
+                nameLabel.Text = newBookReport.Users.Username;
                 reportInfoLabel.Text = "Репорт на книгу:";
-                reportLabel.Text = bookReport.Books.Title;
-                reasoneLabel.Text = bookReport.BookReportCategory.ReportCategoryName;
-                descriptionTextBox.Text = bookReport.ReportMessage;
+                reportLabel.Text = newBookReport.Books.Title;
+                reasoneLabel.Text = newBookReport.BookReportCategory.ReportCategoryName;
+                descriptionTextBox.Text = newBookReport.ReportMessage;
             }
             else if (_notificationData is UserReports userReport)
             {
